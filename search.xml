@@ -27,7 +27,10 @@
   <entry>
     <title>常用命令</title>
     <url>/2021/03/04/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<p>hexo s  #预览</p>
+    <content><![CDATA[<p>-</p>
+<span id="more"></span>
+
+<p>hexo s  #预览</p>
 <p>hexo clean  #清除</p>
 <p>hexo g  #生成</p>
 <p>hexo d  #上传</p>
@@ -42,6 +45,7 @@
 <p>&amp;#x26A0          谨慎阅读</p>
 <p>&amp;#x1F496        治愈</p>
 <p>&amp;#x1F494        致郁</p>
+<p>&lt;“!”– more –&gt;</p>
 ]]></content>
       <categories>
         <category>技术性文档</category>
