@@ -165,4 +165,30 @@
     <content><![CDATA[<p>？？？？？？？？</p>
 ]]></content>
   </entry>
+  <entry>
+    <title>常用命令</title>
+    <url>/2021/03/04/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<p>hexo s  #预览</p>
+<p>hexo clean  #清除</p>
+<p>hexo g  #生成</p>
+<p>hexo d  #上传</p>
+<p>cd /  #跳转</p>
+<p>cd ..  #上一级</p>
+<p>hexo server -d  #输入<a href="http://localhost:4000/admin/">http://localhost:4000/admin/</a>    打开在线编辑器</p>
+<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</p>
+<p>标题图标：<br><a href="https://apps.timwhitlock.info/emoji/tables/unicode">https://apps.timwhitlock.info/emoji/tables/unicode</a></p>
+<p>&amp;#x+unicode（+;）    Markdown x Emoji</p>
+<p>&amp;#x1F512         锁（已加密）</p>
+<p>&amp;#x1F51E         18禁 </p>
+<p>&amp;#x26A0          谨慎阅读</p>
+<p>&amp;#x1F496        治愈</p>
+<p>&amp;#x1F494        致郁</p>
+]]></content>
+      <categories>
+        <category>技术性文档</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
 </search>
