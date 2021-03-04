@@ -26,10 +26,18 @@
   <entry>
     <title>My New Post</title>
     <url>/2021/03/03/My-New-Post/</url>
-    <content><![CDATA[<h3 id="hello"><a href="#hello" class="headerlink" title="hello?"></a>hello?</h3>]]></content>
-      <tags>
-        <tag>none</tag>
-      </tags>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="3f3401581da0c3955989f1505d8378b7b04860b9d812e2f4dea1c10a76c36162">4630436162ade97ba2718b7d0c4b3b63501b8b0e90dd70c68cacef77fafaa69ce5ba599cad2ec9fc7b0d62ef6761efb3df6f62a3eed87284ca9255e58f6abc7af0157c9c20fca5a7eca6af471fd0cdd8db5c143f3108a499b3f1f5bc5b1c6007792f3bf5365012254da02f1dbc3d8b7d</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
   </entry>
   <entry>
     <title>小测试</title>
