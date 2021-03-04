@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>小测试</title>
-    <url>/2021/03/03/test-1/</url>
-    <content><![CDATA[<h3 id="hell-o"><a href="#hell-o" class="headerlink" title="hell-o!"></a>hell-o!</h3>]]></content>
-  </entry>
-  <entry>
     <title>My New Post</title>
     <url>/2021/03/03/My-New-Post/</url>
     <content><![CDATA[<h3 id="hello"><a href="#hello" class="headerlink" title="hello?"></a>hello?</h3>]]></content>
@@ -147,5 +142,10 @@
         <tag>白王</tag>
         <tag>神学设定</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>小测试</title>
+    <url>/2021/03/03/test-1/</url>
+    <content><![CDATA[<h3 id="hell-o"><a href="#hell-o" class="headerlink" title="hell-o!"></a>hell-o!</h3>]]></content>
   </entry>
 </search>
