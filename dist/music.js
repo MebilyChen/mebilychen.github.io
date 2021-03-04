@@ -8,8 +8,8 @@ const ap = new APlayer({
     audio: [{
         name: 'Once Again',
         artist: 'Tristam',
-        url: '/dist/Tristam - Once Again.flac',
-        cover: '/dist/Tristam - Once Again.jpeg',
+        url: '/dist/Once-Again.flac',
+        cover: '/dist/Once-Again.jpeg',
 
         //name: 'name2', //如果只有一首歌，删掉这一块，如有更多歌曲按此格式逐渐往下添加
         //artist: 'artist2',
