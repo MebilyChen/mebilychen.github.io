@@ -3,7 +3,9 @@
   <entry>
     <title>公告</title>
     <url>/2021/03/05/%E5%85%AC%E5%91%8A/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="公告栏测试"><a href="#公告栏测试" class="headerlink" title="公告栏测试"></a>公告栏测试</h1>]]></content>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 style="text-align:center">公告 </h1>
+<center>这里是公告内容，通常会说一下近期挖坑的情况&#x1F910;</center>
+]]></content>
       <categories>
         <category>公告</category>
       </categories>
@@ -72,7 +74,7 @@
 			</script>   # 插入音乐
 
 
-    <div id="aplayer-EzhroPNZ" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-UHZHgGSO" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="6644269117" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div>
 
@@ -87,6 +89,14 @@
 <p>mutex    true    开启时，如果同页面有其他aplayer播放，该播放器暂停</p>
 <p>perload    auto/none/metadata    音乐文件预载入模式</p>
 <p>theme    #222222            播放器风格设置</p>
+<p>对齐方式：</p>
+<center>诶嘿</center> 
+
+<p align="left">诶嘿</p>
+
+<p align="right">诶嘿</p>
+
+<p>…有点可爱</p>
 ]]></content>
       <categories>
         <category>建站测试用</category>
