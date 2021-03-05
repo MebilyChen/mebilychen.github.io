@@ -1251,7 +1251,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ffff16;
+  background: #c930ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2620,6 +2620,22 @@ embed {
   margin: 0 auto;
 }
 .links-of-recent-posts-list {
+  list-style: square;
+  text-align: left;
+  margin: 0;
+padding
+}
+.links-of-updated-posts {
+  font-size: 0.8125em;
+  margin-top: 10px;
+}
+.links-of-updated-posts-title {
+  font-size: 1.03em;
+  font-weight: 600;
+  margin-top: 0;
+  margin: 0 auto;
+}
+.links-of-updated-posts-list {
   list-style: square;
   text-align: left;
   margin: 0;
