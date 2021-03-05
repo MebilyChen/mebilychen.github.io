@@ -1252,7 +1252,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff1a96;
+  background: #f3f;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2470,10 +2470,12 @@ ul.breadcrumb li + li:last-child {
     padding-top: 35px;
   }
 }
+.content-wrap {
+  background: #fff;
+}
 embed {
   display: block;
   margin: 0 auto 25px auto;
-  background: #fff;
 }
 .custom-logo .site-meta-headline {
   text-align: center;
