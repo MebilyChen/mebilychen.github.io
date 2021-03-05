@@ -1,100 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>测试</title>
-    <url>/2021/03/05/%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>针对公告栏的置顶测试</p>
-]]></content>
+    <title>My New Post</title>
+    <url>/2021/03/03/My-New-Post/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="hello"><a href="#hello" class="headerlink" title="hello?"></a>hello?</h3>]]></content>
       <categories>
         <category>建站测试用</category>
       </categories>
-  </entry>
-  <entry>
-    <title>公告</title>
-    <url>/2021/03/05/%E5%85%AC%E5%91%8A/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="公告栏测试"><a href="#公告栏测试" class="headerlink" title="公告栏测试"></a>公告栏测试</h1>]]></content>
-      <categories>
-        <category>公告</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>庆祝站子似乎终于可以启用了！</title>
-    <url>/2021/03/05/%E5%BA%86%E7%A5%9D%E7%AB%99%E5%AD%90%E4%BC%BC%E4%B9%8E%E7%BB%88%E4%BA%8E%E5%8F%AF%E4%BB%A5%E5%90%AF%E7%94%A8%E4%BA%86%EF%BC%81/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>如题！</p>
-<h1 id="自由了！老子自由了！随便耍！！！"><a href="#自由了！老子自由了！随便耍！！！" class="headerlink" title="自由了！老子自由了！随便耍！！！"></a>自由了！老子自由了！随便耍！！！</h1><p>（当然也不能太随便…）</p>
-]]></content>
-      <categories>
-        <category>建站测试用</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>音乐测试2</title>
-    <url>/2021/03/05/%E9%9F%B3%E4%B9%90%E6%B5%8B%E8%AF%952/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
-    <div id="aplayer-igndhFAd" class="aplayer aplayer-tag-marker meting-tag-marker"
-         data-id="35804644" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="metadata" data-theme="#ad7a86"
-    ></div>
-
-<p>白嫖？？？</p>
-<p>不能白嫖…</p>
-]]></content>
-      <categories>
-        <category>建站测试用</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>常用命令</title>
-    <url>/2021/03/04/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>一些常用的网站维护设置、Git Bash命令和Markdown语法</p>
-<span id="more"></span>
-
-<p>_config.yml 在此文件中更改网站基本设置 在theme里的同名文件中更改网站主题设置</p>
-<p>hexo s  #预览</p>
-<p>hexo clean  #清除</p>
-<p>hexo g  #生成</p>
-<p>hexo d  #上传</p>
-<p>cd /  #跳转</p>
-<p>cd ..  #上一级</p>
-<p>hexo server -d  #输入<a href="http://localhost:4000/admin/%E6%89%93%E5%BC%80%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%BE%91%E5%99%A8">http://localhost:4000/admin/打开在线编辑器</a></p>
-<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d &amp;&amp; hexo s</p>
-<p>标题图标：</p>
-<p><a href="https://apps.timwhitlock.info/emoji/tables/unicode">https://apps.timwhitlock.info/emoji/tables/unicode</a></p>
-<p>&amp;#x+unicode（+;）    Markdown x Emoji</p>
-<p>&amp;#x1F512         锁（已加密）</p>
-<p>&amp;#x1F51E         18禁 </p>
-<p>&amp;#x26A0          谨慎阅读</p>
-<p>&amp;#x1F496        治愈</p>
-<p>&amp;#x1F494        致郁</p>
-<p>&lt;“!”– more –&gt;     其下内容隐藏</p>
-
-			<script>
-				console.error("ReferenceError: value is not defined");
-			</script>   # 插入音乐
-
-
-    <div id="aplayer-tXjIlphe" class="aplayer aplayer-tag-marker meting-tag-marker"
-         data-id="6644269117" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
-    ></div>
-
-<p>id        必须值            歌曲id/播放列表id</p>
-<p>server    必须值            音乐平台：netease，tencent，kugou，xiami</p>
-<p>type    必须值            类型：song，playlist，album，search</p>
-<p>fixed    true/false        开启/关闭固定模式</p>
-<p>mini    true/false        开启/关闭迷你模式</p>
-<p>loop    all/one/none    列表循环模式</p>
-<p>order    list            列表播放模式</p>
-<p>listfolded    true/false    音乐列表是否折叠</p>
-<p>mutex    true    开启时，如果同页面有其他aplayer播放，该播放器暂停</p>
-<p>perload    auto/none/metadata    音乐文件预载入模式</p>
-<p>theme    #222222            播放器风格设置</p>
-]]></content>
-      <categories>
-        <category>建站测试用</category>
-      </categories>
-      <tags>
-        <tag>Markdown</tag>
-        <tag>Git Bash</tag>
-      </tags>
   </entry>
   <entry>
     <title>Hello World音乐测试</title>
@@ -170,9 +82,97 @@
       </categories>
   </entry>
   <entry>
-    <title>My New Post</title>
-    <url>/2021/03/03/My-New-Post/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="hello"><a href="#hello" class="headerlink" title="hello?"></a>hello?</h3>]]></content>
+    <title>常用命令</title>
+    <url>/2021/03/04/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>一些常用的网站维护设置、Git Bash命令和Markdown语法</p>
+<span id="more"></span>
+
+<p>_config.yml 在此文件中更改网站基本设置 在theme里的同名文件中更改网站主题设置</p>
+<p>hexo s  #预览</p>
+<p>hexo clean  #清除</p>
+<p>hexo g  #生成</p>
+<p>hexo d  #上传</p>
+<p>cd /  #跳转</p>
+<p>cd ..  #上一级</p>
+<p>hexo server -d  #输入<a href="http://localhost:4000/admin/%E6%89%93%E5%BC%80%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%BE%91%E5%99%A8">http://localhost:4000/admin/打开在线编辑器</a></p>
+<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d &amp;&amp; hexo s</p>
+<p>标题图标：</p>
+<p><a href="https://apps.timwhitlock.info/emoji/tables/unicode">https://apps.timwhitlock.info/emoji/tables/unicode</a></p>
+<p>&amp;#x+unicode（+;）    Markdown x Emoji</p>
+<p>&amp;#x1F512         锁（已加密）</p>
+<p>&amp;#x1F51E         18禁 </p>
+<p>&amp;#x26A0          谨慎阅读</p>
+<p>&amp;#x1F496        治愈</p>
+<p>&amp;#x1F494        致郁</p>
+<p>&lt;“!”– more –&gt;     其下内容隐藏</p>
+
+			<script>
+				console.error("ReferenceError: value is not defined");
+			</script>   # 插入音乐
+
+
+    <div id="aplayer-tXjIlphe" class="aplayer aplayer-tag-marker meting-tag-marker"
+         data-id="6644269117" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
+    ></div>
+
+<p>id        必须值            歌曲id/播放列表id</p>
+<p>server    必须值            音乐平台：netease，tencent，kugou，xiami</p>
+<p>type    必须值            类型：song，playlist，album，search</p>
+<p>fixed    true/false        开启/关闭固定模式</p>
+<p>mini    true/false        开启/关闭迷你模式</p>
+<p>loop    all/one/none    列表循环模式</p>
+<p>order    list            列表播放模式</p>
+<p>listfolded    true/false    音乐列表是否折叠</p>
+<p>mutex    true    开启时，如果同页面有其他aplayer播放，该播放器暂停</p>
+<p>perload    auto/none/metadata    音乐文件预载入模式</p>
+<p>theme    #222222            播放器风格设置</p>
+]]></content>
+      <categories>
+        <category>建站测试用</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+        <tag>Git Bash</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>公告</title>
+    <url>/2021/03/05/%E5%85%AC%E5%91%8A/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="公告栏测试"><a href="#公告栏测试" class="headerlink" title="公告栏测试"></a>公告栏测试</h1>]]></content>
+      <categories>
+        <category>公告</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>庆祝站子似乎终于可以启用了！</title>
+    <url>/2021/03/05/%E5%BA%86%E7%A5%9D%E7%AB%99%E5%AD%90%E4%BC%BC%E4%B9%8E%E7%BB%88%E4%BA%8E%E5%8F%AF%E4%BB%A5%E5%90%AF%E7%94%A8%E4%BA%86%EF%BC%81/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>如题！</p>
+<h1 id="自由了！老子自由了！随便耍！！！"><a href="#自由了！老子自由了！随便耍！！！" class="headerlink" title="自由了！老子自由了！随便耍！！！"></a>自由了！老子自由了！随便耍！！！</h1><p>（当然也不能太随便…）</p>
+]]></content>
+      <categories>
+        <category>建站测试用</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>测试</title>
+    <url>/2021/03/05/%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>针对公告栏的测试</p>
+]]></content>
+      <categories>
+        <category>建站测试用</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>音乐测试2</title>
+    <url>/2021/03/05/%E9%9F%B3%E4%B9%90%E6%B5%8B%E8%AF%952/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>
+    <div id="aplayer-igndhFAd" class="aplayer aplayer-tag-marker meting-tag-marker"
+         data-id="35804644" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="metadata" data-theme="#ad7a86"
+    ></div>
+
+<p>白嫖？？？</p>
+<p>不能白嫖…</p>
+]]></content>
       <categories>
         <category>建站测试用</category>
       </categories>
