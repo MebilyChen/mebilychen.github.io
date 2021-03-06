@@ -198,18 +198,6 @@
   
   
 
-  <% if(post.toc == true){ %>
-  <div id="toc-div" class="toc-article" <% if (post.encrypt == true) { %>style="display:none" <% } %>>
-    <strong class="toc-title">Index</strong>
-      <% if (post.encrypt == true) { %>
-        <%- toc(post.origin, {list_number: true}) %>
-      <% } else { %>
-        <%- toc(post.content, {list_number: true}) %>
-      <% } %>
-  </div>
-<% } %>
-<%- post.content %>
-
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
     <link itemprop="mainEntityOfPage" href="https://coding-pages-bucket-3530815-8419662-13805-518516-1305127431.cos-website.ap-hongkong.myqcloud.com/2021/03/05/%E5%8A%A0%E5%AF%86%E6%B5%8B%E8%AF%953/">
 
@@ -386,133 +374,126 @@ PS:若无法正常体验音乐请尝试刷新</div>
         </div>
           
   
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
+<div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
   </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
-      src="/images/avatar-kingsec.jpg">
-  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
-  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
 </div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
+
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    
+    
+      
+    
+
+
+
+    <section class="site-overview sidebar-panel sidebar-panel-active">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <img class="site-author-image" itemprop="image"
+             src="/%5Bobject%20Object%5D"
+             alt="" />
+        <p class="site-author-name" itemprop="name"></p>
+         
+            <p class="site-description motion-element" itemprop="description"></p>
         
-          <span class="site-state-item-count">17</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
       </div>
-      <div class="site-state-item site-state-categories">
+      <nav class="site-state motion-element">
+
+        
+          <div class="site-state-item site-state-posts">
+            <a href="/archives/%20%7C%7C%20fa%20fa-archive">
+              <span class="site-state-item-count">17</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+        
+
+        
+          
+          
+          <div class="site-state-item site-state-categories">
             <a href="/categories/">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">分类</span>
+            </a>
+          </div>
+        
+
+        
           
-        <span class="site-state-item-count">2</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
+          
+          <div class="site-state-item site-state-tags">
             <a href="/tags/">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">标签</span>
+            </a>
+          </div>
+        
+
+      </nav>
+
+      
+
+      <div class="links-of-author motion-element">
+        
           
-        <span class="site-state-item-count">4</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="mailto:1013712127@qq.com" title="E-Mail → mailto:1013712127@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://twitter.com/mebily1314" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
-      </span>
-  </div>
-
-
-  <div class="links-of-blogroll motion-element">
-    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
-      逐渐叛离，搬完就弃
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="https://mebilychen.lofter.com/" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;" rel="noopener" target="_blank">LOFTER</a>
-        </li>
-    </ul>
-  </div>
-
-  <div class="links-of-recent-posts motion-element">
-    <div class="links-of-recent-posts-title">
-      <i class="fa fa-history fa-fw"></i>
-      最新研究
-    </div>
-    <ul class="links-of-recent-posts-list">
-        <li class="links-of-recent-posts-item">
-          <a href="/2021/03/06/TOC%E6%B5%8B%E8%AF%952/" title="2021&#x2F;03&#x2F;06&#x2F;TOC测试2&#x2F;">TOC测试2</a>
-        </li>
-        <li class="links-of-recent-posts-item">
-          <a href="/2021/03/06/%E5%B1%85%E4%B8%AD%E6%B5%8B%E8%AF%956/" title="2021&#x2F;03&#x2F;06&#x2F;居中测试6&#x2F;">居中测试6</a>
-        </li>
-        <li class="links-of-recent-posts-item">
-          <a href="/2021/03/06/%E5%8A%A0%E5%AF%86%E6%B5%8B%E8%AF%955%E5%B1%85%E4%B8%AD/" title="2021&#x2F;03&#x2F;06&#x2F;加密测试5居中&#x2F;">加密测试5居中</a>
-        </li>
-        <li class="links-of-recent-posts-item">
-          <a href="/2021/03/06/TOC%E6%B5%8B%E8%AF%95/" title="2021&#x2F;03&#x2F;06&#x2F;TOC测试&#x2F;">TOC测试</a>
-        </li>
-        <li class="links-of-recent-posts-item">
-          <a href="/2021/03/05/%E5%8A%A0%E5%AF%86%E6%B5%8B%E8%AF%954/" title="2021&#x2F;03&#x2F;05&#x2F;加密测试4&#x2F;">加密测试4</a>
-        </li>
-    </ul>
-  </div>
-
-
-    <div class="links-of-updated-posts motion-element">
-      <div class="links-of-updated-posts-title">
-      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
-        最近更新
-      </div>
-      <ul class="links-of-updated-posts-list">
-          <li class="links-of-updated-posts-item">
-          <a href="/2021/03/06/TOC%E6%B5%8B%E8%AF%952/" title="2021&#x2F;03&#x2F;06&#x2F;TOC测试2&#x2F;">TOC测试2</a>
-        </li>
-          <li class="links-of-updated-posts-item">
-          <a href="/2021/03/06/%E5%B1%85%E4%B8%AD%E6%B5%8B%E8%AF%956/" title="2021&#x2F;03&#x2F;06&#x2F;居中测试6&#x2F;">居中测试6</a>
-        </li>
-          <li class="links-of-updated-posts-item">
-          <a href="/2021/03/06/%E5%8A%A0%E5%AF%86%E6%B5%8B%E8%AF%955%E5%B1%85%E4%B8%AD/" title="2021&#x2F;03&#x2F;06&#x2F;加密测试5居中&#x2F;">加密测试5居中</a>
-        </li>
-          <li class="links-of-updated-posts-item">
-          <a href="/2021/03/06/TOC%E6%B5%8B%E8%AF%95/" title="2021&#x2F;03&#x2F;06&#x2F;TOC测试&#x2F;">TOC测试</a>
-        </li>
-          <li class="links-of-updated-posts-item">
-          <a href="/2021/03/04/Mdown%E6%B5%8B%E8%AF%95/" title="2021&#x2F;03&#x2F;04&#x2F;Mdown测试&#x2F;">Mdown测试</a>
-        </li>
-      </ul>
-    </div>
-
-
+            <span class="links-of-author-item">
+              <a href="mailto:1013712127@qq.com || fa fa-envelope" target="_blank" title="E-Mail">
+                
+                  <i class="fa fa-fw fa-globe"></i>
+                
+                E-Mail
+              </a>
+            </span>
+          
+            <span class="links-of-author-item">
+              <a href="https://twitter.com/mebily1314 || fab fa-twitter" target="_blank" title="Twitter">
+                
+                  <i class="fa fa-fw fa-globe"></i>
+                
+                Twitter
+              </a>
+            </span>
+          
+        
       </div>
 
-      <!-- require APlayer -->
+      
+      
+
+      
+      
+        <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+          <div class="links-of-blogroll-title">
+            <i class="fa  fa-fw fa-globe"></i>
+            
+          </div>
+          <ul class="links-of-blogroll-list">
+            
+              <li class="links-of-blogroll-item">
+                <a href="https://mebilychen.lofter.com/" title="LOFTER" target="_blank">LOFTER</a>
+              </li>
+            
+          </ul>
+        </div>
+      
+
+      
+
+
+    </section>
+    
+      
+    
+
+    
+
+<!-- require APlayer -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
     <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
     <!-- require MetingJS-->
@@ -534,9 +515,8 @@ PS:若无法正常体验音乐请尝试刷新</div>
       mutex="true">
     </meting-js>
 
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
+  </div>
+</aside>
 
 
       </div>
