@@ -1152,6 +1152,12 @@ pre .javascript .function {
   margin-top: 0.35em;
   text-align: center;
   white-space: nowrap;
+  background: rgba(255,255,255,0.9);
+}
+@media (prefers-color-scheme: dark) {
+  .menu-item .badge {
+    background: rgba(30,30,30,0.9);
+  }
 }
 @media (max-width: 767px) {
   .menu-item .badge {
@@ -1254,7 +1260,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff4a8c;
+  background: #ff16be;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
