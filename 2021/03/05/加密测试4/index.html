@@ -197,6 +197,19 @@
     
   
   
+
+  <% if(post.toc == true){ %>
+  <div id="toc-div" class="toc-article" <% if (post.encrypt == true) { %>style="display:none" <% } %>>
+    <strong class="toc-title">Index</strong>
+      <% if (post.encrypt == true) { %>
+        <%- toc(post.origin, {list_number: true}) %>
+      <% } else { %>
+        <%- toc(post.content, {list_number: true}) %>
+      <% } %>
+  </div>
+<% } %>
+<%- post.content %>
+
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
     <link itemprop="mainEntityOfPage" href="https://coding-pages-bucket-3530815-8419662-13805-518516-1305127431.cos-website.ap-hongkong.myqcloud.com/2021/03/05/%E5%8A%A0%E5%AF%86%E6%B5%8B%E8%AF%954/">
 
