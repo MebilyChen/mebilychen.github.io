@@ -1254,7 +1254,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #269e52;
+  background: #ff4a8c;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1709,7 +1709,7 @@ pre .javascript .function {
 }
 @media (prefers-color-scheme: dark) {
   .use-motion .post-block {
-    background: rgba(30,30,30,0.8);
+    background: rgba(30,30,30,0.9);
     -webkit-box-shadow: 0 0 5px rgba(150,150,150,0.5);
     -moz-box-shadow: 0 0 5px rgba(150,150,150,0.5);
   }
