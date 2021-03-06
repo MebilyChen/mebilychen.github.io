@@ -18,6 +18,9 @@
   --btn-default-hover-color: #222;
   --btn-default-hover-border-color: #222;
 }
+:root body {
+  background: rgba(255,255,255,0.7);
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --body-bg-color: #282828;
@@ -38,6 +41,9 @@
     --btn-default-hover-bg: #666;
     --btn-default-hover-color: #ccc;
     --btn-default-hover-border-color: #666;
+  }
+  :root body {
+    background: rgba(98,98,98,0.7);
   }
   img {
     opacity: 0.75;
@@ -1251,7 +1257,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #4a9a96;
+  background: #22ff6e;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
