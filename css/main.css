@@ -1145,6 +1145,7 @@ pre .javascript .function {
   margin-right: 8px;
 }
 .menu-item .badge {
+  color: rgba(255,255,255,0.9);
   display: inline-block;
   font-weight: bold;
   line-height: 1;
@@ -1152,11 +1153,10 @@ pre .javascript .function {
   margin-top: 0.35em;
   text-align: center;
   white-space: nowrap;
-  background: rgba(255,255,255,0.9);
 }
 @media (prefers-color-scheme: dark) {
   .menu-item .badge {
-    background: rgba(30,30,30,0.9);
+    color: rgba(30,30,30,0.9);
   }
 }
 @media (max-width: 767px) {
@@ -1260,7 +1260,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff16be;
+  background: #e5216c;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
