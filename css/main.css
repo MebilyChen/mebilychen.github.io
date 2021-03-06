@@ -1178,7 +1178,7 @@ pre .javascript .function {
   }
 }
 .book-mark-link::before {
-  color: #222;
+  color: #626262;
   content: '\f02e';
   font-size: 32px;
   line-height: 1;
@@ -1251,7 +1251,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #e7afd0;
+  background: #cfbfd7;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1656,7 +1656,7 @@ pre .javascript .function {
   }
 }
 .reading-progress-bar {
-  background: #222222;
+  background: #626262;
   display: block;
   height: 3px;
   left: 0;
