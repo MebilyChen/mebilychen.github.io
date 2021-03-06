@@ -1145,7 +1145,7 @@ pre .javascript .function {
   margin-right: 8px;
 }
 .menu-item .badge {
-  color: rgba(255,255,255,0.9);
+  color: #1e1e1e;
   display: inline-block;
   font-weight: bold;
   line-height: 1;
@@ -1153,11 +1153,6 @@ pre .javascript .function {
   margin-top: 0.35em;
   text-align: center;
   white-space: nowrap;
-}
-@media (prefers-color-scheme: dark) {
-  .menu-item .badge {
-    color: rgba(30,30,30,0.9);
-  }
 }
 @media (max-width: 767px) {
   .menu-item .badge {
@@ -1260,7 +1255,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #e5216c;
+  background: #eb29ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
