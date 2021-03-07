@@ -10,7 +10,7 @@ jQuery(document).ready(function($) {
     var a = new Array("陛下万岁！");
   }
     if(i==1){
-    var a = new Array("🤍");
+    var a = new Array("🤍","🖤");
     }
     if(i==2){
       var a = new Array("🖤");
