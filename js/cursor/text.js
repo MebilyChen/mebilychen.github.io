@@ -18,6 +18,9 @@ jQuery(document).ready(function($) {
     if(i==3){
         var a = new Array("一定要把@memo完结掉！");
         }
+    if(i==4){
+          var a = new Array("(（）)");
+         }
     
     var $i = $("<span/>").text(a[a_idx]);
     var x = e.pageX,y = e.pageY;
@@ -34,8 +37,8 @@ jQuery(document).ready(function($) {
       "opacity": 0
     }, 1800, function() {
     $i.remove();
-    i++;
     });
-    
+    a_idx = (a_idx + 1) % a.length;
+    i++;
   });
 });
