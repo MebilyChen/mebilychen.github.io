@@ -1,5 +1,5 @@
 
-var i=1 ;
+var i=4 ;
 var a_idx = 0;
 if(i==0){
   var a = new Array("陛下万岁！");
@@ -12,6 +12,9 @@ if(i==0){
       }
   if(i==3){
         var a = new Array("(（）)");
+       }
+       if(i==4){
+        var a = new Array("1","22","333","4444","55555");
        }
 jQuery(document).ready(function($) {
   $("body").click(function(e) {
