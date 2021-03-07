@@ -18,7 +18,7 @@ jQuery(document).ready(function($) {
     if(i==3){
         var a = new Array("一定要把@memo完结掉！");
         }
-    
+    i++;
     var $i = $("<span/>").text(a[a_idx]);
     var x = e.pageX,y = e.pageY;
     $i.css({
@@ -36,6 +36,5 @@ jQuery(document).ready(function($) {
     $i.remove();
     });
     
-    i++;
   });
 });
