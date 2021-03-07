@@ -4,7 +4,7 @@ var a_idx = 0;
 jQuery(document).ready(function($) {
   $("body").click(function(e) {
     
-  var i=0 ;
+  var i=1 ;
 
     if(i==0){
     var a = new Array("陛下万岁！");
