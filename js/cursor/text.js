@@ -1,4 +1,3 @@
-var i=0;
 var a_idx = 0;
 //var a = new Array("🖤","🤍","🖤","🤍","🖤","🤍","🖤","🤍","🖤","🤍","🖤","🤍","🖤","🤍","🖤","陛下他🤍超可爱");
 var a = new Array("1","22","333","4444","55555");//测试
@@ -13,16 +12,13 @@ jQuery(document).ready(function($) {
       "position": "absolute",
       "color": "#CDCDCD"
     });
-    if(i<5){
     $("body").append($i);
-    }
     $i.animate({
       "top": y - 150,
       "opacity": 0
     }, 1800, function() {
     $i.remove();
     });
-    i++;
     a_idx = (a_idx + 1) % a.length;
   });
 });

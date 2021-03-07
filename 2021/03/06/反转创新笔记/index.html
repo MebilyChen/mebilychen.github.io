@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
 <!--pjax：防止跳转页面音乐暂停-->
   <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
 
@@ -711,16 +720,6 @@ window.addEventListener('pjax:success', () => {
 
 
 
-
-
-  
-
-  <script src="/js/activate-power-mode.min.js"></script>
-  <script>
-    POWERMODE.colorful = false;
-    POWERMODE.shake = false;
-    document.body.addEventListener('input', POWERMODE);
-  </script>
 
     <div id="pjax">
   
