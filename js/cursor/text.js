@@ -16,7 +16,6 @@ if(i==0){
        if(i==4){
         var a = new Array("1","22","333","4444","55555");//测试
        }
-      
 jQuery(document).ready(function($) {
   $("body").click(function(e) {
     var $i = $("<span/>").text(a[a_idx]);
