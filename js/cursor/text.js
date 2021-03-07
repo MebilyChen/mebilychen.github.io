@@ -19,5 +19,9 @@ jQuery(document).ready(function($) {
     $i.remove();
     });
     a_idx = (a_idx + 1) % a.length;
+    if(a_idx + 1 == a.length )
+    {
+      a_idx=0;
+    }
   });
 });
