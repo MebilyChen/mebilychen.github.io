@@ -1321,7 +1321,7 @@ Hallownest.”</p>
 <p>&lt;“!”– more –&gt;     其下内容隐藏</p>
 <p>&amp;#x1F3BC   音乐</p>
 
-    <div id="aplayer-Zqebrtsl" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-eaiSbSup" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="6644269117" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div>
 
@@ -1353,7 +1353,22 @@ Hallownest.”</p>
 <p>p style=”text-align:center;”&gt;(（）)&lt;/p</p>
 <p><a href="https://sm.ms/">https://sm.ms/</a> 图床</p>
 <p>使用快捷键Ctrl+Alt+S 即可直接上传到图床，图片地址就保存到剪切板了（可配置支持markdown）</p>
-]]></content>
+<p>#标签：</p>
+<div class="note info">这里是 info 标签样式</div>
+
+<div class="note info no-icon">这里是不带符号的 info 标签样式</div>
+
+<div class="note primary">这里是 primary 标签样式</div>
+
+<div class="note primary no-icon">这里是不带符号的 primary 标签样式</div>
+
+<div class="note warning">这里是 warning 标签样式</div>
+
+<div class="note warning no-icon">这里是不带符号的 warning 标签样式</div>
+
+<div class="note danger">这里是 danger 标签样式</div>
+
+<div class="note danger no-icon">这里是不带符号的 danger 标签样式</div>]]></content>
       <categories>
         <category>建站测试用</category>
       </categories>
