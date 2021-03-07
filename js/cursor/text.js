@@ -32,7 +32,7 @@ jQuery(document).ready(function($) {
     }, 1800, function() {
     $i.remove();
     });
-    a_idx = (a_idx + 1) % a.length;
+  
     i++;
   });
 });
