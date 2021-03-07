@@ -25,14 +25,14 @@ jQuery(document).ready(function($) {
       "position": "absolute",
       "color": "#CDCDCD"
     });
-    $("body").append($i);
+    //$("body").append($i);
     $i.animate({
       "top": y - 150,
       "opacity": 0
     }, 1800, function() {
     $i.remove();
     });
-  
     i++;
   });
+  $("body").append($i);
 });
