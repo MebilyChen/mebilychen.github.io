@@ -1,20 +1,20 @@
 
 var i=1 ;
 var a_idx = 0;
+if(i==0){
+  var a = new Array("陛下万岁！");
+}
+  if(i==1){
+  var a = new Array("🤍","🖤");
+  }
+  if(i==2){
+      var a = new Array("一定要把@memo完结掉！");
+      }
+  if(i==3){
+        var a = new Array("(（）)");
+       }
 jQuery(document).ready(function($) {
   $("body").click(function(e) {
-    if(i==0){
-    var a = new Array("陛下万岁！");
-  }
-    if(i==1){
-    var a = new Array("🤍","🖤","(（）)");
-    }
-    if(i==2){
-        var a = new Array("一定要把@memo完结掉！");
-        }
-    if(i==3){
-          var a = new Array("(（）)");
-         }
     var $i = $("<span/>").text(a[a_idx]);
     var x = e.pageX,y = e.pageY;
     $i.css({
