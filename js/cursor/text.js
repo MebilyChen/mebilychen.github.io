@@ -1,21 +1,7 @@
-
-var i=1 ;
+var i=0;
 var a_idx = 0;
-if(i==0){
-  var a = new Array("陛下万岁！");
-}
-  if(i==1){
-  var a = new Array("🖤","🤍","🖤","陛下难道🤍不可爱吗","🖤","🤍","🖤");
-  }
-  if(i==2){
-      var a = new Array("一定要把@memo完结掉！");
-      }
-  if(i==3){
-        var a = new Array("(（）)");
-       }
-       if(i==4){
-        var a = new Array("1","22","333","4444","55555");//测试
-       }
+//var a = new Array("🖤","🤍","🖤","🤍","🖤","🤍","🖤","🤍","🖤","🤍","🖤","🤍","🖤","🤍","🖤","陛下他🤍超可爱");
+var a = new Array("1","22","333","4444","55555");//测试
 jQuery(document).ready(function($) {
   $("body").click(function(e) {
     var $i = $("<span/>").text(a[a_idx]);
@@ -27,13 +13,16 @@ jQuery(document).ready(function($) {
       "position": "absolute",
       "color": "#CDCDCD"
     });
+    if(i!==1){
     $("body").append($i);
+    }
     $i.animate({
       "top": y - 150,
       "opacity": 0
     }, 1800, function() {
     $i.remove();
     });
+    i=1;
     a_idx = (a_idx + 1) % a.length;
   });
 });
