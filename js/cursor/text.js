@@ -15,11 +15,11 @@ jQuery(document).ready(function($) {
     $i.animate({
       "top": y - 150,
       "opacity": 0
-    }, 1000, function() {
+    }, 1800, function() {
     $i.remove();
     });
     a_idx = (a_idx + 1) % a.length;
-    if(a_idx + 1 == a.length )
+    if(a_idx == a.length )
     {
       a_idx=0;
     }
