@@ -13,10 +13,10 @@ jQuery(document).ready(function($) {
     });
     $("body").append($i);
     $i.animate({
-      "top": y - 180,
+      "top": y - 150,
       "opacity": 0
     }, 1000, function() {
-      $i.remove();
+    $i.remove();
     });
     a_idx = (a_idx + 1) % a.length;
   });
