@@ -1,7 +1,8 @@
 var a_idx = 0;
 //var a = new Array("🖤","🤍","🖤","🤍","🖤","🤍","🖤","🤍","🖤","🤍","🖤","🤍","🖤","🤍","🖤","🤍","🖤","🤍","🖤","🤍","🖤","🤍","🖤","🤍","🖤","🤍","🖤","🤍","🖤","🤍","🖤","陛下他🤍超可爱");
 //var a = new Array("1","22","333","4444","55555");//测试 怀疑和pjax有关系
-var a = new Array("❄");
+//var a = new Array("❄");
+var a = new Array("。");
 jQuery(document).ready(function($) {
   $("body").click(function(e) {
     var $i = $("<span/>").text(a[a_idx]);
