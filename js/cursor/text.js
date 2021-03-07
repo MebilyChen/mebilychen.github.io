@@ -1,11 +1,8 @@
 
-
+var i=0 ;
 var a_idx = 0;
 jQuery(document).ready(function($) {
   $("body").click(function(e) {
-    
-  var i=1 ;
-
     if(i==0){
     var a = new Array("陛下万岁！");
   }
@@ -13,12 +10,9 @@ jQuery(document).ready(function($) {
     var a = new Array("🤍","🖤");
     }
     if(i==2){
-      var a = new Array("🖤");
-      }
-    if(i==3){
         var a = new Array("一定要把@memo完结掉！");
         }
-    if(i==4){
+    if(i==3){
           var a = new Array("(（）)");
          }
     
