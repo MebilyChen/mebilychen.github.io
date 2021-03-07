@@ -8,7 +8,7 @@ jQuery(document).ready(function($) {
     var x = e.pageX,y = e.pageY;
     $i.css({
       "z-index": 99999,
-      "top": y - 28,
+      "top": y + 28,
       "left": x - a[a_idx].length * 8,
       "position": "absolute",
       "color": "#CDCDCD"
