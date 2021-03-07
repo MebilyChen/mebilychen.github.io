@@ -1,11 +1,11 @@
 
-var i=4 ;
+var i=1 ;
 var a_idx = 0;
-if(i==1){
+if(i==0){
   var a = new Array("陛下万岁！");
 }
   if(i==1){
-  var a = new Array("🤍","🖤");
+  var a = new Array("🤍","🖤","🤍");
   }
   if(i==2){
       var a = new Array("一定要把@memo完结掉！");
