@@ -13,7 +13,7 @@ jQuery(document).ready(function($) {
       "position": "absolute",
       "color": "#CDCDCD"
     });
-    if(i!==1){
+    if(i<5){
     $("body").append($i);
     }
     $i.animate({
@@ -22,7 +22,7 @@ jQuery(document).ready(function($) {
     }, 1800, function() {
     $i.remove();
     });
-    i=1;
+    i++;
     a_idx = (a_idx + 1) % a.length;
   });
 });
