@@ -15,7 +15,6 @@ jQuery(document).ready(function($) {
     if(i==3){
           var a = new Array("(（）)");
          }
-    
     var $i = $("<span/>").text(a[a_idx]);
     var x = e.pageX,y = e.pageY;
     $i.css({
@@ -25,14 +24,13 @@ jQuery(document).ready(function($) {
       "position": "absolute",
       "color": "#CDCDCD"
     });
-    //$("body").append($i);
+    $("body").append($i);
     $i.animate({
       "top": y - 150,
       "opacity": 0
     }, 1800, function() {
     $i.remove();
     });
-    i++;
+    a_idx = (a_idx + 1) % a.length;
   });
-  $("body").append($i);
 });
