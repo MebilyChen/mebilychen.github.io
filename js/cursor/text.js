@@ -1,8 +1,24 @@
+
+
 var a_idx = 0;
 jQuery(document).ready(function($) {
   $("body").click(function(e) {
-    //var a = new Array("陛下万岁！", "今天也要开心呀", "加油","🤍","🖤","一定要把@memo完结掉！");
-    var a = new Array("1", "22", "333","4444","55555","666666");
+    
+  var i=0 ;
+
+    if(i==0){
+    var a = new Array("陛下万岁！");
+  }
+    if(i==1){
+    var a = new Array("🤍");
+    }
+    if(i==2){
+      var a = new Array("🖤");
+      }
+    if(i==3){
+        var a = new Array("一定要把@memo完结掉！");
+        }
+    
     var $i = $("<span/>").text(a[a_idx]);
     var x = e.pageX,y = e.pageY;
     $i.css({
@@ -19,10 +35,7 @@ jQuery(document).ready(function($) {
     }, 1800, function() {
     $i.remove();
     });
-    a_idx = (a_idx + 1) % a.length;
-    if(a_idx == a.length )
-    {
-      a_idx=0;
-    }
+    
+    i++;
   });
 });
