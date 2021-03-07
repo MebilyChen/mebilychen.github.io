@@ -16,9 +16,10 @@ if(i==0){
        if(i==4){
         var a = new Array("1","22","333","4444","55555");
        }
+       var $i = $("<span/>").text(a[a_idx]);
 jQuery(document).ready(function($) {
   $("body").click(function(e) {
-    var $i = $("<span/>").text(a[a_idx]);
+    
     var x = e.pageX,y = e.pageY;
     $i.css({
       "z-index": 99999,
