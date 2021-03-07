@@ -14,7 +14,7 @@ jQuery(document).ready(function($) {
     });
     $("body").append($i);
     $i.animate({
-      "top": y - 150,
+      "top": y - 180,
       "opacity": 0
     }, 1800, function() {
     $i.remove();
