@@ -1280,7 +1280,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #41a605;
+  background: #eeccf0;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1807,8 +1807,8 @@ pre .javascript .function {
   color: #d9534f;
 }
 .note.done {
-  background-color: #fcf1f2;
-  border-left-color: #d9534f;
+  background-color: #edfff4;
+  border-left-color: #1a9d73;
 }
 .note.done:not(.no-icon):before {
   content: "\f00c";
