@@ -1280,7 +1280,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #00d6ff;
+  background: #41a605;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1805,6 +1805,14 @@ pre .javascript .function {
 .note.danger:not(.no-icon):before {
   content: "\f056";
   color: #d9534f;
+}
+.note.done {
+  background-color: #fcf1f2;
+  border-left-color: #d9534f;
+}
+.note.done:not(.no-icon):before {
+  content: "\f00c";
+  color: #edfff4;
 }
 .posts-collapse {
   margin-left: 35px;
