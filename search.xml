@@ -10,7 +10,7 @@
 
 <p>   <center>—</center></p>
   <center>这里是公告内容，通常会说一下近期挖坑的情况&#x1F910;</center>
-  <center>手里东西传得差不多了，基本上可以开始正常运转啦</center>
+  <center> **2021.3.9：**手里东西传得差不多了，基本上可以开始正常运转啦。然后我本月的配额已经快没有了，加上每天零点会定时自动部署，如果哪天我的文章一直处在“更新于今天”的状态，估计就是没配额了。正好我也不搞了，抓紧时间做毕设，吃了好几天草了都。咱们下个月见👋🏻</center>
 
 <p><br></br></p>
 <div style="text-align:right;font-size:14px;;color:#0D83CD">  
@@ -18,6 +18,26 @@
       <categories>
         <category>公告</category>
       </categories>
+  </entry>
+  <entry>
+    <title>还希望站子拥有的一些优化</title>
+    <url>/2021/03/06/%E8%BF%98%E5%B8%8C%E6%9C%9B%E7%AB%99%E5%AD%90%E6%8B%A5%E6%9C%89%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BC%98%E5%8C%96/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><ul>
+<li><del>hexo+coding的自动部署</del></li>
+<li><del>note功能</del></li>
+<li>指针：给陛下做套鼠标指针用在站子上</li>
+<li><del>画廊：做个画廊页面</del></li>
+<li>站宠：想要自己用live2d把陛下做成站宠！！！…不过理想可能太过于宏大了🤡</li>
+<li>字体：可以改一下站子的字体…但是懒得去挑…太多了</li>
+<li>改/删除重新加密的按钮：和站子的黑白风格不搭，能不能不要啊（泪）</li>
+</ul>
+]]></content>
+      <categories>
+        <category>站子</category>
+      </categories>
+      <tags>
+        <tag>站子优化</tag>
+      </tags>
   </entry>
   <entry>
     <title>手书脑洞合集</title>
@@ -15150,26 +15170,6 @@ md，南村群童公然挑衅老子的威严，老子搞死他们！…顺便救
       <categories>
         <category>建站测试用</category>
       </categories>
-  </entry>
-  <entry>
-    <title>还希望站子拥有的一些优化</title>
-    <url>/2021/03/06/%E8%BF%98%E5%B8%8C%E6%9C%9B%E7%AB%99%E5%AD%90%E6%8B%A5%E6%9C%89%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BC%98%E5%8C%96/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><ul>
-<li><del>hexo+coding的自动部署</del></li>
-<li><del>note功能</del></li>
-<li>指针：给陛下做套鼠标指针用在站子上</li>
-<li>画廊：做个画廊页面</li>
-<li>站宠：想要自己用live2d把陛下做成站宠！！！…不过理想可能太过于宏大了🤡</li>
-<li>字体：可以改一下站子的字体…但是懒得去挑…太多了</li>
-<li>改/删除重新加密的按钮：和站子的黑白风格不搭，能不能不要啊（泪）</li>
-</ul>
-]]></content>
-      <categories>
-        <category>站子</category>
-      </categories>
-      <tags>
-        <tag>站子优化</tag>
-      </tags>
   </entry>
   <entry>
     <title>鲸落-1</title>
