@@ -351,9 +351,18 @@ After a while, the King noticed. He averted his gaze to the ground, smiling, som
    $(".fa-clipboard").click(function(){
      clipboard.on('success', function(){
        swal({   
-         title: "",   
+         title: " ",   
          text: '复制成功',
          icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
          showConfirmButton: true
          });
  	 });
@@ -615,7 +624,7 @@ After a while, the King noticed. He averted his gaze to the ground, smiling, som
 
 <!-- 网站运行时间的设置 -->
 <span id="timeDate">载入天数...</span>
-<span id="times">载入时分秒...</span>  Sometimes your whole life boils down to one insame move.
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
 <script>
     var now = new Date();
     function createtime() {
@@ -635,7 +644,7 @@ setInterval("createtime()",250);
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">让我们在此恭迎陛下泽世</span>
+  <span class="post-count"> </span>
 </div>
         
 
