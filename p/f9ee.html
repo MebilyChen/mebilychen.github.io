@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-king-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-brand-black.png">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"coding-pages-bucket-3530815-8419662-13805-518516-1305127431.cos-website.ap-hongkong.myqcloud.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="是针对陛下的角色研究">
+<meta property="og:type" content="article">
+<meta property="og:title" content="羽化">
+<meta property="og:url" content="https://coding-pages-bucket-3530815-8419662-13805-518516-1305127431.cos-website.ap-hongkong.myqcloud.com/p/f9ee">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:description" content="是针对陛下的角色研究">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-10-28T01:39:00.000Z">
+<meta property="article:modified_time" content="2021-03-09T08:39:09.682Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="白王">
+<meta property="article:tag" content="角色研究">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://coding-pages-bucket-3530815-8419662-13805-518516-1305127431.cos-website.ap-hongkong.myqcloud.com/p/f9ee.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : '中文'
+  };
+</script>
+
+  <title>羽化 | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">102</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">35</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">106</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>画廊</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
+    <link itemprop="mainEntityOfPage" href="https://coding-pages-bucket-3530815-8419662-13805-518516-1305127431.cos-website.ap-hongkong.myqcloud.com/p/f9ee">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-kingsec.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          羽化
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-10-28 09:39:00" itemprop="dateCreated datePublished" datetime="2020-10-28T09:39:00+08:00">2020-10-28</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2021-03-09 16:39:09" itemprop="dateModified" datetime="2021-03-09T16:39:09+08:00">2021-03-09 16:39:09</time>
+                </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%B0%83%E8%B0%90-%E8%A7%92%E8%89%B2%E7%A0%94%E7%A9%B6/" itemprop="url" rel="index"><span itemprop="name">调谐|角色研究</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>5.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>5 分钟</span>
+            </span>
+            <div class="post-description"><center>是针对陛下的角色研究</div>
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E8%A7%92%E8%89%B2%E7%A0%94%E7%A9%B6/" rel="tag"><i class="fa fa-tag"></i> 角色研究</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <div class="note warning"><p style="text-align:center; color:#F0AD4E">♕DEMO/未完成作品♕ </p></div>
+
+<p>羽化<br/>
+Eclosion</p>
+
+<hr/>
+
+<p>灵魂聚集到了它躯体的最深处。离那具象征着野蛮的残破尸身还要遥远许多。散落在她四周的茸毛早已变得晦暗无光，而它的状况也不容乐观，很快，它也会陷入长眠。或许再过两分钟...一分钟？<br/>
+    即便大限将至，黑暗逐渐吞噬了它的视野，它仍能清晰地感知到自己身体的无限远处那只属于灵魂的冰冷漠然。<br/>
+        它将死去。<br/>
+        然后重生。<br/>
+        但是它能补救的是那么有限。它将灵魂疯狂而几近粗暴地塞入那个渺小的容器里，直至黏稠的白色从尚未成型的柔软躯壳表面淌下。<br/>
+        它只被命运赐予了如此短暂的时间。<br/>
+        如果可以——它想着，继续感受着那一颗灵魂核心一次次杂乱无章的搏动——如果可以，它必会转世成更加强大的存在。强大到任何野性都无法与其抗衡，任何神明都不堪其哪怕无心一击。<br/>
+        但是它只被允许苟延着如此短暂的时间。<br/>
+         它的光芒完全流向了核心附近，它抽搐了一下，呕出了一大片黑血。<br/>
+        不，神是不会流血的。黑色的液体缓缓渗透进石缝之中。它们隐匿了身形，它们在等待一个新的宿主，或者听从深渊的召唤。<br/>
+        虚空——堕神的嵌合体，殒落之光最终的归宿。<br/>
+        而现在它正在成为它的温床。<br/>
+        它无视了自己逐渐崩坏的身体，机械性地重复着将苍白光芒压入核心的动作。<br/>
+        它不会把自己的光芒献祭给虚空的。至少不是全部。<br/>
+        就在此时，容器发出了一声可怖的闷响。<br/>
+        它的动作猛地一滞。<br/>
+        已经是极限了。<br/>
+        不。<br/>
+        不可能。<br/>
+        它还有那么多灵魂，那么多神力，那么多渴求……<br/>
+        它看见了自己远处某一节消散身体中裸露出的骨骼，不再活动，只剩一片死亡笼罩下的寂静。<br/>
+        如果有限容量的生命无法完全承载它存在的意义的话，那么它就为自己刻出一座墓碑，一个象征，一枚护符。<br/>
+        携带着它，它就会完整如初。<br/>
+        灵魂的光芒又重新回旋起来，汇集于一点上。<br/>
+        上方，灵魂已经凝结在一起，流动的痕迹干涸其上，一层层堆叠，勾勒出了骇人的轮廓，被埋于其中的容器被层层包裹，和它的包裹物一起悬吊于骨架之下。<br/>
+         一只完美的蛹。<br/>
+        它却无暇欣赏这混沌又美丽的造物。还不够，灵魂仍在继续流动着，直到它的世界完全陷入漆黑，直到它颅腔内的蜂鸣刹那间归于沉寂。在现世的最后一秒，被遗弃的残留灵魂仍在哀号着消散在空间中的遗恨。<br/>
+        结束了。徘徊在现实与梦境的边缘，它的意识逐渐融入其中。</p>
+
+<p>————————</p>
+
+<p>他又感到一阵反胃，比上一次还要强烈许多。<br/>
+距他醒转过来已经有很长一段时间了，更准确地说，足足过去了五分钟。<br/>
+五分钟，对现在的他而言，更像是一个世纪。<br/>
+他是被迫苏醒的，从惬意的清爽梦境中被硬生生拽回到现实世界。<br/>
+现实世界，只有一片混乱、黏腻、燥热的黑暗。<br/>
+所有的一切都让他感到恶心。<br/>
+他压抑着呕吐的冲动，尝试着去触碰那片蠕动着的黑影。<br/>
+出乎他意料的是，他还没来得及伸展开肢体，只是稍稍挪动了一下爪子，就已经接触到了这个世界的边缘。<br/>
+他有些困惑，发生了什么？在他的印象里，即便的确狭窄，世界也不应该如此。<br/>
+他把自己的重量向前推去，再次试着把手臂伸展开。<br/>
+他的背又碰到了边界。在接触的一刹那，他感到那障碍物融化了一些，黏稠的液体顺着他的背部流向了全身。<br/>
+他意识到了，自己被困在了一个异常狭小的空间里，小到自己连转身都不被允许。<br/>
+他的肢体被迫蜷缩着，已经开始变得酸痛。<br/>
+炎热，令人烦躁的温度，他厌恶高温，厌恶这种将要融化的感觉，厌恶那些滴到他脸上的熔融黏液。这里的一切都是那么肮脏龌龊，污秽不堪。在这里驻留的越久，他就会被折磨的越虚弱，他可以肯定这一点。<br/>
+他更喜爱寒冷，冰凉的触感能使他冷静下来。那里的风阵阵刺骨，道道凛冽。所有优柔的液体都转变成了强硬的固态，没有任何延涎。毅然，决绝，独断，完美。那里不容一丝拖沓，不容一丝犹豫，也不会有所缠绵。<br/>
+那里才应该是神的居所。<br/>
+而不是现在囚禁他的监牢。<br/>
+他又尝试了他不久前尝试过的动作，又是徒劳。<br/>
+无论他怎么挣扎，这个包裹住他的略带弹性的黏膜总会恢复原状。<br/>
+他必须想办法撕裂它，而且要快，哪怕只是一道裂缝。<br/>
+如果做不到的话，他便会闷死在这里。<br/>
+他感到自己的身体开始发热，呼吸也逐渐变得困难起来。<br/>
+他的爪子还不够锋利，实际上，它们根本没有硬化。<br/>
+他努力弓起背部，又放松，同时不停扭动着身体。他一直重复着这个本令他感到羞耻的动作，但他没时间管这些。他能听到头腔内逐渐放大的搏动声，身体内的血液逐渐向脊背集中流去。<br/>
+紊乱的呼吸和酸胀的身体几乎使他晕厥过去。他咬着牙忍耐着，他要等待某个声响。<br/>
+几乎是耳语一般，他已经开始钝化的听觉隐约捕捉到了“啪啦”的一声轻响。<br/>
+就如花朵绽开的声音。<br/>
+他没有丝毫犹豫。立刻将身体向后方顶出。<br/>
+有什么在阻止他离开。<br/>
+虽然只是冥冥中的感觉，但他能感受到那股阻力，将他固定在原地，将他向下拉去，将他向前方的深处推移。<br/>
+…不，这些力量不是同一种来源。<br/>
+他没有时间深入思考这些。<br/>
+那道裂缝终于还是屈服了，发出了噼啪的声音。<br/>
+冰冷的气流先是触及到了他的脊背。带着强烈的渴求，他更加用力地向外爬去。随后是肩、头、手臂、手指。膜碎裂的声音断断续续地在空旷的黑暗中孤寂地回响。他艰难地调整着呼吸，贪婪地呼吸着新鲜凉爽的空气，爪子，准确地说，是四只爪子：两只前爪，两只肋爪，紧紧扣住了裂口的边缘。<br/>
+他这才静下心来观察自己的周围。在他破出的那一瞬间，他的光芒便重新忽闪起来，这微弱的光芒仅仅只能照亮他周围一圈。也许形容成警惕更为生动一些，他的光是他神力的象征，也是他表达自己的一个媒介。<br/>
+对于自己的前世，他还是零星记得一些的。记忆的缺失也没有使他惊讶，这只不过是必须付出的代价而已。<br/>
+相反，对于自己的躯壳，他反而更为好奇。沃姆是没有手足的，几乎没有，如果那几只少得可怜的，已经退化得不成样子的引导肢算数的话。他伸展开一只爪子，小心翼翼地观察着。他的前爪生着三根指节，这和他遥远记忆中的那些平凡之躯一样。而位于肋侧的一组附肢，则只是有着一根勾指的勾爪，他的腿，唔，现在还有一节陷在濡软的黑色黏液中。他立刻向上挪动了几步，这才完全摆脱了这些肮脏不堪的污渍。那些恶心的物质并没有一直攀附在他的肢体上，而是被净化一般缓缓消失了。很好。<br/>
+有一层薄纱似的蝉衣紧贴着他的肢体，这对于他敏感的触觉而言，算得上一种折磨了。显然，这层蝉衣因为之前闷热的环境而变得褶皱潮湿。皱起眉，他试着腾出一只爪子来将它挑起来，它凸出了一角，其余的部分纹丝不动，仍紧紧贴合在它的外骨骼上。这似乎对改善他的反感情绪并没有什么帮助，他叹气，努力把注意力转移开。<br/>
+这时他才感觉到自己背后的重量。屏息感受时，那不算很轻。一定是自己之前混乱的状态让他的感觉迟钝了许多，这样的重量不可能被轻易忽视。他试着扭头去看自己的身后。无奈被自己的肩遮住了视线。但他也不是完全没有收获，那个似乎附着在他背上的东西露出了一角，一团极其丑陋的……某种器官。<br/>
+这真是出乎他意料之外，他不记得自己设计了这种东西。<br/>
+更绝望的是，它是自己不可分割的一部分。<br/>
+他转回头沉吟良久，冷静下来分析自己的现状。首先，自己在这个恶心的培养皿里苏醒过来，然后，又筋疲力尽地从中挣扎出来…<br/>
+顺着面前的裂痕，他仔细审视着自己才脱出不久的黑色“虫蛹”上。之前那个囚困他的监牢，应该就是这个“蛹”了。<br/>
+（…也许那个不堪入目的器官会有它的用处，他了解自己，包括前世的自己，他是不会无缘无故地创造出残次品的。<br/>
+…不，现在他需要集中精神思考更重要的问题。）<br/>
+他向远处看去，那里一片漆黑。只在下方的某处，隐约闪动着一点白光。因为距离的关系，看不真切。<br/>
+现在他应该是在前世骨架的深处。一个被精心安排好的育幼园。在他足够成熟之后，他就可以离开自己前世陈旧的遗体，去探索这个世界。<br/>
+……不对，这不是他的追求。<br/>
+他闭上眼睛，在脑海中搜索着相关的关键词。<br/>
+……一片空白。<br/>
+他睁开眼。<br/>
+也许是转移重要记忆的过程中出了一点意外。<br/>
+好吧，先把这件事放在一边。<br/>
+他做了一个深呼吸，放松身体。<br/>
+有一种异样、新奇的感觉，像是一切都很陌生…这是自然的，他是一位屈就于平凡之躯的神。亲身体验凡虫的生活也不算令他厌恶，他更多感觉到的是好奇和…期待。沃姆热衷探究事物的天性使他感到兴奋。<br/>
+这让他意识到自己不能一直趴在自己的蛹上。一切计划都需要投入实践来实行。<br/>
+但是他的蛹高高悬吊在骨架的顶端，他不能就这样松开爪子。他新生的躯壳会因为无情的重力作用而摔得粉碎。<br/>
+他又把注意力移回背后的那团异物上。<br/>
+他尝试通过控制它的运动来感受它的存在，就像挪动爪子那样。<br/>
+响应着他的命令，它颤动了几下。<br/>
+（什么样的器官会长在背上？）<br/>
+他脑海中浮现出一些零碎的画面，开始有些理解自己前世的用意了。<br/>
+现在他只需要把它舒展开。他的血液开始更多地向那个部位流动过去。<br/>
+这是一个十分漫长的过程。他闭上眼，完全与世界隔离开来。他无法活动，注意力全部集中在那一点上，感受着它缓缓展开。而正因如此，这是他最脆弱的时候。<br/>
+显然他不用担心自己会有生命危险，一切都已经安排得近乎完美。再不济的虫子也不会胆敢大摇大摆地走进如山洞般的血盆大口里。即便敢于尝试，它们也不会有耐心走到最深处。<br/>
+时间再一次失去了意义。<br/>
+直到有光芒从缝隙钻入，他猛地睁开眼，看见的还是那个蛹，不过相比之前更加明亮。<br/>
+他向后看去，在微弱的气流中，三对透明洁白的翅膀轻轻颤动。华丽精致的纹路遍布其上，明亮的白光流转其中。<br/>
+现在就好上许多。他满意地感受着那轻巧许多的重量，试探性的稍稍挥动翅膀，细小的光屑旋即洒落。<br/>
+凉意从后方传来，他的身体突然紧绷起来。<br/>
+一种冲动。他从来没有机会体验到的冲动。<br/>
+飞翔。<br/>
+仅仅只是一个念头闪过，他的身心便雀跃起来。<br/>
+飞翔，在那么多个千年的蛰伏和等待之后。<br/>
+回应内心的渴望，他毅然决然地松开爪子。<br/>
+一阵可怖的失重感之后，“飒”的一声轻响，他的身体便轻盈起来。<br/>
+黑暗中，一点白光悠悠地从上方飘落。<br/>
+气流穿过他的指缝，抚过他的脸颊和躯体，随后被他的翅膀捕获，控制，改变。<br/>
+滑翔空中的每一刻都是享受，但他不能耽误正事。于是他收起内心的冲动，心不在焉地寻找落地点。<br/>
+之前引起他注意的那个光点仍在忽闪忽灭，于是他调整姿势，准备转向那个方位。<br/>
+但是飞翔显然并不如他想象中那样简单。身为各种意义上飞行初学者的他实在是有些过于自信。<br/>
+一股强劲的气流撞向他的翅膀，瞬间，飞行带来的美妙感受消失殆尽。<br/>
+飞翔是他为数不多的盲区，慌张更是他鲜有体会的感受。<br/>
+他距地面还有一些高度，他不能坐以待毙。<br/>
+他将翅膀转过一个角度，尽力向下扇动，一次次扑空的无力感觉使他感到不安。<br/>
+（那阵异常的风从何而来？<br/>
+不过他立即把探究答案的本能压制下去，转而开始规划最为现实的着陆方案。）<br/>
+他在下坠。杂乱无章的风从四面八方掠过他的翅膀，似是要把脆弱的它们撕碎一般。<br/>
+他在紊乱的气流中挣扎，但那一丝平衡感却总是迅速地滑脱出他的控制。风在他的耳边呼啸，听上去似乎嘶吼得更加野蛮。<br/>
+有那么一瞬间，他觉得这是计划的一部分——他和他的前世总是那么擅长规划和设计。如果他失败了，更具体地说，这个容纳它的容器碎裂了，就证明了它的不完美。<br/>
+它痛恨残次品，他了解自己。<br/>
+它会有替补计划，另一个容器，虽不能称得上绝对完美，但一定会是更加完美的容器。<br/>
+但这漆黑空洞的骨架里，显然他是唯一一个活物。<br/>
+只有一次机会，死亦或生。<br/>
+它同样也痛恨单行道，没有足够的空间来为自己规划另外的选项，被逼迫着走向前方的未知。<br/>
+它讨厌未知，相伴着不确定性，它让它感到不快，像是一个完美品上的瑕疵。<br/>
+未知让他感到恐惧。就像现在，他放弃似的完全展平翅膀，任由狂暴的风将他推向随机的方向。现在，他只能将自己的未来交付给不可知的东西。暂时。<br/>
+恐惧从来都是暂时的，他相信这一点。随波逐流的他反而逐渐找回了平静。<br/>
+…等等，恐惧。<br/>
+从什么时候，他开始变得感性？<br/>
+神是没有感情的。神是不能有感情的。<br/>
+他着陆了，方式与优雅相去甚远。但他还是设法保持着神明该有的仪态。站起身，他拍掉身上的土和灰尘。底部的骨架已经出现被侵蚀的迹象，丑陋的缺口随处可见，暴露出下方的泥土。</p>
+
+<p>————————</p>
+
+<p>事情有些不对劲，他反复摩挲着掌心里的“国王之魂”，眉头紧锁。他本应该在这枚护符里拿回更多的记忆的。<br/>
+有什么东西在盗取着他的灵魂，他的神力。</p>
+
+<p>————————</p>
+
+<p>这具容器忠实地把一切情感都分毫不差地传达给他，而他唯一能做的只是被动地接纳着它们给他带来的陌生感受。他感到一丝烦躁。</p>
+
+<p>————————</p>
+
+<p>首先，一切都显得过于空旷了。<br/>
+他记起自己还拥有庞大身躯的过去，他的视野内永远都只有遥远的地平线。只消低吼一声，就能感觉到大地在和自己共鸣。虫子们熙熙攘攘地挤在自己身边，犹如蝼蚁一般，愚蠢而又渺小。为了不在挪动时玷污自己的身躯，他会用头把那些离得太近的虫子们推到一边。<br/>
+它们崇拜他。这是自然的。他是灯塔，是它们漆黑一片的思绪中唯一的光。</p>
+
+<p>————————</p>
+
+<p>他静静地立在那里，毫不掩饰自己光芒中的危险信号，耐心等待对方识趣地离开。<br/>
+他是神，即便重生于这个小上几百万倍的身躯里，他依旧是神。<br/>
+那只会弹跳的低级虫子比他大了几十倍左右，此刻仍直直地盯着他，复眼中映照出属于他的白色光芒。他从中读出了饥饿，低级虫子发出了古怪的呼噜声。<br/>
+他还没有做好战斗的准备，他还没有掌握飞行的能力，他的法术还没有适应于这个全新的身体，甚至连他的外壳和爪子都还是柔软的。<br/>
+他威慑性的猛地展开翅膀，光芒照耀着整个空间，辉煌如白昼一般。<br/>
+低级虫子被突如其来的光芒惊了一下。但在发觉并无威胁后，它又重新回到了狩猎状态。<br/>
+渎神？多么狂妄的想法啊。<br/>
+但是神的胜率并不是百分之百。</p>
+
+<p>————————</p>
+
+<p>尖叫声。百十只庞大的躯体钻出了百十个洞，是求生的最基本欲望使它们纷纷逃离。神不会被杀死，神裔却可以。它知道自己应该做什么，已经吞噬了数只同族的它已经获得了凌驾一切的力量。但是还不够，它需要成为“巨人”。<br/>
+它展开了一个屏障。边界处，撞击产生的闷响伴随着绝望的号叫声，刺耳无比。<br/>
+还有怒吼声。有几只沃姆向它袭来，它们丝毫不是它的对手。被抽干了象征着生命的神力之后，它们的躯壳被随意地丢弃在一边。<br/>
+嗡鸣声。<br/>
+随后，一切都归于死寂。再次苏醒时，它被自己的光芒刺得睁不开眼睛。<br/>
+它成功了，它飞升成了神。他成为了唯一的一只沃姆，它感到自己……<br/>
+没有任何感觉。<br/>
+它本应感到兴奋和激动。或者愧疚和不安。<br/>
+…什么是兴奋？愧疚又是什么？它不再知道答案了。</p>
+
+<p>————————</p>
+
+<p>再过十年，圣巢便会传颂起他的诞生。<br/>
+“很久很久以前，一只沃姆长眠于王国边缘。”</p>
+
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读-------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/f9ee">羽化</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2020年10月28日 - 09:39</p>
+ <p><span>最后更新:</span>2021年03月09日 - 16:39</p>
+ <p><span>原始链接:</span><a href="/p/f9ee" title="羽化">https://coding-pages-bucket-3530815-8419662-13805-518516-1305127431.cos-website.ap-hongkong.myqcloud.com/p/f9ee</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://coding-pages-bucket-3530815-8419662-13805-518516-1305127431.cos-website.ap-hongkong.myqcloud.com/p/f9ee"  aria-label="复制成功！"></i></span>
+ </p>
+ <p><span>许可协议:</span>cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $(".fa-clipboard").click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: "",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E8%A7%92%E8%89%B2%E7%A0%94%E7%A9%B6/" rel="tag"><i class="fa fa-tag"></i> 角色研究</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/8837" rel="prev" title="Dear Diary-设定">
+      <i class="fa fa-chevron-left"></i> Dear Diary-设定
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/5a1d" rel="next" title="鲸落-Whalefall-设定">
+      鲸落-Whalefall-设定 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar-kingsec.jpg">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">106</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">102</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:1013712127@qq.com" title="E-Mail → mailto:1013712127@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/mebily1314" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      梦起飞又坠落的地方
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://mebilychen.lofter.com/" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;" rel="noopener" target="_blank">LOFTER</a>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/p/248a" title="p&#x2F;248a.html">一个新点子，关于跑团的</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ba1a" title="p&#x2F;ba1a.html">想给陛下做游戏，Unity2d</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/174a" title="p&#x2F;174a.html">一个段子小合集，因为太多了</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/c099" title="p&#x2F;c099.html">小小梦魇2团长系理解+倾诉</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/da82" title="p&#x2F;da82.html">时间线@Re</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/a092" title="p&#x2F;a092.html">人物关系图@Memo</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/bf79" title="p&#x2F;bf79.html">流星</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/p/cb75" title="p&#x2F;cb75.html">Here Be Dragons</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/3a08" title="p&#x2F;3a08.html">D-R4-90n</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/79ed" title="p&#x2F;79ed.html">寡王30日挑战</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="true"
+      volume="0.4"
+      theme="#999999"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">536k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">8:07</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">让我们在此恭迎陛下泽世</span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+</body>
+</html>
