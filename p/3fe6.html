@@ -310,7 +310,7 @@
 
 <p>&#x1F3BC;</p>
 
-    <div id="aplayer-ypelaZwX" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-lcQckXmz" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="2485441" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div>
 
@@ -371,7 +371,7 @@
 </div>
 <script> 
    var clipboard = new Clipboard('.fa-clipboard');
-   $(".fa-clipboard").click(function(){
+   $('.fa-clipboard').click(function(){
      clipboard.on('success', function(){
        swal({   
          title: " ",   
@@ -381,11 +381,11 @@
          });
  	 });
 
-     clipboard.on('error', function(){
+     clipboard.on('error', function(e){
        swal({   
          title: " ",   
          text: '复制失败',
-         icon: "error", 
+         icon: "success", 
          showConfirmButton: true
          });
  	 });

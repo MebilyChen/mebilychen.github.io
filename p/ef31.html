@@ -348,7 +348,7 @@ After a while, the King noticed. He averted his gaze to the ground, smiling, som
 </div>
 <script> 
    var clipboard = new Clipboard('.fa-clipboard');
-   $(".fa-clipboard").click(function(){
+   $('.fa-clipboard').click(function(){
      clipboard.on('success', function(){
        swal({   
          title: " ",   
@@ -358,11 +358,11 @@ After a while, the King noticed. He averted his gaze to the ground, smiling, som
          });
  	 });
 
-     clipboard.on('error', function(){
+     clipboard.on('error', function(e){
        swal({   
          title: " ",   
          text: '复制失败',
-         icon: "error", 
+         icon: "success", 
          showConfirmButton: true
          });
  	 });

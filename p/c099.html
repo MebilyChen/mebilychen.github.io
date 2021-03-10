@@ -396,7 +396,7 @@ md，南村群童公然挑衅老子的威严，老子搞死他们！…顺便救
 </div>
 <script> 
    var clipboard = new Clipboard('.fa-clipboard');
-   $(".fa-clipboard").click(function(){
+   $('.fa-clipboard').click(function(){
      clipboard.on('success', function(){
        swal({   
          title: " ",   
@@ -406,11 +406,11 @@ md，南村群童公然挑衅老子的威严，老子搞死他们！…顺便救
          });
  	 });
 
-     clipboard.on('error', function(){
+     clipboard.on('error', function(e){
        swal({   
          title: " ",   
          text: '复制失败',
-         icon: "error", 
+         icon: "success", 
          showConfirmButton: true
          });
  	 });
