@@ -25,6 +25,29 @@
       </categories>
   </entry>
   <entry>
+    <title>想给陛下做游戏，Unity2d</title>
+    <url>/2021/03/09/%E6%83%B3%E7%BB%99%E9%99%9B%E4%B8%8B%E5%81%9A%E6%B8%B8%E6%88%8F%EF%BC%8CUnity2d/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><div class="note danger"><p style="text-align:center ; color:#D9534F"> ♕本文为设定♕ </p></div>
+
+<p>好吧基本上是这样的，横版卷轴，平台跳跃，想做成像素风格，主要机制是键盘wasd移动，其他键施法，根据按的顺序和组合，法术效果不一样。鼠标控制施法位置，单击左键是使用武器（剑），有点像Lisa和buddy simulator那样</p>
+<h2 id="属性类："><a href="#属性类：" class="headerlink" title="属性类："></a>属性类：</h2><h3 id="可学习："><a href="#可学习：" class="headerlink" title="可学习："></a>可学习：</h3><p>魂（灵魂（白光））（光）（解锁法术值后自动获得）（基本法术攻击以及回血）<br>心（火）（红色）（和团长的契约）（伤害较高，持续伤害）<br>冬（固有）（冰）（白色）（基本法术攻击，伤害较高，冰冻效果，可改变地图，高温下失效）<br>影（伤害最高，对自己也会造成伤害）（虚空）（黑色）（暗）<br>森（木）（绿色）（和白后重逢后解锁）（可改变地形）<br>梦（锁链时停）（紫色）（精华）（超能）（克制速）  </p>
+<h3 id="不可学习："><a href="#不可学习：" class="headerlink" title="不可学习："></a>不可学习：</h3><p>怒（电）（黄色）<br>垒（土）<br>速（风）<br>流（生命血）（蓝色）（水）（攻击弱，有回复加成）  </p>
+<h3 id="Lore："><a href="#Lore：" class="headerlink" title="Lore："></a>Lore：</h3><h3 id="基本功能类："><a href="#基本功能类：" class="headerlink" title="基本功能类："></a>基本功能类：</h3><p>袭（基本攻击）<br>祝（当前武器附魔）<br>升（回血）<br>反（基本防御）（对飞行物属性相同才能反）（对敌人产生推开效果）<br>解（消除自身负面影响，解读内容文字）  </p>
+<h2 id="法术形式："><a href="#法术形式：" class="headerlink" title="法术形式："></a>法术形式：</h2><p>无<br>飞刀（飞行物）<br>剑<br>锤<br>弓<br>矛<br>地刺<br>能量束<br>爆炸<br>滚石  </p>
+<h3 id="附加效果类："><a href="#附加效果类：" class="headerlink" title="附加效果类："></a>附加效果类：</h3><p>随（飞行物自动瞄准跟踪）<br>（穿透伤害）<br>巢（瘟疫橙）（链接飞行物，使其在自身周围旋转）<br>爆（爆炸）<br>裂（分裂出小飞行物）<br>归（飞来骨）  </p>
+<h3 id="不可学习：-1"><a href="#不可学习：-1" class="headerlink" title="不可学习："></a>不可学习：</h3><p>丝</p>
+<h3 id="Lore：-1"><a href="#Lore：-1" class="headerlink" title="Lore："></a>Lore：</h3><p>日（金黄光）（辐光）（巢的原始形）  </p>
+<h2 id="其他非法术加成："><a href="#其他非法术加成：" class="headerlink" title="其他非法术加成："></a>其他非法术加成：</h2><p>增加攻击速度<br>增加攻击伤害<br>增加防御效果<br>增加速度</p>
+]]></content>
+      <categories>
+        <category>陛下的Unity2d游戏</category>
+      </categories>
+      <tags>
+        <tag>白王</tag>
+        <tag>设定</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>一个新点子，关于跑团的</title>
     <url>/2021/03/09/%E4%B8%80%E4%B8%AA%E6%96%B0%E7%82%B9%E5%AD%90%EF%BC%8C%E5%85%B3%E4%BA%8E%E8%B7%91%E5%9B%A2%E7%9A%84/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>就是让陛下做pl，团长做kp。</p>
@@ -14957,28 +14980,6 @@ Ryuka9<br/>
       </categories>
       <tags>
         <tag>白王</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>想给陛下做游戏，Unity2d</title>
-    <url>/2021/03/09/%E6%83%B3%E7%BB%99%E9%99%9B%E4%B8%8B%E5%81%9A%E6%B8%B8%E6%88%8F%EF%BC%8CUnity2d/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><div class="note danger"><p style="text-align:center ; color:#D9534F"> ♕本文为设定♕ </p></div>
-
-<h2 id="属性类："><a href="#属性类：" class="headerlink" title="属性类："></a>属性类：</h2><h3 id="可学习："><a href="#可学习：" class="headerlink" title="可学习："></a>可学习：</h3><p>魂（灵魂（白光））（光）（解锁法术值后自动获得）（基本法术攻击以及回血）<br>心（火）（红色）（和团长的契约）（伤害较高，持续伤害）<br>冬（固有）（冰）（白色）（基本法术攻击，伤害较高，冰冻效果，可改变地图，高温下失效）<br>影（伤害最高，对自己也会造成伤害）（虚空）（黑色）（暗）<br>森（木）（绿色）（和白后重逢后解锁）（可改变地形）<br>梦（锁链时停）（紫色）（精华）（超能）（克制速）  </p>
-<h3 id="不可学习："><a href="#不可学习：" class="headerlink" title="不可学习："></a>不可学习：</h3><p>怒（电）（黄色）<br>垒（土）<br>速（风）<br>流（生命血）（蓝色）（水）（攻击弱，有回复加成）  </p>
-<h3 id="Lore："><a href="#Lore：" class="headerlink" title="Lore："></a>Lore：</h3><h3 id="基本功能类："><a href="#基本功能类：" class="headerlink" title="基本功能类："></a>基本功能类：</h3><p>袭（基本攻击）<br>祝（当前武器附魔）<br>升（回血）<br>反（基本防御）（对飞行物属性相同才能反）（对敌人产生推开效果）<br>解（消除自身负面影响，解读内容文字）  </p>
-<h2 id="法术形式："><a href="#法术形式：" class="headerlink" title="法术形式："></a>法术形式：</h2><p>无<br>飞刀（飞行物）<br>剑<br>锤<br>弓<br>矛<br>地刺<br>能量束<br>爆炸<br>滚石  </p>
-<h3 id="附加效果类："><a href="#附加效果类：" class="headerlink" title="附加效果类："></a>附加效果类：</h3><p>随（飞行物自动瞄准跟踪）<br>（穿透伤害）<br>巢（瘟疫橙）（链接飞行物，使其在自身周围旋转）<br>爆（爆炸）<br>裂（分裂出小飞行物）<br>归（飞来骨）  </p>
-<h3 id="不可学习：-1"><a href="#不可学习：-1" class="headerlink" title="不可学习："></a>不可学习：</h3><p>丝</p>
-<h3 id="Lore：-1"><a href="#Lore：-1" class="headerlink" title="Lore："></a>Lore：</h3><p>日（金黄光）（辐光）（巢的原始形）  </p>
-<h2 id="其他非法术加成："><a href="#其他非法术加成：" class="headerlink" title="其他非法术加成："></a>其他非法术加成：</h2><p>增加攻击速度<br>增加攻击伤害<br>增加防御效果<br>增加速度   </p>
-]]></content>
-      <categories>
-        <category>陛下的Unity2d游戏</category>
-      </categories>
-      <tags>
-        <tag>白王</tag>
-        <tag>设定</tag>
       </tags>
   </entry>
   <entry>
