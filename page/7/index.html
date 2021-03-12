@@ -225,7 +225,7 @@
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-              if( (text).length <600)  { return; }
+              if(text.length <600)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -236,7 +236,7 @@
                                 + '\n（（））'
                                 + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。'
                                 + '\n作者: 碳素@mebilyc'
-                                + '\n原文地址: <%= post.permalink %>'
+                                + '\n原文地址:' <%= post.permalink %>
     
                 clipboardData.setData('text/plain', text + copyright);
     
@@ -362,7 +362,7 @@
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-              if( (text).length <600)  { return; }
+              if(text.length <600)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -373,7 +373,7 @@
                                 + '\n（（））'
                                 + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。'
                                 + '\n作者: 碳素@mebilyc'
-                                + '\n原文地址: <%= post.permalink %>'
+                                + '\n原文地址:' <%= post.permalink %>
     
                 clipboardData.setData('text/plain', text + copyright);
     
@@ -500,7 +500,7 @@
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-              if( (text).length <600)  { return; }
+              if(text.length <600)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -511,7 +511,7 @@
                                 + '\n（（））'
                                 + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。'
                                 + '\n作者: 碳素@mebilyc'
-                                + '\n原文地址: <%= post.permalink %>'
+                                + '\n原文地址:' <%= post.permalink %>
     
                 clipboardData.setData('text/plain', text + copyright);
     
@@ -600,8 +600,8 @@
               <a href="/tags/%E8%BE%90%E5%85%89/" rel="tag"><i class="fa fa-tag"></i> 辐光</a>
               <a href="/tags/%E7%99%BD%E5%90%8E/" rel="tag"><i class="fa fa-tag"></i> 白后</a>
               <a href="/tags/memo/" rel="tag"><i class="fa fa-tag"></i> @memo</a>
-              <a href="/tags/%E8%B5%AB%E6%8B%89/" rel="tag"><i class="fa fa-tag"></i> 赫拉</a>
               <a href="/tags/%E8%99%9A%E7%A9%BA/" rel="tag"><i class="fa fa-tag"></i> 虚空</a>
+              <a href="/tags/%E8%B5%AB%E6%8B%89/" rel="tag"><i class="fa fa-tag"></i> 赫拉</a>
               <a href="/tags/%E8%AE%BE%E5%AE%9A%E5%9B%BE/" rel="tag"><i class="fa fa-tag"></i> 设定图</a>
               <a href="/tags/%E6%A2%A6%E9%AD%87%E4%B9%8B%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 梦魇之王</a>
           </div>
@@ -648,7 +648,7 @@
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-              if( (text).length <600)  { return; }
+              if(text.length <600)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -659,7 +659,7 @@
                                 + '\n（（））'
                                 + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。'
                                 + '\n作者: 碳素@mebilyc'
-                                + '\n原文地址: <%= post.permalink %>'
+                                + '\n原文地址:' <%= post.permalink %>
     
                 clipboardData.setData('text/plain', text + copyright);
     
@@ -795,7 +795,7 @@
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-              if( (text).length <600)  { return; }
+              if(text.length <600)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -806,7 +806,7 @@
                                 + '\n（（））'
                                 + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。'
                                 + '\n作者: 碳素@mebilyc'
-                                + '\n原文地址: <%= post.permalink %>'
+                                + '\n原文地址:' <%= post.permalink %>
     
                 clipboardData.setData('text/plain', text + copyright);
     
@@ -933,7 +933,7 @@
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-              if( (text).length <600)  { return; }
+              if(text.length <600)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -944,7 +944,7 @@
                                 + '\n（（））'
                                 + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。'
                                 + '\n作者: 碳素@mebilyc'
-                                + '\n原文地址: <%= post.permalink %>'
+                                + '\n原文地址:' <%= post.permalink %>
     
                 clipboardData.setData('text/plain', text + copyright);
     
@@ -1077,7 +1077,7 @@
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-              if( (text).length <600)  { return; }
+              if(text.length <600)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -1088,7 +1088,7 @@
                                 + '\n（（））'
                                 + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。'
                                 + '\n作者: 碳素@mebilyc'
-                                + '\n原文地址: <%= post.permalink %>'
+                                + '\n原文地址:' <%= post.permalink %>
     
                 clipboardData.setData('text/plain', text + copyright);
     
@@ -1214,7 +1214,7 @@
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-              if( (text).length <600)  { return; }
+              if(text.length <600)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -1225,7 +1225,7 @@
                                 + '\n（（））'
                                 + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。'
                                 + '\n作者: 碳素@mebilyc'
-                                + '\n原文地址: <%= post.permalink %>'
+                                + '\n原文地址:' <%= post.permalink %>
     
                 clipboardData.setData('text/plain', text + copyright);
     
@@ -1355,7 +1355,7 @@
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-              if( (text).length <600)  { return; }
+              if(text.length <600)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -1366,7 +1366,7 @@
                                 + '\n（（））'
                                 + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。'
                                 + '\n作者: 碳素@mebilyc'
-                                + '\n原文地址: <%= post.permalink %>'
+                                + '\n原文地址:' <%= post.permalink %>
     
                 clipboardData.setData('text/plain', text + copyright);
     
@@ -1488,7 +1488,7 @@
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-              if( (text).length <600)  { return; }
+              if(text.length <600)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -1499,7 +1499,7 @@
                                 + '\n（（））'
                                 + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。'
                                 + '\n作者: 碳素@mebilyc'
-                                + '\n原文地址: <%= post.permalink %>'
+                                + '\n原文地址:' <%= post.permalink %>
     
                 clipboardData.setData('text/plain', text + copyright);
     
