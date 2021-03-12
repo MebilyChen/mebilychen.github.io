@@ -36,8 +36,8 @@
     var titleTime;
     document.addEventListener('visibilitychange', function() {
         if(document.hidden) {
-            $('[rel="icon"]').attr('href', "/failure.ico");
-            $('[rel="shortcut icon"]').attr('href', "/failure.ico");
+            $('[rel="icon"]').attr('href', "/favicon-32x32-brand-black.png");
+            $('[rel="shortcut icon"]').attr('href', "/favicon-32x32-brand-black.png");
             document.title = '盯————';
             clearTimeout(titleTime);
           } else {
