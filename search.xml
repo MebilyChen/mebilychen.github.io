@@ -27,7 +27,7 @@
   <entry>
     <title>记一下预加载动画怎么改...有点复杂</title>
     <url>/p/a2e8.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>四个文件：</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p>四个文件：</p>
 <ul>
 <li><p>主题目录下的layout/_scripts/loaded.ejs</p>
 <ul>
@@ -51,7 +51,7 @@
 </li>
 </ul>
 <p>一个路径：source/images/  </p>
-<p>  ​        如需要引入本地文件的新动画，在此路径下置入css文件，并在_layout.swig中的head标签内以固定样式引入（模仿开头两行中的一行，第一行本地路径，第二行网络路径）；若网络引入则不需要置入css文件</p>
+<p>  ​        如需要引入本地文件的新动画，在此路径下置入css文件，并在_layout.swig中的head标签内以固定样式引入（模仿开头两行中的一行，第一行本地路径，第二行网络路径）；若网络引入则不需要本地置入css文件</p>
 ]]></content>
       <categories>
         <category>建站测试用</category>
