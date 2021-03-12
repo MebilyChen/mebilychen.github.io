@@ -4,9 +4,9 @@
     document.getElementById('myCanvasContainer').style.display = 'inline';
     try {
       TagCanvas.textFont = 'Helvetica';
-      TagCanvas.textColour = '#333';
-      TagCanvas.textHeight = 15;
-      TagCanvas.outlineColour = '#E2E1C1';
+      TagCanvas.textColour = '#1F1F1F';
+      TagCanvas.textHeight = 26;
+      TagCanvas.outlineColour = '#FFFFFF';
       TagCanvas.maxSpeed = 0.03;
       TagCanvas.freezeActive = true;
       TagCanvas.outlineMethod = 'block';
