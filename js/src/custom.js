@@ -7,8 +7,8 @@
       TagCanvas.textColour = '#1F1F1F';
       TagCanvas.textHeight = 26;
       TagCanvas.outlineColour = '#FFFFFF';
-      TagCanvas.maxSpeed = 0.03;
-      TagCanvas.freezeActive = true;
+      TagCanvas.maxSpeed = 0.05;
+      TagCanvas.freezeActive = false;
       TagCanvas.outlineMethod = 'block';
       TagCanvas.minBrightness = 0.2;
       TagCanvas.depth = 0.92;
@@ -22,6 +22,8 @@
       TagCanvas.weight = false;
       TagCanvas.imageScale = null;
       TagCanvas.fadeIn = 1000;
+      TagCanvas.width=1280;
+      TagCanvas.height=1024;
       TagCanvas.clickToFront = 600;
       TagCanvas.lock = false;
       TagCanvas.Start('resCanvas');
