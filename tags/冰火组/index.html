@@ -490,24 +490,31 @@
 
     
 
-    option = {
+    let option = {
         title: {
             left: 'center',
-            text: '又一只弱气的小雷达',
+            text: '弱气的小柱子',
             textStyle: {
                 fontWeight: 500,
                 fontSize: 22
             }
         },
-        tooltip: {},
+    xAxis: {
+        type: 'category',
+        data: { [{"name":"白王","max":69},{"name":"格林","max":69},{"name":"冰火组","max":69},{"name":"GrimmPale","max":69},{"name":"ABO","max":69},{"name":"父子组","max":69},{"name":"收藏家","max":69},{"name":"君臣组","max":69},{"name":"设定","max":69},{"name":"硫卡","max":69},{"name":"克劳斯","max":69},{"name":"波奇","max":69},{"name":"奈斯","max":69},{"name":"安东那茨博士","max":69},{"name":"前辈","max":69},{"name":"3P","max":69},{"name":"卢瑞恩","max":69},{"name":"奎若","max":69},{"name":"蜂","max":69},{"name":"灭绝","max":69},{"name":"Reign:王权","max":69},{"name":"角色研究","max":69},{"name":"@饲养手册","max":69},{"name":"说明书格式","max":69},{"name":"JSB","max":69},{"name":"Crossover","max":69},{"name":"@Re","max":69},{"name":"吐槽","max":69},{"name":"AI智能","max":69},{"name":"@Wyrm.exe","max":69},{"name":"AU点子","max":69},{"name":"BE","max":69},{"name":"辐光","max":69},{"name":"泽若","max":69},{"name":"主仆","max":69},{"name":"养成","max":69},{"name":"君臣","max":69},{"name":"227事件","max":69},{"name":"@不正当竞争","max":69},{"name":"虐","max":69},{"name":"意识流（学习中）","max":69},{"name":"自杀暗示","max":69},{"name":"白后","max":69},{"name":"白夫妇","max":69},{"name":"日记体","max":69},{"name":"幼王","max":69},{"name":"甜","max":69},{"name":"某只再明显不过的小虫子","max":69},{"name":"@memo","max":69},{"name":"神学","max":69},{"name":"世界观","max":69},{"name":"@(伪)原作","max":69},{"name":"SCP基金会","max":69},{"name":"类Cyberpunk","max":69},{"name":"空洞骑士","max":69},{"name":"日月组","max":69},{"name":"光组","max":69},{"name":"沙雕","max":69},{"name":"圣巢","max":69},{"name":"@寄生","max":69},{"name":"沃姆","max":69},{"name":"@白色魔术","max":69},{"name":"虚空","max":69},{"name":"@凛冬将至","max":69},{"name":"赫拉","max":69},{"name":"二哥","max":69},{"name":"小骑士","max":69},{"name":"@笼","max":69},{"name":"无危","max":69},{"name":"连载","max":69},{"name":"脑叶公司","max":69},{"name":"@Matrix","max":69},{"name":"黑王","max":69},{"name":"设定图","max":69},{"name":"虫与虫与虫","max":69},{"name":"跑团","max":69},{"name":"黑魂3","max":69},{"name":"猫厂","max":69},{"name":"手书","max":69},{"name":"日系音游","max":69},{"name":"V家","max":69},{"name":"梦魇之王","max":69},{"name":"游戏书","max":69},{"name":"黄莲","max":69},{"name":"点子生成法","max":69},{"name":"拟人","max":69},{"name":"圣巢全员","max":69},{"name":"@鲸落","max":69},{"name":"小小梦魇2","max":69},{"name":"建站纪念","max":69},{"name":"Markdown","max":69},{"name":"Git Bash","max":69},{"name":"小福神","max":69},{"name":"小锦鲤","max":69},{"name":"完结","max":69},{"name":"人类世界","max":69},{"name":"书信格式","max":69},{"name":"预加载动画","max":69},{"name":"MOTHER/EarthBound","max":69},{"name":"林顿","max":69},{"name":"站子优化","max":69},{"name":"一只路过不愿透露姓名的小沃姆","max":69},{"name":"灵魂大师","max":69},{"name":"HLD","max":69},{"name":"短篇","max":69}] }
+    },
+    yAxis: {
+        type: 'value'
+    },
     series: [{
-        type: 'treemap',
-        color: ['#3ecf8e'],
-        data: [{
-            value : [2,2,1,1,1,68,20,9,5,1,2,1,26,18,7,29,2,4,1,3,1,9,1,2,4,1,7,3,2,6,6,3,2,3,2,3,3,4,1,1,7,4,1,1,1,8,1,1,3,1,10,4,2,1,1,2,3,6,3,1,1,1,3,2,1,1,1,2,5,2,1,3,1,2,1,1,1,1,1,1,1,1,1,2,1,1,4,3,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
-            name : 'tagNumber'
-            }
-        ] 
+        data: [ value : [68,20,9,5,1,2,1,26,18,2,2,1,1,1,7,1,29,2,4,3,1,9,4,1,1,2,7,3,2,6,10,4,6,3,2,3,2,3,3,4,1,1,7,4,1,1,1,1,8,1,1,3,2,3,2,1,1,6,3,1,1,1,2,1,3,1,1,2,2,5,1,3,1,2,1,1,1,1,1,1,1,1,1,2,1,1,4,3,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+                    name : 'tagNumber'
+                ],
+        type: 'bar',
+        showBackground: true,
+        backgroundStyle: {
+            color: 'rgba(180, 180, 180, 0.2)'
+        }
     }]
 };
 
