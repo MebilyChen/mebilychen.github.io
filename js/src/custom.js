@@ -1,8 +1,9 @@
-
+var OriginTitile = document.title;
+  
   window.onload = function() {
 
     /* 离开当前页面时修改网页标题，回到当前页面时恢复原来标题 */
-    var OriginTitile = document.title;
+    
     var titleTime;
     document.addEventListener('visibilitychange', function() {
         if(document.hidden) {
@@ -19,7 +20,7 @@
             }, 2000);
           }
     });
-    
+
     console.log('tag cloud plugin rock and roll!');
     document.getElementById('myCanvasContainer').style.display = 'inline';
     try {
