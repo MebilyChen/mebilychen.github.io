@@ -34,17 +34,19 @@
     }
   
    /* 离开当前页面时修改网页标题，回到当前页面时恢复原来标题 */
-    var OriginTitile = document.title;
-    var titleTime;
     document.addEventListener('visibilitychange', function() {
+      var OriginTitile = document.title;
+      var titleTime;
         if(document.hidden) {
-
+            $('[rel="icon"]').attr('href', "/favicon-32x32-king-black.png");
+            $('[rel="shortcut icon"]').attr('href', "/favicon-32x32-king-black.png");
             document.title = '盯————';
             clearTimeout(titleTime);
           } else {
+            $('[rel="icon"]').attr('href', "/favicon-32x32-brand-black.png");
+            $('[rel="shortcut icon"]').attr('href', "/favicon-32x32-brand-black.png");
             document.title = '*偏转视线*';
             titleTime = setTimeout(function() {
-
               document.title = OriginTitile;
             }, 2000);
           }
