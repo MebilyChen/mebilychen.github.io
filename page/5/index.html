@@ -225,7 +225,7 @@
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-
+              if(text.length < 100)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -236,9 +236,9 @@
                                 + '\n（（））'
                                 + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。'
                                 + '\n作者: 碳素@mebilyc'
-                                + '\n原文地址:'
+                                + https://mebilychen.github.io/p/ae37
     
-                clipboardData.setData('text/plain', text + copyright + post.permalink);
+                clipboardData.setData('text/plain', text + copyright);
     
               }
           };
@@ -358,7 +358,7 @@
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-
+              if(text.length < 100)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -369,9 +369,9 @@
                                 + '\n（（））'
                                 + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。'
                                 + '\n作者: 碳素@mebilyc'
-                                + '\n原文地址:'
+                                + https://mebilychen.github.io/p/ef67
     
-                clipboardData.setData('text/plain', text + copyright + post.permalink);
+                clipboardData.setData('text/plain', text + copyright);
     
               }
           };
@@ -488,7 +488,7 @@
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-
+              if(text.length < 100)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -499,9 +499,9 @@
                                 + '\n（（））'
                                 + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。'
                                 + '\n作者: 碳素@mebilyc'
-                                + '\n原文地址:'
+                                + https://mebilychen.github.io/p/bcdb
     
-                clipboardData.setData('text/plain', text + copyright + post.permalink);
+                clipboardData.setData('text/plain', text + copyright);
     
               }
           };
@@ -627,7 +627,7 @@
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-
+              if(text.length < 100)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -638,9 +638,9 @@
                                 + '\n（（））'
                                 + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。'
                                 + '\n作者: 碳素@mebilyc'
-                                + '\n原文地址:'
+                                + https://mebilychen.github.io/p/544f
     
-                clipboardData.setData('text/plain', text + copyright + post.permalink);
+                clipboardData.setData('text/plain', text + copyright);
     
               }
           };
@@ -753,7 +753,7 @@
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-
+              if(text.length < 100)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -764,9 +764,9 @@
                                 + '\n（（））'
                                 + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。'
                                 + '\n作者: 碳素@mebilyc'
-                                + '\n原文地址:'
+                                + https://mebilychen.github.io/p/ed18
     
-                clipboardData.setData('text/plain', text + copyright + post.permalink);
+                clipboardData.setData('text/plain', text + copyright);
     
               }
           };
@@ -846,9 +846,9 @@
           
           <div class="post-tags">
               <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
-              <a href="/tags/%E5%89%8D%E8%BE%88/" rel="tag"><i class="fa fa-tag"></i> 前辈</a>
               <a href="/tags/%E7%88%B6%E5%AD%90%E7%BB%84/" rel="tag"><i class="fa fa-tag"></i> 父子组</a>
               <a href="/tags/%E5%90%9B%E8%87%A3%E7%BB%84/" rel="tag"><i class="fa fa-tag"></i> 君臣组</a>
+              <a href="/tags/%E5%89%8D%E8%BE%88/" rel="tag"><i class="fa fa-tag"></i> 前辈</a>
               <a href="/tags/%E5%8D%A2%E7%91%9E%E6%81%A9/" rel="tag"><i class="fa fa-tag"></i> 卢瑞恩</a>
               <a href="/tags/%E5%A5%8E%E8%8B%A5/" rel="tag"><i class="fa fa-tag"></i> 奎若</a>
               <a href="/tags/%E8%9C%82/" rel="tag"><i class="fa fa-tag"></i> 蜂</a>
@@ -906,7 +906,7 @@
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-
+              if(text.length < 100)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -917,9 +917,9 @@
                                 + '\n（（））'
                                 + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。'
                                 + '\n作者: 碳素@mebilyc'
-                                + '\n原文地址:'
+                                + https://mebilychen.github.io/p/bf79
     
-                clipboardData.setData('text/plain', text + copyright + post.permalink);
+                clipboardData.setData('text/plain', text + copyright);
     
               }
           };
@@ -1043,7 +1043,7 @@
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-
+              if(text.length < 100)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -1054,9 +1054,9 @@
                                 + '\n（（））'
                                 + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。'
                                 + '\n作者: 碳素@mebilyc'
-                                + '\n原文地址:'
+                                + https://mebilychen.github.io/p/1474
     
-                clipboardData.setData('text/plain', text + copyright + post.permalink);
+                clipboardData.setData('text/plain', text + copyright);
     
               }
           };
@@ -1183,7 +1183,7 @@
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-
+              if(text.length < 100)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -1194,9 +1194,9 @@
                                 + '\n（（））'
                                 + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。'
                                 + '\n作者: 碳素@mebilyc'
-                                + '\n原文地址:'
+                                + https://mebilychen.github.io/p/ef31
     
-                clipboardData.setData('text/plain', text + copyright + post.permalink);
+                clipboardData.setData('text/plain', text + copyright);
     
               }
           };
@@ -1325,7 +1325,7 @@
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-
+              if(text.length < 100)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -1336,9 +1336,9 @@
                                 + '\n（（））'
                                 + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。'
                                 + '\n作者: 碳素@mebilyc'
-                                + '\n原文地址:'
+                                + https://mebilychen.github.io/p/ba1a
     
-                clipboardData.setData('text/plain', text + copyright + post.permalink);
+                clipboardData.setData('text/plain', text + copyright);
     
               }
           };
@@ -1463,7 +1463,7 @@
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-
+              if(text.length < 100)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -1474,9 +1474,9 @@
                                 + '\n（（））'
                                 + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。'
                                 + '\n作者: 碳素@mebilyc'
-                                + '\n原文地址:'
+                                + https://mebilychen.github.io/p/2cb3
     
-                clipboardData.setData('text/plain', text + copyright + post.permalink);
+                clipboardData.setData('text/plain', text + copyright);
     
               }
           };
