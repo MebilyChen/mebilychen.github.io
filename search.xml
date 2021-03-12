@@ -25,15 +25,6 @@
       </categories>
   </entry>
   <entry>
-    <title>为了测试新功能想提一句的脑洞</title>
-    <url>/p/2cfa.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p>嗯，就是想用陛下的形象，重画经典<br>比如刚刚我看见的一张“圣迈克尔战胜魔鬼”  <br>哈哈不知为何代入陛下之后感觉好<span class="hint--info hint--rounded hint--top" data-hint="那个姿势真的沙雕" ontouchstart>沙雕</span></p>
-<div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"theme":"#FADFA3","loop":true,"video":{"url":"https://moeplayer.b0.upaiyun.com/dplayer/hikarunara.mp4","pic":"https://moeplayer.b0.upaiyun.com/dplayer/hikarunara.jpg"},"danmaku":{"id":"9E2E3368B56CDBB4","api":"https://api.prprpr.me/dplayer/","token":"tokendemo","addition":["https://dplayer.daoapp.io/bilibili?aid=4157142"]}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>]]></content>
-      <categories>
-        <category>待分类</category>
-      </categories>
-  </entry>
-  <entry>
     <title>还希望站子拥有的一些优化</title>
     <url>/p/679f.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><ul>
@@ -52,6 +43,7 @@
 <li><del>游戏页面优化：好么（陕西腔）</del></li>
 <li><del>转载小尾巴</del></li>
 <li><del>失焦卖萌</del></li>
+<li><del>音乐的pjax已修好，但是视频和tag云的还没有头绪</del></li>
 </ul>
 ]]></content>
       <categories>
@@ -60,6 +52,15 @@
       <tags>
         <tag>站子优化</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>为了测试新功能想提一句的脑洞</title>
+    <url>/p/2cfa.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p>嗯，就是想用陛下的形象，重画经典<br>比如刚刚我看见的一张“圣迈克尔战胜魔鬼”  <br>哈哈不知为何代入陛下之后感觉好<span class="hint--info hint--rounded hint--top" data-hint="那个姿势真的沙雕" ontouchstart>沙雕</span></p>
+<div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"theme":"#FADFA3","loop":true,"video":{"url":"https://moeplayer.b0.upaiyun.com/dplayer/hikarunara.mp4","pic":"https://moeplayer.b0.upaiyun.com/dplayer/hikarunara.jpg"},"danmaku":{"id":"9E2E3368B56CDBB4","api":"https://api.prprpr.me/dplayer/","token":"tokendemo","addition":["https://dplayer.daoapp.io/bilibili?aid=4157142"]}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>]]></content>
+      <categories>
+        <category>待分类</category>
+      </categories>
   </entry>
   <entry>
     <title>记一下预加载动画怎么改...有点复杂</title>
