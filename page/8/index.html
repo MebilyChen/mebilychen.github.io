@@ -224,11 +224,11 @@
               let clipboardData = event.clipboardData || window.clipboardData;
               // 如果未复制或者未剪切，则return出去
               if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
               event.preventDefault();
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-              if(text.length < 100)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -367,11 +367,11 @@
               let clipboardData = event.clipboardData || window.clipboardData;
               // 如果未复制或者未剪切，则return出去
               if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
               event.preventDefault();
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-              if(text.length < 100)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -500,11 +500,11 @@
               let clipboardData = event.clipboardData || window.clipboardData;
               // 如果未复制或者未剪切，则return出去
               if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
               event.preventDefault();
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-              if(text.length < 100)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -633,11 +633,11 @@
               let clipboardData = event.clipboardData || window.clipboardData;
               // 如果未复制或者未剪切，则return出去
               if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
               event.preventDefault();
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-              if(text.length < 100)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -778,11 +778,11 @@
               let clipboardData = event.clipboardData || window.clipboardData;
               // 如果未复制或者未剪切，则return出去
               if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
               event.preventDefault();
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-              if(text.length < 100)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -921,11 +921,11 @@
               let clipboardData = event.clipboardData || window.clipboardData;
               // 如果未复制或者未剪切，则return出去
               if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
               event.preventDefault();
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-              if(text.length < 100)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -1046,11 +1046,11 @@
               let clipboardData = event.clipboardData || window.clipboardData;
               // 如果未复制或者未剪切，则return出去
               if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
               event.preventDefault();
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-              if(text.length < 100)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -1193,11 +1193,11 @@
               let clipboardData = event.clipboardData || window.clipboardData;
               // 如果未复制或者未剪切，则return出去
               if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
               event.preventDefault();
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-              if(text.length < 100)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -1333,11 +1333,11 @@
               let clipboardData = event.clipboardData || window.clipboardData;
               // 如果未复制或者未剪切，则return出去
               if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
               event.preventDefault();
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-              if(text.length < 100)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -1453,7 +1453,7 @@
 <p style="text-align:center;"> &#x1F3BC; </p> 
 
 
-    <div id="aplayer-CfUCwBXy" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-qXhABJAN" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="464373274" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div>
       
@@ -1476,11 +1476,11 @@
               let clipboardData = event.clipboardData || window.clipboardData;
               // 如果未复制或者未剪切，则return出去
               if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
               event.preventDefault();
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-              if(text.length < 100)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
