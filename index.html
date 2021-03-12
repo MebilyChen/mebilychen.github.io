@@ -215,8 +215,7 @@
 
           <div class="content index posts-expand">
             
-        <% if (window.getSelection().toString().length >600) { %>
-    <script>
+        <script>
           function setClipboardText(event){
               // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
               let clipboardData = event.clipboardData || window.clipboardData;
@@ -226,7 +225,7 @@
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-    
+              if( (text).length >600)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -248,7 +247,6 @@
               setClipboardText(e);
           });     
       </script>
-       <% } %>
 
 
   
@@ -306,8 +304,7 @@
   
   
 
-        <% if (window.getSelection().toString().length >600) { %>
-    <script>
+        <script>
           function setClipboardText(event){
               // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
               let clipboardData = event.clipboardData || window.clipboardData;
@@ -317,7 +314,7 @@
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-    
+              if( (text).length >600)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -339,7 +336,6 @@
               setClipboardText(e);
           });     
       </script>
-       <% } %>
 
 
   
@@ -452,8 +448,7 @@
   
   
 
-        <% if (window.getSelection().toString().length >600) { %>
-    <script>
+        <script>
           function setClipboardText(event){
               // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
               let clipboardData = event.clipboardData || window.clipboardData;
@@ -463,7 +458,7 @@
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-    
+              if( (text).length >600)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -485,7 +480,6 @@
               setClipboardText(e);
           });     
       </script>
-       <% } %>
 
 
   
@@ -592,8 +586,7 @@
   
   
 
-        <% if (window.getSelection().toString().length >600) { %>
-    <script>
+        <script>
           function setClipboardText(event){
               // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
               let clipboardData = event.clipboardData || window.clipboardData;
@@ -603,7 +596,7 @@
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-    
+              if( (text).length >600)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -625,7 +618,6 @@
               setClipboardText(e);
           });     
       </script>
-       <% } %>
 
 
   
@@ -727,8 +719,7 @@
   
   
 
-        <% if (window.getSelection().toString().length >600) { %>
-    <script>
+        <script>
           function setClipboardText(event){
               // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
               let clipboardData = event.clipboardData || window.clipboardData;
@@ -738,7 +729,7 @@
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-    
+              if( (text).length >600)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -760,7 +751,6 @@
               setClipboardText(e);
           });     
       </script>
-       <% } %>
 
 
   
@@ -869,8 +859,7 @@
   
   
 
-        <% if (window.getSelection().toString().length >600) { %>
-    <script>
+        <script>
           function setClipboardText(event){
               // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
               let clipboardData = event.clipboardData || window.clipboardData;
@@ -880,7 +869,7 @@
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-    
+              if( (text).length >600)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -902,7 +891,6 @@
               setClipboardText(e);
           });     
       </script>
-       <% } %>
 
 
   
@@ -1000,8 +988,7 @@
   
   
 
-        <% if (window.getSelection().toString().length >600) { %>
-    <script>
+        <script>
           function setClipboardText(event){
               // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
               let clipboardData = event.clipboardData || window.clipboardData;
@@ -1011,7 +998,7 @@
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-    
+              if( (text).length >600)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -1033,7 +1020,6 @@
               setClipboardText(e);
           });     
       </script>
-       <% } %>
 
 
   
@@ -1136,8 +1122,7 @@
   
   
 
-        <% if (window.getSelection().toString().length >600) { %>
-    <script>
+        <script>
           function setClipboardText(event){
               // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
               let clipboardData = event.clipboardData || window.clipboardData;
@@ -1147,7 +1132,7 @@
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-    
+              if( (text).length >600)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -1169,7 +1154,6 @@
               setClipboardText(e);
           });     
       </script>
-       <% } %>
 
 
   
@@ -1287,8 +1271,7 @@
   
   
 
-        <% if (window.getSelection().toString().length >600) { %>
-    <script>
+        <script>
           function setClipboardText(event){
               // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
               let clipboardData = event.clipboardData || window.clipboardData;
@@ -1298,7 +1281,7 @@
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-    
+              if( (text).length >600)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -1320,7 +1303,6 @@
               setClipboardText(e);
           });     
       </script>
-       <% } %>
 
 
   
@@ -1421,8 +1403,7 @@
   
   
 
-        <% if (window.getSelection().toString().length >600) { %>
-    <script>
+        <script>
           function setClipboardText(event){
               // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
               let clipboardData = event.clipboardData || window.clipboardData;
@@ -1432,7 +1413,7 @@
               // Selection 对象，表示用户选择的文本范围或光标的当前位置。
               //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
               let text = window.getSelection().toString();
-    
+              if( (text).length >600)  { return; }
               if (text) {
                 // 如果文本存在则先取消文本默认事件
                 event.preventDefault();
@@ -1454,7 +1435,6 @@
               setClipboardText(e);
           });     
       </script>
-       <% } %>
 
 
   
