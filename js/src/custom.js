@@ -16,7 +16,7 @@ var OriginTitile = document.title;
             $('[rel="shortcut icon"]').attr('href', "/images/favicon-32x32-brand-black.png");
             document.title = '*偏转视线*';
             titleTime = setTimeout(function() {
-              document.title = OriginTitile;
+              document.title = '碳素的小作坊';
             }, 2000);
           }
     });
@@ -54,5 +54,27 @@ var OriginTitile = document.title;
       document.getElementById('myCanvasContainer').style.display = 'none';
     }
   
+   
+  };
+
+  window.onblur = function() {
+
+    /* 离开当前页面时修改网页标题，回到当前页面时恢复原来标题 */
+    var titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if(document.hidden) {
+            $('[rel="icon"]').attr('href', "/images/favicon-32x32-king-black.png");
+            $('[rel="shortcut icon"]').attr('href', "/images/favicon-32x32-king-black.png");
+            document.title = '*探头*';
+            clearTimeout(titleTime);
+          } else {
+            $('[rel="icon"]').attr('href', "/images/favicon-32x32-brand-black.png");
+            $('[rel="shortcut icon"]').attr('href', "/images/favicon-32x32-brand-black.png");
+            document.title = '*缩*';
+            titleTime = setTimeout(function() {
+              document.title = '碳素的小作坊';
+            }, 2000);
+          }
+    });
    
   };
