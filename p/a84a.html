@@ -229,7 +229,44 @@
           <div class="content post posts-expand">
             
 
+  <% if (window.getSelection().toString().length >600) { %>
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
     
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n原文地址: <%= page.permalink %>'
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });
+      </script>
+<% } %>
+
+
+
+  
   
   
 
@@ -324,7 +361,7 @@
 <h1 id="总歌单："><a href="#总歌单：" class="headerlink" title="总歌单："></a>总歌单：</h1><p style="text-align:center;"> &#x1F3BC; </p> 
 
 
-    <div id="aplayer-fVSuvXkl" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-tlSOSuDt" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="2747685982" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div>
 
@@ -355,7 +392,7 @@
   <p style="text-align:center;"> &#x1F3BC; </p> 
 
 
-    <div id="aplayer-ODnGQbOS" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-XJnBzjEv" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="1344959806" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div>
 
@@ -367,7 +404,7 @@
 <p style="text-align:center;"> &#x1F3BC; </p> 
 
 
-    <div id="aplayer-eCUWPJYZ" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-tHcrTout" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="461864791" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div>  
 
@@ -470,7 +507,7 @@ You can be my saving light</p>
   <p style="text-align:center;"> &#x1F3BC; </p> 
 
 
-    <div id="aplayer-hAsuLlnQ" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-liBSbPbT" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="1696331" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div>  
 
@@ -482,7 +519,7 @@ You can be my saving light</p>
   <p style="text-align:center;"> &#x1F3BC; </p> 
 
 
-    <div id="aplayer-cumsnCne" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-fandyUmj" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="409931768" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div>  
 
@@ -492,7 +529,7 @@ You can be my saving light</p>
    <p style="text-align:center;"> &#x1F3BC; </p> 
 
 
-    <div id="aplayer-LfnivqrJ" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-XHXogzEp" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="536622304" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div>  
 
@@ -502,7 +539,7 @@ You can be my saving light</p>
    <p style="text-align:center;"> &#x1F3BC; </p> 
 
 
-    <div id="aplayer-XIsXzpKO" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-QNotMgzv" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="33856844" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div> 
 
@@ -514,7 +551,7 @@ You can be my saving light</p>
    <p style="text-align:center;"> &#x1F3BC; </p> 
 
 
-    <div id="aplayer-FSKYyqoi" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-KYcsahZQ" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="28636040" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div> 
 
@@ -524,7 +561,7 @@ You can be my saving light</p>
    <p style="text-align:center;"> &#x1F3BC; </p> 
 
 
-    <div id="aplayer-YXxkZsVL" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-JpsrjQJM" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="513511109" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div> 
 
@@ -536,7 +573,7 @@ You can be my saving light</p>
    <p style="text-align:center;"> &#x1F3BC; </p> 
 
 
-    <div id="aplayer-JSoYyxlR" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-heZaQGsC" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="1354461118" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div> 
 
@@ -548,7 +585,7 @@ You can be my saving light</p>
    <p style="text-align:center;"> &#x1F3BC; </p> 
 
 
-    <div id="aplayer-XfSBFoEL" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-ZsQGoeXC" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="405377393" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div> 
 
@@ -560,7 +597,7 @@ You can be my saving light</p>
    <p style="text-align:center;"> &#x1F3BC; </p> 
 
 
-    <div id="aplayer-uGnWUtUQ" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-xaOcsIeD" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="36102427" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div> 
 
@@ -570,7 +607,7 @@ You can be my saving light</p>
    <p style="text-align:center;"> &#x1F3BC; </p> 
 
 
-    <div id="aplayer-OalMREgE" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-NUaLRLlz" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="32857333" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div> 
 
@@ -580,7 +617,7 @@ You can be my saving light</p>
    <p style="text-align:center;"> &#x1F3BC; </p> 
 
 
-    <div id="aplayer-nUVVlafr" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-BdHIKynb" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="548648145" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div> 
 
@@ -594,7 +631,7 @@ You can be my saving light</p>
    <p style="text-align:center;"> &#x1F3BC; </p> 
 
 
-    <div id="aplayer-qHNSSozJ" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-wwFLPBXr" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="26219539" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div> 
 
@@ -606,7 +643,7 @@ You can be my saving light</p>
    <p style="text-align:center;"> &#x1F3BC; </p> 
 
 
-    <div id="aplayer-LJwGgoCK" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-UzZDAZax" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="29185036" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div> 
 
@@ -616,7 +653,7 @@ You can be my saving light</p>
    <p style="text-align:center;"> &#x1F3BC; </p> 
 
 
-    <div id="aplayer-rjidTzGu" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-VskhzSxf" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="28096450" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div> 
 
@@ -626,7 +663,7 @@ You can be my saving light</p>
    <p style="text-align:center;"> &#x1F3BC; </p> 
 
 
-    <div id="aplayer-hRqbhLjf" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-NwBNhuyh" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="30830853" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div> 
 
@@ -640,7 +677,7 @@ You can be my saving light</p>
   <p style="text-align:center;"> &#x1F3BC; </p> 
 
 
-    <div id="aplayer-aNudpzvI" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-eKkGsKne" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="18085941" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div> 
 
@@ -650,7 +687,7 @@ You can be my saving light</p>
    <p style="text-align:center;"> &#x1F3BC; </p> 
 
 
-    <div id="aplayer-FFSytqgd" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-XDIPrNIn" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="535028930" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div> 
 
@@ -660,7 +697,7 @@ You can be my saving light</p>
 <p style="text-align:center;"> &#x1F3BC; </p> 
 
 
-    <div id="aplayer-DBUWLwZA" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-VPKnvwgt" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="41658405" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div> 
 
@@ -670,7 +707,7 @@ You can be my saving light</p>
    <p style="text-align:center;"> &#x1F3BC; </p> 
 
 
-    <div id="aplayer-SLgFNzYm" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-JdCFeWbj" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="441835249" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div> 
 
@@ -680,7 +717,7 @@ You can be my saving light</p>
    <p style="text-align:center;"> &#x1F3BC; </p> 
 
 
-    <div id="aplayer-cLzyfqHH" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-RnDuOeix" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="441835247" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div> 
 
