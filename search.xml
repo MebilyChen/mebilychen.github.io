@@ -25,6 +25,43 @@
       </categories>
   </entry>
   <entry>
+    <title>记一下预加载动画怎么改...有点复杂</title>
+    <url>/p/a2e8.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>四个文件：</p>
+<ul>
+<li><p>主题目录下的layout/_scripts/loaded.ejs</p>
+<ul>
+<li>如果需要引入新动画，在此设置html</li>
+</ul>
+</li>
+<li><p>主题目录下的_config.yml</p>
+<ul>
+<li>查找preloader关键字，切换预加载动画</li>
+</ul>
+</li>
+<li><p>主题目录下的source/images/cog.css</p>
+<ul>
+<li>如果需要更改目前动画的样式，修改此css样式  </li>
+</ul>
+</li>
+<li><p>主题目录下的_layout.swig</p>
+<ul>
+<li>和下文的“一个路径”搭配使用</li>
+</ul>
+</li>
+</ul>
+<p>一个路径：source/images/  </p>
+<p>  ​        如需要引入本地文件的新动画，在此路径下置入css文件，并在_layout.swig中的head标签内以固定样式引入（模仿开头两行中的一行，第一行本地路径，第二行网络路径）；若网络引入则不需要置入css文件</p>
+]]></content>
+      <categories>
+        <category>建站测试用</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>预加载动画</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>还希望站子拥有的一些优化</title>
     <url>/p/679f.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><ul>
