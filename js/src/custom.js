@@ -38,14 +38,13 @@
     var titleTime;
     document.addEventListener('visibilitychange', function() {
         if(document.hidden) {
-            $('[rel="icon"]').attr('href', "/favicon-32x32-king-black.png");
-            $('[rel="shortcut icon"]').attr('href', "/favicon-32x32-king-black.png");
+
             document.title = '盯————';
             clearTimeout(titleTime);
           } else {
             document.title = '*偏转视线*';
             titleTime = setTimeout(function() {
-              
+
               document.title = OriginTitile;
             }, 2000);
           }
