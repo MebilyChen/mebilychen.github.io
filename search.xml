@@ -27,7 +27,7 @@
   <entry>
     <title>记一下预加载动画怎么改...有点复杂</title>
     <url>/p/a2e8.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p>四个文件：</p>
+    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>四个文件：</p>
 <ul>
 <li><p>主题目录下的layout/_scripts/loaded.ejs</p>
 <ul>
@@ -57,7 +57,6 @@
         <category>建站测试用</category>
       </categories>
       <tags>
-        <tag>css</tag>
         <tag>预加载动画</tag>
       </tags>
   </entry>
