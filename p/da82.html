@@ -224,8 +224,8 @@
           <div class="content post posts-expand">
             
 
-  <% if (window.getSelection().toString().length >600) { %>
       <script>
+    <% if (window.getSelection().toString().length >600) { %>
           function setClipboardText(event){
               // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
               let clipboardData = event.clipboardData || window.clipboardData;
@@ -242,7 +242,7 @@
                 // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
                 // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
                 // data: 一个 DOMString表示要添加到 drag object的数据。
-                var copyright = '\n\n'
+                var copyright = '——————————————\n\n'
                                 + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。'
                                 + '\n作者: 碳素@mebilyc'
                                 + '\n原文地址: <%= page.permalink %>'
@@ -256,8 +256,9 @@
           contents[0].addEventListener('copy',function(e){
               setClipboardText(e);
           });
+          <% } %>
       </script>
-<% } %>
+
 
 
 
@@ -346,7 +347,7 @@
 
       
         <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="“。”" data-whm="请重试。">
-  <script id="hbeData" type="hbeData" data-hmacdigest="f2fa92e42330d453a372b32e04d071fdd3e830915e6334ae41af030d86103825">d3f53caf98640e557a5157e9ebdcc60edd1cc3d3b95d3be57a01dd6c1db0f577991f824e2248362b9d2a2a67afab2ccc55af0b7cf204ba4034b7ca545477ba19a97b06f161a7638279d56133f18919a2aa45322a26f35d557c0906fa7729db889197c6ad5a293b3c86e675bc8d22aa77ec29f7f39868d5b4a27bbf1aae3cc1c358059cf42763abcb1ce27693aac55480accc9a70338819cb0d26967b6689b74ca55a267cf3975906da015c3faadc2d1ba1d75a5c4013fbffe2311e61f9e42fadb59f076a4f1c7a0bd7b0cfa1836928cd1ed7b187a126ab62545a23345f7bc5dad145b7652666e08f8cac3385e23984decb0a5ce08c801def64fbf05844f9e2a312d76eafe1863a1b69d9a0de4ad91090016e12e464c46b3cf4e761b5dc2649ba9823bc57ab1e45381bd9bec1dd52be3d93acddfdd5b880a363f8541e52df18f0ab73c89e6631bb3632dd35ee90f9ad06493b61594bfdd8a14f8ad5113774090bddafb3da90d53352cfb690145b22944eccb59b90cf7792c5d97754d928f92be5b9f21d025374feb0f3aee2bce3a9e429810f4419aaf4f060ccc04ac5f59630f8be68b2168c02f944103125aebb257cec5b0f51f0642fee1fad52ebecb128add5c7216993cc3d52b937c95383141cba9ec4f25ef03d93e7f48e146d670d6f9ccc37353250f5045715c98d482a29ba59a6f9792d0f6e36990c316bf67a1d21928918609821b243ebb84600fcb316eff31d61c6aa2f50bf75cf9fff2518d63cbef1928b8f5038854575c661e4df9584c73dff006c29e44ed4726f848b4e2b720b99ee3d4db729dacb0c81aac4147ef40765625a2d82f522f25d9622feb93ea2b0a39bef3b0e80183ae283a42353097811e3a67ee94b31766d096b88a15f96ea2a7e03f1bf17d2a8a6c2251ec72db2d76aee</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="958f1713d364d12eda601651b9b91f3ad8b92a8ffde0230db210843a9420034b">d3f53caf98640e557a5157e9ebdcc60edd1cc3d3b95d3be57a01dd6c1db0f577991f824e2248362b9d2a2a67afab2cccead7b9a939063518058f550f5620335ccdd8210d647d11ee51e6cd3768eb0d36339d38829258b263614194d1d04a677225840c62f8336fb2b947e94e3ac00adab117bcf034db58063cafbdfc0c2418e867a971bfec2c1be6449ca23d577c5397c8bb5c318315837f5e779364306d344a448f7a6ed7962ba5f19149168da2fc9a9f3593f0e25a7bd4ebe2336b2f5f7ee5add5ab822c682703f9c7ae71e9da06c1098770e73ea8ad7130b279f7143dfa151803578287f24a160ec6ecef75f2dc2571596827b6a5225c7e1a7814e2934224a18e6397387dfad3d33180213ab3180badfb179785df51873732f61faff07c0715953fcda618461745c8c9aca3a74cffe5a825eef166a9dbf8f718e4de9cf6aa293994d59a243482ec1f9638b67ee12740556c3457e1f78c55f684375c818bc370c21cf189a166f70d71844d31800eb4a6fe62eb8deeb59e2f9e723d8d75e2ec9e5d74c3732869d7244d40c695b2babbb8917fe8440edc37ceaa1090478cdfd71feecc865c2114f581c2a38d3b4bee741615fb1edecc585a22cc26906106d3dc5cc78f35fdbebe9de0e98f01c96057d4cb94b9c369f4d8dd98003eab9722c7b598aa9e90b8444ced89866af1f51b7dd882399eff4131dc65cc0d6152dc3b8e3732bdc4f56d27cd20cc4fef3ac2539bd78885f2e66f3b89da0d797bbddbac28a6ab8554be0183e1dfddbdfd709dad5c5d5d25376063f40395f814e5be6b34728f3b3faca0791ab11c8922e344ee1d6118491399dfad480b761a398d6410bd9ff3a89c33c672ba08304f086e7e760cf27ad1dd74dac85971b962264281abd7c3d83846601fe390818cd4e310b251f6e92a</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-flip">
       <input class="hbe hbe-input-field hbe-input-field-flip" type="password" id="hbePass">
