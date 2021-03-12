@@ -26,6 +26,32 @@
       </categories>
   </entry>
   <entry>
+    <title>还希望站子拥有的一些优化</title>
+    <url>/p/679f.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><ul>
+<li><del>hexo+coding的自动部署</del></li>
+<li><del>note功能</del></li>
+<li>指针：给陛下做套鼠标指针用在站子上</li>
+<li><del>画廊：做个画廊页面</del></li>
+<li>站宠：想要自己用live2d把陛下做成站宠！！！…不过理想可能太过于宏大了🤡</li>
+<li><del>字体：可以改一下站子的字体…但是懒得去挑…太多了</del></li>
+<li>改/删除重新加密的按钮：和站子的黑白风格不搭，能不能不要啊（泪）</li>
+<li><del>GitHub Pages：Aplayer给爷整没了？</del></li>
+<li><del>随机页面：RT</del></li>
+<li><del>Steam页面用于游戏鉴赏类博文：RT</del></li>
+<li>Tag云：tag云应该放在tag页面。谁会放在sidebar里啊淦！我tag多的都挤成螺旋丸了！</li>
+<li>echarts-add-this：RT</li>
+<li>游戏页面优化：好么（陕西腔）</li>
+</ul>
+]]></content>
+      <categories>
+        <category>站子</category>
+      </categories>
+      <tags>
+        <tag>站子优化</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>常用命令</title>
     <url>/p/f446.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p>在写文章的过程中，有时候需要引用站内的其他文章。可以通过内置的标签插件的语法post_link来实现引用。</p>
@@ -196,31 +222,6 @@
       <tags>
         <tag>Markdown</tag>
         <tag>Git Bash</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>还希望站子拥有的一些优化</title>
-    <url>/p/679f.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><ul>
-<li><del>hexo+coding的自动部署</del></li>
-<li><del>note功能</del></li>
-<li>指针：给陛下做套鼠标指针用在站子上</li>
-<li><del>画廊：做个画廊页面</del></li>
-<li>站宠：想要自己用live2d把陛下做成站宠！！！…不过理想可能太过于宏大了🤡</li>
-<li><del>字体：可以改一下站子的字体…但是懒得去挑…太多了</del></li>
-<li>改/删除重新加密的按钮：和站子的黑白风格不搭，能不能不要啊（泪）</li>
-<li><del>GitHub Pages：Aplayer给爷整没了？</del></li>
-<li><del>随机页面：RT</del></li>
-<li><del>Steam页面用于游戏鉴赏类博文：RT</del></li>
-<li>Tag云：RT</li>
-<li>echarts-add-this：RT</li>
-</ul>
-]]></content>
-      <categories>
-        <category>站子</category>
-      </categories>
-      <tags>
-        <tag>站子优化</tag>
       </tags>
   </entry>
   <entry>
