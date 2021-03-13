@@ -17,7 +17,7 @@ var OriginTitile = document.title;
             document.title = '*偏转视线*';
             titleTime = setTimeout(function() {
               document.title = '碳素的小作坊';
-            }, 2000);
+            }, 1000);
           }
     });
 
