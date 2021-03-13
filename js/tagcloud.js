@@ -15,7 +15,7 @@
 
      try {
          TagCanvas.textFont = 'Trebuchet MS, Helvetica';
-         TagCanvas.textColour = '#1F1F1F';
+         TagCanvas.textColour = '#222222';
          TagCanvas.textHeight = 26;
          TagCanvas.outlineColour = '#FFFFFF';
          TagCanvas.maxSpeed = 0.1;

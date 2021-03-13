@@ -25,7 +25,7 @@ var OriginTitile = document.title;
     document.getElementById('myCanvasContainer').style.display = 'inline';
     try {
       TagCanvas.textFont = 'Helvetica';
-      TagCanvas.textColour = '#1F1F1F';
+      TagCanvas.textColour = '#222222';
       TagCanvas.textHeight = 26;
       TagCanvas.outlineColour = '#FFFFFF';
       TagCanvas.maxSpeed = 0.05;
