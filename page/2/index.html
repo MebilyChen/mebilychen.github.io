@@ -3,6 +3,7 @@
 <script type="text/javascript" src="/js/src/echarts.min.js"></script>
 <script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
 <script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+
 <head>
   <link rel="stylesheet" href="/images/cog.css" >
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
@@ -19,7 +20,7 @@
   <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
 
    <!-- 雪花特效 -->
-  <script type="text/javascript" src="\js\snow-flake.js"></script>
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
 
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -189,7 +190,7 @@
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">7</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">38</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
@@ -305,7 +306,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/d60f">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/1474">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar-kingsec.JPG">
@@ -319,7 +320,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/p/d60f" class="post-title-link" itemprop="url">Chosen One</a>
+            <a href="/p/1474" class="post-title-link" itemprop="url">沃姆饲养手册设定</a>
         </h2>
 
         <div class="post-meta">
@@ -331,153 +332,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2018-10-29 22:26:00" itemprop="dateCreated datePublished" datetime="2018-10-29T22:26:00+08:00">2018-10-29</time>
+              <time title="创建时间：2019-04-30 20:21:00" itemprop="dateCreated datePublished" datetime="2019-04-30T20:21:00+08:00">2019-04-30</time>
             </span>
                 <span class="post-meta-item">
                   <span class="post-meta-item-icon">
                     <i class="far fa-calendar-check" style="color:#ff0000"></i>
                   </span>
                   <span class="post-meta-item-text">更新于</span>
-                  <time title="修改时间：2021-03-13 17:27:05" itemprop="dateModified" datetime="2021-03-13T17:27:05+08:00">今天17:27</time>
-                </span>
-              
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%85%B6%E4%BB%96%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">其他文</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>622</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-          
-          <div class="post-tags">
-              <a href="/tags/HLD/" rel="tag"><i class="fa fa-tag"></i> HLD</a>
-          </div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><center> 相当于HLD的随笔吧</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/p/d60f">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        <script>
-          function setClipboardText(event){
-              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
-              let clipboardData = event.clipboardData || window.clipboardData;
-              // 如果未复制或者未剪切，则return出去
-              if (!clipboardData) { return; }
-              if(window.getSelection().toString().length < 100)  { return; }
-              event.preventDefault();
-              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
-              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
-              let text = window.getSelection().toString();
-              if (text) {
-                // 如果文本存在则先取消文本默认事件
-                event.preventDefault();
-                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
-                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
-                // data: 一个 DOMString表示要添加到 drag object的数据。
-                var copyright = '\n\n'
-                                + '\n（（））'
-                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
-                                + '\n作者: 碳素@mebilyc'
-                                + '\n博客地址:https://mebilychen.github.io/' 
-                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-13805-518516-1305127431.cos-website.ap-hongkong.myqcloud.com/' 
-    
-                clipboardData.setData('text/plain', text + copyright);
-    
-              }
-          };
-          var contents = document.getElementsByClassName("content");
-          // 监听文章内容的copy事件
-          contents[0].addEventListener('copy',function(e){
-              setClipboardText(e);
-          });     
-      </script>
-
-
-  
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/282b">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-kingsec.JPG">
-      <meta itemprop="name" content="碳素 | mebilyc">
-      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="碳素的小作坊">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/p/282b" class="post-title-link" itemprop="url">十王-设定</a>
-        </h2>
-
-        <div class="post-meta">
-
-  
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-12-18 22:14:00" itemprop="dateCreated datePublished" datetime="2020-12-18T22:14:00+08:00">2020-12-18</time>
-            </span>
-                <span class="post-meta-item">
-                  <span class="post-meta-item-icon">
-                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
-                  </span>
-                  <span class="post-meta-item-text">更新于</span>
-                  <time title="修改时间：2021-03-13 17:27:03" itemprop="dateModified" datetime="2021-03-13T17:27:03+08:00">今天17:27</time>
+                  <time title="修改时间：2021-03-13 17:43:59" itemprop="dateModified" datetime="2021-03-13T17:43:59+08:00">今天17:43</time>
                 </span>
               
             <span class="post-meta-item">
@@ -488,154 +350,9 @@
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/%E7%8E%8B%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">王文</span></a>
                 </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.4k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-          
-          <div class="post-tags">
-              <a href="/tags/%E8%AE%BE%E5%AE%9A/" rel="tag"><i class="fa fa-tag"></i> 设定</a>
-              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
-              <a href="/tags/%E5%9C%A3%E5%B7%A2%E5%85%A8%E5%91%98/" rel="tag"><i class="fa fa-tag"></i> 圣巢全员</a>
-              <a href="/tags/%E5%85%BB%E6%88%90/" rel="tag"><i class="fa fa-tag"></i> 养成</a>
-              <a href="/tags/%E5%B9%BC%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 幼王</a>
-              <a href="/tags/%E5%8D%81%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> @十王</a>
-          </div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <div class="note danger"><p style="text-align:center ; color:#D9534F"> ♕本文为设定，可能会上锁♕ </p></div>
-
-<p>证明：白色是百搭色<br>
-或者七王？<br>
-幼王设定沿用dear diary<br>
-陛下性格探索研究/练习</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/p/282b#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        <script>
-          function setClipboardText(event){
-              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
-              let clipboardData = event.clipboardData || window.clipboardData;
-              // 如果未复制或者未剪切，则return出去
-              if (!clipboardData) { return; }
-              if(window.getSelection().toString().length < 100)  { return; }
-              event.preventDefault();
-              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
-              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
-              let text = window.getSelection().toString();
-              if (text) {
-                // 如果文本存在则先取消文本默认事件
-                event.preventDefault();
-                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
-                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
-                // data: 一个 DOMString表示要添加到 drag object的数据。
-                var copyright = '\n\n'
-                                + '\n（（））'
-                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
-                                + '\n作者: 碳素@mebilyc'
-                                + '\n博客地址:https://mebilychen.github.io/' 
-                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-13805-518516-1305127431.cos-website.ap-hongkong.myqcloud.com/' 
-    
-                clipboardData.setData('text/plain', text + copyright);
-    
-              }
-          };
-          var contents = document.getElementsByClassName("content");
-          // 监听文章内容的copy事件
-          contents[0].addEventListener('copy',function(e){
-              setClipboardText(e);
-          });     
-      </script>
-
-
-  
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/47c2">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-kingsec.JPG">
-      <meta itemprop="name" content="碳素 | mebilyc">
-      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="碳素的小作坊">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/p/47c2" class="post-title-link" itemprop="url">白咖啡-设定</a>
-        </h2>
-
-        <div class="post-meta">
-
-  
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-10-18 22:52:00" itemprop="dateCreated datePublished" datetime="2020-10-18T22:52:00+08:00">2020-10-18</time>
-            </span>
-                <span class="post-meta-item">
-                  <span class="post-meta-item-icon">
-                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
-                  </span>
-                  <span class="post-meta-item-text">更新于</span>
-                  <time title="修改时间：2021-03-13 17:27:03" itemprop="dateModified" datetime="2021-03-13T17:27:03+08:00">今天17:27</time>
-                </span>
-              
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
+                  ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%8E%8B%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">王文</span></a>
+                  <a href="/categories/%E7%8E%8B%E6%96%87/%E7%8E%8B%E6%96%87-%E9%A5%B2%E5%85%BB%E6%89%8B%E5%86%8C/" itemprop="url" rel="index"><span itemprop="name">王文-饲养手册</span></a>
                 </span>
             </span>
 
@@ -645,7 +362,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.3k</span>
+              <span>3.6k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -656,11 +373,10 @@
             </span>
           
           <div class="post-tags">
-              <a href="/tags/%E5%86%B0%E7%81%AB%E7%BB%84-GrimmPale/" rel="tag"><i class="fa fa-tag"></i> 冰火组/GrimmPale</a>
               <a href="/tags/%E8%AE%BE%E5%AE%9A/" rel="tag"><i class="fa fa-tag"></i> 设定</a>
               <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
-              <a href="/tags/%E6%A0%BC%E6%9E%97/" rel="tag"><i class="fa fa-tag"></i> 格林</a>
-              <a href="/tags/%E7%9F%AD%E7%AF%87/" rel="tag"><i class="fa fa-tag"></i> 短篇</a>
+              <a href="/tags/%E9%A5%B2%E5%85%BB%E6%89%8B%E5%86%8C/" rel="tag"><i class="fa fa-tag"></i> @饲养手册</a>
+              <a href="/tags/%E4%BA%BA%E7%B1%BB%E4%B8%96%E7%95%8C/" rel="tag"><i class="fa fa-tag"></i> 人类世界</a>
           </div>
 
         </div>
@@ -672,17 +388,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <div class="note danger"><p style="text-align:center ; color:#D9534F"> ♕本文为设定，可能会上锁♕ </p></div>
-
-<p>超短篇</p>
-<p>GrimmPale</p>
-<p>忍不住了<br>
-自行种瓜<br>
-时旅x永生的真爱红白组<br>
-意识流 来</p>
+          <p><center>沃姆养成手册的小设定册子，有些泛黄了</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/p/47c2#more" rel="contents">
+              <a class="btn" href="/p/1474">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -743,7 +452,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/7dc8">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/e646">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar-kingsec.JPG">
@@ -757,7 +466,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/p/7dc8" class="post-title-link" itemprop="url">Soldier，Poet，King</a>
+            <a href="/p/e646" class="post-title-link" itemprop="url">鲸落-1</a>
         </h2>
 
         <div class="post-meta">
@@ -769,14 +478,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-11-27 22:48:00" itemprop="dateCreated datePublished" datetime="2020-11-27T22:48:00+08:00">2020-11-27</time>
+              <time title="创建时间：2021-03-07 22:27:00" itemprop="dateCreated datePublished" datetime="2021-03-07T22:27:00+08:00">2021-03-07</time>
             </span>
                 <span class="post-meta-item">
                   <span class="post-meta-item-icon">
                     <i class="far fa-calendar-check" style="color:#ff0000"></i>
                   </span>
                   <span class="post-meta-item-text">更新于</span>
-                  <time title="修改时间：2021-03-13 17:27:03" itemprop="dateModified" datetime="2021-03-13T17:27:03+08:00">今天17:27</time>
+                  <time title="修改时间：2021-03-13 17:43:59" itemprop="dateModified" datetime="2021-03-13T17:43:59+08:00">今天17:43</time>
                 </span>
               
             <span class="post-meta-item">
@@ -787,6 +496,10 @@
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/%E7%8E%8B%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">王文</span></a>
                 </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/%E7%8E%8B%E6%96%87-%E9%B2%B8%E8%90%BD/" itemprop="url" rel="index"><span itemprop="name">王文-鲸落</span></a>
+                </span>
             </span>
 
           <br>
@@ -795,7 +508,298 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>95</span>
+              <span>419</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E9%B2%B8%E8%90%BD/" rel="tag"><i class="fa fa-tag"></i> @鲸落</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><center>（是的这个是原标题而且我现在也不知道该怎么起名）</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/p/e646">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-13805-518516-1305127431.cos-website.ap-hongkong.myqcloud.com/' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/bcdb">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-kingsec.JPG">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/p/bcdb" class="post-title-link" itemprop="url">沃姆饲养手册</a>
+        </h2>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-10-10 09:45:00" itemprop="dateCreated datePublished" datetime="2020-10-10T09:45:00+08:00">2020-10-10</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2021-03-13 17:43:59" itemprop="dateModified" datetime="2021-03-13T17:43:59+08:00">今天17:43</time>
+                </span>
+              
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">王文</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/%E7%8E%8B%E6%96%87-%E9%A5%B2%E5%85%BB%E6%89%8B%E5%86%8C/" itemprop="url" rel="index"><span itemprop="name">王文-饲养手册</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>15k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>13 分钟</span>
+            </span>
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E9%A5%B2%E5%85%BB%E6%89%8B%E5%86%8C/" rel="tag"><i class="fa fa-tag"></i> @饲养手册</a>
+              <a href="/tags/%E6%97%A0%E5%8D%B1%EF%BC%9A%E5%A1%AB%E5%9D%91%E4%B8%AD/" rel="tag"><i class="fa fa-tag"></i> 无危：填坑中</a>
+              <a href="/tags/%E4%BA%BA%E7%B1%BB%E4%B8%96%E7%95%8C/" rel="tag"><i class="fa fa-tag"></i> 人类世界</a>
+              <a href="/tags/%E4%B9%A6%E4%BF%A1%E6%A0%BC%E5%BC%8F/" rel="tag"><i class="fa fa-tag"></i> 书信格式</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><center>沃姆饲养手册的发布版，但是只是demo</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/p/bcdb">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-13805-518516-1305127431.cos-website.ap-hongkong.myqcloud.com/' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/2c90">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-kingsec.JPG">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/p/2c90" class="post-title-link" itemprop="url">Lost & Found</a>
+        </h2>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-10-11 19:32:00" itemprop="dateCreated datePublished" datetime="2018-10-11T19:32:00+08:00">2018-10-11</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2021-03-13 17:43:59" itemprop="dateModified" datetime="2021-03-13T17:43:59+08:00">今天17:43</time>
+                </span>
+              
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">王文</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/%E7%8E%8B%E6%96%87AU%E7%82%B9%E5%AD%90/" itemprop="url" rel="index"><span itemprop="name">王文AU点子</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>129</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -809,7 +813,6 @@
               <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
               <a href="/tags/%E6%A0%BC%E6%9E%97/" rel="tag"><i class="fa fa-tag"></i> 格林</a>
               <a href="/tags/%E5%89%8D%E8%BE%88/" rel="tag"><i class="fa fa-tag"></i> 前辈</a>
-              <a href="/tags/AU%E7%82%B9%E5%AD%90/" rel="tag"><i class="fa fa-tag"></i> AU点子</a>
               <a href="/tags/3P/" rel="tag"><i class="fa fa-tag"></i> 3P</a>
           </div>
 
@@ -822,890 +825,940 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>哈哈哈这篇是空的</p>
-<p>只是有一个标题</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/p/7dc8#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        <script>
-          function setClipboardText(event){
-              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
-              let clipboardData = event.clipboardData || window.clipboardData;
-              // 如果未复制或者未剪切，则return出去
-              if (!clipboardData) { return; }
-              if(window.getSelection().toString().length < 100)  { return; }
-              event.preventDefault();
-              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
-              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
-              let text = window.getSelection().toString();
-              if (text) {
-                // 如果文本存在则先取消文本默认事件
-                event.preventDefault();
-                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
-                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
-                // data: 一个 DOMString表示要添加到 drag object的数据。
-                var copyright = '\n\n'
-                                + '\n（（））'
-                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
-                                + '\n作者: 碳素@mebilyc'
-                                + '\n博客地址:https://mebilychen.github.io/' 
-                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-13805-518516-1305127431.cos-website.ap-hongkong.myqcloud.com/' 
-    
-                clipboardData.setData('text/plain', text + copyright);
-    
-              }
-          };
-          var contents = document.getElementsByClassName("content");
-          // 监听文章内容的copy事件
-          contents[0].addEventListener('copy',function(e){
-              setClipboardText(e);
-          });     
-      </script>
-
-
-  
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/f76b">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-kingsec.JPG">
-      <meta itemprop="name" content="碳素 | mebilyc">
-      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="碳素的小作坊">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/p/f76b" class="post-title-link" itemprop="url">沙雕实况X后期</a>
-        </h2>
-
-        <div class="post-meta">
-
-  
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-11-27 22:40:00" itemprop="dateCreated datePublished" datetime="2020-11-27T22:40:00+08:00">2020-11-27</time>
-            </span>
-                <span class="post-meta-item">
-                  <span class="post-meta-item-icon">
-                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
-                  </span>
-                  <span class="post-meta-item-text">更新于</span>
-                  <time title="修改时间：2021-03-13 17:27:03" itemprop="dateModified" datetime="2021-03-13T17:27:03+08:00">今天17:27</time>
-                </span>
-              
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%8E%8B%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">王文</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.1k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-          
-          <div class="post-tags">
-              <a href="/tags/%E5%86%B0%E7%81%AB%E7%BB%84-GrimmPale/" rel="tag"><i class="fa fa-tag"></i> 冰火组/GrimmPale</a>
-              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
-              <a href="/tags/%E7%81%AD%E7%BB%9D%EF%BC%9A%E5%BC%83%E5%9D%91/" rel="tag"><i class="fa fa-tag"></i> 灭绝：弃坑</a>
-              <a href="/tags/%E6%A0%BC%E6%9E%97/" rel="tag"><i class="fa fa-tag"></i> 格林</a>
-              <a href="/tags/%E6%B2%99%E9%9B%95/" rel="tag"><i class="fa fa-tag"></i> 沙雕</a>
-              <a href="/tags/AU%E7%82%B9%E5%AD%90/" rel="tag"><i class="fa fa-tag"></i> AU点子</a>
-          </div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <div class="note danger"><p style="text-align:center; color:#D9534F"> ♕本文已死♕ </p></div>
-
-
-<p>Wyrmmie，Zoom！</p>
-
-<p>记录<br>
-实况团长x后期陛下<br>
-（可能存在的）互攻<br>
-OOC<br>
-裸写 速写<br>
-基于真实事件改编（搓手）<br>
-认出来的伙伴请不要泄密（搓手）<br>
-可能会考虑转正<br>
-每章节分两篇：格林@FxxxytaleGrime篇和沃姆@WyrmAnimation篇，陛下的文字是斜体<br>
-呃，仔细一想既然陛下和团长都ooc了…其实感觉更像原创了……害管他的！</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/p/f76b#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        <script>
-          function setClipboardText(event){
-              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
-              let clipboardData = event.clipboardData || window.clipboardData;
-              // 如果未复制或者未剪切，则return出去
-              if (!clipboardData) { return; }
-              if(window.getSelection().toString().length < 100)  { return; }
-              event.preventDefault();
-              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
-              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
-              let text = window.getSelection().toString();
-              if (text) {
-                // 如果文本存在则先取消文本默认事件
-                event.preventDefault();
-                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
-                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
-                // data: 一个 DOMString表示要添加到 drag object的数据。
-                var copyright = '\n\n'
-                                + '\n（（））'
-                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
-                                + '\n作者: 碳素@mebilyc'
-                                + '\n博客地址:https://mebilychen.github.io/' 
-                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-13805-518516-1305127431.cos-website.ap-hongkong.myqcloud.com/' 
-    
-                clipboardData.setData('text/plain', text + copyright);
-    
-              }
-          };
-          var contents = document.getElementsByClassName("content");
-          // 监听文章内容的copy事件
-          contents[0].addEventListener('copy',function(e){
-              setClipboardText(e);
-          });     
-      </script>
-
-
-  
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/786a">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-kingsec.JPG">
-      <meta itemprop="name" content="碳素 | mebilyc">
-      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="碳素的小作坊">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/p/786a" class="post-title-link" itemprop="url">家书</a>
-        </h2>
-
-        <div class="post-meta">
-
-  
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-12-07 22:32:00" itemprop="dateCreated datePublished" datetime="2020-12-07T22:32:00+08:00">2020-12-07</time>
-            </span>
-                <span class="post-meta-item">
-                  <span class="post-meta-item-icon">
-                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
-                  </span>
-                  <span class="post-meta-item-text">更新于</span>
-                  <time title="修改时间：2021-03-13 17:27:03" itemprop="dateModified" datetime="2021-03-13T17:27:03+08:00">今天17:27</time>
-                </span>
-              
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%8E%8B%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">王文</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>37</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-          
-          <div class="post-tags">
-              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
-              <a href="/tags/AU%E7%82%B9%E5%AD%90/" rel="tag"><i class="fa fa-tag"></i> AU点子</a>
-          </div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p>平凡点写就是陛下写家书</p>
-<p>复杂点写就是同一封家书的好几版（也可以是奏章之类的）</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        <script>
-          function setClipboardText(event){
-              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
-              let clipboardData = event.clipboardData || window.clipboardData;
-              // 如果未复制或者未剪切，则return出去
-              if (!clipboardData) { return; }
-              if(window.getSelection().toString().length < 100)  { return; }
-              event.preventDefault();
-              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
-              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
-              let text = window.getSelection().toString();
-              if (text) {
-                // 如果文本存在则先取消文本默认事件
-                event.preventDefault();
-                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
-                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
-                // data: 一个 DOMString表示要添加到 drag object的数据。
-                var copyright = '\n\n'
-                                + '\n（（））'
-                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
-                                + '\n作者: 碳素@mebilyc'
-                                + '\n博客地址:https://mebilychen.github.io/' 
-                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-13805-518516-1305127431.cos-website.ap-hongkong.myqcloud.com/' 
-    
-                clipboardData.setData('text/plain', text + copyright);
-    
-              }
-          };
-          var contents = document.getElementsByClassName("content");
-          // 监听文章内容的copy事件
-          contents[0].addEventListener('copy',function(e){
-              setClipboardText(e);
-          });     
-      </script>
-
-
-  
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/fea">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-kingsec.JPG">
-      <meta itemprop="name" content="碳素 | mebilyc">
-      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="碳素的小作坊">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/p/fea" class="post-title-link" itemprop="url">16年+的老娘黑历史</a>
-        </h2>
-
-        <div class="post-meta">
-
-  
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2016-03-06 14:38:00" itemprop="dateCreated datePublished" datetime="2016-03-06T14:38:00+08:00">2016-03-06</time>
-            </span>
-                <span class="post-meta-item">
-                  <span class="post-meta-item-icon">
-                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
-                  </span>
-                  <span class="post-meta-item-text">更新于</span>
-                  <time title="修改时间：2021-03-13 17:26:56" itemprop="dateModified" datetime="2021-03-13T17:26:56+08:00">今天17:26</time>
-                </span>
-              
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%85%B6%E4%BB%96%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">其他文</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>17k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>15 分钟</span>
-            </span>
-          
-          <div class="post-tags">
-              <a href="/tags/%E7%81%AD%E7%BB%9D%EF%BC%9A%E5%BC%83%E5%9D%91/" rel="tag"><i class="fa fa-tag"></i> 灭绝：弃坑</a>
-              <a href="/tags/%E7%A1%AB%E5%8D%A1-%E5%85%8B%E5%8A%B3%E6%96%AF/" rel="tag"><i class="fa fa-tag"></i> 硫卡/克劳斯</a>
-              <a href="/tags/%E5%A5%88%E6%96%AF-%E6%B3%A2%E5%A5%87/" rel="tag"><i class="fa fa-tag"></i> 奈斯/波奇</a>
-              <a href="/tags/MOTHER-EarthBound/" rel="tag"><i class="fa fa-tag"></i> MOTHER/EarthBound</a>
-          </div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><center> RT</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/p/fea">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        <script>
-          function setClipboardText(event){
-              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
-              let clipboardData = event.clipboardData || window.clipboardData;
-              // 如果未复制或者未剪切，则return出去
-              if (!clipboardData) { return; }
-              if(window.getSelection().toString().length < 100)  { return; }
-              event.preventDefault();
-              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
-              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
-              let text = window.getSelection().toString();
-              if (text) {
-                // 如果文本存在则先取消文本默认事件
-                event.preventDefault();
-                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
-                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
-                // data: 一个 DOMString表示要添加到 drag object的数据。
-                var copyright = '\n\n'
-                                + '\n（（））'
-                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
-                                + '\n作者: 碳素@mebilyc'
-                                + '\n博客地址:https://mebilychen.github.io/' 
-                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-13805-518516-1305127431.cos-website.ap-hongkong.myqcloud.com/' 
-    
-                clipboardData.setData('text/plain', text + copyright);
-    
-              }
-          };
-          var contents = document.getElementsByClassName("content");
-          // 监听文章内容的copy事件
-          contents[0].addEventListener('copy',function(e){
-              setClipboardText(e);
-          });     
-      </script>
-
-
-  
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/7abb">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-kingsec.JPG">
-      <meta itemprop="name" content="碳素 | mebilyc">
-      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="碳素的小作坊">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/p/7abb" class="post-title-link" itemprop="url">“我，可是魔神哦”</a>
-        </h2>
-
-        <div class="post-meta">
-
-  
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2016-03-06 14:35:00" itemprop="dateCreated datePublished" datetime="2016-03-06T14:35:00+08:00">2016-03-06</time>
-            </span>
-                <span class="post-meta-item">
-                  <span class="post-meta-item-icon">
-                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
-                  </span>
-                  <span class="post-meta-item-text">更新于</span>
-                  <time title="修改时间：2021-03-13 17:26:56" itemprop="dateModified" datetime="2021-03-13T17:26:56+08:00">今天17:26</time>
-                </span>
-              
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%85%B6%E4%BB%96%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">其他文</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>3.5k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
-            </span>
-          
-          <div class="post-tags">
-              <a href="/tags/%E7%81%AD%E7%BB%9D%EF%BC%9A%E5%BC%83%E5%9D%91/" rel="tag"><i class="fa fa-tag"></i> 灭绝：弃坑</a>
-              <a href="/tags/%E7%A1%AB%E5%8D%A1-%E5%85%8B%E5%8A%B3%E6%96%AF/" rel="tag"><i class="fa fa-tag"></i> 硫卡/克劳斯</a>
-              <a href="/tags/MOTHER-EarthBound/" rel="tag"><i class="fa fa-tag"></i> MOTHER/EarthBound</a>
-          </div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><center> 古早的MOTHER同人1</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/p/7abb">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        <script>
-          function setClipboardText(event){
-              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
-              let clipboardData = event.clipboardData || window.clipboardData;
-              // 如果未复制或者未剪切，则return出去
-              if (!clipboardData) { return; }
-              if(window.getSelection().toString().length < 100)  { return; }
-              event.preventDefault();
-              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
-              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
-              let text = window.getSelection().toString();
-              if (text) {
-                // 如果文本存在则先取消文本默认事件
-                event.preventDefault();
-                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
-                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
-                // data: 一个 DOMString表示要添加到 drag object的数据。
-                var copyright = '\n\n'
-                                + '\n（（））'
-                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
-                                + '\n作者: 碳素@mebilyc'
-                                + '\n博客地址:https://mebilychen.github.io/' 
-                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-13805-518516-1305127431.cos-website.ap-hongkong.myqcloud.com/' 
-    
-                clipboardData.setData('text/plain', text + copyright);
-    
-              }
-          };
-          var contents = document.getElementsByClassName("content");
-          // 监听文章内容的copy事件
-          contents[0].addEventListener('copy',function(e){
-              setClipboardText(e);
-          });     
-      </script>
-
-
-  
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/24b8">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-kingsec.JPG">
-      <meta itemprop="name" content="碳素 | mebilyc">
-      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="碳素的小作坊">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/p/24b8" class="post-title-link" itemprop="url">【合集】虫虫和虫虫和虫虫们</a>
-        </h2>
-
-        <div class="post-meta">
-
-  
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-03-10 23:21:00" itemprop="dateCreated datePublished" datetime="2021-03-10T23:21:00+08:00">2021-03-10</time>
-            </span>
-                <span class="post-meta-item">
-                  <span class="post-meta-item-icon">
-                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
-                  </span>
-                  <span class="post-meta-item-text">更新于</span>
-                  <time title="修改时间：2021-03-13 17:26:53" itemprop="dateModified" datetime="2021-03-13T17:26:53+08:00">今天17:26</time>
-                </span>
-              
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%A2%B3%E9%85%B8%E7%9A%84%E6%B1%82%E7%94%9F%E4%B9%8B%E8%B7%AF/" itemprop="url" rel="index"><span itemprop="name">碳酸的求生之路</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>566</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-          
-          <div class="post-tags">
-              <a href="/tags/%E8%99%AB%E4%B8%8E%E8%99%AB%E4%B8%8E%E8%99%AB/" rel="tag"><i class="fa fa-tag"></i> 虫与虫与虫</a>
-          </div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><center>虫虫和她的虫虫们</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/p/24b8">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        <script>
-          function setClipboardText(event){
-              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
-              let clipboardData = event.clipboardData || window.clipboardData;
-              // 如果未复制或者未剪切，则return出去
-              if (!clipboardData) { return; }
-              if(window.getSelection().toString().length < 100)  { return; }
-              event.preventDefault();
-              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
-              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
-              let text = window.getSelection().toString();
-              if (text) {
-                // 如果文本存在则先取消文本默认事件
-                event.preventDefault();
-                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
-                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
-                // data: 一个 DOMString表示要添加到 drag object的数据。
-                var copyright = '\n\n'
-                                + '\n（（））'
-                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
-                                + '\n作者: 碳素@mebilyc'
-                                + '\n博客地址:https://mebilychen.github.io/' 
-                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-13805-518516-1305127431.cos-website.ap-hongkong.myqcloud.com/' 
-    
-                clipboardData.setData('text/plain', text + copyright);
-    
-              }
-          };
-          var contents = document.getElementsByClassName("content");
-          // 监听文章内容的copy事件
-          contents[0].addEventListener('copy',function(e){
-              setClipboardText(e);
-          });     
-      </script>
-
-
-  
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/7803">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-kingsec.JPG">
-      <meta itemprop="name" content="碳素 | mebilyc">
-      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="碳素的小作坊">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/p/7803" class="post-title-link" itemprop="url">Undercover/伪装</a>
-        </h2>
-
-        <div class="post-meta">
-
-  
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2018-10-04 16:50:00" itemprop="dateCreated datePublished" datetime="2018-10-04T16:50:00+08:00">2018-10-04</time>
-            </span>
-                <span class="post-meta-item">
-                  <span class="post-meta-item-icon">
-                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
-                  </span>
-                  <span class="post-meta-item-text">更新于</span>
-                  <time title="修改时间：2021-03-13 17:26:52" itemprop="dateModified" datetime="2021-03-13T17:26:52+08:00">今天17:26</time>
-                </span>
-              
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%8E%8B%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">王文</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>3.4k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
-            </span>
-          
-          <div class="post-tags">
-              <a href="/tags/%E5%86%B0%E7%81%AB%E7%BB%84-GrimmPale/" rel="tag"><i class="fa fa-tag"></i> 冰火组/GrimmPale</a>
-              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
-              <a href="/tags/%E6%A0%BC%E6%9E%97/" rel="tag"><i class="fa fa-tag"></i> 格林</a>
-              <a href="/tags/%E6%BF%92%E5%8D%B1%EF%BC%9A%E5%BC%83%E5%9D%91%E8%BE%B9%E7%BC%98/" rel="tag"><i class="fa fa-tag"></i> 濒危：弃坑边缘</a>
-              <a href="/tags/ABO/" rel="tag"><i class="fa fa-tag"></i> ABO</a>
-          </div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <div class="note info"> <p style="color:#438BCA"> 臣以为，一旦设定是ABO，陛下就得是Omega，大家懂得，意思意思</p> </div>
-
-<div class="note info"><p style="text-align:center; color:#438BCA"> ♕弃坑边缘♕ </p></div>
-
-<div class="note warning"><p style="text-align:center; color:#F0AD4E">♕DEMO/未完成作品♕ </p></div>
-
-<p>Undercover/伪装</p>
-
-<p>有潜力…但是太肉了不会写……</p>
-
-<p>*<em>Hollow Knight</em><br>
-*<em>Grimmpale</em><br>
-*<em>肉文苦手</em><br>
-*<em>清水赛高？</em><br>
-<strong>半次元题目：<br>
-开头：我是一个伪装成Alpha的Omega<br>
-结尾：我终于成为了你</strong><br>
+          <p><strong>Lost and Found/失物招领</strong><br>
+——————<br>
+*<em>Hollow Knight</em><br>
+*<em>GrimmHollowpale</em><br>
+*<em>其实是伪3p</em><br>
+*<em>清水…吧</em><br>
 ——————</p>
+
+<p>原文我自己都理解不能，就不放了。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/p/7803#more" rel="contents">
+              <a class="btn" href="/p/2c90#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
           <!--/noindex-->
         
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-13805-518516-1305127431.cos-website.ap-hongkong.myqcloud.com/' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/5a1d">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-kingsec.JPG">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/p/5a1d" class="post-title-link" itemprop="url">鲸落-Whalefall-设定</a>
+        </h2>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-10-23 15:20:00" itemprop="dateCreated datePublished" datetime="2020-10-23T15:20:00+08:00">2020-10-23</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2021-03-13 17:43:59" itemprop="dateModified" datetime="2021-03-13T17:43:59+08:00">今天17:43</time>
+                </span>
+              
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">王文</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/%E7%8E%8B%E6%96%87-%E9%B2%B8%E8%90%BD/" itemprop="url" rel="index"><span itemprop="name">王文-鲸落</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.9k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+          
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%BE%E5%AE%9A/" rel="tag"><i class="fa fa-tag"></i> 设定</a>
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E5%90%9B%E8%87%A3%E7%BB%84/" rel="tag"><i class="fa fa-tag"></i> 君臣组</a>
+              <a href="/tags/%E5%8D%A2%E7%91%9E%E6%81%A9/" rel="tag"><i class="fa fa-tag"></i> 卢瑞恩</a>
+              <a href="/tags/%E7%99%BD%E5%90%8E/" rel="tag"><i class="fa fa-tag"></i> 白后</a>
+              <a href="/tags/%E5%9C%A3%E5%B7%A2/" rel="tag"><i class="fa fa-tag"></i> 圣巢</a>
+              <a href="/tags/%E9%B2%B8%E8%90%BD/" rel="tag"><i class="fa fa-tag"></i> @鲸落</a>
+              <a href="/tags/%E7%99%BD%E5%A4%AB%E5%A6%87/" rel="tag"><i class="fa fa-tag"></i> 白夫妇</a>
+              <a href="/tags/%E6%97%A0%E5%8D%B1%EF%BC%9A%E5%A1%AB%E5%9D%91%E4%B8%AD/" rel="tag"><i class="fa fa-tag"></i> 无危：填坑中</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <div class="note danger"><p style="text-align:center ; color:#D9534F"> ♕本文为设定，可能会上锁♕ </p></div>
+
+
+<div class="note warning"><p style="text-align:center; color:#F0AD4E"> ♕施工中♕ </p></div>
+
+
+
+<p>⚠️白王严重洗白注意，超严重，不是王真爱粉的大家注意避一下雷<br>
+<em>虽然陛下本来就是白的（doge）</em><br>
+⚠️尝试卖肉，但不会切</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/p/5a1d#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-13805-518516-1305127431.cos-website.ap-hongkong.myqcloud.com/' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/53a9">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-kingsec.JPG">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/p/53a9" class="post-title-link" itemprop="url">子嗣</a>
+        </h2>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-11-24 21:28:00" itemprop="dateCreated datePublished" datetime="2018-11-24T21:28:00+08:00">2018-11-24</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2021-03-13 17:43:59" itemprop="dateModified" datetime="2021-03-13T17:43:59+08:00">今天17:43</time>
+                </span>
+              
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">王文</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/%E7%8E%8B%E6%96%87AU%E7%82%B9%E5%AD%90/" itemprop="url" rel="index"><span itemprop="name">王文AU点子</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E5%86%B0%E7%81%AB%E7%BB%84-GrimmPale/" rel="tag"><i class="fa fa-tag"></i> 冰火组/GrimmPale</a>
+              <a href="/tags/%E6%A0%BC%E6%9E%97/" rel="tag"><i class="fa fa-tag"></i> 格林</a>
+              <a href="/tags/%E5%B9%BC%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 幼王</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><center></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/p/53a9">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-13805-518516-1305127431.cos-website.ap-hongkong.myqcloud.com/' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/3622">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-kingsec.JPG">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/p/3622" class="post-title-link" itemprop="url">HK:A New Era</a>
+        </h2>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-12-02 17:17:00" itemprop="dateCreated datePublished" datetime="2018-12-02T17:17:00+08:00">2018-12-02</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2021-03-13 17:43:59" itemprop="dateModified" datetime="2021-03-13T17:43:59+08:00">今天17:43</time>
+                </span>
+              
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">王文</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/%E7%8E%8B%E6%96%87AU%E7%82%B9%E5%AD%90/" itemprop="url" rel="index"><span itemprop="name">王文AU点子</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>15k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>13 分钟</span>
+            </span>
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E7%81%AD%E7%BB%9D%EF%BC%9A%E5%BC%83%E5%9D%91/" rel="tag"><i class="fa fa-tag"></i> 灭绝：弃坑</a>
+              <a href="/tags/%E5%86%B0%E7%81%AB%E7%BB%84-GrimmPale/" rel="tag"><i class="fa fa-tag"></i> 冰火组/GrimmPale</a>
+              <a href="/tags/%E6%A0%BC%E6%9E%97/" rel="tag"><i class="fa fa-tag"></i> 格林</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <div class="note warning"><p style="text-align:center; color:#F0AD4E">♕DEMO/未完成作品♕ </p></div>
+
+<div class="note danger"><p style="text-align:center; color:#D9534F"> ♕本文已死♕ </p></div>
+
+<div class="note primary"><p style="color:#7042C1"> 就是这篇！提到团长邀请陛下加入剧团的!当时因为满脑子都是GrimmPale所以硬生生把两只虫扯在一起.....唉，算了，都过去了，没必要，忘记吧，现在一个人就很快活了呀！ </p> </div>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/p/3622#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-13805-518516-1305127431.cos-website.ap-hongkong.myqcloud.com/' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/491b">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-kingsec.JPG">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/p/491b" class="post-title-link" itemprop="url">王权衍生</a>
+        </h2>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-01-04 17:13:00" itemprop="dateCreated datePublished" datetime="2019-01-04T17:13:00+08:00">2019-01-04</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2021-03-13 17:43:59" itemprop="dateModified" datetime="2021-03-13T17:43:59+08:00">今天17:43</time>
+                </span>
+              
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">王文</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/%E7%8E%8B%E6%96%87AU%E7%82%B9%E5%AD%90/" itemprop="url" rel="index"><span itemprop="name">王文AU点子</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>525</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+          
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%BE%E5%AE%9A/" rel="tag"><i class="fa fa-tag"></i> 设定</a>
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E5%86%B0%E7%81%AB%E7%BB%84-GrimmPale/" rel="tag"><i class="fa fa-tag"></i> 冰火组/GrimmPale</a>
+              <a href="/tags/%E6%A0%BC%E6%9E%97/" rel="tag"><i class="fa fa-tag"></i> 格林</a>
+              <a href="/tags/Reign-%E7%8E%8B%E6%9D%83/" rel="tag"><i class="fa fa-tag"></i> Reign:王权</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <div class="note danger"><p style="text-align:center ; color:#D9534F"> ♕本文为设定♕ </p></div>
+
+<p>这个也可以…进行一下润色？</p>
+
+<p>依旧是站定不放的GRIMMPALE！<br>
+这次是恶魔x国王的设定！<br>
+强强！<br>
+渣攻强受！<br>
+（白王一点都不贱）</p>
+
+<p>玩了Sort The Court之后<br>
+又想起来Reign (王权）<br>
+就突然来了灵感！(˶‾᷄ ⁻̫ ‾᷅˵)</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/p/491b#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-13805-518516-1305127431.cos-website.ap-hongkong.myqcloud.com/' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/a56d">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-kingsec.JPG">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/p/a56d" class="post-title-link" itemprop="url">Revive</a>
+        </h2>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-03-23 16:37:00" itemprop="dateCreated datePublished" datetime="2019-03-23T16:37:00+08:00">2019-03-23</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2021-03-13 17:43:59" itemprop="dateModified" datetime="2021-03-13T17:43:59+08:00">今天17:43</time>
+                </span>
+              
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">王文</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/%E7%8E%8B%E6%96%87AU%E7%82%B9%E5%AD%90/" itemprop="url" rel="index"><span itemprop="name">王文AU点子</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E7%81%AD%E7%BB%9D%EF%BC%9A%E5%BC%83%E5%9D%91/" rel="tag"><i class="fa fa-tag"></i> 灭绝：弃坑</a>
+              <a href="/tags/%E5%86%B0%E7%81%AB%E7%BB%84-GrimmPale/" rel="tag"><i class="fa fa-tag"></i> 冰火组/GrimmPale</a>
+              <a href="/tags/%E6%A0%BC%E6%9E%97/" rel="tag"><i class="fa fa-tag"></i> 格林</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <div class="note danger"><p style="text-align:center; color:#D9534F"> ♕本文已死，但是涉及到@memo的剧透♕ </p></div>
+
+<div class="note info"> <p style="color:#438BCA">这个和@Re没有关系,完全是因为看到彩虹那篇Refuse and Regret之后心血来潮想自己写一篇类似的文</p> </div>
+
+<div class="note warning"><p style="text-align:center ; color:#F0AD4E"> ♕内容可能引起轻微不适♕ </p></div>
+
+
+<p>只是一个idea<br>
+受AO3神作RaR的启发！</p>
+
+<p>相当于memo的续集<br>
+讲白王是如何一步步重新振兴圣巢的</p>
+
+<p>但因为死了一波虫子所以emmm太好啦哈哈哈终于不用操那么多心了啊哈哈哈哈</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/p/a56d#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-13805-518516-1305127431.cos-website.ap-hongkong.myqcloud.com/' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/3f7e">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-kingsec.JPG">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/p/3f7e" class="post-title-link" itemprop="url">白化病</a>
+        </h2>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-28 10:55:00" itemprop="dateCreated datePublished" datetime="2020-08-28T10:55:00+08:00">2020-08-28</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2021-03-13 17:43:59" itemprop="dateModified" datetime="2021-03-13T17:43:59+08:00">今天17:43</time>
+                </span>
+              
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">王文</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/%E7%8E%8B%E6%96%87AU%E7%82%B9%E5%AD%90/" itemprop="url" rel="index"><span itemprop="name">王文AU点子</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>26</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+          
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%BE%E5%AE%9A/" rel="tag"><i class="fa fa-tag"></i> 设定</a>
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E5%89%8D%E8%BE%88/" rel="tag"><i class="fa fa-tag"></i> 前辈</a>
+              <a href="/tags/BE/" rel="tag"><i class="fa fa-tag"></i> BE</a>
+              <a href="/tags/AU%E7%82%B9%E5%AD%90/" rel="tag"><i class="fa fa-tag"></i> AU点子</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><div class="note danger"><p style="text-align:center ; color:#D9534F"> ♕本文为设定，嗯♕ </p></div>
+
+<p>关键词组成AU系列</p>
+<p>无需多言 毋需多言</p>
+
       
     </div>
 
@@ -1803,7 +1856,7 @@ OOC<br>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">38</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -1873,13 +1926,13 @@ OOC<br>
       </div>
       <ul class="links-of-updated-posts-list">
           <li class="links-of-updated-posts-item">
-          <a href="/p/ec81" title="p&#x2F;ec81.html">关于冰火组的至理名言</a>
+          <a href="/p/679f" title="p&#x2F;679f.html">还希望站子拥有的一些优化</a>
         </li>
           <li class="links-of-updated-posts-item">
-          <a href="/p/b6f" title="p&#x2F;b6f.html">碎碎念</a>
+          <a href="/p/47c2" title="p&#x2F;47c2.html">白咖啡-设定</a>
         </li>
           <li class="links-of-updated-posts-item">
-          <a href="/p/6a0a" title="p&#x2F;6a0a.html">陛下的设定(过期)</a>
+          <a href="/p/7dc8" title="p&#x2F;7dc8.html">Soldier，Poet，King</a>
         </li>
       </ul>
     </div>
@@ -1947,7 +2000,7 @@ OOC<br>
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">8:12</span>
+    <span title="站点阅读时长">8:13</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
