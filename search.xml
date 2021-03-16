@@ -33,6 +33,11 @@
 
 			<script>
 				console.error("Error: [hexo-tag-aplayer] Specified asset file not found (autoplay=false)");
+			</script>
+
+
+			<script>
+				console.error("Error: [hexo-tag-aplayer] Unrecognized tag argument(2): autoplay=false");
 			</script>]]></content>
       <categories>
         <category>随团长研习音乐</category>
