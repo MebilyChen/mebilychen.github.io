@@ -410,7 +410,7 @@
 
 <p>&#x1F3BC;</p>
 
-    <div id="aplayer-ezKNiAJn" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="870384" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
+    <div id="aplayer-wUAkqCCe" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="870384" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
 
 <p>辐光x陛下 <br>
 两小只都是光<br>
@@ -711,20 +711,6 @@ Hallownest.”</p>
       mutex="true">
     </meting-js>
     
-    <!-- 根据封面自适应主题色 -->
-    const colorThief = new ColorThief();
-    const setTheme = (index) => {
-        if (!ap.list.audios[index].theme) {
-            colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {
-                ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
-            });
-        }
-    };
-    setTheme(ap.list.index);
-    ap.on('listswitch', (data) => {
-        setTheme(data.index);
-    });
-
     </div>
   </aside>
   <div id="sidebar-dimmer"></div>

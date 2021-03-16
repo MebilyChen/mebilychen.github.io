@@ -384,7 +384,7 @@
 
       
         <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css">
-    <div id="aplayer-SPBiRYHB" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="28923134" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
+    <div id="aplayer-TAiPimRS" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="28923134" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
 
 <p>如题！</p>
 <p>自由了！老子自由了！随便耍！！！</p>
@@ -665,20 +665,6 @@
       mutex="true">
     </meting-js>
     
-    <!-- 根据封面自适应主题色 -->
-    const colorThief = new ColorThief();
-    const setTheme = (index) => {
-        if (!ap.list.audios[index].theme) {
-            colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {
-                ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
-            });
-        }
-    };
-    setTheme(ap.list.index);
-    ap.on('listswitch', (data) => {
-        setTheme(data.index);
-    });
-
     </div>
   </aside>
   <div id="sidebar-dimmer"></div>
