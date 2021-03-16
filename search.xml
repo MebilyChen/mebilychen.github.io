@@ -32,6 +32,7 @@
 
 <div class="note warning"><p style="text-align:center ; color:#F0AD4E"> BUG:本地上传的音乐会带出文章，且不会自动停止播放，会和其他音乐冲突，需要手动操作 </p></div>
 
+<p>以下是钢琴的练习：  </p>
 
 			<script>
 				console.error("Error: [hexo-tag-aplayer] Specified asset file not found (mutex)");
@@ -43,12 +44,12 @@
 			</script>
 
 
-        <div id="aplayer-iekjzLSY" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-YERKtDlO" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-iekjzLSY"),
+            element: document.getElementById("aplayer-YERKtDlO"),
             narrow: false,
             autoplay: false,
             showlrc: false,
