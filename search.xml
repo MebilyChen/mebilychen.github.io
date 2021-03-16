@@ -32,7 +32,7 @@
 
 
 			<script>
-				console.error("Error: [hexo-tag-aplayer] Specified asset file not found (mutex)");
+				console.error("Error: [hexo-tag-aplayer] Specified asset file not found (mutex:true)");
 			</script>
 
 
@@ -41,9 +41,26 @@
 			</script>
 
 
-			<script>
-				console.error("Error: [hexo-tag-aplayer] Specified asset file not found (mutex)");
-			</script>]]></content>
+        <div id="aplayer-SrSIATOK" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-SrSIATOK"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "White Palace",
+              author: "Christopher.L/演奏：碳素",
+              url: "http://mebilychen-media.test.upcdn.net/media/WPRP3.mp3",
+              pic: "",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>]]></content>
       <categories>
         <category>随团长研习音乐</category>
         <category>陛下竟然看不懂五线谱</category>
