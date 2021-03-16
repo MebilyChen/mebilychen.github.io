@@ -36,9 +36,14 @@
 			</script>
 
 
-			<script>
-				console.error("Error: [hexo-tag-aplayer] Unrecognized tag argument(2): autoplay=false");
-			</script>]]></content>
+        <div id="aplayer-goAtDWmG" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
+			  <script>
+				  var options = {"narrow":false,"autoplay":true,"showlrc":1,"mode":"random","mutex":true,"theme":"#e6d0b2","preload":"metadata","listmaxheight":"513px","music":[{"title":"轨迹","author":"周杰伦","url":"https://file.dunkwan.cn/8004033d101a67c9c198.mp3/%E8%BD%A8%E8%BF%B9-%E5%91%A8%E6%9D%B0%E4%BC%A6.mp3","pic":"https://file.dunkwan.cn/12d5d2e0bf1ac695b5be.jpg/%E8%BD%A8%E8%BF%B9-%E5%91%A8%E6%9D%B0%E4%BC%A6.jpg","lrc":""},{"title":"告白气球","author":"周杰伦","url":"https://file.dunkwan.cn/61b3a0f6cf10c159108b.mp3/%E5%91%8A%E7%99%BD%E6%B0%94%E7%90%83-%E5%91%A8%E6%9D%B0%E4%BC%A6.mp3","pic":"https://file.dunkwan.cn/a2e2f8f6f8f19f952b37.jpg/%E5%91%8A%E7%99%BD%E6%B0%94%E7%90%83-%E5%91%A8%E6%9D%B0%E4%BC%A6.jpg","lrc":""}]};
+				  options.element = document.getElementById("aplayer-goAtDWmG");
+				  var ap = new APlayer(options);
+			    window.aplayers || (window.aplayers = []);
+				  window.aplayers.push(ap);
+			  </script>]]></content>
       <categories>
         <category>随团长研习音乐</category>
         <category>陛下竟然看不懂五线谱</category>
