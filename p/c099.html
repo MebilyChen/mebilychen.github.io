@@ -731,6 +731,19 @@ md，南村群童公然挑衅老子的威严，老子搞死他们！…顺便救
       mutex="true">
     </meting-js>
     
+    <!-- 根据封面自适应主题色 -->
+    const colorThief = new ColorThief();
+    const setTheme = (index) => {
+        if (!ap.list.audios[index].theme) {
+            colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {
+                ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
+            });
+        }
+    };
+    setTheme(ap.list.index);
+    ap.on('listswitch', (data) => {
+        setTheme(data.index);
+    });
 
     </div>
   </aside>

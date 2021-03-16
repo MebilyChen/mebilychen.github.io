@@ -736,6 +736,19 @@ The whistling sound outside the cave lulls me to sleep. I don&#39;t know what ou
       mutex="true">
     </meting-js>
     
+    <!-- 根据封面自适应主题色 -->
+    const colorThief = new ColorThief();
+    const setTheme = (index) => {
+        if (!ap.list.audios[index].theme) {
+            colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {
+                ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
+            });
+        }
+    };
+    setTheme(ap.list.index);
+    ap.on('listswitch', (data) => {
+        setTheme(data.index);
+    });
 
     </div>
   </aside>
