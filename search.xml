@@ -31,48 +31,10 @@
 <div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"theme":"#CDCDCD","loop":true,"video":{"url":"https://vodm2lzexwq.vod.126.net/vodm2lzexwq/gs97Eoum_3007879892_sd.mp4?resId=254486990bfa2cd7aa860229db639341_3007879892_1&sign=D%2BPgMIv0OF%2F9Pqjp3ezOzu0%2BVtddDAzNXU7H8aXEfEE%3D"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 
 
-        <div id="aplayer-mMCsYDWK" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-mMCsYDWK"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "White Palace",
-              author: "Christopher.L",
-              url: "http://mebilychen-media.test.upcdn.net/media/WPRP1.mp3",
-              pic: "",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-
-
-        <div id="aplayer-vBxMNmQT" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-vBxMNmQT"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "foo",
-              author: "bar",
-              url: "http://mebilychen-media.test.upcdn.net/media/WPRP1.mp3",
-              pic: "",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>]]></content>
+			<script>
+				console.error("Error: [hexo-tag-aplayer] Specified asset file not found (listfolded)");
+			</script>
+]]></content>
       <categories>
         <category>随团长研习音乐</category>
         <category>陛下竟然看不懂五线谱</category>
