@@ -32,16 +32,16 @@
 
 
 			<script>
-				console.error("Error: [hexo-tag-aplayer] Specified asset file not found (autoplay=false)");
+				console.error("Error: [hexo-tag-aplayer] Specified asset file not found (theme=#CDCDCD)");
 			</script>
 
 
-        <div id="aplayer-ElDPxOtX" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-sMAJCAdN" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-ElDPxOtX"),
+            element: document.getElementById("aplayer-sMAJCAdN"),
             narrow: false,
             autoplay: false,
             showlrc: false,
