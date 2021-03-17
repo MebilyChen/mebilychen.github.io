@@ -25,6 +25,32 @@
       </categories>
   </entry>
   <entry>
+    <title>Git上传不了了</title>
+    <url>/p/d6c5.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p>RT测试  <br>倒霉的公司网把github给墙了，同时也把我站子的库给墙了。  <br>浪费了我5个小时的生命，在这里记一下遇到的各种报错：</p>
+<h2 id="Failed-to-connect-to-127-0-0-1-port-1080-Connection-refused"><a href="#Failed-to-connect-to-127-0-0-1-port-1080-Connection-refused" class="headerlink" title="Failed to connect to 127.0.0.1 port 1080: Connection refused"></a>Failed to connect to 127.0.0.1 port 1080: Connection refused</h2><p><strong>代理问题，关代理:</strong>   <br>查询是否使用代理：<code>git config --global http.proxy </code><br>取消代理：<code>git config --global --unset http.proxy</code></p>
+<h2 id="Failed-to-connect-to-github-com-port-443-Timed-out-Connection-time-out"><a href="#Failed-to-connect-to-github-com-port-443-Timed-out-Connection-time-out" class="headerlink" title="Failed to connect to github.com port 443: Timed out / Connection time out"></a>Failed to connect to github.com port 443: Timed out / Connection time out</h2><p>有说是代理问题的，关代理：<br><code>git config --global --unset http.proxy</code>  <br><code>git config --global --unset https.proxy</code></p>
+<p>有说在网络设置中查找“代理”，然后或者关掉脚本，或者搞什么pac文件的（没搞懂）  <br><code>git config --global http.proxy 127.0.0.1:1080</code>  <br>为全局的 git 项目都设置代理<br><code>git config --local http.proxy 127.0.0.1:1080</code><br>为某个 git 项目单独设置代理</p>
+<p>有一个也是说改host的，不过我没试，码一下：<br><code>151.101.185.194 github.global-ssl.fastly.net</code><br><code>192.30.253.112  github.com</code>  <br>添加或覆盖以上地址到host。</p>
+<p><strong>解决</strong>：这个我没咋搞懂，反正就是把<code>C:\Windows\System32\drivers\etc\hosts</code><br>文件给改了，把github相关的地址都注释掉了，然后就又接连报了下面的错…但是感觉应该是梯子失效了，连不上了，我一般下意识都会重启梯子  <br>记一下这个咋搞，win搜索<code>记事本</code>应用，右键管理员打开，进去后点菜单栏打开，输入地址，点打开。  <br>这样修改完之后才能保存。  </p>
+<div class="note primary"><p style="color:#7042C1"> 刚刚调试成功了一次，补一下。  
+首先，断开当前vpn，试一下github能不能进入，不能，重连vpn。单独使用 `hexo d` 命令，也就是把 `hexo clean && hexo g && hexo d` 拆开,然后就上传成功了。 </p> </div>
+
+
+<h2 id="OpenSSL-SSL-connect-Connection-was-reset-in-connection-to-github-com-443"><a href="#OpenSSL-SSL-connect-Connection-was-reset-in-connection-to-github-com-443" class="headerlink" title="OpenSSL SSL_connect: Connection was reset in connection to github.com:443"></a>OpenSSL SSL_connect: Connection was reset in connection to github.com:443</h2><p><strong>解决：</strong>  <br><code>git config --global http.sslVerify false </code>  <br>git bash命令行输入</p>
+<div class="note primary"><p style="color:#7042C1"> <del>这个一连公司网就会出现，解决不了，估计是给我墙了。害，不让摸鱼，也好也好。</del> 也不是，重启vpn也能上传，估计本质是换了个网络环境，vpn乱跳的原因。</p> </div>
+
+
+<h2 id="OpenSSL-SSL-read-Connection-was-reset-errno-10054"><a href="#OpenSSL-SSL-read-Connection-was-reset-errno-10054" class="headerlink" title="OpenSSL SSL_read: Connection was reset, errno 10054"></a>OpenSSL SSL_read: Connection was reset, errno 10054</h2><p><strong>解决办法同上：</strong>  </p>
+<p><code>git config --global http.sslVerify &quot;false&quot;</code></p>
+<h2 id="还有一个最恶心的-on-branch-master，nothing-to-commit，working-tree-clean"><a href="#还有一个最恶心的-on-branch-master，nothing-to-commit，working-tree-clean" class="headerlink" title="还有一个最恶心的: on branch master，nothing to commit，working tree clean."></a>还有一个最恶心的: on branch master，nothing to commit，working tree clean.</h2><p>(这句我老看成“oh branch master，”搞得我以为这还整什么二次元)  <br><strong>这个是万恶之源。</strong>在连不上git、我发现我站子的库被墙了之后，换热点，就还是一直push不上去，老给我整这套。就一直卡在这句话上，然后就跳443。  <br>我就气的开了代理，然后就又开始了各种443的循环…  <br>刚刚查了一下，有说换指令的:  <br><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code>  <br>但是我一直用的是这个啊…</p>
+<h2 id="使用bat批处理文件快速启动站子"><a href="#使用bat批处理文件快速启动站子" class="headerlink" title="使用bat批处理文件快速启动站子"></a>使用bat批处理文件快速启动站子</h2><p>嗯，刚刚把bat文件改了一下，把这个问题解决了。自我感觉良好，希望真的大佬不要戳穿我的美梦泡泡：<br><strong>目前的bat文件如下:</strong><br><code>cd /d/myblog/themes/next/   node scripts/phototool.js   cd ..   cd ..   hexo clean &amp;&amp; hexo g    hexo d    git config --global http.sslVerify false   hexo d    hexo server   </code>  <br><del>留个纪念yay.</del>然而就只是运气好而已，淦。</p>
+]]></content>
+      <categories>
+        <category>站子</category>
+      </categories>
+  </entry>
+  <entry>
     <title>【合集】日常吐槽</title>
     <url>/p/fe35.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><blockquote>
@@ -98,32 +124,6 @@
       <tags>
         <tag>吐槽</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Git上传不了了</title>
-    <url>/p/d6c5.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p>RT测试  <br>倒霉的公司网把github给墙了，同时也把我站子的库给墙了。  <br>浪费了我5个小时的生命，在这里记一下遇到的各种报错：</p>
-<h2 id="Failed-to-connect-to-127-0-0-1-port-1080-Connection-refused"><a href="#Failed-to-connect-to-127-0-0-1-port-1080-Connection-refused" class="headerlink" title="Failed to connect to 127.0.0.1 port 1080: Connection refused"></a>Failed to connect to 127.0.0.1 port 1080: Connection refused</h2><p><strong>代理问题，关代理:</strong>   <br>查询是否使用代理：<code>git config --global http.proxy </code><br>取消代理：<code>git config --global --unset http.proxy</code></p>
-<h2 id="Failed-to-connect-to-github-com-port-443-Timed-out-Connection-time-out"><a href="#Failed-to-connect-to-github-com-port-443-Timed-out-Connection-time-out" class="headerlink" title="Failed to connect to github.com port 443: Timed out / Connection time out"></a>Failed to connect to github.com port 443: Timed out / Connection time out</h2><p>有说是代理问题的，关代理：<br><code>git config --global --unset http.proxy</code>  <br><code>git config --global --unset https.proxy</code></p>
-<p>有说在网络设置中查找“代理”，然后或者关掉脚本，或者搞什么pac文件的（没搞懂）  <br><code>git config --global http.proxy 127.0.0.1:1080</code>  <br>为全局的 git 项目都设置代理<br><code>git config --local http.proxy 127.0.0.1:1080</code><br>为某个 git 项目单独设置代理</p>
-<p>有一个也是说改host的，不过我没试，码一下：<br><code>151.101.185.194 github.global-ssl.fastly.net</code><br><code>192.30.253.112  github.com</code>  <br>添加或覆盖以上地址到host。</p>
-<p><strong>解决</strong>：这个我没咋搞懂，反正就是把<code>C:\Windows\System32\drivers\etc\hosts</code><br>文件给改了，把github相关的地址都注释掉了，然后就又接连报了下面的错…但是感觉应该是梯子失效了，连不上了，我一般下意识都会重启梯子  <br>记一下这个咋搞，win搜索<code>记事本</code>应用，邮件管理员打开，进去后点菜单栏打开，输入地址，点打开。<br>这样修改完之后才能保存。  </p>
-<div class="note primary"><p style="color:#7042C1"> 刚刚调试成功了一次，补一下。  
-首先，断开当前vpn，试一下github能不能进入，不能，重连vpn。单独使用 `hexo d` 命令，也就是把 `hexo clean && hexo g && hexo d` 拆开,然后就上传成功了。 </p> </div>
-
-
-<h2 id="OpenSSL-SSL-connect-Connection-was-reset-in-connection-to-github-com-443"><a href="#OpenSSL-SSL-connect-Connection-was-reset-in-connection-to-github-com-443" class="headerlink" title="OpenSSL SSL_connect: Connection was reset in connection to github.com:443"></a>OpenSSL SSL_connect: Connection was reset in connection to github.com:443</h2><p><strong>解决：</strong>  <br><code>git config --global http.sslVerify false </code>  <br>git bash命令行输入</p>
-<div class="note primary"><p style="color:#7042C1"> <del>这个一连公司网就会出现，解决不了，估计是给我墙了。害，不让摸鱼，也好也好。</del> 也不是，重启vpn也能上传，估计本质是换了个网络环境，vpn乱跳的原因。</p> </div>
-
-
-<h2 id="OpenSSL-SSL-read-Connection-was-reset-errno-10054"><a href="#OpenSSL-SSL-read-Connection-was-reset-errno-10054" class="headerlink" title="OpenSSL SSL_read: Connection was reset, errno 10054"></a>OpenSSL SSL_read: Connection was reset, errno 10054</h2><p><strong>解决办法同上：</strong>  </p>
-<p><code>git config --global http.sslVerify &quot;false&quot;</code></p>
-<h2 id="还有一个最恶心的-on-branch-master，nothing-to-commit，working-tree-clean"><a href="#还有一个最恶心的-on-branch-master，nothing-to-commit，working-tree-clean" class="headerlink" title="还有一个最恶心的: on branch master，nothing to commit，working tree clean."></a>还有一个最恶心的: on branch master，nothing to commit，working tree clean.</h2><p>(这句我老看成“oh branch master，”搞得我以为这还整什么二次元)  <br><strong>这个是万恶之源。</strong>在连不上git、我发现我站子的库被墙了之后，换热点，就还是一直push不上去，老给我整这套。就一直卡在这句话上，然后就跳443。  <br>我就气的开了代理，然后就又开始了各种443的循环…  <br>刚刚查了一下，有说换指令的:  <br><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code>  <br>但是我一直用的是这个啊…</p>
-<h2 id="使用bat批处理文件快速启动站子"><a href="#使用bat批处理文件快速启动站子" class="headerlink" title="使用bat批处理文件快速启动站子"></a>使用bat批处理文件快速启动站子</h2><p>嗯，刚刚把bat文件改了一下，把这个问题解决了。自我感觉良好，希望真的大佬不要戳穿我的美梦泡泡：<br><strong>目前的bat文件如下:</strong><br><code>cd /d/myblog/themes/next/   node scripts/phototool.js   cd ..   cd ..   hexo clean &amp;&amp; hexo g    hexo d    git config --global http.sslVerify false   hexo d    hexo server   </code>  <br><del>留个纪念yay.</del>然而就只是运气好而已，淦。</p>
-]]></content>
-      <categories>
-        <category>站子</category>
-      </categories>
   </entry>
   <entry>
     <title>INF/TP + 5万4 + BigFive+八维</title>
