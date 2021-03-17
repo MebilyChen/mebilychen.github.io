@@ -33,6 +33,10 @@
 <p>有说在网络设置中查找“代理”，然后或者关掉脚本，或者搞什么pac文件的（没搞懂）  <br><code>git config --global http.proxy 127.0.0.1:1080</code>  <br>为全局的 git 项目都设置代理<br><code>git config --local http.proxy 127.0.0.1:1080</code><br>为某个 git 项目单独设置代理</p>
 <p>有一个也是说改host的，不过我没试，码一下：<br><code>151.101.185.194 github.global-ssl.fastly.net</code><br><code>192.30.253.112  github.com</code>  <br>添加或覆盖以上地址到host。</p>
 <p><strong>解决</strong>：这个我没咋搞懂，反正就是把<code>C:\Windows\System32\drivers\etc\hosts</code><br>文件给改了，把github相关的地址都注释掉了，然后就又接连报了下面的错…但是感觉应该是梯子失效了，连不上了，我一般下意识都会重启梯子  <br>记一下这个咋搞，win搜索<code>记事本</code>应用，邮件管理员打开，进去后点菜单栏打开，输入地址，点打开。<br>这样修改完之后才能保存。  </p>
+<div class="note primary"><p style="color:#7042C1"> 刚刚调试成功了一次，补一下。  
+首先，断开当前vpn，试一下github能不能进入，不能，重连vpn。单独使用`hexo d`命令，也就是把`hexo clean && hexo g && hexo d`拆开,然后就上传成功了。 </p> </div>
+
+
 <h2 id="OpenSSL-SSL-connect-Connection-was-reset-in-connection-to-github-com-443"><a href="#OpenSSL-SSL-connect-Connection-was-reset-in-connection-to-github-com-443" class="headerlink" title="OpenSSL SSL_connect: Connection was reset in connection to github.com:443"></a>OpenSSL SSL_connect: Connection was reset in connection to github.com:443</h2><p><strong>解决：</strong>  <br><code>git config --global http.sslVerify false </code>  <br>git bash命令行输入</p>
 <h2 id="OpenSSL-SSL-read-Connection-was-reset-errno-10054"><a href="#OpenSSL-SSL-read-Connection-was-reset-errno-10054" class="headerlink" title="OpenSSL SSL_read: Connection was reset, errno 10054"></a>OpenSSL SSL_read: Connection was reset, errno 10054</h2><p><strong>解决办法同上：</strong>  </p>
 <p><code>git config --global http.sslVerify &quot;false&quot;</code></p>
