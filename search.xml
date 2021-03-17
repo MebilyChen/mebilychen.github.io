@@ -34,7 +34,7 @@
 <p>有一个也是说改host的，不过我没试，码一下：<br><code>151.101.185.194 github.global-ssl.fastly.net</code><br><code>192.30.253.112  github.com</code>  <br>添加或覆盖以上地址到host。</p>
 <p><strong>解决</strong>：这个我没咋搞懂，反正就是把<code>C:\Windows\System32\drivers\etc\hosts</code><br>文件给改了，把github相关的地址都注释掉了，然后就又接连报了下面的错…但是感觉应该是梯子失效了，连不上了，我一般下意识都会重启梯子  <br>记一下这个咋搞，win搜索<code>记事本</code>应用，邮件管理员打开，进去后点菜单栏打开，输入地址，点打开。<br>这样修改完之后才能保存。  </p>
 <div class="note primary"><p style="color:#7042C1"> 刚刚调试成功了一次，补一下。  
-首先，断开当前vpn，试一下github能不能进入，不能，重连vpn。单独使用`hexo d`命令，也就是把`hexo clean && hexo g && hexo d`拆开,然后就上传成功了。 </p> </div>
+首先，断开当前vpn，试一下github能不能进入，不能，重连vpn。单独使用 `hexo d` 命令，也就是把 `hexo clean && hexo g && hexo d` 拆开,然后就上传成功了。 </p> </div>
 
 
 <h2 id="OpenSSL-SSL-connect-Connection-was-reset-in-connection-to-github-com-443"><a href="#OpenSSL-SSL-connect-Connection-was-reset-in-connection-to-github-com-443" class="headerlink" title="OpenSSL SSL_connect: Connection was reset in connection to github.com:443"></a>OpenSSL SSL_connect: Connection was reset in connection to github.com:443</h2><p><strong>解决：</strong>  <br><code>git config --global http.sslVerify false </code>  <br>git bash命令行输入</p>
@@ -42,6 +42,9 @@
 <p><code>git config --global http.sslVerify &quot;false&quot;</code></p>
 <h2 id="还有一个最恶心的-on-branch-master，nothing-to-commit，working-tree-clean"><a href="#还有一个最恶心的-on-branch-master，nothing-to-commit，working-tree-clean" class="headerlink" title="还有一个最恶心的: on branch master，nothing to commit，working tree clean."></a>还有一个最恶心的: on branch master，nothing to commit，working tree clean.</h2><p>(这句我老看成“oh branch master，”搞得我以为这还整什么二次元)  <br>这个是万恶之源。在连不上git、我发现我站子的库被墙了之后，换热点，就还是一直push不上去，老给我整这套。就一直卡在这句话上，然后就跳443。<br>我就气的开了代理，然后就又开始了各种443的循环…  <br>刚刚查了一下，有说换指令的:  <br><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code>  <br>但是我一直用的是这个啊…</p>
 ]]></content>
+      <categories>
+        <category>站子</category>
+      </categories>
   </entry>
   <entry>
     <title>INF/TP + 5万4 + BigFive+八维</title>
