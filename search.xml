@@ -34,7 +34,7 @@
 <p>** 解决 **：这个我没咋搞懂，反正就是把<code>C:\Windows\System32\drivers\etc\hosts</code><br>文件给改了，把github相关的地址都注释掉了，然后就又接连报了下面的错…</p>
 <h2 id="OpenSSL-SSL-connect-Connection-was-reset-in-connection-to-github-com-443"><a href="#OpenSSL-SSL-connect-Connection-was-reset-in-connection-to-github-com-443" class="headerlink" title="OpenSSL SSL_connect: Connection was reset in connection to github.com:443"></a>OpenSSL SSL_connect: Connection was reset in connection to github.com:443</h2><p><strong>解决：</strong>  <br><code>git config --global http.sslVerify false </code>  <br>git bash命令行输入</p>
 <h2 id="OpenSSL-SSL-read-Connection-was-reset-errno-10054"><a href="#OpenSSL-SSL-read-Connection-was-reset-errno-10054" class="headerlink" title="OpenSSL SSL_read: Connection was reset, errno 10054"></a>OpenSSL SSL_read: Connection was reset, errno 10054</h2><p>这是服务器的SSL证书没有经过第三方机构的签署，所以报错。  </p>
-<p>解决办法同上：  </p>
+<p><strong>解决办法同上：</strong>  </p>
 <p><code>git config --global http.sslVerify &quot;false&quot;</code></p>
 <h2 id="还有一个最恶心的-“on-branch-master，nothing-to-commit，working-tree-clean-”"><a href="#还有一个最恶心的-“on-branch-master，nothing-to-commit，working-tree-clean-”" class="headerlink" title="还有一个最恶心的:“on branch master，nothing to commit，working tree clean.”"></a>还有一个最恶心的:“on branch master，nothing to commit，working tree clean.”</h2><p>(这句我老看成“oh branch master，”搞得我以为这还整什么二次元)  <br>这个是万恶之源。在连不上git、我发现我站子的库被墙了之后，换热点，就还是一直push不上去，老给我整这套。我就气的开了代理，然后就开始各种443的循环…  <br>刚刚查了一下，有说换指令的:  <br><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code>  <br>但是我一直用的是这个啊…</p>
 ]]></content>
