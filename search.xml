@@ -27,7 +27,8 @@
     <title>陛下的陈旧谱子</title>
     <url>/p/65e0.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p>此处应有视频：  </p>
-<div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"theme":"#CDCDCD","loop":true,"video":{"url":"https://vodm2lzexwq.vod.126.net/vodm2lzexwq/gs97Eoum_3007879892_sd.mp4?resId=254486990bfa2cd7aa860229db639341_3007879892_1&sign=D%2BPgMIv0OF%2F9Pqjp3ezOzu0%2BVtddDAzNXU7H8aXEfEE%3D"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);highlight: [
+<div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"theme":"#CDCDCD","loop":true,"video":{"url":"https://vodm2lzexwq.vod.126.net/vodm2lzexwq/gs97Eoum_3007879892_sd.mp4?resId=254486990bfa2cd7aa860229db639341_3007879892_1&sign=D%2BPgMIv0OF%2F9Pqjp3ezOzu0%2BVtddDAzNXU7H8aXEfEE%3D"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);
+highlight: [
         {
             time: 20,
             text: '这是第 20 秒',
@@ -36,18 +37,18 @@
             time: 120,
             text: '这是 2 分钟',
         },
-    ],})()</script>
+    ]})()</script>
 
 <div class="note warning"><p style="text-align:center ; color:#F0AD4E"> BUG:本地上传的音乐会带出文章，且不会自动停止播放，会和其他音乐冲突，需要手动操作 </p></div>
 
 <p>以下是钢琴的练习：  </p>
 
-        <div id="aplayer-ZRtQVbRP" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-RNZGNTQE" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-ZRtQVbRP"),
+            element: document.getElementById("aplayer-RNZGNTQE"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -64,12 +65,12 @@
         </script>
 
 
-        <div id="aplayer-cikizTZb" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-cZJGzoBA" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-cikizTZb"),
+            element: document.getElementById("aplayer-cZJGzoBA"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -86,12 +87,12 @@
         </script>
 
 
-        <div id="aplayer-pFqQkDhT" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-gzQdeKDw" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-pFqQkDhT"),
+            element: document.getElementById("aplayer-gzQdeKDw"),
             narrow: false,
             autoplay: false,
             showlrc: false,
