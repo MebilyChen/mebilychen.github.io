@@ -33,12 +33,12 @@
 
 <p>以下是钢琴的练习：  </p>
 
-        <div id="aplayer-KuQSujmh" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-xPggRqFW" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-KuQSujmh"),
+            element: document.getElementById("aplayer-xPggRqFW"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -55,12 +55,12 @@
         </script>
 
 
-        <div id="aplayer-PZxCvWYe" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-CGWzNBou" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-PZxCvWYe"),
+            element: document.getElementById("aplayer-CGWzNBou"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -77,12 +77,12 @@
         </script>
 
 
-        <div id="aplayer-OEpnDwkm" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-TbaQMcND" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-OEpnDwkm"),
+            element: document.getElementById("aplayer-TbaQMcND"),
             narrow: false,
             autoplay: false,
             showlrc: false,
