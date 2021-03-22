@@ -27,7 +27,76 @@
     <title>陛下的陈旧谱子</title>
     <url>/p/65e0.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p>此处应有视频：  </p>
-<div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"theme":"#CDCDCD","loop":true,"video":{"url":"https://vodm2lzexwq.vod.126.net/vodm2lzexwq/gs97Eoum_3007879892_sd.mp4?resId=254486990bfa2cd7aa860229db639341_3007879892_1&sign=D%2BPgMIv0OF%2F9Pqjp3ezOzu0%2BVtddDAzNXU7H8aXEfEE%3D"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player); "highlight": [{time: 20,text: 这是第})()</script>]]></content>
+<div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"theme":"#CDCDCD","loop":true,"video":{"url":"https://vodm2lzexwq.vod.126.net/vodm2lzexwq/gs97Eoum_3007879892_sd.mp4?resId=254486990bfa2cd7aa860229db639341_3007879892_1&sign=D%2BPgMIv0OF%2F9Pqjp3ezOzu0%2BVtddDAzNXU7H8aXEfEE%3D"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
+<div class="note warning"><p style="text-align:center ; color:#F0AD4E"> BUG:本地上传的音乐会带出文章，且不会自动停止播放，会和其他音乐冲突，需要手动操作 </p></div>
+
+<p>以下是钢琴的练习：  </p>
+
+        <div id="aplayer-QkCKHkvz" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-QkCKHkvz"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "White Palace",
+              author: "Christopher.L/演奏：碳素",
+              url: "http://mebilychen-media.test.upcdn.net/media/WPRP1.mp3",
+              pic: "",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+
+        <div id="aplayer-ZVLcXCHr" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-ZVLcXCHr"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "White Palace",
+              author: "Christopher.L/演奏：碳素",
+              url: "http://mebilychen-media.test.upcdn.net/media/WPRP2.mp3",
+              pic: "",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+
+        <div id="aplayer-xRnVwuQZ" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-xRnVwuQZ"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "White Palace",
+              author: "Christopher.L/演奏：碳素",
+              url: "http://mebilychen-media.test.upcdn.net/media/WPRP3.mp3",
+              pic: "",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>]]></content>
       <categories>
         <category>随团长研习音乐</category>
         <category>陛下竟然看不懂五线谱</category>
