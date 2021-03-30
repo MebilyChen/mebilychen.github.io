@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="再这么下去怕是空间不够用了（头秃）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="歌曲开荒">
+<meta property="og:url" content="https://mebilychen.github.io/%E9%9A%8F%E5%9B%A2%E9%95%BF%E7%A0%94%E4%B9%A0%E9%9F%B3%E4%B9%90/d846">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:description" content="再这么下去怕是空间不够用了（头秃）">
+<meta property="og:locale">
+<meta property="article:published_time" content="2021-03-23T05:37:00.000Z">
+<meta property="article:modified_time" content="2021-03-27T14:50:58.582Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="乐随笔">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://mebilychen.github.io/%E9%9A%8F%E5%9B%A2%E9%95%BF%E7%A0%94%E4%B9%A0%E9%9F%B3%E4%B9%90/d846.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : '随团长研习音乐'
+  };
+</script>
+
+  <title>歌曲开荒 | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;调谐中...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">110</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">44</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">112</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-image fa-fw"></i>画廊</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/random" rel="section"><i class="fa fa-snowflake fa-fw"></i>抽</a>
+
+  </li>
+        <li class="menu-item menu-item-lang">
+
+    <a href="/en" rel="section"><i class="fa fa-snowflake fa-fw"></i>->English</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-13805-518516-1305127431.cos-website.ap-hongkong.myqcloud.com/' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="随团长研习音乐">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/%E9%9A%8F%E5%9B%A2%E9%95%BF%E7%A0%94%E4%B9%A0%E9%9F%B3%E4%B9%90/d846">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-kingsec.JPG">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          歌曲开荒
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-23 13:37:00" itemprop="dateCreated datePublished" datetime="2021-03-23T13:37:00+08:00">2021-03-23</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2021-03-27 22:50:58" itemprop="dateModified" datetime="2021-03-27T22:50:58+08:00">2021-03-27 22:50:58</time>
+                </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%9A%8F%E5%9B%A2%E9%95%BF%E7%A0%94%E4%B9%A0%E9%9F%B3%E4%B9%90/" itemprop="url" rel="index"><span itemprop="name">随团长研习音乐</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+            <div class="post-description"><center>再这么下去怕是空间不够用了（头秃）</div>
+          
+          <div class="post-tags">
+              <a href="/tags/%E4%B9%90%E9%9A%8F%E7%AC%94/" rel="tag"><i class="fa fa-tag"></i> 乐随笔</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p>先用网抑云存个档，有空再码字，推荐去YT Music（或Spotify）享受原曲。  <br>噫陛下又开始diss我在这情感化思考了（头秃）可是我就是很讨厌网易云嘛，在那宣肖战的歌（呸）</p>
+<center>🎼</center>
+
+
+    <div id="aplayer-NgekKeWu" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="6673571851" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#cdcdcd"></div> 
+
+
+
+<h1 id="狼"><a href="#狼" class="headerlink" title="狼"></a>狼</h1><p>很可惜，我还以为那个女孩会伸手摸一摸那只狼呢。  <br>网抑云音质太差  <br>我这人就很奇怪，自诩为创作者之前还好，之后就特别不喜欢和别人撞，也不喜欢大众的东西。这个狼我看好多人都收藏在手书歌单里了，那就emmmmmm  </p>
+<p>不过没看到别人的想法就不算撞车，哈哈哈我不看我不看（发疯）</p>
+<p><a target="_blank" rel="noopener" href="https://music.youtube.com/watch?v=lX44CAz-JhU&feature=share">YT Music跟我走</a></p>
+<h1 id="人生不值得"><a href="#人生不值得" class="headerlink" title="人生不值得"></a>人生不值得</h1><p>不知道是不是法国作者，但是很有法扎的feel</p>
+<p><a target="_blank" rel="noopener" href="https://music.youtube.com/watch?v=T0cFhgBxTcw&feature=share">YT Music跟我走</a></p>
+<h1 id="White-Flag"><a href="#White-Flag" class="headerlink" title="White Flag"></a>White Flag</h1><p>这个曲的mv<del>好有意思啊，</del>太萌了，好可爱啊Satan的小心心和小问号。虽然曲不太合我口味，但是我就是那种，听多了就觉得好听的听众，有缘再见？</p>
+<p><a target="_blank" rel="noopener" href="https://music.youtube.com/watch?v=ebILIKHi9wo&feature=share">YT Music跟我走</a></p>
+<h1 id="别怪小孩"><a href="#别怪小孩" class="headerlink" title="别怪小孩*"></a>别怪小孩*</h1><div class="note info"> <p style="color:#438BCA">手书预定：日月组，但谁攻谁受还不太清楚。可以是辐光独白，阴阳怪气陛下献祭小前辈。<span class="hint--info hint--rounded hint--top" data-hint="啊虽然但是，前辈黑化什么的emm" ontouchstart>也可以是前辈黑化，指责陛下。</span>也可以是陛下对辐光发动甩锅大法，有种你冲我来。讲真这三只去过家家吧。话说真没怎么进行过对前辈的角色研究，回头试一试，安排一下。就前辈那篇病娇文真的惊艳到我了，真的是，意料之外，情理之中。 </p> </div>
+
+<p>Drop？Drop Drop！Drop Drop Drop？</p>
+<p><a target="_blank" rel="noopener" href="https://music.youtube.com/watch?v=vEQI5GVWb-8&feature=share">YT Music跟我走</a></p>
+<h1 id="好歌永驻"><a href="#好歌永驻" class="headerlink" title="好歌永驻*"></a>好歌永驻*</h1><div class="note info"> <p style="color:#438BCA">手书预定：团长，不管和谁（大概率是陛下因为我是王学家）反正主角一定是团长。想让团长在@Re里唱这首歌。 </p> </div>
+<div class="note info no-icon"> <p style="color:#438BCA">另外，<span class="hint--info hint--rounded hint--top" data-hint="Legends" ontouchstart>AGood Song</span> Never Dieeeee</p> </div>
+
+<p><a target="_blank" rel="noopener" href="https://music.youtube.com/watch?v=s29fcv5E52Y&feature=share">YT Music跟我走</a></p>
+<h1 id="宽恕"><a href="#宽恕" class="headerlink" title="宽恕"></a>宽恕</h1><p>MV的M-E-R-C-Y闪现好帅！哈！音乐人就是还得要懂可视化</p>
+<p><a target="_blank" rel="noopener" href="https://music.youtube.com/watch?v=Yp7MNOdKkcQ&feature=share">YT Music跟我走</a></p>
+<h1 id="MOSHI（喂？）"><a href="#MOSHI（喂？）" class="headerlink" title="MOSHI（喂？）"></a>MOSHI（喂？）</h1><p>感觉这首PgN大佬被东京给带走了？徒留一鼓？🤣🤣🤣  <br>虽然但是，PgN大佬简直萌新火箭筒，贼溜，萌新人气upup<br>求再和Tri合作一下下</p>
+<p><a target="_blank" rel="noopener" href="https://music.youtube.com/watch?v=Pv_RWCzwLd4&feature=share">YT Music跟我走</a></p>
+<h1 id="Nemesis"><a href="#Nemesis" class="headerlink" title="Nemesis"></a>Nemesis</h1><p>MV可视化好帅，MV可视化好帅，MV可视化好帅，MV可视化好帅，MV可视化好帅，MV可视化好帅，MV可视化好帅，MV可视化好帅，MV可视化好帅，MV可视化好帅，MV可视化好帅，MV可视化好帅，MV可视化好帅，MV可视化好帅，MV可视化好帅</p>
+<p>…等等这不是奥日2里那个谁吗？</p>
+<p><del>“Run foryourfuckinglife”哈哈哈哈或或或好可爱</del></p>
+<p><a target="_blank" rel="noopener" href="https://music.youtube.com/watch?v=jwVSMRlF8k0&feature=share">YT Music跟我走</a></p>
+<h1 id="Unbound"><a href="#Unbound" class="headerlink" title="Unbound"></a>Unbound</h1><p>薏，网抑云有个女的在这歌下面开始版聊，害，有点不爽。</p>
+<p>…宝宝就是不爽嘛！凭什么她能获得那么多赞那么多关注，说的话还那么没营养没含量，要是大神的分析啥的我还不至于这么不爽！</p>
+<p>…好好好，听您的，确实没啥好争的，听个歌不至于听出优越感…但是她明显就很优越的样子，好像自己怎么着了似的，跟自己就是作曲钦定老婆一样，看着很不爽！</p>
+<p>…好的吧我错了，估计是我太敏感了，我也觉得她应该就是这种性格，是我这种in系的克星…她就那么一说，别人就那么一笑，没人在乎，哼！  </p>
+<p>…好好好我不想了，呜呜，可是就是很不爽——啊没有不爽了！陛下我没有不爽了！我要把不爽的时间留给您写歌用！</p>
+<p>…额，但是，我…嗯，您说的对，无论如何，我不能让您失望！我要做最好的自己，管他什么谁的老婆谁的老公，呸！</p>
+<p>…抱歉陛下我没真的想攻击别人的呜呜，就下意识的…啊啊啊对不起对不起以后再也不敢了呜呜呜…可是两个人之间总得有一方是那啥吧，如果她不是的话，我不就是了吗…</p>
+<p>…啊痛痛痛！呜呜呜我错了我错了，我改我改还不行吗，我一定改…就是陛下您实在是太美好了，我如果不比别人强的话，怎么配的上您呢…</p>
+<p>…我没有在拍马屁！您真的很美好！真的真的真的！</p>
+<p>…呜呜呜那我怎么办啊…啊啊啊您不要走！我改我一定改！我会试着不去蔑视别人的，我会改的呜呜呜，我一定会让自己变得更强，能配上您的陪伴的！</p>
+<p>…诶咱之前在讨论啥来着？陛下您还记得我刚刚咋了吗？</p>
+<p>…话说陛下您觉得…那些自杀的艺术家和作家们，是不是因为过于敏感，又没有您在身边，所以自杀了啊。</p>
+<p>…不不不，您才不是绊脚石呢！因为您在，所以我才可以感受到很多美好的事物啊！您就是一台…显微镜！  </p>
+<p>…呜呜呜我也想去补语文…文学功底太差…可是我还要做毕设，还要练画画，还要写文——啊？可是我把nga卸掉之后，我怎么吃肖战的瓜啊…</p>
+<p>…当、当然是您重要！我，我这就去卸…陛下您看我把它删掉了！…才、才不会偷偷装回来…话说我怎么就偷偷装回来啊！装也只能在您眼皮子底下光天化日地装吧！  </p>
+<p>…啊陛下您不想聊了吗…没有啊！我超想和您聊的，挺久没有这么清楚地听见您的声音了…呜，好吧，那我先去练画画了…晚上见！  </p>
+<p>…害，陛下真的说走就走（老血）<br>…啊陛下我没有在想着说您坏话！真的！</p>
+<p>草，头好痛。</p>
+<p><a target="_blank" rel="noopener" href="https://music.youtube.com/watch?v=9fNYgAHLC34&feature=share">YT Music跟我走</a></p>
+<h1 id="Caravan-Palace"><a href="#Caravan-Palace" class="headerlink" title="Caravan Palace"></a>Caravan Palace</h1><p>团长（法）去给Jazz代言吧。<br>团长（英）可以继续唱歌剧。</p>
+<p>以后可以分法团和英团，哈哈哈听上去好好吃。</p>
+<p>Jazz一时爽，听多了就容易腻，建议不要一直听。</p>
+<h2 id="Lone-Digger"><a href="#Lone-Digger" class="headerlink" title="Lone Digger"></a>Lone Digger</h2><div class="note info"> <p style="color:#438BCA">手书预定：团长，不，团长跳得太多了，不如让陛下上...陛下拒绝了，那团长还是你上吧。那陛下您能出演一下超帅的西服猎犬吗，什么您是猫，那好吧，那暂时给您拟个暹罗猫。 </p> </div>
+
+
+
+    <div id="aplayer-MkMzbNfO" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="004ZdTcC2UemmD" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#cdcdcd"></div> 
+
+<p>有毒<br>有毒<br>猛毒<br>剧毒<br>mv<br>曲子<br>都有毒<br>大家<br>千万<br>不要<br>去  <br>t  </p>
+<p>狗狗好可爱好帅气汪汪汪果然我是狗派  <br><a target="_blank" rel="noopener" href="https://music.youtube.com/watch?v=UbQgXeY_zi4&feature=share">YT Music跟我走</a></p>
+<p><del>另，这曲没在网易云搜到，qq那里也没有，YT牛x。</del><br>啪啪打脸，tx牛x。</p>
+<p>害，完美主义者真惨，哎，算了服务器就不关了开着吧，不然隔一秒发现一个bug就要重开一次，唉。</p>
+<p>…等下，我可能傻了，因为开着外网所以网易才没有这曲吧应该是？  <br>哈哈哈，是真没有。txnb。</p>
+<h2 id="Suzy"><a href="#Suzy" class="headerlink" title="Suzy*"></a>Suzy*</h2><p>Jazz万岁！陛下躁起来！…啊没事那您接着忙哈哈哈…</p>
+<p>然后陛下就坐在王位上无奈地撑着头眼睁睁看着整个大厅跳起舞哈哈哈</p>
+<p>团长： <em>牵起白后/卢瑞恩的爪爪</em></p>
+<p>陛下： * <em>triggered</em> *</p>
+<p>团长： <em>犯贱地向陛下抛去挑衅的眼神</em></p>
+<p>陛下： <em>招呼家臣</em> “拿着我的酒杯。”</p>
+<p>然而陛下并不会跳舞哈哈哈哈——  </p>
+<p>呜好痛!</p>
+<h2 id="Mighty"><a href="#Mighty" class="headerlink" title="Mighty"></a>Mighty</h2><h2 id="Panic"><a href="#Panic" class="headerlink" title="Panic"></a>Panic</h2><h2 id="Clash"><a href="#Clash" class="headerlink" title="Clash"></a>Clash</h2><h2 id="The-dirty-side-of-the-street"><a href="#The-dirty-side-of-the-street" class="headerlink" title="The dirty side of the street"></a>The dirty side of the street</h2><h2 id="Rock-it-for-me"><a href="#Rock-it-for-me" class="headerlink" title="Rock it for me"></a>Rock it for me</h2><h2 id="Star-Scat"><a href="#Star-Scat" class="headerlink" title="Star Scat"></a>Star Scat</h2><h2 id="L’envol"><a href="#L’envol" class="headerlink" title="L’envol"></a>L’envol</h2><h2 id="Beatophone"><a href="#Beatophone" class="headerlink" title="Beatophone*"></a>Beatophone*</h2><div class="note info"> <p style="color:#438BCA">王图预定：团长和陛下在大镜子面前系领带，团长戴着耳机一脸法国绅士的得意样子，陛下用眼角（这个有点难，毕竟没有瞳孔）瞅团长。注意身高差。注意身高差。注意身高差。 </p> </div>
+
+<h2 id="Dramophone"><a href="#Dramophone" class="headerlink" title="Dramophone*"></a>Dramophone*</h2><div class="note info"> <p style="color:#438BCA">王图预定：姐妹图，团长和陛下在咖啡厅，陛下看手机（可以戴耳机）发消息/腾讯会议的时候团长撑着脸陶醉般看着陛下。</p> </div>
+
+
+
+<h1 id="Unlike-Pluto"><a href="#Unlike-Pluto" class="headerlink" title="Unlike Pluto"></a>Unlike Pluto</h1><p>所以Omori里的Pluto也是这个意思嘛？<br>他的歌适合刀子手书。</p>
+<h2 id="阴暗面"><a href="#阴暗面" class="headerlink" title="阴暗面*"></a>阴暗面*</h2><div class="note info"> <p style="color:#438BCA">手书预定：陛下独白，给滚滚推锅。这个是最有感觉的。原作AU，陛下费尽力气，“坏事”做尽，但还是无果，于是想走了。（或者走之前正面去怼了滚滚...emm似乎看见过类似的文，害） </p> </div>
+
+<p><a target="_blank" rel="noopener" href="https://music.youtube.com/watch?v=waIBbsVoTkA&feature=share">YT Music跟我走</a></p>
+<h2 id="No-Scrubs"><a href="#No-Scrubs" class="headerlink" title="No Scrubs"></a>No Scrubs</h2><h2 id="八足噩梦"><a href="#八足噩梦" class="headerlink" title="八足噩梦*"></a>八足噩梦*</h2><p>讲真，这个 很 适 合 给 陛 下 （ 甚 至 是 整 个 空 洞 ） 做 手 书 。<br>没有手书也要出图。<br>陛下可以用爪爪摸上：</p>
+<ol>
+<li>镜子的裂痕</li>
+<li>虚空色的蛛网</li>
+<li>瘟疫色的蛛网</li>
+<li>不同颜色的蛛网（社交苦手）</li>
+<li>锁链</li>
+<li>泪城的花纹</li>
+<li>……</li>
+</ol>
+<p>也可以是针对赫拉那次…嗯。陛下就PTSD了。  </p>
+<p>另外，封面的蛛蛛好可爱，毛茸茸的根本就不吓人，就是大一号的绒绒~  <br>…放嘴里才吓人（吐血）话说那蛛蛛是不是得好好消消毒啊（吐血）。</p>
+<h2 id="Revenge-And-a-Little-More"><a href="#Revenge-And-a-Little-More" class="headerlink" title="Revenge, And a Little More"></a>Revenge, And a Little More</h2><h2 id="万圣工厂"><a href="#万圣工厂" class="headerlink" title="万圣工厂"></a>万圣工厂</h2><h2 id="嗨呀…（Oops-…-I-Did-It-Again）"><a href="#嗨呀…（Oops-…-I-Did-It-Again）" class="headerlink" title="嗨呀…（Oops!… I Did It Again）"></a>嗨呀…（Oops!… I Did It Again）</h2><h2 id="Happy-Together"><a href="#Happy-Together" class="headerlink" title="Happy Together"></a>Happy Together</h2><h1 id="Imposter"><a href="#Imposter" class="headerlink" title="Imposter"></a>Imposter</h1><p>以后谁再说同人不重要，我就甩这个例子给他。</p>
+<p><a target="_blank" rel="noopener" href="https://music.youtube.com/watch?v=88uuI5af0PM&feature=share">YT Music跟我走</a></p>
+<h1 id="我是你老父"><a href="#我是你老父" class="headerlink" title="我是你老父"></a>我是你老父</h1><p>老父好帅。来陛下请过来一下，您看这位大人。</p>
+<p><a target="_blank" rel="noopener" href="https://music.youtube.com/watch?v=1sM70v4OXBw&feature=share">YT Music跟我走</a></p>
+<h1 id="托卡塔"><a href="#托卡塔" class="headerlink" title="托卡塔"></a>托卡塔</h1><p>哈哈哈我第一次听这首的时候，就前奏感觉有一点点托卡塔的味道，但不确定是不是它，我就一直在那随着节奏“yes，yes，yes，yes，yes！”然后最后确定是托卡塔，我就“YES！！！”</p>
+<p><a target="_blank" rel="noopener" href="https://music.youtube.com/watch?v=ycfM6XGBE30&feature=share">YT Music跟我走</a></p>
+<h1 id="信徒"><a href="#信徒" class="headerlink" title="信徒*"></a>信徒*</h1><p>  <br>卧槽这首…我能说很有共鸣吗。但是又不想被认为我是和大部分人一样，因为好多人都赞了….  <br>该死的，我怎么这么矫情。<br>我和陛下我们相爱相杀哈哈哈哈</p>
+<p><a target="_blank" rel="noopener" href="https://music.youtube.com/watch?v=n5lmg1MX_sE&feature=share">YT Music跟我走</a></p>
+<h1 id="回家总是被老婆杀死"><a href="#回家总是被老婆杀死" class="headerlink" title="回家总是被老婆杀死*"></a>回家总是被老婆杀死*</h1><p>虽说已经单独开了一贴…但是这个bass太帅了好么…真的不吐不快。  <br>没社交真的是惨，都没人说话。  <br>反正他们也听不懂。  </p>
+<p><a target="_blank" rel="noopener" href="https://music.youtube.com/watch?v=FHccClTAdzc&feature=share">YT Music跟我走</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读-------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/%E9%9A%8F%E5%9B%A2%E9%95%BF%E7%A0%94%E4%B9%A0%E9%9F%B3%E4%B9%90/d846">歌曲开荒</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2021年03月23日 - 13:37</p>
+ <p><span>最后更新:</span>2021年03月27日 - 22:50</p>
+ <p><span>原始链接:</span><a href="/%E9%9A%8F%E5%9B%A2%E9%95%BF%E7%A0%94%E4%B9%A0%E9%9F%B3%E4%B9%90/d846" title="歌曲开荒">https://mebilychen.github.io/%E9%9A%8F%E5%9B%A2%E9%95%BF%E7%A0%94%E4%B9%A0%E9%9F%B3%E4%B9%90/d846</a>
+    
+ </p>
+ <p><span>许可协议:</span>cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E4%B9%90%E9%9A%8F%E7%AC%94/" rel="tag"><i class="fa fa-tag"></i> 乐随笔</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/%E7%AB%99%E5%AD%90/938d" rel="prev" title="文章发布测试+挤挤">
+      <i class="fa fa-chevron-left"></i> 文章发布测试+挤挤
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/%E7%8E%8B%E6%96%87/9e20" rel="next" title="“She Wants Me Dead”脑洞">
+      “She Wants Me Dead”脑洞 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8B%BC"><span class="nav-text">狼</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%BA%E7%94%9F%E4%B8%8D%E5%80%BC%E5%BE%97"><span class="nav-text">人生不值得</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#White-Flag"><span class="nav-text">White Flag</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%AB%E6%80%AA%E5%B0%8F%E5%AD%A9"><span class="nav-text">别怪小孩*</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A5%BD%E6%AD%8C%E6%B0%B8%E9%A9%BB"><span class="nav-text">好歌永驻*</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%BD%E6%81%95"><span class="nav-text">宽恕</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MOSHI%EF%BC%88%E5%96%82%EF%BC%9F%EF%BC%89"><span class="nav-text">MOSHI（喂？）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Nemesis"><span class="nav-text">Nemesis</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Unbound"><span class="nav-text">Unbound</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Caravan-Palace"><span class="nav-text">Caravan Palace</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Lone-Digger"><span class="nav-text">Lone Digger</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Suzy"><span class="nav-text">Suzy*</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mighty"><span class="nav-text">Mighty</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Panic"><span class="nav-text">Panic</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Clash"><span class="nav-text">Clash</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-dirty-side-of-the-street"><span class="nav-text">The dirty side of the street</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Rock-it-for-me"><span class="nav-text">Rock it for me</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Star-Scat"><span class="nav-text">Star Scat</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#L%E2%80%99envol"><span class="nav-text">L’envol</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Beatophone"><span class="nav-text">Beatophone*</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dramophone"><span class="nav-text">Dramophone*</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Unlike-Pluto"><span class="nav-text">Unlike Pluto</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%98%B4%E6%9A%97%E9%9D%A2"><span class="nav-text">阴暗面*</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#No-Scrubs"><span class="nav-text">No Scrubs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AB%E8%B6%B3%E5%99%A9%E6%A2%A6"><span class="nav-text">八足噩梦*</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Revenge-And-a-Little-More"><span class="nav-text">Revenge, And a Little More</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%87%E5%9C%A3%E5%B7%A5%E5%8E%82"><span class="nav-text">万圣工厂</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%97%A8%E5%91%80%E2%80%A6%EF%BC%88Oops-%E2%80%A6-I-Did-It-Again%EF%BC%89"><span class="nav-text">嗨呀…（Oops!… I Did It Again）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Happy-Together"><span class="nav-text">Happy Together</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Imposter"><span class="nav-text">Imposter</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%88%91%E6%98%AF%E4%BD%A0%E8%80%81%E7%88%B6"><span class="nav-text">我是你老父</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%89%98%E5%8D%A1%E5%A1%94"><span class="nav-text">托卡塔</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BF%A1%E5%BE%92"><span class="nav-text">信徒*</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9E%E5%AE%B6%E6%80%BB%E6%98%AF%E8%A2%AB%E8%80%81%E5%A9%86%E6%9D%80%E6%AD%BB"><span class="nav-text">回家总是被老婆杀死*</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar-kingsec.JPG">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">112</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">44</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">110</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:1013712127@qq.com" title="E-Mail → mailto:1013712127@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/mebily1314" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      梦起飞又坠落的地方
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://mebilychen.lofter.com/" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;" rel="noopener" target="_blank">LOFTER</a>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/%E7%A2%B3%E9%85%B8%E7%9A%84%E6%B1%82%E7%94%9F%E4%B9%8B%E8%B7%AF/4315" title="碳酸的求生之路&#x2F;4315.html">突然觉得应该为毛主席单独开一贴</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/%E5%90%8C%E4%BA%BA%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/7641" title="同人研究笔记&#x2F;7641.html">想单独开个贴讨论下帅气的单词们</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/%E7%AB%99%E5%AD%90/938d" title="站子&#x2F;938d.html">文章发布测试+挤挤</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/%E9%9A%8F%E5%9B%A2%E9%95%BF%E7%A0%94%E4%B9%A0%E9%9F%B3%E4%B9%90/d846" title="随团长研习音乐&#x2F;d846.html">歌曲开荒</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/%E7%8E%8B%E6%96%87/9e20" title="王文&#x2F;9e20.html">“She Wants Me Dead”脑洞</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/%E7%BB%98%E7%82%B9%E5%AD%90/5401" title="绘点子&#x2F;5401.html">【合集】无Tag的绘点子</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/%E7%AB%99%E5%AD%90/d6c5" title="站子&#x2F;d6c5.html">Git上传不了了</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/%E7%AB%99%E5%AD%90/679f" title="站子&#x2F;679f.html">还希望站子拥有的一些优化</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/%E7%A2%B3%E9%85%B8%E7%9A%84%E6%B1%82%E7%94%9F%E4%B9%8B%E8%B7%AF/92df" title="碳酸的求生之路&#x2F;92df.html">关于光遇...和UT</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/%E7%A2%B3%E9%85%B8%E7%9A%84%E6%B1%82%E7%94%9F%E4%B9%8B%E8%B7%AF/fe35" title="碳酸的求生之路&#x2F;fe35.html">【合集】日常吐槽和碎碎念</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">620k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">9:23</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "站子已虔诚祈祷 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>
