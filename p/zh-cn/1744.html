@@ -1,0 +1,2400 @@
+<!DOCTYPE html>
+<html lang="zh-CN,en,default">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="非原创，转载自16 Personalities和百度百科和WIKI和知乎">
+<meta property="og:type" content="article">
+<meta property="og:title" content="INF&#x2F;TP + 5万4 + BigFive+八维">
+<meta property="og:url" content="https://mebilychen.github.io/p/zh-cn/1744">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:description" content="非原创，转载自16 Personalities和百度百科和WIKI和知乎">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://static.neris-assets.com/images/personality-types/headers/diplomats_Mediator_INFP_personality_header.svg">
+<meta property="og:image" content="https://static.neris-assets.com/images/personality-types/scenes/diplomats_Mediator_INFP_introduction.svg?v=1">
+<meta property="og:image" content="https://i.loli.net/2021/03/14/nBluhXKDreomPNx.png">
+<meta property="og:image" content="https://i.loli.net/2021/03/15/bXBsCAquIj7z6m3.png">
+<meta property="og:image" content="https://www.apesk.com/mensa/img/ceyitu.gif">
+<meta property="og:image" content="http://www.apesk.com/bigfive/img/zuoyou.jpg">
+<meta property="og:image" content="http://www.apesk.com/bigfive/img/zuoyou.jpg">
+<meta property="og:image" content="http://www.apesk.com/bigfive/img/zuoyou.jpg">
+<meta property="og:image" content="http://www.apesk.com/bigfive/img/zuoyou.jpg">
+<meta property="og:image" content="http://www.apesk.com/bigfive/img/zuoyou.jpg">
+<meta property="og:image" content="http://www.apesk.com/bigfive/img/2-1.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/03/17/gVTcEPq59ADyXr1.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/03/17/5bzEwIkdV1qcDLG.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/03/24/ByTcISoEga9rRY6.png">
+<meta property="og:image" content="https://i.loli.net/2021/03/24/ncN4Y3HdEUvekz8.png">
+<meta property="og:image" content="https://i.loli.net/2021/03/25/7btm6xq83BArVK5.png">
+<meta property="og:image" content="https://i.loli.net/2021/03/25/jnmLXHvPbQVB62i.png">
+<meta property="og:image" content="https://i.loli.net/2021/03/17/WoxEtkU8DdZr6fh.png">
+<meta property="og:image" content="https://i.loli.net/2021/03/17/EJeOZ7xPFfawSDG.png">
+<meta property="og:image" content="https://i.loli.net/2021/03/17/5ceUb3z6faCPxy9.png">
+<meta property="og:image" content="https://i.loli.net/2021/03/25/JA41DTxSWY5nimV.png">
+<meta property="og:image" content="https://i.loli.net/2021/03/25/tKTf8jLunJiIsZW.png">
+<meta property="og:image" content="https://i.loli.net/2021/03/25/TG4V7YI1Ly2n95s.png">
+<meta property="og:image" content="https://i.loli.net/2021/03/25/jeqMnAPViKcwW7b.png">
+<meta property="article:published_time" content="2021-03-14T15:23:00.000Z">
+<meta property="article:modified_time" content="2021-03-30T05:42:35.345Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="小小的一只INF&#x2F;TP">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://static.neris-assets.com/images/personality-types/headers/diplomats_Mediator_INFP_personality_header.svg">
+
+<link rel="canonical" href="https://mebilychen.github.io/p/zh-cn/1744.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-cn'
+  };
+</script>
+
+  <title>INF/TP + 5万4 + BigFive+八维 | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;调谐中...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">110</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">44</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">113</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-image fa-fw"></i>画廊</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/random" rel="section"><i class="fa fa-snowflake fa-fw"></i>抽</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-13805-518516-1305127431.cos-website.ap-hongkong.myqcloud.com/' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/zh-cn/1744">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-kingsec.JPG">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          INF/TP + 5万4 + BigFive+八维
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-14 23:23:00" itemprop="dateCreated datePublished" datetime="2021-03-14T23:23:00+08:00">2021-03-14</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2021-03-30 13:42:35" itemprop="dateModified" datetime="2021-03-30T13:42:35+08:00">今天13:42</time>
+                </span>
+              
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/zh-cn/" itemprop="url" rel="index"><span itemprop="name">zh-cn</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/zh-cn/%E7%A2%B3%E9%85%B8%E7%9A%84%E6%B1%82%E7%94%9F%E4%B9%8B%E8%B7%AF/" itemprop="url" rel="index"><span itemprop="name">碳酸的求生之路</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/zh-cn/%E7%A2%B3%E9%85%B8%E7%9A%84%E6%B1%82%E7%94%9F%E4%B9%8B%E8%B7%AF/%E5%B0%86%E4%B8%8A%E4%B8%8B%E8%80%8C%E6%B1%82%E7%B4%A2/" itemprop="url" rel="index"><span itemprop="name">将上下而求索</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>59k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>53 分钟</span>
+            </span>
+          
+          <div class="post-tags">
+              <a href="/tags/%E5%B0%8F%E5%B0%8F%E7%9A%84%E4%B8%80%E5%8F%AAINF-TP/" rel="tag"><i class="fa fa-tag"></i> 小小的一只INF/TP</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p>非原创，转载自<a target="_blank" rel="noopener" href="https://www.16personalities.com/ch/infp-%E4%BA%BA%E6%A0%BC">16 Personalities</a>和<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/INFP">百度百科</a>和<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/INFP">WIKI</a>和<a target="_blank" rel="noopener" href="https://www.zhihu.com/topic/19655173/top-answers">知乎</a></p>
+<span id="more"></span>
+
+<blockquote>
+<p>2021.3.26有感</p>
+</blockquote>
+<p>啊，为什么我看到人体免疫系统震撼到热泪盈眶，为什么我看到infp的心理分析会感动得落泪，为什么我听到拉人回来的人说“你很重要，我们在乎你”会明显地感到那种力量的拉扯，就是那种，我终于发自内心地感受到有人在爱我，想要去理解我的感觉。啊，不过每次开心过后，就是更加绝望的空虚？  </p>
+<p>我感觉我还是爱着我的父母的吧，只是我把他们的爱当做了理所当然。每一次他们在车站送我，我即将远行的时候，都不敢回头看他们，怕自己当场哭成狗。但即便不去看，我脑海中想象着他们观望我的身影，我都会哭，就拉着行李箱，眼泪止不住往下掉，还扭头看着车窗外面哭。我不知道自己究竟是因为什么哭，是因为自己将要离开那种舒适的环境？还是依恋自己的父母，觉得有可能会去理解我的人即将消失，又只剩下我和陛下面对整个世界了？但是一旦我适应了远行的环境，我就会变得十分强硬，不希望爸妈来打扰我了。他们打电话、发消息我第一反应都是不想接不想回，觉得自己应该是个高冷的人所以故意不接？嗯，每次想到这点都想给爸妈打个电话，但是每次又会因为各种事情忘记和推脱。唉，没良心啊昧良心。</p>
+<p>对，我就是觉得很假，很多人看似很关心我，但是我就是觉得，很假，因为我找不到他们这么做的理由？我不相信他们。我的免疫系统，我可以信任，因为这是为了它们也能更好的活着；我的父母，我也可以信任，因为我是他们唯一的女儿；陛下，我也可以信任，因为我知道他永远不会背叛我。这些对我来说就是第一梯队。</p>
+<p>第二梯队，就是那些文章，那些作者，那些拉人回来的组织，那些心理医生、辅导员。他们虽然不是真心对我好，但我也可以暂时信任他们，向他们求助，因为这是他们的职务。但最开始的倾诉过后，我又会产生一种厌恶的感觉，就是被欺骗的感觉，被自己幻想中的他们欺骗。</p>
+<p>也许我总是想找事物的原因，理解不了 <del>无条件</del> 无原因的爱吧。或许白后可以理解这种，为了陛下可以献出一切的爱，只是因为她觉得他可爱？我的意思是，怎么可能，怎么可能有没有原因的爱，怎么可能？事出必有因，有因才有果！陛下为什么喜欢卢瑞恩，白后为什么喜欢陛下，都是有原因的，有迹可循的！没有原因的爱？是假的！是欺骗！是注定不长久的！连最基本的根基都没有，凭什么说我爱你？你又凭什么能留住他？</p>
+<p>我可以理解无条件的爱，但无法理解无原因的爱。</p>
+<p>哈哈，刚刚查这个词条，连毛主席都这么说，我应该是正确的吧！</p>
+<p>是不是因为我对自己要求过高，就会觉得自己没有理由让别人去爱，从而推断出，他们的爱是无理由的爱，从而推断出，他们的爱是虚伪的爱？从而感到排斥和厌恶。嗯，也许这就是爱别人之前要先学会爱自己吧。</p>
+<p>另外，关于拒绝。<br>我是那种，点了个外卖，你第二天送到，我饿一整天都不会给你打差评的那种人；但一旦你抱怨我走的慢，那不好意思，你到得再早都没有用。嗯，我取外卖都是小跑着去的，尤其是意识到可能五分钟之内到不了的情况下，就跟800米一样。</p>
+<blockquote>
+<p>2021.3.24有感</p>
+</blockquote>
+<p>或许in系的人相互吸引，对我来说并不是一件好事。我一直在反思自己小时候遇到的“朋友”和“网友”，为什么都在贬低我，无论是明示暗示，都在否定我的成绩，否定我的想法。后来我想到，是不是因为我过于炫耀自己，于是我收敛了，越来越收敛，但还是会有人否定我 ，压抑我。我一直以为是我自己的问题。但我今天走在路上，突然想到另一种可能性。  <br>因为他们也是in系，他们也和我一样敏感，我从哪怕一点点蛛丝马迹中都能推断出一个人是不是在“炫耀”，到了十分过分的地步，那同为in系的她们一定也会这样。但是她们的in属性并没有我高。他们以为说出那种话不会伤害到我，只是给他们自己一个“我不如她们”暗示，但是她们错了。我从哪怕一点点蛛丝马迹中都能推断出一个人是不是在“贬低”我。   <br>于是我越来越收敛，越来越成为一个i。我尝试了无数种方法，探索出无数套话术，只是为了不那么“炫耀”地表达出自己的观点，为了让他们好好听我说话。我一句话打了改，改了删，已经成了一个习惯。累死了，妈的。我的那些“朋友”，一个个都在贬低我，为了抬高她们自己。  <br>啊，不过现在我已经想通了，人性如此，都是踩着别人爬上去的，不是么。只有站在别人的头顶上才会感到一丝安稳。我不也是这样的，只是不像我的那些“朋友”那样，毫不顾忌地、毫不知情地伤害别人罢了。我会微笑着听他们讲完，默默在心里做出评价，但说出的话永远是“真棒啊”。同为一个生来罪恶的人，我又有什么权利去批评别人。<br>该死的，想哭，我应该还是相信着人性本善吧，就像想拯救电影里每一个反派的圣母婊那样。“为什么要杀死那只龙？”她们只会回以难以置信和嘲讽。  <br>但是“朋友”都是这样的吧，是无法被拯救的反派。</p>
+<p><img src="https://static.neris-assets.com/images/personality-types/headers/diplomats_Mediator_INFP_personality_header.svg"></p>
+<h1 id="调停者人格"><a href="#调停者人格" class="headerlink" title="调停者人格"></a>调停者人格</h1><p>INFP-A / INFP-T</p>
+<h2 id="“调停者”-人格"><a href="#“调停者”-人格" class="headerlink" title="“调停者” 人格"></a>“调停者” 人格</h2><p>调停者人格类型的人是真正的理想主义者，他们总是从最坏的人和事中寻找最好的一面，想方设法让情况变得更好。 虽然可能看起来冷静，内向甚至害羞，但他们内心的火焰和热情可以光芒四射。 他们仅占人口的 4%，常常被人误解，但当他们找到志同道合的人时，他们之间的和谐就像是快乐和灵感的源泉。</p>
+<p><img src="https://static.neris-assets.com/images/personality-types/scenes/diplomats_Mediator_INFP_introduction.svg?v=1" alt="“调停者” 人格 (INFP-A / INFP-T)"></p>
+<p>指引“调停者”的是他们的原则，而不是逻辑、头脑发热或是实用性。 当决定如何行动时，他们以荣誉、美好、道德和善良为准则，引导他们行动的是纯粹的意图，而非奖惩。 调停者人格类型的人以这样的品质为荣，他们也的确应该这样，但不是每个人都能理解这些感情背后的驱动力，这会让他们陷入孤独。</p>
+<blockquote>
+<p>凡是金子未必都发光， 流浪的人未必都迷茫， 老而弥坚者不会凋零， 深根不会被寒霜触及。</p>
+<p>J. R. R. TOLKIEN</p>
+</blockquote>
+<h2 id="我们知道自己是谁，但不知道自己能成为谁"><a href="#我们知道自己是谁，但不知道自己能成为谁" class="headerlink" title="我们知道自己是谁，但不知道自己能成为谁"></a>我们知道自己是谁，但不知道自己能成为谁</h2><p>在好的情况下，这些品质使“调停者”能与他人开展深层次的交流，自如地使用明喻和暗喻，理解和创造象征符号来分享看法。 这种直截了当的交流方式很适合创造型工作，也难怪有很多著名的“调停者”都是诗人、作家和演员。 对“调停者”来说，理解自身和周边环境很有必要，他们把自己投射到作品中，以此表达出这些想法。</p>
+<blockquote>
+<p>“调停者”非常善于表达自己，擅长使用暗喻和虚构人物来表现自己的美丽和神秘。</p>
+</blockquote>
+<p>他们高超的语言能力不仅限于母语，他们有学习第二（甚至第三！）语言的天赋。 他们高超的交流能力也与爱好和谐的愿望完美结合，能够帮助他们在找到目标后顺利前行。</p>
+<h2 id="听很多人说，对很少人讲"><a href="#听很多人说，对很少人讲" class="headerlink" title="听很多人说，对很少人讲"></a>听很多人说，对很少人讲</h2><p>与更擅长交际的人格类型不同的是，他们的注意力只集中在很少的人身上，原因只有一个：分散注意太耗费精力，甚至会因为世界上太多无能为力的坏事而感到沮丧。 对于“调停者”的朋友而言，这是一个令人伤感的情景，他们需要“调停者”展示乐观积极的一面。</p>
+<p>如果不加注意，“调停者”们可能因为过于用力追求美好而忽视必要的日常琐事。 他们经常陷入沉思，比任何其他人格类型都更享受假设和哲学思考。 如果任其发展，“调停者”也许会减少与人接触，缩回壳中，这可能需要朋友和伴侣非常努力才能把他们拉回现实世界。</p>
+<p>幸运的是，“调停者”们的情感，创造力，利他和理想主义仿佛春天的花朵，总会不时地报答他们自己和所爱的人，不是通过逻辑和实用性，而是一种时刻启发着同情，善良和美好的世界观。</p>
+<p><img src="https://i.loli.net/2021/03/14/nBluhXKDreomPNx.png" alt="这里是一只小INFP...T"></p>
+<div class="note primary"><p style="color:#7042C1"> 曾经很想成为INFJ，因为他们人口比例最少。但是后来我仔细看了看，不是就不要强求自己了吧，又不是争什么第一名。另外，陛下的正常性格应该是INTJ建筑师，不过恋爱中的陛下就变成INFJ了哈哈哈超可爱。</p> </div>
+
+<div class="note info"> <p style="color:#438BCA">以下来自百度百科 </p> </div>
+
+<p>INFP（内倾/直觉/情感/理解）是一种基于<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%8D%A3%E6%A0%BC/319318">荣格</a>的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%88%86%E6%9E%90%E5%BF%83%E7%90%86%E5%AD%A6/1308467">分析心理学</a>所发展出来的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/MBTI/3112373">MBTI</a>、凯尔西气质分类量表和社会人格学的人格类型，在凯尔西气质分类中被称为“治疗者”，属于“理想者”的四种类型之一。INFP大概占人口的<span class="hint--info hint--rounded hint--top" data-hint="这波动幅度是在搞笑吗？" ontouchstart>1%~5%</span>。</p>
+<p>INFP特别敏感，对事物的感受也非常深。有些INFP型人全神贯注于精神世界，对于世俗的一切和那些组成日常生活的要素关心程度不高。 INFP看起来安静而随和，不过，揭开他们那温柔而沉静的表象，我们看到的却是一颗并不平静的心，他们深切地、热情洋溢地关注着某几个特殊的人，或自己钟爱的事业，而他们最迫切的愿望就是让这个世界恢复宁静，让自己和自己所爱的人恢复完整。一旦他们认为自己已经屈服于不纯洁的诱惑时，便会不顾一切地投入到一种自我牺牲式的赎罪行为当中。他们也许会对事实做出错误的判断或评价，可是面对情感，他们却像个神枪手，几乎百发百中。</p>
+<p>INFP做事细致而缜密，他们能够很好地倾听他人所想并能平息人们心中的波澜。尽管在感情表达上他们可能有一点保守，但他们有着他人强列的关护心，并会努力去理解他人的感受。INFP的这种真诚常常能让他人感动，这也使他们在人际交往中常被他人放在最为亲近的位置上。在与自己熟识的人交往过程中，INFP表现得非常热情友好。当他们的价值观受到威胁之际，INFP们会摆出极具侵略性的守护态势，并为自己的主张而奋力应战。</p>
+<ul>
+<li><p>中文名</p>
+<p>内倾/直觉/情感/感知</p>
+</li>
+<li><p>外文名</p>
+<p>INFP</p>
+</li>
+<li><p>人格类型</p>
+<p>知性特质的哲学家型/哲学家/治疗者型/知心人/诗人</p>
+</li>
+<li><p>分类标准</p>
+<p>迈尔斯-布里格斯性格分类法</p>
+</li>
+<li><p>认知功能</p>
+<p>Fi Ne Si Te</p>
+</li>
+</ul>
+<h2 id="MBTI数据"><a href="#MBTI数据" class="headerlink" title="MBTI数据"></a>MBTI数据</h2><p><strong><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/MBTI">MBTI </a>通过以下偏好将人们归类：</strong></p>
+<p>如何集中注意力或他们的能量来源（外向性或内向性）</p>
+<p>如何接受信息（感觉或直觉）</p>
+<p>主要靠什么作出决定（情感或思考）</p>
+<p>如何对待外在的世界（判断或理解）</p>
+<p>因为运用他们在这些领域的偏好，人们发展出了荣格和迈尔斯所说的<em>人格类型</em>。这根本的人格是来自四种偏好的动态交互作用，同时也有外在环境的影响以及个人的倾向。人们比较可能在他们的人格类型基础上发展习惯、举止和态度。每种人格类型都有它自己的潜在优势，和提供机遇能让这优势成长的领域。</p>
+<p><strong>I——内倾（Introversion）</strong>相对于<strong>外倾（Extraversion）</strong>。</p>
+<p>INFP倾向于宁静和有所保留。于社交中，他们消耗能量（同样的情况下，外倾者获得能量）。</p>
+<p><strong>N——直觉（Intuition）</strong>相对于<strong>感觉（Sensing）</strong>。</p>
+<p>相比关心具体事物，INFP更加关心于抽象事物。他们更倾向于关注整体而不是细节，关注未来的可能性而非最切近的现实。</p>
+<p><strong>F——情感（Feeling）</strong>相对于<strong>思维（Thinking）</strong>。</p>
+<p>INFP通常认为个人偏好高于客观标准。在做决定的时候，他们通常更侧重于人情世故而非判断对错。</p>
+<p><strong>P——感知（Perception）</strong>相对于<strong>判断（Judgment）</strong>。</p>
+<p>INFP会保留意见或推迟作出重要的决定，更倾向于“开放选择权”，更能应对变化。</p>
+<h2 id="个性特征"><a href="#个性特征" class="headerlink" title="个性特征"></a>个性特征</h2><h3 id="类型描述"><a href="#类型描述" class="headerlink" title="类型描述"></a>类型描述</h3><p>主条目：治疗者 The Healer（角色变异）</p>
+<p>根据<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E4%BC%8A%E8%8E%8E%E8%B4%9D%E5%B0%94%C2%B7%E5%B8%83%E9%87%8C%E6%A0%BC%E6%96%AF%C2%B7%E8%BF%88%E5%B0%94%E6%96%AF/56072184">伊莎贝尔·布里格斯·迈尔斯</a>的说法，INFP们将他们的精力主要集中于内在世界，这世界里充满了强烈的感情和坚定的伦理道德信念。他们寻找一个能符合这些价值观的外在世界。他们对那些于他们重要的人和事很忠诚，也会迅速发现能实现他们理想的机遇。他们十分希望了解他们周围的人，通常随和、通情达理，除非他们的价值观受到威胁。</p>
+<h3 id="其他描述"><a href="#其他描述" class="headerlink" title="其他描述"></a>其他描述</h3><p>INFP们有礼貌且有所保留的外在，可能在一开始让他们难以了解。他们喜欢谈话，尤其是在话题不寻常的时候。当INFP们想参与社交的时候，他们的幽默感和魅力自始至终都会闪耀。倾向于喜欢别人且尽量避免冲突，INFP们倾向于是令人感到轻松的同伴。</p>
+<p>深爱于那些能进入他们内心圈子的人，INFP们保护着他人的感情安宁，抚慰那些处于压力下的人。被他们渴望和谐的天性指引着，INFP们倾向于通情达理，除非他们的道德观受到了违犯。然后，他们将会充满激情地为他们的信念辩护。通过机智、策略以及看到问题不止一面的能力，他们可以改变他人所持的观点。</p>
+<p>INFP们通过自省发展这种洞察力，同时他们需要大量的时间独处，默想和处理新的信息。虽然他们面对复杂的问题可以十分耐心，但通常会对例行公事感到厌烦。虽然并不总是有所组织，INFP们对那些他们重视的事物总是一丝不苟。作为完美主义者，他们可能在完成任务的时候有麻烦，因为它无法达到他们的高标准。他们甚至可能在截至日期后重新回头做已完成的任务，这样他们就可以改进它了。</p>
+<p>INFP们是具有创造力的类型，通常在语言上有天赋。作为内倾者，他们可能更喜欢通过写作来表达自己。他们的情感主导让他们有交流的欲望，而第二功能的直觉则供给想象力。因为具备象征主义的才华，他们喜欢暗喻和明喻。他们不断寻求新的想法，对改变也适应得很好。他们喜欢在重视这些才华的环境里工作。因了他们个人的信仰，这环境同时还必须允许他们对世界作出积极的改变。</p>
+<h3 id="综合描述"><a href="#综合描述" class="headerlink" title="综合描述"></a>综合描述</h3><p><strong>INFP</strong>内向，专注（I），偏好以一种抽象的，具有远见的和富有想象力的方式来观察周围的事物（N）。他们的决定是基于个人价值观的，主观的决定（F），不是为了控制他人，只是为了坚持自我。<strong>INFP</strong>的生活非常随意，灵活（P）。以上这些特征使<strong>INFP</strong>显得有一点传统，但他们很热情，也很亲切。通常，和<strong>INFP</strong>相处是很舒服的事。只有一种情况会使<strong>INFP</strong>反常，一旦感觉到自己所捍卫的价值观受到威胁，他们就会变得非常强硬。</p>
+<p>当<strong>INFP</strong>不承担团队的领导职责时，激励他们工作的因素是能在工作中找到个人的意义所在。当你工作力不从心，业绩较差时，你的<strong>INFP</strong>同事很可能无动于衷地作壁上观。他们最典型的想法就是：“各人做好自己分内的活。”但如果你有一个<strong>INFP</strong>上司，或你的工作与一个<strong>INFP</strong>的利益密切相关的话，他就会变得非常具有控制欲。就像其他知觉（P）类型一样，不到实际发生的那一刻，<strong>INFP</strong>不会察觉到你已对他产生影响；再加上<strong>INFP</strong>的内向，他们会尽量避免与别人发生直接冲突。这可能使双方都备感困惑：对你来说，被责备了却不知道是为什么，因为之前，他根本没有和你沟通过他的意见；而对<strong>INFP</strong>而言，甚至连他自己都会觉得自己的感觉和反应太过突然和激励了。人们常常会奇怪，像<strong>INFP</strong>这类随和的人怎么会突然变得这么强硬顽固，简直不像他们原来的性格，但是如果你理解了<strong>INFP</strong>的四个偏好，你就会明白其实这正符合他们的性格特征。</p>
+<p>通常，位居要职的<strong>INFP</strong>很少，能够做到CEO的就更罕见的。然而，一旦<strong>INFP</strong>成为非常高级的领导，他就总能使他的下属忠心耿耿。他善于兼顾任务的完成和团队成员的感受。作为<strong>INFP</strong>的下属，你可以自由发展，并得到很多肯定，也会有人倾听你的意见。只要你努力了，而且没有触及<strong>INFP</strong>的个人价值，即使失败，你的付出也会得到肯定和鼓励。因为<strong>INFP</strong>给人以诚恳尊重的感觉，大家轻易不会表达不同意见，所以团队中公开的冲突就会大大减少。</p>
+<p>如果你冒犯了<strong>INFP</strong>的价值体系（请记住，不到事实非常明显的时候你根本不会知道这一点），要得到<strong>INFP</strong>的原谅非常困难，前提是如果他们还愿意原谅你的话。<strong>INFP</strong>“I”和“F”的一面又使他们在任何情况下都表现得满不在乎。<strong>INFP</strong>嘴里说着“没关系了”，“无所谓的”，而事实上要获得他们的原谅并不像表面上这么容易。如果一个EJ犯了错，道了歉，<strong>INFP</strong>就会给他一个典型的<strong>INFP</strong>式的回答“没关系了”，“无所谓的”。EJ天真地以为没事了，其实根本不是这样。</p>
+<p>在美国，属于<strong>INFP</strong>类型的人并不多。从统计学来看，<strong>INFP</strong>中，女性多于男性。这时因为女性往往显示出对情感的偏好。<strong>INFP</strong>热衷于改善人们的生活而努力。比如反对酒后驾车，提倡妇女解放等，包括开发MBTI。如果你要寻找掌握大权的<strong>INFP</strong>，那么在类似这种性质的社会运动和社会组织中最容易找到了。</p>
+<p>理想主义者，忠于自己的价值观及自己所重视的人。外在的生活与内在的价值观配合，有好奇心，很快看到事情的可能与否，能够加速对理念的实践。试图了解别人、协助别人发展潜能。适应力强，有弹性；如果和他们的 价值观没有抵触，往往能包容他人。</p>
+<p>INFP把内在的和谐视为高于其他一切。他们敏感、理想化、忠诚，对于个人价值具有一种强烈的荣誉感。他们个人信仰坚定，有为自认为有价值的事业献身的精神。INFP型的人对于已知事物之外的可能性很感兴趣，精力集 中于他们的梦想和想象。他们思维开阔、有好奇心和洞察力，常常具有出色的长远眼光。在日常事务中，他们通常灵活多变、具有忍耐力和适应性，但是他们非常坚定地对待内心的忠诚，为自己设定了事实上几乎是不可能 的标准。INFP型的人具有许多使他们忙碌的理想和忠诚。他们十分坚定地完成自己所选择的事情，他们往往承担得太多，但不管怎样总要完成每件事。虽然对外部世界他们显得冷淡缄默，但INFP型的人很关心内在。他们富 有同情心、理解力，对于别人的情感很敏感。除了他们的价值观受到威胁外，他们总是避免冲突，没有兴趣强迫或支配别人。INFP型的人常常喜欢通过书写而不是口头来表达自己的感情。当INFP型的人劝说别人相信他们的 想法的重要性时，可能是最有说服力的。INFP很少显露强烈的感情，常常显得沉默而冷静。然而，一旦他们与你认识了，就会变得热情友好，但往往会避免肤浅的交往。他们珍视那些花费时间去思考目标与价值的人。</p>
+<h2 id="认知功能"><a href="#认知功能" class="headerlink" title="认知功能"></a>认知功能</h2><h3 id="主导功能"><a href="#主导功能" class="headerlink" title="主导功能"></a>主导功能</h3><p><strong>内倾情感（Fi）Introverted Feeling</strong></p>
+<p>Fi过滤信息，这种过滤的基础是缘于标准（经常是无形的）形成的判断。Fi时常协调价值观。在各种情形下，它天生地和微妙的差别相合，并知道什么是对什么是错。</p>
+<h3 id="辅助功能"><a href="#辅助功能" class="headerlink" title="辅助功能"></a>辅助功能</h3><p><strong>外倾直觉（Ne）Extraverted iNtuiting</strong></p>
+<p>Ne寻找并解释隐含意义，用“如果”开头的问题来探索选择，允许多种可能性共存。这种想象中的游戏把直觉和来自多种不同来源的经验结合在一起成为新的，这可能成为行动的催化剂。</p>
+<h3 id="第三功能"><a href="#第三功能" class="headerlink" title="第三功能"></a>第三功能</h3><p><strong>内倾感觉（Si）Introverted sensing</strong></p>
+<p>Si收集关于当下的数据，然后把它们和过去的经验比较，这过程有时候随着记忆唤起与之关联的感觉，就好像再体验一遍过去。为寻求保护那些熟悉的东西，Si回溯历史，用以形成对未来的期望和目标。 [2] </p>
+<h3 id="第四功能"><a href="#第四功能" class="headerlink" title="第四功能"></a>第四功能</h3><p><strong>外倾思维（Te）Extraverted Thinking</strong></p>
+<p>外倾思维（Te）Extraverted ThinkingTe组织、安排环境和想法，好成功达成目标。Te寻求行动、事件和结论的合理解释，并试图找到逻辑的错误和序列中的间隔。</p>
+<h3 id="隐藏功能"><a href="#隐藏功能" class="headerlink" title="隐藏功能"></a>隐藏功能</h3><p>后来的人格类型研究者（特别是琳达·V·贝伦斯）在这个降序排列中添加了四个附加功能。这些功能被称为隐藏功能，因为一个人并不自然地倾向于它们，但在压力之下它们也会浮现。对INFP来说，这些隐藏功能是（按次序）：</p>
+<p><strong>外倾情感（Fe）</strong>：Fe寻找社会上的联系，并用礼貌、体贴、得体的举止营造和谐的沟通。Fe对他人明确（或暗示）的需求作出回应，甚至可能会制造内在自我需求和欲望的冲突来满足别人。</p>
+<p><strong>内倾直觉（Ni）</strong>:Ni将看起来矛盾的事物合成出先前无法想象的成果，同时它也被象征性的东西吸引。这些成果的实现通常伴随着需要行动来完成的确定性，同时其解决办法中可能包括复杂的系统或一般性的真理。</p>
+<p><strong>外倾感觉（Se）</strong>:Se集中于当下的、物质的世界所带来的体验和感觉。以对当下周遭事情的敏锐察觉，它带来关于前方的相对事实和细节，而且可能导致自发的行动。</p>
+<p><strong>内倾思维（Ti）</strong>:Ti寻求精确，比如表达一个概念最合适的词。它注意到事物本质之间微不足道的差别，然后将它们分析并归类。Ti细查一个问题的每一面，寻找解决问题最不费力、风险最小的方法。它用模型甄别出逻辑上的不一致。</p>
+<h2 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h2><p>工作特质</p>
+<p>作为INFP型人，职业满足意味着你做的这些工作：</p>
+<p>1、我的工作与我个人的价值观和信仰相一致，同时允许我通过工作表达我的想象力。</p>
+<p>2、给我时间发展我的想法到相当深度，同时对这一思维过程以及思维产物操持控制权。</p>
+<p>3、独立完成工作，有一个私人的工作空间以及大量不受干扰的时间，但必须有机会与我敬重的人交流一下观点。</p>
+<p>4、我的工作环境是一个灵活性强的组织机构，其中繁琐的规章制度减至最少限度，同时允许我有灵感时工作。</p>
+<p>5、我要在一个合作的环境中与别的有创造力的、讨人喜欢的人一起工作，且这个工作环境没有紧张的人际关系以及人际纠纷。</p>
+<p>6、允许我表达我别出心裁的观点，而且在工作中个人的发展受到鼓励与夸奖。</p>
+<p>7、不要要求我经常在大群人面前介绍我的工作，或者在我的工作还没有完成至我满意之前让我与大家分享。</p>
+<p>8、运我帮助别人成长、发展以及实现他们所有的潜能。</p>
+<p>9、我的工作包括理解别人以及发掘他们行为的动机，允许我发展与别人一对一的深厚关系。</p>
+<p>10、允许我为实现我的理想而工作，且工作上不要受到政治的、经济的或别的方面的障碍的限制。</p>
+<p><strong>对组织的贡献</strong></p>
+<p>致力于为每个人在组织中找到一个位置； 　其理想很具有说服力；</p>
+<p>为了共同的目的将人们聚拢在一起；</p>
+<p>能够为组织发现新的机会和发展的可能性。</p>
+<p><strong>领导风格</strong></p>
+<p>采用推动促进的方式进行领导； 　宁愿扮演独特的、非常规性的领导角色；</p>
+<p>强调工作进展的可能性，能够为了长远目标而独立地工作；</p>
+<p>更乐于赞赏别人而非指责和批评；</p>
+<p>鼓励他人照自己的理想行动。</p>
+<p><strong>工作潜在缺陷</strong></p>
+<p>由于追求完美主义，可能会拖延工作任务； 　同时取悦于太多的人；</p>
+<p>固执地不按照逻辑和事实调整自己的看法；</p>
+<p>花费太多的时间反复琢磨而不采取行动。</p>
+<p><strong>发展建议</strong></p>
+<p>需要学会现实地工作而不光是追求完美； 　需要发展其坚韧、讲究实际和说“不”的自觉行动；</p>
+<p>需要更加强调和重视事实和逻辑；</p>
+<p>需要发展和实施行动计划。</p>
+<p>设定切合实际的期望值；</p>
+<p>重视让步；</p>
+<p>不要太主观地看待问题。</p>
+<p>INFP适合职业</p>
+<p><strong>1、创造性职业/艺术</strong></p>
+<p>· 艺术家</p>
+<p>· 作家：诗人/小说</p>
+<p>· 哲学家</p>
+<p>· 记者</p>
+<p>· 娱乐人士</p>
+<p>· 演员</p>
+<p>· 编辑</p>
+<p>· 音乐家</p>
+<p>· 导演</p>
+<p>· 建筑师</p>
+<p>· 信息制图设计师</p>
+<p>· 编辑/艺术指导</p>
+<p>· 插画画家/漫画家</p>
+<p>INFP型人为艺术所吸引是由于他们有能力以富于创造的个人方式来表达他们自己和他们的想法。以艺术为工作具有个人的自由和灵活性，这是INFP型人信奉的生活方式。无论是写文章、画画还是用其他手段来工作，无论是进行设计还是作为演员或音乐家运用他们自己的身体而工作，INFP型人都力求创造独到的成果，这是他们心声的真实表现。许多INFP型人把自己描述为“内心深沉”的艺术家，即使他们并不以艺术为生。一些 INFP型人甚至会说，作艺术家并不是他们做出的选择，而是他们必须背负的十字架。</p>
+<p><strong>2、教育/咨询职业</strong></p>
+<p>大学教授：人文/艺术 ·调研员 ·心理学家</p>
+<p>顾问 ·社会工作者 ·图书管理员</p>
+<p>教育顾问 ·特殊教育老师 ·双语种教育老师</p>
+<p>儿童早期教育老师 ·雇员帮助顾问 ·儿童福利顾问</p>
+<p>酒精和毒品禁戒顾问 ·翻译/口译 ·法律调停人</p>
+<p>社会工作者（老年人和儿童日常护理问题）</p>
+<p>教育和咨询行业都是可以使INFP型人为帮助他人成长和发掘人性潜能而工作的领域。INFP型人为改善他人生活质量的愿望和努力的确非常崇高。他们更喜欢大学，而不是小学或中学，因为大学里来自学生们的动力更强大。他们喜欢学习的过程，喜欢做为调查员或图书管理员来探求更深刻而更有意义的理解。INFP型人是富于同情心而具洞察力的顾问，心理学家，以及社会工作者，力求帮助他们的客户在自己的社会关系和生活范围里获得自我理解和和谐。作为顾问，他们高兴的是，在理解他人的时候他们也逐渐理解了自己。</p>
+<p><strong>3、宗教职业</strong></p>
+<p>· 牧师 ·宗教教育工作者 ·传教士 ·教堂工作人员</p>
+<p>对于许多INFP型人，献身宗教事业是很值得的。他们乐于帮助人们发展精神世界，在为自己和他人的梦想奋斗并得以实现的过程中他们深感快乐。他们往往喜欢一个对一个的交流，但随着经历增多，他们也渐渐乐于传道和做报告了。对于INFP型人，最根本的地方在于从事与他们内心价值观念和信仰一致的工作，往往宗教领域的职业可以满足这一点。</p>
+<p><strong>4、医疗保健</strong></p>
+<p>· 饮食学家/营养学家 ·理疗医生 ·家庭健康社会工作者</p>
+<p>· 职业治疗医生 ·按摩专家 ·全面健康医生</p>
+<p>· 语言病理学家/听觉病理学家</p>
+<p>· 验光师/配镜师</p>
+<p>保健领域吸引INFP型人的方面在于，它能够让他们对客户或病人进行亲切而亲密的工作。INFP型人一般都会喜欢这样的职业给予他们的自主性，他们可以自己开业，或者作一家大型健康护理机构的顾问。理疗、全身治疗以及按摩的诊断治疗工作具有创造性和精神因素，这些都令人满意，它们运用了INFP型人的直觉和情感倾向。</p>
+<p><strong>5、机构发展</strong></p>
+<p>· 雇员发展专家 ·人力资源开发 ·社会科学家</p>
+<p>· 多样化管理人 ·顾问：工作组构建/冲突解决</p>
+<p>尽管INFP型人通常不会对商业领域的工作感到满意，仍然有一些筛选出来的领域有可能让INFP型人获得成功和满足感。</p>
+<p>一些INFP型人喜欢合作的环境，有时他们的工作涉及到帮助别人找到适合于自己的工作。他们喜欢人事或人力资源发展方面的工作，喜欢在一个公司内部设计并安置工作。他们需要与支持他们的人共同工作，从而感到他们所做的贡献是独特而且受人重视的。这样，在竞争激烈的商业世界，他们才会找到满足感。</p>
+<h2 id="有趣细节"><a href="#有趣细节" class="headerlink" title="有趣细节"></a>有趣细节</h2><p>⒈具有的性格特征包括：艺术的，深沉的，粗心的，敏感的，灵活的，善于欣赏的。</p>
+<p>⒉在所有类型中最不可能得心脏方面的疾病。</p>
+<p>⒊男性最不可能反映慢性疼痛。</p>
+<p>⒋在所有类型中，具有第二高的婚姻不满意率。</p>
+<p>5.在学习一门外语时比大部分人更容易成功。</p>
+<ol start="6">
+<li>在所有的类型中，最容易对自己的工作不满意。</li>
+</ol>
+<p>7.个人价值观包括强调自主权与创造性。</p>
+<p>8.在写作，顾问，艺术等职业领域有着超出平均的杰出代表率。</p>
+<p>9.在国际调查样本中，他们所反映的兴趣活动集中在“写作”、“欣赏艺术”、“阅读”和“听音乐”</p>
+<p>10.在国际样本中，他们和INTP都是最多的说不喜欢自己所做工作的类型，还包括他们工作的地点，未来工作的机会，他们也常常想到辞职。</p>
+<p>11.在国际样本中，他们是最不愿意工作环境中具有“晋升机制”“高强压力”“成就的机会,INFP尽量避免与他人发生过多冲突或得到自我表现的机会。这样的外界干扰很容易让他们无所适从，进而打乱原有的生活秩序。对自己目标的坚信使其对外界重压带来的生活失衡产生情绪，却又因本身性格特征而很难被观察到 。</p>
+<h2 id="NF型"><a href="#NF型" class="headerlink" title="NF型"></a>NF型</h2><p>语言―――抽象型</p>
+<p>适用于无法观察到的，仅仅依赖于想象力的事物，理想主义经常谈论那些仅凭想象力想像出来的事物。理想主义者的思想和语言天生具有归纳性，他们敏锐，由细节得出普遍性的概括，由事物的细微处了解它们的全部。</p>
+<p>他们重视自身感觉，坚持认为“肯定知道”人们真正想要什么。说话常用隐喻，并且喜欢运用修饰性语言，喜欢夸张和形容。他们一方面忽视等级地位，另一方面又对于其他类型人的身体语言、面部表情等，有着高度的敏锐性。</p>
+<p>使用工具―――合作型</p>
+<p>理想主义者看来，人们选择的工具和行动，需要为他人所接受，虽然有时候不若那些不被认可的工具有效。他们对那种过于冷漠、或一心一意追求效果的功利行为感到非常的困惑，担心人性善的那方面，因此而遗失。</p>
+<p>理想主义者首先考虑的，总是培养满意的人际关系，他们的理想是帮助周围人们彼此间融洽相处，从而大家为了共同的利益而努力。</p>
+<p><strong>理想主义者的兴趣</strong></p>
+<p>多数理想主义者对买卖行为缺乏兴趣，很多人会追求自然科学领域的事业。他们通常会选择同语言文字打交道，并希望直接或间接的与他人交流。理想主义者非常容易被文学作品所感染，并倾向于以这种天生的易感性来解释它，喜欢任何形式的虚构性描述――故事、诗文、传说、神话，都能让他们感到快乐和力量。</p>
+<p>理想主义者并不局限于对文学的研究上，理想主义者高度集中在社会科学领域。尤其是精神康复方面，他们能够在精神健康服务方面得到极大的满足，习惯于选择其中最人道主义的方法，提供服务咨询。</p>
+<p>他们不惜任何努力使人们具备良好的自我感觉，并热心于道德、对正误的判断，而不是培养一种积极的自我形象。理想主义者和护卫者型的人都是道德守卫者，但前者关心的是幸福，后者关心的是正义。</p>
+<p>他们在工作中，有个非常特殊的天赋：征募、训练、部属、发展和忠告等方面。他们擅长对他人的成长和成熟过程产生影响。他们不把教育看作训练和求证的过程，而是一种对个人关系的邀请。形成人际关系，对他们来说至关重要，然而，过多的干预他人的事情，可能会让人生厌。而且，过多的复杂人际关系，容易造成精神负载过重。</p>
+<p><strong>理想主义者的人格定位</strong></p>
+<p>对待未来―――轻信的</p>
+<p>他们轻易且毫无保留的相信事物，与多疑的理性者形成鲜明对比，习惯于相信别人的理想主义者非常纯洁。</p>
+<p>对待过去―――神秘的</p>
+<p>他们试图和生活中的困难达成妥协，觉得意外事故是令人困惑和无法解释的，并且不能够通过任何理性的分析来解释。他们勇敢的接受这样的想法：事情的结果和原因是无法被认识和用语言描述的。</p>
+<p>生活的地点―――小径</p>
+<p>他们满足于行进中，引导他们探索生存意义，将他们带向更高层次的小径上。</p>
+<p>生活的时间―――明天</p>
+<p>他们是未来之人，关注即将发生的事情甚于现实生活。</p>
+<p>⒋4理想主义者的自我形象</p>
+<p>构成自我形象或者自我观念的，一般是三个方面，即：自尊、自重、自信，它们相互产生影响。</p>
+<p>自尊―――移情</p>
+<p>当理想主义者与周围的人交往投入感情、并为他人所认可时，其自尊最为强烈。与人们在一起时体验到的移情反应作为其自尊的依据。</p>
+<p>自重―――仁爱</p>
+<p>他们的尊重建立在一种维持对他人的仁爱和善意的基础上，充满了善意，对仇恨有着厌恶感。世界上任何残忍的迹象，都会伤害到理想主义者的感情。</p>
+<p>自信―――真实</p>
+<p>他们的自信取决于他们诚实可信的态度，即能否成为一个真实的人，正直、心灵调和、言为心声。反之，他们则会感到焦虑，自信丧失。</p>
+<p><strong>理想主义者的价值观</strong></p>
+<p>本性―――热情</p>
+<p>理想主义者非常容易动情，即感情来得快去的也快。幸运的是，他们倾向于积极的一面，因而他们的感情往往表现为极大的热情。</p>
+<p>信赖―――感受</p>
+<p>理想主义者信赖感受的力量，凭第一印象而无需印证。毫无保留的信赖直觉，他们会将别人的感受，带到自己的感受区，想要感同身受，以此来拉进距离。</p>
+<p>向往―――浪漫</p>
+<p>他们都是坚定不移的浪漫者，他们在各个方面都渴望浪漫，如果没有，他们会去培养。</p>
+<p>寻求―――本体</p>
+<p>他们投入自己大量的时间，来追求他们自己的本体、人性的意义，以此来表达真实的自我，将这个视为生命中最重要的事业。</p>
+<p>珍视―――赞誉</p>
+<p>为了使他们感到赏识，我们必须面对他们，在他们表情达意时“迎合他们的世界观”。他们常常被人误解，或迫于社会现实而扮演角色的错误。他们所关心的人对他们的赞誉，对他们而言是非常重要的，一旦出现，就令他们感到满足。</p>
+<p><strong>理想主义者的伴侣</strong></p>
+<p>婚姻―――精神伴侣</p>
+<p>理想主义者是所有类型中，处理婚姻问题非常不同的一类。其他类型的人，对婚姻抱着实用的态度，他们认为伴侣会犯错，也伴随着妥协。而理想主义者则相反，他们会以<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%A9%BA%E6%83%B3%E4%B8%BB%E4%B9%89">空想主义</a>的态度选择爱人，更经常要求伴侣和婚姻的浪漫活动。他们要求的是神秘而意味深长的的婚姻关系，还试图在其不存在的情况下加以创造。</p>
+<p><strong>工作中的优势</strong></p>
+<p>考虑周到细致且能集中注意力深入某个问题或观点</p>
+<p>渴望打破常规思考，并考虑新的可能情况</p>
+<p>积极投身于所信仰的事业</p>
+<p>必要时一个人也能很好地工作</p>
+<p>对收集所需信息有一种天生的好奇与技巧</p>
+<p>能通观全局以及看到意识与行为之间的联系</p>
+<p>能洞察别人的需要与动机</p>
+<p>适应能力强，能很快改变你的行事速度及目标</p>
+<p>在一对一的基础上很极好地与人工作</p>
+<p>工作中的劣势</p>
+<p>下面列出了你工作中可能存在的缺点，这些缺点有的比较明显，有的并不明显或你没有意识到，目的是为了让你“注意”到它们，并考虑产生的原因。缺点有些是天生的，而有些是长时间形成的，因此你不可能在一两天内改变，而是去提醒、思考。注意：其实知道存在的问题就是改变提高中很重要的一步，你会发现你正在慢慢发生变化。</p>
+<p>您工作中的劣势：</p>
+<p>必须控制方案/计划，否则你可能会失去兴趣</p>
+<p>有变得无秩序性的倾向，很难把握优先处理的事</p>
+<p>不愿做与自己价值观相冲突的工作</p>
+<p>在做事方式上不愿按照传统方式</p>
+<p>天生的理想主义，这样可能使得不到现实的期望</p>
+<p>讨厌以传统的或惯常的方式行事</p>
+<p>很难在竞争的、气氛紧张的环境中工作下去</p>
+<p>在处理及完成顽固的组织和人们打交道时没有耐心</p>
+<p>在预计做某事要求多长时间时有不切实际的倾向</p>
+<p>不愿惩戒直接肇事者，不愿意批评别人</p>
+<h2 id="24种INFP"><a href="#24种INFP" class="headerlink" title="24种INFP"></a>24种INFP</h2><p>按照属性高低排列。</p>
+<ul>
+<li>I-type- “the nesters”“牧场农夫”</li>
+</ul>
+<p>INFP：“烈士/殉道者”-倾向于无私地去推动真理并甘愿自我牺牲</p>
+<p>INPF：“耶稣基督”-较INFP更具执行力，倾向于成为人们的精神领袖</p>
+<p>IFNP：“猫旅馆”-安静平和，疏离人群的理想主义者</p>
+<p>IFPN：“囤积者”-此类型对于他人情绪十分敏感</p>
+<p>IPFN：“洗澡澡”-此类型享受独处，且有易变的个性与偏好</p>
+<p>IPNF：“习惯法/不成文的共同法则”-十分高冷，常被他人误认为是<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/INTP/3960163">INTP</a></p>
+<ul>
+<li>N-type- “the manipulators”“操纵器”</li>
+</ul>
+<p>NIPF：“木偶操纵者” - 在创造和谐或者不和方面非常擅长，且不会卷入当中。他的动机神秘莫测。这种被误认为INTPs的INFPs，是最危险的。</p>
+<p>NIFP：“内疚之旅”-类似于NIPF，具有强烈伦理是非观，且可通过直觉洞察他人动机</p>
+<p>NFIP：“耻辱旅程”-更外向的NIFP，言行常令他人不适，常不受待见</p>
+<p>NFPI：“表演艺术家”-更显著的NFIP。往往只在“让其他人不舒服”这件事上取得成功。</p>
+<p>NPFI：“禅宗研讨的瓦解”-调解冲突者，但往往依靠单一的回答：“我们是一个整体，”</p>
+<p>NPIF：“动物管理员”-类似于NPIT，以观察并收集他人性格为趣（集邮）</p>
+<ul>
+<li>F-type-“the nurturers””养育者”</li>
+</ul>
+<p>FINP：”道德家”-此类型拥有非常坚定的道德准则，并会去宣扬它们。</p>
+<p>FIPN：“兽医”-医者，倾向于治疗他人的躯体痛苦。</p>
+<p>FNIP：“带袖毛毯”-心理医生，喜欢用理论解决他人的情感问题并推广他们的方法。</p>
+<p>FNPI：“拥抱水枕”-抚慰者，会换位思考以解决他人情感问题与烦恼。</p>
+<p>FPIN：“兽装”-此类型对情感精雕细琢，表达情感能力出众。</p>
+<p>FPNI：“爱心熊”-八面玲珑，社交时总能使谈话双方感到十分满意。</p>
+<ul>
+<li>P-type-“the daydreamers”：“白日梦想家”</li>
+</ul>
+<p>PINF：“伪INTP”-执念于个人身份，倾向于成为INTP</p>
+<p>PIFN：“愤怒审美家”-艺术家，十分厌恶低审美低艺术性的生活方式。</p>
+<p>PFIN：“艾略特·史密斯”-最有可能成为诗人和作曲家的INFP。</p>
+<p>PFNI：“史蒂薇·妮克丝”-更外向的PFIN，日常工作依赖他人协助，通常指艺术方面。</p>
+<p>PNFI：“totorro”-梦想家，行动家。注意勿惹恼他。</p>
+<p>PNIF：“布考斯基”-常常会惹恼“PNFI”</p>
+<h2 id="爱情"><a href="#爱情" class="headerlink" title="爱情"></a>爱情</h2><p>简介</p>
+<p>INFP始终以一种平静快乐的姿态出现在世人面前。他们待人平静和蔼，不带过多的诉求。事实上，INFP的内心世界是十分复杂的。在人际交往的过程中，这种复杂会让他们表现出比其他性格类型人群更多的爱与关怀。INFP不是对任何人都会表现出这种关爱，而且在内部情感表达上他们也趋于保守。他们内心深处的这种爱与关怀只会对少数几个于他们关系至亲的人面前展现出来。INFP们通常在与他们的密友交往过程中，常会表现出惬意、支持和帮助的态度。由于内向感受在其性格中起到了主导作用，他们对于别人的感受非常的敏感准确，并会对他人的感受表现出诚挚的关注和呵护。要他们信任他人是一个漫长的过程，他们在感情的初期会显得十分小心谨慎，但是一旦认真的进入一段感情之后，他们会表现出绝对的忠诚。由于他们内在的坚定核心价值，他们十分重视自己感情中的深度与真诚度。对于那些能够理解和接受他们的观点的人，INFP会表现出极大的推崇。INFP在多数情况下会表现出很强的适应性和同质性，但是如果对方的观点与自己的核心价值发生冲突的时候，他们会收起温和的态度，转而成为自己核心价值坚强的守护者。在这种情况下，他们会变得异常地严厉和苛刻。</p>
+<h2 id="INFP型爱人"><a href="#INFP型爱人" class="headerlink" title="INFP型爱人"></a>INFP型爱人</h2><p>“爱意味着敞开心扉面对正面及负面的事件；敞开心扉面对悲伤、忧愁及失望；敞开心扉面对快乐、满足及众多我们之前未知的可能性。” –Rollo May</p>
+<p>INFP们对于自己的爱人有着极强的忠诚心和责任感。由于性格中的感知主导，和谐温暖的感受对INFP们显得十分重要。他们对于负责关爱的感情有着自己的需要。如果他们的感情中没有这些元素，那么他们只有两种选择，积极寻找这种感情或者就用幻想来麻痹自己的这种需要。</p>
+<p>INFP们的理想主义和浪漫主义情怀常常让他们对感情或情境有一种“完美情结”。他们也会用将他们的爱侣浪漫化，使之拥有自己所不具有的特质。多数INFP都会有这样一个问题：他们很难降低他们对现实生活那些不切实际的浪漫态度。正因为这样，所以他们总是对自己和他们的朋友表现出阴晴不定的态度。然而，INFP对他们爱侣的真挚热爱以及他们对于矛盾的极度厌恶让他们不得不表现出对于感情的忠诚，但是他们的脑海可能会久久得不到平静。</p>
+<p>与那些对爱人充满敬意的性格类型不同，INFP的这种尊重往往不会在感情中出现变质的情况。INFP们对于自己的想法会贯彻到底，努力实现尊重爱人这个大目标。这样做的结果通常是，INFP对其爱侣表现出认同，骄傲和关爱这些情愫，而这一切都是经得起时间的考验的。</p>
+<p>INFP对于管理类事物（像付账单及清理家居之类的）通常没有什么兴趣，但是如果必须要他们完成的话，他们会完成得十分出色。只要他们用心，他们绝对是理财方面的一把好手。</p>
+<p>在性方面，INFP在开始阶段会推进得十分缓慢。一旦他们的信任感得到了补强，那么INFP们会将性视为一种表达自我深层关爱之情的方式。他们在性爱的过程中更为注重对于爱意与言语上的互动表达。由于他们喜欢扶住他人，因此他们也会在此过程中更为重视对方的满足程度。</p>
+<p>INFP的一个大问题就是他们对矛盾和批评的极度厌恶。INFP会迅速找出批评性言论中对方的个人观点，无论这种批评中是否真正包含个人因素。他们将各种批评都视为对他们性格的一种攻击，在这种情况下，他们通常会变得失去理性并为个人情感所支配。这在INFP与思考和判断型的人交往过程中会成为一个很大的问题。这种“思辨者”在考量问题时会采取一种客观坚决的态度，而这种态度常会为他们的言论带来一个观点。如果这个观点带有负面性，那么“思辨者”的态度很可能会对INFP构成威胁。这种情况下，INFP会给予感性的回复，并将这种负面态度视为对自身性格的一种抨击。</p>
+<p>对于那些感知官能主导十分严重的INFP来说，如果他们缺乏成熟的直觉官能来帮助他们获取做出决策所需足够的信息，那么他们对矛盾和批评的反感会成为他们亲密关系中的一个重大隐患。在矛盾情境中，这些INFP们的反应会带上极为强烈的情感压力色彩，这常会让他们表现出不知所措的状态。由于他们缺乏寻找措施的基础，他们可能会采取任何可能的方式来摆脱这种矛盾，这么做通常意味着对他人缺乏理性的攻击，或者利用一些罪恶的手段来迫使自己的伴侣为他们提供需要的支持。这种行为对于健康持久的情感会产生极为负面的影响。</p>
+<p>如果他们能认清自己的这种趋势，他们就能更为客观的认识他人的批评。他们也应该记住，矛盾情境的产生不一定都是他们的问题，而且就算这种局面产生了也绝对不是世界末日。矛盾只是生活的一个组成部分，及时正视并解决这种矛盾能让你在萌芽状态就将这种问题解决，以免将来受其拖累。</p>
+<p>INFP对于自己和他人的私密空间有着明晰的认识。他们非常重视自己的个人空间以及能够做自己事情的自由。他们很珍视那些能认清INFP本质，并尊重他们独特风格和观点的伴侣。同时他们对于对方的隐私和独立也会给予足够的尊重，事实上，INFP不仅会对对方的观点或目标表示尊重，他们还会不遗余力地为对方提供支持。</p>
+<p>总的得来说，INFP们在爱情中时刻传达着温暖的关怀和爱意，他们将感情的健康性视为生活中的重心。尽管在刚开始的接触中，他们会表现出小心谨慎的试探状态，但是经过一段时间之后他们对爱情的忠贞不渝就会显露无疑，而这常能够持续一生。他们对待感情的态度十分认真，并会为感情的成功倾注大量的精力。</p>
+<h3 id="当你恋爱时"><a href="#当你恋爱时" class="headerlink" title="当你恋爱时"></a>当你恋爱时</h3><p>想像一个幽深的、青葱的山谷，围绕着永远盛开的鲜花和树木，住着温柔地陪伴着人们的动物，而人们每天的生活都洋溢在爱、创造和无私的奉献当中。这是一个极小的(只有大约3%的人口)哲学家型的世界，这种人永远都在不断地付出努力，为了居住在一个只有爱与和谐的完美世界里。</p>
+<p>一个哲学家型相信爱情需要深厚的情感和灵性的相连。你或许也会相信，要达到这种理想的状态，必须经历很多的痛苦和牺牲。然而，所有的苦难在完美恋情的寻获时都是值得的。当那一个幸福的日子来临时，你将成为一个完整的人，且能与你的爱人共创一个更美好的世界。</p>
+<p>在一段感情一开始的时候，你倾向于把情人理想化，把他想像成全世界最了不起的人；甚至可以轻易地为了他放弃你自己的生活。之后，当现实面逐渐占满你的生活时，你会感到失望，因为你发现，并没有一个真实的人可以符合想像中创造的那个浪漫梦幻形象。幸运的是，梦想幻灭之后，你会渐渐地痊愈并且慢慢地接受伴侣的缺点，虽然你仍没放弃试图将他改变成你一开始陷入爱河时拥有的那个完美的形象。</p>
+<h3 id="恋爱类型"><a href="#恋爱类型" class="headerlink" title="恋爱类型"></a>恋爱类型</h3><p>许多研究发现，一个男性哲学家型（INFP）最有可能和他的镜子影像结婚：也就是娶一个女性哲学家型。同时，研究也指出不管是男性或女性哲学家型，最快乐的事就是和同一种恋爱类型的人结婚。与哲学家型的人结婚的哲学家型，比起与其他任何一种恋爱类型结婚的哲学家型，都显现出最小的冲突。</p>
+<p><strong>女性哲学家型（INFP）</strong></p>
+<p>你与哲学家型的另一半在一起会很快乐，同时，也可以与作家型(INFJ)、教育家型(ENFJ)或记者型(ENFP)处得很好。由于教育家型和记者型拥有外向的特质，他们可以引导出你社会化的一面，也可平衡你原本内向的特性。</p>
+<p><strong>男性哲学家型（INFP）</strong></p>
+<p>你最好的伴侣是女性哲学家型或是女性作家型(INFJ)。女性作家型是一个有智慧、并具有反省能力的女性，她可以提供予你未来成功所需之要件。有一项警告：请确定她在果断(J)偏向上不是太强烈；否则，她对你的随兴作风也许会大有批评。</p>
+<h3 id="在哪里可以遇到一个哲学家型情人？"><a href="#在哪里可以遇到一个哲学家型情人？" class="headerlink" title="在哪里可以遇到一个哲学家型情人？"></a>在哪里可以遇到一个哲学家型情人？</h3><p>哲学家型喜欢写作、心理学、艺术和情感关系，他们会被有关改革或充满使命的活动所吸引。基本上，要遇到他们并不难，尤其是在与上述主题相关的地方。同时，也可以留意成人教育课程、读诗会和新书签名会。有时候在剧院、艺术走廊和博物馆也可以找到哲学家型—他们通常走得很慢，一个人沉浸在他们的思考中。</p>
+<p>因为他们一心想要改进世界的欲望，哲学家型通常会为政治和慈善机构从事幕僚工作。基于每个人的背景和兴趣，在以下团体中可以找到他们：红十字会、癌症协会、心脏协会、绿色环保组织、拯救鲸鱼协会、政党组织以及和平协会。</p>
+<p>一旦你知道去哪里寻找，要遇到你的哲学家型并不困难。例如，罗克珊是一个女律师，她回忆了她是如何遇到戴维—她一生中的至爱的：</p>
+<p>“酒吧是我惟一知道可以遇到男人的地方。我在那里遇到了我的前夫，一个比安德鲁台风还要可怕的灾难。当我33岁时，我对酒吧和在那里认识的男人厌烦了，但是我无法想出还可以到哪里去寻找我的另一半。”</p>
+<p>幸运的是，罗克珊参加了一场恋爱类型的讲座，并且学习到她的理想恋爱类型—哲学家型—是喜欢艺术的。</p>
+<p>想起她年轻时对诗歌的热情，罗克珊决定去参加一个读诗社团以便结交一些志同道合的朋友。在数周的读诗活动后，她遇到了她完美的伴侣戴维，一个音乐家，同时是一个哲学家型。</p>
+<p>“他有一个漂亮的臀部和红色的卷发！”罗克珊回忆说，“但是他很害羞。我3个星期来一直坐在他旁边，而他都没有跟我打招呼。</p>
+<p>“终于，有一天在读诗会结束后，我问他是否知道任何关于16种恋爱类型的事。很巧的是他大学时主修心理学，他知道荣格关于人格类型的理论。</p>
+<p>“很快地我们开始交换一些我对于宗教和灵性的看法，我们相互间的联系很紧密，仿佛我们已经认识对方很久了。我很兴奋，因为终于遇到心目中的理想情人了！”</p>
+<p>如何与一个哲学家型情人约会？</p>
+<p>哲学家型是所有恋爱类型当中最缺乏自信的。虽然他们通常在语言、艺术、音乐、心理学等领域都很有天分，但他们通常不会因自己的成就给自己加分。因为哲学家型对生活持有不安的态度，必须注意的一点是，当和他们谈话时要特别的温柔并敏感。</p>
+<p>正面来说，哲学家型对关于心理学、哲学或与艺术有关的谈话非常有兴趣，这些话题打动他们对关系、意义和创意表现的追求。若可以了解一个哲学家型的兴趣，接下来就可以和他展开约会了。</p>
+<p>举例来说，在一个美术班里，和你可爱的哲学家型同学开始一段谈话。谈谈你们最爱的画家，然后邀请这个新朋友和你一起去逛一个当地的画廊，一面去观赏刚刚提到的几个作品。又或许，在一个画展中，和站在身旁的哲学家型聊天，热中地谈论一个你知道下星期将举办一场签名会的作家。现在告诉他那场签名会的时间和地点，这样就有机会和他一起同往。</p>
+<p>如何赢得哲学家型情人的爱？</p>
+<p>你可以通过在安静、轻松的地方和哲学家型讨论激发性的哲学问题来向他们求爱。也许是手里拿着一本诗歌，沿着沙滩闲逛，也会吸引他们。也可以一起到一家温暖舒适的亚洲餐厅(哲学家型会对不同的文化着迷)，再把整个晚上约会的高峰推向一场艺术剧场的电影或哲学性的表演。</p>
+<p>请记住：哲学家型是一个安静并且温柔的人，他享受亲密的陪伴和有意义的意见分享。虽然这个哲学家型伴侣会在一开始时不愿公开个人信息，一旦他开始进入状态后，这个温和说话的灵魂就会变成一个非常振奋人心的对话者。</p>
+<h3 id="恋爱锦囊"><a href="#恋爱锦囊" class="headerlink" title="恋爱锦囊"></a>恋爱锦囊</h3><p>*<strong>恋爱锦囊之一：避免在约会中起冲突。</strong></p>
+<p>　　若你是那种喜欢辩论争议性课题的人，请等你们两人建立起非常紧密的关系后，再表现你的善辩。因为哲学家型强烈的渴望和谐，他会尽量地避免冲突。若你太快就把不和谐的气氛带入一段关系中，哲学家型可能会觉得害怕而也许就不会再跟你约会。</p>
+<p>*<strong>恋爱锦囊之二：话不投机半句多。</strong></p>
+<p>　　说太多话和太多社会活动会让一个哲学家型感到疲累。请尊重他对私人空间和安静时间的需要，你的伴侣会因而以感激和爱惜来回报。</p>
+<p>　　看看这个例子，看看34岁的高中老师杰罗米，如何利用恋爱锦囊一和二，留给他未来的另一半拉提莎一个非常棒的印象的。</p>
+<p>　　拉提莎是杰罗米心中100%的女子。她拥有可可色的皮肤、实际的个性和临床心理学硕士学位。最棒的是，她是他的理想恋爱类型—哲学家型。</p>
+<p>　　现在的困难是：她的前男友正试图再度追求她，那男人是一个成功的银行投资家，他可以像公主一般对待她，带她到上好的餐厅去享受高级的餐饮。</p>
+<p>　　幸运的是，杰罗米有他自己的秘密武器：恋爱类型系统。在一个他们共同的朋友引荐后，杰罗米努力吸引拉提莎哲学家型的感受力。他谈论她最爱的哲学、心理学和文学等话题，一面小心避免任何会导致争辩或冲突的议题。</p>
+<p>　　拉提莎认为杰罗米很尊重她对安静时间的需要。当他们开始约会时，杰罗米总是会问她：“你累了吗？这里是不是太多人了？要不要到一个比较安静的地方？”</p>
+<p>　　虽然有些女人会因为这些问题而厌烦，但拉提莎认为这样的问题表示杰罗米真的了解她并且关心她。很快，她的前男友变成了历史，目前拉提莎开始计划她和杰罗米的两人世界新生活。</p>
+<p>*<strong>恋爱锦囊之三：保持应有的距离。</strong></p>
+<p>　　哲学家型可以像软糖般轻软温柔，除非他们感觉到你触犯了他们其中一个最重要的价值。当这样的事情发生时，哲学家型会以让你出乎意料之外的强硬和凶悍来回应。</p>
+<p>　　因为哲学家型倾向把他们的情感藏在心里，你甚至不知道已经侵犯了他们重要的价值。当你明白发生了什么事情时，通常都已经太晚了：你的哲学家型情人累积的情绪爆发了，他或她会做出一些无可挽回且伤害感情的事。</p>
+<p>　　看看发生在39岁的英文教授柯尔斯藤身上的故事。她无意中侵犯到她的哲学家型男友罗伯特，他是一个50岁有执照的社会医疗工作者。</p>
+<p>　　“这是我们第3次约会，而我已经知道罗伯特就是我要找的人。”柯尔斯藤说。“他是我所见过最温柔且最贴心的男人，长得英俊，有半白的胡子和强壮的身体，他能让我心情愉快。</p>
+<p>　　“然而我们的第一次争执发生了，这几乎让我们的关系结束。我们正在电影院排队准备看一部浪漫的电影，而罗伯特爆发了我从来没有看过的恐怖脾气。在群众面前，他开始大喊：‘我不敢相信你是这么一个跋扈的人。我要走了！’</p>
+<p>　　“我吓呆了，接着他就离开了，而我之后3天都没有接到他的电话。在电影院这一幕可怕的情景后，我想要放弃他了，但我记起了一个哲学家型的价值之重要。</p>
+<p>　　“我决定给罗伯特一个机会解释到底发生了什么事。我去他家找他，并且问他是什么事情让他如此生气。</p>
+<p>　　“罗伯特说：‘你没有问我要看什么电影。我的前任妻子利用我随和的个性，从来不曾尊重过我的想法。我其实也想看那部电影，但我需要你的礼貌性询问，纯粹只是一种需要被尊重的感觉。’</p>
+<p>　　“这实在是千钧一发；我们的关系有可能就在一开始时因为一个愚蠢的误会而被破坏，只不过是因为我忘记去检查我的哲学家型情人最深层的价值。</p>
+<p>　　“在6星期的情侣治疗后，我们之间的关系好多了。这听起来很奇怪，但我很高兴这样的事情在我们感情之初发生，让我可以学习到这件非常重要的事—要对哲学家型情人的价值保持高度的敏感。”</p>
+<p>　　为了防止发生类似柯尔斯藤和罗伯特这样的误会，请特别注意你的哲学家型情人情绪的转变。若是对方突然变得沉默、冷淡或在约会中好争辩，记得问清楚为什么。</p>
+<p>　　若你的哲学家型情人指责你侵犯到他或她的价值，你可以再三保证说：“我真的很尊重且欣赏你的价值和感受；我在乎你以及你所相信的事物。”</p>
+<p>　　当你采取这样的方式时，你的哲学家型情人会很快地忘记他感觉到的不受重视，而恢复成一个贴心并温顺的情人。你的伴侣会因而更爱你，因为他会相信你是这世上少数真正懂得体贴并关爱他的人。</p>
+<p>如何和哲学家型情人拥有美好的性关系？</p>
+<p>哲学家型是无可救药的浪漫型。在他们和你有性关系之前，他们必须感觉到被爱、被珍惜和被崇拜。他们必须觉得和你有心灵上的沟通：一种亲密可靠的热情联接。</p>
+<p>这并不表示哲学家型是过于拘谨的人，或是说他们必须等到婚后才能有性生活。这只是意味着，在将他们的身体交付给你之前，他们必须感觉到一种情感的结合，以符合他们对真爱的理想期待。</p>
+<p>一旦哲学家型感受到那股珍爱的契合，他们是非常温柔、体贴和热情的情人。对方会经常想着你，一边写着信件和诗歌来表达他们最深层的热情。</p>
+<p>至于做爱，哲学家型通常在一开始时很害羞。虽然他们有很多爱恋和热情要付出、但他们需要对方温柔的循循善诱，直到他们可以放心表达他们自己。</p>
+<p>*<strong>性爱锦囊：吸引哲学家型情人高度的想像力。</strong></p>
+<p>在和你的伴侣做爱之前，也许要在两个小时之前，请他或她想像一个你们两个做爱的美丽和刺激的场景。通过这样的想像热身后，这个哲学家型情人将可以在真正的时刻来临时，更能表达他高涨的热情。</p>
+<p>如何和哲学家型情人维持一段长久的关系？</p>
+<p>相较起其他恋爱类型，哲学家型倾向晚婚或者一辈子不结婚。因为他们心里总有一份对于真爱的理想，使得他们在现实世界中实践他们的理想时总是碰到难题。</p>
+<p>有一个女性的哲学家型，她在29岁时依然是处女，她说她若无法找到理想恋人，她宁可加入女修道院。她的家人不了解她，他们称她作“上帝的新娘”。但在她心底深处，却渴望和一个男人拥有一段完美的恋情：一段将会在情感上和心灵上改变她内心的关系。</p>
+<p>哲学家型(包括男性和女性)在婚姻满意度上的得分都很高；他们的配偶通常对他们很满意。当哲学家型终于决定结婚时，他们将会是极棒的配偶，同时是一辈子的伴侣，因为他们拥有甜蜜和随和的个性。</p>
+<p>若你可以赢得哲学家型情人的心，这个慈爱的人道主义者会让你了解，在两个相爱的伴侣共同携手之下，其实可以对整个世界带来正面、永生的影响。</p>
+<h3 id="INFP在感情中的优点"><a href="#INFP在感情中的优点" class="headerlink" title="INFP在感情中的优点"></a>INFP在感情中的优点</h3><p><strong>多数INFP在情感问题上会显出如下优点:</strong></p>
+<p>对他人热情的关心及呵护</p>
+<p>能积极感知他人的感受</p>
+<p>忠诚专一，他们希望将关系维系终生</p>
+<p>擅长关爱及呵护</p>
+<p>努力寻求双赢的局面</p>
+<p>辅助他人，鼓舞人心</p>
+<p>能够认清并尊重他人对空间的需要</p>
+<p>能够很好地表达自己</p>
+<p>能屈能伸，性格多样</p>
+<h3 id="INFP在感情中的弱点"><a href="#INFP在感情中的弱点" class="headerlink" title="INFP在感情中的弱点"></a>INFP在感情中的弱点</h3><p>趋于内向保守</p>
+<p>不希望别人侵占他们的私人空间</p>
+<p>极度厌恶矛盾</p>
+<p>极度厌恶批评</p>
+<p>对于表扬和正面评价有着极强的需要</p>
+<p>在压力情境下会感情用事</p>
+<p>在感情失败之后，很难走出阴影</p>
+<p>很难批评或惩罚他人</p>
+<p>在情感表达上十分保守</p>
+<p>完美主义倾向让他们对自己缺乏足够的信任</p>
+<p>遇到问题容易自责，凡事喜欢一肩挑。</p>
+<h3 id="精神伴侣"><a href="#精神伴侣" class="headerlink" title="精神伴侣"></a>精神伴侣</h3><p>INFP属于理想主义者。理想主义者是所有类型中，处理婚姻问题非常不同的一类。其他类型的人，对婚姻抱着实用的态度，他们认为伴侣会犯错，也伴随着妥协。而理想主义者则相反，他们会以空想主义的态度选择爱人，更经常要求伴侣和婚姻的浪漫活动。他们要求的是神秘而意味深长的的婚姻关系，还试图在其不存在的情况下加以创造。</p>
+<h3 id="择偶"><a href="#择偶" class="headerlink" title="择偶"></a>择偶</h3><p>理想主义者型的人，通常不会给某人做出承诺，而宁愿一次同某一个人谈情说爱以探测发展特殊亲密关系的可能性。他们不喜欢随随便便或临时性的应付约会，而独具特色的期待着过去的肤浅关系能够变得深刻。他们喜欢谈论曾经深深感动过他们的电影或小说，但是倾向于谈论故事中所揭示的深刻涵义，而不是单纯的描述情节。这种以想象力及意味深长的交往方式，自由自在的同人交流的能力，往往决定了理想主义者能否认真对待一段特定的恋爱关系。</p>
+<p>理想主义者很难发现他们所期待的那种能与之分享内心世界的人，它是一个反复试验的过程，需要仔细的寻觅。对理想主义者而言，与某人谈恋爱，不仅仅意味着肉体上的欢愉或社交体验，而是向另一个人敞开心扉的过程。某种程度上，还是自身灵魂的袒露，包含着对深怀敬意和相互理解的承诺和期待。</p>
+<p>因而，他们对拒绝高度敏感，当对方表露蔑视，他们不得不主动断了恋情，感情上的破裂带给他们的伤害是很大的。以至于他们有时会因恐惧而避免和他人纠缠难分，或者走向另一个极端，即违心的保持一段恋情，只是为了推迟分手时所必须经历的精神伤害。</p>
+<p>然而，一旦这个特殊的人出现，理想主义者就会激动不已，并全力以赴的追求这种恋爱关系。对于理想主义者来说，不仅是一桩美满的婚姻，而且还是一种异常强烈的、永恒的情感即将到来。他们会不吝啬的付出努力或想象力，不仅以浪漫的举止作为标志，还包括他们对爱情的理想化。</p>
+<p>理想主义者能够从最细微的迹象中体察出他们热恋之人内在的多情和诗般感受，并相信每个人都具有精神增长的潜能，且意欲用爱去挖掘伴侣这方面的潜能。或许理想主义者并不愿意承认，这些浪漫的设想，往往具有强烈的性爱冲动，并且成为一种困扰。理想主义者的性感受可能会有很大的差异，一方面，他们坚持认为性行为必须是爱的表达，而不是欲望；另一方面，他们在自己建立的理想世界里，却非常热情，极易受到美丽躯体和性感的触动。</p>
+<p>一旦两个人结合，理想主义者会感到无上的幸福。但是，期待比结合本身更吸引他们，日常生活的现实，失去了神秘的色彩，出现了平凡和欠缺。其他类型的人，当然也会觉得生活中存在差异，但是，他们却会通过调整、旅行、和努力，来转化这种差异。但是，男性理想主义者在这方面最为脆弱，他们往往倾向于去寻找一位新的情人，而非付出努力以发展现有的恋情。女性理想主义者则不会，相反，她们会变得越来越投入，继续让关系浪漫化，并深信它的完美性。对于男性理想主义者而言，亲密可能导致不稳定；而对于女性来说，则是不可或缺的一部分。</p>
+<p>但，值得注意的是，19世纪60、70年代，或许是源于女性理想主义者对更为完美的婚姻关系的想象力。性解放的先锋组织中的大多数成员是女性理想主义者（特别是奋斗者），她们并不是随时准备着情愿为爱牺牲，而是宁愿为发现与男性相处的更满意方式的可能性而生存。</p>
+<p>但是，多数理想主义者并不把婚姻的社会习俗看得比他们的个人承诺重要。因此，当他们确信已与对方进行了更深层次的结合、并且彼此交换了誓言，便认定他们已经完婚。而结婚仪式和理解，成为一种不必要的负担，并可能在神坛旁，显得慌乱、一脸的茫然，直到事后与配偶单独在一起时才会恢复正常。</p>
+<p>这些理想主义者热情、大方、活泼、多情，自身谨慎而对人际关系敏感，非常吸引其它气质类型的人。艺术创造者觉得他们独具匠心运用的浪漫感觉很亲切，并能由于理想主义者在婚姻中注入的合乎伦理的成分而得到道德升华；护卫者对理想主义者表现出来的道德上谨慎，会感到有安全感，并从他们的投入中感受到一些朝气；但，对理想主义者最感兴趣的，却是理性者，不仅因为他们的共同点，更因为理想主义者的情感活力，以及他们对人类的洞察力，这些，都是理性者所缺乏的。</p>
+<h3 id="婚姻"><a href="#婚姻" class="headerlink" title="婚姻"></a>婚姻</h3><p>无论与那种人格气质的人结婚，他们都可能始终爱恋、支持和理解着他们的妻子或丈夫。理想主义者在情感世界里是无与伦比的，为婚姻生活增添了他们对配偶情绪与感受的非凡敏感以及卓越的情感交流能力。他们敏锐的关注着他人的体验，本能的对配偶表示同情，并且不愿意利用那一刻指出配偶所犯的错误，而这一点，往往是其它气质的人无法做到的。</p>
+<p>理想主义者往往精通赞赏的艺术，他们习惯于向自己的爱人慷慨地表达衷心的赞许。无疑，理想主义者是最深情、专注、挚爱和富于欣赏力的配偶，并且会毫无保留的表达这些感情。</p>
+<p>他们具有彻底投入别人精神世界的能力，以至于对方具有一种得到他们完全理解和接受的感觉。他们认为，建立亲密、爱恋的关系是世界上做得最为自然的事情，他们是性爱艺术的真正大师。尽管有时候这种敏感要付出代价，且当情感受到限制时，他们会烦乱，他们从配偶那里得到的感情，总是超出他们的承受能力。</p>
+<p>此外，他们还受到配偶情感依赖的烦扰，尽管有时候他们的举动鼓励了这些依赖性的产生。如果他们的配偶开始显示出脆弱和很强的依赖性，虽然这些是他们曾经承诺过的，但是，理想主义者仍然会厌恶这种压力。原来被他们认为独特的爱人，现在有种被他们明显否定的感觉，并非他们有意刻薄，而是想逃避自己不再可能控制的婚姻而已。</p>
+<p>理想主义者难以逃避事业的召唤以给自己的家人留出时间，学不会任何从复杂的事务中脱身，以保障家人占据他们生活中的首要地位。那些不会安排事务轻重缓急的理想主义者们，受到诱惑而不断的移情别恋，不惜放弃已有爱情的深化，而把精力用于追求新的恋情。但是，大部分的理想主义者型的人会因发展专一的爱情而获得极大的满足。他们注重培养婚姻中的浪漫情调，拥有情人和伴侣的双重身份。但是，在婚姻初期的性爱，会让理想主义者感到失望，因为他们在这方面让人惊讶的单纯，而且，往往是热情有余技巧不足，并且不愿意再去尝试其它的方法。</p>
+<p>理想主义者一般都擅长社交活动，外向型的，在社交上很活跃；而内向的人，则倾向于在家营造一个私人的空间。但是，他们都是体贴家庭成员的，通常会记得纪念日。同样，如果对他们有意义的纪念日，被别人所遗忘了，他们会很受伤。</p>
+<h3 id="伴侣组合"><a href="#伴侣组合" class="headerlink" title="伴侣组合"></a>伴侣组合</h3><p>创造温馨、情深意笃的爱情是理想主义者的习惯，他们在婚姻中编排自己的人际关系魅力，然而他们要达到美满幸福的生活，仍存在一些问题。</p>
+<p><strong>理想主义者&amp;艺术创造者：</strong></p>
+<p>理想主义者极其欣赏艺术创造者型配偶在现实世界中所表现出来的洒脱、自然本色，这与他们常常忍受折磨、内疚的生活体验有着极大不同。另外，艺术创造者型伴侣喜爱享受感官享受和大胆满足性欲的特点也吸引着理想主义者型的人，并激发了他们的浪漫想像。</p>
+<p>但这种婚姻中也蕴藏了令人不满意的种子，即艺术创造者型人缺乏谈论自己生命内涵的兴趣。</p>
+<p><strong>理想主义者&amp;护卫者：</strong></p>
+<p>同护卫者型的伴侣在一起使理想主义者在家中感到舒适和令人安心的稳定性，给他们一种脚踏实地的感觉。护卫者还有种让常常犹豫不决的理想主义者肃然起敬的坚定，确切的是非观。两者都属于社会合作者，在生活规范上减小了冲突矛盾。</p>
+<p>然而，护卫者在分享理想主义者丰富内涵的过程中存在困惑，并有可能因此使他们的理想主义者伴侣失望。他们忠实聆听试图取悦于理想主义者，但是后者迟早会感到自己不被赏识，继而给两者带来压力。</p>
+<p><strong>理想主义者&amp;理想主义者：</strong></p>
+<p>很容易和气质相同的人结为夫妻，并往往相处得异常和睦，他们对彼此内心世界的探索让对方满意，并且也可能一时创造出美妙的性爱关系。但是，过于相似和过多的时间追求精神目标而筋疲力尽，及过多的内心交流，必然会侵入对方的私密空间，而导致双方心神不安。</p>
+<p><strong>理想主义者&amp;理性者：</strong></p>
+<p>选择理性者作为配偶，似乎最能保证理想主义者的成功。他们相互协调的基础是：两者都基本上生活在抽象的世界里。约会了其它类型后，偶然遇到的理性者会让理想主义者觉得发现了新大陆，并渴望能够想像出遥远的未来。同时，令人神往的是理性者的冷静和自主性，这两个特点，都是牢牢的抓住自己的本性，致使容易激动和内省的理想主义者对此极为钦佩，并希望仿效之。</p>
+<p>当然，两者并不总是那么和睦。理想主义者的善于情感表达和理性者的自我控制、直觉和逻辑、伦理道德和技术实用主义之间的冲突，使再完善的组合也存在着挑战。理想主义者总是尝试将理性者对表达感情的抵触、表面上的冷漠攻破，可想而知是火花四溅的，也许就是因为这些火花，才使理想主义者对理性者情有独钟。</p>
+<p>护卫者（亦称为传统主义者）的类型：<em>S</em>J</p>
+<p>理性者（亦成为概念主义者）的类型：<em>NT</em></p>
+<h3 id="基本感情观"><a href="#基本感情观" class="headerlink" title="基本感情观"></a>基本感情观</h3><p>INFP始终以一种平静快乐的姿态出现在世人面前。他们待人平静和蔼，不带过多的诉求。事实上，INFP的内心世界是十分复杂的。在人际交往的过程中，这种复杂会让他们表现出比其他性格类型人群更多的爱与关怀。INFP不是对任何人都会表现出这种关爱，而且在内部情感表达上他们也趋于保守。他们内心深处的这种爱与关怀只会对少数几个于他们关系至亲的人面前展现出来。</p>
+<p>INFP们通常在与他们的密友交往过程中，常会表现出惬意、支持和帮助的态度。由于内向感受在其性格中起到了主导作用，他们对于别人的感受非非常的敏感准确，并会对他人的感受表现出诚挚的关注和呵护。要他们信任他人是一个漫长的过程，他们在感情的初期会显得十分小心谨慎，但是一旦认真的进入一段感情之后，他们会表现出绝对的忠诚。</p>
+<p>由于他们内在的坚定核心价值，他们十分重视自己感情中的深度与真诚度。对于那些能够理解和接受他们的观点的人，INFP会表现出极大的推崇。INFP在多数情况下会表现出很强的适应性和同质性，但是如果对方的观点与自己的核心价值发生冲突的时候，他们会收起温和的态度，转而成为自己核心价值坚强的守护者。在这种情况下，他们会变得异常地严厉和苛刻。</p>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>理想主义的网友yazi曾这样写道：“优秀的理想主义者们，原本该拥有属于自己的一份翱翔的天空，却被一次次的挫折内耗掉激情的生命，陷入自我的怀疑自卑妥协与改变中。这不仅对他们来说是损失，对社会来说更是巨大的损失，理想主义的他们，如钻石般的稀少，是真正的为改进社会而努力着的人们。”</p>
+<p>同样，在感情上，理想主义者也总是坚守着纯粹爱情主义的最后那一批人。对于理想主义者们，如果能找到理想的伴侣，互相鼓励，互相支持，一路前行，那么，理想主义者们将更有坚持的力量和勇气，去做真正自己想要做的事情，不再退缩，不再暗自舔伤，更快从阴霾中走出来，迈开自我实现的坚定步伐，发出如钻石般的璀璨光芒。</p>
+<div class="note info"> <p style="color:#438BCA">以下来自知乎回答 </p> </div>
+
+<p>作者：花域星魂<br>        链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/379319647/answer/1125548886">https://www.zhihu.com/question/379319647/answer/1125548886</a><br>        来源：知乎<br>        著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。  </p>
+<p>首先，infp一定不是天生存在的人格，因为infp有许多违背人类生存本能的行为机制。</p>
+<p>但这不意味着infp是创伤性人格。至少就我认识的很多受人格影响明确的infp，他们的家庭并没有给他们带来极大的伤害，他们的家长比大部分人的家庭要合理。</p>
+<p>infp在中期很容易认为，自己的家庭已经给自己带来无法挽回的伤害和痛苦，但这只是因为，别人眼里不值一提的痛苦，在infp眼里可能是难以承受的。而这些痛苦，甚至是深刻感受的机制，多半不是infp自己的错误。infp习惯了被动承受，也习惯了被动埋怨（因为确实如此）。</p>
+<p>infp具备的一些特殊特点：</p>
+<p>①独立：极力回避向他人求助、被他人帮助，不对他人抱有期望。（但不回避fi的无条件协助且保留期望。）受群体情绪影响，但不受群体思维影响。infp有一套独立的思维感受系统，用于感知和解释其他人的心理活动，该思维系统也会参与探索世界规律。因为思考独立，infp的立场不稳定，一般占弱小（需要救助）且合理的一方。但由于i的高避害倾向，若非必要，infp不会冒太多风险。</p>
+<p>②表面冷淡：难以处理和回应他人的物质/情感付出或索取，难以处理一般意义上的情感互动，但内心情感丰富。</p>
+<p>③不断修改自我：持续调整自我形象或行为模式，以寻求环境对自身的接纳，<strong>认为环境对自己的态度，与自身的形象正相关</strong>。</p>
+<p>④剧烈情绪波动：容易因自身的被动产生情绪感受，每次波动都可能导致infp改正理想目标、自我形象和生活状态。</p>
+<p>⑤不完整的外壳：对别人知晓自己的缺陷感到痛苦，但又时不时渴望展现自己的缺陷，希望让别人看到真实的自己。在混乱的行为模式下，infp学会了在失言或形象受损后果断修改自己的形象和行动节奏，或表现出迅速成长的势头，或快速回避进一步的接触，来避免刻板印象。</p>
+<p>⑥完美主义：需要收集海量信息来开展活动，如果结果（或形象）不够好就不敢行动。</p>
+<p>⑦马斯洛需求倒三角：对自我实现、关注、重视、尊重最为在意和渴望，越底层的需求越被忽视。</p>
+<p>⑧读心：擅长感受他人的内心和思维活动，自身思维活动非常频繁。</p>
+<p>⑨直觉强，逻辑差：只有一步到位的直觉判断，没有逻辑推理过程。</p>
+<p>虽然没有什么逻辑可用于判断这些特征意味着什么，但我们可以逆推出最终的结果，符合以上特征的情况的场景，其实只有一种：</p>
+<p>婴幼儿时期的infp对监护人索取帮助或情感互动无法得到结果，但又没有遭到过分的对待（甚至得到了相当好的照料），infp发现需求的满足似乎与自己的求助行为无关，甚至求助之后适得其反，长期处于被动局面下的infp开始过早关注自身的形象对生存带来的影响，开始发展自我意识和内在感受，并极力避免任何求助行为和情感付出，以降低监护人背叛求助意图和自身求助期待感带来的痛苦。（或会因为自身的行为或形象不符合监护人的标准而遭到惩罚。）</p>
+<p>人在被动的情况下总是会放大自身获得的情绪感受，这多半是infp高fi，以及拥有以上所有特征的成因。</p>
+<p>……</p>
+<p>回答一下几个问题点。</p>
+<p>3.如果从快乐角度来说，在生存受到威胁的情况下，快乐实在太过难得，除非自己的形象达到了那个“完美”的标准：寻得儿时父母的欢心（正确反馈）——一个infp幻想出来的，原本就不存在的标准。这导致infp成为人性和自我形象层面上最难堕落的人格。</p>
+<p>虽然快乐极为罕见，但取而代之的是希望，infp拥有一个可以为之付出任何东西的理想，拥有强大的主观能动性。早期训练出来的独立思维系统提供了高速学习的能力，对自我形象的修改提供了迭代能力。infp本身并不快乐，但是infp能在自己的未来框架中，找到其他人格永远找不到的快乐，能体验到其他人格一辈子都体验不到的感受，甚至拥有将这些感受提取到文艺作品中，分享给其他人格的能力。</p>
+<p>4.infp本身就是情绪感受、行为模式最具自主意义的人格，性格修正空间大到常人难以理解，再加上infp是后期能力最顶尖的人格之一。如果让我选，我是万万不敢选其他人格的，因为大部分人格无法处理infp能接纳的知识范围。infp几乎拥有奢侈的信息处理功能，能在无比混乱和粗糙的数据中整理和挑选出富有实际意义的内容（同样能接纳的还有intp，但intp的自由度……）。这意味着拿到其他人格开局，上限非常容易被锁死。如果拿到Ni核心，垃圾信息接纳能力不足，创造力降低。拿到Te或Ti核心，内在情绪活动的捕捉能力缺失。拿到Fe思维捕捉能力暴跌。拿到Se，说实话没什么用。</p>
+<p>上哪找一个像infp进步速度这么快，直觉逻辑能力都足够，感受又这么敏锐，知识收纳速度和能力没有上限的人格？</p>
+<p>虽然代价是大了点。</p>
+<p>但是，即便如此，infp也必须成为类似entj或intj的人格，即在Ne-Si学习到的东西的基础上，开发第四功能Te，再由P转J，让infp能够把学到的东西兑现到现实。因为infp这个人格没有行动功能，只有信息处理和预判未来的功能，这让它无法作为一个独立的最终人格形态来应对世界（除非给别人做搭档、军师）。</p>
+<p>开发Te(一定程度上压制Fi，降低情绪影响)，再由P转J（阻断信息输入，着眼于小行动计划）对于高层次的infp来说，收益实在太大，难度又并不算高，来回调整也不吃力，所以基本上应该这样去做。</p>
+<p>要选还是得选infp，因为infp的渴望机制带来的可能性最多，而需求和本能影响最少，进可奋发向上，退可感受人生，是非常自主的人格。</p>
+<p>……</p>
+<p>当然，infp面临的最大灾难是，infp是大后期人格，前中期没发展好就完蛋，比绝大部分人格都完蛋，无论性格如何，infp必须走到大规模学习这条轨道上，知识就是力量。</p>
+<p>作者：冰与酒的魔术师<br>链接：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/265777379/answer/635936740">https://www.zhihu.com/question/265777379/answer/635936740</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h2 id="不同人格的文风"><a href="#不同人格的文风" class="headerlink" title="不同人格的文风"></a>不同人格的文风</h2><h3 id="INFP"><a href="#INFP" class="headerlink" title="INFP"></a>INFP</h3><p><strong>【遁】INFP</strong> Fi+Ne+Te~Si</p>
+<blockquote>
+<p>发挥才智，则锋芒毕露；<br>凭借感情，则流于世俗；<br>坚持己见，则多方掣肘。<br>总之，人世难居。</p>
+</blockquote>
+<blockquote>
+<p>如果你记得从前曾跪在那人面前，这一回，你要把脚搁到他的头上去。 </p>
+</blockquote>
+<blockquote>
+<p>不能透彻识别真理的人，很容易被眼前的各种现象束缚住，动不动就将泡沫一般的梦幻当成永久的真实，所以如果有人稍微讲点离奇的话，立刻当成玩笑。</p>
+</blockquote>
+<blockquote>
+<p>天下的事再也没有比自己承认自己愚蠢更为可贵的了。</p>
+</blockquote>
+<p>——夏目漱石</p>
+<blockquote>
+<p>我不会讨人喜欢，我从小就不会讨人喜欢，后来我知道了如何讨人喜欢，我决定就不讨人喜欢。</p>
+</blockquote>
+<blockquote>
+<p>还是喜欢看动物世界，因为那里没有人。</p>
+</blockquote>
+<blockquote>
+<p>知识分子的知识不是以读书的数量来计算的，读书破万卷的一般人，多得很。知识分子应该是用心读书的那种，读出来的知识渗进骨子里。所以，真正的知识分子该有一副傲骨，不善趋炎附势。这使他们当中绝大多数显得个色，总是鹤立鸡群，混不进人堆里。</p>
+</blockquote>
+<blockquote>
+<p>当语言跟不上时，思想就不能停止，当思想跟不上时，语言就是废纸。</p>
+</blockquote>
+<blockquote>
+<p>泛言之，渐渐觉得人生也不过如此。这“不过如此”四个字我觉得醰醰有余味。变来变去，看来看去，总不出这几个花头。</p>
+</blockquote>
+<p>——崔永元</p>
+<p><strong>【咸】INFP</strong> Fi+Ne+Se~Ti</p>
+<blockquote>
+<p>我听到每一根枯枝的落地声<br>这声音比断头台的声音更凄厉<br>我的身心犹如危楼</p>
+</blockquote>
+<blockquote>
+<p>我曾举锋利的剑，<br>帮我将我的自由夺得，<br>也曾求助于阴险的毒物，<br>帮我克服我的怯弱。</p>
+</blockquote>
+<blockquote>
+<p>——快把灯吹灭，别再迟疑<br>让我们躲进黑暗之中</p>
+</blockquote>
+<blockquote>
+<p>英雄就是对任何事都全力以赴，自始至终，心无旁鹜的人。</p>
+</blockquote>
+<blockquote>
+<p>通过粉饰，我会掘出一个地狱。</p>
+</blockquote>
+<blockquote>
+<p>我是一片连月亮也厌恶的墓地。</p>
+</blockquote>
+<blockquote>
+<p>这些恶魔冷眼注视着我 犹如游人欣赏疯子</p>
+</blockquote>
+<blockquote>
+<p>我们的罪顽固，我们的悔怯懦；<br>我们为坦白要求巨大的酬劳，<br>我们高兴地走上泥泞的大道，<br>以为不值钱的泪能洗掉污浊。</p>
+</blockquote>
+<blockquote>
+<p>有时我觉得我的血奔流如注，像一口泉以哭泣的节奏喷出。我清楚地听见它哗哗地流淌，却总摸不着创口在什么地方。</p>
+</blockquote>
+<blockquote>
+<p>啊，美，你是来自天堂还是出自深渊，<br>你那神圣而又恶魔般的目光，<br>倾注着恩惠与罪恶，<br>为此，人们可以将你比作美酒。 </p>
+<p>你把夕阳和朝霞包容于自己眼中；<br>你像暴雨的黄昏散发着香味；<br>你的吻是春药，你的嘴是双耳尖底瓮，<br>使英雄变得虚弱，让孩子变得勇敢。 </p>
+<p>你是来自黑暗的深渊，还是从星辰坠落？<br>着了魔的命运，狗一样追随你的裙子，<br>你随意地播撒快乐与灾难，<br>你统治一切却不负任何责任。</p>
+</blockquote>
+<blockquote>
+<p>我知道，痛苦是唯一的高贵<br>无论人世和地狱都不能把它侵蚀，<br>为编织我那神秘的桂冠<br>就必须聚集宇宙的力量。</p>
+</blockquote>
+<blockquote>
+<p>也许你我终将行踪不明<br>但是你该知道我曾因你动情<br>不要把一个阶段幻想得很好<br>而又去幻想等待后的结果<br>那样的生活只会充满依赖<br>我的心思不为谁而停留<br>而心总要为谁而跳动。</p>
+</blockquote>
+<p>——夏尔·皮埃尔·波德莱尔</p>
+<blockquote>
+<p>傻瓜总是相信自己以外的人都是傻瓜。</p>
+</blockquote>
+<blockquote>
+<p>最聪明的处世术是，既对世俗投以白眼，又与其同流合污。</p>
+</blockquote>
+<blockquote>
+<p>删除我一生中的任何一个瞬间，我都不能成为今天的自己。</p>
+</blockquote>
+<blockquote>
+<p>我们这种掩耳盗铃的做法并不局限于恋爱.除去某些差异,基本上我们都是在欲望的驱使下对种种事实真相进行篡改.</p>
+</blockquote>
+<blockquote>
+<p>只不过我杀人用的是腰上的大刀，可你们杀人，不用刀，用的是权，是钱，有时甚至几句假仁假义的话，就能要人的命。不错，杀人不见血，人也活得挺风光，可总归是杀手哟。要讲罪孽，到底谁个坏，是你们？还是我？鬼才知道。</p>
+</blockquote>
+<p>——芥川龙之介</p>
+<blockquote>
+<p>我伪装成骗子，人们就说我是个骗子。我充阔，人人以为我是阔佬。我故作冷淡，人人说我是个无情的家伙。然而，当我真的痛苦万分，不由得呻吟时，人人却认为我在无病呻吟。我想和那些不愿受人尊敬的人同行。不过，那么好的人可不愿与我为伍。</p>
+</blockquote>
+<blockquote>
+<p>这世上每个人的说话方式都如此拐弯抹角、闪烁其词，如此不负责任、如此微妙复杂。他们总是徒劳无功地严加防范，无时无刻不费尽心机，这让我困惑不解，最终只得随波逐流，用搞笑的办法蒙混过关，抑或默默颔首，任凭对方行事，即采取败北者的消极态度。</p>
+</blockquote>
+<blockquote>
+<p>我甚至连神明都惧怕。我不相信神爱世人，只相信神的惩罚。在我看来，所谓信仰，不过是为了接受神灵的鞭笞而在审判台前低头。我相信地狱的存在，却绝不相信有天堂。</p>
+</blockquote>
+<p>——太宰治</p>
+<blockquote>
+<p>楼下一个男人病得要死，那间隔壁的一家唱着留声机，对面是弄孩子。楼上有两人狂笑；还有打牌声。河中的船上有女人哭着她死去的母亲。人类的悲欢并不相通，我只觉得他们吵闹。</p>
+</blockquote>
+<blockquote>
+<p>我愿意真有所谓鬼魂，真有所谓地狱，那么，即使在孽风怒吼之中，我也将寻觅子君，当面说出我的悔恨和悲哀，祈求她的饶恕；否则，地狱的毒焰将围绕我，猛烈地烧尽我的悔恨和悲哀。</p>
+</blockquote>
+<blockquote>
+<p>从来如此，便对么？</p>
+</blockquote>
+<blockquote>
+<p>友谊是两颗心真诚相待，而不是一颗心对另一颗心的敲打。</p>
+</blockquote>
+<blockquote>
+<p>墨写的谎言掩盖不了血写的事实。</p>
+</blockquote>
+<blockquote>
+<p>愿中国青年都摆脱冷气，只是向上走，不必听自暴自弃者流的话。能做事的做事，能发声的发声。有一分热，发一分光，就令萤火一般，也可以在黑暗里发一点光，不必等候炬火。<br>此后如竟没有炬火：我便是唯一的光。倘若有了炬火，出了太阳，我们自然心悦诚服的消失。不但毫无不平，而且还要随喜赞美这炬火或太阳；因为他照了人类，连我都在内。</p>
+</blockquote>
+<p>——鲁迅</p>
+<blockquote>
+<p>我感到难过，不是因为你欺骗了我，而是因为我再也不能相信你了。</p>
+</blockquote>
+<blockquote>
+<p>与怪物战斗的人，应当小心自己不要成为怪物。当你远远凝视深渊时，深渊也在凝视你。</p>
+</blockquote>
+<blockquote>
+<p>谁终将声震人间，必长久深自缄默。谁终将点燃闪电，必长久如云漂泊。我的时代还没到来，有的人死后方生。</p>
+</blockquote>
+<blockquote>
+<p>你遭受了痛苦，你也不要向人诉说，以求同情，因为一个有独特性的人，连他的痛苦都是独特的，深刻的，不易被人了解，别人的同情只会解除你的痛苦的个人性，使之降低为平庸的烦恼，同时也就使你的人格遭到贬值。</p>
+</blockquote>
+<blockquote>
+<p>谦逊基于力量，傲慢基于无能。</p>
+</blockquote>
+<blockquote>
+<p>白昼之光，岂知夜色之深。</p>
+</blockquote>
+<blockquote>
+<p>那些听不见音乐的人认为那些跳舞的人疯了。</p>
+</blockquote>
+<blockquote>
+<p>“他沉沦，他跌倒。”你们一再嘲笑，须知，他跌倒在高于你们的上方。他乐极生悲，可他的强光紧接你们的黑暗。</p>
+</blockquote>
+<blockquote>
+<p>假使有神，我怎能忍受我不是那神，所以没有神！</p>
+</blockquote>
+<blockquote>
+<p>我是光：唉，我真希望我是夜呢。我被光围绕着。这正是我的孤独啊！</p>
+</blockquote>
+<blockquote>
+<p>夜已到来：唉。为什么我不得不是光呢！而渴求着黑暗呢！而孤独呢！</p>
+</blockquote>
+<blockquote>
+<p>太阳是我胯下金灿灿的睾丸。</p>
+</blockquote>
+<p>——弗里德里希·威廉·尼采</p>
+<blockquote>
+<p>阴影永恒地覆盖着全地<br>这是过去世纪梦中的阴影<br>坟墓旁有巨榆庄严耸立<br>在藏着过去的世界上支起穹顶<br>记忆之光围绕一切摇曳<br>枯萎的树叶讲述着往昔的事情<br>渴望那不会再有的景象和声音</p>
+<p>孤独与哀伤，亡灵在飘荡<br>飘荡在活着时印下足迹的路上<br>凡俗的眼睛看不到他们，而他们的歌唱<br>有神秘的魅力，可以超越时间鸣响<br>只有少数知晓这魔术奥秘的人<br>才能在坟墓中认出坡的幽影</p>
+</blockquote>
+<p>——霍华德·菲利普·洛夫克拉夫</p>
+<p><strong>【旅】INFP</strong> Fi+Ne+Si~Te</p>
+<blockquote>
+<p>心中那片森林何时能让我停留<br>那里湖面总是澄清<br>那里空气充满宁静<br>雪白明月照在大地<br>藏着你最深处的秘密</p>
+</blockquote>
+<p>——伍佰</p>
+<blockquote>
+<p>梦想是一个天真的词，实现梦想是一个残酷的词。</p>
+</blockquote>
+<blockquote>
+<p>如果世间没有思考，就不存在于灵感。世界如果没有幻想，就不存在于想象力？</p>
+</blockquote>
+<blockquote>
+<p>没有兴趣，就不存在成功。唯有兴趣可以使人快乐！</p>
+</blockquote>
+<blockquote>
+<p>失败就像是茶洒在地上，但还可以再倒。人生难免要失败，可是路途遥远，后退就有失败，前进就会成功</p>
+</blockquote>
+<blockquote>
+<p>到老时，我才明白。原来人生的意义不是在于功成名就，而是做自己想做的事情并去珍惜他。这有可能是人生最大的价值，生命意义不在富贵。而在快乐。</p>
+</blockquote>
+<blockquote>
+<p>所有的天才都有自己的兴趣。同样每一个人都有自己的兴趣，那么世界就有无数个天才。</p>
+</blockquote>
+<blockquote>
+<p>有时漫画和现实是有差距的，漫画可以给人带来快乐，现实可以给人带来生活。但是两者可以合二为一。</p>
+</blockquote>
+<blockquote>
+<p>兴趣是成功最好的老师，就因为小时候画画，我才有兴趣成为漫画家。</p>
+</blockquote>
+<p>——藤子·F·不二雄</p>
+<p><strong>【小过】INFP</strong> Fi+Ne+Ti~Se</p>
+<blockquote>
+<p>生命之所以有意义是因为它会停止。</p>
+</blockquote>
+<blockquote>
+<p>心脏是一座有两间卧室的房子，一间住着痛苦，另一间住着欢乐，人不能笑得太响。否则笑声会吵醒隔壁房间的痛苦。</p>
+</blockquote>
+<blockquote>
+<p> I am free and that is why I am lost.<br>我是自由的，那就是我迷失的原因。</p>
+</blockquote>
+<blockquote>
+<p>你活着的时候应付不了生活，就应该用一只手挡开点儿笼罩着你的命运的绝望，同时，用另一只手记下你在废墟中看到的一切。</p>
+</blockquote>
+<blockquote>
+<p>要当国王呢？还是要当国王的使者呢？一叫大家选择，结果全部的人都志愿当使者。今天的世界，人人只想当国王身边的使者，就是没人想当指引方向的国王。</p>
+</blockquote>
+<blockquote>
+<p>不是每个人都能看见真相，但每个人都能成为真相。</p>
+</blockquote>
+<blockquote>
+<p>心理学是阅读一种倒写体，很吃力，就其永远正确的结论而言，又堪称硕果累累，可是实际上什么也没有发生。</p>
+</blockquote>
+<blockquote>
+<p>一个人的使命就是使他成为他自身，成为一个真正的人。</p>
+</blockquote>
+<blockquote>
+<p>什么是爱？这其实很简单。凡是提高、充实、丰富我们生活的东西就是爱。通向一切高度和深度的东西就是爱。</p>
+</blockquote>
+<blockquote>
+<p>尽管人群拥挤，但每个人都是沉默的，孤独的。对世界和自己的评价不能正确地交错吻合。我们不是生活在被毁坏的世界里，而是生活在错乱的世界里。我们就像被遗弃的孩子，迷失在森林。当你站在我面前，看着我时，你知道我心里的悲伤吗？你知道你自己心里的悲伤吗？</p>
+</blockquote>
+<blockquote>
+<p>在巴尔扎克的手杖柄上写着：我在粉碎一切障碍。在我的手杖柄上写着：一切障碍都在粉碎我。共同的是：一切。</p>
+</blockquote>
+<blockquote>
+<p>要冷静耐心。你尽量让坏事发生好了。你不要躲避。相反，你要认真观看。你要用主动的理解代替被动的接受刺激。这样你就会应付这些事情。人只有经历自己的渺小，才能到达高尚。</p>
+</blockquote>
+<blockquote>
+<p>让我们站定，用双脚插入意见，偏见，流言，欺骗和幻想的淤泥烂浆，插入覆盖地表的这些冲击物，直到触及坚硬的石块底层。对此，我们称之为现实。</p>
+</blockquote>
+<p>——卡夫卡</p>
+<blockquote>
+<p>在虚构的故事当中追求真实感的人脑袋一定有问题。</p>
+</blockquote>
+<p>——《凉宫春日的忧郁》</p>
+<h3 id="INFJ"><a href="#INFJ" class="headerlink" title="INFJ"></a>INFJ</h3><p><strong>【同人】INFJ</strong> Ni+Fe+Se~Ti</p>
+<blockquote>
+<p>不管前方的路有多苦，只要走的方向正确，不管多么崎岖不平，都比站在原地更接近幸福。</p>
+</blockquote>
+<blockquote>
+<p>我不知道离别的滋味是这样凄凉，我不知道说声再见要这么坚强。</p>
+</blockquote>
+<blockquote>
+<p>我已经准备好了足够挡雨的伞，可是却迟迟没有等到雨的到来，这样的尴尬只是我漫长人生中的小插曲罢了。</p>
+</blockquote>
+<blockquote>
+<p>那个树影斑驳的午后<br>无言的小巷倾诉着这寂寞<br>突如其来的插曲<br>让一双温柔的手抓住我</p>
+</blockquote>
+<p>——宫崎骏</p>
+<blockquote>
+<p>孤独并不是来自身边无人。感到孤独的真正原因是因为一个人无法与他人交流对其最要紧的感受。</p>
+</blockquote>
+<blockquote>
+<p>理解自身的阴暗，是对付他人阴暗一面的最好方法。</p>
+</blockquote>
+<blockquote>
+<p>与其做好人，我宁愿做一个完整的人。</p>
+</blockquote>
+<blockquote>
+<p>往外张望的人在做梦，向内审视的人才是清醒的。</p>
+</blockquote>
+<blockquote>
+<p>一个人毕其一生的努力就是在整合他自童年时代起就已形成的性格。</p>
+</blockquote>
+<blockquote>
+<p>思想的动摇并非正确与错误之间左右不定，而是一种理智与非理智之间徘徊。</p>
+</blockquote>
+<blockquote>
+<p>最可怕的事情就是全然地接受自己。</p>
+</blockquote>
+<blockquote>
+<p>你越是聪明，你的单纯就越愚笨。最聪明的也是在单纯处最愚笨的。想要拯救自身免于时代精神的聪明，我们不能靠增加自己的聪明，反而要接受那竭力反对这聪明智慧的，也就是单纯。但我们也不能沉溺于单纯，故意让自己变成傻子，而是要成为聪明的傻子。……聪明征服世界，单纯却征服灵魂。 事情都是相对的，亦是有度的。</p>
+</blockquote>
+<blockquote>
+<p>如果没有悲伤与之平衡，“快乐”这个词将失去意义。</p>
+</blockquote>
+<blockquote>
+<p>神瞎了一只眼,聋了一只耳,秩序乱作一团。你们要对这残废的世界保持耐性，也别高估了自己的完美。</p>
+</blockquote>
+<p>——荣格</p>
+<p><strong>【革】INFJ</strong> Ni+Fe+Te~Si</p>
+<blockquote>
+<p>对于共同的记忆，人们能够亢奋地谈上一个小时。可那并不是谈话，而是原本孤立着的怀旧之情，找到了得以宣泄的对象，然后开始那久已郁闷在心中的独白而已。在各自的独白过程中，人们会突然发现，彼此之间并没有任何共同的话题，像是被阻隔在了没有桥梁的断崖两岸。 于是，当他们忍受不了长时间的沉默时，就再次让话题回到往昔。</p>
+</blockquote>
+<blockquote>
+<p>所谓艺术就是巨大的晚霞，是一个时代所有美好事物的燔祭。自古延续下来的白昼的理性，被晚霞无意义地滥施色彩所践踏。以为会恒久持续下去的历史，也突然意识到了末日的来临。美，横亘在人们面前，把人世间的一切变为徒劳。每当看到晚霞的灿烂辉煌，看到火烧云翻卷奔涌，就觉得“更美好的未来”之类的呓语黯然失色。呈现在眼前的就是一切，空气里充满了色彩的毒素。它预示着什么即将开始呢？什么也没有开始，只有终结。</p>
+</blockquote>
+<blockquote>
+<p>头顶之花悉皆枯萎，内在空虚急剧膨胀，一直涌到喉头。美人们飘忽的居所不觉之间充满透明的颓废，甚至呼吸都带有死亡的气息。 那倩影一闪便足以将人诱往美与梦幻境地的有情，美丽如金箔剥落一般从身上纷纷下落，在晚风中蹁跹，而这一切又必须亲自目睹。典雅的院落本身也如一面斜坡，万能的、美丽的、快乐的砂金一齐从上面沙沙滑下。绝对的自由、在虚空呼啸翱翔的自由如被剜掉的肉片从全身剥离开来，惨不忍睹。阴暗有增无减，光亮有减无增。光鲜美艳的力从纤纤玉指间倾珠泻玉般滴落下来。身体与精神的最低层顽强燃烧的火旋即归于止熄。</p>
+</blockquote>
+<blockquote>
+<p>一部份优越感使我自命不凡，以为自己比别人进步，从而自我陶醉，这陶醉部份比其他部份更快醒悟过来。儘管其他部份尚未觉醒，自己却以为所有部份都已醒悟，犯了估计上的错误。所以，“比别人先进”这种自我陶醉，后来被“不，我也和大伙是一样的人啊”这种谦虚所修正。而由于估计上的错误，又被演绎成“当然在所有点上我和大家是一样的人”这种说法（还没觉醒的部份，使这种演绎成为可能，并支持了它），终于得出了“谁都是这样子”的狂妄的结论，一事不过是错乱的工具，在这里起了强有力的左右……就这样，完成了我的自我暗示。</p>
+</blockquote>
+<p>——三岛由纪夫</p>
+<p><strong>【离】INFJ</strong> Ni+Fe+Ti~Se</p>
+<blockquote>
+<p>我理解的成功， 不是衣食无忧，不是获奖无数，而是你能否真正享受每一次努力的过程。有梦想有目标是好事，但如果只看到目标，就很容易忽略过程，就像跑步一样，你一心想跑到终点，就会忘记欣赏沿途的风景。 所以，我们有时不懂珍惜，有时自视过高，有时怨天尤人，其实说到底，都是放不下自我。很多心中不平都因为放不下，当我们学会放下，往往会获得更多。梦想，不仅仅是有梦、敢想，还有做梦和思考的过程。因为有了这个过程，所以，结果是什么，也没那么重要了。 在大多数人看来，路人甲只是路人甲，就像偶尔擦过夜空的流星，不会一直停留在你的生命里。 但是，即使微弱如流星，也会有它的轨迹，也会在夜深人静时，借着划过夜空的那一秒钟，发出属于它自己的声音，希望被有心的人听到。</p>
+</blockquote>
+<p>——梁朝伟</p>
+<blockquote>
+<p>千山万重，不离不弃，为了理想 。</p>
+</blockquote>
+<blockquote>
+<p>我对世界没有怨气，我自己不太喜欢抱怨，因为抱怨改变不了任何事情。</p>
+</blockquote>
+<blockquote>
+<p>如果选择做的事是自己认可的，且有它的意义在，我会把心态调整好再开始。做了又抱怨，这是逻辑问题。</p>
+</blockquote>
+<blockquote>
+<p>我觉得就是做好自己，我从来不强求什么，我觉得很多事情也强求不来。我有理想，但我不是说为了理想要怎么样。<br>我把我该做的事情认真去准备了，我去认真把试戏的事情做好了，做自己力所能及的功课，然后在现有的时间，尽量地去展示我对这个人物的理解，全部都做到之后，如果还不行，我可能会写一个人物小传，或者去跟导演表达出我很喜欢这个角色。但当我这些事情都做完之后，如果这个角色还不是我的，我就放弃了。</p>
+</blockquote>
+<blockquote>
+<p>每一段未知的旅程，都是人生的风景。在行走的路上，从未想过停下，以勇气启程，以初心做伴。即刻，出发。</p>
+</blockquote>
+<blockquote>
+<p>“出发”是一个很玄妙的词。它不见得是最初，也不见得很迅速。<br>它是未知，也是已知。你知道你不会停在这里，你会朝前走，你对自己和对前方都有期许。你不知道这是怎样的一条路，不知道走多久，不知道容易还是难。可是一动不动的话就太无趣了，那不像是一种好的态度。总觉得有什么被浪费了。我们出发，皆因我们相信，也因为我们可以。</p>
+</blockquote>
+<blockquote>
+<p>途中总会有这样那样的意外，也许错过了终点，也许走了远路，但这些都不必焦躁。<br>在这些过程中，你一定会有些收获。每一次路过，我都当作一站，贪婪地去观察一切。 那里一定有些什么我可以在将来与你分享，一定有些什么可以让我不断成长。它像在浇灌我心里的树，为什么要限制自己生长的可能呢？我想我每一个瞬间都在准备着，看自己变成更好的自己。</p>
+</blockquote>
+<blockquote>
+<p>《罗马假日》常在脑海里回旋。<br>黑白胶片好像把时间停住了，我们固然在看一个发生在罗马的爱情故事，但也在看那种光影停留的美。那种分明的颗粒感，让演员的轮廓深邃又迷人，谁又不想让自己的瞬间停驻在这种经典的定格里面呢？<br>不时地，我都回想起自己在罗马的日子。回想起自己被放进黑白照片的那些瞬间，有点像一种圆梦的过程，每次再拍黑白胶片，我就会想起这部电影，想起罗马，想起迷人的赫本。</p>
+</blockquote>
+<blockquote>
+<p>想象自己穿上白色的鞋，不是因为执着地喜欢白色，而是想走得谨慎一些，稳一些。“肆无忌惮”可能会是一个太强烈的词，对有的事我们无所畏惧，对有的事我们要抱着谦卑之心。白色的鞋子好像也是一种谦卑的方法，一种自己对自己的叮咛。我想踏踏实实地走，一直走下去， 走很久。</p>
+</blockquote>
+<blockquote>
+<p>无论什么语言，小孩子的声音听起来都这样纯洁与直接。他们的开心与疑惑，他们的好奇与顽皮，那些音节绝不是毫无意义的。或许在他们眼里，我是他们的人偶公仔吧。我望着他，告诉他，别害怕：我也是你的同类啊。那样的微笑如此干净，如此动人。<br>我喜欢去聆听他们的声音，安抚他们的不安，感受他们的快乐。我的一部分成长了，一部分还没有。我喜欢这样的自己，他们也喜欢这样的我吧?从他们身上我看到新鲜感，这也是一种学习。他们教会我的事，我慢慢再告诉你。</p>
+</blockquote>
+<blockquote>
+<p>你可以说我没有什么个性，这我承认。<br>什么是个性?或许我也并不明白，我很少用它来形容自己。我不想去定义个性，我也无法去定义。这么说来，那就当我没有个性吧。个性是无法自证的，在我看来，我自己是一个没有个性的人。但我是我。我自己思考，自己决定，自己承担。<br>关于个性，就让你来告诉我好了。你这样认真地看着我，也会明白我。</p>
+</blockquote>
+<blockquote>
+<p>我喜欢的小说，还原了城市与人的本向。所有都归真于日常。在我的定义之中，那是永恒的真实。也许具体的细节不同，但好的小说与好的场景，它们总在还原一种最真的状态，人与人所生活的环境，那是永远会吸引人的事实。作家把这种真实提炼出来，就是作品的意义所在。没有对日常的关切，真实或许就少了一半。<br>甚至，作品可能比生活还真实。</p>
+</blockquote>
+<blockquote>
+<p>坦诚和温柔是最好的方法，让我很容易就找到这些秘密花园，让我走入其中。如果不是这样，我们又如何心满意足地再次出发？</p>
+</blockquote>
+<blockquote>
+<p>出发为了寻找和探索藏在时间里的答案。不管明天与未来哪个先到来，先拥抱这一刻的精彩！</p>
+</blockquote>
+<p>——朱一龙</p>
+<p><strong>【丰】INFJ</strong> Ni+Fe+Si~Te</p>
+<blockquote>
+<p>日出日落，朝颜花只一日。 日落日出，附近花开一片。 但已非昨日之花。 然，艳丽不改。</p>
+</blockquote>
+<blockquote>
+<p>虽无言,却风雪而立。虽无言,却花满枝头。虽无言,却兀自凋零。</p>
+</blockquote>
+<blockquote>
+<p>在我的眼睑里，还有第二层眼睑。我闭上眼睛，能看到光河流动的耀眼光芒。可是，我想念黑暗。</p>
+</blockquote>
+<blockquote>
+<p>一直只是淡淡地生活着，没有人试着进入过我的生活。一个人，孤独但自由。只是，在路过某座山或某条河时，会不由自主地想：这里，会是谁梦里最深最远的牵挂？又，会出现在谁的梦里？让他醒来时，发现自己已经是泪流满面。</p>
+</blockquote>
+<blockquote>
+<p>让人恍如隔世一般的，无比久远的岁月里<br>有一棵树一直屹立于这片土地上<br>深深地，深深地，扎根地底<br>高耸的，茂盛的，抽枝散叶，<br>见证者在此诞生又在此消损之物的沉浮变卷<br>恒古不变，在静默中俯视</p>
+</blockquote>
+<p>——《虫师》</p>
+<h3 id="INTP"><a href="#INTP" class="headerlink" title="INTP"></a><strong>INTP</strong></h3><p><strong>【履】INTP</strong> Ti+Ne+Fe~Si</p>
+<blockquote>
+<p>天才并不比任何一个诚实的人有更多的光，但他有一个特殊的透镜，可以将光线聚焦至燃点。</p>
+</blockquote>
+<blockquote>
+<p>我曾说过的这句话或许恰如其分：先前的文化将变成一堆废墟，最后变成一堆灰烬，但精神将在灰烬的上空迂回盘旋。</p>
+</blockquote>
+<blockquote>
+<p>从不做蠢事的人，也永远不会有任何聪明之举。</p>
+</blockquote>
+<blockquote>
+<p>不停地问“为什么”的人，就像站在一幢建筑物前读导游手册的游客一样，忙于阅读这个房子的建造历史，以至于妨碍了他们看见这幢建筑物。</p>
+</blockquote>
+<blockquote>
+<p>幽默不是一种心情，而是一种看待世界的方式。</p>
+</blockquote>
+<blockquote>
+<p>不要玩弄深埋在他人心底的东西。</p>
+</blockquote>
+<p>——维特根斯坦</p>
+<blockquote>
+<p>失败也是我所需要的，它和成功对我一样有价值。只有在我知道一切做不好的方法以后，我才知道做好一件工作的方法是什么。</p>
+</blockquote>
+<blockquote>
+<p>若你能举出一个彻底满足的人，我可以告诉你他就是个失败的人。</p>
+</blockquote>
+<blockquote>
+<p>我平生从来没有做出过一次偶然的发明，我的一切发明，都是经过深思熟虑、严格试验的结果。</p>
+</blockquote>
+<blockquote>
+<p>天才是百分之一的灵感加上百分之九十九的汗水!</p>
+</blockquote>
+<p>——托马斯·阿尔瓦·爱迪生</p>
+<p><strong>【兑】INTP</strong> Ti+Ne+Se~Fi</p>
+<blockquote>
+<p>精神健康的人,总是努力的工作及爱人,只要能做到这两件事,其它的事就没有什么困难。</p>
+</blockquote>
+<blockquote>
+<p>人生就象弈棋， 一步失误， 全盘皆输，这是令人悲哀之事；而且人生还不如弈棋，不可能再来一局，也不能悔棋。</p>
+</blockquote>
+<blockquote>
+<p>宁肯听任自己失望，也绝不乱存奢望。</p>
+</blockquote>
+<blockquote>
+<p>人是一个受本能愿望支配的低能弱智的生物。</p>
+</blockquote>
+<blockquote>
+<p>对于成功的坚信不疑时常会导致真正的成功。</p>
+</blockquote>
+<blockquote>
+<p>人的内心，既求生，也求死。我们既追逐光明，也追逐黑暗。我们既渴望爱，有时候却又近乎自毁地浪掷手中的爱。人的心中好像一直有一片荒芜的夜地，留给那个幽暗又寂寞的自我。</p>
+</blockquote>
+<blockquote>
+<p>良心是一种内心的感觉，是对于躁动于我们体内的某种异常愿望的抵制。</p>
+</blockquote>
+<blockquote>
+<p>未被表达的情绪永远都不会消失。它们只是被活埋了，有朝一日会以更丑恶的方式爆发出来。</p>
+</blockquote>
+<p>——弗洛伊德</p>
+<p><strong>【睽】INTP</strong> Ti+Ne+Si~Fe</p>
+<blockquote>
+<p>世界之大，而能获得最公平分配的是常识。</p>
+</blockquote>
+<blockquote>
+<p>越学习，越发现自己的无知。</p>
+</blockquote>
+<blockquote>
+<p>怀疑是智慧的源头。</p>
+</blockquote>
+<blockquote>
+<p>在这个世界上，良知被分配得最为公平。</p>
+</blockquote>
+<blockquote>
+<p>理智和良知是惟一使我们人之所以为人并与动物有区别的东西，我相信它是完整地存在于个人身上的。</p>
+</blockquote>
+<blockquote>
+<p>读杰出的书籍，有如和过去最杰出的人物促膝交谈。</p>
+</blockquote>
+<blockquote>
+<p>怀疑中我常常处于迷失状态，幸亏思想最终让我发现“我是真实的”，我思故我在。</p>
+</blockquote>
+<blockquote>
+<p>仅仅具备出色的智力是不够的，主要的问题是如何出色地使用它。</p>
+</blockquote>
+<blockquote>
+<p>意志、悟性、想象力以及感觉上的一切作用，全由思维而来。</p>
+</blockquote>
+<blockquote>
+<p>要以探求真理为毕生的事业。</p>
+</blockquote>
+<blockquote>
+<p>恐惧的主要原因是惊奇，摆脱它的最好办法是临事先思考，并使自己对所有不测事件（惊奇是由对它们的害怕引起的）有所准备。</p>
+</blockquote>
+<blockquote>
+<p>我的努力求学没有得到别的好处，只不过是愈来愈发觉自己的无知。</p>
+</blockquote>
+<blockquote>
+<p>知识越多，悲伤越多，大智慧里藏着大痛苦。</p>
+</blockquote>
+<blockquote>
+<p>征服你自己，而不是去征服世界。</p>
+</blockquote>
+<blockquote>
+<p>这世上所有的感情在本性上都是好的，我们应当避免的只是对它的滥用或误用。</p>
+</blockquote>
+<blockquote>
+<p>野生的禽兽只有身体需要保护，就经常不断地从事寻求养身的食物；然而人的主要部分是心灵，就应该把主要精力放在寻求智慧上，智慧才是他真正的养料。</p>
+</blockquote>
+<blockquote>
+<p>没有正确的方法，即使有眼睛的博学者也会像瞎子一样盲目摸索。</p>
+</blockquote>
+<blockquote>
+<p>我是一个在思维的东西，这就是说，我是一个在怀疑，在肯定，在否定，知道的很少，不知道的很多，在爱、在恨、在愿意、在不愿意、也在想象、在感觉的东西。</p>
+</blockquote>
+<blockquote>
+<p>凡是我没有明确地认识到的东西，我绝不把它当成真的加以接受。也就是说，要小心避免轻率的判断和先入之见，除了清楚分明地呈现在我心里、使我根本无法怀疑的东西之外，不要多放一点别的东西到我的判断里。</p>
+</blockquote>
+<blockquote>
+<p>除了我们自己的思想以外，没有一样事情可以完全由我们做主。</p>
+</blockquote>
+<blockquote>
+<p>无法做出决策的人，或欲望过大，或觉悟不足。</p>
+</blockquote>
+<blockquote>
+<p>行动十分迂腐的人，只要始于循着正道前进，就可以比离开正道飞奔的人走在前面很多。</p>
+</blockquote>
+<blockquote>
+<p>要想知道他们真正的看法，一定要看他们的实际行动，不能光听他们说的话。</p>
+</blockquote>
+<blockquote>
+<p>有了正确的判断，就可以有正确的行动，判断得尽可能正确，行动也就尽可能正确。</p>
+</blockquote>
+<blockquote>
+<p>实在说来，没有知识的人总爱议论别人的无知，知识丰富的人却时时发现自己的无知。</p>
+</blockquote>
+<blockquote>
+<p>关于经验，我还注意到了一件事，就是认识越进步越需要经验。</p>
+</blockquote>
+<blockquote>
+<p>自由意志会使人肯定一种观念，却否定另一种观念。所有错误的根源就存在于这种意志活动中，而不在观念本身。我们自己有权决定，是正确地还是错误地思想和认识。</p>
+</blockquote>
+<p>——勒内·笛卡尔</p>
+<blockquote>
+<p>真正的自由不是你想做什么就做什么，而是你不想做什么就不做什么。 </p>
+</blockquote>
+<blockquote>
+<p>有两种东西，我对它们的思考越是深沉和持久，他们在我心灵中唤起的赞叹和敬畏就会越来越历久弥新，一是我们头顶浩瀚灿烂的星空，一是我们心中崇高的的道德法则。他们向我印证，上帝在我头顶，亦在我心中。 </p>
+</blockquote>
+<blockquote>
+<p>如果竭尽自己最大努力仍然还是一无所得，所剩下的只是善良意志，它诚如沉睡的宝石一样，自身就发射着耀目的光芒，自身之内就具有价值。</p>
+</blockquote>
+<blockquote>
+<p>良心是一种根据道德准则来判断自己的本能，它不只是一种能力；它是一种本能。</p>
+</blockquote>
+<blockquote>
+<p>谁遇到缺德事不立即感到厌恶，遇到美事不立即感到喜悦，谁就没有道德感，这样的人就没有良心。谁做了缺德事而只害怕被判刑，不由于自己行为不轨而责备自己，而是由于想到痛苦的后果才胆战心惊，这种人也没有良心，而只有良心的表面罢了。但是，谁能够意识到行为本身的缺德程度，而不考虑后果如何，却是有良心的。</p>
+</blockquote>
+<blockquote>
+<p>道德确实不是指导人们如何使自己幸福的教条，而是指导人们如何配享有幸福的学说。</p>
+</blockquote>
+<blockquote>
+<p>决定我们是否富有的，不是我们拥有的东西，而是我们没有也行的东西。</p>
+</blockquote>
+<blockquote>
+<p>思想无内容则空，直观无概念则盲。</p>
+</blockquote>
+<blockquote>
+<p>当爱情需要我的时候我没有资格，当我需要爱情的时候，他却离我而去</p>
+</blockquote>
+<blockquote>
+<p>大海之所以伟大，除了它美丽、壮阔、坦荡外，还有一种自我净化的功能。</p>
+</blockquote>
+<blockquote>
+<p>假如我们像动物一样，听从欲望、逃避痛苦，我们并不是真的自由，因为我们成了欲望和冲动的奴隶。我们不是在选择，而是在服从。唯有自律，自律使我们与众不同，自律令我们活得更高级。</p>
+</blockquote>
+<blockquote>
+<p>只有当两个人将自己完全交给对方，而不是仅仅将自己性能力的使用交给对方时，性行为才不是对象化的。只有当伴侣双方互相分享他们“无论好坏以及各方面的人、身体和灵魂”时，他们的性行为才能导致“一种人与人的联合”。</p>
+</blockquote>
+<blockquote>
+<p>在人类认识自然过程中，不是事物在影响人，而是人在影响事物。是我们人在构造现实世界，在认识事物的过程中，人比事物本身更重要。我们其实根本不可能认识到事物的真性，我们只能认识事物的表象。</p>
+</blockquote>
+<blockquote>
+<p>理性的批判最终必然导致科学，与此相反，理性不经批判的独断应用则会导向无根据的、人们可以用同样明显的截然相反的主张与之对立的主张，从而导致怀疑论。</p>
+</blockquote>
+<blockquote>
+<p>我们的一切知识都以经验开始，这是无可置疑的；因为认识能力受到激发而行动，如果这不是由于对象激动我们的感官，一方面由自己造成表象，另一方面使我们的知性行动运作起来，对这些表象加以比较，把它们联结起来或者分离开来，并这样把感性印象的原始材料加工成叫做经验的对象的知识，那又是由于什么呢？因此在时间上，我们没有任何知识先行于经验，一切知识都从经验开始。</p>
+</blockquote>
+<blockquote>
+<p>意志自律是一切道德律和与之相符合的义务的唯一原则：反之，任意的一切他律不仅根本不建立任何责任，反倒与责任的原则和意志的德性相对立。因德性的唯一原则就在于对法则的一切质料有独立性，同时却又通过某个准则必须能胜任单纯普遍立法形式来规定任意。但那种独立性则是消极理解的自由。所以道德律仅仅表达了纯粹实践理性的自律，而这种自律本身是一切准则的这样的形式条件，只有在这条件之下的一切准则才能与最高的实践法则相一致。因此，如果那个只能作为与法则联结着的欲望之客体而存在的意愿质料，被放进实践法则中作为它的可能性条件，那么从中形成了任意的他律，也就是对于遵从某一冲动或爱好这种自然规律的依赖性，而意志就不是自己给自己提供法则，而只是提供合理地遵守病理上的规律的规范</p>
+</blockquote>
+<p>——伊曼努尔·康德</p>
+<p><strong>【归妹】INTP</strong> Ti+Ne+Fi~Se</p>
+<blockquote>
+<p>人的成长往往发生在不经意的时候,我并不愿意变成现在这样,但是,有些时候自己的决定还是会让自己大吃一惊.我不以最深的城府去面对我所应该面对的一切,而他们却以最深的城府揣测我的一切.变化的不是自己,而是旁人的眼光。</p>
+</blockquote>
+<blockquote>
+<p>别人拼命想掩盖的，必然是你不希望看到的。所以，追寻别人的秘密必然要承担知道秘密的后果</p>
+</blockquote>
+<blockquote>
+<p>比麻木更深一层的，就是淡然，对于死亡的淡然。</p>
+</blockquote>
+<blockquote>
+<p>我感觉自己像是一只苍蝇，被苍蝇拍打了无数次都没死，到了最后，忽然意识到自己的问题不在于为什么没死，而是自己被打成这个样子，为什么还要待在这个拍子下面。　　</p>
+</blockquote>
+<blockquote>
+<p>当你只能孤注一掷的时候，你只能孤注一掷。如果你犹豫不决，说明你其实还有办法，只是不愿意使用。</p>
+</blockquote>
+<blockquote>
+<p>他习惯了自己一个人解决自己遇到的问题。他在做这些事情之前，已经默认没有任何的后援，任何的帮助。他不会为自己的死亡怪罪任何人。也不会为别人的死亡怪罪自己。</p>
+</blockquote>
+<p>——南派三叔</p>
+<blockquote>
+<p>活在世上，不必什么都知道，只知道最好的就够了。</p>
+</blockquote>
+<blockquote>
+<p>我不要孤独,孤独是丑的,令人作呕的,灰色的.我要和你相通,共存,还有你的温暖,都是 迷人的啊!可惜我不漂亮.</p>
+</blockquote>
+<blockquote>
+<p>你要是愿意，我就永远爱你，你要是不愿意，我就永远相思。</p>
+</blockquote>
+<blockquote>
+<p>绝望是无限的美好。</p>
+</blockquote>
+<blockquote>
+<p>人人都渴望爱情，但只有有人关心的人才能够体会到什么叫做爱情。如你所知，我的问题就是没人关心。</p>
+</blockquote>
+<blockquote>
+<p>我对自己的要求很低：我活在世上，无非想要明白些道理，遇见些有趣的事。倘能如我愿，我的一生就算成功。     </p>
+</blockquote>
+<blockquote>
+<p>我赞成罗素先生的一句话：“须知参差多态，乃是幸福的本源。”大多数的参差多态都是敏于思索的人创造出来的。</p>
+</blockquote>
+<blockquote>
+<p>什么是似水流年？就如一个人中了邪躺在河底，眼看潺潺流水，波光粼粼，落叶，浮木,空玻璃瓶,一样一样从身上流过去。</p>
+</blockquote>
+<blockquote>
+<p>我对好多人怀有最深的感情，尤其是对你。我很想为别人做好事，尤其是对你。</p>
+</blockquote>
+<blockquote>
+<p>人的一切痛苦，本质上都是对自己的无能的愤怒。</p>
+</blockquote>
+<blockquote>
+<p>不愿清醒，宁愿一直沉迷放纵。 不知归路，宁愿一世无悔追逐。</p>
+</blockquote>
+<blockquote>
+<p>我选择沉默的主要原因之一：从话语中，你很少能学到人性，从沉默中却能。假如还想学得更多，那就要继续一声不吭 。</p>
+</blockquote>
+<blockquote>
+<p>你想知道我对你的爱情是什么吗 ?就是从心底里喜欢你，觉得你的一举一动都很亲切，不高兴你比喜欢我更喜欢别人 。你要是喜欢别人我会哭，但是还是喜欢你 。</p>
+</blockquote>
+<blockquote>
+<p>你可以说我贱，但你不能说我的爱贱。</p>
+</blockquote>
+<blockquote>
+<p>我的勇气和你的勇气加起来，对付这个世界总够了吧?去向世界发出我们的声音，我一个人是不敢的，有了你，我就敢 。</p>
+</blockquote>
+<p>——王小波</p>
+<h3 id="INTJ"><a href="#INTJ" class="headerlink" title="INTJ"></a>INTJ</h3><p><strong>【乾】INTJ</strong> Ni+Te+Se~Fi</p>
+<blockquote>
+<p>赐萧瑀<br>疾风知劲草，板荡识诚臣。<br>勇夫安识义，智者必怀仁。</p>
+</blockquote>
+<p>——李世明(唐)</p>
+<blockquote>
+<p>卧榻之侧，岂可许他人粼睡。</p>
+</blockquote>
+<p>——赵匡胤</p>
+<blockquote>
+<p>爱和世界尽头，是一样的遥远</p>
+</blockquote>
+<blockquote>
+<p>在我们被梦想杀死之前，梦想必须先死。</p>
+</blockquote>
+<blockquote>
+<p>山不走到我这里来，我就走到他那里去。</p>
+</blockquote>
+<blockquote>
+<p>虽有卓越的才能，而无一心不断的勤勉、百折不回的忍耐，亦不能立身于世间。</p>
+</blockquote>
+<blockquote>
+<p>请把我的双手放在棺材外面，让世人看看，伟大如我者，死后也是两手空空。</p>
+</blockquote>
+<p>——亚力山大大帝</p>
+<blockquote>
+<p>人生的光荣，不在永不失败，而在于能够屡败屡战。</p>
+</blockquote>
+<blockquote>
+<p>我看见法兰西的皇冠掉在地上，我用刀尖把它挑起来。</p>
+</blockquote>
+<blockquote>
+<p>请相信我，上天操纵着一切，我们只是它的工具而已。没有人能逃脱自己的命运。</p>
+</blockquote>
+<blockquote>
+<p>我曾统领雄师百万，现在却空无一人；我曾横扫三大洲，如今却无立足之地。耶稣远胜于我，他没有一兵一卒，未占领过只寸之地，他的国却建立在万人心中。世间有两种武器：精神和剑。从长远来看，精神必将打败利剑！</p>
+</blockquote>
+<blockquote>
+<p>如果你因为我个子矮而取笑我的话，那么我就砍下你的头，来取消这个差距。</p>
+</blockquote>
+<p>——拿破仑·波拿巴</p>
+<p><strong>【夬】INTJ</strong> Ni+Te+Fe~Si</p>
+<blockquote>
+<p>真多山游记<br>王方平采药此山,重子歌玉泸山涧。雪,住宿方行。</p>
+</blockquote>
+<p>——张飞</p>
+<p><strong>【大有】INTJ</strong> Ni+Te+Fi~Se</p>
+<blockquote>
+<p>喜怒不形于色。</p>
+</blockquote>
+<blockquote>
+<p>思危所以求安,虑退所以能进。</p>
+</blockquote>
+<blockquote>
+<p>谦虚温谨，不以才地矜物。</p>
+</blockquote>
+<blockquote>
+<p>未知鹿死谁手。</p>
+</blockquote>
+<blockquote>
+<p>欲温温而和畅，不欲察察而明切也。</p>
+</blockquote>
+<blockquote>
+<p>气宏放，傲然独得，任性不羁，而喜怒不形于色。或闭户视书，累月不出；或登临 山水，经日忘归。博览群籍，尤好《庄》《老》。嗜酒能啸，善弹琴。当其得意， 忽忘形骸。时人多谓之痴，惟族兄文业每叹服之，以为胜己，由是咸共称异。</p>
+</blockquote>
+<blockquote>
+<p>风景不殊，而举目有江山之异。</p>
+</blockquote>
+<p>——房玄龄</p>
+<blockquote>
+<p>给时光以生命，给岁月以文明。</p>
+</blockquote>
+<blockquote>
+<p>你的无畏来源于无知。</p>
+</blockquote>
+<blockquote>
+<p>我们都是阴沟里的虫子,但总还是得有人仰望星空.</p>
+</blockquote>
+<blockquote>
+<p>死亡是唯一一座永远亮着的灯塔，不管你向哪里航行，最终都得转向它指引的方向。一切都会逝去，只有死神永生。</p>
+</blockquote>
+<blockquote>
+<p>在中国，任何超脱飞扬的思想都会砰然坠地——现实的引力实在是太沉重了。</p>
+</blockquote>
+<blockquote>
+<p>弱小和无知，不是生存的障碍，傲慢才是。</p>
+</blockquote>
+<blockquote>
+<p>碑是那么小，与其说是为了纪念，更像是为了忘却。</p>
+</blockquote>
+<blockquote>
+<p>记忆是一条早已干涸的河流，只在毫无生气的河床中剩下零落的砾石。</p>
+</blockquote>
+<blockquote>
+<p>如果你看见一面墙，往上往下往左往右都看不到尽头，永远抵达不了边界。那就是死亡。</p>
+</blockquote>
+<blockquote>
+<p>我爱你，与你有何相干？毁灭你，又与你有何相干？</p>
+</blockquote>
+<blockquote>
+<p>唯一不可阻挡的是时间，它像一把利刃，无声地切开了坚硬和柔软的一切，恒定的向前推进着，没有任何东西能够使它的行径产生丝毫颠簸，它却改变着一切。</p>
+</blockquote>
+<blockquote>
+<p>给岁月以文明，而不是给文明以岁月。</p>
+</blockquote>
+<blockquote>
+<p>人们习惯将凡事分出黑与白，但很遗憾，现实全是灰色的。</p>
+</blockquote>
+<p>——刘慈欣</p>
+<blockquote>
+<p>鸡蛋，从外打破是食物，从内打破是生命。人生亦是。</p>
+</blockquote>
+<blockquote>
+<p>金钱可以使人卑微，也可以使人卑贱，可以使人高傲，却无法使人高贵。</p>
+</blockquote>
+<p>——李嘉诚</p>
+<blockquote>
+<p>人生一世间，如白驹之过隙，何自苦如此</p>
+</blockquote>
+<p>——张良</p>
+<p><strong>【大壮】INTJ</strong> Ni+Te+Si~Fe</p>
+<blockquote>
+<p>三大球不翻身，我死不瞑目！</p>
+</blockquote>
+<p>——贺龙</p>
+<blockquote>
+<p>公如青山，我如松柏，粉身碎骨，永不相负。</p>
+</blockquote>
+<blockquote>
+<p>吾闻穷巷多怪，曲学多辩。愚者之笑，智者哀焉；狂夫之乐，贤者丧焉。拘世以议，寡人不之疑矣。<br>（我听说从偏僻小巷走出来的人爱少见多怪，学识浅陋的人多喜欢诡辩，愚昧的人所讥笑的事，正是聪明人所感到悲哀的事。狂妄的人高兴的事，正是有才能的人所担忧的。那些拘泥于世俗偏见的议论言词，我不再因它们而疑惑了。）</p>
+</blockquote>
+<blockquote>
+<p>治世不一道，便国不法古。</p>
+</blockquote>
+<blockquote>
+<p>疑行无名，疑事无功。且夫有高人之行者，固见非于世；有独知之虑者，必见敖于民。愚者暗于成事，知者见于未萌。民不可与虑始而可与乐成。论至德者不和于俗，成大功者不谋于众。是以圣人苟可以强国，不法其故；苟可以利民，不循其礼。</p>
+</blockquote>
+<blockquote>
+<p>圣王者不贵义而贵法，法必明，令必行，则已矣。</p>
+</blockquote>
+<p>——商鞅</p>
+<div class="note info"> <p style="color:#438BCA">以下为九型人格测试结果和分析 </p> </div>
+
+<h1 id="5w4"><a href="#5w4" class="headerlink" title="5w4"></a>5w4</h1><p>你极有可能属于<strong>第五型科学家</strong>。</p>
+<p><img src="https://i.loli.net/2021/03/15/bXBsCAquIj7z6m3.png"></p>
+<iframe width="100%" height="400" frameborder="0" scrolling="no" src="https://www.apesk.com/lee/xtb/PAndAP_N.asp?id=2185595&amp;v=new&amp;grhr=" style="color: rgb(0, 0, 0); font-family: 微软雅黑; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"></iframe>
+
+
+
+
+
+<iframe width="100%" height="400" frameborder="0" scrolling="no" src="https://www.apesk.com/lee/xtb/PJZT_N.asp?id=2185595&amp;v=new&amp;grhr=" style="color: rgb(0, 0, 0); font-family: 微软雅黑; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"></iframe>
+
+
+
+<iframe width="100%" height="400" frameborder="0" scrolling="no" src="https://www.apesk.com/lee/xtb/PJPA_N.asp?id=2185595&amp;v=new&amp;grhr=" style="color: rgb(0, 0, 0); font-family: 微软雅黑; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"></iframe>
+
+
+
+
+
+<iframe width="100%" height="400" frameborder="0" scrolling="no" src="https://www.apesk.com/lee/xtb/PJPAP_N.asp?id=2185595&amp;v=new&amp;grhr=" style="color: rgb(0, 0, 0); font-family: 微软雅黑; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"></iframe>
+
+
+
+
+
+<iframe width="100%" height="400" frameborder="0" scrolling="no" src="https://www.apesk.com/lee/xtb/APJZT_N.asp?id=2185595&amp;v=new&amp;grhr=" style="color: rgb(0, 0, 0); font-family: 微软雅黑; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"></iframe>
+
+
+
+<p>如上数据，你最有可能是第五型科学家，最不可能是第九型和事佬。</p>
+<p>你的九型人格倾向依次排序为：  </p>
+<ul>
+<li>No.1、第五型科学家<br>No.2、第一型完美主义者<br>No.3、第四型悲情浪漫主义者<br>No.4、第六型怀疑论者<br>No.5、第三型实干家<br>No.6、第二型给予者<br>No.7、第八型领导者<br>No.8、第七型享乐主义者<br>No.9、第九型和事佬</li>
+</ul>
+<h2 id="你的素描"><a href="#你的素描" class="headerlink" title="你的素描"></a>你的素描</h2><p><strong>你的基本描述：第五型科学家(侧翼：5W4)</strong></p>
+<p>第五型人格是九型人格中的性格，名为观察者、智慧型、理性分析者、思考型。健康的第五型能够以超乎 寻常的知觉力和洞察力去观察每一件事情，他们心智机敏、好奇心强、带有敏锐的智慧，一边运用非凡的 知觉，一边提出正确的问题。这种人能够集中注意力，全神贯注于引起他们注意的事物上，并能预见一连 串事件如何发展。他们喜爱学习，为拥有知识而兴奋，并且在某方面常常成为专家。他们也是独立的思考 者，创新而有发明能力，能创造出非常有价值和原创力的想法及观念。</p>
+<p>最佳状况：成为发现者，广泛而透 彻的理解世界。他们有远见、思想开放、注重事情的整面、对事物的前后关联能做良好的连结、并能发现 事情的真貌。他们可能是某些新事物的发现先驱，有可能是重要的天才。<br>这种人格可谓是内向的代表，第五型人多是着重于自己的隐私，不擅于交往，在社交活动中经常抽离自己 ，从别人的角度来看，这些人总是感觉冷冰冰似的。他们很少公开谈及自己的事，让别人认为他们城府很 深，别人根本就难以捉摸他们。尽管有部分的五号看似快乐、活跃，但都很少与其他人有深厚的来往，除 非是最好的朋友。他们有时注意力非常集中，分析力、观察力都很强，乐于追求知识，不断以思考解决问 题，但实际行动很少且经常放弃。工作上因犹疑不决而错失很多机会。他们很喜欢收集，为了日后的需要 ，但不愿与人分享。</p>
+<p><strong>服饰特点：</strong></p>
+<p>衣着朴素，中性色，样式普通简单。外表、身姿及气质特点：外形通常是冷静，木讷，脸部木然，不苟言笑，不强于反应，喜怒不形于色，表情变化较少，笑纹在眼角。外表多数是瘦削，文静，深沉而有书卷气。坐姿后倾翘腿，双手交叉；眼直直盯住，眼珠略突出，观察时转动头部，很少与人有深厚的交往。</p>
+<p><strong>健康的特点</strong></p>
+<p>观察力、好奇心<br>善于分析<br>聪明机敏，是科学家，博士人材</p>
+<p><strong>一般的特点</strong></p>
+<p>十问九不应<br>事事做旁观者，做分析<br>爱冷嘲热讽<br>事事只跟从自己想法，很少顾及别人感受<br>抗拒情感投入<br>感情抽离</p>
+<p><strong>不健康的特点</strong></p>
+<p>逃避，脱离人群<br>充满敌意，憎恨世界，甚至觉得整个人类都是邪恶麻烦的<br>与现实脱节，不知许多事情为何会发生<br>精神极度紧张<br>有自杀的危机</p>
+<p><strong>人格升降特征</strong></p>
+<p>处于安定和人格提升时：走向第八型，有大将之风，勇于冒险，能将构思付诸实践，乐意争取达成自己的目标，勇谋兼备，会接受和关心别人，是一位不可多得的将相之材。<br>处于压力和自我防卫时：走向第七型，变得更为内向，就算是变得外向都是虚有其表，会变得不切实际，孤芳自赏，言过其实，常发白日梦而且有点神经质，经常理论多于一切，举棋不定，不肯作出承诺，口若悬河地扮专家。也经常沉醉于玩乐，生活奢侈。</p>
+<p><strong>侧翼</strong></p>
+<p>5w6： 是环境的“分析家”和“目录归纳家”；是问题解决者，在剥析问题的各个层次上有突出表现，然后去发现如何操作的。<br>5w4： 倾向第四型，比较有创意，也比较感性，甚至因为拥有强烈的内在情绪而忧郁。</p>
+<p><strong>性格倾向：</strong><br>内向，被动，自我，喜欢思考；关注探究，思考代替行动；与感觉相分离，讨厌情绪激动；自我满足和简单化；贪求或积攒时间、空间、知识；不擅长对他人说好听的话；喜欢别人扮演自己的学问和知识；很难表达自己心中的感受；不喜欢娱乐活动，在人际关系上显得比较木讷和保持理性的状态；寻求独自感觉，不喜欢自己的空间受到骚扰；喜欢自己解决问题或制定计划并执行一项计划；不喜欢过度计划的生活和每周一次的例会；是一个理解力强、重分析、好奇心强、有洞察力的人。</p>
+<p><strong>核心价值观：</strong></p>
+<p>喜欢思考、追求知识、要了解这个充满疑惑的世界。有了知识，才不会焦虑，才敢行动。</p>
+<h3 id="你的三种副型"><a href="#你的三种副型" class="headerlink" title="你的三种副型"></a>你的三种副型</h3><p><strong>背景</strong></p>
+<p>你相信「需要些什么」等同于「缺乏些什么」。你为自给自足及独立而努力，你尽力保护自己，避免受到外来的侵扰。你害怕你的能量会被消耗，所以你经常收缩并撤退到你的思想领域，以保存个人的能量。这是一份被称为「贪婪」的情绪习性，当中更加上「情感隔离」的自卫机能。而这份「贪婪」会显现在各个副型的行为上。</p>
+<p><strong>自我保存：家/城堡</strong></p>
+<p>你的私人空间是你保护自己及个人私隐的最佳领域。故此，你躲在你的思维空间、或一个属于你个人的特别地点的遮荫之内。在你的私人空间（你的思想、你的房间、你的家/城堡）里，你能远离其它的人或事，同时抵御对方的接近，这让你能够保有你的时间及能量，学习更多的知识，储存维生的必需品，已肯定自己能够存活下来。作为观察者，你尽量压抑个人的欲求，把需要降至最低，以保存个人的独立性，你感受到在简约中自有一番乐趣。你对身外物及奢华的生活不屑一顾，可是你又经常担心你没有足够的资源来维持你的独立性，因此你会依附任何能肯定你可以独立生存的东西——金钱、书本、能量、收藏品、及食物等。你认为没有人拥有你，你也不拥有任何人。你相信你能够充裕地存在，是基于保有并停留在自我的领域之内。</p>
+<p><strong>社交：图腾</strong></p>
+<p>我们全都需要感到属于一个团体，来显露我们的社交本能。作为观察者，你贪婪地希望得到知识、时间及能量，可是这仿佛并非易事。你坚守图腾的角色——一个被群体所分享、而又非直接参与的位置。你需要这个角色作为你和其他人之间的一个缓冲地，使他们不能直接「入侵」你的个人空间。你常被吸到分享特别学问的群体之中，这些学问可以是学术的研究、知识的追求、或不同的体系。你渴求与对文化或不同事件具影响力的人士或群体联系起来，通过思想的力量，寻求更多知识。你与那些领袖、行动及体系（历史、哲学、科学或技术性团体，文学或艺术的兴趣组别）的思想领域联系起来，一同分享学问，让知识得到尊崇。在那里，你感到成为当中的一份子、感到被需要而且舒适。你透过与团体分享对他们有意的智识，来让自己能够充裕地存在。</p>
+<p><strong>一对一：信任</strong></p>
+<p>作为一个观察者，你透过跟一些你认为重要的人分享机密资料、个人知识、能量、甚至你的感觉来保持联系。这些关系对你来说是一些神圣而又必要的。在这些关系中，你不需掩藏或保护自己的界限。当你的贪婪又再出现时，你也可以退到个人的领域里，作自我补足、同时细味存在于思慕及回忆中的感受及共享的时光。你个人私隐的界限会以激烈的方式（往往是透过身体接触）被释放，当中包含了重点的自我剖析，让你在一生中，常在想象的空间内加以回味。这份共有的信任缓和了因隔绝情感而产生的孤独感。你透过这些极特别有可靠的资源，来让自己能够充裕地存在。</p>
+<h3 id="如何理解"><a href="#如何理解" class="headerlink" title="如何理解"></a>如何理解</h3><p><strong>一、关于侧翼：</strong></p>
+<p><img src="https://www.apesk.com/mensa/img/ceyitu.gif" alt="九型人格侧翼图"></p>
+<p>侧翼是九型人格学的另一重要概念。每个人有所属的主要性格类型，但几乎没有人是拥有纯正的类型。每人均是两种性格型号的混合体，而在此混合体内之第二种性格型号称之为侧翼。侧翼的位置是在九型人格图象之圆周上，它是处于你所属主要性格型号的其中一边。九型人格图可帮助我们看到各种性格型号，如何混合和性格的侧翼。</p>
+<p>如右边的九型人格图：我们在可以看到<strong>三号只可侧向二号和四号的性格，而不能侧向五号和七号的性格</strong>。</p>
+<p>一号的侧翼</p>
+<p>偏第九型的第一型：这样的第一型蛮可爱的，他们会比较随和，没有那麽严肃，不会随便地迁怒他人，他们会很放鬆，悠閒地享受生命带给他的乐趣。<br>偏第二型的第一型：偏第二型的第–型会很热心地帮助别人，但也会强迫别人接受他以为好的模式或标准，这时就会变得自我中心，失去理性。</p>
+<p>二号的侧翼</p>
+<p>偏第一型的第二型：此种第二型人会比较理性，有彻底的、细致的计画，比较有条理，有较清晰的目标，具有第一型理想主义及客观中立的特质，不过他们也带有第一型那种刻板、挑剔、原则性强、不乐观的特性。<br>偏第三型的第二型：这样的第二型会变得较为活泼和爱表现，愿意接受别人的帮助，但同时也会带有第三型的自我中心及善于经营的个性。</p>
+<p>三号的侧翼</p>
+<p>偏第二型的第三型：这样的第三型人物好可爱，他们会不那麽爱出风头，愿意帮助别人，感受他人的感受。<br>偏第四型 的第三型：这类的第三型具备第四型那种灵感及创造力，也具有内向、沉静、敏感、情绪化的特质。</p>
+<p>四号的侧翼</p>
+<p>偏第三型的第四型：第三型的活力、外向、目标感强使得第四型变得走出个人的情绪，注意自己的形象及社会共同的规则，也变得更有雄心壮志。<br>偏第五型的第四型：第五型的内向，富有创意，使得第四型变得需要私人空间，创新但会不切实际活力。</p>
+<p>五号的侧翼</p>
+<p>偏第四型的第五型：接近第四型的第五型会变得有想像力、比较感性、忧郁并富有艺术气质。荣格即属于此类性格。<br>偏第六型的第五型：这样的人会很理智、分析能力很强、重视团队、务实，但也有爱怀疑、过分担心的第六型特质。</p>
+<p>六号的侧翼</p>
+<p>偏第五型的第六型：因为倾向于第五型的客观、冷静、严肃，他们比较不会那麽盲目崇拜权威，但容易变得内向、猜疑、自大且富攻击性。<br>偏第七型的第六型：这样的第六型比较爱焦急，能感觉到谁是他事业上的贵人。</p>
+<p>七号的侧翼</p>
+<p>偏第六型的第七型：比较注重团体的利益及协作精神，能够更多地顾及他人感受，更加尽责，但也会有更多的担忧、焦虑。<br>偏第八型的第七型：此类人更看重权力，更喜欢操控别人，具有第八型粗暴、缺乏耐心的性格。</p>
+<p>八号的侧翼</p>
+<p>偏第七型的第八型：这种人将成为九种型格特徵中的最有意志力及最有冲劲的人。他们精力旺盛、善于抓住人心、有强烈的成功欲望、爱冒险、更有主见。<br>偏第九型的第八型：这类人变得很受欢迎，他们很有同情心，喜欢支持体谅别人，大度、宽厚、有耐性。</p>
+<p>九号的侧翼</p>
+<p>偏第八型的第九型：这样的第九型会变得没有那麽畏缩、逃避，他们可以更外向、直接，独立及有决断力。<br>偏第一型的第九型：这样的第九型会变有理想，有秩序，但易受琐碎事情干扰。</p>
+<p><strong>二、关于副型：</strong></p>
+<p>在人类演化的过程中，存在着三种基本的求生存行为，九型人格学理论称之为副型。副型主要包括三种基本的形式，分别是自我保护行为、社交行为和一对一行为。</p>
+<p><strong>自我保存行为</strong>：注意力的焦点主要放在所牵涉个人存活的事情上，比如安全、稳定、舒适、保护及充足的资源等。所有的这些都是为了保证我们能够很好地存活在这个世界上，满足自己日常生活或是更好地生活的需要。他们会努力努力工作积累足够的物质财富才会感觉到一种安全感，才会放心地进入一段婚姻；他们会在家里存储一个周的饭菜以备出现坏天气；周末在家休息的时候，他们会为自己找一大堆的事情做，这样心里才会感觉踏实。</p>
+<p><strong>社交行为</strong>：注意力的焦点涉及的范围会很广，会跟随所有牵涉到生活圈和团体的事物，比如，在团体中的角色与地位、社会接受程度、归属感、参与感及友谊等。你会发现副型为社交的人他们会有忙不完的应酬，经常会出现在各种社交场合中；他们经常声称自己的朋友很多，但你会发现他们口中的朋友很多都仅仅是泛泛之交或仅有一面之缘而已。他们喜欢人多的场合，只有在与人交往的过程中才会感受到自身的价值，沉闷、单调的场合会让他们产生窒息感。</p>
+<p><strong>一对一行为：</strong>注意力更多的是放在有关亲密关系的事务上，比如跟特定的人维持亲密关系、个人魅力、亲密感、结盟及融合等。副型为一对一的人会把关系看的很重要，在他们的一生中很多重大的挫败都来源于关系。到了一种场合中，他们会首先为自己找一个一对一对象并在彼此间建立一种亲密的关系。他们将亲密的关系看的比物质重要的多，对于自我保护型的人而言没有一定的物质保障可能不会很快走入婚姻生活；但一对一的人则会将房子、车子等看的比感情淡的多。</p>
+<p>副型只是一种求生存的方式而言，并没有那种副型更好或那种副型不好之说。这三种副型在每个人的身上都同时存在，只是各自所占的比重不同而已。</p>
+<h1 id="BigFive测试结果"><a href="#BigFive测试结果" class="headerlink" title="BigFive测试结果"></a>BigFive测试结果</h1><h2 id="大五人格极性图"><a href="#大五人格极性图" class="headerlink" title="大五人格极性图"></a>大五人格极性图</h2><iframe width="100%" height="700" src="http://www.apesk.com/bigfive/polar_bigfive.asp?id=818199" style="color: rgb(0, 0, 0); font-family: 微软雅黑; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"></iframe>
+
+
+<h2 id="大五人格柱状图"><a href="#大五人格柱状图" class="headerlink" title="大五人格柱状图"></a>大五人格柱状图</h2><iframe width="100%" height="700" src="http://www.apesk.com/bigfive/column_bigfive.asp?id=818199" style="color: rgb(0, 0, 0); font-family: 微软雅黑; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"></iframe>
+
+
+
+
+
+<h3 id="外倾性"><a href="#外倾性" class="headerlink" title="外倾性"></a><strong>外倾性</strong></h3><p>　　您的得分<strong>低</strong>于平均水平，属于<strong>低外向性。</strong></p>
+<p>　　外倾性(Extraversion)：外向代表了在外界投入的能量。</p>
+<p>　　高外向的人喜欢与人接触，充满活力，经常感受到积极的情绪。他们热情，喜欢运动，喜欢刺激冒险。在一个群体当中，他们非常健谈，自信，喜欢引起别人的注意。</p>
+<p>　　低外向的人比较安静，谨慎，不喜欢与外界过多接触。他们不喜欢与人接触不能被解释为害羞或者抑郁，这仅仅是因为比起高外向的人，他们不需要那么多的刺激，因此喜欢一个人独处。低外向人的这种特点有时会被人误认为是傲慢或者不友好，其实一旦和他接触你经常会发现他是一个非常和善的人。</p>
+<p>　　</p>
+<h3 id="宜人性"><a href="#宜人性" class="headerlink" title="宜人性"></a><strong>宜人性</strong></h3><p>　　您的得分<strong>低</strong>于平均水平，属于<strong>低宜人性。</strong></p>
+<p>　　宜人性(Agreeableness)代表了“爱”，对合作和人际和谐是否看重。</p>
+<p>　　宜人性高的人是善解人意的、友好的、慷慨大方的、乐于助人的，愿意为了别人放弃自己的利益。宜人性高的人对人性持乐观的态度，相信人性本善。</p>
+<p>　　宜人性低的人则把自己的利益放在别人的利益之上。本质上，他们不关心别人的利益，因此也不乐意去帮助别人。有时候，他们对别人是非常多疑的，怀疑别人的动机。对于某些职位来说，太高的宜人性是没有必要的，尤其是需要强硬和客观判断的场合，例如科学家、评论家和士兵。</p>
+<p>　　</p>
+<h3 id="尽责性"><a href="#尽责性" class="headerlink" title="尽责性"></a><strong>尽责性</strong></h3><p>　　您的得分<strong>低</strong>于平均水平，属于<strong>低尽责性。</strong></p>
+<p>　　尽责性(Conscientiousness)：尽责性指我们控制、管理和调节自身冲动的方式。</p>
+<p>　　高尽责的人容易避免麻烦，能够获得更大的成功。人们一般认为高尽责的人更加聪明和可靠，但是高尽责的人可能是一个完美主义者或者是一个工作狂。极端尽责的个体让人觉得单调、乏味、缺少生气。</p>
+<p>　　冲动并不一定就是坏事，有时候环境要求我们能够快速决策。低尽责性的个体常被认为是快乐的、有趣的、很好的玩伴。但是冲动的行为常常会给自己带来麻烦，虽然会给个体带来暂时的满足，但却容易产生长期的不良后果，比如攻击他人，吸食毒品等等。低尽责性的个体一般不会获得很大的成就。</p>
+<p>　　</p>
+<h3 id="神经质"><a href="#神经质" class="headerlink" title="神经质"></a><strong>神经质</strong></h3><p>　　您的得分<strong>高</strong>于平均水平，属于<strong>高神经质。</strong></p>
+<p>　　神经质或情绪稳定性(Neuroticism)：神经质指个体体验消极情绪的倾向。</p>
+<p>　　神经质维度得分高的人更容易体验到诸如愤怒、焦虑、抑郁等消极的情绪。他们对外界刺激反应比一般人强烈，对情绪的调节能力比较差，经常处于一种不良的情绪状态下。并且这些人思维、决策、以及有效应对外部压力的能力比较差。</p>
+<p>　　神经质维度得分低的人较少烦恼，较少情绪化，比较平静，但这并不表明他们经常会有积极的情绪体验，积极情绪体验的频繁程度是外向性的主要内容。</p>
+<p>　　</p>
+<h3 id="开放性"><a href="#开放性" class="headerlink" title="开放性"></a><strong>开放性</strong></h3><p>　　您的得分<strong>高</strong>于平均水平，属于<strong>高开放性。</strong></p>
+<p>　　开放性(Openness)：开放性描述一个人的认知风格。</p>
+<p>　　开放性得分高的人富有想象力和创造力，好奇，欣赏艺术，对美的事物比较敏感。开放性的人偏爱抽象思维，兴趣广泛。开放性的人适合教授等职业。</p>
+<p>　　开放性得分低(即封闭性)的人讲求实际，偏爱常规，比较传统和保守。封闭性的人适合警察、销售、服务性职业等。</p>
+<p>　<br><strong>参见：“大五模型’特质解析表</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>(低N特质)强适应性</strong>安全的、镇静的、理性的、感觉迟钝的、无负罪感的</th>
+<th><strong>活力　　敏感　　易反应</strong></th>
+<th><strong>（高N特质）弱适应性</strong>兴奋的、忧虑的、警觉的、高度紧张的</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="http://www.apesk.com/bigfive/img/zuoyou.jpg" alt="img"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>（低E特质）低社交性的</strong>独立的、保守的、难打交道的、阅读艰难的</td>
+<td><strong>内向　　中向　　外向</strong></td>
+<td><strong>（高E特质）高社交性的</strong>确信的、社交性、热情的、乐观的、健谈的</td>
+</tr>
+<tr>
+<td><img src="http://www.apesk.com/bigfive/img/zuoyou.jpg" alt="img"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>（低O特质）低开放性的</strong>保守的、实践的、有效率的、专业的、有知识深度的</td>
+<td><strong>保守　　温和　　开拓</strong></td>
+<td><strong>（高O特质）高开放性的</strong>兴趣广泛的、好奇的、自由的、追求新奇的</td>
+</tr>
+<tr>
+<td><img src="http://www.apesk.com/bigfive/img/zuoyou.jpg" alt="img"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>（低A特质）低利他性的</strong>怀疑的、攻击性的、坚韧的、自私自利的</td>
+<td><strong>挑战　　调停　　容纳</strong></td>
+<td><strong>（高A特质）高利他性的</strong>信任的、谦虚的、合作的、坦白的、不喜冲突的</td>
+</tr>
+<tr>
+<td><img src="http://www.apesk.com/bigfive/img/zuoyou.jpg" alt="img"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>（低C特质）低道德感的</strong>自发的、无组织的</td>
+<td><strong>灵活　　平衡　　专注</strong></td>
+<td><strong>（高C特质）高道德感的</strong>依附的、有组织的、有原则经验的、谨慎的、固执的</td>
+</tr>
+<tr>
+<td><img src="http://www.apesk.com/bigfive/img/zuoyou.jpg" alt="img"></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="大五模型"><a href="#大五模型" class="headerlink" title="大五模型"></a>大五模型</h2><table>
+<thead>
+<tr>
+<th><img src="http://www.apesk.com/bigfive/img/2-1.jpg" alt="img"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>图2-1 BigFive人格模型</td>
+</tr>
+</tbody></table>
+<p>Noel是一个外向随和，有正义感且情绪稳定、聪明的人。他的兄弟Joel则性格内向、对人不友好、缺乏责任感、情绪反复无常、人亦愚钝。假设要你和另一个人在航天密封舱里待一个星期，你会选择那一个人当自己的同伴呢？答案是不言而喻的。在这个例子中，我们便用了五因素模型的属于对两个人作了描述。可见，人格上的根本差别基本可以体现在这五个维度上。</p>
+<p>图2.1列出的五因素模型又被称为“大五模型”，是一种确定5个最基本的人格维度的系统。这是将Cattell的16因素进一步凝练为5个一般因素的尝试。大五模型回答了关于人格最主要问题：人格的本质是什么？</p>
+<p>大五类因素包括：严谨性、外向性、开放性、宜人性与神经质人格特质。一般记忆为 OCEAN-海洋或NEOAC-独木舟)。O代表Openness to experience （开放性）,C代表 Conscientiousness（严谨性） ，E代表Extraversion（外向性） ，A代表Agreeableness （宜人性），N代表Neuroticism（神经质）。</p>
+<p>神经质因素有时被称为——“情绪不稳定极点”。对于如何解释这些因子存在一些争议比 如Openness,有时被称为“智力”,而不是“开放性”。每一个因素和人类的相关特质相关 联。例如,外向性等相关的素质为寻求gregariousness（群居，聚会）、主张、兴奋、温 暖、活动和积极的情感。</p>
+<p>大五因素模型是一种描述模型的人格,心理学家们已经开发出一批理论证实大五因素模型 。</p>
+<p>初始模型的提出者是雷蒙德（于1961年）,但未能达到学术的高度。1990年,他的五因素模型得到最高水平的组织接受(歌德堡,1993)。大五类人格特征被认为是具有心理学量表基本结构的个性特征因素。这五种因素提供了丰富的概念架构，且整合所有的研究成果和人格心理学理论。大五类特点也被叫作“五因素模型”(或FFM科斯塔和McCrae,1992年),以及全球因素(罗素和Karol人格,1994)。</p>
+<p>目前至少有四套研究人员各自独立研究这个模型的数据,现已鉴定出同样的五大因素:首先Tupes和Cristal,其次是歌德堡在俄勒冈州研究所、美国伊利诺大学的McCrae科斯塔和美国国家卫生研究院。这四套研究人员使用不同的方法找到五个特点,不过每一组的5个因素有所不同的名字和定义。然而,所有研究的总体因素类型是一致的。</p>
+<h2 id="五个关键维度"><a href="#五个关键维度" class="headerlink" title="五个关键维度"></a>五个关键维度</h2><p>如果你需要对两个人做人格方面的比较，不妨尝试按照图2.1中的五个维度对他们进行大概的评估，比较一下两个人在这5个维度上的得分。</p>
+<p>因素1是外倾性，用于评估一个人是内向还是外向；</p>
+<p>因素2是宜人性，得分高者对人友好、有教养且关心他人，得分低者则冷漠、自我中心或对人抱有敌意；</p>
+<p>因素3是责任心，责任心强者一般自律性也很强，工作努力、认真，而缺乏责任心者往往办事马虎，不可靠；</p>
+<p>因素4是情绪稳定性（或称神经过敏倾向），得高分者情绪消极，有神经过敏倾向，多是“坏脾气”；</p>
+<p>因素5是开放性，得高分者聪明，不拘泥于过去的经验，对新思想持开放态度，并努力使自己的修养水平不断提高。</p>
+<p>这种模型的妙处在于，你所能想的所有特质都与这5个因素中的一种有关。如果你正在雇佣一个职员，这5个方面就能让你完全了解对方。这5种特质能告诉我们一个人在各种环境下将如何表现。例如，责任心强的人在工作上一般表现不错，学业成绩优秀，而且很少主动犯错。</p>
+<h2 id="人格特质、一贯风格及情境"><a href="#人格特质、一贯风格及情境" class="headerlink" title="人格特质、一贯风格及情境"></a>人格特质、一贯风格及情境</h2><p>为了预测人们的行为，我们应该关注内在人格特质还是外在的情境呢？事实上，两者都应该考虑。人格特质是相对稳定的，我们已经知道，人格特质能预测如工作表现、危险驾车或成功的职业生涯。但是情境也会显著地影响据我们的行为。</p>
+<p>据个例子：看电影时跳舞很反常，同样，也没什么人会在溜冰时睡觉，或在葬礼上讲不合适的笑话。尽管如此，你的人格特质还是会预测你到底会去读书还是去参加Party，或参加球赛。简而言之，人格特质和情境的交互作用决定了我们到底如何行动。</p>
+<p>现在，很多心理学家都同意这样的观点，即特质和情境之间有着相互作用。特质-情境相互作用决定着人的行为。事实上，外部环境和情境影响着人格特质的表现方式。</p>
+<p>为了说明特质-情境的相互作用，让我们举一个例子：请你想象：你先到教堂，又去了学校，之后去一个集会场所或足球赛场。你的行为会发生什么样的变化？随着环境的改变，你说话的声音可能会越来越大，这种变化说明环境影响着人的行为。然而如果你是一个喜欢安静的人，那么，你在喧哗的环境里仍会比那些喜欢热闹的人显得安静，这说明人格特质也在影响你的行为。</p>
+<h2 id="可怕的完美"><a href="#可怕的完美" class="headerlink" title="可怕的完美"></a>可怕的完美</h2><p>从某一点上来讲，对完美的追求往往能帮助人们取得较高的成就。但是不合实际的高标准以及一种称为“完美主义”的人格特质都会带来消极影响。你可以想象，一个完美主义倾向的大学生总是希望得高分。但是，有些学生过于追求完美导致适应不良，其典型的表现就是学习成绩不好。</p>
+<p>具有不良完美主义倾向的人往往给自己设定种种无法达到的高标准。这使他们觉得自己总是失败。完美主义的职员容易批评自己，害怕犯错误、常常陷入重度抑郁。</p>
+<p>对许多职员来说，过分的完美主义通常源于上司的严厉管理方式，也和从小父母追求完美的教育风格有关。</p>
+<p>中世纪的Navajo人喜欢在错综复杂的地毯上留下一个小小的瑕疵。Navojo织工有意地在每条地毯上都留下错误是为了提醒人们，人类并不完美。这也给我们上了一课：人生没有必要追求完美。经历了一些事以后，你就会对自己的错误感到释然。从长远来看，成功往往基于追求“卓越”而不是“完美”。</p>
+<h1 id="八维"><a href="#八维" class="headerlink" title="八维"></a>八维</h1><p>贻笑大方了兄弟们，我又变intp了。</p>
+<h2 id="中文72题"><a href="#中文72题" class="headerlink" title="中文72题"></a>中文72题</h2><p><img src="https://i.loli.net/2021/03/17/gVTcEPq59ADyXr1.jpg" alt="中文72.jpg"></p>
+<h2 id="中文34题"><a href="#中文34题" class="headerlink" title="中文34题"></a>中文34题</h2><p><img src="https://i.loli.net/2021/03/17/5bzEwIkdV1qcDLG.jpg" alt="中文34.jpg"></p>
+<h2 id="重测"><a href="#重测" class="headerlink" title="重测"></a>重测</h2><p><img src="https://i.loli.net/2021/03/24/ByTcISoEga9rRY6.png"><br><img src="https://i.loli.net/2021/03/24/ncN4Y3HdEUvekz8.png"><br><img src="https://i.loli.net/2021/03/25/7btm6xq83BArVK5.png"></p>
+<h2 id="中英文40题"><a href="#中英文40题" class="headerlink" title="中英文40题"></a>中英文40题</h2><p><img src="https://i.loli.net/2021/03/25/jnmLXHvPbQVB62i.png" alt="2021.3.25重测"></p>
+<iframe width="100%" height="600" frameborder="0" scrolling="no" src="http://www.apesk.com/mbti2/rongge/column_rongge_base.asp?id=140128" style="color: rgb(0, 0, 0); font-family: 微软雅黑; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"></iframe>
+
+
+
+<p>得分第1是：Fi - 内倾情感（20）功能运用：总是</p>
+<p>得分第2是：Ti - 内倾思考（17）功能运用：总是</p>
+<p>得分第3是：Ne - 外倾直觉（16）功能运用：总是</p>
+<p>得分第4是：Ni - 内倾直觉（16）功能运用：总是</p>
+<p>得分第5是：Fe - 外倾情感（15）功能运用：经常</p>
+<p>得分第6是：Se - 外倾感觉（12）功能运用：经常</p>
+<p>得分第7是：Si - 内倾感觉（12）功能运用：经常</p>
+<p>得分第8是：Te - 外倾思考（10）功能运用：有时</p>
+<h3 id="八维功能形象化定义"><a href="#八维功能形象化定义" class="headerlink" title="八维功能形象化定义"></a>八维功能形象化定义</h3><p>Si 已被认可的知识、规则、秩序，包括社会规则、社会道德、社会认可的知识（专家说）、自己储存认可的知识、记忆、规则、信念。可以理解为存储的信息是一座按规则堆积的山，可以按存储规则去精准提取</p>
+<p>Se 从参与外部世界获得的体验</p>
+<p>Ni 在时间线上对趋势的预测，忽略自己认为次要的信息，用主观重要信息采用不完全归纳法推理预测。可以理解为储存的信息在一个水平面中，而Ni就是在水面上按自己的规则瞬间移动的提取机。</p>
+<p>Ne 对可能性的思考，由点到片，认为一个知识是一点，那么Ne会将这点作为圆心画一个园，周边的面积就是对各种可能性的推测。存储的信息是一个水平面，在提取的时候是在某一点之上动态组成片并成片提取</p>
+<p>Ti 演绎推理，更重视自己的理论架构推理，不考虑外界实际情况，倾向于从逻辑上判断是否符合自己的完美准则。认为事物的规律都必须符合自己的先验逻辑</p>
+<p>Te 分类处理，主要作用于外部事物的物理结构，用逻辑思维处理外部世界，有些时候逻辑处理可能不完备但会符合现实情况。认为事物的规律是现场分析发现的</p>
+<p><strong>我的：****Fi 从自身价值和信念进行判断，一般喜欢考虑：我是不是喜欢，我觉得怎么样。即使别人黑心欺负但只要自己YY认可就挺好</strong></p>
+<p>Fe 分析判断人际关系，一般考虑最多的是这样做会多其他人造成什么样的影响，再判断自己是否接收，所以很容易导致为了让他人开心而委屈自己的情况。一般政客必备 Fe，否则会死得很惨，所以在有些书中会写 ENTP 能做政客，INTJ 要做政客必须具备充足的社会经验</p>
+<h3 id="附：网友缭绫的理解"><a href="#附：网友缭绫的理解" class="headerlink" title="附：网友缭绫的理解"></a>附：网友缭绫的理解</h3><p>Te的对象是事，它让人让社会更有效更快捷的组织生产生和工作，Te的发动前需要先有非常明确的目的性，明确截止时间，明确效果，发动时需要充分调用身边的人，资源，时间。以效益，经济，效率为原则组织，计划，明确先后次序。惯用工作簿，日程表，表格。计划完成后，不仅坚决按计划执行，而且跟据实计情况，作出评估和调整，以确保最终目标的实现。</p>
+<p>Fe让人拥有良好的人际关系，将自身的存在的价值依附于对某些团体，某个人，对弱势群体的无私奉献，当团体不和睦时会觉得不舒适，弱者受到不公待遇时会觉得很无助。那些认为生命存在的价值是人与人情感间联系和依附的人会觉得Fe很重要。Fe产生依附和归属感。 使用Fe的时候要使用换位思考，注意力作用于别人身上，而非以自我为中心，去切身体会别人的感受，尽自己的力量让别人满意，使环境和谐，以完善别人的方式，让自己的生命更有价值。</p>
+<p>Ne让人以事物的本质属性为基础进行发散思维，凡事想到可能性。 Ne的加强需要努力看到事物的本质属性，并对其进行创新思维，包括加，减，乘，除，类比，比喻，夸大，打破传统和惯例后的对可能性的演绎，对冷笑话的解读和幽默是Ne的产物。</p>
+<p>Se多用五感去感知世界，留心细节的东西，注意留心色彩，形状，数字，人的衣着，外貌特征，并将其记住，学着模仿别人和表演，多多参与各种体育运动，并享受其中，尝试将看到的记忆画下来，色彩要尽量艳丽。 可以参加一些惊险刺激的项目，比如做个蹦极啊，过山车之类的。</p>
+<p>Ti的对象是物，化繁为简，将纷繁的事物中，洞察出事物的原因和根本属性，总结出普世的规律，分析，分析再分析，直至得到公理。 Ti加强：将自己从当前环境中抽离，打破砂锅问到底，为什么！为什么！到底是为什么！即使得到世人都认为的是正确的经验，都不罢休，敢于突破，敢于思考，坚持深挖到底，甚至精炼出普世模型。</p>
+<p><strong>我的：****Fi分为三个阶段，一是喜好和情绪，二是良知，三是爱和价值观。 第一阶段：明白自己喜欢什么，不喜欢什么，尽己所能让自己活的开心，体验自己的生命。 第二阶段：明白什么是想做的，什么又是不应该做的，什么是自己的底线。 第三阶段（Fi加强）：明白哪些东西是自己最想得到的，哪些人是自己最珍视的，为了得到这些对自己重要的东西，哪些东西可以舍弃，哪些可以不在乎，哪些可以一笑而过。</strong></p>
+<p>Ni：这是一种非常神奇的功能，让人在不用分析的情况下直接接近真相，甚至得到真相。 强化方法未知。 个人觉得以下这种方法应该可行，多多看历史方面的书籍，以史为鉴，平时多多关心时事，政治，经济，军事的方面的动态，将这些东西捏成一个大的系统，以系统化的方式联系，发展，变化地看待问题，类似于求极限的方式推断历史的走向，预测未来的变化(未来是确定的，而不是可能性)。 还有个方法就是准备应急预案，对于低可能性的事情做好应急计划，可以说是运筹帷幄，也可以说是未雨绸缪。 Ni会认为事情的发展在大体趋势上是确定的，不确定的是一小部分，与宿命论不同的是，它鼓励我们去争取那可以改变的部分。</p>
+<p>Si：这是国人最不缺乏的一种功能，俗话说，谎话说多了就成真话了，说的就是Si。 实现这个功能的方式很简单，就是别人做什么，我也做什么，别人不做什么，我也不做什么，别人说什么，我就信什么，我昨天这么做，今天这么做，明天也这么做，完了。。。 Si需要强化的地方有，从过去成功和失败中得到经验和教训，让下一次行动得到成功。从规范和法律法规中得到限制和依据，少走弯路。</p>
+<h3 id="【SE与SI不同在哪里？】"><a href="#【SE与SI不同在哪里？】" class="headerlink" title="【SE与SI不同在哪里？】"></a><strong>【SE与SI不同在哪里？】</strong></h3><p>1、<br>先说一点我对SE的理解，诚然SE在各种书籍中已经作为了细节的代名词，这里存在一个误解，因为SE不会像NE一样用各种类比之类，或者借用抽象的概念来整体的表达他们的所想到东西，他们能说的也就是那些细节的东西，然后由这些细节，指望对方能清晰的重新构建出他们所感受的到那些感觉，在他们看来只有这样才是最好的表达。<br>如同NE重的是发散一样，SE重的是感受。风吹过脸，NE可能联想到母亲的温馨以及其他等等，SE无法做此类描述，他们的感觉就是那种感觉，美妙，舒服，除非是感觉迟钝的SE才会用这样的词来描绘这种感受，因为如此粗糙的描述，可以涵盖对于SE比较强的人来说众多微妙而又不同感受，所以对他们而言，直接的细节的描绘反而是最佳的标签。对于SE强的人而言，风吹过脸是一种感受，母亲的叮咛又是一种感受，他们对每种感受都可以做清晰的区分。他们的感受是整体的，不是单个的颜色是什么，不是都有哪些物品，而是所有东西的组合，甚至位置的不同，给他们的感觉也完全不一样。SE而言，即是细节的，因为他们的感受那么的细分，多如牛毛的浩瀚，又是那么的整体，所有五感感受的信息综合定位后的结果。<br>有人认为关于如何培养SE的方式是记住细节，我觉得那是SI才会做的事情，用这种方法是没有办法提高SE的。要提高SE，只需要融入环境即可，体验到那种感觉，也就瞬间洞悉，调用感受，那些的细节自然清晰呈现。每个维度，都是一个独立而美妙，纷繁而复杂的世界。<br>曾经一个SI八维测试高达50+的人说，SI的世界观就是这个世界由各种规则组成的。 只是他们的众多规则的一类，有些人可能只会用相关的规则，但是他们的规则也是五花八门，有社会的规则，心理学的规则，也可以有物理的规则，哲学的规则（比如易经的规则？当然前提是他们确信这些）。培养SI的方式就是发现规则，可以的话，他们甚至可能去创造规则（当然，这只可能是他们发现没有任何规则能指导他们的时候）。<br>SI跟TE的不同之处在于，TE重视的是效率，当然也会发现他们在利用规则，不过这些规则是在他们TE效率的大棒指挥下筛选后的规则，因此，TE+SI的人是非常可怕的事务策划执行机器。</p>
+<p>2、<br>我谈一下自己对Se和Si的理解。<br>对于红色的描述。<br>Se的人会描述成：猩红，洋红，鲜红，精确的将颜色再现出来。–精准，细节。<br>Si的人会描述成，红的很温馨，暖暖的感觉。–注重内在体验，勾起回忆.<br>个人认为，只要没有转化为内部感官的S就不算是Si，而是Se，我曾经问过同事如何记忆东西，他说，他记忆完的东西在大脑里面会精准地以文字的形式再现出来，而不是内感官再现的方法，这样的细节应当也属于Se的范畴（个人观点）.<br>但是身临其境的感官体验肯定是Se</p>
+<p>Se，Ne，Si，Ni的理解。<br>对于Se的人来说，会将题解的每个字母，每个数字全背出来，做了这题，就只是会这题。<br>对于Si的人来说，会将数学的公式背出来，下次要用的话，代入。<br>对于Ne的人来说，会将题解在哪一本书，大致哪页上面记住，用到的时候再翻。<br>对于Ni的人来说，不会拘泥于那种方法，到时候创新一种解法，解决问题。</p>
+<p>再说下Si的理解，SI的世界观就是这个世界由各种规则组成的，各种规则，各种条条框框，包括，法律，道德，潜规则，公司或者学校的各种规章制度，不能违反。Si＋Te的人看似是策划执行机器，但是在规则的束缚下，显得很呆板，很固执，很保守，不能接受新的方式。固很不推荐，全都限定死了。</p>
+<p>3、<br>呵呵，我来完整说下我对SE SI的理解吧。<br>SESI只是一个符号，要理解它们，只需从概念下手，结论就很清楚了。<br>E是自我对外界的依附，根据外界来改变自己。<br>I是外界随自我而改变，改造外界来适应自我。<br>在这种情况下，SE就是根据外界来改变自己的感觉。经常看到一句话是说，SE就是个人与环境保持一种和谐的同步。这句话已经很清楚的说明了SE，SE是将自己与周围环境合为一体，因此它们的记忆不是单单说一个身体的反应，而是整个环境，其中包括身体的反应。每一个环境中，身体都会自然的做出各种反应调整的。比如上课的时候的状态，下课的时候的状态，我们的记忆完全的将身体的各种感受与环境的气氛状态结合起来了。当一个人在调用SE的时候，往往就是场景化的，他的各种感受各种状态，与之对应的各种人物很容易的关联起来了。（比如说，某人穿了件白衣服，让他显得更绅士，而我最喜欢这种类型，激发起我的心跳。于是当我回忆起来的时候，你会发现我的描绘栩栩如生，这就是这种整体记忆的结果）<br>再说下SI，SI是外界适应自我的感觉。这句话比较难以理解，每一个I的功能必然需要一个自我，有了这个自我才可能让环境适应它，因此，作为感受来讲，SI就是一个自我作为观察者旁观，脱离了环境进行观察收集信息。他们收集的东西都是经过抽象的，因为这是自我的语言。就比如说一个苹果，SI的记忆就不是现实的某一个苹果，而是一个抽象概念的苹果。因此SI你可以看做是一本书，虽然语言栩栩如生的描述了一个场景，但是依然是文字描述。SI构建的就是一个图书馆，他们不仅仅有自己的记忆，还有别人哪里学习的记忆。<br>因此我们可以看出，两个功能都可以提供一个比较准确的场景还原，SE提供的视角型的记忆，他们的讲述真实而生动，但是可能有他们的盲区。SI则是上帝型，他们可以根据各种修正后，提供完整的画面，但是有某种程度的扭曲，因为感受经过了语言转换。</p>
+<h3 id="【八种功能间的相生相克】"><a href="#【八种功能间的相生相克】" class="headerlink" title="【八种功能间的相生相克】"></a><strong>【八种功能间的相生相克】</strong></h3><p>接下来说下各功能的规律：<br>1）相互促进的有：<br>内向的感知和外向的判断（比如NiFe）<br>外向的感知和内向的判断（比如SeTi）<br>不同类的内外判断(比如TeFi)<br>不同类的内外判感知（比如NeSi)<br>2）相互克制的有<br>同类的感知（Ni和Ne，Se和Si）。<br>同类的判断（Te和Ti，Fe和Fi）。<br>所有外向功能之间（Te，Ne，Se，Fe），如果没有内向功能做跳板的话。<br>所有内向功能之间（Ti, Ni,Si，Fi），如果没有外向功能做跳板的话。<br>3）使用相互促进的功能，人会觉得很愉悦，心里很健康，使用相互克制的功能，人会觉得很纠结，做出出格的事情。</p>
+<p>举例说明，Te的发动：<br>克制的功能有Ne，Se，Fe，Ti，促进的有Ni，Si，Fi。<br>Te是以逻辑的方式系统的规划要做的事情。<br>如果一直在空想（Ne），想到哪里做哪里（Se），如果我这么决定别人不开心怎么半（Fe），就永远无法按照规划做事情。<br>所以要发动Te，特别是外向能量不足的话，可以先考虑想象一下未来会发生什么(Ni），参考过去是怎么做的（Si），我心里真的有多喜欢这件事情，想把把它完成（Fi）。<br>这样我们就知道什么时候要发动什么功能，怎么发动了。</p>
+<p>有一次我工作的时候某个任务发生问题，领导问我：XXX，你这件事情怎么没办好啊（他用Ti）。我回答的是：哦，我会用XXXXX的办法去补救，半小时后给你。（Te）成功运用Te和Ti相克的原理解决问题。</p>
+<h3 id="【16型各自的阳面性格和阴面性格】"><a href="#【16型各自的阳面性格和阴面性格】" class="headerlink" title="【16型各自的阳面性格和阴面性格】"></a><strong>【16型各自的阳面性格和阴面性格】</strong></h3><h4 id="1、前四项为该人格类型的阳面，后四项为该人格类型的阴面。"><a href="#1、前四项为该人格类型的阳面，后四项为该人格类型的阴面。" class="headerlink" title="1、前四项为该人格类型的阳面，后四项为该人格类型的阴面。"></a>1、前四项为该人格类型的阳面，后四项为该人格类型的阴面。</h4><p>ESTP — 创业者 Se Ti Fe Ni Si Te Fi Ne<br>ESFP — 表演者 Se Fi Te Ni Si Fe Ti Ne<br>ISTJ — 检查者 Si Te Fi Ne Se Ti Fe Ni<br>ISFJ — 保护者 Si Fe Ti Ne Se Fi Te Ni<br>ENTP — 发明家 Ne Ti Fe Si Ni Te Fi Se<br>ENFP — 奋斗者 Ne Fi Te Si Ni Fe Ti Se<br>INTJ— 策划者 Ni Te Fi Se Ne Ti Fe Si<br>INFJ— 劝告者 Ni Fe Ti Se Ne Fi Te Si<br>ESTJ — 监督者 Te Si Ne Fi Ti Se Ni Fe<br>ENTJ — 陆军元帅 Te Ni Se Fi Ti Ne Si Fe<br>ISTP — 手艺者 Ti Se Ni Fe Te Si Ne Fi<br>INTP — 建筑师 Ti Ne Si Fe Te Ni Se Fi<br>ESFJ — 供应者 Fe Si Ne Ti Fi Se Ni Te<br>ENFJ — 教导者 Fe Ni Se Ti Fi Ne Si Te<br>ISFP — 创作者 Fi Se Ni Te Fe Si Ne Ti<br>INFP — 化解者 Fi Ne Si Te Fe Ni Se Ti  </p>
+<p>所有的功能均在不同的人格类型中扮演着各自的角色。类型代码的作用就是让你知道在不同的类型中，各种功能分别扮演着何等角色。这就是所谓的“动力类型”。也就是我们所说的“功能等级”：主导功能，辅助功能，第三功能和劣势功能。这些内容在下面会有进一步的解释以助你加深理解。通常情况下我们主要依靠两种功能，一种用来收集信息，另一种用来组织所获取的信息。当我们对此更深入观察时，会发现一种功能占主导地位而另一种起辅助作用。<br>事实上，我们能够使用所有这八种功能，只是另外六种常常居于幕后，起着不同的作用。每种方式都可能被积极或消极地呈现。当我们运用不同方式时，也就是在向不同的方面投入精力。</p>
+<p>各种功能的使用可以拿一个模型（下面的表格）来描述。主导功能，相当于我们的头脑——我们的领导。辅助功能被比做我们的右手，帮助我们实现头脑的想法。第三功能，或替补队员是左手，起替补作用。双足则代表我们的劣势功能，那位梦想远大的龙套演员。它常常是我们努力想要做好，却不知该如何努力的方面。</p>
+<h4 id="2、人格类型的阳面"><a href="#2、人格类型的阳面" class="headerlink" title="2、人格类型的阳面"></a>2、人格类型的阳面</h4><p>人格类型的阳面是我们首要运用的四种功能。不同的功能会在我们生命中的不同阶段出现与发展。在不同的阶段，我们会更活跃地应用对应的功能，并发现可以几乎毫不费力地应用它。我们会发现自己的兴趣逐渐转移，从过去吸引我们的事物上移开。</p>
+<p>主角（主导功能）<br>主导功能通常是我们在童年期即已发展出的功能。我们会倾向于首先运用它，指望它来解决我们的问题，帮助我们成功。这是我们最值得信赖和最常使用的功能，通常是相当成熟完善的。尽管多数情况下我们是在自然而然、毫不费力地运用它，我们也可以更有意识地去掌控它。运用主导功能所需投入的精力极少。正如电影中的主角所起的作用那样，主导功能的运用能够令我们摆脱困境。然而，有时我们也会过分依赖主导功能，变得过于傲慢自大。此时它主要起消极作用。<br>配角（辅助功能）<br>辅助功能帮助我们自身的作用正如我们帮助他人。一旦我们能够熟练地运用主导功能，让作为配角的辅助功能来发挥作用会让我们更感舒适。当状况良好时，恰似合适的家庭环境有利于孩子成长。若状况不佳，则可能是主角过于强大而使得配角不能很好地发展，而非起到促进作用。当主导功能外倾时，对应的辅助功能是内倾的。当主导功能内倾时，外倾的辅助功能是我们与外界打交道的方式，会是活跃而易于被觉察的。</p>
+<p>替补队员（第三功能）<br>替补队员为我们提供了恢复自我的途径。是配角的替补，并经常与配角共同协作。在我们年轻时，若不是情非得已，配角不能很好地完成任务，可能并不会有力地运用它。通常，在成人初期我们会被替补队员的活动吸引。第三功能通常是我们发挥创造力的途径，会在我们像孩童般嬉戏时出现。在最糟的情况下，这是我们表现出幼稚行为时运用的功能。此时它稳定性不佳，会令我们自己与其他人偏离常轨。</p>
+<p>龙套演员（劣势功能或第四功能）<br>龙套演员通常在我们中年以前并未发展。我们通常是先遇到它在跟我们捣乱，作为我们的内心的命令、恐惧及其他负面情绪出现。此类恐惧是劣势功能在发挥作用的体现，而我们常常在此时并不会成熟地去对待它。在龙套演员登场时，我们常常要投入相当多的精力——即使是在我们掌握了调配它的技能以后。一旦我们学会去信赖并发展它，龙套演员能够成为平衡我们生活的桥梁，连通我们的目标、灵感、理想。</p>
+<h4 id="3、人格类型的阴面"><a href="#3、人格类型的阴面" class="headerlink" title="3、人格类型的阴面"></a>3、人格类型的阴面</h4><p>剩下的四种功能，处在我们意识的边缘，常常隐身在黑暗中，不会主动出现。它们常常会带给我们负面影响，然而，若我们愿意，同样可以将它们纳入觉知中，发挥它们的积极作用。</p>
+<p>对手（第五功能）<br>对手通常是让我们感到棘手的——无论何事发生，都拒绝“加入”我方阵营。我们或许可以通过有意让它上场来发展它，但通常可能并不会给它太多的戏份，要让它发挥自如也得投入我们更多的精力。从积极方面来讲，对手是主角的影子，它的存在是对主角的丰富，帮助我们更持久地追求目标。</p>
+<p>批评家（第六功能）<br>批评家使我们能够找出弱点，打压别人。当别人运用它来对付我们时，我们就知道它是咋起作用的了。这一位常常在我们遭遇重大危机、顶着极大压力时，才登台表演。若我们愿意，可以让它继续留在台上。若要发挥它的积极作用，我们必须学会欣赏它，留一席之地给它。如此，它会拥有神奇的品质，带给我们深刻的智慧洞见。</p>
+<p>骗子（第七功能）<br>骗子会愚弄我们，让我们以为某些事情是重要的或值得关注的。它的意见通常被认为是不可信或不值得被关注的，若我们当真了，倒是会形成错觉或做出错误的决定。此时我们会发现自己陷入两难境地，左右皆非。尽管如此，它也有积极面，能以滑稽来助我们减压，教我们自嘲。如此，它可以为我们服务，在我们恢复精力时发挥作用。</p>
+<p>魔鬼（第八功能）<br>魔鬼通常不干好事儿。当它出现时，可能会让我们自毁毁人。受它影响作出的行动（或不作为）往往会令我们事后悔恨。通常，我们并不知道如何有意使用它，感觉它多半是在我们毫无觉察的情况下突然爆发的。话虽这么说，若我们心胸够宽广，魔鬼也可以改变阵营，倒戈投诚。这时它会成为有创造性的力量，带来新生——恰似将柠檬榨成柠檬汁，使我们不必抱怨柠檬的酸涩。</p>
+<p>自我完善<br>要知道，我们有能力运用所有这些功能并熟练掌握它们。熟能生巧。在生活中，我们会主要倾向于发展人格类型中的阳面。但环境可能会强化它，也可能会阻碍它的发展。因此，即使是人格类型完全相同的人，在各自不同的成长道路中，他们的功能发展也会有相当大的差别。</p>
+<h3 id="【八维功能间的内在关系——从“INFP的违和感”说到“以INFJ为例解读8维关系”】"><a href="#【八维功能间的内在关系——从“INFP的违和感”说到“以INFJ为例解读8维关系”】" class="headerlink" title="【八维功能间的内在关系——从“INFP的违和感”说到“以INFJ为例解读8维关系”】"></a><strong>【八维功能间的内在关系——从“INFP的违和感”说到“以INFJ为例解读8维关系”】</strong></h3><p>0、从“INFP的违和感”说起<br>“为什么infp会给人一种违和感，便是这个原因，因为他们与外界交流的判断功能是不稳定的第四功能（INTP的第四功能也才是与外界交流的判断功能）， 他们的与他人(外在客体）联系的选择与判断的功能不稳定， 所以，他们也给人一种不稳定感（当然只是一种给外在客体的感觉）， 虽然他们的内心并不如此。”——《Fe的终极解释》by aftersun</p>
+<p>1、<br>以上是一段精妙的论述——深刻地体现了八维功能的“辩证感”——不断地使用对立统一的方式来解释一个人的性格特征……</p>
+<p>遗憾的是，我们对于“感知”和“判断”的区分常常受到经验的干扰，从而就近做了断言。我们没能真正地去体会那个过程。<br>比如，INFJ的Ti，强到了什么程度？显然是永远不可能追上Fe的。Ti到底是和Fe一起共同服务于主导功能Ni（A），还是说Ti和Se一起，是被优势功能压制的劣势功能(B）？<br>——荣格看重主导功能，可能会支持解释A；迈尔斯看重“感知”与“判断”的组合，可能会支持解释B。</p>
+<p>2、<br>我曾经以为：作为一枚INFJ，黑暗面呢Se意味着偶尔出现的暴力倾向，Ti则是我们外表比较冷静的来源——一种逻辑思考的支持。</p>
+<p>如果我们从头开始看我们就会明白我们所谓的“功能”是从哪里来的。<br>功能是统计最大值，而非一个假想的存在，当且仅当以个人为研究对象时说功能才有意义，否则我们就是在点八盘菜——给我来一盘Ti吧！……</p>
+<p>Ti、Se这种设定对INFJ来说的意义是:<br>T、S是INFJ的劣势功能，如果想要这些功能不是那么差的话，就发展一下Ti、Se吧。<br>（因为从方向上讲它们与Ni、Fe不矛盾）</p>
+<p>3、<br>MBTI的发展史像极了数的扩张史：<br>自然数阶段（简单易懂）：荣格区分了两种态度和四种功能，提出了八种类型的人（不是八种功能）；<br>有理数阶段（描述清楚了）：迈尔斯补充了辅助功能（分数），感知和判断组合了起来；<br>实数阶段（有点费解）：补充了三四功能（无理数）；<br>复数阶段（玄之又玄）：补充了剩下四种影子功能（虚数）。</p>
+<p>正如我们在正常状态下只需要有理数，我们也只需要主导功能和辅助功能。<br>抛开影子功能不谈，第三第四功能到底是弱项还是潜在的强项？<br>换句话说，INFJ的Ne强一点还是Se强一点？<br>结论就是，INFJ的Ti、Se只是虚设，跟无理数的地位差不多。<br>真的逼迫着要使用T时INFJ仍旧很难过。</p>
+<p>4、<br>于是我们谈到八维功能的四种关系（以INFJ为例）：<br>Ni、Ne，功能相同，方向相反；<br>Ni、Se，功能相反，方向相反；<br>Ni、Ti，功能相斥，方向相同；<br>Ni、Fe，功能相斥，方向相反。</p>
+<p>5、对于上面问题的解答<br>我首先假定MBTI里的描述都是表象，而八维是内在机制。<br>然后就有了四种基本功能，每个人都有，就是Pi，Pe，Ji，Je。在我这儿就是Ni+Fe+Ti+Se。<br>以INFJ为例，Ni、Fe是先天强大的，而Ti、Se先天较弱，需要后天培养训练。<br>而影子功能就是后面四个：Ne、Fi、Te、Si只是虚设。就跟虚数差不多，我们正常情况下不可能碰到。<br>于是有的INFP就说，我也会考虑别人的感受，那我是不是有Fe？我就会说，不是——因为Fi不光是对内使用的，Fi也可以了解别人的感受，但是间接的。</p>
+<p>于是关键部分来了，Fi@I，代表Fi作用于自己，Fi@E代表Fi作用于别人。其中I和E代表作用对象，i、e代表作用方式。<br>于是我们问，一个ENTP一个人在一起的时候，他是在用Ne还是Ti呢，按照原有的理论，他应该是用Ti，但我们说这是错的，他只是Ne+Ti@I而已，也就是Ne@I和Ti@I。<br>为什么这么麻烦地表示？因为你跟大家在一起时我们仍然能认出你是INTP而不是ENTP，你不是光表现Ne，你是在Ti的基础上用Ne。你是Ti@E且Ne@E。</p>
+<p>于是Xi@I，Xe@E是一种顺畅的感觉，直接作用；<br>Xi@E，Xe@I是一种别扭的感觉，间接作用。</p>
+<p>i、e作为作用方式来说，定义是什么呢，我们说：<br>i——历时性形态；e——共时性形态。</p>
+<p>“先有结构后有功能”的原则：<br>每个人都有四种功能，而结构就是其序列。　　<br>比如IJ的结构就是：Pi Je Ji Pe。前两个是先天较强，后两个需要后天训练。<br>然后我向里面填空，如果第一个填了Ni，第二个填Fe，后面的就定了。<br>Te没法被填进去。 所以INFJ没有Te。</p>
+<h1 id="辩证思维测试"><a href="#辩证思维测试" class="headerlink" title="辩证思维测试"></a>辩证思维测试</h1><p><img src="https://i.loli.net/2021/03/17/WoxEtkU8DdZr6fh.png" alt="辩证思维测试.png"></p>
+<h1 id="文化思维测试"><a href="#文化思维测试" class="headerlink" title="文化思维测试"></a>文化思维测试</h1><p><img src="https://i.loli.net/2021/03/17/EJeOZ7xPFfawSDG.png" alt="文化思维测试.png"></p>
+<h1 id="其他小测试"><a href="#其他小测试" class="headerlink" title="其他小测试"></a>其他小测试</h1><p><img src="https://i.loli.net/2021/03/17/5ceUb3z6faCPxy9.png" alt="写手.png"></p>
+<p>立足现实，又常常用细节让读者会心一笑或是引起他们的共鸣，情趣十足。</p>
+<p>立足现实，讽喻，描写，重视情怀。</p>
+<p>赏阅小说的方式比较经典传统，用画面展现内心的真实情感，同时张弛有度，不会让自己过分陷入情感的漩涡中。比较中意散文的感觉，温婉富有情调是IDER比较常见的特征。</p>
+<p>IDER型的创作者温和地围绕着真情实感施展自己的才华，他们的文字富有韵味，很容易令读者代入自己描绘的情景。他们无论什么时候都能保持对实在的人和事的关注，立足于此演绎出自己的趣味。对读者的专注力提出太高的要求在IDER型写手眼里是显得有些刻板而不近人情的，他们更期待读者对自己丰富的细节有足够的理解力；IDER型写手不喜欢过分虚构或超前的点子，体验是他们眼里的文字的首要意义。</p>
+<h1 id="第二步测试-INFP"><a href="#第二步测试-INFP" class="headerlink" title="第二步测试-INFP"></a>第二步测试-INFP</h1><p><img src="https://i.loli.net/2021/03/25/JA41DTxSWY5nimV.png"></p>
+<p><a target="_blank" rel="noopener" href="http://mebilychen-media.test.upcdn.net/doc/%E7%A2%B3%E7%B4%A0%20-%20%E8%8D%A3%E6%A0%BC%E7%AC%AC%E4%BA%8C%E6%AD%A5%E5%9F%BA%E6%9C%AC%E6%8A%A5%E5%91%8A.pdf">基本报告</a><br><a target="_blank" rel="noopener" href="http://mebilychen-media.test.upcdn.net/doc/%E7%A2%B3%E7%B4%A0%20-%20%E8%8D%A3%E6%A0%BC%E7%AC%AC%E4%BA%8C%E6%AD%A5%E8%A7%A3%E9%87%8A%E6%80%A7%E6%8A%A5%E5%91%8A-%20%E6%AF%94%E8%BE%83%E7%BA%AF%E7%B2%B9%E7%9A%84INFP.pdf">解释性报告-比较纯粹的INFP</a><br><a target="_blank" rel="noopener" href="https://www.apesk.com/mbti_step2/common2report/mbti1_report_admin_get_id.asp?id=244909&grhr=gr">点击这里查看</a>MBTI基本分析报告<br><a target="_blank" rel="noopener" href="https://www.apesk.com/mbti_step2/common2report/mbti2_report_admin_get.asp?id=244909&grhr=gr">点击这里查看</a>MBTI解释性报告。<br><a target="_blank" rel="noopener" href="https://www.apesk.com/mbti_step2/common2report/mbti1_report_love.asp?id=244909&grhr=gr">点击这里查看</a>爱情分析报告。</p>
+<h1 id="统计分析"><a href="#统计分析" class="headerlink" title="统计分析"></a>统计分析</h1><p><img src="https://i.loli.net/2021/03/25/tKTf8jLunJiIsZW.png" alt="分析1"></p>
+<p><img src="https://i.loli.net/2021/03/25/TG4V7YI1Ly2n95s.png" alt="分析2"></p>
+<p><img src="https://i.loli.net/2021/03/25/jeqMnAPViKcwW7b.png" alt="Ne Fi Ti Ni"></p>
+
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读-------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/zh-cn/1744">INF/TP + 5万4 + BigFive+八维</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2021年03月14日 - 23:23</p>
+ <p><span>最后更新:</span>2021年03月30日 - 13:42</p>
+ <p><span>原始链接:</span><a href="/p/zh-cn/1744" title="INF/TP + 5万4 + BigFive+八维">https://mebilychen.github.io/p/zh-cn/1744</a>
+    
+ </p>
+ <p><span>许可协议:</span>cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E5%B0%8F%E5%B0%8F%E7%9A%84%E4%B8%80%E5%8F%AAINF-TP/" rel="tag"><i class="fa fa-tag"></i> 小小的一只INF/TP</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/zh-cn/92df" rel="prev" title="关于光遇...和UT">
+      <i class="fa fa-chevron-left"></i> 关于光遇...和UT
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/zh-cn/1897" rel="next" title="关于毕设的一些...脑洞 ">
+      关于毕设的一些...脑洞  <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B0%83%E5%81%9C%E8%80%85%E4%BA%BA%E6%A0%BC"><span class="nav-text">调停者人格</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%80%9C%E8%B0%83%E5%81%9C%E8%80%85%E2%80%9D-%E4%BA%BA%E6%A0%BC"><span class="nav-text">“调停者” 人格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E4%BB%AC%E7%9F%A5%E9%81%93%E8%87%AA%E5%B7%B1%E6%98%AF%E8%B0%81%EF%BC%8C%E4%BD%86%E4%B8%8D%E7%9F%A5%E9%81%93%E8%87%AA%E5%B7%B1%E8%83%BD%E6%88%90%E4%B8%BA%E8%B0%81"><span class="nav-text">我们知道自己是谁，但不知道自己能成为谁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AC%E5%BE%88%E5%A4%9A%E4%BA%BA%E8%AF%B4%EF%BC%8C%E5%AF%B9%E5%BE%88%E5%B0%91%E4%BA%BA%E8%AE%B2"><span class="nav-text">听很多人说，对很少人讲</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MBTI%E6%95%B0%E6%8D%AE"><span class="nav-text">MBTI数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AA%E6%80%A7%E7%89%B9%E5%BE%81"><span class="nav-text">个性特征</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B%E6%8F%8F%E8%BF%B0"><span class="nav-text">类型描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E6%8F%8F%E8%BF%B0"><span class="nav-text">其他描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%BC%E5%90%88%E6%8F%8F%E8%BF%B0"><span class="nav-text">综合描述</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A4%E7%9F%A5%E5%8A%9F%E8%83%BD"><span class="nav-text">认知功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E5%AF%BC%E5%8A%9F%E8%83%BD"><span class="nav-text">主导功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%85%E5%8A%A9%E5%8A%9F%E8%83%BD"><span class="nav-text">辅助功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E5%8A%9F%E8%83%BD"><span class="nav-text">第三功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E5%8A%9F%E8%83%BD"><span class="nav-text">第四功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9A%90%E8%97%8F%E5%8A%9F%E8%83%BD"><span class="nav-text">隐藏功能</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C"><span class="nav-text">工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%89%E8%B6%A3%E7%BB%86%E8%8A%82"><span class="nav-text">有趣细节</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NF%E5%9E%8B"><span class="nav-text">NF型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#24%E7%A7%8DINFP"><span class="nav-text">24种INFP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%88%B1%E6%83%85"><span class="nav-text">爱情</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#INFP%E5%9E%8B%E7%88%B1%E4%BA%BA"><span class="nav-text">INFP型爱人</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BD%93%E4%BD%A0%E6%81%8B%E7%88%B1%E6%97%B6"><span class="nav-text">当你恋爱时</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%81%8B%E7%88%B1%E7%B1%BB%E5%9E%8B"><span class="nav-text">恋爱类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8%E5%93%AA%E9%87%8C%E5%8F%AF%E4%BB%A5%E9%81%87%E5%88%B0%E4%B8%80%E4%B8%AA%E5%93%B2%E5%AD%A6%E5%AE%B6%E5%9E%8B%E6%83%85%E4%BA%BA%EF%BC%9F"><span class="nav-text">在哪里可以遇到一个哲学家型情人？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%81%8B%E7%88%B1%E9%94%A6%E5%9B%8A"><span class="nav-text">恋爱锦囊</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#INFP%E5%9C%A8%E6%84%9F%E6%83%85%E4%B8%AD%E7%9A%84%E4%BC%98%E7%82%B9"><span class="nav-text">INFP在感情中的优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#INFP%E5%9C%A8%E6%84%9F%E6%83%85%E4%B8%AD%E7%9A%84%E5%BC%B1%E7%82%B9"><span class="nav-text">INFP在感情中的弱点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B2%BE%E7%A5%9E%E4%BC%B4%E4%BE%A3"><span class="nav-text">精神伴侣</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%A9%E5%81%B6"><span class="nav-text">择偶</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A9%9A%E5%A7%BB"><span class="nav-text">婚姻</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%B4%E4%BE%A3%E7%BB%84%E5%90%88"><span class="nav-text">伴侣组合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%84%9F%E6%83%85%E8%A7%82"><span class="nav-text">基本感情观</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0"><span class="nav-text">后记</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E5%90%8C%E4%BA%BA%E6%A0%BC%E7%9A%84%E6%96%87%E9%A3%8E"><span class="nav-text">不同人格的文风</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#INFP"><span class="nav-text">INFP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#INFJ"><span class="nav-text">INFJ</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#INTP"><span class="nav-text">INTP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#INTJ"><span class="nav-text">INTJ</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5w4"><span class="nav-text">5w4</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%A0%E7%9A%84%E7%B4%A0%E6%8F%8F"><span class="nav-text">你的素描</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%A0%E7%9A%84%E4%B8%89%E7%A7%8D%E5%89%AF%E5%9E%8B"><span class="nav-text">你的三种副型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3"><span class="nav-text">如何理解</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#BigFive%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C"><span class="nav-text">BigFive测试结果</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%A7%E4%BA%94%E4%BA%BA%E6%A0%BC%E6%9E%81%E6%80%A7%E5%9B%BE"><span class="nav-text">大五人格极性图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%A7%E4%BA%94%E4%BA%BA%E6%A0%BC%E6%9F%B1%E7%8A%B6%E5%9B%BE"><span class="nav-text">大五人格柱状图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%96%E5%80%BE%E6%80%A7"><span class="nav-text">外倾性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9C%E4%BA%BA%E6%80%A7"><span class="nav-text">宜人性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%BD%E8%B4%A3%E6%80%A7"><span class="nav-text">尽责性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A5%9E%E7%BB%8F%E8%B4%A8"><span class="nav-text">神经质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E6%94%BE%E6%80%A7"><span class="nav-text">开放性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%A7%E4%BA%94%E6%A8%A1%E5%9E%8B"><span class="nav-text">大五模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E4%B8%AA%E5%85%B3%E9%94%AE%E7%BB%B4%E5%BA%A6"><span class="nav-text">五个关键维度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%BA%E6%A0%BC%E7%89%B9%E8%B4%A8%E3%80%81%E4%B8%80%E8%B4%AF%E9%A3%8E%E6%A0%BC%E5%8F%8A%E6%83%85%E5%A2%83"><span class="nav-text">人格特质、一贯风格及情境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E6%80%95%E7%9A%84%E5%AE%8C%E7%BE%8E"><span class="nav-text">可怕的完美</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AB%E7%BB%B4"><span class="nav-text">八维</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E6%96%8772%E9%A2%98"><span class="nav-text">中文72题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E6%96%8734%E9%A2%98"><span class="nav-text">中文34题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8D%E6%B5%8B"><span class="nav-text">重测</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E8%8B%B1%E6%96%8740%E9%A2%98"><span class="nav-text">中英文40题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AB%E7%BB%B4%E5%8A%9F%E8%83%BD%E5%BD%A2%E8%B1%A1%E5%8C%96%E5%AE%9A%E4%B9%89"><span class="nav-text">八维功能形象化定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%99%84%EF%BC%9A%E7%BD%91%E5%8F%8B%E7%BC%AD%E7%BB%AB%E7%9A%84%E7%90%86%E8%A7%A3"><span class="nav-text">附：网友缭绫的理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E3%80%90SE%E4%B8%8ESI%E4%B8%8D%E5%90%8C%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%9F%E3%80%91"><span class="nav-text">【SE与SI不同在哪里？】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E3%80%90%E5%85%AB%E7%A7%8D%E5%8A%9F%E8%83%BD%E9%97%B4%E7%9A%84%E7%9B%B8%E7%94%9F%E7%9B%B8%E5%85%8B%E3%80%91"><span class="nav-text">【八种功能间的相生相克】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E3%80%9016%E5%9E%8B%E5%90%84%E8%87%AA%E7%9A%84%E9%98%B3%E9%9D%A2%E6%80%A7%E6%A0%BC%E5%92%8C%E9%98%B4%E9%9D%A2%E6%80%A7%E6%A0%BC%E3%80%91"><span class="nav-text">【16型各自的阳面性格和阴面性格】</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%E3%80%81%E5%89%8D%E5%9B%9B%E9%A1%B9%E4%B8%BA%E8%AF%A5%E4%BA%BA%E6%A0%BC%E7%B1%BB%E5%9E%8B%E7%9A%84%E9%98%B3%E9%9D%A2%EF%BC%8C%E5%90%8E%E5%9B%9B%E9%A1%B9%E4%B8%BA%E8%AF%A5%E4%BA%BA%E6%A0%BC%E7%B1%BB%E5%9E%8B%E7%9A%84%E9%98%B4%E9%9D%A2%E3%80%82"><span class="nav-text">1、前四项为该人格类型的阳面，后四项为该人格类型的阴面。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%E3%80%81%E4%BA%BA%E6%A0%BC%E7%B1%BB%E5%9E%8B%E7%9A%84%E9%98%B3%E9%9D%A2"><span class="nav-text">2、人格类型的阳面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3%E3%80%81%E4%BA%BA%E6%A0%BC%E7%B1%BB%E5%9E%8B%E7%9A%84%E9%98%B4%E9%9D%A2"><span class="nav-text">3、人格类型的阴面</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E3%80%90%E5%85%AB%E7%BB%B4%E5%8A%9F%E8%83%BD%E9%97%B4%E7%9A%84%E5%86%85%E5%9C%A8%E5%85%B3%E7%B3%BB%E2%80%94%E2%80%94%E4%BB%8E%E2%80%9CINFP%E7%9A%84%E8%BF%9D%E5%92%8C%E6%84%9F%E2%80%9D%E8%AF%B4%E5%88%B0%E2%80%9C%E4%BB%A5INFJ%E4%B8%BA%E4%BE%8B%E8%A7%A3%E8%AF%BB8%E7%BB%B4%E5%85%B3%E7%B3%BB%E2%80%9D%E3%80%91"><span class="nav-text">【八维功能间的内在关系——从“INFP的违和感”说到“以INFJ为例解读8维关系”】</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BE%A9%E8%AF%81%E6%80%9D%E7%BB%B4%E6%B5%8B%E8%AF%95"><span class="nav-text">辩证思维测试</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E5%8C%96%E6%80%9D%E7%BB%B4%E6%B5%8B%E8%AF%95"><span class="nav-text">文化思维测试</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%B0%8F%E6%B5%8B%E8%AF%95"><span class="nav-text">其他小测试</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%E6%B5%8B%E8%AF%95-INFP"><span class="nav-text">第二步测试-INFP</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90"><span class="nav-text">统计分析</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar-kingsec.JPG">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">113</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">44</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">110</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:1013712127@qq.com" title="E-Mail → mailto:1013712127@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/mebily1314" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      梦起飞又坠落的地方
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://mebilychen.lofter.com/" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;" rel="noopener" target="_blank">LOFTER</a>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/p/zh-cn/4315" title="p&#x2F;zh-cn&#x2F;4315.html">突然觉得应该为毛主席单独开一贴</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/zh-cn/7641" title="p&#x2F;zh-cn&#x2F;7641.html">想单独开个贴讨论下帅气的单词们</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/zh-cn/938d" title="p&#x2F;zh-cn&#x2F;938d.html">文章发布测试+挤挤</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/zh-cn/d846" title="p&#x2F;zh-cn&#x2F;d846.html">歌曲开荒</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/zh-cn/9e20" title="p&#x2F;zh-cn&#x2F;9e20.html">“She Wants Me Dead”脑洞</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/zh-cn/5401" title="p&#x2F;zh-cn&#x2F;5401.html">【合集】无Tag的绘点子</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/zh-cn/d6c5" title="p&#x2F;zh-cn&#x2F;d6c5.html">Git上传不了了</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/p/zh-cn/92df" title="p&#x2F;zh-cn&#x2F;92df.html">关于光遇...和UT</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/zh-cn/65e0" title="p&#x2F;zh-cn&#x2F;65e0.html">陛下的陈旧谱子</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/zh-cn/fe35" title="p&#x2F;zh-cn&#x2F;fe35.html">【合集】日常吐槽和碎碎念</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+  <div class="languages">
+    <label class="lang-select-label">
+      <i class="fa fa-language"></i>
+      <span>zh-cn</span>
+      <i class="fa fa-angle-up" aria-hidden="true"></i>
+    </label>
+    <select class="lang-select" data-canonical="">
+      
+        <option value="zh-CN" data-href="/p/zh-cn/1744" selected="">
+          简体中文
+        </option>
+      
+        <option value="en" data-href="/en/p/zh-cn/1744" selected="">
+          English
+        </option>
+      
+    </select>
+  </div>
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">621k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">9:24</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "站子已虔诚祈祷 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>
