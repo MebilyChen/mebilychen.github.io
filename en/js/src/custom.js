@@ -9,14 +9,14 @@ var OriginTitile = document.title;
         if(document.hidden) {
             $('[rel="icon"]').attr('href', "/images/favicon-32x32-king-black.png");
             $('[rel="shortcut icon"]').attr('href', "/images/favicon-32x32-king-black.png");
-            document.title = '盯————';
+            document.title = '*stares*';
             clearTimeout(titleTime);
           } else {
             $('[rel="icon"]').attr('href', "/images/favicon-32x32-brand-black.png");
             $('[rel="shortcut icon"]').attr('href', "/images/favicon-32x32-brand-black.png");
-            document.title = '*偏转视线*';
+            document.title = '*averts*';
             titleTime = setTimeout(function() {
-              document.title = '碳素的小作坊';
+              document.title = "Mebily's lil'Paradise" ;
             }, 1000);
           }
     });
