@@ -16,7 +16,7 @@ var OriginTitile = document.title;
             $('[rel="shortcut icon"]').attr('href', "/images/favicon-32x32-brand-black.png");
             document.title = '*averts*';
             titleTime = setTimeout(function() {
-              document.title = "Mebily's lil'Paradise" ;
+              document.title = "Mebily's Lil'Paradise" ;
             }, 1000);
           }
     });
