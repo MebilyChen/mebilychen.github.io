@@ -6,11 +6,11 @@
     <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 style="text-align:center">♕ 公告 ♕ </h1> 
 
 <div style="text-align:center;color:#FF0000;font-size:14px;">  
-小虫子：因开启pjax导致跳转不会刷新导致无法加载某些组件的情况，感觉不太对就试下刷新。</div>
+小虫子：因开启pjax导致跳转不会刷新导致无法加载某些组件的情况，感觉不太对就试下刷新。PC端英文站子无法点进详情，手机端可以。</div>
    <center>---</center>
   <center>这里是公告内容，通常会提醒一下近期挖坑的情况&#x1F910;想跑团，喜欢上了黄王</center>
   <center> <em>2021.3.14：</em> coding塌了，暂时，下个月见👋但是Github还可以冲，哈哈。</center>
-  <center> 写着写着就成了解释，在自己家里有什么好解释的，害。md格式有些不正确，造成一些文格式出了问题，别忘了改。还有，站子成了暖手宝是个不小的问题。还有，分类别忘了手动拖进文件夹，不然默认是空的。</center>      
+  <center> 写着写着就成了解释，在自己家里有什么好解释的，害。md格式有些不正确，造成一些文格式出了问题，别忘了改。还有，站子成了暖手宝是个不小的问题。 ~~还有，分类别忘了手动拖进文件夹，不然默认是空的。~~ 还有，英文站子的随机页面生成之后需要自己补一下/en/。</center>      
   <center> 另外，原画三周没动了，都tm要结课了，补；文，要补；毕设，要补。加油吧，少年。</center>
   <center>---</center>
   <center> 装盘好难，我不想装了，反正都是demo（虫虫大哭）</center>    
@@ -22,6 +22,39 @@
       <categories>
         <category>站子</category>
       </categories>
+  </entry>
+  <entry>
+    <title>还希望站子拥有的一些优化</title>
+    <url>/p/679f.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><ul>
+<li><del>hexo+coding的自动部署</del></li>
+<li><del>note功能</del></li>
+<li>指针：给陛下做套鼠标指针用在站子上</li>
+<li><del>画廊：做个画廊页面</del></li>
+<li>站宠：想要自己用live2d把陛下做成站宠！！！…不过理想可能太过于宏大了🤡</li>
+<li><del>字体：可以改一下站子的字体…但是懒得去挑…太多了</del></li>
+<li>改/删除重新加密的按钮：和站子的黑白风格不搭，能不能不要啊（泪）</li>
+<li><del>GitHub Pages：Aplayer给爷整没了？</del></li>
+<li><del>随机页面：RT</del></li>
+<li><del>Steam页面用于游戏鉴赏类博文：RT</del></li>
+<li><del>Tag云：tag云应该放在tag页面。…谁会放在sidebar里啊淦！我tag多的都挤成螺旋丸了！</del></li>
+<li><del>echarts实现站点内容统计（tag、<del>活动日历</del>等）：RT</del></li>
+<li><del>游戏页面优化：好么（陕西腔）</del></li>
+<li><del>转载小尾巴</del></li>
+<li><del>失焦卖萌</del></li>
+<li>音乐的pjax已修好，但是视频、日历和tag云的还没有头绪。虽说还蛮喜欢之前文章内的音乐能带出去听的模式的。</li>
+<li>hexo-minifier</li>
+<li>雷达统计图的优化，虽然暂时还用不太上，或者站子分类结构的优化</li>
+<li>雪花特效</li>
+<li> <del>英文站子</del> 给人类用的英文站子（老子才不会换主题，NexT最高，呜呜呜）不知为什么手机端英文站子可以正常看，PC端不可，先记一笔。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>站子</category>
+      </categories>
+      <tags>
+        <tag>站子优化</tag>
+      </tags>
   </entry>
   <entry>
     <title>【合集】无Tag的小脑洞们，因为没有Tag</title>
@@ -492,39 +525,6 @@ You can be my saving light</p>
         <tag>欧美歌曲</tag>
         <tag>纯音乐</tag>
         <tag>游戏音乐</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>还希望站子拥有的一些优化</title>
-    <url>/p/679f.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><ul>
-<li><del>hexo+coding的自动部署</del></li>
-<li><del>note功能</del></li>
-<li>指针：给陛下做套鼠标指针用在站子上</li>
-<li><del>画廊：做个画廊页面</del></li>
-<li>站宠：想要自己用live2d把陛下做成站宠！！！…不过理想可能太过于宏大了🤡</li>
-<li><del>字体：可以改一下站子的字体…但是懒得去挑…太多了</del></li>
-<li>改/删除重新加密的按钮：和站子的黑白风格不搭，能不能不要啊（泪）</li>
-<li><del>GitHub Pages：Aplayer给爷整没了？</del></li>
-<li><del>随机页面：RT</del></li>
-<li><del>Steam页面用于游戏鉴赏类博文：RT</del></li>
-<li><del>Tag云：tag云应该放在tag页面。…谁会放在sidebar里啊淦！我tag多的都挤成螺旋丸了！</del></li>
-<li><del>echarts实现站点内容统计（tag、<del>活动日历</del>等）：RT</del></li>
-<li><del>游戏页面优化：好么（陕西腔）</del></li>
-<li><del>转载小尾巴</del></li>
-<li><del>失焦卖萌</del></li>
-<li>音乐的pjax已修好，但是视频、日历和tag云的还没有头绪。虽说还蛮喜欢之前文章内的音乐能带出去听的模式的。</li>
-<li>hexo-minifier</li>
-<li>雷达统计图的优化，虽然暂时还用不太上，或者站子分类结构的优化</li>
-<li>雪花特效</li>
-<li> <del>英文站子</del> 给人类用的英文站子（老子才不会换主题，NexT最高，呜呜呜）</li>
-</ul>
-]]></content>
-      <categories>
-        <category>站子</category>
-      </categories>
-      <tags>
-        <tag>站子优化</tag>
       </tags>
   </entry>
   <entry>
