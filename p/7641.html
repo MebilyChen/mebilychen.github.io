@@ -474,7 +474,7 @@
  </p>
  <p><span>许可协议:</span>cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
-<script> 
+<script data-pjax> 
    var clipboard = new Clipboard('.fa-clipboard');
    $('.fa-clipboard').click(function(){
      clipboard.on('success', function(){
@@ -490,7 +490,7 @@
        swal({   
          title: " ",   
          text: '复制失败',
-         icon: "success", 
+         icon: "error", 
          showConfirmButton: true
          });
  	 });
@@ -816,7 +816,8 @@ setInterval("createtime()",250);
 var pjax = new Pjax({
   selectors: [
     'head title',
-    '.header-inner',
+     //'.site-meta',
+    //'.site-nav',
     '#page-configurations',
     '.content-wrap',
     '.post-toc-wrap',
