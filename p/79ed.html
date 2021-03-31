@@ -802,7 +802,8 @@ setInterval("createtime()",250);
 var pjax = new Pjax({
   selectors: [
     'head title',
-    '.header',
+    '.site-meta',
+    '.site-nav',
     '#page-configurations',
     '.content-wrap',
     '.post-toc-wrap',
@@ -810,8 +811,7 @@ var pjax = new Pjax({
     '#pjax'
   ],
   switches: {
-    '.post-toc-wrap': Pjax.switches.innerHTML,
-    '.header': Pjax.switches.innerHTML
+    '.post-toc-wrap': Pjax.switches.innerHTML
   },
   analytics: false,
   cacheBust: false,

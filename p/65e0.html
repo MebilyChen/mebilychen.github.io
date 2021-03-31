@@ -407,12 +407,12 @@
 
 <p>以下是钢琴的练习：  </p>
 
-        <div id="aplayer-mPXakMuJ" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-eHxTmqiv" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-mPXakMuJ"),
+            element: document.getElementById("aplayer-eHxTmqiv"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -429,12 +429,12 @@
         </script>
 
 
-        <div id="aplayer-lovqTynm" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-lqYblUdU" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-lovqTynm"),
+            element: document.getElementById("aplayer-lqYblUdU"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -451,12 +451,12 @@
         </script>
 
 
-        <div id="aplayer-FVlLHVSE" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-ANIRWagc" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-FVlLHVSE"),
+            element: document.getElementById("aplayer-ANIRWagc"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -842,7 +842,8 @@ setInterval("createtime()",250);
 var pjax = new Pjax({
   selectors: [
     'head title',
-    '.header',
+    '.site-meta',
+    '.site-nav',
     '#page-configurations',
     '.content-wrap',
     '.post-toc-wrap',
@@ -850,8 +851,7 @@ var pjax = new Pjax({
     '#pjax'
   ],
   switches: {
-    '.post-toc-wrap': Pjax.switches.innerHTML,
-    '.header': Pjax.switches.innerHTML
+    '.post-toc-wrap': Pjax.switches.innerHTML
   },
   analytics: false,
   cacheBust: false,
