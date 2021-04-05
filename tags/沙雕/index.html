@@ -650,13 +650,13 @@
       </div>
       <ul class="links-of-updated-posts-list">
           <li class="links-of-updated-posts-item">
+          <a href="/p/754d.html" title="p&#x2F;754d.html">关于我的“竞争模式”</a>
+        </li>
+          <li class="links-of-updated-posts-item">
           <a href="/p/1744.html" title="p&#x2F;1744.html">INF/TP + 5万4 + BigFive+八维</a>
         </li>
           <li class="links-of-updated-posts-item">
-          <a href="/p/f446.html" title="p&#x2F;f446.html">常用命令</a>
-        </li>
-          <li class="links-of-updated-posts-item">
-          <a href="/p/754d.html" title="p&#x2F;754d.html">关于我的“竞争模式”</a>
+          <a href="/p/2ff0.html" title="p&#x2F;2ff0.html">普通昆虫学+昆虫行为学研究（笔记）</a>
         </li>
       </ul>
     </div>
@@ -717,13 +717,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">632k</span>
+    <span title="站点总字数">634k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">9:35</span>
+    <span title="站点阅读时长">9:36</span>
 </div>
 
 
@@ -869,8 +869,41 @@ window.addEventListener('pjax:success', () => {
 
 
 
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
 
 
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
 
 
     <div id="pjax">
