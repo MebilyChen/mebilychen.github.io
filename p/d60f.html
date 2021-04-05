@@ -80,8 +80,8 @@
     let time, hidden, visible, title = document.title;
     let favicon = document.querySelector('link[rel="icon"]');
     
-      hidden = ["盯————","*探头*","*stares*"];
-      visible = ["*偏转视线*","*缩*","*averts*"];
+      hidden = ["*盯————*","*探头*",""];
+      visible = ["*偏转视线*","*缩*"];
     
     let random = t => t[Math.floor(Math.random() * t.length)];
     const change = () => {
@@ -97,7 +97,7 @@
           document.title = random(visible);
         
         time = setTimeout(() => {
-          document.title = title;
+          document.title = 碳素的小作坊;
         }, 1000);
       }
     }
