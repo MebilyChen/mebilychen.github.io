@@ -57,9 +57,9 @@
 <meta property="article:modified_time" content="2021-03-30T17:03:59.505Z">
 <meta property="article:author" content="碳素 | mebilyc">
 <meta property="article:tag" content="The Pale King">
+<meta property="article:tag" content="Complete">
 <meta property="article:tag" content="Broken Vessel">
 <meta property="article:tag" content="The Knight">
-<meta property="article:tag" content="Complete">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://mebilychen.github.io/p/dde8e.html">
@@ -73,6 +73,39 @@
     isPost : true,
     lang   : 'Kingfics'
   };
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    
+      if (NexT.utils.hasMobileUA()) return;
+    
+    let time, hidden, visible, title = document.title;
+    let favicon = document.querySelector('link[rel="icon"]');
+    
+      hidden = '*stares*';
+      visible = '*averts*';
+    
+    let random = t => t[Math.floor(Math.random() * t.length)];
+    const change = () => {
+      if (document.hidden) {
+        favicon.setAttribute('href', '/images/favicon-32x32-king-black.png');
+        
+          document.title = hidden;
+        
+        clearTimeout(time);
+      } else {
+        favicon.setAttribute('href', '/images/favicon-32x32-brand-black.png');
+        
+          document.title = visible;
+        
+        time = setTimeout(() => {
+          document.title = title;
+        }, 1000);
+      }
+    }
+    document.addEventListener('visibilitychange', change, false);
+  });
 </script>
 
   <title>Everyday Quest(2.23) | Mebily's Lil'Paradise</title>
@@ -385,9 +418,9 @@
           
           <div class="post-tags">
               <a href="/en/tags/The-Pale-King/" rel="tag"><i class="fa fa-tag"></i> The Pale King</a>
+              <a href="/en/tags/Complete/" rel="tag"><i class="fa fa-tag"></i> Complete</a>
               <a href="/en/tags/Broken-Vessel/" rel="tag"><i class="fa fa-tag"></i> Broken Vessel</a>
               <a href="/en/tags/The-Knight/" rel="tag"><i class="fa fa-tag"></i> The Knight</a>
-              <a href="/en/tags/Complete/" rel="tag"><i class="fa fa-tag"></i> Complete</a>
           </div>
 
         </div>
@@ -495,9 +528,9 @@ The whistling sound outside the cave lulls me to sleep. I don&#39;t know what ou
           
           <div class="post-tags">
               <a href="/en/tags/The-Pale-King/" rel="tag"><i class="fa fa-tag"></i> The Pale King</a>
+              <a href="/en/tags/Complete/" rel="tag"><i class="fa fa-tag"></i> Complete</a>
               <a href="/en/tags/Broken-Vessel/" rel="tag"><i class="fa fa-tag"></i> Broken Vessel</a>
               <a href="/en/tags/The-Knight/" rel="tag"><i class="fa fa-tag"></i> The Knight</a>
-              <a href="/en/tags/Complete/" rel="tag"><i class="fa fa-tag"></i> Complete</a>
           </div>
 
 
