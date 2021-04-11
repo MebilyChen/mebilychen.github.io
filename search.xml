@@ -36,12 +36,12 @@
 <h1 id="全民K歌"><a href="#全民K歌" class="headerlink" title="全民K歌"></a>全民K歌</h1><p>好累，不搞了，还要去做最可爱的迅猛小白龙呢。</p>
 <p><a href="https://node.kg.qq.com/personal?uid=6b9c9d8c242c37893d">个人主页</a></p>
 
-        <div id="aplayer-AoMwmFKD" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-nuRukXte" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-AoMwmFKD"),
+            element: document.getElementById("aplayer-nuRukXte"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -59,12 +59,12 @@
 
 <p>注意：电音特效  </p>
 
-        <div id="aplayer-czPGRgdM" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-akgrddnX" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-czPGRgdM"),
+            element: document.getElementById("aplayer-akgrddnX"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -81,12 +81,12 @@
         </script>
 
 
-        <div id="aplayer-CgDquwsf" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-WWYCQGJx" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-CgDquwsf"),
+            element: document.getElementById("aplayer-WWYCQGJx"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -103,12 +103,12 @@
         </script>
 
 
-        <div id="aplayer-HEJXRQZx" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-baujpSxc" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-HEJXRQZx"),
+            element: document.getElementById("aplayer-baujpSxc"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -126,12 +126,12 @@
 
 
 
-        <div id="aplayer-ygtpXjEp" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-IOMsHtGG" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-ygtpXjEp"),
+            element: document.getElementById("aplayer-IOMsHtGG"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -147,6 +147,27 @@
           window.aplayers.push(ap);
         </script>
 
+
+        <div id="aplayer-xwKYKOnM" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-xwKYKOnM"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "そばにいるね",
+              author: "青山 Thelma/碳素",
+              url: "http://tx.stream.kg.qq.com/szkge-btfs/4a6a4e639fcdf6f67bc8b698839b1803faf81d5b?ftnrkey=7ad4315da8a18a73831add33a7b04dde96c82ca4a42b3ca1526616d63da039f956cb39d459d75a19de4d568585ed03dd184c00089f5a4ebcfb4d0f01696d761e&vkey=1603FE19ECC0D5C55E1AE868EE7BAA349FE6AA41A63026CB74582F19DA4A3516131170FFCAC6CB026F055DA3A08C193FC584DCE4D059A710C6507A84A6059AC5A93904F1D81D2019986F21B7765A3A88B81F755A5477E1EB&fname=1021_2f95fad5207b4c8d547e47ef80f961fc6181d5ad.0.m4a&fromtag=1418&sdtfrom=v1418&ugcid=910911029_1616328846_626",
+              pic: "",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
 ]]></content>
       <categories>
         <category>随团长研习音乐</category>
