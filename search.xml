@@ -49,7 +49,8 @@
 <p>我要自己建词典。  </p>
 <h2 id="难言词典"><a href="#难言词典" class="headerlink" title="难言词典"></a>难言词典</h2><h3 id="Fandomise"><a href="#Fandomise" class="headerlink" title="Fandomise"></a>Fandomise</h3><div class="tabs" id="entry-1"><ul class="nav-tabs"></ul><div class="tab-content"></div></div>
 
-<h3 id><a href="#" class="headerlink" title></a></h3><div class="tabs" id="entry-1"><ul class="nav-tabs"></ul><div class="tab-content"></div></div>]]></content>
+<h3 id="Condea"><a href="#Condea" class="headerlink" title="Condea"></a>Condea</h3><div class="tabs" id="entry-2"><ul class="nav-tabs"></ul><div class="tab-content"></div></div>
+]]></content>
       <categories>
         <category>碳酸的求生之路</category>
         <category>将上下而求索</category>
@@ -58,6 +59,40 @@
         <tag>积累本</tag>
         <tag>黄莲</tag>
         <tag>虫与虫与虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>还希望站子拥有的一些优化</title>
+    <url>/p/679f.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><ul>
+<li><del>hexo+coding的自动部署</del></li>
+<li><del>note功能</del></li>
+<li>指针：给陛下做套鼠标指针用在站子上</li>
+<li><del>画廊：做个画廊页面</del></li>
+<li>站宠：想要自己用live2d把陛下做成站宠！！！…不过理想可能太过于宏大了🤡</li>
+<li><del>字体：可以改一下站子的字体…但是懒得去挑…太多了</del></li>
+<li>改/删除重新加密的按钮：和站子的黑白风格不搭，能不能不要啊（泪）</li>
+<li><del>GitHub Pages：Aplayer给爷整没了？</del></li>
+<li><del>随机页面：RT</del></li>
+<li><del>Steam页面用于游戏鉴赏类博文：RT</del></li>
+<li><del>Tag云：tag云应该放在tag页面。…谁会放在sidebar里啊淦！我tag多的都挤成螺旋丸了！</del></li>
+<li><del>echarts实现站点内容统计（tag、<del>活动日历</del>等）：RT</del></li>
+<li><del>游戏页面优化：好么（陕西腔）</del></li>
+<li><del>转载小尾巴</del></li>
+<li><del>失焦卖萌</del></li>
+<li>音乐的pjax已修好，但是视频、日历和tag云的还没有头绪。虽说还蛮喜欢之前文章内的音乐能带出去听的模式的。</li>
+<li>hexo-minifier</li>
+<li>雷达统计图的优化，虽然暂时还用不太上，或者站子分类结构的优化</li>
+<li>雪花特效</li>
+<li> <del>英文站子</del> 给人类用的英文站子（老子才不会换主题，NexT最高，呜呜呜）</li>
+<li>tag中的linkgrid和tabs失效了，看看怎么回事</li>
+</ul>
+]]></content>
+      <categories>
+        <category>站子</category>
+      </categories>
+      <tags>
+        <tag>站子优化</tag>
       </tags>
   </entry>
   <entry>
@@ -5581,39 +5616,6 @@ powerful blog framework" ontouchstart>Hexo</span>
       </categories>
       <tags>
         <tag>黄莲</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>还希望站子拥有的一些优化</title>
-    <url>/p/679f.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><ul>
-<li><del>hexo+coding的自动部署</del></li>
-<li><del>note功能</del></li>
-<li>指针：给陛下做套鼠标指针用在站子上</li>
-<li><del>画廊：做个画廊页面</del></li>
-<li>站宠：想要自己用live2d把陛下做成站宠！！！…不过理想可能太过于宏大了🤡</li>
-<li><del>字体：可以改一下站子的字体…但是懒得去挑…太多了</del></li>
-<li>改/删除重新加密的按钮：和站子的黑白风格不搭，能不能不要啊（泪）</li>
-<li><del>GitHub Pages：Aplayer给爷整没了？</del></li>
-<li><del>随机页面：RT</del></li>
-<li><del>Steam页面用于游戏鉴赏类博文：RT</del></li>
-<li><del>Tag云：tag云应该放在tag页面。…谁会放在sidebar里啊淦！我tag多的都挤成螺旋丸了！</del></li>
-<li><del>echarts实现站点内容统计（tag、<del>活动日历</del>等）：RT</del></li>
-<li><del>游戏页面优化：好么（陕西腔）</del></li>
-<li><del>转载小尾巴</del></li>
-<li><del>失焦卖萌</del></li>
-<li>音乐的pjax已修好，但是视频、日历和tag云的还没有头绪。虽说还蛮喜欢之前文章内的音乐能带出去听的模式的。</li>
-<li>hexo-minifier</li>
-<li>雷达统计图的优化，虽然暂时还用不太上，或者站子分类结构的优化</li>
-<li>雪花特效</li>
-<li> <del>英文站子</del> 给人类用的英文站子（老子才不会换主题，NexT最高，呜呜呜）</li>
-</ul>
-]]></content>
-      <categories>
-        <category>站子</category>
-      </categories>
-      <tags>
-        <tag>站子优化</tag>
       </tags>
   </entry>
   <entry>
