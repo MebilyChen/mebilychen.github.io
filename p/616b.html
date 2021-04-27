@@ -396,7 +396,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.5k</span>
+              <span>2.6k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -421,41 +421,30 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1><strong>建立环境</strong></h1>
-<ol>
-<li>
-<p>用3D模板新建项目</p>
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="建立环境"><a href="#建立环境" class="headerlink" title="建立环境"></a><strong>建立环境</strong></h1><ol>
+<li><p>用3D模板新建项目</p>
 </li>
-<li>
-<p>切换平台至Universal Windows</p>
+<li><p>切换平台至Universal Windows </p>
 </li>
-<li>
-<p>导入TMP（Windows标签下）</p>
+<li><p>导入TMP（Windows标签下）</p>
 </li>
-<li>
-<p>导入MRTK包- Selected package <strong>Mixed Reality Toolkit Foundation 2.5.3</strong> is presented, along with its dependence package <strong>Mixed Reality Toolkit Standard Assets 2.5.3</strong> in the <strong>Import Features</strong> window.-到项目目录</p>
+<li><p>导入MRTK包- Selected package <strong>Mixed Reality Toolkit Foundation 2.5.3</strong> is presented, along with its dependence package <strong>Mixed Reality Toolkit Standard Assets 2.5.3</strong> in the <strong>Import Features</strong> window.-到项目目录</p>
 </li>
 </ol>
 <p><strong>5.</strong>   <strong>Mixed Reality Toolkit</strong> &gt; <strong>Utilities</strong> &gt; <strong>Configure Unity Project</strong> 接受设定</p>
-<p><em>6.</em>    *！*<em>Set default Spatial Awareness layer: Creates a Unity Layer named Spatial Awareness and configures MRTK to use this layer for the spatial awareness mesh.</em> <em>（<em><strong>Project settings</strong> &gt; <strong>Tags and Layers</strong></em>）</em></p>
+<p><em>6.</em>    <em>！**Set default Spatial Awareness layer: Creates a Unity Layer named Spatial Awareness and configures MRTK to use this layer for the spatial awareness mesh.</em> <em>（**</em>Project settings** &gt; <strong>Tags and Layers*</strong>）*</p>
 <ol start="7">
-<li>
-<p><strong>Player</strong> &gt; <strong>XR Settings</strong> and check the <strong>Virual Reality Supported</strong> checkbox then click the <strong>+</strong> icon, and select Windows Mixed Reality to add the Windows Mixed Reality SDK</p>
+<li><p><strong>Player</strong> &gt; <strong>XR Settings</strong> and check the <strong>Virual Reality Supported</strong> checkbox then click the <strong>+</strong> icon, and select Windows Mixed Reality to add the Windows Mixed Reality SDK</p>
 </li>
-<li>
-<p>n the MRTK Project Configurator window, use the <strong>Audio spatializer</strong> dropdown to select the <strong>MS HRTF Spatializer</strong>, then click the <strong>Apply</strong> button to apply the setting:</p>
+<li><p>n the MRTK Project Configurator window, use the <strong>Audio spatializer</strong> dropdown to select the <strong>MS HRTF Spatializer</strong>, then click the <strong>Apply</strong> button to apply the setting:</p>
 </li>
-<li>
-<p>In the Project Settings window, select <strong>Player</strong> &gt; <strong>XR Settings</strong>, then use the <strong>Depth Format</strong> dropdown to select <strong>16-bit depth</strong>:</p>
+<li><p>In the Project Settings window, select <strong>Player</strong> &gt; <strong>XR Settings</strong>, then use the <strong>Depth Format</strong> dropdown to select <strong>16-bit depth</strong>:</p>
 </li>
-<li>
-<p>In the Project Settings window, select <strong>Player</strong> &gt; <strong>Publishing Settings</strong>, then in the <strong>Package name</strong> field, enter a suitable name, for example, <em>MRTKTutorials-GettingStarted</em>:</p>
+<li><p>In the Project Settings window, select <strong>Player</strong> &gt; <strong>Publishing Settings</strong>, then in the <strong>Package name</strong> field, enter a suitable name, for example, <em>MRTKTutorials-GettingStarted</em>:</p>
 </li>
 </ol>
 <p><strong>11.  添加Scenes到bulid, 生成build, 在vs里打开sln文件, Configure Visual Studio for HoloLens by selecting the <strong>Master</strong> or <strong>Release</strong> configuration, the <strong>ARM64 ( Hololens</strong>模拟器设置成</strong>X86<strong>或</strong>X64)** architecture, and <strong>Device</strong> as target, select <strong>Debug</strong> &gt; <strong>Start Without Debugging</strong></p>
-<h1><strong>碰撞</strong></h1>
-<h2 id="刚体和碰撞器"><strong>刚体和碰撞器</strong></h2>
-<p><strong>只有安装刚体组件的物体才能受重力等作用力,只有安装碰撞器组件才能检测碰撞并运行函数,通常情况下需要相互作用的两个物体都要安装碰撞器.</strong></p>
+<h1 id="碰撞"><a href="#碰撞" class="headerlink" title="碰撞"></a><strong>碰撞</strong></h1><h2 id="刚体和碰撞器"><a href="#刚体和碰撞器" class="headerlink" title="刚体和碰撞器"></a><strong>刚体和碰撞器</strong></h2><p><strong>只有安装刚体组件的物体才能受重力等作用力,只有安装碰撞器组件才能检测碰撞并运行函数,通常情况下需要相互作用的两个物体都要安装碰撞器.</strong></p>
 <p>A受重力与B发生碰撞:</p>
 <p><strong>无效碰撞有:</strong></p>
 <ul>
@@ -465,16 +454,15 @@
 <p><strong>必须调用函数的有:</strong></p>
 <ul>
 <li>A[刚体] x B[碰撞器]</li>
-<li>A[刚体]碰撞器]x B[刚体]</li>
+<li> A[刚体]碰撞器]x B[刚体]</li>
 <li>A[刚体] x B[刚体碰撞器]B于y轴锁定</li>
 </ul>
 <p><strong>直观有效也可调用函数的有:</strong></p>
 <ul>
-<li>A[刚体]碰撞器]x B[碰撞器]:B不运动.</li>
+<li> A[刚体]碰撞器]x B[碰撞器]:B不运动.</li>
 <li>A[刚体]碰撞器]x B[刚体]碰撞器]B于y轴锁定:B受碰撞力运动.</li>
 </ul>
-<h2 id="碰撞检测"><strong>碰撞检测</strong></h2>
-<p>(Script挂在X物体上,即X的碰撞)</p>
+<h2 id="碰撞检测"><a href="#碰撞检测" class="headerlink" title="碰撞检测"></a><strong>碰撞检测</strong></h2><p>(Script挂在X物体上,即X的碰撞)</p>
 <ul>
 <li>** OnCollisionEnter(Collision collision)**:检测碰撞开始并运行函数内容(只运行一次).</li>
 <li>** OnCollisionExit(Collision collision):**检测碰撞结束并运行函数内容(只运行一次).</li>
@@ -483,44 +471,39 @@
 <p><strong>取得碰撞信息</strong></p>
 <ul>
 <li>** collision.collider: **获取碰撞物体</li>
-<li>** <span class="exturl" data-url="aHR0cDovL2NvbGxpc2lvbi5jb2xsaWRlci5uYW1l">collision.collider.name<i class="fa fa-external-link-alt"></i></span>:**获取碰撞物体名称</li>
+<li>** collision.collider.name:**获取碰撞物体名称</li>
 <li>** collision.collider.tag:**获取碰撞物体标签</li>
 </ul>
-<h1><strong>触发</strong></h1>
-<p>** 可以穿过的碰撞器:**将碰撞器中的”Is Trigger”勾选.</p>
+<h1 id="触发"><a href="#触发" class="headerlink" title="触发"></a><strong>触发</strong></h1><p>** 可以穿过的碰撞器:**将碰撞器中的”Is Trigger”勾选.</p>
 <p>** 将触发器隐藏:**移除mesh filter和mesh render</p>
-<h2 id="触发检测"><strong>触发检测</strong></h2>
-<p>** OnTriggerEnter(Collider other)**:检测碰撞开始并运行函数内容(只运行一次).</p>
+<h2 id="触发检测"><a href="#触发检测" class="headerlink" title="触发检测"></a><strong>触发检测</strong></h2><p>** OnTriggerEnter(Collider other)**:检测碰撞开始并运行函数内容(只运行一次).</p>
 <p>** OnTriggerExit(Collider other):**检测碰撞结束并运行函数内容(只运行一次).</p>
 <p>** OnTriggerStay(Collider other):**检测碰撞并运行函数内容(接触时持续运行,每帧一次).</p>
 <p>** 取得触发信息**</p>
 <p>(other相当于一个collider)</p>
 <p>** other:**获取触发(游戏内)物体</p>
-<p>** <span class="exturl" data-url="aHR0cDovL290aGVyLm5hbWU=">other.name<i class="fa fa-external-link-alt"></i></span>:**获取触发物体(游戏内)名称</p>
+<p>** other.name:**获取触发物体(游戏内)名称</p>
 <p>** other.tag:**获取触发物体(游戏内)标签</p>
-<h1><strong>鼠标射线</strong></h1>
-<h2 id="射线检测"><strong>射线检测</strong></h2>
-<p>Input.GetMouseButtonDown(<span class="hint--info hint--rounded hint--top" data-hint="鼠标左键" ontouchstart>0</span>) <strong>//检测鼠标左键按下</strong></p>
+<h1 id="鼠标射线"><a href="#鼠标射线" class="headerlink" title="鼠标射线"></a><strong>鼠标射线</strong></h1><h2 id="射线检测"><a href="#射线检测" class="headerlink" title="射线检测"></a><strong>射线检测</strong></h2><p>Input.GetMouseButtonDown(<span class="hint--info hint--rounded hint--top" data-hint="鼠标左键" ontouchstart>0</span>) <strong>//检测鼠标左键按下</strong></p>
 <p>Ray ray = Camera.main.<span class="hint--info hint--rounded hint--top" data-hint="屏幕坐标转换成射线" ontouchstart>ScreenPointToRay</span>(<span class="hint--info hint--rounded hint--top" data-hint="鼠标位置" ontouchstart>Input.mousePosition</span>)<strong>//定义射线</strong></p>
-<p>RaycastHit hit；<strong>//定义射线击中的点，保存碰撞信息</strong></p>
+<p>RaycastHit hit；**//定义射线击中的点，保存碰撞信息**</p>
 <p>If(Physics.Raycast(<span class="hint--info hint--rounded hint--top" data-hint="传递射线" ontouchstart>ray</span>, <span class="hint--info hint--rounded hint--top" data-hint="传递射线碰撞信息" ontouchstart>out hit</span>))<strong>//检测是否发生碰撞</strong></p>
 <p>{</p>
 <p>Print(hit.point);<strong>//输出击中位置</strong></p>
 <p>}</p>
-<h1><strong>摄像机跟随</strong></h1>
-<ol>
+<h1 id="摄像机跟随"><a href="#摄像机跟随" class="headerlink" title="摄像机跟随"></a><strong>摄像机跟随</strong></h1><ol>
 <li>原理：使摄像机与人物保持一个固定的方位偏差</li>
 </ol>
 <p><strong>确定初始化相机跟随位置</strong></p>
 <ol start="2">
 <li>创建Script，置于Main Camera上</li>
 </ol>
-<p>Public Transform hero；<strong>//定义Transform组件</strong></p>
-<p>Private Vector3 offset；<strong>//定义偏移数据变量</strong></p>
+<p>Public Transform hero；**//定义Transform组件**</p>
+<p>Private Vector3 offset；**//定义偏移数据变量**</p>
 <p><strong>Start下：</strong></p>
 <p>​    Offset=transform.position-hero.position;<strong>//计算偏移数据</strong></p>
 <p><strong>Update下：</strong></p>
-<p>Transform.position=offset+hero.position；<strong>//更新相机位置</strong></p>
+<p>Transform.position=offset+hero.position；**//更新相机位置**</p>
 
     </div>
 
@@ -661,7 +644,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">建立环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">碰撞</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9A%E4%BD%93%E5%92%8C%E7%A2%B0%E6%92%9E%E5%99%A8"><span class="nav-text">刚体和碰撞器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B"><span class="nav-text">碰撞检测</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">触发</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A6%E5%8F%91%E6%A3%80%E6%B5%8B"><span class="nav-text">触发检测</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">鼠标射线</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%84%E7%BA%BF%E6%A3%80%E6%B5%8B"><span class="nav-text">射线检测</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">摄像机跟随</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8B%E7%8E%AF%E5%A2%83"><span class="nav-text">建立环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A2%B0%E6%92%9E"><span class="nav-text">碰撞</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9A%E4%BD%93%E5%92%8C%E7%A2%B0%E6%92%9E%E5%99%A8"><span class="nav-text">刚体和碰撞器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B"><span class="nav-text">碰撞检测</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A6%E5%8F%91"><span class="nav-text">触发</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A6%E5%8F%91%E6%A3%80%E6%B5%8B"><span class="nav-text">触发检测</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%BC%A0%E6%A0%87%E5%B0%84%E7%BA%BF"><span class="nav-text">鼠标射线</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%84%E7%BA%BF%E6%A3%80%E6%B5%8B"><span class="nav-text">射线检测</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%91%84%E5%83%8F%E6%9C%BA%E8%B7%9F%E9%9A%8F"><span class="nav-text">摄像机跟随</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -754,13 +737,13 @@
       </div>
       <ul class="links-of-updated-posts-list">
           <li class="links-of-updated-posts-item">
+          <a href="/p/e3a4.html" title="p&#x2F;e3a4.html">绘画参考+Art Tips</a>
+        </li>
+          <li class="links-of-updated-posts-item">
           <a href="/p/f446.html" title="p&#x2F;f446.html">常用命令</a>
         </li>
           <li class="links-of-updated-posts-item">
           <a href="/p/4315.html" title="p&#x2F;4315.html">【鉴】书架+名句积累+鉴赏</a>
-        </li>
-          <li class="links-of-updated-posts-item">
-          <a href="/p/679f.html" title="p&#x2F;679f.html">还希望站子拥有的一些优化</a>
         </li>
       </ul>
     </div>
@@ -821,13 +804,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">688k</span>
+    <span title="站点总字数">684k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">10:25</span>
+    <span title="站点阅读时长">10:22</span>
 </div>
 
 
