@@ -221,17 +221,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/en/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">15</span></a>
+    <a href="/en/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">17</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/en/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">7</span></a>
+    <a href="/en/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">8</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/en/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">6</span></a>
+    <a href="/en/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">7</span></a>
 
   </li>
         <li class="menu-item menu-item-photos">
@@ -376,6 +376,141 @@
 ——“We have a world to burn.”</div>
 
 
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\nLicensed under CC BY-NC-SA 4.0. Please retain the original link and author when Reblogging. All hail the King.'
+                                + '\nAuthor: 碳素@mebilyc'
+                                + '\nBloglink:https://mebilychen.github.io/' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="A road to Nowhere">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/ab33.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/en/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="Want to become a little mirror, for my King.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mebily's Lil'Paradise">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/en/p/ab33.html" class="post-title-link" itemprop="url">A Self Introduction</a>
+        </h2>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-06-16 22:31:00" itemprop="dateCreated datePublished" datetime="2021-06-16T22:31:00+08:00">2021-06-16</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/en/categories/A-road-to-Nowhere/" itemprop="url" rel="index"><span itemprop="name">A road to Nowhere</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/en/categories/A-road-to-Nowhere/Selfie/" itemprop="url" rel="index"><span itemprop="name">Selfie</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>1.6k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+          
+          <div class="post-tags">
+              <a href="/en/tags/MBTI/" rel="tag"><i class="fa fa-tag"></i> MBTI</a>
+              <a href="/en/tags/Psychology/" rel="tag"><i class="fa fa-tag"></i> Psychology</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <div class="note info"> <p style="color:#438BCA">Basically the title says all. </p> </div>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/en/p/ab33.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -786,8 +921,8 @@
           <div class="post-tags">
               <a href="/en/tags/The-Pale-King/" rel="tag"><i class="fa fa-tag"></i> The Pale King</a>
               <a href="/en/tags/Lurien-The-Watcher/" rel="tag"><i class="fa fa-tag"></i> Lurien The Watcher</a>
-              <a href="/en/tags/Monarch-Servant/" rel="tag"><i class="fa fa-tag"></i> Monarch & Servant</a>
               <a href="/en/tags/Complete/" rel="tag"><i class="fa fa-tag"></i> Complete</a>
+              <a href="/en/tags/Monarch-Servant/" rel="tag"><i class="fa fa-tag"></i> Monarch & Servant</a>
           </div>
 
         </div>
@@ -929,9 +1064,9 @@
           
           <div class="post-tags">
               <a href="/en/tags/The-Pale-King/" rel="tag"><i class="fa fa-tag"></i> The Pale King</a>
-              <a href="/en/tags/Complete/" rel="tag"><i class="fa fa-tag"></i> Complete</a>
               <a href="/en/tags/Broken-Vessel/" rel="tag"><i class="fa fa-tag"></i> Broken Vessel</a>
               <a href="/en/tags/The-Knight/" rel="tag"><i class="fa fa-tag"></i> The Knight</a>
+              <a href="/en/tags/Complete/" rel="tag"><i class="fa fa-tag"></i> Complete</a>
           </div>
 
         </div>
@@ -1187,20 +1322,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/en/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/en/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/en/tags/">
           
-        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-count">17</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -1233,6 +1368,9 @@
     </div>
     <ul class="links-of-recent-posts-list">
         <li class="links-of-recent-posts-item">
+          <a href="/en/p/ab33.html" title="p&#x2F;ab33.html">A Self Introduction</a>
+        </li>
+        <li class="links-of-recent-posts-item">
           <a href="/en/p/7b07e.html" title="p&#x2F;7b07e.html">【NOTICE】</a>
         </li>
         <li class="links-of-recent-posts-item">
@@ -1261,13 +1399,13 @@
       </div>
       <ul class="links-of-updated-posts-list">
           <li class="links-of-updated-posts-item">
+          <a href="/en/p/ab33.html" title="p&#x2F;ab33.html">A Self Introduction</a>
+        </li>
+          <li class="links-of-updated-posts-item">
           <a href="/en/p/7b07e.html" title="p&#x2F;7b07e.html">【NOTICE】</a>
         </li>
           <li class="links-of-updated-posts-item">
           <a href="/en/p/a618e.html" title="p&#x2F;a618e.html">JSB Crossover</a>
-        </li>
-          <li class="links-of-updated-posts-item">
-          <a href="/en/p/1474e.html" title="p&#x2F;1474e.html">How to Raise a Wyrm</a>
         </li>
       </ul>
     </div>
@@ -1328,13 +1466,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">Symbols count total: </span>
-    <span title="Symbols count total">20k</span>
+    <span title="Symbols count total">22k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">Reading time total &asymp;</span>
-    <span title="Reading time total">18 mins.</span>
+    <span title="Reading time total">20 mins.</span>
 </div>
 
 
