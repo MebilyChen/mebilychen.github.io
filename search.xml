@@ -97,16 +97,16 @@
 <li>A[刚体] x B[刚体]B于y轴锁定</li>
 <li>A[刚体] x B</li>
 </ul>
-<p><strong>必须调用函数的有:</strong></p>
+<p><strong>搭配函数使用的有:</strong></p>
 <ul>
 <li>A[刚体] x B[碰撞器]</li>
-<li> A[刚体]碰撞器]x B[刚体]</li>
-<li>A[刚体] x B[刚体碰撞器]B于y轴锁定</li>
+<li> A[刚体|碰撞器]x B[刚体]</li>
+<li>A[刚体] x B[刚体|碰撞器]B于y轴锁定</li>
 </ul>
 <p><strong>直观有效也可调用函数的有:</strong></p>
 <ul>
-<li> A[刚体]碰撞器]x B[碰撞器]:B不运动.</li>
-<li>A[刚体]碰撞器]x B[刚体]碰撞器]B于y轴锁定:B受碰撞力运动.</li>
+<li> A[刚体|碰撞器]x B[碰撞器]:B不运动.</li>
+<li>A[刚体|碰撞器]x B[刚体|碰撞器]B于y轴锁定:B受碰撞力运动.</li>
 </ul>
 <h3 id="碰撞检测"><a href="#碰撞检测" class="headerlink" title="碰撞检测"></a><strong>碰撞检测</strong></h3><p>(Script挂在X物体上,即X的碰撞)</p>
 <ul>
@@ -147,7 +147,7 @@
 <p>Public Transform hero；**//定义Transform组件**</p>
 <p>Private Vector3 offset；**//定义偏移数据变量**</p>
 <p><strong>Start下：</strong></p>
-<p>​    Offset=transform.position-hero.position;<strong>//计算偏移数据</strong></p>
+<p>Offset=transform.position-hero.position;<strong>//计算偏移数据</strong></p>
 <p><strong>Update下：</strong></p>
 <p>Transform.position=offset+hero.position；**//更新相机位置**</p>
 <h2 id="粒子系统"><a href="#粒子系统" class="headerlink" title="粒子系统"></a>粒子系统</h2><p><img data-src="https://i.loli.net/2021/06/05/pk9g3zCNfw4od1b.png" alt="粒子系统主操作板"></p>
