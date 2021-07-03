@@ -71,13 +71,13 @@
 </li>
 <li><p>切换平台至Universal Windows </p>
 </li>
-<li><p>导入TMP（Windows标签下）</p>
+<li><p>导入TMP（在菜单的Windows标签下）</p>
 </li>
 <li><p>导入MRTK包- Selected package <strong>Mixed Reality Toolkit Foundation 2.5.3</strong> is presented, along with its dependence package <strong>Mixed Reality Toolkit Standard Assets 2.5.3</strong> in the <strong>Import Features</strong> window.-到项目目录</p>
 </li>
 <li><p><strong>Mixed Reality Toolkit</strong> &gt; <strong>Utilities</strong> &gt; <strong>Configure Unity Project</strong> 接受设定</p>
 </li>
-<li><p><strong>！</strong> Set default Spatial Awareness layer: Creates a Unity Layer named Spatial Awareness and configures MRTK to use this layer for the spatial awareness mesh.* <em>（**</em>Project settings** &gt; <strong>Tags and Layers</strong>*）</p>
+<li><p><strong>！</strong> Set default Spatial Awareness layer: Creates a Unity Layer named Spatial Awareness and configures MRTK to use this layer for the spatial awareness mesh. （ <strong>Project settings</strong> &gt; <strong>Tags and Layers</strong> ）</p>
 </li>
 <li><p><strong>Player</strong> &gt; <strong>XR Settings</strong> and check the <strong>Virual Reality Supported</strong> checkbox then click the <strong>+</strong> icon, and select Windows Mixed Reality to add the Windows Mixed Reality SDK</p>
 </li>
