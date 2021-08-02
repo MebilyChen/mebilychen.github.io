@@ -268,18 +268,21 @@
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
-  <div class="search-input-container"></div>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div class="algolia-results">
-  <div id="algolia-stats"></div>
-  <div id="algolia-hits"></div>
-  <div id="algolia-pagination" class="algolia-pagination"></div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
 </div>
 
-      
     </div>
   </div>
 
@@ -468,7 +471,7 @@
 <p>能踩点跑的就踩点跑，不能的就是随意跑/走路踩点放松的，有歌词的是走路休息压腿（的同时唱歌）用的，从黑水镇开始，顺序播放。Thundergun是练呼吸的，overcome是续命的，overkill是冲刺的，胜利是续命的，moving hectic是缓冲到压腿环节的。</p>
 <p>以上    </p>
 
-    <div id="aplayer-PzcSPMiy" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="5223907619" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#cdcdcd" data-listfolded="true"></div>
+    <div id="aplayer-UGLZGYGZ" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="5223907619" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#cdcdcd" data-listfolded="true"></div>
       
     </div>
 
@@ -2012,10 +2015,7 @@ window.addEventListener('pjax:success', () => {
 
 
   
-<script src="//cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
-<script src="//cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js"></script>
-<script src="/js/algolia-search.js"></script>
-
+<script src="/js/local-search.js"></script>
 
 
 

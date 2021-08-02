@@ -275,18 +275,21 @@
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
-  <div class="search-input-container"></div>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div class="algolia-results">
-  <div id="algolia-stats"></div>
-  <div id="algolia-hits"></div>
-  <div id="algolia-pagination" class="algolia-pagination"></div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
 </div>
 
-      
     </div>
   </div>
 
@@ -450,7 +453,7 @@
 <p style="text-align:center;"> &#x1F3BC; </p> 
 
 
-    <div id="aplayer-Mzmbrbka" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="5055024" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
+    <div id="aplayer-IKkwMRAU" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="5055024" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
 
 <h3 id="2021-3-8检讨："><a href="#2021-3-8检讨：" class="headerlink" title="2021-3-8检讨："></a>2021-3-8检讨：</h3><p>我现在写文也不打王粉tag了，我就是双标狗🐶</p>
 <p>当时就是看见自己陛下被黑，还那么多人点赞，很生气，想找个理由骂作者吧，很有bully的感觉…再也不会了🙏🏻</p>
@@ -1061,10 +1064,7 @@ window.addEventListener('pjax:success', () => {
 
 
   
-<script src="//cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
-<script src="//cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js"></script>
-<script src="/js/algolia-search.js"></script>
-
+<script src="/js/local-search.js"></script>
 
 
 

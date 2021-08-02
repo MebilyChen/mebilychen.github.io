@@ -270,18 +270,21 @@
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
-  <div class="search-input-container"></div>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div class="algolia-results">
-  <div id="algolia-stats"></div>
-  <div id="algolia-hits"></div>
-  <div id="algolia-pagination" class="algolia-pagination"></div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
 </div>
 
-      
     </div>
   </div>
 
@@ -430,7 +433,7 @@
 <p style="text-align:center;"> &#x1F3BC; </p> 
 
 
-    <div id="aplayer-GXVrhFzc" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="1344439577" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
+    <div id="aplayer-bSbPtvsx" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="1344439577" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
 
 <blockquote>
 <p>I can’t keep living without you<br>没有了你我活不下去<br>But I’m waiting for someday<br>但我在等待某一天<br>To join you in the stars, but<br>也成为一颗星星，但<br>For now, I can keep thinking about you<br>现在，我可以一直想着你<br>‘Cause I can’t find my way<br>因为我现在迷失了<br>‘Cause now there’s one less star in the city<br>因为现在城里少了一颗星星  </p>
@@ -877,10 +880,7 @@ window.addEventListener('pjax:success', () => {
 
 
   
-<script src="//cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
-<script src="//cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js"></script>
-<script src="/js/algolia-search.js"></script>
-
+<script src="/js/local-search.js"></script>
 
 
 
