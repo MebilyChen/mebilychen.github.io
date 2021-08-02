@@ -43,7 +43,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":false,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="嘴臭，颓颓颓">
@@ -272,21 +272,18 @@
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="来翻翻陛下的小书架..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
+  <div class="search-input-container"></div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
-  </div>
+<div class="algolia-results">
+  <div id="algolia-stats"></div>
+  <div id="algolia-hits"></div>
+  <div id="algolia-pagination" class="algolia-pagination"></div>
 </div>
 
+      
     </div>
   </div>
 
@@ -438,21 +435,21 @@
         <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p>唱legends never dies的时候止不住想到陛下。<br>唱客西马尼不停同理基酥。  </p>
 <p>将来可能会考虑把全民K歌里的歌放过来  <br>目前先放GB的（也没多少）</p>
 <p>DIG（出自节奏地牢）女声：  </p>
-<div id="dplayer55" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer55"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/music%20video/DIG%E5%A5%B3%E5%A3%B0~1.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+<div id="dplayer58" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer58"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/music%20video/DIG%E5%A5%B3%E5%A3%B0~1.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 
 <p>（老脸一红）</p>
 <p>DIG（出自节奏地牢）男声：   </p>
-<div id="dplayer56" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer56"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/music%20video/DIG%E7%94%B7%E5%A3%B0~1.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+<div id="dplayer59" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer59"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/music%20video/DIG%E7%94%B7%E5%A3%B0~1.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 
 <h1 id="全民K歌"><a href="#全民K歌" class="headerlink" title="全民K歌"></a>全民K歌</h1><p>好累，不搞了，还要去做最可爱的迅猛小白龙呢。</p>
 <p><span class="exturl" data-url="aHR0cHM6Ly9ub2RlLmtnLnFxLmNvbS9wZXJzb25hbD91aWQ9NmI5YzlkOGMyNDJjMzc4OTNk">个人主页<i class="fa fa-external-link-alt"></i></span></p>
 
-        <div id="aplayer-mTedhhrg" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-NaqNyWdY" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-mTedhhrg"),
+            element: document.getElementById("aplayer-NaqNyWdY"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -470,12 +467,12 @@
 
 <p>注意：电音特效  </p>
 
-        <div id="aplayer-xDYNTMdk" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-soOaXDTa" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-xDYNTMdk"),
+            element: document.getElementById("aplayer-soOaXDTa"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -492,12 +489,12 @@
         </script>
 
 
-        <div id="aplayer-mNHhMbEE" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-VmADAItC" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-mNHhMbEE"),
+            element: document.getElementById("aplayer-VmADAItC"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -514,12 +511,12 @@
         </script>
 
 
-        <div id="aplayer-lSxKljWZ" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-doEQZffX" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-lSxKljWZ"),
+            element: document.getElementById("aplayer-doEQZffX"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -537,12 +534,12 @@
 
 
 
-        <div id="aplayer-RJjGBTcz" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-THljdUNE" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-RJjGBTcz"),
+            element: document.getElementById("aplayer-THljdUNE"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -559,12 +556,12 @@
         </script>
 
 
-        <div id="aplayer-kZgTuuFX" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-PDnruLuU" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-kZgTuuFX"),
+            element: document.getElementById("aplayer-PDnruLuU"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -1024,7 +1021,10 @@ window.addEventListener('pjax:success', () => {
 
 
   
-<script src="/js/local-search.js"></script>
+<script src="//cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
+<script src="//cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js"></script>
+<script src="/js/algolia-search.js"></script>
+
 
 
 
