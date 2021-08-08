@@ -42,6 +42,174 @@
     <div id="aplayer-ErUccSon" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="5223907619" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#cdcdcd" data-listfolded="true"></div>]]></content>
   </entry>
   <entry>
+    <title>Unity学习笔记</title>
+    <url>/p/616b.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="项目：智能工厂"><a href="#项目：智能工厂" class="headerlink" title="项目：智能工厂"></a>项目：智能工厂</h1><h2 id="unity-获取和设置gameObject的坐标"><a href="#unity-获取和设置gameObject的坐标" class="headerlink" title="unity 获取和设置gameObject的坐标"></a>unity 获取和设置gameObject的坐标</h2><figure class="highlight reasonml"><table><tr><td class="code"><pre><code class="hljs reasonml"><br><span class="hljs-comment">// 获取Player变量指定的对象的三围坐标</span><br>Vector3 player_postion = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Player</span>.</span></span>transform.position;<br><br><span class="hljs-comment">// 获取X,Y,Z值</span><br> <span class="hljs-built_in">float</span> x = player_postion.x;<br> <span class="hljs-built_in">float</span> y = player_postion.y;<br> <span class="hljs-built_in">float</span> z = player_postion.z;<br> <br><span class="hljs-comment">// 设置应用了当前函数的GameObject的坐标</span><br><span class="hljs-comment">// 1.直接赋值</span><br>this.GetComponent&lt;Transform&gt;<span class="hljs-literal">()</span>.position = player_postion;<br><br><span class="hljs-comment">// 2.在某GameObject的基础上加</span><br>this.GetComponent&lt;Transform&gt;<span class="hljs-literal">()</span>.position = <span class="hljs-keyword">new</span> <span class="hljs-constructor">Vector3(<span class="hljs-params">player_postion</span>.<span class="hljs-params">x</span>, <span class="hljs-params">player_postion</span>.<span class="hljs-params">y</span> + 7.79F, <span class="hljs-params">player_postion</span>.<span class="hljs-params">z</span> - 15)</span>;<br><br><span class="hljs-comment">//或者是</span><br>this.GetComponent&lt;Transform&gt;<span class="hljs-literal">()</span>.position = player_postion + <span class="hljs-keyword">new</span> <span class="hljs-constructor">Vector3(0, 7.79F, -15)</span>;<br><br></code></pre></td></tr></table></figure>
+
+<p>（来源网络）  </p>
+<h1 id="毕设：Hololens使用Unity开发App"><a href="#毕设：Hololens使用Unity开发App" class="headerlink" title="毕设：Hololens使用Unity开发App"></a>毕设：Hololens使用Unity开发App</h1><h2 id="理论部分的逻辑思路："><a href="#理论部分的逻辑思路：" class="headerlink" title="理论部分的逻辑思路："></a>理论部分的逻辑思路：</h2><p>1、描述虚实系统的相关基本概念，总结前人陈述</p>
+<p>2、对现有可交互的人机物虚实系统进行分析（AR头显、AR眼镜）（较浅显）</p>
+<p>3、在这些系统中针对HoloLens的虚实系统操作模式进行详细分析和体验（深入）</p>
+<p>4、根据以上研究分析得出目前的虚实系统存在的缺陷（较浅显）</p>
+<p>5、使用基于装配场景需求调研的界面设计，来展示和探索、验证HoloLens现有交互模式的缺陷及改进方向（这一步作为实验）（深入）</p>
+<p>6、总结和展望未来的虚实系统交互模式，提炼虚实系统操作模式（HoloLens级别）</p>
+<p>（更强调虚实系统操作模式的分析与展望）</p>
+<p>【现在想到的就是将GUI的按钮、平面元素淘汰，替换成同等概念的、非点触式的立体模型（三维的摇杆）、语音（语音几乎没有可以发挥的余地）、手势、动作等，或者组合以上方法产生新的交互命令，结合人在日常生活中的行为进行操作定义，例如拿起一个东西放在眼前的动作，可以定义为查看详细的功能操作，但具体实现目前就只能先展望一下】</p>
+<h2 id="目前的逻辑："><a href="#目前的逻辑：" class="headerlink" title="目前的逻辑："></a>目前的逻辑：</h2><p>1、描述虚实系统的相关基本概念，总结前人陈述</p>
+<p>2、对现有可交互的人机物虚实系统进行分析（AR头显、AR眼镜）（较浅显）</p>
+<p>3、在这些系统中针对HoloLens的虚实系统操作模式进行详细分析和体验（深入）</p>
+<p>4、根据以上研究得出应如何设计该交互模式下的界面设计，提炼界面设计方法理论（HoloLens App级别）（理论雏形）</p>
+<p>5、使用基于装配场景需求调研的界面设计，来验证这一设计方法（这一步作为设计、验证和理论优化）（理论迭代）</p>
+<p>6、总结和展望未来的虚实系统交互模式下的界面设计（HoloLens App级别）（理论成形）</p>
+<p>（更强调界面设计和界面设计方法）</p>
+<p>【这个写的主题就是在类似于Hololens的虚实系统下应该如何进行界面设计，就涉及到距离、三维信息呈现、主动与被动那些，也在界面设计部分有提到是如何使用这些理论进行设计的】</p>
+<h2 id="修改思路："><a href="#修改思路：" class="headerlink" title="修改思路："></a>修改思路：</h2><p>保留界面设计理论部分，加入虚实操作系统理论分析及展望部分。两者也可以适当进行融合。<br>界面设计demo那里用现在做出来的替换之前本应是迭代的那部分。对比在虚实交互系统中GUI较多（做了可用性测试）的结果和GUI较少的结果</p>
+<p>1、描述虚实系统的相关基本概念，总结前人陈述</p>
+<p>2、对现有可交互的人机物虚实系统进行分析（AR头显、AR眼镜）（较浅显）</p>
+<p>3、在这些系统中针对HoloLens的虚实系统操作模式进行详细分析和体验（深入）</p>
+<p>4、根据以上研究得出目前的虚实系统存在的缺陷，同时拓展应如何设计该交互模式下的界面设计，提炼界面设计方法理论（HoloLens App级别）（理论雏形）（较浅显）</p>
+<p>5、使用基于装配场景需求调研的界面设计，展示和探索、验证HoloLens现有交互模式的缺陷及改进方向（作为实验）（深入）（理论迭代），同时拓展提及界面设计方法思路，但不作为重点</p>
+<p>6、总结和展望未来的虚实系统交互模式，提炼虚实系统操作模式（HoloLens级别），略微拓展未来的虚实系统交互模式下的界面设计（HoloLens App级别）（理论成形）</p>
+<h2 id="建立环境"><a href="#建立环境" class="headerlink" title="建立环境"></a>建立环境</h2><p>要是开新工程估计还得看官方文档再来一遍，太麻烦了，导入啊什么的都好（官方最近也提供了辅助程序）但是后面的一通设置给我彻底心态搞没了。  </p>
+<ol>
+<li><p>用3D模板新建项目</p>
+</li>
+<li><p>切换平台至Universal Windows </p>
+</li>
+<li><p>导入TMP（在菜单的Windows标签下）</p>
+</li>
+<li><p>导入MRTK包- Selected package <strong>Mixed Reality Toolkit Foundation 2.5.3</strong> is presented, along with its dependence package <strong>Mixed Reality Toolkit Standard Assets 2.5.3</strong> in the <strong>Import Features</strong> window.-到项目目录</p>
+</li>
+<li><p><strong>Mixed Reality Toolkit</strong> &gt; <strong>Utilities</strong> &gt; <strong>Configure Unity Project</strong> 接受设定</p>
+</li>
+<li><p><strong>！</strong> Set default Spatial Awareness layer: Creates a Unity Layer named Spatial Awareness and configures MRTK to use this layer for the spatial awareness mesh. （ <strong>Project settings</strong> &gt; <strong>Tags and Layers</strong> ）</p>
+</li>
+<li><p><strong>Player</strong> &gt; <strong>XR Settings</strong> and check the <strong>Virual Reality Supported</strong> checkbox then click the <strong>+</strong> icon, and select Windows Mixed Reality to add the Windows Mixed Reality SDK</p>
+</li>
+<li><p>In the MRTK Project Configurator window, use the <strong>Audio spatializer</strong> dropdown to select the <strong>MS HRTF Spatializer</strong>, then click the <strong>Apply</strong> button to apply the setting:</p>
+</li>
+<li><p>In the Project Settings window, select <strong>Player</strong> &gt; <strong>XR Settings</strong>, then use the <strong>Depth Format</strong> dropdown to select <strong>16-bit depth</strong>:</p>
+</li>
+<li><p>In the Project Settings window, select <strong>Player</strong> &gt; <strong>Publishing Settings</strong>, then in the <strong>Package name</strong> field, enter a suitable name, for example, <em>MRTKTutorials-GettingStarted</em>:</p>
+</li>
+<li><p>添加Scenes到bulid, 生成build, 在vs里打开sln文件, Configure Visual Studio for HoloLens by selecting the <strong>Master</strong> or <strong>Release</strong> configuration, the <strong>ARM64 ( Hololens</strong>模拟器设置成<strong>X86</strong>或<strong>X64，实机设置成Release，ARM64)</strong> architecture, and <strong>Device</strong> as target, select <strong>Debug</strong> &gt; <strong>Start Without Debugging</strong></p>
+</li>
+</ol>
+<h1 id="Unity-学习"><a href="#Unity-学习" class="headerlink" title="Unity 学习"></a>Unity 学习</h1><h2 id="碰撞"><a href="#碰撞" class="headerlink" title="碰撞"></a><strong>碰撞</strong></h2><h3 id="刚体和碰撞器"><a href="#刚体和碰撞器" class="headerlink" title="刚体和碰撞器"></a><strong>刚体和碰撞器</strong></h3><p><strong>只有安装刚体组件的物体才能受重力等作用力,只有安装碰撞器组件才能检测碰撞并运行函数,通常情况下需要相互作用的两个物体都要安装碰撞器.</strong></p>
+<p>A受重力与B发生碰撞:</p>
+<p><strong>无效碰撞有:</strong></p>
+<ul>
+<li>A[刚体] x B[刚体]B于y轴锁定</li>
+<li>A[刚体] x B</li>
+</ul>
+<p><strong>搭配函数使用的有:</strong></p>
+<ul>
+<li>A[刚体] x B[碰撞器]</li>
+<li> A[刚体|碰撞器]x B[刚体]</li>
+<li>A[刚体] x B[刚体|碰撞器]B于y轴锁定</li>
+</ul>
+<p><strong>直观有效也可调用函数的有:</strong></p>
+<ul>
+<li> A[刚体|碰撞器]x B[碰撞器]:B不运动.</li>
+<li>A[刚体|碰撞器]x B[刚体|碰撞器]B于y轴锁定:B受碰撞力运动.</li>
+</ul>
+<h3 id="碰撞检测"><a href="#碰撞检测" class="headerlink" title="碰撞检测"></a><strong>碰撞检测</strong></h3><p>(Script挂在X物体上,即X的碰撞)</p>
+<ul>
+<li>** OnCollisionEnter(Collision collision)**:检测碰撞开始并运行函数内容(只运行一次).</li>
+<li>** OnCollisionExit(Collision collision):**检测碰撞结束并运行函数内容(只运行一次).</li>
+<li>** OnCollisionStay(Collision collision):**检测碰撞并运行函数内容(接触时持续运行,每帧一次).</li>
+</ul>
+<p><strong>取得碰撞信息</strong></p>
+<ul>
+<li>** collision.collider: **获取碰撞物体</li>
+<li>** collision.collider.name:**获取碰撞物体名称</li>
+<li>** collision.collider.tag:**获取碰撞物体标签</li>
+</ul>
+<h2 id="触发"><a href="#触发" class="headerlink" title="触发"></a><strong>触发</strong></h2><p>** 可以穿过的碰撞器:**将碰撞器中的”Is Trigger”勾选.</p>
+<p>** 将触发器隐藏:**移除mesh filter和mesh render</p>
+<h3 id="触发检测"><a href="#触发检测" class="headerlink" title="触发检测"></a><strong>触发检测</strong></h3><p>** OnTriggerEnter(Collider other)**:检测碰撞开始并运行函数内容(只运行一次).</p>
+<p>** OnTriggerExit(Collider other):**检测碰撞结束并运行函数内容(只运行一次).</p>
+<p>** OnTriggerStay(Collider other):**检测碰撞并运行函数内容(接触时持续运行,每帧一次).</p>
+<p>** 取得触发信息**</p>
+<p>(other相当于一个collider)</p>
+<p>** other:**获取触发(游戏内)物体</p>
+<p>** other.name:**获取触发物体(游戏内)名称</p>
+<p>** other.tag:**获取触发物体(游戏内)标签</p>
+<h2 id="鼠标射线"><a href="#鼠标射线" class="headerlink" title="鼠标射线"></a><strong>鼠标射线</strong></h2><h3 id="射线检测"><a href="#射线检测" class="headerlink" title="射线检测"></a><strong>射线检测</strong></h3><p>Input.GetMouseButtonDown(<span class="hint--info hint--rounded hint--top" data-hint="鼠标左键" ontouchstart>0</span>) <strong>//检测鼠标左键按下</strong></p>
+<p>Ray ray = Camera.main.<span class="hint--info hint--rounded hint--top" data-hint="屏幕坐标转换成射线" ontouchstart>ScreenPointToRay</span>(<span class="hint--info hint--rounded hint--top" data-hint="鼠标位置" ontouchstart>Input.mousePosition</span>)<strong>//定义射线</strong></p>
+<p>RaycastHit hit；**//定义射线击中的点，保存碰撞信息**</p>
+<p>If(Physics.Raycast(<span class="hint--info hint--rounded hint--top" data-hint="传递射线" ontouchstart>ray</span>, <span class="hint--info hint--rounded hint--top" data-hint="传递射线碰撞信息" ontouchstart>out hit</span>))<strong>//检测是否发生碰撞</strong></p>
+<p>{</p>
+<p>Print(hit.point);<strong>//输出击中位置</strong></p>
+<p>}</p>
+<h2 id="摄像机跟随"><a href="#摄像机跟随" class="headerlink" title="摄像机跟随"></a><strong>摄像机跟随</strong></h2><ol>
+<li>原理：使摄像机与人物保持一个固定的方位偏差</li>
+</ol>
+<p><strong>确定初始化相机跟随位置</strong></p>
+<ol start="2">
+<li>创建Script，置于Main Camera上</li>
+</ol>
+<p>Public Transform hero；**//定义Transform组件**</p>
+<p>Private Vector3 offset；**//定义偏移数据变量**</p>
+<p><strong>Start下：</strong></p>
+<p>Offset=transform.position-hero.position;<strong>//计算偏移数据</strong></p>
+<p><strong>Update下：</strong></p>
+<p>Transform.position=offset+hero.position；**//更新相机位置**</p>
+<h2 id="粒子系统"><a href="#粒子系统" class="headerlink" title="粒子系统"></a>粒子系统</h2><p><img data-src="https://i.loli.net/2021/06/05/pk9g3zCNfw4od1b.png" alt="粒子系统主操作板"></p>
+<p><img data-src="https://i.loli.net/2021/06/05/hXt6WGcv73yTL1p.png" alt="粒子系统"></p>
+<h2 id="DontDestory"><a href="#DontDestory" class="headerlink" title="DontDestory"></a>DontDestory</h2><p>虽然有很多bug，但是挺方便的。</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><code class="hljs angelscript"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-symbol">DontDestroy: <span class="hljs-symbol">MonoBehaviour</span></span> &#123;<br><span class="hljs-keyword">private</span> static <span class="hljs-built_in">bool</span> isCloning = <span class="hljs-literal">false</span>;<br><span class="hljs-comment">// Use this for initialization</span><br>  <span class="hljs-built_in">void</span> Awake () &#123;<br>    DontDestroyOnLoad(<span class="hljs-keyword">this</span>.gameObject);<br>      &#125;<br><br>  <span class="hljs-comment">// Update is called once per frame</span><br><br>  <span class="hljs-built_in">void</span> Update () &#123;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>可以配一个Manager来具体控制。</p>
+<figure class="highlight arduino"><table><tr><td class="code"><pre><code class="hljs arduino"><span class="hljs-keyword">using</span> System.Runtime.CompilerServices;<br><span class="hljs-keyword">using</span> System.Security.AccessControl;<br><span class="hljs-keyword">using</span> System.Runtime.InteropServices;<br><span class="hljs-keyword">using</span> System.Collections;<br><span class="hljs-keyword">using</span> System.Collections.Generic;<br><span class="hljs-keyword">using</span> UnityEngine;<br><span class="hljs-keyword">using</span> UnityEngine.UI;<br><span class="hljs-keyword">using</span> UnityEngine.SceneManagement;<br><span class="hljs-keyword">using</span> System;<br><br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DestroyManager</span>:</span> MonoBehaviour &#123;<br><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> DestroyManager _instance;<br><span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> sceneIndex;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> DestroyManager Instance<br><br>&#123;<br> <span class="hljs-built_in">get</span><br>  &#123;<br>  <span class="hljs-keyword">return</span> _instance; <br>  &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Awake</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br><br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Update</span> <span class="hljs-params">()</span> </span>&#123;<br>  GetScene();<br>    <span class="hljs-built_in">print</span>(sceneIndex);<br>    <span class="hljs-keyword">if</span> (sceneIndex == <span class="hljs-number">0</span> || sceneIndex == <span class="hljs-number">1</span> || sceneIndex == <span class="hljs-number">6</span>)<br>  &#123;<br>    Destroy(<span class="hljs-keyword">this</span>.gameObject); <br>    <span class="hljs-keyword">return</span>;<br>  &#125;<br>  &#125;<br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">GetScene</span><span class="hljs-params">()</span></span>&#123;<br><br>sceneIndex = SceneManager.GetActiveScene().buildIndex;<br>&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="添加脚本-脚本系统"><a href="#添加脚本-脚本系统" class="headerlink" title="添加脚本/脚本系统"></a>添加脚本/脚本系统</h2><p>Script以Hololens为例，C#，挂载到希望交互的物体上。</p>
+<ol>
+<li>   “grabbable” Near Interaction Grabbable </li>
+<li>   “manipulation” Manipulation Handler（de）/Object Manipulator</li>
+<li>   “bounding” Bounding Box（de）/Bounds Control</li>
+<li>   Interactable 可交互组件（focus）</li>
+</ol>
+<p>挂在空物体的情况就是该物体一出现就开始运行Script，和unity monobehaviour中的场景的Start()和Awake()类似。</p>
+<h2 id="Script编写"><a href="#Script编写" class="headerlink" title="Script编写"></a>Script编写</h2><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>包括部分Hololens的引用</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><code class="hljs C#"><span class="hljs-keyword">using</span> UnityEngine;<br><span class="hljs-keyword">using</span> UnityEngine.UI;<br><span class="hljs-keyword">using</span> UnityEngine.SceneManagement;<br><br><span class="hljs-keyword">using</span> System;<br><span class="hljs-keyword">using</span> System.Runtime.CompilerServices;<br><span class="hljs-keyword">using</span> System.Security.AccessControl;<br><span class="hljs-keyword">using</span> System.Runtime.InteropServices;<br><span class="hljs-keyword">using</span> System.Collections;<br><span class="hljs-keyword">using</span> System.Collections.Generic;<br><br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Input;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Utilities;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Utilities.Solvers;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.UI;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Experimental.Dialog;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Diagnostics;<br></code></pre></td></tr></table></figure>
+
+<h3 id="类名（文件名）"><a href="#类名（文件名）" class="headerlink" title="类名（文件名）"></a>类名（文件名）</h3><pre><code>public class classname: MonoBehaviour &#123;
+</code></pre>
+<h3 id="变量定义"><a href="#变量定义" class="headerlink" title="变量定义"></a>变量定义</h3><p>public：</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><code class="hljs angelscript"><span class="hljs-keyword">public</span> <span class="hljs-built_in">float</span> countTime = <span class="hljs-number">0f</span>;<br><span class="hljs-keyword">public</span> <span class="hljs-built_in">float</span> setTime = <span class="hljs-number">0f</span>;<br><span class="hljs-keyword">public</span> GameObject object1;<span class="hljs-comment">//可以在Unity界面中指定一个物体</span><br></code></pre></td></tr></table></figure>
+<p>会显示在Unity控制面板中，可以查看以及自定义更改；</p>
+<p>private：</p>
+<figure class="highlight abnf"><table><tr><td class="code"><pre><code class="hljs abnf">private Vector3 arrow_postion<span class="hljs-comment">;</span><br></code></pre></td></tr></table></figure>
+
+<p>不会显示在Unity控制面板中；</p>
+<h4 id="Unity提供的变量类型"><a href="#Unity提供的变量类型" class="headerlink" title="Unity提供的变量类型"></a>Unity提供的变量类型</h4><p>遇到的比较特殊的就是<code>Vector3</code>、<code>GameObject</code>其他都比较正常，，，</p>
+<h4 id="Unity提供的变量名"><a href="#Unity提供的变量名" class="headerlink" title="Unity提供的变量名"></a>Unity提供的变量名</h4><p><code>Time.deltaTime</code>是激活后的运行时间。</p>
+<p><code>GameObject.FindGameObjectWithTag(&quot;Arrow1&quot;).transform.position;</code>是找到tag为Arrow1的物体的位置属性数据。</p>
+<p><code>this.GetComponent&lt;Transform&gt;().position</code>是挂载该脚本的物体的位置属性。</p>
+<h3 id="MonoBehaviour"><a href="#MonoBehaviour" class="headerlink" title="MonoBehaviour"></a>MonoBehaviour</h3><figure class="highlight pgsql"><table><tr><td class="code"><pre><code class="hljs pgsql">// Use this <span class="hljs-keyword">for</span> initialization<br><span class="hljs-type">void</span> <span class="hljs-keyword">Start</span> () &#123;<br><br>&#125;<br><br>// <span class="hljs-keyword">Update</span> <span class="hljs-keyword">is</span> <span class="hljs-keyword">called</span> once per frame<br><span class="hljs-type">void</span> <span class="hljs-keyword">Update</span> () &#123;<br><br>	 CountTime();<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="变量声明"><a href="#变量声明" class="headerlink" title="变量声明"></a>变量声明</h3><p>例如<code>new Vector3(arrow_postion.x, arrow_postion.y + 0.08F, arrow_postion.z);</code>可以在不用提前定义变量的情况下使用…吧？  <br>其实new这个我一直没太搞懂。  </p>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><figure class="highlight arduino"><table><tr><td class="code"><pre><code class="hljs arduino"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">CountTime</span><span class="hljs-params">()</span> </span><br><span class="hljs-function">    </span>&#123;<br>        countTime += Time.deltaTime;<br>        <span class="hljs-keyword">if</span>(countTime &gt; setTime)<span class="hljs-comment">//秒</span><br>        &#123;<br>            SceneManager.LoadScene(<span class="hljs-number">6</span>);<br>        &#125;<br>    &#125;<br>	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">ClickTest</span><span class="hljs-params">()</span> <span class="hljs-comment">//测试</span></span><br><span class="hljs-function">	</span>&#123;<br>		<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Ready to go!&quot;</span>);<br>	&#125;<br>&#125;<br><span class="hljs-comment">//可用于在Unity界面中呼出，也可直接放在Start或者Update中</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="Unity提供的函数"><a href="#Unity提供的函数" class="headerlink" title="Unity提供的函数"></a>Unity提供的函数</h4><p><code>print(&quot;Ready to go!&quot;);</code>可以在console打印出文字。</p>
+<p><code>SceneManager.LoadScene(6);</code>可以跳转场景。</p>
+<p><code>DontDestroyOnLoad(this.gameObject);</code>跳转场景时不销毁挂载这个script的物体。</p>
+<p><code>object1.SetActive(true);</code>显示隐藏物体。</p>
+<p><code>obj.SetActive(!obj.activeSelf);</code>物体隐藏则显示，显示则隐藏。通常需要挂在另一个已激活/显示的物体上，因为隐藏的物体无法自启。</p>
+]]></content>
+      <categories>
+        <category>咩碳的独游梦</category>
+        <category>Unity3D</category>
+      </categories>
+      <tags>
+        <tag>Unity3D</tag>
+        <tag>Hololens</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【日常】虫虫和虫虫和虫虫们</title>
     <url>/p/24b8.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><blockquote>
@@ -8305,171 +8473,6 @@ powerful blog framework" ontouchstart>Hexo</span>
         <tag>Cytus I &amp; II</tag>
         <tag>VOEZ</tag>
         <tag>左右脑锻炼</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Unity学习笔记</title>
-    <url>/p/616b.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="毕设：Hololens使用Unity开发App"><a href="#毕设：Hololens使用Unity开发App" class="headerlink" title="毕设：Hololens使用Unity开发App"></a>毕设：Hololens使用Unity开发App</h1><h2 id="理论部分的逻辑思路："><a href="#理论部分的逻辑思路：" class="headerlink" title="理论部分的逻辑思路："></a>理论部分的逻辑思路：</h2><p>1、描述虚实系统的相关基本概念，总结前人陈述</p>
-<p>2、对现有可交互的人机物虚实系统进行分析（AR头显、AR眼镜）（较浅显）</p>
-<p>3、在这些系统中针对HoloLens的虚实系统操作模式进行详细分析和体验（深入）</p>
-<p>4、根据以上研究分析得出目前的虚实系统存在的缺陷（较浅显）</p>
-<p>5、使用基于装配场景需求调研的界面设计，来展示和探索、验证HoloLens现有交互模式的缺陷及改进方向（这一步作为实验）（深入）</p>
-<p>6、总结和展望未来的虚实系统交互模式，提炼虚实系统操作模式（HoloLens级别）</p>
-<p>（更强调虚实系统操作模式的分析与展望）</p>
-<p>【现在想到的就是将GUI的按钮、平面元素淘汰，替换成同等概念的、非点触式的立体模型（三维的摇杆）、语音（语音几乎没有可以发挥的余地）、手势、动作等，或者组合以上方法产生新的交互命令，结合人在日常生活中的行为进行操作定义，例如拿起一个东西放在眼前的动作，可以定义为查看详细的功能操作，但具体实现目前就只能先展望一下】</p>
-<h2 id="目前的逻辑："><a href="#目前的逻辑：" class="headerlink" title="目前的逻辑："></a>目前的逻辑：</h2><p>1、描述虚实系统的相关基本概念，总结前人陈述</p>
-<p>2、对现有可交互的人机物虚实系统进行分析（AR头显、AR眼镜）（较浅显）</p>
-<p>3、在这些系统中针对HoloLens的虚实系统操作模式进行详细分析和体验（深入）</p>
-<p>4、根据以上研究得出应如何设计该交互模式下的界面设计，提炼界面设计方法理论（HoloLens App级别）（理论雏形）</p>
-<p>5、使用基于装配场景需求调研的界面设计，来验证这一设计方法（这一步作为设计、验证和理论优化）（理论迭代）</p>
-<p>6、总结和展望未来的虚实系统交互模式下的界面设计（HoloLens App级别）（理论成形）</p>
-<p>（更强调界面设计和界面设计方法）</p>
-<p>【这个写的主题就是在类似于Hololens的虚实系统下应该如何进行界面设计，就涉及到距离、三维信息呈现、主动与被动那些，也在界面设计部分有提到是如何使用这些理论进行设计的】</p>
-<h2 id="修改思路："><a href="#修改思路：" class="headerlink" title="修改思路："></a>修改思路：</h2><p>保留界面设计理论部分，加入虚实操作系统理论分析及展望部分。两者也可以适当进行融合。<br>界面设计demo那里用现在做出来的替换之前本应是迭代的那部分。对比在虚实交互系统中GUI较多（做了可用性测试）的结果和GUI较少的结果</p>
-<p>1、描述虚实系统的相关基本概念，总结前人陈述</p>
-<p>2、对现有可交互的人机物虚实系统进行分析（AR头显、AR眼镜）（较浅显）</p>
-<p>3、在这些系统中针对HoloLens的虚实系统操作模式进行详细分析和体验（深入）</p>
-<p>4、根据以上研究得出目前的虚实系统存在的缺陷，同时拓展应如何设计该交互模式下的界面设计，提炼界面设计方法理论（HoloLens App级别）（理论雏形）（较浅显）</p>
-<p>5、使用基于装配场景需求调研的界面设计，展示和探索、验证HoloLens现有交互模式的缺陷及改进方向（作为实验）（深入）（理论迭代），同时拓展提及界面设计方法思路，但不作为重点</p>
-<p>6、总结和展望未来的虚实系统交互模式，提炼虚实系统操作模式（HoloLens级别），略微拓展未来的虚实系统交互模式下的界面设计（HoloLens App级别）（理论成形）</p>
-<h2 id="建立环境"><a href="#建立环境" class="headerlink" title="建立环境"></a>建立环境</h2><p>要是开新工程估计还得看官方文档再来一遍，太麻烦了，导入啊什么的都好（官方最近也提供了辅助程序）但是后面的一通设置给我彻底心态搞没了。  </p>
-<ol>
-<li><p>用3D模板新建项目</p>
-</li>
-<li><p>切换平台至Universal Windows </p>
-</li>
-<li><p>导入TMP（在菜单的Windows标签下）</p>
-</li>
-<li><p>导入MRTK包- Selected package <strong>Mixed Reality Toolkit Foundation 2.5.3</strong> is presented, along with its dependence package <strong>Mixed Reality Toolkit Standard Assets 2.5.3</strong> in the <strong>Import Features</strong> window.-到项目目录</p>
-</li>
-<li><p><strong>Mixed Reality Toolkit</strong> &gt; <strong>Utilities</strong> &gt; <strong>Configure Unity Project</strong> 接受设定</p>
-</li>
-<li><p><strong>！</strong> Set default Spatial Awareness layer: Creates a Unity Layer named Spatial Awareness and configures MRTK to use this layer for the spatial awareness mesh. （ <strong>Project settings</strong> &gt; <strong>Tags and Layers</strong> ）</p>
-</li>
-<li><p><strong>Player</strong> &gt; <strong>XR Settings</strong> and check the <strong>Virual Reality Supported</strong> checkbox then click the <strong>+</strong> icon, and select Windows Mixed Reality to add the Windows Mixed Reality SDK</p>
-</li>
-<li><p>In the MRTK Project Configurator window, use the <strong>Audio spatializer</strong> dropdown to select the <strong>MS HRTF Spatializer</strong>, then click the <strong>Apply</strong> button to apply the setting:</p>
-</li>
-<li><p>In the Project Settings window, select <strong>Player</strong> &gt; <strong>XR Settings</strong>, then use the <strong>Depth Format</strong> dropdown to select <strong>16-bit depth</strong>:</p>
-</li>
-<li><p>In the Project Settings window, select <strong>Player</strong> &gt; <strong>Publishing Settings</strong>, then in the <strong>Package name</strong> field, enter a suitable name, for example, <em>MRTKTutorials-GettingStarted</em>:</p>
-</li>
-<li><p>添加Scenes到bulid, 生成build, 在vs里打开sln文件, Configure Visual Studio for HoloLens by selecting the <strong>Master</strong> or <strong>Release</strong> configuration, the <strong>ARM64 ( Hololens</strong>模拟器设置成<strong>X86</strong>或<strong>X64，实机设置成Release，ARM64)</strong> architecture, and <strong>Device</strong> as target, select <strong>Debug</strong> &gt; <strong>Start Without Debugging</strong></p>
-</li>
-</ol>
-<h1 id="Unity-学习"><a href="#Unity-学习" class="headerlink" title="Unity 学习"></a>Unity 学习</h1><h2 id="碰撞"><a href="#碰撞" class="headerlink" title="碰撞"></a><strong>碰撞</strong></h2><h3 id="刚体和碰撞器"><a href="#刚体和碰撞器" class="headerlink" title="刚体和碰撞器"></a><strong>刚体和碰撞器</strong></h3><p><strong>只有安装刚体组件的物体才能受重力等作用力,只有安装碰撞器组件才能检测碰撞并运行函数,通常情况下需要相互作用的两个物体都要安装碰撞器.</strong></p>
-<p>A受重力与B发生碰撞:</p>
-<p><strong>无效碰撞有:</strong></p>
-<ul>
-<li>A[刚体] x B[刚体]B于y轴锁定</li>
-<li>A[刚体] x B</li>
-</ul>
-<p><strong>搭配函数使用的有:</strong></p>
-<ul>
-<li>A[刚体] x B[碰撞器]</li>
-<li> A[刚体|碰撞器]x B[刚体]</li>
-<li>A[刚体] x B[刚体|碰撞器]B于y轴锁定</li>
-</ul>
-<p><strong>直观有效也可调用函数的有:</strong></p>
-<ul>
-<li> A[刚体|碰撞器]x B[碰撞器]:B不运动.</li>
-<li>A[刚体|碰撞器]x B[刚体|碰撞器]B于y轴锁定:B受碰撞力运动.</li>
-</ul>
-<h3 id="碰撞检测"><a href="#碰撞检测" class="headerlink" title="碰撞检测"></a><strong>碰撞检测</strong></h3><p>(Script挂在X物体上,即X的碰撞)</p>
-<ul>
-<li>** OnCollisionEnter(Collision collision)**:检测碰撞开始并运行函数内容(只运行一次).</li>
-<li>** OnCollisionExit(Collision collision):**检测碰撞结束并运行函数内容(只运行一次).</li>
-<li>** OnCollisionStay(Collision collision):**检测碰撞并运行函数内容(接触时持续运行,每帧一次).</li>
-</ul>
-<p><strong>取得碰撞信息</strong></p>
-<ul>
-<li>** collision.collider: **获取碰撞物体</li>
-<li>** collision.collider.name:**获取碰撞物体名称</li>
-<li>** collision.collider.tag:**获取碰撞物体标签</li>
-</ul>
-<h2 id="触发"><a href="#触发" class="headerlink" title="触发"></a><strong>触发</strong></h2><p>** 可以穿过的碰撞器:**将碰撞器中的”Is Trigger”勾选.</p>
-<p>** 将触发器隐藏:**移除mesh filter和mesh render</p>
-<h3 id="触发检测"><a href="#触发检测" class="headerlink" title="触发检测"></a><strong>触发检测</strong></h3><p>** OnTriggerEnter(Collider other)**:检测碰撞开始并运行函数内容(只运行一次).</p>
-<p>** OnTriggerExit(Collider other):**检测碰撞结束并运行函数内容(只运行一次).</p>
-<p>** OnTriggerStay(Collider other):**检测碰撞并运行函数内容(接触时持续运行,每帧一次).</p>
-<p>** 取得触发信息**</p>
-<p>(other相当于一个collider)</p>
-<p>** other:**获取触发(游戏内)物体</p>
-<p>** other.name:**获取触发物体(游戏内)名称</p>
-<p>** other.tag:**获取触发物体(游戏内)标签</p>
-<h2 id="鼠标射线"><a href="#鼠标射线" class="headerlink" title="鼠标射线"></a><strong>鼠标射线</strong></h2><h3 id="射线检测"><a href="#射线检测" class="headerlink" title="射线检测"></a><strong>射线检测</strong></h3><p>Input.GetMouseButtonDown(<span class="hint--info hint--rounded hint--top" data-hint="鼠标左键" ontouchstart>0</span>) <strong>//检测鼠标左键按下</strong></p>
-<p>Ray ray = Camera.main.<span class="hint--info hint--rounded hint--top" data-hint="屏幕坐标转换成射线" ontouchstart>ScreenPointToRay</span>(<span class="hint--info hint--rounded hint--top" data-hint="鼠标位置" ontouchstart>Input.mousePosition</span>)<strong>//定义射线</strong></p>
-<p>RaycastHit hit；**//定义射线击中的点，保存碰撞信息**</p>
-<p>If(Physics.Raycast(<span class="hint--info hint--rounded hint--top" data-hint="传递射线" ontouchstart>ray</span>, <span class="hint--info hint--rounded hint--top" data-hint="传递射线碰撞信息" ontouchstart>out hit</span>))<strong>//检测是否发生碰撞</strong></p>
-<p>{</p>
-<p>Print(hit.point);<strong>//输出击中位置</strong></p>
-<p>}</p>
-<h2 id="摄像机跟随"><a href="#摄像机跟随" class="headerlink" title="摄像机跟随"></a><strong>摄像机跟随</strong></h2><ol>
-<li>原理：使摄像机与人物保持一个固定的方位偏差</li>
-</ol>
-<p><strong>确定初始化相机跟随位置</strong></p>
-<ol start="2">
-<li>创建Script，置于Main Camera上</li>
-</ol>
-<p>Public Transform hero；**//定义Transform组件**</p>
-<p>Private Vector3 offset；**//定义偏移数据变量**</p>
-<p><strong>Start下：</strong></p>
-<p>Offset=transform.position-hero.position;<strong>//计算偏移数据</strong></p>
-<p><strong>Update下：</strong></p>
-<p>Transform.position=offset+hero.position；**//更新相机位置**</p>
-<h2 id="粒子系统"><a href="#粒子系统" class="headerlink" title="粒子系统"></a>粒子系统</h2><p><img data-src="https://i.loli.net/2021/06/05/pk9g3zCNfw4od1b.png" alt="粒子系统主操作板"></p>
-<p><img data-src="https://i.loli.net/2021/06/05/hXt6WGcv73yTL1p.png" alt="粒子系统"></p>
-<h2 id="DontDestory"><a href="#DontDestory" class="headerlink" title="DontDestory"></a>DontDestory</h2><p>虽然有很多bug，但是挺方便的。</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><code class="hljs angelscript"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-symbol">DontDestroy: <span class="hljs-symbol">MonoBehaviour</span></span> &#123;<br><span class="hljs-keyword">private</span> static <span class="hljs-built_in">bool</span> isCloning = <span class="hljs-literal">false</span>;<br><span class="hljs-comment">// Use this for initialization</span><br>  <span class="hljs-built_in">void</span> Awake () &#123;<br>    DontDestroyOnLoad(<span class="hljs-keyword">this</span>.gameObject);<br>      &#125;<br><br>  <span class="hljs-comment">// Update is called once per frame</span><br><br>  <span class="hljs-built_in">void</span> Update () &#123;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>可以配一个Manager来具体控制。</p>
-<figure class="highlight arduino"><table><tr><td class="code"><pre><code class="hljs arduino"><span class="hljs-keyword">using</span> System.Runtime.CompilerServices;<br><span class="hljs-keyword">using</span> System.Security.AccessControl;<br><span class="hljs-keyword">using</span> System.Runtime.InteropServices;<br><span class="hljs-keyword">using</span> System.Collections;<br><span class="hljs-keyword">using</span> System.Collections.Generic;<br><span class="hljs-keyword">using</span> UnityEngine;<br><span class="hljs-keyword">using</span> UnityEngine.UI;<br><span class="hljs-keyword">using</span> UnityEngine.SceneManagement;<br><span class="hljs-keyword">using</span> System;<br><br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DestroyManager</span>:</span> MonoBehaviour &#123;<br><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> DestroyManager _instance;<br><span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> sceneIndex;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> DestroyManager Instance<br><br>&#123;<br> <span class="hljs-built_in">get</span><br>  &#123;<br>  <span class="hljs-keyword">return</span> _instance; <br>  &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Awake</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br><br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Update</span> <span class="hljs-params">()</span> </span>&#123;<br>  GetScene();<br>    <span class="hljs-built_in">print</span>(sceneIndex);<br>    <span class="hljs-keyword">if</span> (sceneIndex == <span class="hljs-number">0</span> || sceneIndex == <span class="hljs-number">1</span> || sceneIndex == <span class="hljs-number">6</span>)<br>  &#123;<br>    Destroy(<span class="hljs-keyword">this</span>.gameObject); <br>    <span class="hljs-keyword">return</span>;<br>  &#125;<br>  &#125;<br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">GetScene</span><span class="hljs-params">()</span></span>&#123;<br><br>sceneIndex = SceneManager.GetActiveScene().buildIndex;<br>&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-
-
-<h2 id="添加脚本-脚本系统"><a href="#添加脚本-脚本系统" class="headerlink" title="添加脚本/脚本系统"></a>添加脚本/脚本系统</h2><p>Script以Hololens为例，C#，挂载到希望交互的物体上。</p>
-<ol>
-<li>   “grabbable” Near Interaction Grabbable </li>
-<li>   “manipulation” Manipulation Handler（de）/Object Manipulator</li>
-<li>   “bounding” Bounding Box（de）/Bounds Control</li>
-<li>   Interactable 可交互组件（focus）</li>
-</ol>
-<p>挂在空物体的情况就是该物体一出现就开始运行Script，和unity monobehaviour中的场景的Start()和Awake()类似。</p>
-<h2 id="Script编写"><a href="#Script编写" class="headerlink" title="Script编写"></a>Script编写</h2><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>包括部分Hololens的引用</p>
-<figure class="highlight c#"><table><tr><td class="code"><pre><code class="hljs C#"><span class="hljs-keyword">using</span> UnityEngine;<br><span class="hljs-keyword">using</span> UnityEngine.UI;<br><span class="hljs-keyword">using</span> UnityEngine.SceneManagement;<br><br><span class="hljs-keyword">using</span> System;<br><span class="hljs-keyword">using</span> System.Runtime.CompilerServices;<br><span class="hljs-keyword">using</span> System.Security.AccessControl;<br><span class="hljs-keyword">using</span> System.Runtime.InteropServices;<br><span class="hljs-keyword">using</span> System.Collections;<br><span class="hljs-keyword">using</span> System.Collections.Generic;<br><br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Input;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Utilities;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Utilities.Solvers;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.UI;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Experimental.Dialog;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Diagnostics;<br></code></pre></td></tr></table></figure>
-
-<h3 id="类名（文件名）"><a href="#类名（文件名）" class="headerlink" title="类名（文件名）"></a>类名（文件名）</h3><pre><code>public class classname: MonoBehaviour &#123;
-</code></pre>
-<h3 id="变量定义"><a href="#变量定义" class="headerlink" title="变量定义"></a>变量定义</h3><p>public：</p>
-<figure class="highlight angelscript"><table><tr><td class="code"><pre><code class="hljs angelscript"><span class="hljs-keyword">public</span> <span class="hljs-built_in">float</span> countTime = <span class="hljs-number">0f</span>;<br><span class="hljs-keyword">public</span> <span class="hljs-built_in">float</span> setTime = <span class="hljs-number">0f</span>;<br><span class="hljs-keyword">public</span> GameObject object1;<span class="hljs-comment">//可以在Unity界面中指定一个物体</span><br></code></pre></td></tr></table></figure>
-<p>会显示在Unity控制面板中，可以查看以及自定义更改；</p>
-<p>private：</p>
-<figure class="highlight abnf"><table><tr><td class="code"><pre><code class="hljs abnf">private Vector3 arrow_postion<span class="hljs-comment">;</span><br></code></pre></td></tr></table></figure>
-
-<p>不会显示在Unity控制面板中；</p>
-<h4 id="Unity提供的变量类型"><a href="#Unity提供的变量类型" class="headerlink" title="Unity提供的变量类型"></a>Unity提供的变量类型</h4><p>遇到的比较特殊的就是<code>Vector3</code>、<code>GameObject</code>其他都比较正常，，，</p>
-<h4 id="Unity提供的变量名"><a href="#Unity提供的变量名" class="headerlink" title="Unity提供的变量名"></a>Unity提供的变量名</h4><p><code>Time.deltaTime</code>是激活后的运行时间。</p>
-<p><code>GameObject.FindGameObjectWithTag(&quot;Arrow1&quot;).transform.position;</code>是找到tag为Arrow1的物体的位置属性数据。</p>
-<p><code>this.GetComponent&lt;Transform&gt;().position</code>是挂载该脚本的物体的位置属性。</p>
-<h3 id="MonoBehaviour"><a href="#MonoBehaviour" class="headerlink" title="MonoBehaviour"></a>MonoBehaviour</h3><figure class="highlight pgsql"><table><tr><td class="code"><pre><code class="hljs pgsql">// Use this <span class="hljs-keyword">for</span> initialization<br><span class="hljs-type">void</span> <span class="hljs-keyword">Start</span> () &#123;<br><br>&#125;<br><br>// <span class="hljs-keyword">Update</span> <span class="hljs-keyword">is</span> <span class="hljs-keyword">called</span> once per frame<br><span class="hljs-type">void</span> <span class="hljs-keyword">Update</span> () &#123;<br><br>	 CountTime();<br><br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h3 id="变量声明"><a href="#变量声明" class="headerlink" title="变量声明"></a>变量声明</h3><p>例如<code>new Vector3(arrow_postion.x, arrow_postion.y + 0.08F, arrow_postion.z);</code>可以在不用提前定义变量的情况下使用…吧？  <br>其实new这个我一直没太搞懂。  </p>
-<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><figure class="highlight arduino"><table><tr><td class="code"><pre><code class="hljs arduino"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">CountTime</span><span class="hljs-params">()</span> </span><br><span class="hljs-function">    </span>&#123;<br>        countTime += Time.deltaTime;<br>        <span class="hljs-keyword">if</span>(countTime &gt; setTime)<span class="hljs-comment">//秒</span><br>        &#123;<br>            SceneManager.LoadScene(<span class="hljs-number">6</span>);<br>        &#125;<br>    &#125;<br>	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">ClickTest</span><span class="hljs-params">()</span> <span class="hljs-comment">//测试</span></span><br><span class="hljs-function">	</span>&#123;<br>		<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Ready to go!&quot;</span>);<br>	&#125;<br>&#125;<br><span class="hljs-comment">//可用于在Unity界面中呼出，也可直接放在Start或者Update中</span><br></code></pre></td></tr></table></figure>
-
-<h4 id="Unity提供的函数"><a href="#Unity提供的函数" class="headerlink" title="Unity提供的函数"></a>Unity提供的函数</h4><p><code>print(&quot;Ready to go!&quot;);</code>可以在console打印出文字。</p>
-<p><code>SceneManager.LoadScene(6);</code>可以跳转场景。</p>
-<p><code>DontDestroyOnLoad(this.gameObject);</code>跳转场景时不销毁挂载这个script的物体。</p>
-<p><code>object1.SetActive(true);</code>显示隐藏物体。</p>
-<p><code>obj.SetActive(!obj.activeSelf);</code>物体隐藏则显示，显示则隐藏。通常需要挂在另一个已激活/显示的物体上，因为隐藏的物体无法自启。</p>
-]]></content>
-      <categories>
-        <category>咩碳的独游梦</category>
-        <category>Unity3D</category>
-      </categories>
-      <tags>
-        <tag>Unity3D</tag>
-        <tag>Hololens</tag>
       </tags>
   </entry>
   <entry>
