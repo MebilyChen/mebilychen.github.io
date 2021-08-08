@@ -42,7 +42,7 @@
     <div id="aplayer-ErUccSon" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="5223907619" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#cdcdcd" data-listfolded="true"></div>]]></content>
   </entry>
   <entry>
-    <title>Unity学习笔记</title>
+    <title>【Unity】学习笔记</title>
     <url>/p/616b.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="研究方向"><a href="#研究方向" class="headerlink" title="研究方向"></a>研究方向</h1><ol>
 <li>总结理论,完善虚实系统设计理论体系（/界面设计理论体系/可用性测试方案）</li>
@@ -210,6 +210,16 @@
 <p><code>DontDestroyOnLoad(this.gameObject);</code>跳转场景时不销毁挂载这个script的物体。</p>
 <p><code>object1.SetActive(true);</code>显示隐藏物体。</p>
 <p><code>obj.SetActive(!obj.activeSelf);</code>物体隐藏则显示，显示则隐藏。通常需要挂在另一个已激活/显示的物体上，因为隐藏的物体无法自启。</p>
+<h2 id="某Object挂载脚本时，获取Player信息、指定Object、Tag-Object与获取本Object"><a href="#某Object挂载脚本时，获取Player信息、指定Object、Tag-Object与获取本Object" class="headerlink" title="某Object挂载脚本时，获取Player信息、指定Object、Tag-Object与获取本Object"></a>某Object挂载脚本时，获取Player信息、指定Object、Tag-Object与获取本Object</h2><p>Player：</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk">Vector3 player_postion = Player.transform.position;<span class="hljs-regexp">//</span>获取Player<br>player_postion.x<span class="hljs-regexp">//</span>获取Player相关信息		<br><br></code></pre></td></tr></table></figure>
+
+<p>指定Object：</p>
+<figure class="highlight arduino"><table><tr><td class="code"><pre><code class="hljs arduino"><span class="hljs-keyword">public</span> GameObject obj;<span class="hljs-comment">//界面上现场指定一个Object，代码内命名为obj</span><br>obj.transform.<span class="hljs-built_in">position</span>.x<span class="hljs-comment">//获取obj相关信息	</span><br>obj.SetActive(<span class="hljs-literal">true</span>);<span class="hljs-comment">//obj执行函数命令</span><br><br></code></pre></td></tr></table></figure>
+<p>获取本Object：</p>
+<figure class="highlight kotlin"><table><tr><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">this</span>.GetComponent&lt;Transform&gt;().position.x<span class="hljs-comment">//获取本Object相关信息</span><br><span class="hljs-keyword">this</span>.GetComponent.SetActive(<span class="hljs-literal">true</span>);<span class="hljs-comment">//本Object执行函数命令</span><br><br></code></pre></td></tr></table></figure>
+
+<p>获取tag-Object：<br>直接调用。</p>
+<figure class="highlight reasonml"><table><tr><td class="code"><pre><code class="hljs reasonml">GameObject.<span class="hljs-constructor">FindGameObjectWithTag(<span class="hljs-string">&quot;Arrow1&quot;</span>)</span>.transform.position<span class="hljs-comment">//获取Tag-Object相关信息</span><br>GameObject.<span class="hljs-constructor">FindGameObjectWithTag(<span class="hljs-string">&quot;Arrow1&quot;</span>)</span>.<span class="hljs-constructor">SetActive(<span class="hljs-params">true</span>)</span>;<span class="hljs-comment">//Tag-Object执行函数命令</span><br><br></code></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>咩碳的独游梦</category>
