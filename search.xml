@@ -58,10 +58,11 @@
 <li>Python在cmd中运行。  </li>
 <li>在地址栏上输入cmd即可在此处运行cmd。</li>
 <li>pip在cmd中输入。  </li>
+<li>配置系统环境变量，直接在win设置中搜索“环境变量”，按要求更改即可。  </li>
 </ol>
-<p>或者输入以下命令：</p>
+<p>运行时在cmd输入以下命令：</p>
 <figure class="highlight vim"><table><tr><td class="code"><pre><code class="hljs vim">d:<br><span class="hljs-keyword">cd</span> GTP-<span class="hljs-number">2</span>\gpy-<span class="hljs-number">2</span>-chs<br><span class="hljs-keyword">python</span> train.<span class="hljs-keyword">py</span> --raw<br><br></code></pre></td></tr></table></figure>
-<p>下载时需要：<code>pip install transformers==4.3.3</code>或直接<code>pip3 install -r requirements.txt</code></p>
+<p>cmd中下载时需要输入：<code>pip install transformers==4.3.3</code>或直接<code>pip3 install -r requirements.txt</code></p>
 <p>或者直接在train.py右键用Pycharm运行。  </p>
 <hr>
  <blockquote class="blockquote-center">
