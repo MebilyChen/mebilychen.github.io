@@ -56,7 +56,7 @@
 <meta property="og:image" content="https://i.loli.net/2021/06/05/pk9g3zCNfw4od1b.png">
 <meta property="og:image" content="https://i.loli.net/2021/06/05/hXt6WGcv73yTL1p.png">
 <meta property="article:published_time" content="2021-03-13T07:00:00.000Z">
-<meta property="article:modified_time" content="2021-08-16T07:42:48.966Z">
+<meta property="article:modified_time" content="2021-08-16T07:54:49.695Z">
 <meta property="article:author" content="碳素 | mebilyc">
 <meta property="article:tag" content="Unity3D">
 <meta property="article:tag" content="Hololens">
@@ -385,7 +385,7 @@
                     <i class="far fa-calendar-check" style="color:#ff0000"></i>
                   </span>
                   <span class="post-meta-item-text">更新于</span>
-                  <time title="修改时间：2021-08-16 15:42:48" itemprop="dateModified" datetime="2021-08-16T15:42:48+08:00">Today at 3:42 PM</time>
+                  <time title="修改时间：2021-08-16 15:54:49" itemprop="dateModified" datetime="2021-08-16T15:54:49+08:00">Today at 3:54 PM</time>
                 </span>
               
             <span class="post-meta-item">
@@ -442,7 +442,6 @@
 </ol>
 <p>有空研究下Player,（Player.xxx）HoloLens涉及不到。 </p>
 <h1 id="项目：智能工厂"><a href="#项目：智能工厂" class="headerlink" title="项目：智能工厂"></a>项目：智能工厂</h1><h2 id="判断物体是否显示"><a href="#判断物体是否显示" class="headerlink" title="判断物体是否显示"></a>判断物体是否显示</h2><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs C#"><span class="hljs-keyword">if</span>(GameObject.activeInHierarchy)<br><br></code></pre></td></tr></table></figure>
-
 
 <h2 id="GameObject-Find-、Transform-Find查找游戏对象"><a href="#GameObject-Find-、Transform-Find查找游戏对象" class="headerlink" title="GameObject.Find()、Transform.Find查找游戏对象"></a>GameObject.Find()、Transform.Find查找游戏对象</h2><p>本文转自博主：Teng的世界 <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Rlbmdfb250aGV3YXkvYXJ0aWNsZS9kZXRhaWxzLzQ3MTg4MTQx">https://blog.csdn.net/teng_ontheway/article/details/47188141<i class="fa fa-external-link-alt"></i></span></p>
 <h3 id="1-前置条件"><a href="#1-前置条件" class="headerlink" title="1.前置条件"></a>1.前置条件</h3><p>Unity中常用到查找对象,非隐藏的、隐藏的，各种方法性能有高有低，使用又有各种条件限制。</p>
@@ -628,7 +627,7 @@
 </ol>
 <p>挂在空物体的情况就是该物体一出现就开始运行Script，和unity monobehaviour中的场景的Start()和Awake()类似。</p>
 <h2 id="Script编写"><a href="#Script编写" class="headerlink" title="Script编写"></a>Script编写</h2><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>包括部分Hololens的引用</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs C#"><span class="hljs-keyword">using</span> UnityEngine;<br><span class="hljs-keyword">using</span> UnityEngine.UI;<br><span class="hljs-keyword">using</span> UnityEngine.SceneManagement;<br><br><span class="hljs-keyword">using</span> System;<br><span class="hljs-keyword">using</span> System.Runtime.CompilerServices;<br><span class="hljs-keyword">using</span> System.Security.AccessControl;<br><span class="hljs-keyword">using</span> System.Runtime.InteropServices;<br><span class="hljs-keyword">using</span> System.Collections;<br><span class="hljs-keyword">using</span> System.Collections.Generic;<br><br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Input;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Utilities;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Utilities.Solvers;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.UI;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Experimental.Dialog;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Diagnostics;<br></code></pre></td></tr></table></figure>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs C#"><br><span class="hljs-keyword">using</span> TMPro;<br><span class="hljs-keyword">using</span> UnityEngine;<br><span class="hljs-keyword">using</span> UnityEngine.UI;<br><span class="hljs-keyword">using</span> UnityEngine.SceneManagement;<br><br><span class="hljs-keyword">using</span> System;<br><span class="hljs-keyword">using</span> System.Runtime.CompilerServices;<br><span class="hljs-keyword">using</span> System.Security.AccessControl;<br><span class="hljs-keyword">using</span> System.Runtime.InteropServices;<br><span class="hljs-keyword">using</span> System.Collections;<br><span class="hljs-keyword">using</span> System.Collections.Generic;<br><br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Input;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Utilities;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Utilities.Solvers;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.UI;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Experimental.Dialog;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Diagnostics;<br><br></code></pre></td></tr></table></figure>
 
 <h3 id="类名（文件名）"><a href="#类名（文件名）" class="headerlink" title="类名（文件名）"></a>类名（文件名）</h3><pre><code>public class classname: MonoBehaviour &#123;
 </code></pre>
@@ -686,7 +685,7 @@
  <p><span>本文标题:</span><a href="/p/616b.html">【Unity】学习笔记</a></p>
  <p><span>文章作者:</span>碳素 @mebilyc</p>
  <p><span>发布时间:</span>2021年03月13日 - 15:00</p>
- <p><span>最后更新:</span>2021年08月16日 - 15:42</p>
+ <p><span>最后更新:</span>2021年08月16日 - 15:54</p>
  <p><span>原始链接:</span><a href="/p/616b.html" title="【Unity】学习笔记">https://mebilychen.github.io/p/616b.html</a>
     
  </p>
