@@ -52,7 +52,9 @@
 <li>与用户需求结合进行设计</li>
 </ol>
 <p>有空研究下Player,（Player.xxx）HoloLens涉及不到。 </p>
-<h1 id="项目：智能工厂"><a href="#项目：智能工厂" class="headerlink" title="项目：智能工厂"></a>项目：智能工厂</h1><h2 id="GameObject-Find-、Transform-Find查找游戏对象"><a href="#GameObject-Find-、Transform-Find查找游戏对象" class="headerlink" title="GameObject.Find()、Transform.Find查找游戏对象"></a>GameObject.Find()、Transform.Find查找游戏对象</h2><p>本文转自博主：Teng的世界 <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Rlbmdfb250aGV3YXkvYXJ0aWNsZS9kZXRhaWxzLzQ3MTg4MTQx">https://blog.csdn.net/teng_ontheway/article/details/47188141<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="项目：智能工厂"><a href="#项目：智能工厂" class="headerlink" title="项目：智能工厂"></a>项目：智能工厂</h1><h2 id="判断物体是否显示"><a href="#判断物体是否显示" class="headerlink" title="判断物体是否显示"></a>判断物体是否显示</h2><h2 id="GameObject-Find-、Transform-Find查找游戏对象"><a href="#GameObject-Find-、Transform-Find查找游戏对象" class="headerlink" title="GameObject.Find()、Transform.Find查找游戏对象"></a>GameObject.Find()、Transform.Find查找游戏对象</h2><p>本文转自博主：Teng的世界 <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Rlbmdfb250aGV3YXkvYXJ0aWNsZS9kZXRhaWxzLzQ3MTg4MTQx">https://blog.csdn.net/teng_ontheway/article/details/47188141<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><code class="hljs C#"><span class="hljs-keyword">if</span>(GameObject.activeInHierarchy)<br><br></code></pre></td></tr></table></figure>
+
 <h3 id="1-前置条件"><a href="#1-前置条件" class="headerlink" title="1.前置条件"></a>1.前置条件</h3><p>Unity中常用到查找对象,非隐藏的、隐藏的，各种方法性能有高有低，使用又有各种条件限制。</p>
 <p>在此对查找的性能和条件进行分析。开发时遇到的主要问题是查找隐藏对象。</p>
 <p><strong>没有完美的查找方法，只有最合适的查找方法</strong></p>
