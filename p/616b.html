@@ -56,7 +56,7 @@
 <meta property="og:image" content="https://i.loli.net/2021/06/05/pk9g3zCNfw4od1b.png">
 <meta property="og:image" content="https://i.loli.net/2021/06/05/hXt6WGcv73yTL1p.png">
 <meta property="article:published_time" content="2021-03-13T07:00:00.000Z">
-<meta property="article:modified_time" content="2021-08-16T10:30:23.912Z">
+<meta property="article:modified_time" content="2021-08-16T10:35:49.583Z">
 <meta property="article:author" content="碳素 | mebilyc">
 <meta property="article:tag" content="Unity3D">
 <meta property="article:tag" content="Hololens">
@@ -385,7 +385,7 @@
                     <i class="far fa-calendar-check" style="color:#ff0000"></i>
                   </span>
                   <span class="post-meta-item-text">更新于</span>
-                  <time title="修改时间：2021-08-16 18:30:23" itemprop="dateModified" datetime="2021-08-16T18:30:23+08:00">Today at 6:30 PM</time>
+                  <time title="修改时间：2021-08-16 18:35:49" itemprop="dateModified" datetime="2021-08-16T18:35:49+08:00">Today at 6:35 PM</time>
                 </span>
               
             <span class="post-meta-item">
@@ -415,7 +415,7 @@
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>16 分钟</span>
+              <span>17 分钟</span>
             </span>
             <div class="post-description"><center></div>
           
@@ -487,7 +487,7 @@
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs C#">GameObject[] pAllObjects = (GameObject[])Resources.FindObjectsOfTypeAll(<span class="hljs-keyword">typeof</span>(GameObject));<br><br> <span class="hljs-keyword">foreach</span> (GameObject pObject <span class="hljs-keyword">in</span> pAllObjects)<br> &#123;<br>    <span class="hljs-keyword">if</span> (pObject.transform.parent != <span class="hljs-literal">null</span>)<br>     &#123;<br>             <span class="hljs-keyword">continue</span>;<br>     &#125;<br><br>    <span class="hljs-keyword">if</span> (pObject.hideFlags == HideFlags.NotEditable || pObject.hideFlags == HideFlags.HideAndDontSave)<br>     &#123;<br>         <span class="hljs-keyword">continue</span>;<br>     &#125;<br><br>    <span class="hljs-keyword">if</span> (Application.isEditor)<br>     &#123;<br>         <span class="hljs-built_in">string</span> sAssetPath = AssetDatabase.GetAssetPath(pObject.transform.root.gameObject);<br>         <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">string</span>.IsNullOrEmpty(sAssetPath))<br>         &#123;<br>             <span class="hljs-keyword">continue</span>;<br>         &#125;<br>     &#125;<br><br>    Debug.Log(pObject.name);<br> &#125;<br></code></pre></td></tr></table></figure>
 
 <hr>
-<h2 id="文本代码控制"><a href="#文本代码控制" class="headerlink" title="文本代码控制"></a>文本代码控制</h2><figure class="highlight bnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bnf">this.gameObject.GetComponent<span class="hljs-attribute">&lt;Text&gt;</span>().text= &quot;<span class="hljs-attribute">&lt;color=#0000ff&gt;</span><span class="hljs-attribute">&lt;size=60&gt;</span>小明<span class="hljs-attribute">&lt;/size&gt;</span><span class="hljs-attribute">&lt;/color&gt;</span>送了<span class="hljs-attribute">&lt;color=#0000ff&gt;</span><span class="hljs-attribute">&lt;size=60&gt;</span>小红<span class="hljs-attribute">&lt;/size&gt;</span><span class="hljs-attribute">&lt;/color&gt;</span>一辆游艇&quot;;<br>&#125;<br>   <br></code></pre></td></tr></table></figure>
+<h2 id="文本代码控制"><a href="#文本代码控制" class="headerlink" title="文本代码控制"></a>文本代码控制</h2><figure class="highlight bnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bnf">this.gameObject.GetComponent<span class="hljs-attribute">&lt;Text&gt;</span>().text= &quot;<span class="hljs-attribute">&lt;color=#0000ff&gt;</span><span class="hljs-attribute">&lt;size=60&gt;</span>小明<span class="hljs-attribute">&lt;/size&gt;</span><span class="hljs-attribute">&lt;/color&gt;</span>送了<span class="hljs-attribute">&lt;color=#0000ff&gt;</span><span class="hljs-attribute">&lt;size=60&gt;</span>小红<span class="hljs-attribute">&lt;/size&gt;</span><span class="hljs-attribute">&lt;/color&gt;</span>一辆游艇&quot;;<br>&#125;<br>   <br>textPad.GetComponent<span class="hljs-attribute">&lt;TMP_Text&gt;</span>().text= &quot;未修改文字&quot;;<br>   <br></code></pre></td></tr></table></figure>
 
 <hr>
 <h2 id="Follow"><a href="#Follow" class="headerlink" title="Follow"></a>Follow</h2><p>挂在物体上，obj是其要Follow的对象。</p>
@@ -695,7 +695,7 @@
  <p><span>本文标题:</span><a href="/p/616b.html">【Unity】学习笔记</a></p>
  <p><span>文章作者:</span>碳素 @mebilyc</p>
  <p><span>发布时间:</span>2021年03月13日 - 15:00</p>
- <p><span>最后更新:</span>2021年08月16日 - 18:30</p>
+ <p><span>最后更新:</span>2021年08月16日 - 18:35</p>
  <p><span>原始链接:</span><a href="/p/616b.html" title="【Unity】学习笔记">https://mebilychen.github.io/p/616b.html</a>
     
  </p>
