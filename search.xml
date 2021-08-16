@@ -65,6 +65,9 @@
 <p>cmd中下载时需要输入：<code>pip install transformers==4.3.3</code>或直接<code>pip3 install -r requirements.txt</code></p>
 <p>或者直接在train.py右键用Pycharm运行。  </p>
 <hr>
+<p>报错：pytorch_lightning.utilities.exceptions.MisconfigurationException: You requested GPUs: [0]<br>But your machine only has: []</p>
+<p>气死人了，明明有两个GPU，非说我没有GPU。下了CUDA、Cudnn、Nvida都解决不了，暂时搁置吧。</p>
+<hr>
  <blockquote class="blockquote-center">
             <i class="fa fa-quote-left"></i>
             <h1 id="Unity"><a href="#Unity" class="headerlink" title="Unity"></a><strong>Unity</strong></h1>
