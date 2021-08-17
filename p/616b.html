@@ -56,7 +56,7 @@
 <meta property="og:image" content="https://i.loli.net/2021/06/05/pk9g3zCNfw4od1b.png">
 <meta property="og:image" content="https://i.loli.net/2021/06/05/hXt6WGcv73yTL1p.png">
 <meta property="article:published_time" content="2021-03-13T07:00:00.000Z">
-<meta property="article:modified_time" content="2021-08-16T23:26:14.462Z">
+<meta property="article:modified_time" content="2021-08-17T00:22:23.993Z">
 <meta property="article:author" content="碳素 | mebilyc">
 <meta property="article:tag" content="Unity3D">
 <meta property="article:tag" content="Hololens">
@@ -387,7 +387,7 @@
                     <i class="far fa-calendar-check" style="color:#ff0000"></i>
                   </span>
                   <span class="post-meta-item-text">更新于</span>
-                  <time title="修改时间：2021-08-17 07:26:14" itemprop="dateModified" datetime="2021-08-17T07:26:14+08:00">Today at 7:26 AM</time>
+                  <time title="修改时间：2021-08-17 08:22:23" itemprop="dateModified" datetime="2021-08-17T08:22:23+08:00">Today at 8:22 AM</time>
                 </span>
               
             <span class="post-meta-item">
@@ -410,14 +410,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>19k</span>
+              <span>20k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>17 分钟</span>
+              <span>18 分钟</span>
             </span>
             <div class="post-description"><center></div>
           
@@ -455,11 +455,23 @@
 </ol>
 <p>运行时在cmd输入以下命令：</p>
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs vim">d:<br><span class="hljs-keyword">cd</span> GTP-<span class="hljs-number">2</span>\gpy-<span class="hljs-number">2</span>-chs<br><span class="hljs-keyword">python</span> train.<span class="hljs-keyword">py</span> --raw<br><br></code></pre></td></tr></table></figure>
+<p>输入<code>Python</code>可进入Python命令行。  </p>
 <p>cmd中下载时需要输入：<code>pip install transformers==4.3.3</code>或直接<code>pip3 install -r requirements.txt</code></p>
 <p>或者直接在train.py右键用Pycharm运行。  </p>
 <hr>
 <p>报错：pytorch_lightning.utilities.exceptions.MisconfigurationException: You requested GPUs: [0]<br>But your machine only has: []</p>
-<p>8.17 气死人了，明明有两个GPU，非说我没有GPU。下了CUDA、Cudnn、Nvidia都解决不了，暂时搁置吧。</p>
+<p>8.17 气死人了，明明有两个GPU，非说我没有GPU。下了CUDA、Cudnn、Nvidia都解决不了，暂时搁置吧。<br>以备将来捡起来，怀疑是电脑问题，笔记本有两个GPU，第一个是Intel的，第二个是Nvidia的。该Nvidia显卡支持CUDA。根据查阅网络基本能确定是CUDA没有配置好的问题，但问题就是也能确定CUDA在正常运行，所以只能怀疑是因为Intel不支持CUDA，0又代表着第一个显卡，怀疑是这个问题。估计得换电脑。<br>这是Pycharm的结果，cmd运行会报找不到module<transformers>。  </transformers></p>
+<p>比较重要的一点是<strong>CUDA_VISIBLE_DEVICES</strong>这个环境变量。或许我让他=1就可以解决问题了。<br>如果在pycharm中调试时，可以打开Run/Debug Configurations，在Environment variables右边点击…处添加变量。</p>
+<figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs elm"><span class="hljs-keyword">import</span> os<br><span class="hljs-title">os</span>.environ[<span class="hljs-string">&quot;CUDA_VISIBLE_DEVICES&quot;</span>] = <span class="hljs-string">&quot;-1,0,1,2,3&quot;</span><br><span class="hljs-keyword">import</span> torch<br><br></code></pre></td></tr></table></figure>
+<p>或在命令行运行时<code>CUDA_VISIBLE_DEVICES=1 python train.py --raw</code></p>
+<p>Python命令行需要import torch</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs stylus">import torch<br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(torch.cuda.device_count()</span></span>)<br><br></code></pre></td></tr></table></figure>
+
+<p>0</p>
+<p>Pycharm中在Main后面输入：<br><code>print(torch.__version__)</code><br>‘1.8.0+cpu’</p>
+<p><code>print(torch.cuda.device_count())</code><br>0</p>
+<p><code>print(torch.cuda.is_available()) </code><br>false</p>
+<p><code>print(pytorch_lightning.__version__)</code><br>‘1.2.2’</p>
 <hr>
  <blockquote class="blockquote-center">
             <i class="fa fa-quote-left"></i>
@@ -732,7 +744,7 @@
  <p><span>本文标题:</span><a href="/p/616b.html">【Unity+Python】学习笔记</a></p>
  <p><span>文章作者:</span>碳素 @mebilyc</p>
  <p><span>发布时间:</span>2021年03月13日 - 15:00</p>
- <p><span>最后更新:</span>2021年08月17日 - 07:26</p>
+ <p><span>最后更新:</span>2021年08月17日 - 08:22</p>
  <p><span>原始链接:</span><a href="/p/616b.html" title="【Unity+Python】学习笔记">https://mebilychen.github.io/p/616b.html</a>
     
  </p>
@@ -1016,7 +1028,7 @@
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">16:06</span>
+    <span title="站点阅读时长">16:07</span>
 </div>
 
 

@@ -62,11 +62,23 @@
 </ol>
 <p>运行时在cmd输入以下命令：</p>
 <figure class="highlight vim"><table><tr><td class="code"><pre><code class="hljs vim">d:<br><span class="hljs-keyword">cd</span> GTP-<span class="hljs-number">2</span>\gpy-<span class="hljs-number">2</span>-chs<br><span class="hljs-keyword">python</span> train.<span class="hljs-keyword">py</span> --raw<br><br></code></pre></td></tr></table></figure>
+<p>输入<code>Python</code>可进入Python命令行。  </p>
 <p>cmd中下载时需要输入：<code>pip install transformers==4.3.3</code>或直接<code>pip3 install -r requirements.txt</code></p>
 <p>或者直接在train.py右键用Pycharm运行。  </p>
 <hr>
 <p>报错：pytorch_lightning.utilities.exceptions.MisconfigurationException: You requested GPUs: [0]<br>But your machine only has: []</p>
-<p>8.17 气死人了，明明有两个GPU，非说我没有GPU。下了CUDA、Cudnn、Nvidia都解决不了，暂时搁置吧。</p>
+<p>8.17 气死人了，明明有两个GPU，非说我没有GPU。下了CUDA、Cudnn、Nvidia都解决不了，暂时搁置吧。<br>以备将来捡起来，怀疑是电脑问题，笔记本有两个GPU，第一个是Intel的，第二个是Nvidia的。该Nvidia显卡支持CUDA。根据查阅网络基本能确定是CUDA没有配置好的问题，但问题就是也能确定CUDA在正常运行，所以只能怀疑是因为Intel不支持CUDA，0又代表着第一个显卡，怀疑是这个问题。估计得换电脑。<br>这是Pycharm的结果，cmd运行会报找不到module<transformers>。  </transformers></p>
+<p>比较重要的一点是<strong>CUDA_VISIBLE_DEVICES</strong>这个环境变量。或许我让他=1就可以解决问题了。<br>如果在pycharm中调试时，可以打开Run/Debug Configurations，在Environment variables右边点击…处添加变量。</p>
+<figure class="highlight elm"><table><tr><td class="code"><pre><code class="hljs elm"><span class="hljs-keyword">import</span> os<br><span class="hljs-title">os</span>.environ[<span class="hljs-string">&quot;CUDA_VISIBLE_DEVICES&quot;</span>] = <span class="hljs-string">&quot;-1,0,1,2,3&quot;</span><br><span class="hljs-keyword">import</span> torch<br><br></code></pre></td></tr></table></figure>
+<p>或在命令行运行时<code>CUDA_VISIBLE_DEVICES=1 python train.py --raw</code></p>
+<p>Python命令行需要import torch</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><code class="hljs stylus">import torch<br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(torch.cuda.device_count()</span></span>)<br><br></code></pre></td></tr></table></figure>
+
+<p>0</p>
+<p>Pycharm中在Main后面输入：<br><code>print(torch.__version__)</code><br>‘1.8.0+cpu’</p>
+<p><code>print(torch.cuda.device_count())</code><br>0</p>
+<p><code>print(torch.cuda.is_available()) </code><br>false</p>
+<p><code>print(pytorch_lightning.__version__)</code><br>‘1.2.2’</p>
 <hr>
  <blockquote class="blockquote-center">
             <i class="fa fa-quote-left"></i>
