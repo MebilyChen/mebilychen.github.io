@@ -63,7 +63,7 @@
 <p>运行时在cmd输入以下命令：</p>
 <figure class="highlight vim"><table><tr><td class="code"><pre><code class="hljs vim">d:<br><span class="hljs-keyword">cd</span> GTP-<span class="hljs-number">2</span>\gpy-<span class="hljs-number">2</span>-chs<br><span class="hljs-keyword">python</span> train.<span class="hljs-keyword">py</span> --raw<br><br></code></pre></td></tr></table></figure>
 <p>输入<code>Python</code>可进入Python命令行。  </p>
-<p>cmd中下载时需要输入：<code>pip install transformers==4.3.3</code>或直接<code>pip3 install -r requirements.txt</code></p>
+<p>cmd中下载时需要输入：<code>pip install transformers==4.3.3</code>或直接<code>pip3 install -r requirements.txt</code><br>pip没了就输入<code>python -m ensurepip</code></p>
 <p>或者直接在train.py右键用Pycharm运行。  </p>
 <hr>
 <p>报错：pytorch_lightning.utilities.exceptions.MisconfigurationException: You requested GPUs: [0]<br>But your machine only has: []</p>
