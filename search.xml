@@ -42,6 +42,341 @@
     <div id="aplayer-ICorjHVt" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="5223907619" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#cdcdcd" data-listfolded="true"></div>]]></content>
   </entry>
   <entry>
+    <title>【参考】绘画参考+Art Tips</title>
+    <url>/p/e3a4.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><blockquote class="blockquote-center">
+            <i class="fa fa-quote-left"></i>
+            <p><span class="exturl" data-url="aHR0cHM6Ly9waW4uaXQvMjJ4dU9Xbg==">Pinterest<i class="fa fa-external-link-alt"></i></span></p>
+
+            <i class="fa fa-quote-right"></i>
+          </blockquote>
+
+<p><img data-src="https://i.loli.net/2021/08/15/dsjiC9DgaON3HIB.jpg" alt="镇楼"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/IMG_6683(20210626-153642).JPG" alt="镇楼2"></p>
+<p>目前我是学的是角色设计方向，我回头要学一下插画方向。就，我画的是陛下，又不是别的什么东西…</p>
+<div class="note info">
+            <h4 id="8-19发现的tips"><a href="#8-19发现的tips" class="headerlink" title="8.19发现的tips"></a>8.19发现的tips</h4><p>经过多次观察，发现自己画画，很！容！易！画！胖！怎么画胖呢，就很容易在定型的时候画胖，即便确定了一边为参照，另一边就会画胖画大，我就寻思着你即便画瘦了画长画小了也比画胖了画短了好看额；而且，很！容！易！画！歪！歪还很一致地歪向右边，就，左边很容易画扁，画残，怎么画残法呢，下面举一个我今天临摹练习的例子。<br>另外，今天学到内剪裁，又加深了一下立体思维，就，不要画片片，要立体，要层次（衣服好几层），要厚度，要包覆，要褶皱，要遮挡。紧身设计很容易做残，也不是不好看，就，新手尽量不要去搞紧身，练不到重要的东西。对于图形敏感度，要用线框出立体结构的轮廓，例如画长方体，不能画长方形，要画有透视关系的长方体剪影线稿。  <br>以及一些线条勾边，无论勾线还是草稿摸鱼，如果不追求完全勾线的清晰效果，该擦的就擦，擦1/4留3/4，但要注意图形完整性。其实重要的是统一性，而不是画得要多完美（比如如果线很抖，全图线都很抖也不是不可以）。    <br>以及头发、褶皱之类的，尽量在边缘以及开端结尾处画层次纹理，要有联系，不要中间毫无来由地突然多了一道这样。  </p>
+          </div>
+
+<p><img data-src="https://i.loli.net/2021/08/19/3ncS5eP16h4XFod.jpg" alt="原图，为了对比翻转了一下"><br><img data-src="https://i.loli.net/2021/08/19/z6ds9MJl1oLSeEK.png" alt="这什么鬼？"></p>
+<div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/image/Works/%E6%B3%A8%E6%84%8F%E5%BD%A2%E5%93%AA%E9%87%8C%E4%B8%8D%E5%AF%B9.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
+
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/Works/%E6%B3%A8%E6%84%8F%E7%BA%BF%E7%A8%BF%E9%A2%9C%E8%89%B2%E5%8F%98%E5%8C%96.JPG" alt="注意线稿颜色变化"></p>
+<hr>
+<h3 id="【数码绘画】图层混合模式"><a href="#【数码绘画】图层混合模式" class="headerlink" title="【数码绘画】图层混合模式"></a>【数码绘画】图层混合模式</h3><p>其实吧很多数码绘画都来源于传统绘画，想回头多多了解了解。  </p>
+<p>normal             正常<br>dissolve           渐隐</p>
+<hr>
+<p>darken             变暗<br>Mutiply            正片叠底<br>color burn       颜色加深<br>linear burn      线性加深  </p>
+<hr>
+<p>lighten             变亮<br>screen             滤色<br>color dodge     颜色变淡<br>linear dodge/add    线性减淡  </p>
+<hr>
+<p>overlay            叠加<br>soft light          柔光<br>hard light         强光<br>vivid light         亮光<br>linear light       线性光<br>pin light           点光<br>hard mix          实色混合  </p>
+<hr>
+<p>difference       插值<br>exclusion         排除  </p>
+<hr>
+<p>hue           色调<br>saturation      饱和度  </p>
+<hr>
+<p>color           颜色<br>luminosity       亮度  </p>
+<p>好家伙我一直以为Add是叠加。  </p>
+<p>　　1. 正常(Normal)模式</p>
+<p>　　在“正常”模式下，“混合色”的显示与不透明度的设置有关。当“不透明度”为100%，也就是说完全不透明时，“结果色”的像素将完全由所用的“混合色”代替；当“不透明度”小于100%时，混合色的像素会透过所用的颜色显示出来，显示的程度取决于不透明度的设置与“基色”的颜色。如果在处理“位图”颜色模式图像或“索引颜色”颜色模式图像时，“正常”模式就改称为“阈值”模式了，不过功能是一样的。</p>
+<p>　　2. 溶解(Dissolve)模式</p>
+<p>　　在“溶解”模式中，主要是在编辑或绘制每个像素时，使其成为“结果色”。但是，根据任何像素位置的不透明度，“结果色”由“基色”或“混合色”的像素随机替换。因此，“溶解”模式最好是同Photoshop中的一些着色工具一同使用效果比较好，如“画笔”、“仿制图章”、“橡皮擦”工具等，也可以使用文字。当“混合色”没有羽化边缘，而且具有一定的透明度时，“混合色”将溶入到“基色”内。如果“混合色”没有羽化边缘，并且“不透明度”为100%，那么“溶解”模式不起任何作用。如果是用“画笔”工具或文字创建的“混合色”，同“基色”交替，就可以创建一种类似扩散抖动的效果，如果以小于或等于50％的不透明度描划一条路径，然后利用“描边路径”命令，“溶解”模式在图像边缘周围创建一种“泼溅”的效果。还可以制作模拟破损纸的边缘的效果等。如果利用“橡皮擦”工具，可以在一幅图像上方创建一个新的图层，并填充的白色作为“混合色。然后在“溶解”模式中，用“橡皮擦”工具擦除，可以创建类似于冬天上霜的玻璃中间被擦除的效果，</p>
+<p>　　3. 变暗(Darken)模式</p>
+<p>　　在“变暗”模式中，查看每个通道中的颜色信息，并选择“基色”或“混合色”中较暗的颜色作为“结果色”。比“混合色”亮的像素被替换，比“混合色”暗的像素保持不变。“变暗”模式将导致比背景颜色更淡的颜色从“结果色”中被去掉了。</p>
+<p>　　4. 正片叠底(Multiply)模式</p>
+<p>　　在“正片叠底”模式中，查看每个通道中的颜色信息，并将“基色”与“混合色”复合。“结果色”总是较暗的颜色。任何颜色与黑色复合产生黑色。任何颜色与白色复合保持不变。当用黑色或白色以外的颜色绘画时，绘画工具绘制的连续描边产生逐渐变暗的过渡色，其实“正片叠底”模式就是从“基色”中减去“混合色”的亮度值，得到最终的“结果色”。如果在“正片叠底”模式中使用较淡的颜色对图像的“结果色”是没有影响的。利用“正片叠底”模式可以形成一种光线穿透图层的幻灯片效果。其实就是将“基色”颜色与“混合色”颜色的数值相乘，然后再除以255，便得到了“结果色”的颜色值。例如，红色与黄色的“结果色”是橙色，红色与绿色的“结果色”是褐色，红色与蓝色的“结果色”是紫色等。</p>
+<p>　　5. 颜色加深(Clolor Burn)模式</p>
+<p>　　在“颜色加深”模式中，查看每个通道中的颜色信息，并通过增加对比度使基色变暗以反映混合色，如果与白色混合的话将不会产生变化，“颜色加深”模式创建的效果和“正片叠底”模式创建的效果比较类似。</p>
+<p>　　6. 线性加深(Linear Burn)模式</p>
+<p>　　在“线性加深”模式中，查看每个通道中的颜色信息，并通过减小亮度使“基色”变暗以反映混合色。如果“混合色”与“基色”上的白色混合后将不会产生变化。</p>
+<p>　　7. 变亮(Lighten)模式</p>
+<p>　　在“变亮”模式中，查看每个通道中的颜色信息，并选择“基色”或“混合色”中较亮的颜色作为“结果色”。比“混合色”暗的像素被替换，比“混合色”亮的像素保持不变。 在这种与“变暗”模式相反的模式下，较淡的颜色区域在最终的“合成色”中占主要地位。较暗区域并不出现在最终结“合成色”中。</p>
+<p>　　8. 滤色(Screen)模式</p>
+<p>　　“滤色”模式与“正片叠底”模式正好相反，它将图像的“基色”颜色与“混合色”颜色结合起来产生比两种颜色都浅的第三种颜色。其实就是并将“混合色”的互补色与“基色”复合。“结果色”总是较亮的颜色。用黑色过滤时颜色保持不变。用白色过滤将产生白色。无论在“滤色”模式下用着色工具采用一种颜色，还是对“滤色”模式指定一个层，合并的“结果色”始终是相同的合成颜色或一种更淡的颜色。此效果类似于多个摄影幻灯片在彼此之上投影一样。此“滤色”模式对于在图像中创建霓虹辉光效果是有用的。如果在层上围绕背景对象的边缘涂了白色或任何淡颜色，然后指定层“滤色”模式，通过调节层的“不透明度”设置就能获得饱满或稀薄的辉光效果。</p>
+<p>　　9. 颜色减淡(Clolor Dodge)模式</p>
+<p>　　在“颜色减淡”模式中，查看每个通道中的颜色信息，并通过减小对比度使基色变亮以反映混合色。与黑色混合则不发生变化。除了指定在这个模式的层上边缘区域更尖锐，以及在这个模式下着色的笔划之外，“颜色减淡”模式类似于“滤色”模式创建的效果。另外，不管何时定义“颜色减淡”模式混合“混合色”与“基色”像素，“基色”上的暗区域都将会消失。</p>
+<p>　　10. 线性减淡(Linear Dodge)模式</p>
+<p>　　在“线性减淡”模式中，查看每个通道中的颜色信息，并通过增加亮度使基色变亮以反映混合色。但是大家可不要与黑色混合，那样是不会发生变化的。</p>
+<p>　　11. 叠加(Overlay)模式</p>
+<p>　　“叠加”模式把图像的“基色”颜色与“混合色”颜色相混合产生一种中间色。“基色”内颜色比“混合色”颜色暗的颜色使“混合色”颜色倍增，比“混合色”颜色亮的颜色将使“混合色”颜色被遮盖，而图像内的高亮部分和阴影部分保持不变，因此对黑色或白色像素着色时“叠加”模式不起作用。“叠加”模式以一种非艺术逻辑的方式把放置或应用到一个层上的颜色同背景色进行混合，然而，却能得到有趣的效果。背景图像中的纯黑色或纯白色区域无法在“叠加”模式下显示层上的“叠加”着色或图像区域。背景区域上落在黑色和白色之间的亮度值同“叠加”材料的颜色混合在一起，产生最终的合成颜色。为了使背景图像看上去好像是同设计或文本一起拍摄的。</p>
+<p>　　12. 柔光(Soft Light)模式</p>
+<p>　　“柔光”模式会产生一种柔光照射的效果。如果“混合色”颜色比“基色颜色的像素更亮一些，那么“结果色”将更亮；如果“混合色”颜色比“基色”颜色的像素更暗一些，那么“结果色”颜色将更暗，使图像的亮度反差增大。例如，如果在背景图像上涂了50％黑色，这是一个从黑色到白色的梯度，那着色时梯度的较暗区域变得更暗，而较亮区域呈现出更亮的色调。 其实使颜色变亮或变暗，具体取决于“混合色”。此效果与发散的聚光灯照在图像上相似。 如果“混合色”比 50% 灰色亮，则图像变亮，就像被减淡了一样。如果“混合色”比 50% 灰色暗，则图像变暗，就象被加深了一样。用纯黑色或纯白色绘画会产生明显较暗或较亮的区域，但不会产生纯黑色或纯白色。</p>
+<p>　　13. 强光(Hard Light)模式</p>
+<p>　　“强光”模式将产生一种强光照射的效果。如果“混合色”颜色“基色”颜色的像素更亮一些，那么“结果色”颜色将更亮；如果“混合色”颜色比“基色”颜色的像素更暗一些，那么“结果色”将更暗。除了根据背景中的颜色而使背景色是多重的或屏蔽的之外，这种模式实质上同“柔光”模式是一样的。它的效果要比“柔光”模式更强烈一些，同“叠加”一样，这种模式也可以在背景对象的表面模拟图案或文本，例如，如果混合色比 50% 灰色亮，则图像变亮，就像过滤后的效果。这对于向图像中添加高光非常有用。如果混合色比 50%灰色暗，则图像变暗，就像复合后的效果。这对于向图像添加暗调非常有用。用纯黑色或纯白色绘画会产生纯黑色或纯白色。</p>
+<p>　　14. 亮光(Vivid Light)模式</p>
+<p>　　通过增加或减小对比度来加深或减淡颜色，具体取决于混合色。如果混合色（光源）比 50% 灰色亮，则通过减小对比度使图像变亮。如果混合色比 50% 灰色暗，则通过增加对比度使图像变暗，</p>
+<p>　　15. 线性光(Linear Light)模式</p>
+<p>　　通过减小或增加亮度来加深或减淡颜色，具体取决于混合色。如果混合色（光源）比 50% 灰色亮，则通过增加亮度使图像变亮。如果混合色比 50% 灰色暗，则通过减小亮度使图像变暗。</p>
+<p>　　16. 点光(Pin Light)模式</p>
+<p>　　“点光”模式其实就是替换颜色，其具体取决于“混合色”。如果“混合色”比 50% 灰色亮，则替换比“混合色”暗的像素，而不改变比“混合色”亮的像素。如果“混合色”比 50% 灰色暗，则替换比“混合色”亮的像素，而不改变比“混合色”暗的像素。这对于向图像添加特殊效果非常有用。</p>
+<p>　　17. 差值(Diference)模式</p>
+<p>　　在“差值”模式中，查看每个通道中的颜色信息，“差值”模式是将从图像中“基色”颜色的亮度值减去“混合色”颜色的亮度值，如果结果为负，则取正值，产生反相效果。由于黑色的亮度值为0，白色的亮度值为255，因此用黑色着色不会产生任何影响，用白色着色则产生被着色的原始像素颜色的反相。“差值”模式创建背景颜色的相反色彩，例如，在“差值”模式下，当把蓝色应用到绿色背景中时将产生一种青绿组合色。“差值”模式适用于模拟原始设计的底片，而且尤其可用来在其背景颜色从一个区域到另一区域发生变化的图像中生成突出效果。</p>
+<p>　　18. 排除(Exclusion)模式</p>
+<p>　　“排除”模式与“差值”模式相似，但是具有高对比度和低饱和度的特点。比用“差值”模式获得的颜色要柔和、更明亮一些。建议你在处理图像时，首先选择“差值”模式，若效果不够理想，可以选择“排除”模式来试试。其中与白色混合将反转“基色”值，而与黑色混合则不发生变化。其实无论是“差值”模式还是“排除”模式都能使人物或自然景色图像产生更真实或更吸引人的图像合成。</p>
+<p>　　19. 色相(Hue)模式</p>
+<p>　　“色相”模式只用“混合色”颜色的色相值进行着色，而使饱和度和亮度值保持不变。当“基色”颜色与“混合色”颜色的色相值不同时，才能使用描绘颜色进行着色。但是要注意的是“色相”模式不能用于灰度模式的图像。</p>
+<p>　　20. 饱和度(Saturation)模式</p>
+<p>　　“饱和度”模式的作用方式与“色相”模式相似，它只用“混合色”颜色的饱和度值进行着色，而使色相值和亮度值保持不变。当“基色”颜色与“混合色”颜色的饱和度值不同时，才能使用描绘颜色进行着色处理。在无饱和度的区域上（也就是灰色区域中）用“饱和度”模式是不会产生任何效果的。</p>
+<p>　　21. 颜色(Color)模式</p>
+<p>　　“颜色”模式能够使用“混合色”颜色的饱和度值和色相值同时进行着色，而使“基色”颜色的亮度值保持不变。“颜色”模式模式可以看成是“饱合度”模式和“色相”模式的综合效果。该模式能够使灰色图像的阴影或轮廓透过着色的颜色显示出来，产生某种色彩化的效果。这样可以保留图像中的灰阶，并且对于给单色图像上色和给彩色图像着色都会非常有用。</p>
+<p>　　22. 亮度(Luminosity)模式</p>
+<p>　　“亮度”模式能够使用“混合色”颜色的亮度值进行着色，而保持“基色”颜色的饱和度和色相数值不变。其实就是用“基色”中的“色相”和“饱和度”以及“混合色”的亮度创建“结果色”。此模式创建的效果是与“颜色”模式创建的效果相反。</p>
+<h3 id="《平面设计看这本就够了》"><a href="#《平面设计看这本就够了》" class="headerlink" title="《平面设计看这本就够了》"></a>《平面设计看这本就够了》</h3><p><strong>非对称式均衡</strong>  <br>一种感觉上的均衡，任何人都不可能准确判断画面上的物象实际重量，这种心理意义上的重量，按照它在人们生活中的重要性及与人的关系密切程度而定。</p>
+<p><strong>关于面的大小深浅聚散的均衡分布</strong>  <br>色调的不均衡，可从调整形体大小进行补偿;形体的不均衡，也可从调整色调的深浅进行补偿。两者在不可变动的情况下还可以通过画幅边沿关系的改变，进行调整.</p>
+<p><strong>关于形体和色调的均衡在心理上的衡量</strong>  <br>在暗色背景前，明度与面积成反比、反之亦然。面积小而与背景明度反差大，色块面积大与背景反差小，两者可以取得均衡.</p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/IMG_7114.PNG"></p>
+<div class="note info no-icon"> <p style="color:#438BCA">有的时候要退后几步看你的画，就像将画面缩小，这样能看出很多放大时看不到的问题（比如明暗关系错误）。 </p> </div>
+
+<div class="note info no-icon"> <p style="color:#438BCA">注意：Experience 3D & augmented reality in Search
+When you search on Google, you can view some results in 3D and augmented reality (AR).  
+用手机在google上搜索动物或者虫虫就可以看动作动画和AR 3D模型，很方便。 </p> </div>
+
+<h3 id="Pixel-Art-Guide-by-Ittai-Manero"><a href="#Pixel-Art-Guide-by-Ittai-Manero" class="headerlink" title="Pixel Art Guide by Ittai Manero"></a>Pixel Art Guide by Ittai Manero</h3><p><span class="exturl" data-url="aHR0cDovL21lYmlseWNoZW4tbWVkaWEudGVzdC51cGNkbi5uZXQvZG9jL1RoZSUyMFBpeGVsJTIwQXJ0JTIwRXhwZXJpZW5jZSUyMFF1aWNrJTIwR3VpZGUlMjAoSXR0YWltYW5lcm8pLnBkZg==">PDF<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="Thick-Paint-Guide-by-Ittai-Manero"><a href="#Thick-Paint-Guide-by-Ittai-Manero" class="headerlink" title="Thick Paint Guide by Ittai Manero"></a>Thick Paint Guide by Ittai Manero</h3><p><span class="exturl" data-url="aHR0cDovL21lYmlseWNoZW4tbWVkaWEudGVzdC51cGNkbi5uZXQvZG9jL0hvdyUyMFRvJTIwVXNlJTIwVGhpY2slMjBQYWludCUyMC0lMjBGUkVFJTIwRWRpdGlvbiUyMChFTkdMSVNIKS5wZGY=">PDF<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="目前的学习计划"><a href="#目前的学习计划" class="headerlink" title="目前的学习计划"></a>目前的学习计划</h3><p>关于原画学习，除了跟着现在的老师多画画之外，搜集的资源网课也要多看看：</p>
+<ul>
+<li>K大Krenz的三堂课，最好能实际去听听看，实在不行就算了，看老课凑活一下，被大家传的很神的样子。</li>
+<li>日系厚涂板绘水彩油画彩铅原画插画漫画游戏场景角色似乎都有的亚子，有空多看看，真的觉得很多电子绘画思路应该发功于传统绘画技法上。只是现在传统绘画比较难布置环境而已，大家都懒了只画板绘。手上功夫多练练也没坏处。哦对了，速写要多练练，练抓型、记忆、概括。  </li>
+<li>还有一系列似乎是比较有名的大佬的课，争取这辈子能看完。</li>
+</ul>
+<p><span class="exturl" data-url="aHR0cHM6Ly9xdWlja3Bvc2VzLmNvbS8=">QuickPose速写抓型练习<i class="fa fa-external-link-alt"></i></span></p>
+<p>哦哦还有一个很魔性的网站，<span class="exturl" data-url="aHR0cHM6Ly93d3cuYXJ0YnJlZWRlci5jb20v">ARTBreeder<i class="fa fa-external-link-alt"></i></span>，可以用来做参考和（高质量的）概念草稿。<br>除此之外还有好多可以自己捏头像的那种网站，就注意一下，就不收集了（大概）。</p>
+<p><span class="exturl" data-url="aHR0cDovL21lYmlseWNoZW4tbWVkaWEudGVzdC51cGNkbi5uZXQvZG9jLyVFNSU4RSU5RiVFNyU5NCVCQiVFOCVBMSVBNSVFNCVCOSVBMC5wZGY=">PDF版文件<i class="fa fa-external-link-alt"></i></span></p>
+<p>主要是注意如何找参考，K大听说也是会强调如何找参考，所以参考很重要。</p>
+<p>历历在目（Before Your Eyes）对于Art的启发：</p>
+<ul>
+<li>同一个实体，可以有无数种表达方式，（当然也包括用文字描述、用图画描述、用音乐描述、用建筑描述….就是“拟”，就是“抽象”。不过这里，）只说对于绘画而言，可以提取其中的颜色、形状，可以想象它如何流动（加上时间），如何相互影响，可以将线抽象成面，可以将红色抽象成橘色+黄色，可以将静止地抽象成流动的，以此类推，发挥你的想象力吧！把具象变成抽象！把抽象变成具象！自由！免费！  </li>
+<li>历历在目里将一个实体抽象出了很多种方式，包括，立体投影成线面、颜色的夸张、特征的提取与组合等等，并添加了动画（时间）的方式使玩家选择，这就意味着，有点像在无数种可能性中用摄像机进行摄影。有时间可以再去体验一下那一章，对我很有启发。    </li>
+<li>我的老师说的一句话我很认可，他说看东西不能想这个是什么，要感受它的颜色、它的形状…我自己的总结就是要用看画的眼光看一张照片。每次我看照片的时候，我都不会认为这是一张照片，而把它看作一幅画。很有用！画起来就简单多了。  </li>
+</ul>
+<h3 id="发型"><a href="#发型" class="headerlink" title="发型"></a>发型</h3><p>码。</p>
+<p>学到一种起发型的好方法。就是用图形（颜色）起形，然后再勾边。</p>
+<p>不太算发型专精，就先放在这吧。  </p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/%E4%BA%8C%E6%AC%A1%E5%85%83%E7%9A%84%E5%BD%A2%E5%92%8C%E8%89%B2%E5%BD%A9.JPG" alt="二次元的形和色彩"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/%E8%BF%91%E5%86%99%E7%9C%9F%E7%9A%84%E5%BD%A2%E5%92%8C%E7%BA%BF%E6%9D%A1.JPG" alt="近写真的形和线条"></p>
+<h3 id="眼睛参考"><a href="#眼睛参考" class="headerlink" title="眼睛参考"></a>眼睛参考</h3><p>另外说一下图层混合模式效果。一般用亮图层做高光和亮部，其中常用的有add（线性减淡）、screen（滤色）和color dodge（颜色变淡）</p>
+<p>我总结了一下，主要分为两种眼睛：硬眼睛和软眼睛。我也看了下为啥我不喜欢某些眼睛，因为他们：</p>
+<ol>
+<li>黑色太多太重</li>
+<li>勾边黑色太粗或没有改色或没有擦除</li>
+<li>白色高光过多</li>
+<li>以及没有色彩变化</li>
+</ol>
+<p>我喜欢某些眼睛因为他们：</p>
+<ol>
+<li>黑色比例均衡，没有很离谱的勾边，有也会改颜色、擦除1/3</li>
+<li>色彩美丽，有对比反差</li>
+<li>白色高光占比适宜</li>
+<li>虚实融合适宜（虚实软硬对比，尤其是边缘）</li>
+<li>睫毛</li>
+<li>强调明暗分界线/瞳孔轮廓/底部反光（有人在分界线卡点、勾边、提饱和度）</li>
+<li>眼睛底色有渐变</li>
+</ol>
+<p>然后说一下硬眼睛和软眼睛，以及软硬结合位于两者之间。  <br>硬眼睛就是二次元平涂效果（老师不好意思，我知道你不同意这种观点，我就说一下意思意思）的，边缘很硬笔触很硬的眼睛；软眼睛就是日韩插画、水彩风格那种边缘很软的眼睛。一般软眼睛好画也容易出效果，比较抖音，下面这些图里硬眼睛比较多，我会把软眼睛标出来。  <br>也有一些特殊的眼睛，我也会标出来，这种就是独特画风的眼睛。  </p>
+<p>暂时这些。  </p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7412(20210815-034752).PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7413(20210815-034858).PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7414(20210815-034928).PNG" alt="AI插画风格"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7415(20210815-034959).PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7416(20210815-035033).PNG" alt="软"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7417(20210815-035053).PNG" alt="软"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7418(20210815-035148).PNG" alt="线条勾边为主的眼睛"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7419(20210815-035204).PNG" alt="软"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7420(20210815-035315).PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7421(20210815-035410).PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7422(20210815-035652).PNG" alt="软"></p>
+<h3 id="卢子参考"><a href="#卢子参考" class="headerlink" title="卢子参考"></a>卢子参考</h3><p>偷自一个Peter Mohrbacher画师的patron付费微博。</p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%8D%A2%E7%91%9E%E6%81%A9%E5%8F%82%E8%80%83/%E5%8D%A2%E7%91%9E%E6%81%A91.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%8D%A2%E7%91%9E%E6%81%A9%E5%8F%82%E8%80%83/%E5%8D%A2%E7%91%9E%E6%81%A92.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%8D%A2%E7%91%9E%E6%81%A9%E5%8F%82%E8%80%83/%E5%8D%A2%E7%91%9E%E6%81%A9%E8%BF%91%E8%A7%82.PNG" alt="近观"></p>
+<h3 id="拟鸟参考"><a href="#拟鸟参考" class="headerlink" title="拟鸟参考"></a>拟鸟参考</h3><p>陛下用寿带鸟+小体型+换个白色鸟头（用那个八哥的就行）（+那个须子）。</p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7106(20210718-234337).PNG" alt="小鸟水彩画风参考"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7078.PNG" alt="某天堂鸟"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7081(20210718-231020).PNG" alt="体型参考"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7082(20210718-231221).PNG" alt="某八哥"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7084(20210718-231506).PNG" alt="寿带"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7090(20210718-232225).PNG" alt="寿带"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7091(20210718-232255).PNG" alt="寿带"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7093(20210718-232323).PNG" alt="寿带"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7094(20210718-232553).PNG" alt="寿带"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7096(20210718-232613).PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7097(20210718-232634).PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7098(20210718-233104).PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7105(20210718-234039).PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7089(20210718-231923).JPG" alt="萨克森极乐鸟"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7085(20210718-231528).PNG" alt="萨克森极乐鸟"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7099(20210718-233506).PNG" alt="动作"></p>
+<h3 id="虫子参考"><a href="#虫子参考" class="headerlink" title="虫子参考"></a>虫子参考</h3><p><img data-src="https://i.loli.net/2021/07/10/g4s62MjXicFvHPl.jpg" alt="翅膀"></p>
+<p><img data-src="https://i.loli.net/2021/07/10/zKQ2eBWcTsaVLJG.jpg" alt="破掉的翅膀"></p>
+<p><a href="/p/d5a0.html#Mantis%EF%BC%88Life-Story%EF%BC%89">螳螂</a></p>
+<h4 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h4><p><strong>Insects in flight | 11 incredible species in SLOW MOTION：</strong></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xbOzYMKROs8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p><strong>10 Beautiful Insects You can Keep as Pets：</strong></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RSxH0Oj4JCY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p><strong>Insect Flight | Capturing Takeoff &amp; Flying at 3,200 FPS：</strong></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Cnn9CfsYJqc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p><strong>7 Spectacular Moths in Slow Motion!：</strong></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JQL25_hoQ1k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>艹，蛾子太萌了。还有熊蜂，太萌了。</p>
+<p><strong>21 Most Incredible Moth Species：</strong></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YaI1zE3AOXo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>陛下骂我了，害。  <br>（吸气）<br>\陛下最！可！爱！/</p>
+<h3 id="其他参考"><a href="#其他参考" class="headerlink" title="其他参考"></a>其他参考</h3><p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/BloodBorne.jpg" alt="血源的这位太帅了"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/%E6%8C%87%E6%8C%A5%E5%AE%B6%E5%8F%82%E8%80%83.jpg" alt="指挥家参考"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/%E7%94%BB%E9%A3%8E%E5%8F%82%E8%80%831.jpg" alt="画风1"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/IMG_7111.JPG" alt="花瓣布料"></p>
+<p><img data-src="http://p1.music.126.net/b7PL0B-_iVrZwBfC9w-tBQ==/109951164072192167.jpg?param=130y130" alt="不知为啥很有感觉"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/0a7a2991cb288dad80414165bd2ac3c2a15f1c14.jpg"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/1AC0BF46-1CA2-4C29-8E6A-B997758B8A48(20181017-172.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/7B930E19-4856-4F7D-91B1-EA22B3DAB0B7(20190804-154.JPG"></p>
+<p><img data-src="https://i.loli.net/2021/04/23/yF4BmD97lbUnSOw.png"></p>
+<p><img data-src="https://i.loli.net/2021/05/08/AVluIZhaFvdPUyw.png" alt="一种绘画形式，同一人在同一画面内画三种不同动作"></p>
+<hr>
+<h3 id="团长-蝙蝠参考"><a href="#团长-蝙蝠参考" class="headerlink" title="团长-蝙蝠参考"></a>团长-蝙蝠参考</h3><p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%9B%A2%E9%95%BF-%E8%9D%99%E8%9D%A0%E5%8F%82%E8%80%83/10586C34-8431-4CAB-AEB0-45DB0BEE864920181017-172.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%9B%A2%E9%95%BF-%E8%9D%99%E8%9D%A0%E5%8F%82%E8%80%83/48F3A148-21D0-4367-A090-CF9D1A0D677F20181017-172.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%9B%A2%E9%95%BF-%E8%9D%99%E8%9D%A0%E5%8F%82%E8%80%83/A621418B-B503-4A69-8F3A-E74A4210200320181017-015.JPG"></p>
+<hr>
+<h3 id="空洞原设参考"><a href="#空洞原设参考" class="headerlink" title="空洞原设参考"></a>空洞原设参考</h3><blockquote class="blockquote-center">
+            <i class="fa fa-quote-left"></i>
+            <p><span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL1doaXRlX1BhbGFjZQ==">Hollow Knight Wiki<i class="fa fa-external-link-alt"></i></span></p>
+
+            <i class="fa fa-quote-right"></i>
+          </blockquote>
+
+
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/%E5%AE%9D%E8%97%8F%E5%9B%BE.png" alt="宝藏图"></p>
+<h4 id="大地图"><a href="#大地图" class="headerlink" title="大地图"></a>大地图</h4><p><img data-src="http://mebilychen-media.test.upcdn.net/image/3.6%20-%20FULL%20SIZE.png"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/map%20of%20Hallownest.jpg"></p>
+<h4 id="梦境"><a href="#梦境" class="headerlink" title="梦境"></a>梦境</h4><p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/7.26/IMG_7236(20210726-164520).PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/7.26/IMG_7237(20210726-164545).PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/7.26/IMG_7238(20210726-164557).PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/7.26/IMG_7239(20210726-164626).PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/7.26/IMG_7240(20210726-164647).PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/7.26/IMG_7241(20210726-164718).PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/7.26/IMG_7242(20210726-164739).PNG"></p>
+<h4 id="白后"><a href="#白后" class="headerlink" title="白后"></a>白后</h4><p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/IMG_7174(20210724-174758).PNG" alt="白后1"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/IMG_7176(20210724-180051).PNG" alt="白后2"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/IMG_7182(20210725-040126).PNG" alt="白后3"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/IMG_7183.PNG" alt="白后剪影"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/7.9/IMG_6840.PNG" alt="蛾子"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/7.9/IMG_6841(20210709-025508).PNG" alt="KINGSOUL"></p>
+<p>国王之魂结合时的小动画。要刷新。  </p>
+<div id="dplayer1" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer1"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/7.9/RPReplay_Final1625770586.MP4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
+
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Abyss_Sketch.png" alt="Abyss_Sketch"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/City_of_Tears_Sketch.png" alt="City_of_Tears_Sketch"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/City_of_Tears_Sketch_2.png" alt="City_of_Tears_Sketch_2"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Palace_Grounds_sketch.png" alt="Palace_Grounds_sketch"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/White_Palace_Map.png" alt="White_Palace_Map"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Ancient_Basin_Tram_Other.png" alt="Ancient_Basin_Tram_Other"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Failed_Tramway_Tram.png" alt="Failed_Tramway_Tram"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Lore_White_Palace_2_location.png" alt="Lore_White_Palace_2_location"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Screenshot_HK_Kingdom%2527s_Edge_09.png" alt="Screenshot_HK_Kingdom&#39;s_Edge"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/7.26/IMG_7233.PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Screenshot_HK_White_Palace_03.png" alt="Screenshot_HK_White_Palace"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Screenshot_HK_White_Palace_02.png" alt="Screenshot_HK_White_Palace"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Screenshot_HK_White_Palace_04.png" alt="Screenshot_HK_White_Palace"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Screenshot_HK_White_Palace_05.png" alt="Screenshot_HK_White_Palace"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Screenshot_HK_White_Palace_07.png" alt="Screenshot_HK_White_Palace"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Screenshot_HK_White_Palace_08.png" alt="Screenshot_HK_White_Palace"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Screenshot_HK_White_Palace_09.png" alt="Screenshot_HK_White_Palace"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Screenshot_HK_White_Palace_12.png" alt="Screenshot_HK_White_Palace"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Screenshot_HK_White_Palace_16.png" alt="Screenshot_HK_White_Palace"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/White_Palace_Centre_Exit.png" alt="White_Palace_Centre_Exit"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/White_Palace_Throne_Room_Lore_Tablet.png" alt="White_Palace_Throne_Room_Lore_Tablet"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/White_Palace_Workshop_East.png" alt="White_Palace_Workshop_East"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/192D51ABFE26FD664B9EF1B84FF30CAB.png"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Ancient_Basin_Palace_Grounds.png" alt=" Ancient_Basin_Palace_Grounds"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/QQ%E5%9B%BE%E7%89%8720210413223748.png"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/261E3B2B-C6D1-4C41-B51D-B59ACB0A4E90.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/267A4599-66BC-4421-BF06-55B8B62F3769.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/26FB52EFD208B760A4035772151E8F3E.png"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/2A15300D-82A7-4911-B4C3-661AAA537992(20190905-071.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/3D611F53-128E-45B2-8558-0BE0ADD45D2A(20190903-101.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/46F2FE85-36FC-4DC0-9211-9DDAF875A947.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4D1EF36C-F6E7-41AB-9E95-72BE50559563(20190904-104.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/58F239BE-B3B3-466D-8AEC-B92CCBA3F5D9.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/5944FB63-4DBE-418C-8674-9AB55AC76023(20190903-101.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/5DAE610A-E807-4A92-9E33-1FFAB20B5B1E(20190903-101.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/5FCCC872-A3E4-4D63-8F5A-44F4F14A9471(20201002-211.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/65DAD8B8-6E8A-4F58-A9F3-EED6C5CD6074(20190903-101.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/7D70444A-6FF3-4BFE-BE03-1930600F2F9A(20190804-154.PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/7FD8CE29-7946-4F2F-9BC7-AF5AA9A9B5C1(20190330-024.PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/85812CC4-3681-4F67-BFCE-B476F6B96CAE.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/85B0C89E3F5DCBA182C733CF3B97EC69.png"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/911498E9-2472-46F0-8EAC-D14EE767D41D.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/BB255ABB-10B4-4137-94B1-0C3815A640C3(20190903-101.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/C1B4698E-75EA-4ADC-B0AC-727AA6ADBFE7(20190330-020.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/C7E5034A-DD6C-4E90-92D8-5BE94B19D39E(20190903-101.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/D12B93B5-4FBC-4FDA-B63B-1D8842154EB2.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/E058067D-E761-42FC-B876-C03A0533A9C0(20190512-134.PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/F36F015B-03FE-4B9C-A3F8-3DEC1C171D9D.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/F5997287-AC00-4BEA-B4CB-8A56DEA06A03(20190723-000.PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/IMG_1203(20200528-040944).PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/IMG_1826.PNG"></p>
+<hr>
+<h3 id="雪沃姆-龙参考"><a href="#雪沃姆-龙参考" class="headerlink" title="雪沃姆+龙参考"></a>雪沃姆+龙参考</h3><p><img data-src="https://i.loli.net/2021/07/13/6ydsCPDFptfvSlJ.png"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/37122E7139CDDCB73A405E043EE3E602.png"></p>
+<p><img data-src="https://i.loli.net/2021/05/09/FItqvWgcLkNUnHr.png"></p>
+<p><img data-src="https://imglf3.lf127.net/img/SFFiWnAwMStNckJUeDJSQVNOUnVTWkRVSElnaCt3N1BtQzZtMHRBM1VzZVl6SU9ldXRvVEhBPT0.jpg?imageView&thumbnail=2160x0&quality=90&interlace=1&type=jpg"></p>
+<p><img data-src="https://imglf4.lf127.net/img/SFFiWnAwMStNckJUeDJSQVNOUnVTYndNaFFPcjdMMG5RTDNkaUdPYWRuOVFLcTdvcGFtcjhRPT0.jpg?imageView&thumbnail=2160x0&quality=90&interlace=1&type=jpg"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/127C858C-718A-4514-B02C-98DA9BC4568B(20190608-120.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/239479AF-C6CF-40BB-BBD0-B5D963845947.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/37DCEC8B-D2E5-4F4C-8264-6E587789E01F(20190608-120.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/40F598D6-AF7E-4313-9CD0-B87F4ADA95F0(20200405-124.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/4A76336A-A48F-43CB-98AB-FE720F065C2C(20200504-004.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/4AAB2A1B-007E-4666-BEDF-EA86AF8C6D92(20190608-120.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/6734F910-CAEA-490D-B57C-C814364262AC.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/68FEE8DC-C8DE-462F-A0D6-76EFD6386EC2(20190608-120.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/76E20EA6-23CC-4428-B642-900EDFF866AD(20190610-184.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/792A7085-6658-4D3D-A92A-C112856892FD(20200430-201.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/92F2976C-7BF9-4EF9-9691-AC81D47D809C(20200409-171.PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/9552E144-56C2-4DD0-9A70-2E5461A69C25(20190608-120.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/A1471CF8-B42F-49B4-AAD7-99094C618C24(20190608-120.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/BAA73E76-7C7D-49C4-93AC-CBC68A979678.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/BE0347E1-C351-4F2A-AA0A-449874FC4BDD.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/BED7BE9E-ADE1-4EFF-8BF3-7FBB54206287(20190608-120.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/C24D92B2-398D-41A0-9B6C-AEBA3F9474C1.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/C3FB5C0F-1AE5-4904-B191-EA4AE4B6D785(20200430-025.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/C66BB9A5-C026-42D2-A254-B114F48F15B4(20190608-120.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/CE9B8EB4-CF8D-4444-AE8F-1B29FA6E4DA1(20190610-184.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/D06AA0DA-C41E-41B3-9EB8-4B39252CC609.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/DBAA75D4-697B-4241-8B84-D4514AD2A27D(20190608-120.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/F49FA3C2-7730-44F4-9CF3-F4211BDC1FF5(20190608-120.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/FA3910A9-3FB8-46DE-B666-C6436B8A227C.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/FD87D55C-3C73-4F31-A8C5-5E1BB278CD46(20200430-025.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/IMG_5772(20210409-195919).JPG"></p>
+<p><img data-src></p>
+<p><img data-src></p>
+<p><img data-src></p>
+<hr>
+<h3 id="Zepeto"><a href="#Zepeto" class="headerlink" title="Zepeto"></a>Zepeto</h3><p><img data-src="http://mebilychen-media.test.upcdn.net/image/zaizai/start.png"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/zaizai/stroke.png"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/zaizai/stare.png"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/zaizai/photobooth.png"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/zaizai/laydown.png"></p>
+<p>视频需刷新：  </p>
+<div id="dplayer2" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer2"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/image/zaizai/basket.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
+<div id="dplayer3" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer3"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/image/zaizai/annoy.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>]]></content>
+      <categories>
+        <category>随卢瑞恩研习绘画</category>
+      </categories>
+      <tags>
+        <tag>积累本</tag>
+        <tag>绘画参考</tag>
+        <tag>绘</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【日常】虫虫和虫虫和虫虫们</title>
     <url>/p/24b8.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><blockquote>
@@ -1508,340 +1843,6 @@
         <tag>吐槽</tag>
         <tag>虫与虫与虫</tag>
         <tag>日常</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【参考】绘画参考+Art Tips</title>
-    <url>/p/e3a4.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><blockquote class="blockquote-center">
-            <i class="fa fa-quote-left"></i>
-            <p><span class="exturl" data-url="aHR0cHM6Ly9waW4uaXQvMjJ4dU9Xbg==">Pinterest<i class="fa fa-external-link-alt"></i></span></p>
-
-            <i class="fa fa-quote-right"></i>
-          </blockquote>
-
-<p><img data-src="https://i.loli.net/2021/08/15/dsjiC9DgaON3HIB.jpg" alt="镇楼"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/IMG_6683(20210626-153642).JPG" alt="镇楼2"></p>
-<div class="note info">
-            <h4 id="8-19发现的tips"><a href="#8-19发现的tips" class="headerlink" title="8.19发现的tips"></a>8.19发现的tips</h4><p>经过多次观察，发现自己画画，很！容！易！画！胖！怎么画胖呢，就很容易在定型的时候画胖，即便确定了一边为参照，另一边就会画胖画大，我就寻思着你即便画瘦了画长画小了也比画胖了画短了好看额；而且，很！容！易！画！歪！歪还很一致地歪向右边，就，左边很容易画扁，画残，怎么画残法呢，下面举一个我今天临摹练习的例子。<br>另外，今天学到内剪裁，又加深了一下立体思维，就，不要画片片，要立体，要层次（衣服好几层），要厚度，要包覆，要褶皱，要遮挡。紧身设计很容易做残，也不是不好看，就，新手尽量不要去搞紧身，练不到重要的东西。对于图形敏感度，要用线框出立体结构的轮廓，例如画长方体，不能画长方形，要画有透视关系的长方体剪影线稿。  <br>以及一些线条勾边，无论勾线还是草稿摸鱼，如果不追求完全勾线的清晰效果，该擦的就擦，擦1/4留3/4，但要注意图形完整性。其实重要的是统一性，而不是画得要多完美（比如如果线很抖，全图线都很抖也不是不可以）。    <br>以及头发、褶皱之类的，尽量在边缘以及开端结尾处画层次纹理，要有联系，不要中间毫无来由地突然多了一道这样。  </p>
-          </div>
-
-<p><img data-src="https://i.loli.net/2021/08/19/3ncS5eP16h4XFod.jpg" alt="原图，为了对比翻转了一下"><br><img data-src="https://i.loli.net/2021/08/19/z6ds9MJl1oLSeEK.png" alt="这什么鬼？"></p>
-<div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/image/Works/%E6%B3%A8%E6%84%8F%E5%BD%A2%E5%93%AA%E9%87%8C%E4%B8%8D%E5%AF%B9.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
-
-
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/Works/%E6%B3%A8%E6%84%8F%E7%BA%BF%E7%A8%BF%E9%A2%9C%E8%89%B2%E5%8F%98%E5%8C%96.JPG" alt="注意线稿颜色变化"></p>
-<hr>
-<h3 id="【数码绘画】图层混合模式"><a href="#【数码绘画】图层混合模式" class="headerlink" title="【数码绘画】图层混合模式"></a>【数码绘画】图层混合模式</h3><p>其实吧很多数码绘画都来源于传统绘画，想回头多多了解了解。  </p>
-<p>normal             正常<br>dissolve           渐隐</p>
-<hr>
-<p>darken             变暗<br>Mutiply            正片叠底<br>color burn       颜色加深<br>linear burn      线性加深  </p>
-<hr>
-<p>lighten             变亮<br>screen             滤色<br>color dodge     颜色变淡<br>linear dodge/add    线性减淡  </p>
-<hr>
-<p>overlay            叠加<br>soft light          柔光<br>hard light         强光<br>vivid light         亮光<br>linear light       线性光<br>pin light           点光<br>hard mix          实色混合  </p>
-<hr>
-<p>difference       插值<br>exclusion         排除  </p>
-<hr>
-<p>hue           色调<br>saturation      饱和度  </p>
-<hr>
-<p>color           颜色<br>luminosity       亮度  </p>
-<p>好家伙我一直以为Add是叠加。  </p>
-<p>　　1. 正常(Normal)模式</p>
-<p>　　在“正常”模式下，“混合色”的显示与不透明度的设置有关。当“不透明度”为100%，也就是说完全不透明时，“结果色”的像素将完全由所用的“混合色”代替；当“不透明度”小于100%时，混合色的像素会透过所用的颜色显示出来，显示的程度取决于不透明度的设置与“基色”的颜色。如果在处理“位图”颜色模式图像或“索引颜色”颜色模式图像时，“正常”模式就改称为“阈值”模式了，不过功能是一样的。</p>
-<p>　　2. 溶解(Dissolve)模式</p>
-<p>　　在“溶解”模式中，主要是在编辑或绘制每个像素时，使其成为“结果色”。但是，根据任何像素位置的不透明度，“结果色”由“基色”或“混合色”的像素随机替换。因此，“溶解”模式最好是同Photoshop中的一些着色工具一同使用效果比较好，如“画笔”、“仿制图章”、“橡皮擦”工具等，也可以使用文字。当“混合色”没有羽化边缘，而且具有一定的透明度时，“混合色”将溶入到“基色”内。如果“混合色”没有羽化边缘，并且“不透明度”为100%，那么“溶解”模式不起任何作用。如果是用“画笔”工具或文字创建的“混合色”，同“基色”交替，就可以创建一种类似扩散抖动的效果，如果以小于或等于50％的不透明度描划一条路径，然后利用“描边路径”命令，“溶解”模式在图像边缘周围创建一种“泼溅”的效果。还可以制作模拟破损纸的边缘的效果等。如果利用“橡皮擦”工具，可以在一幅图像上方创建一个新的图层，并填充的白色作为“混合色。然后在“溶解”模式中，用“橡皮擦”工具擦除，可以创建类似于冬天上霜的玻璃中间被擦除的效果，</p>
-<p>　　3. 变暗(Darken)模式</p>
-<p>　　在“变暗”模式中，查看每个通道中的颜色信息，并选择“基色”或“混合色”中较暗的颜色作为“结果色”。比“混合色”亮的像素被替换，比“混合色”暗的像素保持不变。“变暗”模式将导致比背景颜色更淡的颜色从“结果色”中被去掉了。</p>
-<p>　　4. 正片叠底(Multiply)模式</p>
-<p>　　在“正片叠底”模式中，查看每个通道中的颜色信息，并将“基色”与“混合色”复合。“结果色”总是较暗的颜色。任何颜色与黑色复合产生黑色。任何颜色与白色复合保持不变。当用黑色或白色以外的颜色绘画时，绘画工具绘制的连续描边产生逐渐变暗的过渡色，其实“正片叠底”模式就是从“基色”中减去“混合色”的亮度值，得到最终的“结果色”。如果在“正片叠底”模式中使用较淡的颜色对图像的“结果色”是没有影响的。利用“正片叠底”模式可以形成一种光线穿透图层的幻灯片效果。其实就是将“基色”颜色与“混合色”颜色的数值相乘，然后再除以255，便得到了“结果色”的颜色值。例如，红色与黄色的“结果色”是橙色，红色与绿色的“结果色”是褐色，红色与蓝色的“结果色”是紫色等。</p>
-<p>　　5. 颜色加深(Clolor Burn)模式</p>
-<p>　　在“颜色加深”模式中，查看每个通道中的颜色信息，并通过增加对比度使基色变暗以反映混合色，如果与白色混合的话将不会产生变化，“颜色加深”模式创建的效果和“正片叠底”模式创建的效果比较类似。</p>
-<p>　　6. 线性加深(Linear Burn)模式</p>
-<p>　　在“线性加深”模式中，查看每个通道中的颜色信息，并通过减小亮度使“基色”变暗以反映混合色。如果“混合色”与“基色”上的白色混合后将不会产生变化。</p>
-<p>　　7. 变亮(Lighten)模式</p>
-<p>　　在“变亮”模式中，查看每个通道中的颜色信息，并选择“基色”或“混合色”中较亮的颜色作为“结果色”。比“混合色”暗的像素被替换，比“混合色”亮的像素保持不变。 在这种与“变暗”模式相反的模式下，较淡的颜色区域在最终的“合成色”中占主要地位。较暗区域并不出现在最终结“合成色”中。</p>
-<p>　　8. 滤色(Screen)模式</p>
-<p>　　“滤色”模式与“正片叠底”模式正好相反，它将图像的“基色”颜色与“混合色”颜色结合起来产生比两种颜色都浅的第三种颜色。其实就是并将“混合色”的互补色与“基色”复合。“结果色”总是较亮的颜色。用黑色过滤时颜色保持不变。用白色过滤将产生白色。无论在“滤色”模式下用着色工具采用一种颜色，还是对“滤色”模式指定一个层，合并的“结果色”始终是相同的合成颜色或一种更淡的颜色。此效果类似于多个摄影幻灯片在彼此之上投影一样。此“滤色”模式对于在图像中创建霓虹辉光效果是有用的。如果在层上围绕背景对象的边缘涂了白色或任何淡颜色，然后指定层“滤色”模式，通过调节层的“不透明度”设置就能获得饱满或稀薄的辉光效果。</p>
-<p>　　9. 颜色减淡(Clolor Dodge)模式</p>
-<p>　　在“颜色减淡”模式中，查看每个通道中的颜色信息，并通过减小对比度使基色变亮以反映混合色。与黑色混合则不发生变化。除了指定在这个模式的层上边缘区域更尖锐，以及在这个模式下着色的笔划之外，“颜色减淡”模式类似于“滤色”模式创建的效果。另外，不管何时定义“颜色减淡”模式混合“混合色”与“基色”像素，“基色”上的暗区域都将会消失。</p>
-<p>　　10. 线性减淡(Linear Dodge)模式</p>
-<p>　　在“线性减淡”模式中，查看每个通道中的颜色信息，并通过增加亮度使基色变亮以反映混合色。但是大家可不要与黑色混合，那样是不会发生变化的。</p>
-<p>　　11. 叠加(Overlay)模式</p>
-<p>　　“叠加”模式把图像的“基色”颜色与“混合色”颜色相混合产生一种中间色。“基色”内颜色比“混合色”颜色暗的颜色使“混合色”颜色倍增，比“混合色”颜色亮的颜色将使“混合色”颜色被遮盖，而图像内的高亮部分和阴影部分保持不变，因此对黑色或白色像素着色时“叠加”模式不起作用。“叠加”模式以一种非艺术逻辑的方式把放置或应用到一个层上的颜色同背景色进行混合，然而，却能得到有趣的效果。背景图像中的纯黑色或纯白色区域无法在“叠加”模式下显示层上的“叠加”着色或图像区域。背景区域上落在黑色和白色之间的亮度值同“叠加”材料的颜色混合在一起，产生最终的合成颜色。为了使背景图像看上去好像是同设计或文本一起拍摄的。</p>
-<p>　　12. 柔光(Soft Light)模式</p>
-<p>　　“柔光”模式会产生一种柔光照射的效果。如果“混合色”颜色比“基色颜色的像素更亮一些，那么“结果色”将更亮；如果“混合色”颜色比“基色”颜色的像素更暗一些，那么“结果色”颜色将更暗，使图像的亮度反差增大。例如，如果在背景图像上涂了50％黑色，这是一个从黑色到白色的梯度，那着色时梯度的较暗区域变得更暗，而较亮区域呈现出更亮的色调。 其实使颜色变亮或变暗，具体取决于“混合色”。此效果与发散的聚光灯照在图像上相似。 如果“混合色”比 50% 灰色亮，则图像变亮，就像被减淡了一样。如果“混合色”比 50% 灰色暗，则图像变暗，就象被加深了一样。用纯黑色或纯白色绘画会产生明显较暗或较亮的区域，但不会产生纯黑色或纯白色。</p>
-<p>　　13. 强光(Hard Light)模式</p>
-<p>　　“强光”模式将产生一种强光照射的效果。如果“混合色”颜色“基色”颜色的像素更亮一些，那么“结果色”颜色将更亮；如果“混合色”颜色比“基色”颜色的像素更暗一些，那么“结果色”将更暗。除了根据背景中的颜色而使背景色是多重的或屏蔽的之外，这种模式实质上同“柔光”模式是一样的。它的效果要比“柔光”模式更强烈一些，同“叠加”一样，这种模式也可以在背景对象的表面模拟图案或文本，例如，如果混合色比 50% 灰色亮，则图像变亮，就像过滤后的效果。这对于向图像中添加高光非常有用。如果混合色比 50%灰色暗，则图像变暗，就像复合后的效果。这对于向图像添加暗调非常有用。用纯黑色或纯白色绘画会产生纯黑色或纯白色。</p>
-<p>　　14. 亮光(Vivid Light)模式</p>
-<p>　　通过增加或减小对比度来加深或减淡颜色，具体取决于混合色。如果混合色（光源）比 50% 灰色亮，则通过减小对比度使图像变亮。如果混合色比 50% 灰色暗，则通过增加对比度使图像变暗，</p>
-<p>　　15. 线性光(Linear Light)模式</p>
-<p>　　通过减小或增加亮度来加深或减淡颜色，具体取决于混合色。如果混合色（光源）比 50% 灰色亮，则通过增加亮度使图像变亮。如果混合色比 50% 灰色暗，则通过减小亮度使图像变暗。</p>
-<p>　　16. 点光(Pin Light)模式</p>
-<p>　　“点光”模式其实就是替换颜色，其具体取决于“混合色”。如果“混合色”比 50% 灰色亮，则替换比“混合色”暗的像素，而不改变比“混合色”亮的像素。如果“混合色”比 50% 灰色暗，则替换比“混合色”亮的像素，而不改变比“混合色”暗的像素。这对于向图像添加特殊效果非常有用。</p>
-<p>　　17. 差值(Diference)模式</p>
-<p>　　在“差值”模式中，查看每个通道中的颜色信息，“差值”模式是将从图像中“基色”颜色的亮度值减去“混合色”颜色的亮度值，如果结果为负，则取正值，产生反相效果。由于黑色的亮度值为0，白色的亮度值为255，因此用黑色着色不会产生任何影响，用白色着色则产生被着色的原始像素颜色的反相。“差值”模式创建背景颜色的相反色彩，例如，在“差值”模式下，当把蓝色应用到绿色背景中时将产生一种青绿组合色。“差值”模式适用于模拟原始设计的底片，而且尤其可用来在其背景颜色从一个区域到另一区域发生变化的图像中生成突出效果。</p>
-<p>　　18. 排除(Exclusion)模式</p>
-<p>　　“排除”模式与“差值”模式相似，但是具有高对比度和低饱和度的特点。比用“差值”模式获得的颜色要柔和、更明亮一些。建议你在处理图像时，首先选择“差值”模式，若效果不够理想，可以选择“排除”模式来试试。其中与白色混合将反转“基色”值，而与黑色混合则不发生变化。其实无论是“差值”模式还是“排除”模式都能使人物或自然景色图像产生更真实或更吸引人的图像合成。</p>
-<p>　　19. 色相(Hue)模式</p>
-<p>　　“色相”模式只用“混合色”颜色的色相值进行着色，而使饱和度和亮度值保持不变。当“基色”颜色与“混合色”颜色的色相值不同时，才能使用描绘颜色进行着色。但是要注意的是“色相”模式不能用于灰度模式的图像。</p>
-<p>　　20. 饱和度(Saturation)模式</p>
-<p>　　“饱和度”模式的作用方式与“色相”模式相似，它只用“混合色”颜色的饱和度值进行着色，而使色相值和亮度值保持不变。当“基色”颜色与“混合色”颜色的饱和度值不同时，才能使用描绘颜色进行着色处理。在无饱和度的区域上（也就是灰色区域中）用“饱和度”模式是不会产生任何效果的。</p>
-<p>　　21. 颜色(Color)模式</p>
-<p>　　“颜色”模式能够使用“混合色”颜色的饱和度值和色相值同时进行着色，而使“基色”颜色的亮度值保持不变。“颜色”模式模式可以看成是“饱合度”模式和“色相”模式的综合效果。该模式能够使灰色图像的阴影或轮廓透过着色的颜色显示出来，产生某种色彩化的效果。这样可以保留图像中的灰阶，并且对于给单色图像上色和给彩色图像着色都会非常有用。</p>
-<p>　　22. 亮度(Luminosity)模式</p>
-<p>　　“亮度”模式能够使用“混合色”颜色的亮度值进行着色，而保持“基色”颜色的饱和度和色相数值不变。其实就是用“基色”中的“色相”和“饱和度”以及“混合色”的亮度创建“结果色”。此模式创建的效果是与“颜色”模式创建的效果相反。</p>
-<h3 id="《平面设计看这本就够了》"><a href="#《平面设计看这本就够了》" class="headerlink" title="《平面设计看这本就够了》"></a>《平面设计看这本就够了》</h3><p><strong>非对称式均衡</strong>  <br>一种感觉上的均衡，任何人都不可能准确判断画面上的物象实际重量，这种心理意义上的重量，按照它在人们生活中的重要性及与人的关系密切程度而定。</p>
-<p><strong>关于面的大小深浅聚散的均衡分布</strong>  <br>色调的不均衡，可从调整形体大小进行补偿;形体的不均衡，也可从调整色调的深浅进行补偿。两者在不可变动的情况下还可以通过画幅边沿关系的改变，进行调整.</p>
-<p><strong>关于形体和色调的均衡在心理上的衡量</strong>  <br>在暗色背景前，明度与面积成反比、反之亦然。面积小而与背景明度反差大，色块面积大与背景反差小，两者可以取得均衡.</p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/IMG_7114.PNG"></p>
-<div class="note info no-icon"> <p style="color:#438BCA">有的时候要退后几步看你的画，就像将画面缩小，这样能看出很多放大时看不到的问题（比如明暗关系错误）。 </p> </div>
-
-<div class="note info no-icon"> <p style="color:#438BCA">注意：Experience 3D & augmented reality in Search
-When you search on Google, you can view some results in 3D and augmented reality (AR).  
-用手机在google上搜索动物或者虫虫就可以看动作动画和AR 3D模型，很方便。 </p> </div>
-
-<h3 id="Pixel-Art-Guide-by-Ittai-Manero"><a href="#Pixel-Art-Guide-by-Ittai-Manero" class="headerlink" title="Pixel Art Guide by Ittai Manero"></a>Pixel Art Guide by Ittai Manero</h3><p><span class="exturl" data-url="aHR0cDovL21lYmlseWNoZW4tbWVkaWEudGVzdC51cGNkbi5uZXQvZG9jL1RoZSUyMFBpeGVsJTIwQXJ0JTIwRXhwZXJpZW5jZSUyMFF1aWNrJTIwR3VpZGUlMjAoSXR0YWltYW5lcm8pLnBkZg==">PDF<i class="fa fa-external-link-alt"></i></span></p>
-<h3 id="Thick-Paint-Guide-by-Ittai-Manero"><a href="#Thick-Paint-Guide-by-Ittai-Manero" class="headerlink" title="Thick Paint Guide by Ittai Manero"></a>Thick Paint Guide by Ittai Manero</h3><p><span class="exturl" data-url="aHR0cDovL21lYmlseWNoZW4tbWVkaWEudGVzdC51cGNkbi5uZXQvZG9jL0hvdyUyMFRvJTIwVXNlJTIwVGhpY2slMjBQYWludCUyMC0lMjBGUkVFJTIwRWRpdGlvbiUyMChFTkdMSVNIKS5wZGY=">PDF<i class="fa fa-external-link-alt"></i></span></p>
-<h3 id="目前的学习计划"><a href="#目前的学习计划" class="headerlink" title="目前的学习计划"></a>目前的学习计划</h3><p>关于原画学习，除了跟着现在的老师多画画之外，搜集的资源网课也要多看看：</p>
-<ul>
-<li>K大Krenz的三堂课，最好能实际去听听看，实在不行就算了，看老课凑活一下，被大家传的很神的样子。</li>
-<li>日系厚涂板绘水彩油画彩铅原画插画漫画游戏场景角色似乎都有的亚子，有空多看看，真的觉得很多电子绘画思路应该发功于传统绘画技法上。只是现在传统绘画比较难布置环境而已，大家都懒了只画板绘。手上功夫多练练也没坏处。哦对了，速写要多练练，练抓型、记忆、概括。  </li>
-<li>还有一系列似乎是比较有名的大佬的课，争取这辈子能看完。</li>
-</ul>
-<p><span class="exturl" data-url="aHR0cHM6Ly9xdWlja3Bvc2VzLmNvbS8=">QuickPose速写抓型练习<i class="fa fa-external-link-alt"></i></span></p>
-<p>哦哦还有一个很魔性的网站，<span class="exturl" data-url="aHR0cHM6Ly93d3cuYXJ0YnJlZWRlci5jb20v">ARTBreeder<i class="fa fa-external-link-alt"></i></span>，可以用来做参考和（高质量的）概念草稿。<br>除此之外还有好多可以自己捏头像的那种网站，就注意一下，就不收集了（大概）。</p>
-<p><span class="exturl" data-url="aHR0cDovL21lYmlseWNoZW4tbWVkaWEudGVzdC51cGNkbi5uZXQvZG9jLyVFNSU4RSU5RiVFNyU5NCVCQiVFOCVBMSVBNSVFNCVCOSVBMC5wZGY=">PDF版文件<i class="fa fa-external-link-alt"></i></span></p>
-<p>主要是注意如何找参考，K大听说也是会强调如何找参考，所以参考很重要。</p>
-<p>历历在目（Before Your Eyes）对于Art的启发：</p>
-<ul>
-<li>同一个实体，可以有无数种表达方式，（当然也包括用文字描述、用图画描述、用音乐描述、用建筑描述….就是“拟”，就是“抽象”。不过这里，）只说对于绘画而言，可以提取其中的颜色、形状，可以想象它如何流动（加上时间），如何相互影响，可以将线抽象成面，可以将红色抽象成橘色+黄色，可以将静止地抽象成流动的，以此类推，发挥你的想象力吧！把具象变成抽象！把抽象变成具象！自由！免费！  </li>
-<li>历历在目里将一个实体抽象出了很多种方式，包括，立体投影成线面、颜色的夸张、特征的提取与组合等等，并添加了动画（时间）的方式使玩家选择，这就意味着，有点像在无数种可能性中用摄像机进行摄影。有时间可以再去体验一下那一章，对我很有启发。    </li>
-<li>我的老师说的一句话我很认可，他说看东西不能想这个是什么，要感受它的颜色、它的形状…我自己的总结就是要用看画的眼光看一张照片。每次我看照片的时候，我都不会认为这是一张照片，而把它看作一幅画。很有用！画起来就简单多了。  </li>
-</ul>
-<h3 id="发型"><a href="#发型" class="headerlink" title="发型"></a>发型</h3><p>码。</p>
-<p>学到一种起发型的好方法。就是用图形（颜色）起形，然后再勾边。</p>
-<p>不太算发型专精，就先放在这吧。  </p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/%E4%BA%8C%E6%AC%A1%E5%85%83%E7%9A%84%E5%BD%A2%E5%92%8C%E8%89%B2%E5%BD%A9.JPG" alt="二次元的形和色彩"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/%E8%BF%91%E5%86%99%E7%9C%9F%E7%9A%84%E5%BD%A2%E5%92%8C%E7%BA%BF%E6%9D%A1.JPG" alt="近写真的形和线条"></p>
-<h3 id="眼睛参考"><a href="#眼睛参考" class="headerlink" title="眼睛参考"></a>眼睛参考</h3><p>另外说一下图层混合模式效果。一般用亮图层做高光和亮部，其中常用的有add（线性减淡）、screen（滤色）和color dodge（颜色变淡）</p>
-<p>我总结了一下，主要分为两种眼睛：硬眼睛和软眼睛。我也看了下为啥我不喜欢某些眼睛，因为他们：</p>
-<ol>
-<li>黑色太多太重</li>
-<li>勾边黑色太粗或没有改色或没有擦除</li>
-<li>白色高光过多</li>
-<li>以及没有色彩变化</li>
-</ol>
-<p>我喜欢某些眼睛因为他们：</p>
-<ol>
-<li>黑色比例均衡，没有很离谱的勾边，有也会改颜色、擦除1/3</li>
-<li>色彩美丽，有对比反差</li>
-<li>白色高光占比适宜</li>
-<li>虚实融合适宜（虚实软硬对比，尤其是边缘）</li>
-<li>睫毛</li>
-<li>强调明暗分界线/瞳孔轮廓/底部反光（有人在分界线卡点、勾边、提饱和度）</li>
-<li>眼睛底色有渐变</li>
-</ol>
-<p>然后说一下硬眼睛和软眼睛，以及软硬结合位于两者之间。  <br>硬眼睛就是二次元平涂效果（老师不好意思，我知道你不同意这种观点，我就说一下意思意思）的，边缘很硬笔触很硬的眼睛；软眼睛就是日韩插画、水彩风格那种边缘很软的眼睛。一般软眼睛好画也容易出效果，比较抖音，下面这些图里硬眼睛比较多，我会把软眼睛标出来。  <br>也有一些特殊的眼睛，我也会标出来，这种就是独特画风的眼睛。  </p>
-<p>暂时这些。  </p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7412(20210815-034752).PNG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7413(20210815-034858).PNG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7414(20210815-034928).PNG" alt="AI插画风格"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7415(20210815-034959).PNG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7416(20210815-035033).PNG" alt="软"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7417(20210815-035053).PNG" alt="软"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7418(20210815-035148).PNG" alt="线条勾边为主的眼睛"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7419(20210815-035204).PNG" alt="软"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7420(20210815-035315).PNG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7421(20210815-035410).PNG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7422(20210815-035652).PNG" alt="软"></p>
-<h3 id="卢子参考"><a href="#卢子参考" class="headerlink" title="卢子参考"></a>卢子参考</h3><p>偷自一个Peter Mohrbacher画师的patron付费微博。</p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%8D%A2%E7%91%9E%E6%81%A9%E5%8F%82%E8%80%83/%E5%8D%A2%E7%91%9E%E6%81%A91.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%8D%A2%E7%91%9E%E6%81%A9%E5%8F%82%E8%80%83/%E5%8D%A2%E7%91%9E%E6%81%A92.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%8D%A2%E7%91%9E%E6%81%A9%E5%8F%82%E8%80%83/%E5%8D%A2%E7%91%9E%E6%81%A9%E8%BF%91%E8%A7%82.PNG" alt="近观"></p>
-<h3 id="拟鸟参考"><a href="#拟鸟参考" class="headerlink" title="拟鸟参考"></a>拟鸟参考</h3><p>陛下用寿带鸟+小体型+换个白色鸟头（用那个八哥的就行）（+那个须子）。</p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7106(20210718-234337).PNG" alt="小鸟水彩画风参考"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7078.PNG" alt="某天堂鸟"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7081(20210718-231020).PNG" alt="体型参考"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7082(20210718-231221).PNG" alt="某八哥"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7084(20210718-231506).PNG" alt="寿带"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7090(20210718-232225).PNG" alt="寿带"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7091(20210718-232255).PNG" alt="寿带"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7093(20210718-232323).PNG" alt="寿带"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7094(20210718-232553).PNG" alt="寿带"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7096(20210718-232613).PNG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7097(20210718-232634).PNG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7098(20210718-233104).PNG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7105(20210718-234039).PNG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7089(20210718-231923).JPG" alt="萨克森极乐鸟"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7085(20210718-231528).PNG" alt="萨克森极乐鸟"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83/IMG_7099(20210718-233506).PNG" alt="动作"></p>
-<h3 id="虫子参考"><a href="#虫子参考" class="headerlink" title="虫子参考"></a>虫子参考</h3><p><img data-src="https://i.loli.net/2021/07/10/g4s62MjXicFvHPl.jpg" alt="翅膀"></p>
-<p><img data-src="https://i.loli.net/2021/07/10/zKQ2eBWcTsaVLJG.jpg" alt="破掉的翅膀"></p>
-<p><a href="/p/d5a0.html#Mantis%EF%BC%88Life-Story%EF%BC%89">螳螂</a></p>
-<h4 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h4><p><strong>Insects in flight | 11 incredible species in SLOW MOTION：</strong></p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xbOzYMKROs8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<p><strong>10 Beautiful Insects You can Keep as Pets：</strong></p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RSxH0Oj4JCY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<p><strong>Insect Flight | Capturing Takeoff &amp; Flying at 3,200 FPS：</strong></p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Cnn9CfsYJqc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<p><strong>7 Spectacular Moths in Slow Motion!：</strong></p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JQL25_hoQ1k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<p>艹，蛾子太萌了。还有熊蜂，太萌了。</p>
-<p><strong>21 Most Incredible Moth Species：</strong></p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YaI1zE3AOXo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<p>陛下骂我了，害。  <br>（吸气）<br>\陛下最！可！爱！/</p>
-<h3 id="其他参考"><a href="#其他参考" class="headerlink" title="其他参考"></a>其他参考</h3><p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/BloodBorne.jpg" alt="血源的这位太帅了"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/%E6%8C%87%E6%8C%A5%E5%AE%B6%E5%8F%82%E8%80%83.jpg" alt="指挥家参考"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/%E7%94%BB%E9%A3%8E%E5%8F%82%E8%80%831.jpg" alt="画风1"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/IMG_7111.JPG" alt="花瓣布料"></p>
-<p><img data-src="http://p1.music.126.net/b7PL0B-_iVrZwBfC9w-tBQ==/109951164072192167.jpg?param=130y130" alt="不知为啥很有感觉"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/0a7a2991cb288dad80414165bd2ac3c2a15f1c14.jpg"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/1AC0BF46-1CA2-4C29-8E6A-B997758B8A48(20181017-172.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/7B930E19-4856-4F7D-91B1-EA22B3DAB0B7(20190804-154.JPG"></p>
-<p><img data-src="https://i.loli.net/2021/04/23/yF4BmD97lbUnSOw.png"></p>
-<p><img data-src="https://i.loli.net/2021/05/08/AVluIZhaFvdPUyw.png" alt="一种绘画形式，同一人在同一画面内画三种不同动作"></p>
-<hr>
-<h3 id="团长-蝙蝠参考"><a href="#团长-蝙蝠参考" class="headerlink" title="团长-蝙蝠参考"></a>团长-蝙蝠参考</h3><p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%9B%A2%E9%95%BF-%E8%9D%99%E8%9D%A0%E5%8F%82%E8%80%83/10586C34-8431-4CAB-AEB0-45DB0BEE864920181017-172.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%9B%A2%E9%95%BF-%E8%9D%99%E8%9D%A0%E5%8F%82%E8%80%83/48F3A148-21D0-4367-A090-CF9D1A0D677F20181017-172.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%9B%A2%E9%95%BF-%E8%9D%99%E8%9D%A0%E5%8F%82%E8%80%83/A621418B-B503-4A69-8F3A-E74A4210200320181017-015.JPG"></p>
-<hr>
-<h3 id="空洞原设参考"><a href="#空洞原设参考" class="headerlink" title="空洞原设参考"></a>空洞原设参考</h3><blockquote class="blockquote-center">
-            <i class="fa fa-quote-left"></i>
-            <p><span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL1doaXRlX1BhbGFjZQ==">Hollow Knight Wiki<i class="fa fa-external-link-alt"></i></span></p>
-
-            <i class="fa fa-quote-right"></i>
-          </blockquote>
-
-
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/%E5%AE%9D%E8%97%8F%E5%9B%BE.png" alt="宝藏图"></p>
-<h4 id="大地图"><a href="#大地图" class="headerlink" title="大地图"></a>大地图</h4><p><img data-src="http://mebilychen-media.test.upcdn.net/image/3.6%20-%20FULL%20SIZE.png"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/map%20of%20Hallownest.jpg"></p>
-<h4 id="梦境"><a href="#梦境" class="headerlink" title="梦境"></a>梦境</h4><p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/7.26/IMG_7236(20210726-164520).PNG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/7.26/IMG_7237(20210726-164545).PNG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/7.26/IMG_7238(20210726-164557).PNG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/7.26/IMG_7239(20210726-164626).PNG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/7.26/IMG_7240(20210726-164647).PNG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/7.26/IMG_7241(20210726-164718).PNG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/7.26/IMG_7242(20210726-164739).PNG"></p>
-<h4 id="白后"><a href="#白后" class="headerlink" title="白后"></a>白后</h4><p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/IMG_7174(20210724-174758).PNG" alt="白后1"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/IMG_7176(20210724-180051).PNG" alt="白后2"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/IMG_7182(20210725-040126).PNG" alt="白后3"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/IMG_7183.PNG" alt="白后剪影"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/7.9/IMG_6840.PNG" alt="蛾子"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/7.9/IMG_6841(20210709-025508).PNG" alt="KINGSOUL"></p>
-<p>国王之魂结合时的小动画。要刷新。  </p>
-<div id="dplayer1" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer1"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/7.9/RPReplay_Final1625770586.MP4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
-
-
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Abyss_Sketch.png" alt="Abyss_Sketch"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/City_of_Tears_Sketch.png" alt="City_of_Tears_Sketch"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/City_of_Tears_Sketch_2.png" alt="City_of_Tears_Sketch_2"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Palace_Grounds_sketch.png" alt="Palace_Grounds_sketch"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/White_Palace_Map.png" alt="White_Palace_Map"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Ancient_Basin_Tram_Other.png" alt="Ancient_Basin_Tram_Other"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Failed_Tramway_Tram.png" alt="Failed_Tramway_Tram"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Lore_White_Palace_2_location.png" alt="Lore_White_Palace_2_location"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Screenshot_HK_Kingdom%2527s_Edge_09.png" alt="Screenshot_HK_Kingdom&#39;s_Edge"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/7.26/IMG_7233.PNG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Screenshot_HK_White_Palace_03.png" alt="Screenshot_HK_White_Palace"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Screenshot_HK_White_Palace_02.png" alt="Screenshot_HK_White_Palace"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Screenshot_HK_White_Palace_04.png" alt="Screenshot_HK_White_Palace"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Screenshot_HK_White_Palace_05.png" alt="Screenshot_HK_White_Palace"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Screenshot_HK_White_Palace_07.png" alt="Screenshot_HK_White_Palace"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Screenshot_HK_White_Palace_08.png" alt="Screenshot_HK_White_Palace"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Screenshot_HK_White_Palace_09.png" alt="Screenshot_HK_White_Palace"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Screenshot_HK_White_Palace_12.png" alt="Screenshot_HK_White_Palace"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Screenshot_HK_White_Palace_16.png" alt="Screenshot_HK_White_Palace"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/White_Palace_Centre_Exit.png" alt="White_Palace_Centre_Exit"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/White_Palace_Throne_Room_Lore_Tablet.png" alt="White_Palace_Throne_Room_Lore_Tablet"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/White_Palace_Workshop_East.png" alt="White_Palace_Workshop_East"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/192D51ABFE26FD664B9EF1B84FF30CAB.png"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4.14/Ancient_Basin_Palace_Grounds.png" alt=" Ancient_Basin_Palace_Grounds"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/QQ%E5%9B%BE%E7%89%8720210413223748.png"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/261E3B2B-C6D1-4C41-B51D-B59ACB0A4E90.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/267A4599-66BC-4421-BF06-55B8B62F3769.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/26FB52EFD208B760A4035772151E8F3E.png"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/2A15300D-82A7-4911-B4C3-661AAA537992(20190905-071.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/3D611F53-128E-45B2-8558-0BE0ADD45D2A(20190903-101.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/46F2FE85-36FC-4DC0-9211-9DDAF875A947.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/4D1EF36C-F6E7-41AB-9E95-72BE50559563(20190904-104.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/58F239BE-B3B3-466D-8AEC-B92CCBA3F5D9.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/5944FB63-4DBE-418C-8674-9AB55AC76023(20190903-101.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/5DAE610A-E807-4A92-9E33-1FFAB20B5B1E(20190903-101.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/5FCCC872-A3E4-4D63-8F5A-44F4F14A9471(20201002-211.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/65DAD8B8-6E8A-4F58-A9F3-EED6C5CD6074(20190903-101.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/7D70444A-6FF3-4BFE-BE03-1930600F2F9A(20190804-154.PNG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/7FD8CE29-7946-4F2F-9BC7-AF5AA9A9B5C1(20190330-024.PNG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/85812CC4-3681-4F67-BFCE-B476F6B96CAE.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/85B0C89E3F5DCBA182C733CF3B97EC69.png"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/911498E9-2472-46F0-8EAC-D14EE767D41D.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/BB255ABB-10B4-4137-94B1-0C3815A640C3(20190903-101.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/C1B4698E-75EA-4ADC-B0AC-727AA6ADBFE7(20190330-020.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/C7E5034A-DD6C-4E90-92D8-5BE94B19D39E(20190903-101.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/D12B93B5-4FBC-4FDA-B63B-1D8842154EB2.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/E058067D-E761-42FC-B876-C03A0533A9C0(20190512-134.PNG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/F36F015B-03FE-4B9C-A3F8-3DEC1C171D9D.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/F5997287-AC00-4BEA-B4CB-8A56DEA06A03(20190723-000.PNG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/IMG_1203(20200528-040944).PNG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83/IMG_1826.PNG"></p>
-<hr>
-<h3 id="雪沃姆-龙参考"><a href="#雪沃姆-龙参考" class="headerlink" title="雪沃姆+龙参考"></a>雪沃姆+龙参考</h3><p><img data-src="https://i.loli.net/2021/07/13/6ydsCPDFptfvSlJ.png"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/37122E7139CDDCB73A405E043EE3E602.png"></p>
-<p><img data-src="https://i.loli.net/2021/05/09/FItqvWgcLkNUnHr.png"></p>
-<p><img data-src="https://imglf3.lf127.net/img/SFFiWnAwMStNckJUeDJSQVNOUnVTWkRVSElnaCt3N1BtQzZtMHRBM1VzZVl6SU9ldXRvVEhBPT0.jpg?imageView&thumbnail=2160x0&quality=90&interlace=1&type=jpg"></p>
-<p><img data-src="https://imglf4.lf127.net/img/SFFiWnAwMStNckJUeDJSQVNOUnVTYndNaFFPcjdMMG5RTDNkaUdPYWRuOVFLcTdvcGFtcjhRPT0.jpg?imageView&thumbnail=2160x0&quality=90&interlace=1&type=jpg"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/127C858C-718A-4514-B02C-98DA9BC4568B(20190608-120.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/239479AF-C6CF-40BB-BBD0-B5D963845947.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/37DCEC8B-D2E5-4F4C-8264-6E587789E01F(20190608-120.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/40F598D6-AF7E-4313-9CD0-B87F4ADA95F0(20200405-124.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/4A76336A-A48F-43CB-98AB-FE720F065C2C(20200504-004.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/4AAB2A1B-007E-4666-BEDF-EA86AF8C6D92(20190608-120.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/6734F910-CAEA-490D-B57C-C814364262AC.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/68FEE8DC-C8DE-462F-A0D6-76EFD6386EC2(20190608-120.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/76E20EA6-23CC-4428-B642-900EDFF866AD(20190610-184.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/792A7085-6658-4D3D-A92A-C112856892FD(20200430-201.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/92F2976C-7BF9-4EF9-9691-AC81D47D809C(20200409-171.PNG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/9552E144-56C2-4DD0-9A70-2E5461A69C25(20190608-120.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/A1471CF8-B42F-49B4-AAD7-99094C618C24(20190608-120.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/BAA73E76-7C7D-49C4-93AC-CBC68A979678.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/BE0347E1-C351-4F2A-AA0A-449874FC4BDD.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/BED7BE9E-ADE1-4EFF-8BF3-7FBB54206287(20190608-120.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/C24D92B2-398D-41A0-9B6C-AEBA3F9474C1.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/C3FB5C0F-1AE5-4904-B191-EA4AE4B6D785(20200430-025.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/C66BB9A5-C026-42D2-A254-B114F48F15B4(20190608-120.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/CE9B8EB4-CF8D-4444-AE8F-1B29FA6E4DA1(20190610-184.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/D06AA0DA-C41E-41B3-9EB8-4B39252CC609.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/DBAA75D4-697B-4241-8B84-D4514AD2A27D(20190608-120.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/F49FA3C2-7730-44F4-9CF3-F4211BDC1FF5(20190608-120.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/FA3910A9-3FB8-46DE-B666-C6436B8A227C.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/FD87D55C-3C73-4F31-A8C5-5E1BB278CD46(20200430-025.JPG"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/IMG_5772(20210409-195919).JPG"></p>
-<p><img data-src></p>
-<p><img data-src></p>
-<p><img data-src></p>
-<hr>
-<h3 id="Zepeto"><a href="#Zepeto" class="headerlink" title="Zepeto"></a>Zepeto</h3><p><img data-src="http://mebilychen-media.test.upcdn.net/image/zaizai/start.png"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/zaizai/stroke.png"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/zaizai/stare.png"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/zaizai/photobooth.png"></p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/image/zaizai/laydown.png"></p>
-<p>视频需刷新：  </p>
-<div id="dplayer2" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer2"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/image/zaizai/basket.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
-
-<div id="dplayer3" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer3"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/image/zaizai/annoy.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>]]></content>
-      <categories>
-        <category>随卢瑞恩研习绘画</category>
-      </categories>
-      <tags>
-        <tag>积累本</tag>
-        <tag>绘画参考</tag>
-        <tag>绘</tag>
       </tags>
   </entry>
   <entry>
