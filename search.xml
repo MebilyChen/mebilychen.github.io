@@ -49,12 +49,12 @@
 
 <p>刷新</p>
 
-        <div id="aplayer-jhGzDQBe" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-lhRxjsZq" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-jhGzDQBe"),
+            element: document.getElementById("aplayer-lhRxjsZq"),
             narrow: false,
             autoplay: false,
             showlrc: false,
