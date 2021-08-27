@@ -44,18 +44,17 @@
   <entry>
     <title>其他同人的曲</title>
     <url>/p/9986.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="娘-MOTHER-EarthBound"><a href="#娘-MOTHER-EarthBound" class="headerlink" title="娘/MOTHER/EarthBound"></a>娘/MOTHER/EarthBound</h1><h2 id="娘三"><a href="#娘三" class="headerlink" title="娘三"></a>娘三</h2><h3 id="14年暑假用Cubase做的第一首曲"><a href="#14年暑假用Cubase做的第一首曲" class="headerlink" title="14年暑假用Cubase做的第一首曲"></a>14年暑假用Cubase做的第一首曲</h3><p>当时的@名是LT3（Love_Theme3）</p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/media/Music/Coverpics/GhostCover.jpeg" alt="Cover"></p>
+    <content><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="娘-MOTHER-EarthBound"><a href="#娘-MOTHER-EarthBound" class="headerlink" title="娘/MOTHER/EarthBound"></a>娘/MOTHER/EarthBound</h1><h2 id="娘三"><a href="#娘三" class="headerlink" title="娘三"></a>娘三</h2><h3 id="14年暑假用Cubase做的第一首曲"><a href="#14年暑假用Cubase做的第一首曲" class="headerlink" title="14年暑假用Cubase做的第一首曲"></a>14年暑假用Cubase做的第一首曲</h3><p>当时的@名是LT3（Love_Theme3）  <br>好家伙，Aplayer把我当时太高pitch和太低pitch（主要是大鼓）都变成拍桌板的声音了。  <br>别有一番风味。  </p>
 <center>🎼</center>
 
 <p>刷新</p>
 
-        <div id="aplayer-koAmjNah" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-jhGzDQBe" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-koAmjNah"),
+            element: document.getElementById("aplayer-jhGzDQBe"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -63,7 +62,7 @@
               title: "Ghost(0w0)",
               author: "作曲：Mother3/编曲：LT3",
               url: "http://mebilychen-media.test.upcdn.net/media/Music/The%20Ghost(0w0)%20%20-1.mp3",
-              pic: "",
+              pic: "http://mebilychen-media.test.upcdn.net/media/Music/Coverpics/GhostCover.jpeg",
               lrc: ""
             }
           });
