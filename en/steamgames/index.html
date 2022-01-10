@@ -1,0 +1,3219 @@
+<!DOCTYPE html>
+<html lang="en">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/en/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/en/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/en/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/en/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/en/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Tillana:300,300italic,400,400italic,700,700italic|Poiret One:300,300italic,400,400italic,700,700italic|Secular One:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/en/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/en/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/en/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/en/","scheme":"Muse","version":"7.8.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Well, I must urge my King to play...        #steam-item1 a, #steam-item1 a:hover {   text-decoration: none; }  .steam-game-tabs {   margin-bottom: 15px;   margin-top: 15px; }  .steam-game-tab {">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Steam Library">
+<meta property="og:url" content="https://mebilychen.github.io/steamgames/">
+<meta property="og:site_name" content="Mebily&#39;s Lil&#39;Paradise">
+<meta property="og:description" content="Well, I must urge my King to play...        #steam-item1 a, #steam-item1 a:hover {   text-decoration: none; }  .steam-game-tabs {   margin-bottom: 15px;   margin-top: 15px; }  .steam-game-tab {">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="I don&#39;t have any keywords.">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://mebilychen.github.io/steamgames/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    
+      if (NexT.utils.hasMobileUA()) return;
+    
+    let time, hidden, visible, title = document.title;
+    let favicon = document.querySelector('link[rel="icon"]');
+    
+      hidden = '*stares*';
+      visible = '*averts*';
+    
+    let random = t => t[Math.floor(Math.random() * t.length)];
+    const change = () => {
+      if (document.hidden) {
+        favicon.setAttribute('href', '/images/favicon-32x32-king-black.png');
+        
+          document.title = hidden;
+        
+        clearTimeout(time);
+      } else {
+        favicon.setAttribute('href', '/images/favicon-32x32-brand-black.png');
+        
+          document.title = visible;
+        
+        time = setTimeout(() => {
+          document.title = "Mebily's Lil'Paradise";
+        }, 1000);
+      }
+    }
+    document.addEventListener('visibilitychange', change, false);
+  });
+</script>
+
+  <title>Steam Library | Mebily's Lil'Paradise
+</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/en/atom.xml" title="Mebily's Lil'Paradise" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;Attuning...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/en/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Mebily's Lil'Paradise</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Palism is the most complicated and delightful subject in this world.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/en/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/en/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">21</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/en/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">9</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/en/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">10</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/en/photos/" rel="section"><i class="fa fa-image fa-fw"></i>Gallery</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/en/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>Steam</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/en/random.html" rel="section"><i class="fa fa-question fa-fw"></i>Random</a>
+
+  </li>
+        <li class="menu-item menu-item-lang">
+
+    <a href="/en/../" rel="section"><i class="fa fa-globe fa-fw"></i>->简体中文</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Let the King of Hallownest relieves your burden..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content page posts-expand">
+            
+
+    
+    
+    
+    <div class="post-block" lang="en">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">Steam Library
+</h1>
+
+<div class="post-meta">
+  
+
+</div>
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+          <blockquote>
+    <p>Well, I must urge my King to play...</p>
+</blockquote>
+<a href="https://steamcommunity.com/id/mebilychen/" target="_blank"><img src=""></a>
+<style>
+    #steam-item1 a,
+#steam-item1 a:hover {
+  text-decoration: none;
+}
+
+.steam-game-tabs {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.steam-game-tab {
+  padding: 5px;
+}
+
+.steam-game-active {
+  background: #657b83;
+  color: #fff;
+}
+
+.steam-game-item {
+  padding-bottom: 10px;
+  position: relative;
+  clear: both;
+  min-height: 100px;
+  padding: 10px 0;
+  border-bottom: 1px #ddd solid;
+}
+
+@media screen and (max-width: 600px) {
+  .steam-game-item {
+    width: 100%;
+  }
+}
+
+.steam-game-picture {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 188px;
+  height: 99px;
+}
+
+.steam-game-info {
+  height: 80px;
+  padding-left: 204px;
+}
+
+.steam-game-meta {
+  font-size: 12px;
+  padding-right: 10px;
+}
+
+.steam-game-pagination {
+  margin-top: 15px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.steam-game-button {
+  padding: 5px;
+  display: inline-block;
+}
+
+.steam-game-button:hover {
+  background: #ffffff;
+  color: #fff;
+}
+
+.steam-game-hide {
+  display: none;
+}
+
+.steam-game-show {
+  display: block;
+}
+
+.steam-game-title {
+  font-size: 18px;
+}
+
+.steam-game-title a {
+  line-height: 1;
+  padding: 5px;
+}
+
+.steam-game-title a:hover {
+  padding: 5px;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border: 0px solid rgba(123, 123, 123, .5);
+  -webkit-transition: all .1s;
+  -moz-transition: all .1s;
+  -o-transition: all .1s;
+  transition: all .1s;
+}
+
+.steam-game-link {
+  min-height: 50px;
+}
+
+@media (max-width:400px) {
+  .steam-game-picture {
+    padding-left: 5px;
+  }
+
+  .steam-game-info {
+    margin: 10px 0;
+    padding: 85px 0 0 5px;
+  }
+}
+
+.steam-game-picture img {
+  border: 2px solid #7b7b7b;
+  border-radius: 20px 7px;
+}
+
+.steam-game-button {
+  color: #7b7b7b !important;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  position: relative;
+}
+
+.steam-game-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border: 0px solid rgba(123, 123, 123, .5);
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.steam-game-button:hover::before {
+  opacity: 0;
+  -webkit-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+}
+
+.steam-game-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, .25);
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  -webkit-transform: scale(.5, .5);
+  transform: scale(.5, .5);
+}
+
+.steam-game-button:hover::after {
+  opacity: 1;
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+</style>
+<div>
+    <div id="steam-item1">
+        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/367520/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/367520/">Hollow Knight</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                47 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/367520">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/367520">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Hollow Knight">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/367520">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=367520">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/367520">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/568220/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/false/">Lobotomy Corporation</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                39 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/false">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/false">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Lobotomy Corporation">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/false">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=false">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/false">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/282140/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/282140/">SOMA</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                32 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/282140">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/282140">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=SOMA">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/282140">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=282140">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/282140">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/427290/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/427290/">Vampyr</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                29 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/427290">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/427290">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Vampyr">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/427290">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=427290">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/427290">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/1150690/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/1150690/">OMORI</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                29 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/1150690">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/1150690">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=OMORI">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/1150690">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=1150690">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/1150690">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/1269950/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/1269950/">Buddy Simulator 1984</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                22 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/1269950">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/1269950">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Buddy Simulator 1984">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/1269950">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=1269950">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/1269950">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/571880/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/571880/">Angels with Scaly Wings</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                21 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/571880">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/571880">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Angels with Scaly Wings">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/571880">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=571880">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/571880">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/814380/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/814380/">Sekiro™: Shadows Die Twice</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                17.0 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/814380">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/814380">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Sekiro™: Shadows Die Twice">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/814380">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=814380">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/814380">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/960990/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/960990/">Beyond: Two Souls</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                14.8 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/960990">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/960990">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Beyond: Two Souls">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/960990">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=960990">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/960990">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/942970/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/942970/">Unheard</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                14.6 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/942970">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/942970">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Unheard">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/942970">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=942970">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/942970">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/374320/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/374320/">DARK SOULS™ III</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                14.1 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/374320">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/374320">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=DARK SOULS™ III">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/374320">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=374320">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/374320">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/599080/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/599080/">The Blackout Club</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                13.9 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/599080">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/599080">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=The Blackout Club">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/599080">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=599080">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/599080">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/1115690/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/1115690/">Yes, Your Grace</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                13.2 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/1115690">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/1115690">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Yes, Your Grace">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/1115690">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=1115690">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/1115690">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/939850/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/939850/">The Dark Pictures Anthology: Man of Medan</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                12.7 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/939850">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/939850">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=The Dark Pictures Anthology: Man of Medan">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/939850">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=939850">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/939850">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/399810/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/399810/">Call of Cthulhu</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                12.0 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/399810">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/399810">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Call of Cthulhu">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/399810">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=399810">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/399810">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/431960/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/431960/">Wallpaper Engine：壁纸引擎</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                11.7 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/431960">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/431960">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Wallpaper Engine：壁纸引擎">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/431960">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=431960">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/431960">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/424840/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/424840/">Little Nightmares</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                9.2 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/424840">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/424840">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Little Nightmares">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/424840">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=424840">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/424840">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/377330/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/377330/">Close Your Eyes</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                8.7 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/377330">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/377330">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Close Your Eyes">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/377330">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=377330">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/377330">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/600080/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/600080/">直到最后</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                7.9 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/600080">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/600080">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=直到最后">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/600080">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=600080">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/600080">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/477160/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/477160/">人类一败涂地 / Human Fall Flat</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                7.4 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/477160">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/477160">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=人类一败涂地 / Human Fall Flat">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/477160">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=477160">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/477160">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/563840/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/563840/">Lost Ember</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                7.2 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/563840">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/563840">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Lost Ember">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/563840">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=563840">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/563840">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/420530/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/420530/">OneShot</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                7.1 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/420530">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/420530">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=OneShot">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/420530">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=420530">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/420530">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/264710/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/264710/">Subnautica</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                7.1 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/264710">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/264710">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Subnautica">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/264710">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=264710">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/264710">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/760890/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/760890/">Hello Charlotte: Childhood&#39;s End</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                6.3 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/760890">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/760890">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Hello Charlotte: Childhood&#39;s End">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/760890">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=760890">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/760890">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/428860/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/428860/">Red Haze</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                6.2 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/428860">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/428860">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Red Haze">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/428860">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=428860">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/428860">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/510420/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/510420/">The Hex</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                6.1 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/510420">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/510420">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=The Hex">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/510420">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=510420">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/510420">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/1240210/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/1240210/">There Is No Game: Wrong Dimension</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                6.1 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/1240210">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/1240210">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=There Is No Game: Wrong Dimension">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/1240210">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=1240210">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/1240210">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/706710/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/706710/">Close Your Eyes -Anniversary Remake-</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                5.6 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/706710">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/706710">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Close Your Eyes -Anniversary Remake-">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/706710">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=706710">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/706710">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/1021950/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/1021950/">When the Darkness comes</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                5.0 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/1021950">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/1021950">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=When the Darkness comes">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/1021950">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=1021950">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/1021950">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/654880/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/654880/">Dream Daddy: A Dad Dating Simulator</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                5.0 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/654880">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/654880">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Dream Daddy: A Dad Dating Simulator">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/654880">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=654880">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/654880">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/557630/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/false/">Hello Charlotte</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                4.9 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/false">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/false">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Hello Charlotte">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/false">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=false">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/false">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/893850/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/893850/">漫长等待</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                4.7 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/893850">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/893850">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=漫长等待">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/893850">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=893850">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/893850">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/719890/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/false/">Beasts of Bermuda</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                4.6 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/false">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/false">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Beasts of Bermuda">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/false">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=false">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/false">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/558420/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/558420/">Stories Untold</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                4.4 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/558420">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/558420">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Stories Untold">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/558420">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=558420">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/558420">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/455820/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/455820/">Omensight</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                3.7 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/455820">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/455820">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Omensight">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/455820">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=455820">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/455820">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/774181/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/false/">Rhythm Doctor 节奏医生</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                3.2 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/false">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/false">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Rhythm Doctor 节奏医生">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/false">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=false">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/false">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/683320/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/683320/">GRIS</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                3.1 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/683320">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/683320">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=GRIS">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/683320">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=683320">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/683320">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/1122720/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/1122720/">Sayonara Wild Hearts</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                2.6 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/1122720">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/1122720">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Sayonara Wild Hearts">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/1122720">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=1122720">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/1122720">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/1251690/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/false/">My Hole is a Mouth of Dirt</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                2.2 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/false">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/false">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=My Hole is a Mouth of Dirt">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/false">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=false">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/false">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/796910/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/false/">Please Love My Computer Game</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                2.2 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/false">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/false">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Please Love My Computer Game">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/false">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=false">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/false">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/597760/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/597760/">雅皮士精神</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                2.1 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/597760">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/597760">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=雅皮士精神">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/597760">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=597760">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/597760">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/1221540/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/1221540/">大家一起察言观色。</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                2.0 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/1221540">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/1221540">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=大家一起察言观色。">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/1221540">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=1221540">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/1221540">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/712260/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/false/">Feast Your Eyes: Little Marshmallow</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                2.0 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/false">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/false">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Feast Your Eyes: Little Marshmallow">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/false">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=false">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/false">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/303210/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/false/">The Beginner&#39;s Guide</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                2.0 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/false">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/false">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=The Beginner&#39;s Guide">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/false">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=false">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/false">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/297130/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/297130/">Titan Souls</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                2.0 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/297130">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/297130">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Titan Souls">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/297130">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=297130">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/297130">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/670160/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/670160/">D&#39;LIRIUM</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                1.9 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/670160">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/670160">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=D&#39;LIRIUM">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/670160">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=670160">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/670160">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/1082430/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/1082430/">历历在目</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                1.9 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/1082430">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/1082430">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=历历在目">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/1082430">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=1082430">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/1082430">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/913740/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/false/">WORLD OF HORROR</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                1.8 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/false">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/false">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=WORLD OF HORROR">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/false">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=false">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/false">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/736260/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/736260/">Baba Is You</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                1.4 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/736260">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/736260">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Baba Is You">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/736260">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=736260">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/736260">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/870780/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/870780/">控制 - 终极合辑 / Control Ultimate Edition</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                1.4 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/870780">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/870780">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=控制 - 终极合辑 / Control Ultimate Edition">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/870780">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=870780">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/870780">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/570/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/false/">Dota 2</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                1.1 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/false">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/false">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Dota 2">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/false">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=false">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/false">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/671980/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/false/">Close Me</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                0.6 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/false">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/false">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Close Me">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/false">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=false">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/false">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/339830/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/339830/">The Church in the Darkness</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                0.5 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/339830">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/339830">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=The Church in the Darkness">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/339830">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=339830">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/339830">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/977950/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/977950/">冰与火之舞 A Dance of Fire and Ice</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                0.3 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/977950">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/977950">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=冰与火之舞 A Dance of Fire and Ice">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/977950">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=977950">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/977950">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/557340/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/557340/">My Friend Pedro</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                0.3 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/557340">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/557340">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=My Friend Pedro">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/557340">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=557340">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/557340">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/247080/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/247080/">Crypt of the NecroDancer</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                0.2 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/247080">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/247080">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Crypt of the NecroDancer">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/247080">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=247080">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/247080">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/352160/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/false/">Curse of Mermos</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                0.1 hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/false">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/false">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Curse of Mermos">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/false">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=false">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/false">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/321480/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/false/">Sigils of Elohim</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                undefined hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/false">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/false">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Sigils of Elohim">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/false">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=false">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/false">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/239200/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/239200/">Amnesia: A Machine for Pigs</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                undefined hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/239200">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/239200">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Amnesia: A Machine for Pigs">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/239200">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=239200">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/239200">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/57300/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/57300/">Amnesia: The Dark Descent</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                undefined hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/57300">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/57300">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Amnesia: The Dark Descent">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/57300">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=57300">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/57300">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/554000/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/false/">Crypt of the NecroDancer: AMPLIFIED</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                undefined hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/false">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/false">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Crypt of the NecroDancer: AMPLIFIED">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/false">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=false">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/false">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/698890/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/false/">Crypt of the NecroDancer: AMPLIFIED OST - Chipzel</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                undefined hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/false">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/false">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Crypt of the NecroDancer: AMPLIFIED OST - Chipzel">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/false">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=false">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/false">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/366080/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/false/">Crypt of the NecroDancer Extended Soundtrack</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                undefined hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/false">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/false">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Crypt of the NecroDancer Extended Soundtrack">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/false">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=false">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/false">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/467300/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/false/">Crypt of the NecroDancer Extended Soundtrack 2</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                undefined hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/false">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/false">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Crypt of the NecroDancer Extended Soundtrack 2">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/false">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=false">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/false">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/379400/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/false/">Crypt of the NecroDancer Extras</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                undefined hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/false">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/false">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Crypt of the NecroDancer Extras">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/false">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=false">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/false">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/314680/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/false/">Crypt of the Necrodancer Soundtrack</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                undefined hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/false">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/false">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Crypt of the Necrodancer Soundtrack">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/false">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=false">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/false">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/22120/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/false/">Penumbra: Black Plague</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                undefined hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/false">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/false">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Penumbra: Black Plague">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/false">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=false">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/false">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/22180/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/false/">Penumbra: Overture</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                undefined hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/false">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/false">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Penumbra: Overture">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/false">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=false">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/false">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/22140/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/false/">Penumbra: Requiem</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                undefined hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/false">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/false">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Penumbra: Requiem">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/false">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=false">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/false">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/350640/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/350640/">Sherlock Holmes: The Devil&#39;s Daughter</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                undefined hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/350640">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/350640">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Sherlock Holmes: The Devil&#39;s Daughter">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/350640">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=350640">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/350640">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/1252080/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/false/">Yes, Your Grace Soundtrack</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                undefined hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/false">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/false">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=Yes, Your Grace Soundtrack">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/false">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=false">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/false">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-item">
+    <div class="steam-game-picture"><img
+            src="https://steamstore-a.akamaihd.net/public/shared/images/header/globalheader_logo.png"
+            data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/1147550/capsule_184x69.jpg" referrerPolicy="no-referrer" />
+    </div>
+    <div class="steam-game-info">
+        <div class="steam-game-title">
+            <a target="_blank" href="https://store.steampowered.com/app/1147550/">不予播出 ( Not For Broadcast )</a>
+        </div>
+        <div class="steam-game-meta">
+            <span class="steam-game-info-time">
+                undefined hrs on record
+            </span>
+        </div>
+    </div>
+    <!-- <div class="steam-game-link">
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/app/1147550">Store Page</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/forum/1147550">Forums</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamcommunity.com/search/groups/?text=不予播出 ( Not For Broadcast )">Find Community Groups</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/appofficialsite/1147550">Official Website</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://store.steampowered.com/news/?appids=1147550">Related news</a>
+        <a class="steam-game-button" target="_blank"
+            href="https://steamdb.info/app/1147550">SteamDB</a>
+    </div> -->
+</div>        
+        <div class="steam-game-pagination">
+    <a class="steam-game-button steam-game-firstpage" href="javascript:;" target="_self" onclick="return false"> Top</a>
+    <a class="steam-game-button steam-game-previouspage" href="javascript:;" target="_self" onclick="return false">Prev</a>
+    <span class="steam-game-pagenum">2 / 3</span>
+    <a class="steam-game-button steam-game-nextpage" href="javascript:;" target="_self" onclick="return false">Next</a>
+    <a class="steam-game-button steam-game-lastpage" href="javascript:;" target="_self" onclick="return false">End</a>
+</div>    </div>
+</div>
+<script>
+    Element.prototype.siblings = function () {
+    let siblingElement = [];
+    let sibs = this.parentNode.children;
+    for (let i = 0; i < sibs.length; i++) {
+        if (sibs[i] !== this) {
+            siblingElement.push(sibs[i]);
+        }
+    }
+    return siblingElement;
+};
+function tabClick() {
+    //修改标签样式
+    this.classList.add('steam-game-active');
+    let sibs = this.siblings();
+    for (let j = 0; j < sibs.length; j++) {
+        sibs[j].classList.remove('steam-game-active');
+    }
+    //显示对应板块
+    let itemId = this.id.replace('tab', 'item');
+    let target = document.getElementById(itemId);
+    target.classList.remove('steam-game-hide');
+    target.classList.add('steam-game-show');
+    sibs = document.getElementById(itemId).siblings();
+    for (let k = 0; k < sibs.length; k++) {
+        sibs[k].classList.remove('steam-game-show');
+        sibs[k].classList.add('steam-game-hide');
+    }
+}
+let tabs = document.getElementsByClassName("steam-game-tab");
+for (let i = 0; i < tabs.length; i++) {
+    tabs[i].onclick = tabClick;
+    tabs[i].onclick.apply(tabs[i]);
+}    var firstpages = document.getElementsByClassName("steam-game-firstpage");
+var previouspages = document.getElementsByClassName("steam-game-previouspage");
+var nextpages = document.getElementsByClassName("steam-game-nextpage");
+var lastpages = document.getElementsByClassName("steam-game-lastpage");
+var pagenums = document.getElementsByClassName("steam-game-pagenum");
+
+function makePageNum(num, arr) {
+    return (num + 1) + ' / ' + (Math.ceil(arr.length / 10 === 0 ? 1 : Math.ceil(arr.length / 10)));
+}
+
+function firstBtn() {
+    var sibs = this.parentNode.siblings();
+    displayPage(sibs, 0);
+    this.parentNode.getElementsByClassName('steam-game-pagenum')[0].innerText = makePageNum(0, sibs);
+}
+
+function previousBtn() {
+    var sibs = this.parentNode.siblings();
+    var currNum = this.parentNode.getElementsByClassName('steam-game-pagenum')[0].innerText;
+    currNum = currNum.substr(0, currNum.indexOf('/') - 1);
+    currNum = parseInt(currNum, 10) - 1;
+    if (currNum > 0) {
+        currNum--;
+    }
+    displayPage(sibs, currNum);
+    this.parentNode.getElementsByClassName('steam-game-pagenum')[0].innerText = makePageNum(currNum, sibs);
+}
+
+function nextBtn() {
+    var sibs = this.parentNode.siblings();
+    var currNum = this.parentNode.getElementsByClassName('steam-game-pagenum')[0].innerText;
+    currNum = currNum.substr(0, currNum.indexOf('/') - 1);
+    currNum = parseInt(currNum, 10) - 1;
+    if (currNum < Math.ceil(sibs.length / 10) - 1) {
+        currNum++;
+    }
+    displayPage(sibs, currNum);
+    this.parentNode.getElementsByClassName('steam-game-pagenum')[0].innerText = makePageNum(currNum, sibs);
+}
+
+function lastBtn() {
+    var sibs = this.parentNode.siblings();
+    displayPage(sibs, Math.ceil(sibs.length / 10) - 1);
+    this.parentNode.getElementsByClassName('steam-game-pagenum')[0].innerText = makePageNum(Math.ceil(sibs.length / 10) - 1 === -1 ? 0 : Math.ceil(sibs.length / 10) - 1, sibs);
+}
+
+function displayPage(arr, num) {
+    for (var i = 0; i < arr.length; i++) {
+        if (Math.floor(i / 10) === num) {
+            arr[i].classList.remove('steam-game-hide');
+            var img = arr[i].getElementsByTagName('img')[0];
+            img.src = img.getAttribute('data-src');
+        } else {
+            arr[i].classList.add('steam-game-hide');
+        }
+    }
+}
+
+for (var i = 0; i < firstpages.length; i++) {
+
+    //add listener
+    firstpages[i].onclick = firstBtn;
+    previouspages[i].onclick = previousBtn;
+    nextpages[i].onclick = nextBtn;
+    lastpages[i].onclick = lastBtn;
+
+    //set page num
+    var size = pagenums[i].parentNode.siblings().length;
+    pagenums[i].innerText = '1 / ' + (Math.ceil(size / 10) === 0 ? 1 : Math.ceil(size / 10));
+    firstpages[i].click();
+}</script>
+        
+      </div>
+      
+      
+      
+    </div>
+    
+
+    
+    
+    
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/en/images/avatar3.jpg">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">Want to become a little mirror, for my King.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/en/archives/">
+        
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/en/categories/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/en/tags/">
+          
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjEwMTM3MTIxMjdAcXEuY29t" title="E-Mail → mailto:1013712127@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9tZWJpbHkxMzE0" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Money ≠ Free
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9tZWJpbHljaGVuLmxvZnRlci5jb20v" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;">LOFTER</span>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      Recent Research
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/en/p/ce0f3.html" title="p&#x2F;ce0f3.html">【Collection】Written With Dreamily.AI</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/en/p/dde8f3.html" title="p&#x2F;dde8f3.html">A Certain Interview Feat. Radiance the Eternal Light</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/en/p/dde8f.html" title="p&#x2F;dde8f.html">A Certain MBTI MEME</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/en/p/ab33.html" title="p&#x2F;ab33.html">A Self Introduction</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/en/p/7b07e.html" title="p&#x2F;7b07e.html">【NOTICE】</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/en/p/dde8e.html" title="p&#x2F;dde8e.html">Everyday Quest(2.23)</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/en/p/ef31e.html" title="p&#x2F;ef31e.html">Just Me Feeling Funny</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        Recent Updates
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/en/p/ce0f3.html" title="p&#x2F;ce0f3.html">【Collection】Written With Dreamily.AI</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/en/p/dde8f.html" title="p&#x2F;dde8f.html">A Certain MBTI MEME</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/en/p/dde8f3.html" title="p&#x2F;dde8f3.html">A Certain Interview Feat. Radiance the Eternal Light</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MebilyChen</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">Symbols count total: </span>
+    <span title="Symbols count total">25k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">Reading time total &asymp;</span>
+    <span title="Reading time total">23 mins.</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">Loading days...</span>
+<span id="times">Loading hours...</span> . All Hail The King.
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "The Site has been prayed for "+dnum+" days ";
+        document.getElementById("times").innerHTML = hnum + " hours " + mnum + " mins " + snum + " secs";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/en/lib/anime.min.js"></script>
+  <script src="/en/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/en/lib/velocity/velocity.min.js"></script>
+  <script src="/en/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/en/js/utils.js"></script>
+
+<script src="/en/js/motion.js"></script>
+
+
+<script src="/en/js/schemes/muse.js"></script>
+
+
+<script src="/en/js/next-boot.js"></script>
+
+<script src="/en/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    //'.site-meta',
+    //'.site-nav',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/en/lib/three/three.min.js"></script>
+    <script defer src="/en/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/en/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/en/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>
