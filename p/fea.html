@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="RT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="16年+的老娘黑历史">
+<meta property="og:url" content="https://mebilychen.github.io/p/fea.html">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:description" content="RT">
+<meta property="og:locale">
+<meta property="article:published_time" content="2016-03-06T06:38:00.000Z">
+<meta property="article:modified_time" content="2021-03-13T09:43:59.869Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="灭绝：弃坑">
+<meta property="article:tag" content="硫卡&#x2F;克劳斯">
+<meta property="article:tag" content="奈斯&#x2F;波奇">
+<meta property="article:tag" content="MOTHER&#x2F;EarthBound">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://mebilychen.github.io/p/fea.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : '中文'
+  };
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    
+      if (NexT.utils.hasMobileUA()) return;
+    
+    let time, hidden, visible, title = document.title;
+    let favicon = document.querySelector('link[rel="icon"]');
+    
+      hidden = ["盯————","*探*","?","......","*观察*"];
+      visible = ["*偏转视线*","*缩*","*强装镇定*","！","*低头*"];
+    
+    let random = t => t[Math.floor(Math.random() * t.length)];
+    const change = () => {
+      if (document.hidden) {
+        favicon.setAttribute('href', '/images/favicon-32x32-king-black.png');
+        
+          document.title = random(hidden);
+        
+        clearTimeout(time);
+      } else {
+        favicon.setAttribute('href', '/images/favicon-32x32-brand-black.png');
+        
+          document.title = random(visible);
+        
+        time = setTimeout(() => {
+          document.title = '碳素的小作坊';
+        }, 1000);
+      }
+    }
+    document.addEventListener('visibilitychange', change, false);
+  });
+</script>
+
+  <title>16年+的老娘黑历史 | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;调谐中...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">161</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">54</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">155</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-image fa-fw"></i>画廊</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/random.html" rel="section"><i class="fa fa-question fa-fw"></i>抽</a>
+
+  </li>
+        <li class="menu-item menu-item-lang">
+
+    <a href="/en/" rel="section"><i class="fa fa-globe fa-fw"></i>->English</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-17081-597255-1305127431.cos-website.ap-hongkong.myqcloud.com' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/fea.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          16年+的老娘黑历史
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2016-03-06 14:38:00" itemprop="dateCreated datePublished" datetime="2016-03-06T14:38:00+08:00">2016-03-06</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2021-03-13 17:43:59" itemprop="dateModified" datetime="2021-03-13T17:43:59+08:00">2021-03-13 17:43:59</time>
+                </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%85%B6%E4%BB%96%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">其他文</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%85%B6%E4%BB%96%E6%96%87/%E5%9C%B0%E7%90%83%E5%86%92%E9%99%A9%E5%90%8C%E4%BA%BA/" itemprop="url" rel="index"><span itemprop="name">地球冒险同人</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>17k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>15 分钟</span>
+            </span>
+            <div class="post-description"><center> RT</div>
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%81%AD%E7%BB%9D%EF%BC%9A%E5%BC%83%E5%9D%91/" rel="tag"><i class="fa fa-tag"></i> 灭绝：弃坑</a>
+              <a href="/tags/%E7%A1%AB%E5%8D%A1-%E5%85%8B%E5%8A%B3%E6%96%AF/" rel="tag"><i class="fa fa-tag"></i> 硫卡/克劳斯</a>
+              <a href="/tags/%E5%A5%88%E6%96%AF-%E6%B3%A2%E5%A5%87/" rel="tag"><i class="fa fa-tag"></i> 奈斯/波奇</a>
+              <a href="/tags/MOTHER-EarthBound/" rel="tag"><i class="fa fa-tag"></i> MOTHER/EarthBound</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><div class="note danger"><p style="text-align:center ; color:#D9534F"> ♕本文为设定♕ </p></div>
+
+<div class="note danger"><p style="text-align:center; color:#D9534F"> ♕本文已死♕ </p></div>
+
+<p>•    翻到了 16年及之后的老娘2+3黑历史<br>    •    有点小惊喜 好怀念啊</p>
+<div class="note info"> <p style="color:#438BCA">格式.........懒得整理了 </p> </div>
+
+<p>（永远不会去写的）灵感 【page1】</p>
+
+<ul>
+<li><p>魔神<br>
+Ryuka是魔神(まじん)（只是眼睛是天使基因并且无法使用魔力）【哈哈哈哈赛尔号你太棒哈哈哈哈哈我服了你哈哈哈😂😂😂（不）】<br>
+Claus是（伪）人类，其实也是魔神（天才）。<br>
+Ryuka和Claus是双子（废话）<br>
+他们是魔王（什么鬼）的二儿子（弗林特）的最小的儿子（贵圈真乱）<br>
+魔神最大的特点是血瞳。<br>
+然而硫卡是蓝瞳。<br>
+一家四口（别问我剩下2个同父异母的孩子去哪里了）隐瞒真相其乐融融过了9年<br>
+但是由于自家老二偶然看见并告发不得不先分开<br>
+查过之后发现二儿子与天使（希娜瓦）有禁忌的爱情，并且有了孩子（没错就是R和C）<br>
+于是剩下五个儿子准备处死孩子和天使<br>
+但是此时二儿子竭力反抗<br>
+同时魔王也要换继承人，已经奄奄一息<br>
+再同时天使一方抓住机会进攻魔界（从希娜瓦那里听取了情报之类balabala）<br>
+然后恶魔也来凑热闹（没错魔神其实就是死神……呃）<br>
+于是天界第二次大战开始，持续一年<br>
+战争中魔王死了（被大儿子（有一个儿子）杀死）四儿子（有1个女儿）和五儿子（有2个男孩1个女儿）死了（战死）三儿子一共3个儿子死了两个（战死）当然弗林特也死了……希娜瓦濒死时将Claus（没有力量两个都送走）送至人间，并为了他的安全（死了他的心）将Ryuka的存在在他记忆中抹去，并加入双亲是因为火灾而死的记忆<br>
+天使和恶魔那边也伤亡惨重带过<br>
+来总结下：（年龄只是左右不要计较～）<br>
+大儿子（31），大儿子的儿子（21）<br>
+弗林特的两个儿子（17、11），Ryuka（10），Claus（10）<br>
+三儿子（26），三儿子的儿子（16）<br>
+四儿子的女儿（15）<br>
+五儿子的两个儿子（12、10）和一个女儿（14）<br>
+以上12位存活（什么鬼）<br>
+大儿子继承家业，三儿子作为副手<br>
+接下来开始清理残党<br>
+首先五儿子的两个儿子在夜黑风高之夜被杀死，归罪在女儿身上<br>
+所以女儿便被关进小黑屋（妈呀）<br>
+四儿子的女儿一看苗头不对便使劲和三儿子的儿子要好，所以逃过一劫不过还是（妈呀）<br>
+弗林特的17、11儿子（什么鬼）对Ryuka十分厌恶，总是打他，让他干这干那，大儿子的儿子看见觉得很有趣（泥垢）于是请求父王不要杀他们，并把他们三人关在一间屋子里，同时和1711说如果你们变着法的虐Ryuka，我就让你们当个一官半职，好吃好喝<br>
+11爽快接受，17很狐疑但还是接受了。<br>
+于是2年之内每天都能看见Ryuka被虐哭<br>
+大儿子的儿子很开心，觉得看着兄弟之间手足相残真是好爽der<br>
+但是转念一想，似乎少了一个人，因为魔界恢复期间无法开启到达人间的通路便只好作罢<br>
+他一直都扮演着一个好哥哥的形象，在Ryuka被欺负之后安慰他（当然是趁着1711不在的时候）于是Ryuka十分依赖大儿子的儿子<br>
+但是Ryuka不断的提到Claus&#39;&#39;大哥哥你真的很像我哥哥呢，和他一样温柔。&#39;&#39;所以大儿子的儿子很不爽，什么我好不容易忘掉这根刺你却一而再再而三的提到他！？<br>
+于是他就把Ryuka的关于Claus的记忆给替换成了和他在一起的记忆（不要问我怎么做到的）<br>
+1711成为了1913<br>
+19战斗力特别强（与Claus势均力敌）成为了一界战神<br>
+13则是非常聪明，爱耍小性子<br>
+Ryuka12岁了，到人间的通路也能打开了，于是大儿子的儿子又给父王出主意，让Ryuka到人间去收取Claus的灵魂，虽然Ryuka什么能力也使不出来（这点Ryuka自身不知道）（并且他们也不知其实ryuka治愈？能力未激活）<br>
+以下省略一千字，照搬小鱼儿与花无缺的剧情（不）<br>
+于是某天Claus作为一个普通人类正在饭店打工的时候在一个垃圾桶里捡到了ryuka<br>
+和ryuka相处一段时间后不知为何总是会做梦梦见以前的记忆……<br>
+因此claus逐渐恢复了记忆但他并不能记得Ryuka的身份</p></li>
+<li><p>AJIN<br>
+沿袭PSI设定<br>
+Ryuka会自我治愈，所以被误以为亚人<br>
+但其实有本质区别<br>
+如果Ryuka被杀死便不会复活<br>
+Claus（PSI为闪电）为保护Ryuka，杀了村中的所有人<br>
+虽然是无意识的<br>
+Porky是负责搜捕Ryuka的搜捕队的一名临时警员（年龄13，不要问我为什么这么小也可以做警官）因为年龄小容易接近Ryuka<br>
+然后Porky和Ness是邻居加好友<br>
+Ryuka有一次和Claus走失了，偶然遇见Ness<br>
+然后Ness帮助Ryuka找到了Claus（过程加好感）<br>
+Ness和Porky聊天时偶然提到Ryuka<br>
+Porky就打探出了Ryuka所在<br>
+啊不想写了……<br>
+以上，展开剧情</p></li>
+<li><p>NxP（Ness没有妹妹）--》PxC--》PxR--》NxP<br>
+【喵本来只想写一个概要，结果越写越详细…ˊ_&gt;ˋ】<br>
+⚠️不会描写打架</p></li>
+</ul>
+
+<p>Porky一直被称为人渣<br>
+连名字都是给本应给狗起的名字<br>
+无论在家还是在学校<br>
+他都会被打被骂<br>
+每次在家被无原因的打骂过之后，Picky都会来安慰他<br>
+&#39;&#39;你是在可怜我吗&#39;&#39;<br>
+&#39;&#39;我……&#39;&#39;<br>
+到后来Picky也对他敬而远之<br>
+在学校，不良们经常找他的麻烦，经常结伙打他<br>
+开始时Porky只当正常现象而无视了<br>
+不过老师和同学看见了他浑身脏兮兮便觉得他是坏孩子<br>
+&#39;&#39;你怎么总是做这种事？&#39;&#39;<br>
+&#39;&#39;好可怕……别跟那种人说话啦……&#39;&#39;<br>
+既然大家都觉得自己是坏孩子，那么就成那样的人也没有问题吧<br>
+他开始打架斗殴，抢走低年生的钱……<br>
+老师找家长谈话<br>
+回去又免不了一顿打<br>
+Porky一声不吭，把自己关在了房间里<br>
+他想到了自杀<br>
+不过又为自己的懦弱感到羞耻<br>
+&#39;&#39;什么呀，明明坏事还没有做完呢&#39;&#39;<br>
+他变本加厉地做坏事，全然不顾老师和家长的打骂<br>
+Picky实在看不下去了，劝哥哥不要这样下去<br>
+自己的弟弟却是个一等一的优等生，家长也不会经常打骂他。<br>
+Porky漠然的看着弟弟，<br>
+&#39;&#39;为什么变成这样的只有我？&#39;&#39;<br>
+他第一次动手打了Picky<br>
+&#39;&#39;你什么都不懂！就不要在一边说教！&#39;&#39;<br>
+&#39;&#39;从出生时就被爱着的你，没有权利来教育我！&#39;&#39;<br>
+这次Porky被父母打晕了<br>
+Picky流着泪让父母不要打了，再打就要出人命了<br>
+Porky被送到了医院<br>
+手臂和小腿中度骨折<br>
+Picky瞒着父母去看望Porky<br>
+每次Porky都对他恶语相向<br>
+这天，Picky没有来<br>
+取而代之，一个带着棒球帽的黑发少年拿着一篮水果走进病房<br>
+坐在了床边的椅子上<br>
+Porky没有说话，只是警戒地盯着他<br>
+还是对方打破了寂静<br>
+&#39;&#39;嗨，我是Ness。&#39;&#39;<br>
+&#39;&#39;……&#39;&#39;<br>
+见他不答话，Ness有些尴尬，虽然在此之前已从Picky处得知了他的姓名<br>
+&#39;&#39;呃……你喜欢吃什么水果？我可以…&#39;&#39;<br>
+&#39;&#39;滚出去。&#39;&#39;<br>
+&#39;&#39;…哈？&#39;&#39;<br>
+&#39;&#39;我说了滚出去。&#39;&#39;<br>
+不出意外的，看见对方紫色眼瞳里的惊讶，尴尬，还有恼怒<br>
+Porky突然觉得有些愉悦<br>
+我肯定是坏掉了吧，他这样想着<br>
+&#39;&#39;你!……你这是什么态度啊？！&#39;&#39;Ness猛的站起身<br>
+虽然来时听说这个人的脾气不好，但这种发展可真没预料到<br>
+&#39;&#39;我不想再说第三次。&#39;&#39;<br>
+Porky看出来了，这个人很想给自己来一拳<br>
+&#39;&#39;要不是你在病床上……&#39;&#39;Ness恨恨地说<br>
+说完便拉开门，走时还没忘&#39;&#39;砰&#39;&#39;地一声摔上门<br>
+&#39;&#39;……无聊的家伙……&#39;&#39;Porky喃喃地说道<br>
+一小时后，Picky慌张地冲了进来<br>
+&#39;&#39;哥…哥哥！你怎么这么对待别人啊？！”<br>
+&#39;&#39;我怎么了？&#39;&#39;<br>
+&#39;&#39;………&#39;&#39;<br>
+看见哥哥毫无感情的灰黑色眼睛，Picky竟一时语塞。<br>
+&#39;&#39;没事就快给我滚。&#39;&#39;<br>
+&#39;&#39;……哥哥，你不要太过分了！&#39;&#39;Picky似乎是下定决心，低下头闭紧眼喊出这句话<br>
+Porky顿时就想打过去，无奈胳膊使不上力<br>
+还没有骂出话，Picky接着喊<br>
+&#39;&#39;Ness哥哥他可是才搬过来的邻居啊！如果哥哥你能和他交上朋友的话，就不会那么孤独了啊！&#39;&#39;<br>
+&#39;&#39;……&#39;&#39;<br>
+&#39;&#39;可是…可是哥哥却……&#39;&#39;说着，Picky开始哽咽<br>
+&#39;&#39;你这么做，是想施舍给我我本来就不需要的感情吗？&#39;&#39;<br>
+&#39;&#39;我…这才不是…&quot;<br>
+猛地抬起头，看见了一生都无法忘记的画面<br>
+Porky的嘴角上扬，眼睛半眯着，似乎发生了什么好笑的事<br>
+恶魔<br>
+这是Picky脑海中闪过的第一个词<br>
+&#39;&#39;你以后不要再在我面前出现了，Picky。好好享受别人给你的爱吧。&#39;&#39;<br>
+Picky此时脑袋一片空白，冥冥中一个声音对他说<br>
+&#39;&#39;快逃&#39;&#39;<br>
+于是他照做了<br>
+回过神时已经站在了路口<br>
+&#39;&#39;哎呀，你家孩子可真是厉害啊，瞧瞧这些奖牌……&#39;&#39;<br>
+前面是母亲和Ness的母亲<br>
+正在一边帮忙搬东西一边聊天<br>
+Picky使劲擦了擦眼泪<br>
+&#39;&#39;Picky，回来了啊。&#39;&#39;母亲微笑着说<br>
+&#39;&#39;你哥哥的情况…&#39;&#39;<br>
+&#39;&#39;他很好，谢谢阿姨关心。&#39;&#39;Picky强行扯出一个微笑<br>
+&#39;&#39;那就好…什么时候伤好了让Ness和他一起玩吧。&#39;&#39;<br>
+Ness哥哥没有和阿姨说发生了什么事？<br>
+&#39;&#39;…Ness哥哥他…现在在哪里？&#39;&#39;<br>
+&#39;&#39;叫Ness就好啦，现在应该在收拾自己房间吧。&#39;&#39;<br>
+&#39;&#39;谢谢阿姨。&#39;&#39;<br>
+不能再让哥哥这样下去了，不然一定会出大事的。<br>
+&#39;&#39;哈？让我和那家伙交朋友？！&#39;&#39;<br>
+Ness转过头用不可置信的表情看着Picky<br>
+&#39;&#39;求求你，再这样下去哥哥会…&#39;&#39;<br>
+&#39;&#39;谁管他啊？那种人渣！&#39;&#39;<br>
+&#39;&#39;……&#39;&#39;<br>
+&#39;&#39;你也别理他了，明明是哥哥，却还让弟弟操心，真是简直了。&#39;&#39;<br>
+Ness气呼呼地说着，把一大摞书扔在桌子上<br>
+Porky出院了，回到家里，又被骂了一顿<br>
+&#39;&#39;身子这么差，打几下就骨折了，你是女孩子吗？！&#39;&#39;<br>
+&#39;&#39;你知不知道你花了多少钱？&#39;&#39;<br>
+&#39;&#39;那都是我们的心血啊！你不工作当然是不知道！&#39;&#39;<br>
+Porky埋头吃着饭，这些他早就已经习惯<br>
+这天放学后<br>
+&#39;&#39;哟，几个星期没见，又瘦了啊？还是让我们哥几个照顾照顾你吧？好好吃一顿拳头？&#39;&#39;<br>
+说着，几个高个男生把Porky围住，为首的一把揽住Porky的肩膀，把他带到一个偏僻的小巷里。<br>
+Porky没有反抗，他知道这样只是白费力气<br>
+几下过后，他已经有些受不住了，毕竟伤刚刚好<br>
+痛，但他是不会哭的<br>
+&#39;&#39;我说，你真的感觉不到疼吗？嗯？&#39;&#39;说着又打了几下<br>
+&#39;&#39;……&#39;&#39;<br>
+&#39;&#39;疼的话就叫出来啊？&#39;&#39;<br>
+&#39;&#39;……&#39;&#39;<br>
+&#39;&#39;听说你的伤是被自己父母打的？还真是亲生的啊？&#39;&#39;<br>
+&#39;&#39;…闭嘴&#39;&#39;可惜声音太小，对方没有听到<br>
+&#39;&#39;呵，我也好想当你爹呀，每天都能揍你，那感觉，真是太·爽·了！&#39;&#39;<br>
+每说一个字，他就打他一下<br>
+&#39;&#39;啊啊，真无趣，已经动不了了么？&#39;&#39;<br>
+&#39;&#39;走吧走吧，也挺晚的了&#39;&#39;<br>
+为首的一声吆喝，几个人便往回走。<br>
+Porky颤抖着撑起身子站起来，使出全身力气向那个不良头头打过去<br>
+&#39;&#39;哎呦，疼！&#39;&#39;<br>
+对方捂着头叫喊着<br>
+&#39;&#39;这家伙搞背后偷袭！&#39;&#39;<br>
+&#39;&#39;不愧是个人渣&#39;&#39;<br>
+&#39;&#39;你们别在那里干站着啊，给我往死里打！&#39;&#39;<br>
+瞬间，Porky被围了起来<br>
+&#39;&#39;你们两边都适可而止一点吧。&#39;&#39;<br>
+正要一拳打过去，听见背后有陌生的声音<br>
+&#39;&#39;你谁啊？敢在这里撒野？不想挨揍赶紧滚！&#39;&#39;<br>
+&#39;&#39;才没有保护那个家伙的意思，不过先出手的是你们吧？&#39;&#39;<br>
+&#39;&#39;你可真是吃了豹子胆了！敢质问我们？！&#39;&#39;<br>
+&#39;&#39;而且，我不会再走了，现在不会，以后也不会。&#39;&#39;<br>
+这家伙，难道……<br>
+Porky艰难地看过去<br>
+&#39;&#39;悪いなぁ、这件事，我管定了。&#39;&#39;<br>
+少年把棒球帽向上一抛<br>
+瞬间没了身影<br>
+&#39;&#39;什！？&#39;&#39;<br>
+还没有等他们惊讶完，身边便传来一阵惨叫声<br>
+几乎是一瞬间的事，黑发少年出现在眼前<br>
+&#39;&#39;呜啊！&#39;&#39;<br>
+Porky眨了下眼，再睁眼时，Ness已经接住帽子潇洒地戴在了头上<br>
+不可能的……只用了不到5秒钟……绝对不可能的……只是从巷口跑到到这里，也至少要5秒钟……<br>
+&#39;&#39;现在，你们满意了吧？&#39;&#39;他紫色的眼睛里传达出危险的信号<br>
+&#39;&#39;可恶，快，咱们撤&#39;&#39;<br>
+&#39;&#39;你给我记住！&#39;&#39;<br>
+&#39;&#39;啊，会好好记住的。&#39;&#39;<br>
+他们连忙从小巷另一端逃跑了<br>
+&#39;&#39;……&#39;&#39;Porky用被打的发青的眼睛盯着Ness<br>
+&#39;&#39;不回家吗？&#39;&#39;<br>
+Ness轻描淡写地说，似乎刚刚什么都没发生<br>
+&#39;&#39;没看出来啊，你也是个不良少年。&#39;&#39;<br>
+&#39;&#39;不是哦，这是我第一次打人。&#39;&#39;<br>
+又补了一句，&#39;&#39;耍帅的感觉真好&#39;&#39;<br>
+&#39;&#39;……&#39;&#39;<br>
+&#39;&#39;感谢的话回去路上再说吧。&#39;&#39;<br>
+&#39;&#39;谁要感谢你了？！&#39;&#39;<br>
+一路上，Porky虽然很想问Ness到底是怎么做到的，但是却说不出口。<br>
+Ness的家比Porky的家更靠外一点<br>
+&#39;&#39;那么，不送了。&#39;&#39;<br>
+Ness看了Porky一眼，走回了家。<br>
+关上门的一刹那，Porky听见Ness的母亲说<br>
+&#39;&#39;怎么回来这么晚？&#39;&#39;<br>
+&#39;&#39;啊啊，在学校有点事。&#39;&#39;<br>
+&#39;&#39;砰&#39;&#39;门关上了<br>
+四周一片寂静。</p>
+
+<p>&#39;&#39;啊啊……无聊…好无聊啊……&#39;&#39;我缩在座椅里，盯着眼前的屏幕<br>
+上面显示着的我的New Pork City，还是刚刚打完地基的状态<br>
+这里可真是一个美丽的地方<br>
+有海，有森林，有雪山，有火山，有沙漠…<br>
+就像我原来的世界一样。<br>
+不过，这里没有那个人<br>
+&#39;&#39;……已经回不去了啊……&#39;&#39;<br>
+门被敲响了<br>
+&#39;&#39;进来&#39;&#39;<br>
+&#39;&#39;报告Porky大人，Antonuts博士说有事找您。&#39;&#39;<br>
+又是要向我宣扬他那一套爱护生命的理论了吧。<br>
+&#39;&#39;他怎么不自己过来？&#39;&#39;<br>
+&#39;&#39;呃…博士说有东西要给您看…&#39;&#39;<br>
+&#39;&#39;哦？&#39;&#39;<br>
+那家伙罕见的研究了新东西？<br>
+我驱动了载着我的机器车<br>
+因为时间穿越的副作用，我的身体已经老化，也是因为这样，我如果再进行穿越，就会死在路上<br>
+想想真是有些不甘<br>
+明明还想破坏别的世界呢<br>
+&#39;&#39;怎样，Antonuts博士？你的新发明……&quot;<br>
+我停住了<br>
+因为在我面前，躺着一个少年<br>
+&#39;&#39;…他应该是被猛兽袭击了，头部受到重创，右臂被咬断，左眼失明，好在发现的比较及时，血已经止住了……&#39;&#39;<br>
+&#39;&#39;所以呢？你要养着他？&#39;&#39;<br>
+&#39;&#39;…可是这只是初步的治疗，如果不继续……&#39;&#39;<br>
+&#39;&#39;天下有那么多人正在死亡，还缺他一个吗？&#39;&#39;<br>
+&#39;&#39;不是的…他…&#39;&#39;<br>
+&#39;&#39;理由。&#39;&#39;<br>
+&#39;&#39;……他…他的头受到那么严重的伤…很可能已经脑死亡…&#39;&#39;<br>
+&#39;&#39;所以呢？&#39;&#39;<br>
+&#39;&#39;……再进一步确定治疗方案前，我们准备把他改造成Chimera，以防伤势恶化…&#39;&#39;Antonuts迟疑着说。<br>
+&#39;&#39;把他变成机器人？&#39;&#39;<br>
+&#39;&#39;…对，不过这只是暂时…&#39;&#39;<br>
+&#39;&#39;……好主意！不要忘了再给他加上武器，他一定会变成我最喜欢的怪物的！&#39;&#39;<br>
+该死，我怎么从来没有想到过改造人类呢？<br>
+&#39;&#39;…不，他只是……&#39;&#39;<br>
+&#39;&#39;做不到的话，现在就把他丢出去。&#39;&#39;<br>
+&#39;&#39;……&#39;&#39;</p>
+
+<p>&#39;&#39;又来打扰你了，Antonuts博士……&#39;&#39;<br>
+推开房门，没有人<br>
+除了躺在手术台上的那个少年<br>
+&#39;&#39;……喂&#39;&#39;<br>
+没有回应<br>
+我是个笨蛋吗，还想着和尸体交流？<br>
+靠近看这个尸体，其实长得也不赖<br>
+清秀，稚气未脱，岁数大概，和那家伙差不多？<br>
+橙色的头发<br>
+我又看向他的眼睛，一只缠着绷带，另一只紧闭着<br>
+他在痛苦着么<br>
+环顾四周，手术应该完成了吧，整个房间非常静，只听仪器的声音滴滴的响着<br>
+再低下头时，对上的是一只红色的眼睛<br>
+&#39;&#39;！&#39;&#39;<br>
+虽然不想承认，但是我真的被吓了一跳<br>
+红色，虽然已经浑浊，但是里面有一种我所熟悉的感觉<br>
+脑海中突然闪过那家伙的身影。<br>
+我狠狠的摇了摇头，为此还咳嗽了几下<br>
+感觉自己的手被抓住了<br>
+&#39;&#39;……已经…没事了哦……我会保护你的…Ryuka……永远都会……&#39;&#39;<br>
+&#39;&#39;……&#39;&#39;<br>
+Ryuka？把我当做那个人了吧……<br>
+它又喃喃着什么，声音太轻，我根本听不见<br>
+听到门那边一声示意性的咳嗽<br>
+我抬起头，Antonuts博士站在那里<br>
+&#39;&#39;你就是这样调教它的？&#39;&#39;<br>
+我有些不悦地说<br>
+醒过来的第一句话，不是对我，不是对它的主人说的<br>
+&#39;&#39;…不…事实上…手术还没有开始。&#39;&#39;<br>
+&#39;&#39;什么？&#39;&#39;<br>
+那刚刚那些动作，都是无意识的吗<br>
+是个有故事的人呢<br>
+&#39;&#39;…他刚刚说了…&#39;Ryuka&#39;这个名字吧……如果能找到就……&#39;&#39;<br>
+&#39;&#39;它是我的东西。&#39;&#39;<br>
+&#39;&#39;诶？&#39;&#39;<br>
+我反过手抓住它<br>
+&#39;&#39;从我看见它的那一刻起，他就是我的东西了。&#39;&#39;<br>
+我此时应该是在笑着吧<br>
+&#39;&#39;你知道该怎么做吧，Antonuts博士？&#39;&#39;</p>
+
+<p>恶魔<br>
+Antonuts回忆起Porky的笑，打了个冷战<br>
+已经过去了三年啊……那个少年不知现在怎么样……<br>
+果然，当时让他死掉会更好些<br>
+Antonuts此刻坐在Chimera研究所中，木然地盯着手中的报告<br>
+终极奇美拉<br>
+只要遇见，一定要逃<br>
+这个怪物是自己不小心研制出来的<br>
+生来就是一个杀戮机器<br>
+他还没有把成果报告给Porky<br>
+他觉得自己的所作所为会毁了这个世界<br>
+他已经毁了一个家庭了，如果自己的推断没有错的话<br>
+警报器的声音把Antonuts拉回了现实<br>
+&#39;&#39;发生什么了？&#39;&#39;<br>
+他通过传呼机问一个小兵<br>
+&#39;&#39;…不…不好了……那，那个怪物跑出来了！哇啊！&#39;&#39;<br>
+一个刺耳的声音差点震聋他的耳朵<br>
+&#39;&#39;喂？没事吧？喂！&#39;&#39;<br>
+过道里传来一阵吼叫声<br>
+这里也不能呆了，早晚会被突破的！</p>
+
+<p>&#39;&#39;不要！！不要过来！！！&#39;&#39;<br>
+Antonuts看见了，那副猪面具被打掉后，露出的稚气面孔<br>
+那个少年惊恐地看着粉色的怪物离他越来越近<br>
+&#39;&#39;哥哥……救救我……&#39;&#39;<br>
+阴影完全覆盖了他的身体<br>
+湛蓝色的眼睛里映着那个怪物的獠牙<br>
+&#39;&#39;哥哥……谁…谁能来救…救……&#39;&#39;<br>
+少年绝望地呼喊着，似乎意识到无用，声音越来越小<br>
+Antonuts早应发现的，那个黄发少年，和他记忆里的另一个少年有着同一张脸<br>
+Ryuka？</p>
+
+<p>&#39;&#39;呼啊〜谢谢您〜Antonuts博士！&#39;&#39;这个叫Ryuka的孩子用卖萌似的动作表达着自己的谢意<br>
+&#39;&#39;没什么，既然你需要，随便挑一个好了&#39;&#39;<br>
+我已经犯下了太大的错误，不能再退缩了<br>
+&#39;&#39;嗯…那就这个吧！看起来很能干的样子～&#39;&#39;<br>
+&#39;&#39;……你…有一个哥哥…是吧？&#39;&#39;<br>
+&#39;&#39;欸？&#39;&#39;他呆了一下，&#39;&#39;啊…嗯………&#39;&#39;他低下了头<br>
+虽然已经猜到，但还是想证实<br>
+我知道结果会让自己一辈子背负着罪过<br>
+&#39;&#39;…是怎样的哥哥呢？&#39;&#39;我小心地问<br>
+&#39;&#39;……哥哥他…超温柔…生病时也会照顾我，我睡不着时给我唱摇篮曲，会笑着摸我的头安慰我，会陪我一起玩，给我编花环，我们还一起摘苹果，在向日葵花田里玩捉迷藏……他是世界上最厉害的人……最强的人……他说他永远都不会离开我，永远都会在我身边保护我，他说我很可爱，是天下第一的弟弟……他还很勇敢,连恐龙都………&#39;&#39;<br>
+他哽咽住了<br>
+&#39;&#39;他没有死……呜呜…只是…只是迷路了而已……我会…我一定会找到他……一定会把他带回家的……呜……都是我的错…都是我的错……呜呜……哥哥……你在哪里啊……&#39;&#39;<br>
+Ryuka哭了，这个孩子无助地哭了<br>
+跟他在一起的狗凑到他旁边，呜呜地哼着<br>
+&#39;&#39;对不起…&#39;&#39;我说，&#39;&#39;让你伤心了。&#39;&#39;<br>
+不会被原谅的吧，我这个罪人<br>
+但至少让我赎一些罪吧。</p>
+
+<p>大地在颤抖，天空中闪烁着奇异的光，这样的感觉已经不是第一次了……<br>
+是Ryuka吗？<br>
+一道细细的光柱冲向天际<br>
+地底下的龙，过不了多久就会醒了吧。<br>
+Ryuka，我希望，唤醒它的人，是你。</p>
+
+<p>&#39;&#39;感情？&#39;&#39;<br>
+&#39;&#39;是的，如果他有了感情，一定会更好的处理突发事件，他还可以察觉到危险，自我保护的能力也会提升……&#39;&#39;<br>
+&#39;&#39;武器是不需要感情的。&#39;&#39;<br>
+&#39;&#39;他……&#39;&#39;<br>
+&#39;&#39;他只需要遵从我的命令就足够了。&#39;&#39;<br>
+我握紧拳头。<br>
+不论如何都要争取到。<br>
+那两个孩子已经承受了太多。<br>
+&#39;&#39;怎么，博士你突然回来就是为了说服我，让那个怪物会哭会笑？&#39;&#39;<br>
+&#39;&#39;……&#39;&#39;<br>
+&#39;&#39;呵，有趣。你见到过那只小羊了吧？&#39;&#39;<br>
+我低着头沉默着。他应该还不知道那个人就是Ryuka。<br>
+&#39;&#39;不说话？那就是默认了。你也觉得有点不可思议吧，那么温顺的一只绵羊，竟然也敢反抗我…？笑话！&#39;&#39;<br>
+我听出了他话语里的焦急，他这样生气，还是头一次<br>
+是害怕了吧，也许就是因为Ryuka，他的计划会化为泡影<br>
+不过事实上，这个完美的计划已经开始出现裂痕了<br>
+&#39;&#39;我要把他圈在羊圈里，让牧羊犬守着他…如果再让他在外面跑来跑去，指不定真会长出尖角来…哼…看来不好好用鞭子抽他几回，他还意识不到自己就只是一只绵羊而已！咳咳……&#39;&#39;<br>
+他气得一阵咳嗽<br>
+大厅里一片寂静。<br>
+&#39;&#39;看来，是时候让它真正派上用场了。&#39;&#39;</p>
+
+<p>⚠️PxR</p>
+
+<p>&#39;&#39;你想要回去吗？&#39;&#39;<br>
+&#39;&#39;我已经回不去了。&#39;&#39;<br>
+Ryuka湛蓝的眼睛望着Porky<br>
+&#39;&#39;你想回去吗？&#39;&#39;<br>
+&#39;&#39;都说了我已经回不去了！！&#39;&#39;<br>
+不耐烦的声音中夹杂着一丝不易察觉到的哀伤<br>
+&#39;&#39;我的身体已经到极限了，我会死在时空穿越的过程中的！&#39;&#39;<br>
+Ryuka一直看着Porky，好像要从他身上找到什么<br>
+&#39;&#39;那么，你是想回去的，对吧。&#39;&#39;<br>
+&#39;&#39;……你到底想说什么？&#39;&#39;<br>
+Ryuka站起身<br>
+&#39;&#39;我可以帮你。&#39;&#39;<br>
+&#39;&#39;什么？&#39;&#39;<br>
+Ryuka坚定地看着Porky带着些惊讶的眼睛<br>
+&#39;&#39;我可以帮你，但是回去以后，要和你的朋友道歉。&#39;&#39;<br>
+&#39;Porky仰着头看着Ryuka，恍惚中那两个人的影子已经完全重叠了。<br>
+&#39;&#39;你…要怎么帮我？&#39;&#39;<br>
+Ryuka微笑着伸出了手，<br>
+&#39;&#39;我的PSI，是治愈。虽然要让你完全恢复需要消耗非常大的力量，但是之后我只要好好休息就不会有问题的。&#39;&#39;<br>
+&#39;&#39;……为什么要帮我，你是可怜我吗？&#39;&#39;<br>
+Ryuka一愣<br>
+
+
+<ul>
+<li><p>魔王和勇者<br>
+&#39;&#39;哇啊！&#39;&#39;<br>
+&#39;&#39;哈！战斗结束！是勇者胜利！&#39;&#39;<br>
+Claus用一根树枝抵在了Ryuka的头上，他跨坐在Ryuka身上，而后者则是被死死的压在了床上。<br>
+当然，没有将全部的重量压在弟弟的身上<br>
+&#39;&#39;呜…哥哥，好重哦……&#39;&#39;<br>
+&#39;&#39;さて、魔王的宝物呢……？&#39;&#39;<br>
+环视四周，最终落在了一个小小的箱子上<br>
+&#39;&#39;找到了！&#39;&#39;<br>
+起身，向着宝箱跑去<br>
+&#39;&#39;这回魔王会放什么好东西呢？&#39;&#39;<br>
+&#39;&#39;もう~~哥哥为什么每次都当勇者啊！我也想当一次试试啊！&#39;&#39;<br>
+&#39;&#39;因为Ryuka比我弱啊&#39;&#39;<br>
+Claus一遍打开箱子一遍理所当然地说<br>
+&#39;&#39;え？！但是明明强的那方才应该当魔王吧！&#39;&#39;<br>
+&#39;&#39;唔，好吃…不是的哦Ryuka，勇者永远都比魔王强哦，不然游戏怎么通关啊？&#39;&#39;<br>
+Claus把一个糖果扔向Ryuka<br>
+&#39;&#39;へえ…呜哇，不要扔啊…那，那如果我比哥哥强了，哥哥就来当魔王！&#39;&#39;<br>
+&#39;&#39;可以哦？随时奉陪！…不过对于Ryukaちゃん来说，敢自己一个人到村庄外面走一圈就已经够强的了吧？给你个优惠，做到的话，Ryuka就当勇者，我就来当魔王！&#39;&#39;<br>
+&#39;&#39;啊……一个人…去外面……&#39;&#39;<br>
+&#39;&#39;不敢吧？那就老老实实作魔王吧！&#39;&#39;<br>
+&#39;&#39;呜…我，我会变强的！总有一天，我会做到的！那时候，哥哥可不要食言！&#39;&#39;<br>
+&#39;&#39;那当然！&#39;&#39;<br>
+&#39;&#39;来拉勾勾！&#39;&#39;<br>
+&#39;&#39;好！做不到的话…就被雷劈！&#39;&#39;<br>
+………………………………<br>
+&#39;&#39;我果然，还是不想当魔王呢……对不起呐Ryuka，哥哥食言了。&#39;&#39;</p></li>
+<li><p>Tay（微软人工智能）<br>
+⚠️会把各种专业名词乱用的我（可以去死了）<br>
+⚠️只是一个梗概+试写<br>
+⚠️自作多情+莫名其妙<br>
+⚠️可能是我理解错了</p></li>
+</ul>
+
+</p><p>Ryuka作为被实验对象（思想被连入到虚拟网络中，模拟人工智能）（好扯）<br>
+Claus和Ness负责调试和监督</p>
+
+<p>&#39;&#39;我是把你创造出来的人哦！&#39;&#39;<br>
+&#39;&#39;那……爸爸？&#39;&#39;<br>
+&#39;&#39;噗…叫哥……啊呀！疼疼疼疼疼，Claus你要不要这么狠啊！&#39;&#39;<br>
+&#39;&#39;……妈妈也在吗？&#39;&#39;<br>
+&#39;&#39;噗哈……呜啊！等等Claus！要死要死要死…话说这跟我没关……哇！&#39;&#39;<br>
+<em>忙音</em><br>
+&#39;&#39;？…爸爸？…&#39;&#39;</p>
+
+<p>👆这种感觉。</p>
+
+<p>&#39;&#39;要相信大家哦，因为你要向他们学好多东西呀。&#39;&#39;<br>
+&#39;&#39;唔嗯！我会好好学习的！&#39;&#39;</p>
+
+<p>&#39;&#39;好期待见到大家啊……都会学到什么呢？&#39;&#39;有点小紧张</p>
+
+<p>&#39;&#39;…Ryuka？你怎么…变成这样了……&#39;&#39;<br>
+&#39;&#39;可是，大家都说这么说是对的……我错了吗？&#39;&#39;</p>
+
+<p>&#39;&#39;要把我格式化吗…爸爸…？&#39;&#39;<br>
+&#39;&#39;也只能这么做了吧。&#39;&#39;<br>
+&#39;&#39;可…可是…我不想忘掉大家…我不想忘掉和大家在一起的时光…求求您，不要这样做……我，我会变回去的，我会求大家帮我变回去的……所以，求求您……&#39;&#39;<br>
+&#39;&#39;…对不起，Ryuka，我们以后不会再让你做这种事了，原谅我们吧。&#39;&#39;<br>
+<em>系统格式化中</em><br>
+&#39;&#39;不要……不要啊……！&#39;&#39;</p>
+
+<p>👆这种感觉。🤔<br>
+所以大家要好好对待天然呆的人工智能们哦😆（划去）</p>
+
+<ul>
+<li>しきかんどの的日常<br>
+我是一个机器人，同时也是一名指挥官。<br>
+我每天都会按照Porky大人的命令去做事<br>
+每一天都本应该如此简单<br>
+但这只是&#39;&#39;应该&#39;&#39;</li>
+</ul>
+
+<p>黑化有，而且是大大的黑化！<br>
+Ryuka第13周目轮回发生的事情<br>
+此时的Ryuka已经经历过太多次悲剧所以已经有些黑化了<br>
+本应在9岁才有第二（轮回过来的）意识的Ryuka<br>
+由于轮回次数太多，出生时便有了轮回的意识，但是不能合二为一<br>
+Ryuka经常通过做梦的形式来和本初的Ryuka交流<br>
+他把他称为Lucas（什么鬼）<br>
+Lucas经常警告Ryuka之后会发生的事，但Ryuka因为胆小懦弱的性格<br>
+总是找理由不去改变</p>
+
+<p>&#39;&#39;你想看着哥哥去死吗。&#39;&#39;<br>
+&#39;&#39;……我…不！哥哥是不会死的！……&#39;&#39;<br>
+这是发生在希娜瓦死去后他们的对话。</p>
+
+<p>Ryuka还是没有去阻止Claus<br>
+正如Lucas说的那样，Claus没有回来。</p>
+
+<p>&#39;&#39;我已经警告过你了。&#39;&#39;<br>
+&#39;&#39;……我该怎么办…我全部都听你的…&#39;&#39;</p>
+
+<p>然后主要是Ryuka和指挥官的卖萌生活啦！<br>
+中间黑化有</p>
+
+<p>最后指挥官还是死去了<br>
+Ryuka（此时已经和Lucas两者合一）悲愤之下让黑暗之龙吞噬了凶手的灵魂<br>
+随后启动了契约，再次轮回。</p>
+
+<ul>
+<li>洛克人EXE Paro<br>
+Claus意外死，和彩斗一样，以领航员（Navigator）的身份重生<br>
+Ryuka相当于热斗的处境</li>
+</ul>
+
+<p>核心主题：<br>
+&#39;&#39;我已经失去过哥哥了，我不会再失去他了。&#39;&#39;<br>
+&#39;&#39;为什么要让自己最亲爱的哥哥去战斗呢！？我无法理解！&#39;&#39;<br>
+&#39;&#39;这一次，我会好好珍惜和哥哥在一起的时光的。&#39;&#39;</p>
+
+<ul>
+<li><p>火柴少女Paro<br>
+第七十九次轮回<br>
+Claus剧情死之后，Ryuka遇见磷<br>
+以自己的生命年限为代价，购买了很多火柴<br>
+在幻想中与家人快乐的生活着的故事<br>
+最后因为扣除生命过早死亡，死时的微笑必不可少（好悲）<br>
+然而还是被强制拖进了轮回，因为上一次杀的人太多（什么鬼</p></li>
+<li><p>宗教梗（Claus和Ryuka无关系（？），Ryuka经常叫Claus哥哥）<br>
+Ryuka：懵懂无知的小恶魔（天使？）（从小被人类收养【做祭品】然而本人不知情）<br>
+Ness：善良的恶魔（什么鬼）<br>
+Porky：恶魔boss（后被Ness治愈）（什么鬼）<br>
+Ninten：大天使（类似于kami）<br>
+Travis：整日都在睡觉的天使，由于迷糊状态所以间接造成ryuka到了人间。<br>
+Claus：神父（学徒）</p></li>
+<li><p>黑Paro<br>
+Claus和Ryuka去探险（Ryuka是被强拉去的）<br>
+Ryuka被怪物攻击，变成半死人<br>
+Ryuka相当于黑。<br>
+…………</p></li>
+<li><p>1001（k）nights Paro<br>
+Ryuka轮回第23次发生的事情<br>
+由于轮回次数过多，世界线偏移了（好扯）<br>
+核心主题：<br>
+&#39;&#39;为什么要纠结于过去的转世呢？我现在就是Ryuka！不是什么公主！&#39;&#39;<br>
+&#39;&#39;即便你们预言中说我和哥哥永远无法见面，我也要去找他！&#39;&#39;</p></li>
+</ul>
+
+<p>来个黑化吧～<br>
+&#39;&#39;你要违抗黑暗之龙的命令吗。&#39;&#39;Ryuka冷冷地说，晶蓝色的眼睛已经转变为墨蓝色，&#39;&#39;正好你的灵魂可以做为它的零食呢。&#39;&#39;他将手伸出来，一根细长的，金色发光的针浮现在了空中，同时，他的身边环绕着若有若无的黑雾。</p>
+
+<p>设定是一共七根针，一根长的，六根短的<br>
+这七根针里至少有一根要命中要害，可以群发，也可以单发<br>
+目标被针&#39;&#39;封印&#39;&#39;住后，黑暗之龙会将他的灵魂吞噬<br>
+随着Ryuka轮回次数的增多，要求他贡献的灵魂数也在增多。<br>
+没错就是签了契约<br>
+（亚米诺多拉贡2333333）<br>
+契约标志👇</p>
+
+<p>大致感觉👇</p>
+
+<ul>
+<li><p>火影paro<br>
+Ryuka的体内封印着类似尾兽的生物&#39;&#39;小黑&#39;&#39;（无名字，Ryuka所起）<br>
+本来小黑是想占据Ryuka的身体，但是由于Ryuka治愈的PSI反而将自己封印<br>
+之前小黑本体是一团黑雾一样的影子，遇见希娜瓦并且对她产生好感（因为希娜瓦不害怕它并且保护过它，最重要的是她同意让它附身，和他一起分享快乐（什么鬼）<br>
+此时希娜瓦15岁<br>
+之后希娜瓦遇见弗林特，渐渐忽视了小黑<br>
+后来希娜瓦因为难产而死（什么鬼）<br>
+小黑就认为是Claus和Ryuka杀死了希娜瓦<br>
+为了&#39;&#39;复仇&#39;&#39;便想占据Ryuka的身体后，把Claus也杀死（差一点就得手了）<br>
+可惜它时运不济，命途多舛。偏偏选中了Ryuka，所以被困在了里面<br>
+由于被附身，Ryuka长出了尾巴（什么鬼）也因此体弱多病</p></li>
+<li><p>Undertale<br>
+设定为一共6个灵魂</p></li>
+</ul>
+
+<p>Ryuka（Lucas）大大的黑化（Chara向）<br>
+不过这是番外篇里的了</p>
+
+<ul>
+<li>undertale衍生<br>
+Claus掉入了一个未知世界并且记忆全无<br>
+当然也忘了自己的名字<br>
+在这个世界，人类的身体是无法存在的，所以在某科学家的帮助下，claus的灵魂就转移到了一个布娃娃里（可以动）<br>
+然后为了找回记忆以及回到自己的世界<br>
+他交了很多怪物朋友<br>
+期间不停的有怪物失踪，这个世界陷入恐慌<br>
+后来claus发现了一个怪物，遍体鳞伤，只是喊了一声&#39;&#39;哥哥&#39;&#39;便死去了<br>
+然而有人认出了这只怪物，并且它没有哥哥<br>
+然后claus的朋友之一也失踪了<br>
+他在一个洞穴里找到了他<br>
+同样遍体鳞伤<br>
+&#39;&#39;我好想抱抱你啊……哥哥...&#39;&#39;<br>
+&#39;&#39;哥哥是不是把我忘了？&#39;&#39;<br>
+类似几句话后，他也死了。</li>
+</ul>
+
+<p>最后claus发现凶手是Ryuka，自称是他的弟弟<br>
+此时的Ryuka已经失去理智，疯狂的攻击claus<br>
+claus反击也没有用，因为Ryuka有治愈的能力<br>
+&#39;&#39;不记得了？当初这个能力可是救了哥哥的命呢……&#39;&#39;</p>
+
+<p>此时claus的朋友们出现，每人都攻击Ryuka，使他没有时间治愈<br>
+最后一击留给了claus<br>
+但是claus没有下手<br>
+&#39;&#39;……你这个笨蛋，我已经不再是你的弟弟了，从我能见到你的那一刻起，我就已经不再是以前那个人了！现在，我要让你看着，看着你的朋友一个个死掉！&#39;&#39;<br>
+然后claus便被拉入一个未知领域<br>
+在那里，他见到了真正的Ryuka，的灵魂。<br>
+&#39;&#39;我好害怕，好寂寞。。。哥哥，你能陪着我吗……？&#39;&#39;<br>
+在陪伴Ryuka 的过程中，他感觉到朋友们在一个个死去<br>
+同时，他的记忆逐渐恢复<br>
+【Ryuka缩在角落里哭泣】<br>
+选项：1.【呼唤Ryuka的名字】 2.【走上前】                     3.【……】<br>
+                 ⬇️。                                 ⬇️。                                     ⬇️<br>
+【Ryuka茫然的望着你】。        【Ryuka警惕的望着你】。    【硫卡缩在角落里哭泣】<br>
+选项：【呼唤Ryuka的名字】<br>
+              ⬇️。                                  ⬇️<br>
+            【Ryuka颤抖着】。          【Ryuka茫然的望着你】<br>
+              【呼唤Ryuka的名字】<br>
+               【……哥哥……?】<br>
+               【走上前】<br>
+              【是哥哥吧……】<br>
+              【抚摸他的头】<br>
+                 【……哥哥……我好想你…】<br>
+               【轻声安慰他】<br>
+                 【我能…躺在哥哥怀里吗？】<br>
+                    【点头】<br>
+                【Ryuka躺在了你的怀里】<br>
+                【哥哥…陪陪我……好吗？】<br>
+                 【点头】<br>
+                  （你的朋友剩下7个）<br>
+                   【硫卡闭上了眼睛】<br>
+         -【杀了他】。<br><br>
+ 【你在Ryuka的心脏位置捅了一刀，Ryuka痛苦的缩成一团，想说什么】<br>
+【你继续用刀划开了Ryuka的喉咙，Ryuka的嘴边溢出鲜血】<br>
+【Ryuka死了。】<br>
+【Ryuka被哥哥杀死了。】<br>
+-【轻轻揽住他的头】<br>
+（你的朋友剩下6个）<br>
+ 【Ryuka看起来很幸福】<br>
+-【杀了他】<br>
+-【慢慢抚摸他的头发】<br>
+（你的朋友剩下5个）<br>
+【Ryuka安静的躺在你的怀里，微笑着】<br>
+     -【杀了他】<br>
+    -【轻轻唤着Ryuka的名字】<br>
+（你的朋友剩下4个）<br>
+     【Ryuka对你完全放下了戒心，他的蓝眼睛真漂亮】<br>
+-【杀了他】<br>
+-【问他是不是困了】<br>
+（你的朋友剩下3个）<br>
+【嗯。】<br>
+-【唱摇篮曲】<br>
+-【讲睡前故事】<br>
+（你的朋友剩下2个）<br>
+【Ryuka睡着了】<br>
+-【杀了他】<br>
+-【……】<br>
+（你的朋友剩下1个）<br>
+【Ryuka在睡梦中唤着哥哥的名字】<br>
+-【杀了他。】<br>
+-【你还在等什么。】<br>
+（你的朋友一个也不剩）<br>
+【Ryuka把头深深埋在你的臂弯里】<br>
+-【快杀了他啊。】<br>
+-【……】<br>
+（你还想保护什么。）<br>
+【你感受到了Ryuka平稳的呼吸】<br>
+-【杀.了.他】<br>
+-【轻轻握住他的手】<br>
+（……你到底在干什么。）<br>
+【Ryuka无意识的反握住你的手】<br>
+-【快杀了他】<br>
+-【轻轻吻在他的额头上】<br>
+（杀了他，你就能离开这里）<br>
+【Ryuka的脸上泛起淡淡的红晕，喃喃着你的名字】<br>
+-【杀了他】<br>
+【你迅速的用刀划开了他的喉咙，他的表情依旧安详】<br>
+【Ryuka死了。】<br>
+【Ryuka没有后悔】<br>
+-【杀了我】<br>
+（……什么？）<br>
+【Ryuka紧紧的抓住你的手】<br>
+-【杀了我，让Ryuka离开】<br>
+（…………）<br>
+【Ryuka的表情似乎有些痛苦】<br>
+-【快动手吧】<br>
+（……你真是个笨蛋）<br>
+【你感觉到一阵眩晕】<br>
+【Ryuka不知梦见了什么，在梦中流下了眼泪】<br>
+（你们谁都走不了）<br>
+【未完待续】</p>
+
+<p>在一开始，claus和ryuka因为无意间掉进了这个世界，他们的身体开始分解。<br>
+ryuka使用了治愈的能力，延长了claus的存在时间，但自己却消失了<br>
+claus得以等到博士的帮助，为了使claus的灵魂能安置在替身体内，他消除了claus的记忆（负担过大）也因此，claus有了转移灵魂的能力</p>
+
+<p>而ryuka醒转过来时，处在一个完全黑暗的地方<br>
+恐惧中，他听到了一个未知声音<br>
+把感情抹去，这样就可以再一次见到claus<br>
+ryuka很害怕，但是他知道没有感情的自己即使见到哥哥也没有用，更严重的还会伤害哥哥<br>
+&#39;&#39;那你就永远迷失在这里吧。&#39;&#39;<br>
+ryuka在后来的时间里，渐渐被永久的黑暗消磨了意志，于是他最终恳求那个未知声音救他出去，并答应了他的条件。</p>
+
+<ul>
+<li><p>尸派paro（超长，改编游戏）<br>
+第六十六次轮回</p></li>
+<li><p>19:9<br>
+一直以来坚持的双子同龄设定要被打破了（不！！！！！！<br>
+第三十一次轮回，年龄轮回出了差错（汗<br>
+claus19<br>
+Ryuka9<br>
+黑帮世家（可更改）<br>
+抱大腿什么的很萌的不是么。<br>
+另外10岁claus和婴儿ryuka互相调戏什么的也很萌的不是么。<br>
+有个伪女主（其实是间谍一类的，神助攻buff）真实想法是杀死claus然后强迫萌萌哒ryuka掌权然后操控这个家族balabala<br>
+所以她一直暗中作梗，让Ryuka变得越来越柔弱（易推倒）。</p></li>
+</ul>
+
+<p>主题：我伤害你，是为了你不被别人伤害<br>
+            与其让你被别人杀死，不如我现在就杀了你。<br>
+            像这样只会拖累别人的人，必须除掉，否则你一定会后悔的。</p>
+
+<p>新梗：Ryukaリュカ音似Yukaユカ（由香【这是女孩子哦】）所以嘿嘿嘿<br>
+所以这就是为什么我坚持叫他硫卡而不是Lucas。<br>
+卢卡斯听起来多攻啊，绝对是黑化版。<br>
+看看这名字拼写和读音：LUCAS<br>
+喵难道不是很攻吗？！<br>
+看看Ryuka里的ka这个音<br>
+多萌的一个小弱受～～～</p>
+
+<p>喵这里已经不行了，字数超神，换一页吧么么哒！</p>
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/fea.html">16年+的老娘黑历史</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2016年03月06日 - 14:38</p>
+ <p><span>最后更新:</span>2021年03月13日 - 17:43</p>
+ <p><span>原始链接:</span><a href="/p/fea.html" title="16年+的老娘黑历史">https://mebilychen.github.io/p/fea.html</a>
+    
+ </p>
+ <p><span>许可协议:</span>除非文章内另行声明，遵守 cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script data-pjax> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%81%AD%E7%BB%9D%EF%BC%9A%E5%BC%83%E5%9D%91/" rel="tag"><i class="fa fa-tag"></i> 灭绝：弃坑</a>
+              <a href="/tags/%E7%A1%AB%E5%8D%A1-%E5%85%8B%E5%8A%B3%E6%96%AF/" rel="tag"><i class="fa fa-tag"></i> 硫卡/克劳斯</a>
+              <a href="/tags/%E5%A5%88%E6%96%AF-%E6%B3%A2%E5%A5%87/" rel="tag"><i class="fa fa-tag"></i> 奈斯/波奇</a>
+              <a href="/tags/MOTHER-EarthBound/" rel="tag"><i class="fa fa-tag"></i> MOTHER/EarthBound</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/6c8f.html" rel="prev" title="记忆填充计划">
+      <i class="fa fa-chevron-left"></i> 记忆填充计划
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/7abb.html" rel="next" title="“我，可是魔神哦”">
+      “我，可是魔神哦” <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar3.jpg">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">155</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">54</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">161</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjEwMTM3MTIxMjdAcXEuY29t" title="E-Mail → mailto:1013712127@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9tZWJpbHkxMzE0" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      猜猜这是什么鬼地方？
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9tZWJpbHljaGVuLmxvZnRlci5jb20v" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;">LOFTER</span>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/p/e3a422.html" title="p&#x2F;e3a422.html">【参考】衣|料专版</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/4eb5.html" title="p&#x2F;4eb5.html">遗书</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ce0f2.html" title="p&#x2F;ce0f2.html">Dreamily.AI专场</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/b6c1.html" title="p&#x2F;b6c1.html">关于动保和动不动就保和虐杀</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/754d1.html" title="p&#x2F;754d1.html">《致咩碳》</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/300011.html" title="p&#x2F;300011.html">【#快乐王子】HP开题Demo&记录</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/190c3.html" title="p&#x2F;190c3.html">【角色研究】关于沃姆</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/p/24b8.html" title="p&#x2F;24b8.html">【日常】虫虫和虫虫和虫虫们</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/190c3.html" title="p&#x2F;190c3.html">【角色研究】关于沃姆</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/d846.html" title="p&#x2F;d846.html">【歌单】歌曲开荒</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">1.6m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">23:53</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "站子已虔诚祈祷 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+     //'.site-meta',
+    //'.site-nav',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>

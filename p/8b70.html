@@ -1,0 +1,2169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="写作技巧">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【重难点】写作技巧">
+<meta property="og:url" content="https://mebilychen.github.io/p/8b70.html">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:description" content="写作技巧">
+<meta property="og:locale">
+<meta property="og:image" content="https://s2.loli.net/2022/01/05/HnodSeV6qh7v5lU.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/OC/IMG_0204(20220101-191236).JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/OC/IMG_0203(20220101-190804).JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/IMG_0092(20211220-191743).jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/meme/IMG_9933(20211215-081348).JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/OC/QQ%E6%88%AA%E5%9B%BE20211215101146.png">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/meme/IMG_9871(20211213-021558).JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E6%AD%BB%E7%A5%9E%E7%88%B8%E7%88%B8%E5%8B%BE%E5%BC%95%E5%84%BF%E5%AD%90.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/IMG_7647(20210901-064825).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/E13F35BE6B4524F9BAC67BFC03C03571.png">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/25%E5%8F%B7%E7%9A%84%E7%B4%A0%E6%9D%90.jpg">
+<meta property="og:image" content="https://thescriptlab.com/screenwriting/character/creating-characters/20-character-exercises/">
+<meta property="og:image" content="https://s.studiobinder.com/wp-content/uploads/2020/07/What-is-a-Story-Beat-in-a-Screenplay-Infographic-of-Index-Cards-StudioBinder.png.webp?resolution=1440,1.7999999523162842">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/meme/%E8%AE%A9%E6%88%91%E6%9D%A5%E5%BD%A2%E5%AE%B9%E4%B8%80%E4%B8%8B.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/IMG_8950.GIF">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E6%94%B9%E6%96%87/%E4%BB%80%E4%B9%88%E8%AF%AD%E5%86%85%E7%BF%BB%E8%AF%91.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/IMG_7551(20210823-025415).PNG">
+<meta property="og:image" content="https://i.loli.net/2021/11/05/sNGcr7zLveERQS5.png">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/OC/%E6%96%87%E6%89%8B%E4%B9%9D%E5%AE%AB%E6%A0%BC.png">
+<meta property="article:published_time" content="2021-08-08T14:29:00.000Z">
+<meta property="article:modified_time" content="2022-01-05T08:54:46.035Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="积累本">
+<meta property="article:tag" content="写作">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2022/01/05/HnodSeV6qh7v5lU.jpg">
+
+<link rel="canonical" href="https://mebilychen.github.io/p/8b70.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : '中文'
+  };
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    
+      if (NexT.utils.hasMobileUA()) return;
+    
+    let time, hidden, visible, title = document.title;
+    let favicon = document.querySelector('link[rel="icon"]');
+    
+      hidden = ["盯————","*探*","?","......","*观察*"];
+      visible = ["*偏转视线*","*缩*","*强装镇定*","！","*低头*"];
+    
+    let random = t => t[Math.floor(Math.random() * t.length)];
+    const change = () => {
+      if (document.hidden) {
+        favicon.setAttribute('href', '/images/favicon-32x32-king-black.png');
+        
+          document.title = random(hidden);
+        
+        clearTimeout(time);
+      } else {
+        favicon.setAttribute('href', '/images/favicon-32x32-brand-black.png');
+        
+          document.title = random(visible);
+        
+        time = setTimeout(() => {
+          document.title = '碳素的小作坊';
+        }, 1000);
+      }
+    }
+    document.addEventListener('visibilitychange', change, false);
+  });
+</script>
+
+  <title>【重难点】写作技巧 | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<script src="/assets/js/DPlayer.min.js"></script></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;调谐中...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">161</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">54</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">155</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-image fa-fw"></i>画廊</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/random.html" rel="section"><i class="fa fa-question fa-fw"></i>抽</a>
+
+  </li>
+        <li class="menu-item menu-item-lang">
+
+    <a href="/en/" rel="section"><i class="fa fa-globe fa-fw"></i>->English</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-17081-597255-1305127431.cos-website.ap-hongkong.myqcloud.com' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/8b70.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【重难点】写作技巧
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-08 22:29:00" itemprop="dateCreated datePublished" datetime="2021-08-08T22:29:00+08:00">2021-08-08</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2022-01-05 16:54:46" itemprop="dateModified" datetime="2022-01-05T16:54:46+08:00">2022-01-05 16:54:46</time>
+                </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%90%8C%E4%BA%BA%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">同人研究笔记</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>58k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>53 分钟</span>
+            </span>
+            <div class="post-description"><center>写作技巧</div>
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%A7%AF%E7%B4%AF%E6%9C%AC/" rel="tag"><i class="fa fa-tag"></i> 积累本</a>
+              <a href="/tags/%E5%86%99%E4%BD%9C/" rel="tag"><i class="fa fa-tag"></i> 写作</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p>转自《鉴|阅》贴。</p>
+<hr>
+<p>我觉得是不是我 在写定题文的时候 就 没有多少感觉的时候 就需要先按自己感觉随便写一通 找到感觉之后再开始写 就不要压抑和否定自己的那些文不对题 不然会对自己写作兴趣造成很大打击</p>
+<hr>
+<p>说真的，我有点不敢写陛下了，我害怕自己的资历不够赞颂他的美好，我害怕我贫瘠的想象力会抹黑他的形象。  </p>
+<p>（其实最害怕的是我怕我不如别人然后陛下就不要我了，哭哭）</p>
+<p>眼界要宽。这样才能写出好句子。光积累句子其实没啥用、、     </p>
+<p>12.20 发现自己不太在意 外貌描写..</p>
+<hr>
+<p>很纠结要不要搜“怎么写好同人”。感觉爱好一旦变成“严肃的工作”我就开始竞争就开始不开心了。  </p>
+<p>就相当于，玩玩可以，但是要是较真的话我会很难受。  </p>
+<hr>
+<p>嗯对，<br>小姐姐、前辈、（小骑士）、奎若是一辈；<br>陛下、夫人、滚滚、老师、卢瑞恩、赫拉、团长、团子爹是一辈  <br>或者按照另某种设定来分，陛下、团子爹、滚滚是一辈  </p>
+<p>陛下是左撇子<br>陛下是左撇子<br>陛下是左撇子<br>记住，陛下是左撇子<br>a 当然陛下是两只爪爪都是惯用手，只不过我描述时最好着重突出左手的流畅度。 </p>
+<p>我老是把五骑士忘掉…  </p>
+<div class="note danger"><p style="text-align:center ; color:#D9534F"> 注意：最好尽快找一个自己喜欢的文风作者学习，发现目前跟着的文风自己可能不喜欢</p></div>
+
+<p>目前记得最深的就是彩虹的文，然后我在lof上看过的一个黄文（不过已经记不清是黄写的好还是怎么回事了…）。  <br>彩虹就是，emm，陛下的人物研究很棒，塑造的超级神好吧。就几个关键词，淡漠，高冷，孤傲，圣洁，因为过于茕茕孓立而…缺少反馈？因为全知全能而一直处于“看起来很好欺负”的状态，Fi很高，很自信…这一点让我写我就写不出来（当时），我写出来的就还是人性的陛下（就怀疑是不是因为我太不自信），而不是神性的陛下。所以我写的话陛下就是白鹿，然后彩虹就给我一种把陛下写成吃肉的白兔子的感觉，无法克服就逆来顺受，但仍然是古老森林的一位议会成员。（突然想到那个《小兔子》）  <br>然后那篇黄文（已经无了）就是细节描写的很到位，Se很高，用词也很舒服，这里不说plot（毕竟让黄文说plot本来就强人所难），我就印象是，陛下和团长的性格很棒。</p>
+<p><a href="/p/7641.html">字词积累</a></p>
+<h1 id="这个角落藏着一个小确幸-衷苦、"><a href="#这个角落藏着一个小确幸-衷苦、" class="headerlink" title="这个角落藏着一个小确幸/衷苦、"></a>这个角落藏着一个小确幸/衷苦、</h1><ul>
+<li><p>陛下行于水面<br>因为他可以把水结成冰<br>（cue cue）</p>
+</li>
+<li><p>【转自无tag文贴】关于怎么面对生理痛苦。<br>我会想像一个场景然后融入进去，就不痛苦了，比如，头痛的话，就设定一个陛下或者卢瑞恩负伤救对方的场景进行演出，饿了的话就想象一个幼王饿了的场景进行演出。<br>可以用作素材。</p>
+</li>
+<li><p>什么电眼少女</p>
+</li>
+</ul>
+<p><img data-src="https://s2.loli.net/2022/01/05/HnodSeV6qh7v5lU.jpg"></p>
+<ul>
+<li>感觉，画布不一样，纸不一样，感觉就是不一样。</li>
+</ul>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/OC/IMG_0204(20220101-191236).JPG"></p>
+<ul>
+<li>感情线</li>
+</ul>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/OC/IMG_0203(20220101-190804).JPG"></p>
+<ul>
+<li>“你杀了卢瑞恩，”陛下对我说，“所以我把你杀了。”<br>“没有办法的事情，”我跪下回答，“一命抵一命”</li>
+</ul>
+<p>感觉好神奇。我目前觉得是巧合。但是也太巧了吧。就，为了迎合别人，我把陛下（和卢子）使劲按头让他们跪下的感觉，然后，对方说了一个更下跪的话，原话我半试探性半开玩笑，“其实非要跑团的话就得拆cp卡（就是发现卢子和陛下总是抱团排外）”结果对面来了一句“要拆cp你拆，我对拆腻腻歪歪的情侣不感兴趣”。然后我就超级生气，给我气哭了。但缓了一会儿之后，为了不让别人对我失望，为了迎合别人，我还是特别卑微的拆了，把卢子杀死了（算是杀死了）。然后我当时其实真实感觉是这样：“那你不关心我的喜好，我凭什么关心你的世界观啊。本来他们就不care那些事情，按我说他们发现事情不对劲直接跑路都有可能，管你这里发生了什么啊，也太双标了吧这个人”就很生气，但还是不想让她难看，就想着不对她可可爱爱了吧，然后就开始冷漠，后来不知怎么的，就感觉其实是陛下占了我的身体，把之前那个可可爱爱的我杀了，惩罚我。自残也是陛下惩罚我，为了一个缥缈的友谊背叛了他。之后问场外问题我也突然用起了“破墙”。写东西的时候我也不想提陛下的名字（沃姆/陛下）了（我一开始有种感觉是“对方不配看到陛下的名字，不配认为那个是陛下”以及“这么卑微绝对不是陛下，我死都不会认为那是陛下的”），都只用“他/我”。我觉得我潜意识还是意识到了这个不是我，是陛下吧。毕竟陛下不会自称自己为“沃姆/陛下”。 就，巧在哪里，我用冷漠的状态+“他/我”称呼，是因为想远离那个接受不了我的对方，想保护我的Fi，保护我的陛下和孩子们（用“我”可以为陛下挡刀：“这是我的决定，不是陛下的决定”）；陛下用冷漠的状态+“他/我”称呼，是如果他取代我做决定的话，真的就是会这么做（相当于陛下在跑团，会说“我”准备怎么怎么样，剧情里的“他”会怎么怎么样），而且会省略很多感情描写，反应比较快。 <br>总之就很神奇的体验。  <br>我也想让陛下代替我跑这个团。抱抱熊已经失望透顶了，该陛下上了。让陛下rp自己（陛下：是咩碳rp我rp我）。  </p>
+<ul>
+<li><p>疼痛是一点点不痛的。会逐渐变成一种感觉。只要让疼痛更剧烈些，就不会觉得之前在痛了。</p>
+</li>
+<li><p>《国王的名字》</p>
+</li>
+</ul>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/IMG_0092(20211220-191743).jpg"></p>
+<ul>
+<li>咩碳 2021/12/19 22:05:32<br>我有次尾随我老父进了男厕所</li>
+</ul>
+<p>咩碳 2021/12/19 22:06:03<br>他没跟我说他要去厕所 我低头玩手机 就跟着他走了</p>
+<p>祈祷我不会跟着其他人老父走</p>
+<ul>
+<li>准备（用oc）进行语c的咩碳：</li>
+</ul>
+<p>咩碳 23:57:43<br>我看看谁能上</p>
+<p>咩碳 23:58:10<br>警惕咩碳打牌</p>
+<p>咩碳 0:00:24<br>（看牌）有很多陛下 还有几个配他们的卢子夫人辐光etc.</p>
+<p>咩碳 0:00:38<br>哦 还有团长</p>
+<p>我直接一张前辈打出去</p>
+<ul>
+<li><p>一坨蛇</p>
+</li>
+<li><p>之前记了一笔tankman，现在加一笔什么，用纳粹军旗（主角是洗心革面的纳粹）庇护（被另一波纳粹迫害的）难民</p>
+</li>
+<li><p>（给女儿倒水哄女儿睡觉）“Wait a minute，I don’t have a daughter！”<br>（造容器为圣巢解决瘟疫）Wait a minute, I don’t have a kingdom！</p>
+</li>
+<li><p>咩碳 22:59:34<br>我好喜欢白大褂啊</p>
+</li>
+</ul>
+<p>咩碳 23:01:27<br>（今天看到基友穿）</p>
+<p>咩碳 23:03:16<br>我记得刚开始的时候 就突然理解为什么男生喜欢看二次元老婆换装了</p>
+<p>咩碳 23:03:29<br>其实也不完全是 白大褂我没有抵抗力</p>
+<p>咩碳 23:03:36<br>西服和巫师袍</p>
+<p>咩碳 23:03:56<br>还有穿上去的动作</p>
+<p>咩碳 23:04:05<br>就那几个瞬间</p>
+<p>咩碳 23:05:34<br>（而且她好矮（不）比我矮 就穿这种成熟/职业衣服很有小大人的感觉）</p>
+<p>咩碳 23:05:58<br>也是我超级喜欢小小梦魇2里的mono</p>
+<p>咩碳 23:06:09<br>（就是男主）</p>
+<p>咩碳 23:13:18<br>我和她说了“你以后天天穿白大褂吧”“你不会再长高了吧”</p>
+<div class="note primary"><p style="color:#7042C1"> 夫人（宠溺）：亲爱的，你不会再长高了吧？ </p> </div>
+
+<p>咩碳 23:13:34<br>她冲我竖中指/委稽</p>
+<ul>
+<li><p>meme2<br><img data-src="http://mebilychen-media.test.upcdn.net/image/meme/IMG_9933(20211215-081348).JPG"></p>
+</li>
+<li><p>苏文:知道知道.他们是梧桐树.<br>孟冰茜:真聪明.他们叫梧桐树,因为他们会招来凤凰.<br>苏文:凤凰?我怎么没有看到?<br>孟冰茜:校园里，他们到处都是。  </p>
+</li>
+</ul>
+<p>别夸了别夸了 法国梧桐（悬铃木）不引凤凰<br>——我们都只是走地鸡/快哭了</p>
+<p>（草 难道他的意思就是“虽然他们不是梧桐树，但是我们叫他梧桐树，因为这么做能招来凤凰”？草 这波是我输了 我就觉得这个因果关系好奇怪 原来如此）  <br>反转了，“虽然他们不是梧桐树，但是我们叫他梧桐树，因为这么做能招来凤凰”。</p>
+<ul>
+<li>emmmmmmm 有点可以揣摩陛下建国的感情了（不）</li>
+</ul>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/OC/QQ%E6%88%AA%E5%9B%BE20211215101146.png"></p>
+<ul>
+<li>咩碳 20:25:26<br>你整天那么多表情包</li>
+</ul>
+<p>咩碳 20:25:39<br>还说自己i？</p>
+<p>咩碳 20:26:04<br>快说 又和谁鬼混去了</p>
+<p>基友  <br>群里啊</p>
+<p>咩碳<br>（倒吸气）</p>
+<p>咩碳<br>我本以为你就是去找了新欢 没想到你竟然去逛了窑子！（抽噎） </p>
+<p>基友<br>?<br>我花了2k买币子呢好吧</p>
+<p>咩碳<br>（抽噎）</p>
+<ul>
+<li>meme</li>
+</ul>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/meme/IMG_9871(20211213-021558).JPG"></p>
+<ul>
+<li><p>Hamilton那里，“即便我试着去做也做不到，嗯，我确实试了。”</p>
+</li>
+<li><p>上次党员组织生活会 看纪录片 讲国共和谈会议<br>毛主席称蒋介石委员长（是吧） 蒋称毛“润之”<br>我周围男生全笑了艹<br>我差点也没绷住</p>
+</li>
+<li><p>死神爸爸勾引儿子.jpg</p>
+</li>
+</ul>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%AD%BB%E7%A5%9E%E7%88%B8%E7%88%B8%E5%8B%BE%E5%BC%95%E5%84%BF%E5%AD%90.jpg"></p>
+<p>咩碳 21:24:52<br>（是godfather）</p>
+<p>咩碳 21:27:59<br>然后这大孝子把床倒了个方向 把人给救活了</p>
+<p>咩碳 21:28:04<br>爸爸震怒</p>
+<p>喜欢爸爸没有在孝子倒床的时候震怒，而是一直等到人救活了才猛然震怒</p>
+<ul>
+<li><p>唔因为神和恶魔总是judge人类所以拒绝他们作为孩子的神父（指神级的父亲），但接受死亡，因为“死亡对所有人都是平等的”</p>
+</li>
+<li><p>mark看到happy game：“谁能用人类的语言把你刚刚经历的场景描述得出来”</p>
+</li>
+<li><p>我发现每次开盒殿下他都一副震惊脸看向前方 很呆 但是螂就不会 螂就会突然转头用震惊脸打量我 就好像有人敲门殿下就只会原地愣住而螂会转过头紧盯着门口 给我感觉就是孩子吓傻了</p>
+</li>
+<li><p>然后外星人就把HOME当作指代地球的符号<br>然后地球人因为把地球玩炸了流离失所而被外星人收容 全篇协议一眼鬼画符只看得懂HOME 想起自己原来的确是有个家来着 每次认出这个词都++暴击</p>
+</li>
+<li><p>咩碳 23:03:49<br>艹你不知道</p>
+</li>
+</ul>
+<p>咩碳 23:04:19<br>我刚刚把 哎呦卧槽 用贝爷的命运调调唱了出来</p>
+<p>咩碳 23:04:29<br>哎呦卧槽</p>
+<p>咩碳 23:04:42<br>就</p>
+<p>咩碳 23:04:44<br>很突然</p>
+<ul>
+<li>有东西跟着弱鸡调查员该怎么办呢（叹）<br>代入了一下 君臣组可能直到有人指出“诶你身后影子怎么一直那么长”然后卢子才会“啊？”去看然后“卧槽这不应该呀” 随后展开研究<br>就因为两小只都是默默做自己事情的类型 陛下也不会主动去戳卢子 卢子也不怎么会关注周围的异常（倾向于“啊这个肯定是有科学解释的”然后抛之脑后）<br>然后卢子得出离谱结论的时候陛下还会facepalm</li>
+</ul>
+<p>咩碳 22:09:16<br>相当于番剧前三集都是调查员卢瑞恩的日常</p>
+<ul>
+<li><p>刻板印象 vs. 约定俗成  </p>
+</li>
+<li><p>咩碳 19:11:33<br>真的觉得outerwilds挪麦人语言系统还挺好的 咱文字对话基本上都是一句承接一句</p>
+</li>
+</ul>
+<p>咩碳 19:12:06<br>可能是因为双人对话的话有打断？</p>
+<ul>
+<li><p>咩碳 19:30:40<br>人类抑郁自杀是不是也是大自然一种维持物种数量的方式？</p>
+</li>
+<li><p>咩碳 19:00:16<br>晚和夜其实没太多差异吧感觉 嗯 一般咱约人也不会用到</p>
+</li>
+</ul>
+<p>咩碳 19:00:28<br>都说今晚我过去</p>
+<p>咩碳 19:00:44<br>不会说今夜过去</p>
+<p>咩碳 19:01:15<br>也没有约人约半夜的</p>
+<p>咩碳 19:01:25<br>除非去盗墓</p>
+<p>【所以圣巢对夜间时间划分更敏感】</p>
+<ul>
+<li>咩碳 19:01:44<br>殿下没有强迫症</li>
+</ul>
+<p>咩碳 19:01:57<br>他盘的圈不整齐</p>
+<p>咩碳 19:02:00<br>看着难受</p>
+<p>咩碳 19:02:31<br>我要是蛇 我会以盘正圆圈为乐</p>
+<p>咩碳 19:02:47<br>然后接受人类朝拜</p>
+<ul>
+<li>咩碳 19:44:00<br>我看到mating game 一个professor能和蝉求爱</li>
+</ul>
+<p>咩碳 19:44:18<br>雄雌都上道</p>
+<p>咩碳 19:44:30<br>左拥右抱</p>
+<p>咩碳 19:45:02<br>雄小只：这么大 绝对能生好多</p>
+<p>【可以写h文】</p>
+<ul>
+<li><p>“真的很不想把你拉入黑名单，明明遗书里都写好给你的祝福了。”「」<br>“不用太自责，我们就是被设计成这样的。”</p>
+</li>
+<li><p>【虫三转过来】突然想起 @3 上一个王学家，写白团（GrimmPale）的时候，写团长给白王演出示爱，写团长给这一幕起名为 “A King and A Fool”，演出内容是团长和陛下的影子跳起舞，然后台下的白王感动得热泪盈眶 ——  <br>这场景要是放我家：我家团长虽然可能是一时真心，我家陛下绝对会一下子就毛了：“你说谁是 Fool？你说谁是 Fool？” 然后和（因为觉得把陛下惹毛很好玩所以虽然知道 King 是指的陛下但还是为了找乐子故意惹毛陛下的）团长吵了起来。  <br>团长（微笑）：“您猜。”  <br>陛下（把剧本砸向团长）：“你故意气我的吧格林？”  <br>团长（闪避）：“话不能这么讲，您是个国王，我也是个国王，您看，指不定说的是谁呢？”  <br>陛下：“那你指的是谁？”  <br>团长（微笑）：“您猜。”<br>陛下（眯起眼睛，碎碎念）：“一山容不得二虎，一国容不得二主 ——！”（起身，先发制人，作势谋杀）  <br>团长（笑得像个五百年的老妖精）：逃  </p>
+</li>
+</ul>
+<p>懂了，是因为我把陛下带自卑了。害，真对不起国王陛下。 </p>
+<p>基友：陛下应该自信才对：“格林啊，其实你没那么蠢的”</p>
+<ul>
+<li><p>“不知道她打字突然带过来奇奇怪怪的口癖，一看就知道是在外面鬼混”</p>
+</li>
+<li><p>请告诉我为什么他这么可爱（递话筒）</p>
+</li>
+<li><p>前一天因为太困很早倒头就睡了，第二天惊醒，一边慌张一边淡定：“让我看看我都错过了什么”</p>
+</li>
+<li><p>关于细思极恐：啊！刚刚突然想到一个这种会让人感到害怕的可能理由 就是在想这个事情的时候以及在想出答案的时候都是一个人独自思考 所以会很无助很有代入感和冲击力 像这类故事如果把答案直接写在后面其实效果会差很多</p>
+</li>
+<li><p>押韵的话都是真理</p>
+</li>
+<li><p>12、“杀死、 击杀”等相关词语，修改为“击败”，“死亡”修改为“消亡”;<br>13、 “酒、酒精”等相关词语修改为“饮料”，“酒瓶”改为“玻璃瓶”。</p>
+</li>
+<li><p>5、新增双人动作擦汗，部分需要通过拥抱完成的任务也可以通过擦汗完成，同时，以下动作仅允许异性使用:拥抱、献花、安慰、吃美食、背靠背、壁咚、公主抱、小可爱、背宝宝、手牵手、抱大腿、相互依偎、亲亲、比心心、按摩、深情对视。</p>
+</li>
+<li><p>当你觉得一件事很奇怪但你周围的人或权势者却似乎都很认可的时候，想象一下历史书会怎么批判这个事件，它会让你豁然开朗，皆醉独醒。</p>
+</li>
+<li><p>如果中国有朝一日变了颜色，变成一个超级大国，也在世界上称王称霸，到处欺负人家，侵略人家，剥削人家，那么，世界人民就应当给中国戴上一顶社 会帝国主义的帽子，就应当揭露它，反对它，并且同中国人民一道，打倒它——邓小平，1974年在联合国发言</p>
+</li>
+<li><p>“散了散了”，好喜欢我自己自言自语说这句话，感觉陛下他们都陪着我一样，好幸福。  </p>
+</li>
+<li><p>看到一个梗：儿子和女友私会没想到被爸爸看见了，然后爸爸莞尔一笑:没事，这是咱两之间的小秘密。  <br>然后，妈妈问儿子脖子上为什么会有草莓印，儿子脱口而出：这是我和爸爸之间的小秘密。  </p>
+</li>
+<li><p>要是外星人现在看见这样的地球 会不会远远的感觉很漂亮和崇高啊</p>
+</li>
+<li><p>好帅，就，因为没办法的事情必须装b很帅，就，很帅。  <br>车内乱作一团，男人大吼一声，”都给我安静！”，随后用低沉的平静嗓音说道，”引擎，发动。”  </p>
+</li>
+<li><p>抢夺 -》化为己用</p>
+</li>
+<li><p>艹 我刚刚突然双指单击A4纸想要回退我用的碳素笔写的字。</p>
+</li>
+<li><p>艹 突然想起高中看一个日番《永生之酒》里面一个异形鬼贴着飞驰列车的底盘爬，遇到同样偷偷钻到车底下逃票乘车 来查血案的主角团之一的假小子 然后弹幕就有人刷接下的对白是异形鬼对着假小子说“检票啦<del>”给我笑得 结果下一秒tm鬼真的说的是“检票啦</del>”我就瞬间？？？ 最绝的是 turns out， 异形鬼就是一脸路人炮灰相的（萌新）检票员 其实鬼的设定不是特别凶 他当时也只是想吓一下假小子</p>
+</li>
+<li><p>天分这个词，有的人沾沾自喜，没有的人争先恐后。我越来越不相信天分了，毕竟人生下来只是一块肉球，有的敏感些，有的迟钝些。“天分”从何时算起？都是早先的教育和基因造成的罢了，说得好像都是得来全不费工夫一般，让人趋之若鹜，怎么可能有果无因？  </p>
+</li>
+<li><p>看到说翻译是一种艺术，艺术家的天赋一定意义上是“敏感”（当然还有其他成分，但是敏感是艺术源泉）</p>
+</li>
+<li><p>时间辜负我，该快的时候太慢，该慢的时候太快。  </p>
+</li>
+<li><p>写洗头妹写得很好的….会不会真的是洗头妹..狐狸会不会就是学剧作的啊。只要把别人默认为专家，心里就会好受许多。但后果就是，一旦对方不是专家，我就会更加难受。  </p>
+</li>
+<li><p>我在家用地暖暖虫虫，把虫虫都暖活了。本来都想扔了 但可能是陛下告诉我暖一暖就好了 就好了</p>
+</li>
+<li><p>一边害怕着无法做出贡献，一边害怕着做贡献。  </p>
+</li>
+<li><p>于是她开始害怕那些她忘掉的东西——对于一个自豪于自己聪慧的人而言，她发现自己的无知实在是太过不堪。  <br>会不会我的脑子已经不够灵敏了？会不会我已经无资格侍卫白宫了？我最近确实总是无法想到一些好的词语，课堂的知识过目即忘。    </p>
+</li>
+<li><p>我看到这门本科上过的课是我不太喜欢的老师带（也是可以的，能让我也不喜欢）  <br>我感觉，唉，这生活还能给我洗一洗吗？  <br>turns out，这门课他们私底下换老师啦！而且上的课还很不错！不是我想象的“重复造轮子”！  <br>或许那个人说的是真的呢。  </p>
+</li>
+<li><p>艹，我的门。我的门因为外面太吵了而自动关上了（外面人各种大力关门导致气流导致风把门吹上）</p>
+</li>
+<li><p>“你看你轻松就和陌生人打交道，不像我，肯定不是I”<br>“太I了不好”  <br>“？？？我只是说你不I，你看自己反驳不了就开始为自己辩护了是不是，你明明知道我说这句话就是想表达我比你I，你为了为自己辩护还不惜把我踩在脚底下？一个事实导向的判断在你这里动不动就变成价值导向，还能不能好好聊天了？友尽！”    
+ </p>
+</li>
+<li><p>每次一想到身边的每个人都会有一些这样那样的（我不敢想象的）个人重大缺陷和问题，就感觉好神奇:比如不会跳绳，不会骑自行车，对鸡蛋过敏，对阳光过敏之类的。（其实也不算很大哈）  </p>
+</li>
+<li><p>武器会随着主人改变形态；武器也有自己的性格偏好和想法。</p>
+</li>
+<li><p>贴上/附上/凑上嘴唇</p>
+</li>
+<li><p>就如果是我的话，我就只会说我找了好久都没找到，我很自责，会去形容狗狗有多么可怜，而不是去形容自己有多么努力。就，有种为自己开脱的感觉。</p>
+</li>
+<li><p>“研究生跳楼也不敢跟导师摊牌，被疫情逼到跳楼也不敢上街散步，劣根性了属于是”</p>
+</li>
+<li><p>唉 好怀念在家里 我爸给我洗好梨 还让我放一会儿把水放干 我在这里都得自己洗</p>
+</li>
+<li><p>“还好在我极度抑郁的时候，知乎给了我希望,”——兄弟你不用再说了 差不多得了</p>
+</li>
+<li><p>“生者已矣 逝者坚强”——tm在导师-研究生的纯科研工作环境（非爆炸）里能出现这种感慨就真的挺感慨的</p>
+</li>
+<li><p>“他死去的那一刻，我（的世界）突然被撕裂为两个，其中一个我继续（幻想着）和他在一起生活，只有另一半剩下的我留在了冰冷的现实。”——有感于没报考浙大夏令营后悔。至今感到真实的我现在生活在浙大。    </p>
+</li>
+<li><p>“如果你说他会在我们上床之前明确计算出孩子的出生日期，以“为孩子争取一个最好的出生季节”为由拒绝和我做爱，我一点都不会惊讶。”</p>
+</li>
+<li><p>每次我突然爆发，都是因为我提前预想了一个你惹我生气的场景，我生气了，开始想我应该怎么处理这个场景（通常就是超级生气，怒吼，抢夺之类的），但由于你还没有实现这个预言，我就会忍住，然后一旦你实现了我的预言，我就会突然火山爆发，嗯，到吓你一跳的程度。就感觉，我也不知道为啥，可能是我忍住怒火某种意义上是相信你不会这么过分吧，结果你就是背叛了我的信任。    
+  </p>
+</li>
+<li><p>您的登录环境存在异常，为保护您的安全，您已被击毙。  </p>
+</li>
+<li><p>我就是那种，在和朋友一起对峙反派被逼到绝境，反派威胁我们加入darkside，否则就发配去西伯利亚的时候，我会考虑到 混进反派 将来能去保护朋友而选择加入（并且让朋友大喊骂叛徒），但随后就在反派的基本能力测验中被KO的那种人 我很抱歉  </p>
+</li>
+<li><p>我去？为什么我的国旗生了个小旗子—— 哦 不会是你的旗子吧 ——简化一下 你和我的旗子生了个小旗子</p>
+</li>
+<li><p>等等，低级动物没有多巴胺分泌？所以不会depressed？  </p>
+</li>
+<li><p>友谊垄断</p>
+</li>
+<li><p>“唉，骂不了别人，只能通过狠狠骂自己来骂别人。”  </p>
+</li>
+<li><p>看到一个关于有爱语言差异的短视频，为了不费事放进站子就总结成文字吧。就，德语，我去，人家英语和其他语言都那么水灵灵的，就德语…  </p>
+</li>
+</ul>
+<p>算了,我放进来吧。  <br>刷新。  </p>
+<div id="dplayer9" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer9"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/media/RPReplay_Final1634970398_Trim~1.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
+<div id="dplayer10" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer10"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/media/RPReplay_Final1634970226~1.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
+
+<ul>
+<li>这天晚上她还是有说有笑地和她的朋友告了别，约了明天的饭。到了晚上，她突然回想起今天中午她那么轻易就侮辱了自己的事。“对啊，如果她都这样对我了，我还把她当什么朋友？”，于是她愤怒地和她绝交了。</li>
+</ul>
+<ul>
+<li><p>除了扇脸 还有什么斯文的进攻方式？暗中使绊子，以及眼神攻击，言语攻击…想找一个斯文的物理伤害。下毒？法术？  <br>话说我还从来没被人扇过脸呢。  </p>
+</li>
+<li><p>不知道为什么，总觉得很喜欢“小学妹~”这个说法，可能是因为其中蕴含着的“不用负责”“受人照顾”的意味吧。</p>
+</li>
+<li><p>我醒了，我大大的醒了。</p>
+</li>
+<li><p>“有些话在我大声说出来之后才感觉确实很不对劲”“现在我说出来了，确实听上去很糟糕。”</p>
+</li>
+<li><p>12:11:29<br>宿舍里就跟闹了耗子一样…<br>12:11:54<br>我都不敢出去  <br>不是，都好好的呆在自己房间不好吗…  </p>
+</li>
+<li><p>真事。<br>话说卢瑞恩去校食堂吃饭，在盛汤的地方遇见了来盛汤的小姐姐。<br>小姐姐：……<br>卢瑞恩：……<br>卢瑞恩：我帮你盛汤<br>小姐姐：谢谢<br>卢瑞恩：我走了<br>小姐姐：嗯<br>盛完两份汤，卢瑞恩拿起一份走了，小姐姐端起另一份。本来这就应该是故事的结局，小姐姐想，但小姐姐眼见卢瑞恩走向自己要去的方向——他竟然拐向了右边。她突然回想起似乎在放自己托盘的时候，自己旁边的座位确实有一个未知身份的男士背包。这让她心中升腾起些微强烈的不安。<br>在卢瑞恩后面十步远的位置，她眼睁睁看见前面的卢瑞恩端着盘子坐到了自己旁边的位置。一阵草泥马在脑内飞驰，小姐姐被气笑了。她绕过了本可以走进去的座位入口，因为卢瑞恩正坐在那边。她想直接拿起饭菜走人，但是手上还端着汤。距离不可避免之事越来越近，她迂回穿行，想着放弃这顿饭的可行性，但无人来吃的饭菜实在太过可疑，她最终还是全副武装坐到了那个位置。<br>小姐姐放下卢瑞恩刚给她盛的汤，思考着如何圆滑地解释自己的到来——她想不出来。卢瑞恩一扭头，看见了小姐姐，他睁大眼睛。情况危急，小姐姐已经无路可退，两虫异口同声——<br>卢瑞恩：诶，这么巧<br>小姐姐：你也坐这啊<br>卢瑞恩本只是想表达一下经历巧合的欣喜——他本应该闭上嘴的，但社交地狱之门一旦被开启便再也关不上了。他突然意识到自己似乎确凿再也无话可说。但在如此近的距离，总归是要有一个人来摸开这扇门的。小姐姐礼貌地笑笑，拉出椅子，让塑料发出刺耳的吱啦声。卢瑞恩无话可说。小姐姐坐了下来，把托盘拉得近了些，拿起筷子夹菜。卢瑞恩依旧无话可说。卢瑞恩思索片刻，也开始低头夹菜。  <br>两个座位陷入了死亡的寂静中。     <br>然而故事依旧没有结束。5分钟后，小姐姐抬起头看见姗姗来迟的陛下，翩然坐在了卢瑞恩对面。对此，小姐姐没有悲伤，她已经社交麻木了。目睹两虫之盛况，即便格局打开如陛下也认真思索了片刻——    <br>陛下：诶，这么巧  <br>小姐姐礼貌地笑笑，同时礼貌地想起刚刚路过卢瑞恩的时候，她似乎确凿听到谁说了一声，“这里有人了”。对于欧亨利的剧情，她无槽可吐。    <br>那厢卢瑞恩和陛下三言两语之间便开始攀谈甚欢，小姐姐放心地刷起了手机。她决定，吃完饭离开时的社交环节到时再担心——她可以吃一个中午。    </p>
+</li>
+</ul>
+<p>ps.卢瑞恩和陛下走的时候还分别和小姐姐说了声“我先走了”。  <br>pps.这件事的主角可以改成互相还不怎么熟悉的甜甜君臣组。  <br>ppps.上一条就是说卢子虽然想搭搁陛下，但苦于找不到机会。  </p>
+<ul>
+<li><p>每次我想社交的时候，如果我唯一的朋友不理我，那么我就会想找一个新的朋友聊（如果有机会）。然后我那个朋友回来之后我又会对她逐渐冷淡，感觉这样的自己很不好。非常不好。  </p>
+</li>
+<li><p>翻译概论圈圈1：If you have wide and keen interests and activities in which you can still be effective, you will have no reason to think about the merely statistical fact of the number of years you have already lived, still less of the probable brevity of your future.（如果你兴趣广泛，仍积极投身于各类活动，并且在其中能发光发热，那么你无需留恋那些已经逝去的岁月，也不会去考虑未来是否宛如一瞬。）  <br>proper recipe（灵丹妙药）</p>
+</li>
+<li><p>刷新看猴子认错妈</p>
+<div id="dplayer11" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer11"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/media/RPReplay_Final1633345077~1.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script></li>
+<li><p>读《肠子》有感：不知为啥现在部分恐怖小说分不清恐怖和恶心（stiff<br>虽说恐怖可以包含恶心，恶心有时也联想出恐怖，但是不能塞给我一个纯粹恶心小说硬说它是恐怖小说叭</p>
+</li>
+</ul>
+<p>恶心是：“呕——”或者“噫，”<br>恐怖是：“啊！！！”或者“呜呜——”</p>
+<p>恶心是：看见瘟疫<br>恐怖是：看见辐光</p>
+<p>恶心是：看见楼下半边脸无了的僵尸抬起脸向你点头致意<br>恐怖是：意识到那个僵尸是在数你楼层数</p>
+<p>恶心是：回忆时会记起恶心画面并皱眉<br>恐怖是：回忆时会记起恐怖事件并躲在衣柜里</p>
+<ul>
+<li><p>哦对了 麒麟小脚是为了不踩到花花草草 我寻思着那你为啥不飞呢</p>
+</li>
+<li><p>“尴尬了！某景区紫霞仙子扎堆，网友：这是捅了紫霞仙子的窝了吗”</p>
+</li>
+<li><p>忘了提没提过，就是郭敬明喜欢用各种潮流名词（服装、用品品牌名字等），提升格调。  </p>
+</li>
+<li><p>emm。为什么老派网友总喜欢带一个图…带就带吧，还通常图文无关…尤其是提问的，难道是支付答费？ </p>
+</li>
+<li><p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/IMG_7647(20210901-064825).PNG" alt="一个细节"></p>
+</li>
+<li><p>按下复制/剪切键后总觉得手（鼠标）上长了个东西。 </p>
+</li>
+<li><p>未成年（包括没见过世面的人）会<strong>特别</strong>喜欢用假大空的（基本上是他们不懂的）词语来描述及说话。这些词汇包括但不限于：杀人、罪恶、（省略所有中二词汇）、政变、佛魔、屠尽…中二的先不讨论，他们（佯装）正经的时候也会出现这种问题，究其原因是因为他们不懂得深刻含义，词语使用错误，让大人看了不知所云。  </p>
+</li>
+<li><p>降维打击；可以表述成3维→2维（3维被打击成2维），也可以表述成，站在4维来打击3维。随着它的被出圈玩梗，它的光环（也可能根本没有）逐渐消失，留下的是大众能够理解的水平，而不是其中蕴含的专业性深意。  <br>…害，其实只是想存一下这个词，致敬一下万恶之源。  <br>对，咩碳的目标是能创造出万恶之源。  <br>即便不能在现实中创造，也想在自己的小世界里创造！  </p>
+</li>
+<li><p>emm充满想象力的人，会不会被说话者轻易挑逗（小黄文情境下）…？<br>反正陛下是不会的，他老人家老直男了。</p>
+</li>
+<li><p>OmenSight里，小老鼠就不耐烦拨拉一下然后咒语就生效了，在想能不能写念咒只是过场程式，其实可以不做的，就是摆摆架子意思意思、  <br>嗯，感觉他们也有点这个意思。就是意思意思、让咒语生效的时候要特别温柔（唱歌），但是当前场景不允许“特别温柔”（怒吼“现在推（箱子）”！！！）。</p>
+</li>
+<li><p>科幻写作的思路：麻雀虽小 五脏俱全<br>刷新看gumball。  </p>
+<div id="dplayer12" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer12"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/media/RPReplay_Final1630067104~1.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script></li>
+<li><p>Omensight的君主（设定）好可爱啊！（虽然很不切实际）  <br>“当我被选中成为君主的时候，我的一切都被夺走了。亲人、朋友…”<br>“我在你身上看到了潜力。以为我能用我被锤炼的方式来锤炼你，所以我囚禁了你，夺走了你的自由。我甚至夺走了你的眼睛，但你没有退却，在我屈服的那种程度，你却依然坚持住了，你比我更坚强。”<br><a href="/p/220d.html#Omensight%E6%96%87%E6%A1%88">自己洗</a></p>
+</li>
+<li><p>其实在说“眼中有xx”、“鄙夷的眼神”的时候，并不是只说眼睛/眼神——只看眼睛你啥都看不出来的——而是“表情”，包括眉毛、鼻子、嘴。  </p>
+</li>
+<li><p>咩碳在织网！咩碳变成蜘蛛了啊哈哈哈哈！  <br>（咩碳不想学习）  <br>（在各个帖子里搭起传送门，像是织网一样）<br>（或许可以给 @Re 的赫拉安排一下？以及为啥大家都那么喜欢黑帮啊）</p>
+</li>
+<li><p>【转三虫贴】我 tm 就吃个罐头。  <br>小手挥得就差最后顺势给果蝇鞠个躬了。  </p>
+</li>
+<li><p>【转虫立方（虫<sup>3</sup>）贴】蚊子是不是有两种模式  <br>一种找死模式 一种溜了模式<br>我吓它一下 它就溜了模式 一会儿又来找死</p>
+</li>
+<li><p>4号，不可以，一个月就会有一个4号；9月4号，不可以，万一明年还要写呢；2021年9月4号，似乎是找到了答案；但是，为什么这会是最终的答案？难道不会存在下一个重复了吗？<del>Vsauce音乐响起</del>在等pencil充电的时候，突然想写一个题目《下一个二零二一年》…emm或者《第二个二零二一年》？…《在一起的下一个二零二一年》？<br><img data-src="http://mebilychen-media.test.upcdn.net/image/E13F35BE6B4524F9BAC67BFC03C03571.png"></p>
+</li>
+<li><p>突然听到我爸（猛男！）打喷嚏的声音好少女好温柔好轻哈哈哈哈或——</p>
+</li>
+<li><p>现在是0:21，有窗外传来的虫鸣交响乐（短促的啾啾+持续的哗啦铃声）、我打字的噼啪声、电脑散热风扇的嗡嗡声。把电脑关掉，虫鸣或许会更清晰一些。我座山雕一般坐在电脑前，嘴里叼着电量20%的pencil，打字。大概有五种虫鸣（这得练听谱），偶尔还伴着蝙蝠（？）的翅膀声和吱吱声。  </p>
+</li>
+<li><p>You usually raise your voice when angry.<br>这个，狐狸（还是谁）写过，陛下生气的时候不会提高声音。这一点，要明显地点出来，而不是单纯只写“他生气地说道”，因为大家默认（大概）是会提高声音的。  <br>可以做一个陛下的情绪研究，探索他不同状态下的反应。  </p>
+</li>
+<li><p>You tend to feel the problems of those close to you as if they were your own.<br>emm，没人和我说过他们的problems。嗯。</p>
+</li>
+<li><p>基友：毕竟两颗头怎么谈恋爱？<br>我：什么都可以谈恋爱  <br>我：不就是处cp嘛  </p>
+</li>
+<li><p>backup plan的backup plan<br>置信度的置信度  </p>
+</li>
+<li><p>尴尬蓝</p>
+</li>
+<li><p>我基友和我爸都是喜欢给别人直播的类型，就是，做和你有关的事情的时候，会详细地和你讲述他是怎么做的，而我和我妈都是默默做完给一个结果。  </p>
+</li>
+<li><p>“不…别…”这种句子，我之前一直“不…不..”，而没想到“不”也可以找到新词。</p>
+</li>
+<li><p>咩碳？想不想用黑童话给陛下写故事？</p>
+</li>
+<li><p>在车上想到刚回来那阵，突然就（想）伸出手，是想抓住那些回忆吗？</p>
+</li>
+<li><p>(看到池塘边有人在钓鱼，)突然就看见从天上垂下一个鱼线拴着一个鱼钩</p>
+</li>
+<li><p>雨痕像不断扭动的蠕虫。</p>
+</li>
+<li><p>有人说“（突然要求你）描述一个你最熟悉的人是最难的”</p>
+</li>
+<li><p>老子的汉语水平还不如有道词典：<br>我：“满是漏洞”  <br>有道：“漏洞百出”<br>我：</p>
+</li>
+<li><p>偷“飞机失事可能引申的玩意”<br><span class="exturl" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzIwNDg1Mzg5L2Fuc3dlci8yMTA4MDMyMzQ2">飞机即将可能失事的时候，空姐真的会发纸和笔来写遗书吗？ - 知乎<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p>白色在阳光照耀下就闪闪发光啊</p>
+</li>
+<li><p>一部分的我永远留在了2021年的夏天：突然想可以用这个做设定，就是像贴纸一样，本来每个人有一叠贴纸，每发生一件里程碑事件，就会在那个时间段贴一张相应的贴纸，最后整个人就会变得千疮百孔，毫无生气/个性。</p>
+</li>
+<li><p>看起来很虐但其实很甜的文：反正我就是相信苦中作乐，越苦就越甜，越苦，（我看到）战胜痛苦的他们就会越幸福。在这里cue一下 @量子恋人。</p>
+</li>
+<li><p>emm用简易方法测量洞穴高度（一开始想到水、光之类的）我为啥就只能想到用竹竿测最高或最低然后其他洞穴靠估算，之后又想到用竹竿捅上面测下面空出高度，然后我就卡壳了，就想不到用气球测……呢？即便我强迫自己不要再优化竹竿方案了，我也想不出新花样了。<br>emm难道是我设定的条件是极简易（即拿即用的，不用二次加工）而气球还需要充气？</p>
+</li>
+<li><p>我想探索下为什么亮灯谜题（就点亮一个它周围就会灭那种的）可以盲过 但是九宫格（也叫华容道）拼图就不行</p>
+</li>
+<li><p>现在是16:31。<br>我仰躺在床上，手指不停地快速交错着，碰触着手机的屏幕——一个qwert键盘，我不会用九键。感到累的时候——确实，手臂悬空的话，小臂肌肉会很累，就像现在这样，感到酸痛，最后会因为拿不住手机而让它掉下来砸脸——我的右胳膊能碰触到毛绒绒的东西——是我的小熊抱枕，每次抱着它都会很安心，很暖和——在陛下出生之前。房间没有开灯，很黑，只有手机屏幕在发出光芒。我眼角的余光能看到黑洞洞的天花板——和一盏熄灭的灯。<br>右耳突然感到一阵瘙痒，我把右手腾出来挠了挠。我换了个位置，侧躺着，眼角能看见陛下的黑眼睛。我缓解着酸痛的左臂，继续码字。<br>16:36分。手机震动了一下，我的手指颤动了一下。1/10的手机屏幕被弹窗占据，微信课题组发来一条消息，说是导师要请吃饭。我不想去，我不想社交。<br>窗外，大卡的声音又开始轰鸣，伴随着一下开关车门的“砰”声。静的出奇，没有任何人的气息，只有野兽的轰鸣。舍友可能都已经离开了吧，太好了。我喜欢一个人呆着。<br>不想起床，于是躺在床上做了这个练习。咩碳加油。<br>大卡的声音依旧没有停下，我很好奇他究竟在做什么。<br>该起床吃饭了。<br>隔壁传来凳子挪动的声音，它发出一声短促的尖叫。<br>不，还没有结束。我抬起头，撑起身子的时候才发现，枕头把我的左耳捂住了，我没有意识到我电扇的呼呼声。现在大卡已经走了，我更能听到风的声音……还有电扇的塑料外壳颤抖的吱吱声。<br>手机好硬好大（艹，想歪了），好重……<br>16:47，该起床吃饭了。</p>
+</li>
+<li><p>什么叫远亲不如近邻:<br>就是恋爱选项里有一个同事和一位王子。两人相比起来，同事总是一副冷冰冰的批判家模样，挑剔我的工作，和我因为意见分歧而吵架；王子却总是温文尔雅、腹有诗书。他虽然是王子，却总是十分耐心地听我的意见。无论怎样，王子自然会更加讨喜。虽然如此，但王子却总是不在身边，自己却逐渐发现，在和同事的“鸡飞狗跳”中我们竟然互相爱慕起来。毕竟冷冰冰的他也会有温柔善良的一面。  <br>所以tm异地恋真的不是骗鬼的吗？  </p>
+</li>
+<li><p>中秋，宇航员回家了，叫：欢迎宇航员回家过中秋，一家人感动大团圆!  <br>中秋，宇航员没回家，叫：感动！中秋节宇航员坚守岗位：家大国更大！  <br>有意思吗？陛下觉得挺没意思的。    <br>夫人：所以你不会国民管理。  </p>
+</li>
+<li><p>想到之前看到一个nga写足控写成gal味儿的 我感触很大 就 我就突然想到 对于一个大家都经验过的体验（例如“这顿饭很香，味道就像小时候吃的鲜虾鱼板方便面”），可以点到即止；但如果是没有经历过的，就需要详细描述，让读者能体验到自己的感受，可以采用白描（就我上次做的练习）的方法。</p>
+</li>
+<li><p>语焉不详…哈哈哈哈哈哈哈哈哈</p>
+</li>
+</ul>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/25%E5%8F%B7%E7%9A%84%E7%B4%A0%E6%9D%90.jpg" alt="25号的写作技巧"></p>
+<ul>
+<li><p>“大国治理就是要用娱乐麻痹民众，没想到竟然有人反其道而行之？”  </p>
+</li>
+<li><p>其实我挺想看奥特曼和人类伙伴的cp… 而不是他们是同一个人</p>
+</li>
+<li><p>“幼年形态”：<br>我：awwwwwww——（嘴角疯狂上扬）</p>
+</li>
+<li><p>“每当想起后悔的往事，梅花便落满了南山。”这句意象可以。但是“梅花落满南山”单独拿出来说就很文青了。</p>
+</li>
+</ul>
+<hr>
+<h1 id="剧本写作"><a href="#剧本写作" class="headerlink" title="剧本写作"></a>剧本写作</h1><p><a href="/p/3b01.html">联动团长</a></p>
+<h2 id="人物构建"><a href="#人物构建" class="headerlink" title="人物构建"></a>人物构建</h2><p><img data-src="https://thescriptlab.com/screenwriting/character/creating-characters/20-character-exercises/"></p>
+<h2 id="关于写作节奏"><a href="#关于写作节奏" class="headerlink" title="关于写作节奏"></a>关于写作节奏</h2><p><span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8xNjI4NTAyMjc=">电影 | 剧本中的故事节拍是什么？<i class="fa fa-external-link-alt"></i></span></p>
+<p><a href="/p/8b70.html#%E6%95%91%E7%8C%AB%E5%92%AA%EF%BC%88%E4%B8%89%E9%83%A8%E6%9B%B2%EF%BC%89">提到的编剧书</a></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuc3R1ZGlvYmluZGVyLmNvbS9ibG9nL3N0b3J5LWJlYXQtaW4tc2NyZWVucGxheS8=">原文-可以看看这个网站，讲电影剧本的<i class="fa fa-external-link-alt"></i></span></p>
+<p><img data-src="https://s.studiobinder.com/wp-content/uploads/2020/07/What-is-a-Story-Beat-in-a-Screenplay-Infographic-of-Index-Cards-StudioBinder.png.webp?resolution=1440,1.7999999523162842" alt="图"></p>
+<p>分两种：  </p>
+<ol>
+<li>Oneshot单发完结</li>
+<li>连载</li>
+</ol>
+<p>一般注意的是两方面：</p>
+<ul>
+<li>叙事节奏：包括情节如何展开，推动快慢，人物情绪如何起伏（可以默认读者情绪会随人物情绪起伏），展示和叙述的比例，动名词（动作和描述）的使用</li>
+<li>篇章节奏：包括词语长短、读音、格式、断句标点、空格、分章分段等，更偏向于音韵那方面</li>
+</ul>
+<blockquote>
+<p>可以拿一些成功IP作为范例来研究一下，看每两个阅读兴奋点之间大约隔了多少章节多少字。<br>我个人对于写作“节奏”的理解，就是作品中大小高潮之间的间隔有多大。如果是节奏慢，意味着为高潮所做的铺垫比较长、细致；如果节奏快，那就是铺垫得言简意赅，突出高潮情节。如果节奏“过快”，则意味着铺垫不够，导致高潮的发生本身令人费解，人物行为缺乏足够的动机，事件的走向没有说服力。<br>写作节奏可快可慢，端是看个人风格和故事的需要。如果只是“快”而非“过快”，也无不妥，只要确保铺垫部分已足够让读者相信高潮情节的合理性即可。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzMxMDk2MDM4NS9hbnN3ZXIvNTg3NTEzMjQ5">Source:Unicorn<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cDovL21lYmlseWNoZW4tbWVkaWEudGVzdC51cGNkbi5uZXQvZG9jL0NvcHklMjBvZiUyMFRoZSUyMFN0b3J5JTIwU3BlZWRvbWV0ZXIlMjBXb3Jrc2hlZXQlMjAlRTIlODAlOTQlMjBTdHVkaW9CaW5kZXIucGRm">The Story Speedometer Worksheet — StudioBinder<i class="fa fa-external-link-alt"></i></span></p>
+<hr>
+<h1 id="写作手法"><a href="#写作手法" class="headerlink" title="写作手法"></a>写作手法</h1><p><span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC83NzEyODA0Mw==">英文的部分写作修辞<i class="fa fa-external-link-alt"></i></span></p>
+<p>之前和基友讨论到对仗、互文和..拍手？？？  <br>好吧 是合掌。  </p>
+<p>互文互辞，是诗歌常用修辞，指上下句其实可以合为一句。它是这样一种互辞形式：上下两句或一句话中的两个部分，看似各说两件事，实则是互相呼应，互相阐发，互相补充， 说的是一件事。由上下文意互相交错，互相渗透，互相补充来表达一个完整句子意思的修辞方法。<br>不以物喜，不以己悲，译为：“不以物喜，不以物悲，不以己喜，不以己悲”，为互文的修辞手法。  <br>烟笼寒水月笼沙，我们应理解为：烟雾笼罩着寒水也笼罩着沙；月光笼罩着沙也笼罩着寒水。如将此句译作：“烟雾笼罩着寒水，月光笼罩着沙”，那就大错特错了，意思怎么也讲不通。</p>
+<p>合掌，一种重复修辞，用于上下联，指同位字表相同意。可以删掉其中一句，不打紧。</p>
+<p><span class="exturl" data-url="aHR0cDovL3d3dy4zNjBkb2MuY29tL2NvbnRlbnQvMTkvMDcyNy8wNi83NzkzMTAzXzg1MTI0NjQ5OC5zaHRtbA==">诗歌的部分修辞<i class="fa fa-external-link-alt"></i></span></p>
+<hr>
+<p><span class="exturl" data-url="aHR0cHM6Ly93ZW5rdS5iYWlkdS5jb20vdmlldy83YTE1ZjRiMWJhNGNmN2VjNGFmZTA0YTFiMDcxN2ZkNTM2MGNiMmNkLmh0bWw=">中文的24写作修辞<i class="fa fa-external-link-alt"></i></span></p>
+<p>比喻 比拟 借代 夸张 拈连 移就 转品 对偶 排比 回环 层递 双关 婉曲 衬托 照<br> 叠现 摹绘 反复 设问 反问 舛互（没有一点声音，只有水声一滴滴落在地上）</p>
+<hr>
+<p> <span class="exturl" data-url="aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTQlQkYlQUUlRTglQkUlOUUlRTYlODklOEIlRTYlQjMlOTU=">百度百科-修辞手法<i class="fa fa-external-link-alt"></i></span></p>
+<p>大类修辞手法共计63种。包括：</p>
+<p>比喻， 白描，比拟（又名比体，分为拟人、拟物），避复，变用，层递，衬垫（衬跌） ，衬托（反衬、陪衬），倒文，倒装，迭音，叠字复叠，顶真（又名顶针、联珠），对比，对偶（对仗、队仗、排偶），翻新，反复，反问，反语，仿词，仿化，飞白，分承（并提、合叙、合说）。</p>
+<p>复迭错综，复合偏义，共用，合说，呼告，互体，互文，换算，回环，回文，降用，借代，设问，歧谬，排比，拈连，摹绘，列锦，连及，夸张，警策，示现，双关。</p>
+<p>重言，重叠，指代，用典，引用，移用，顶真，谐音，歇后，象征，镶嵌，析字，委婉，婉曲，通感（移觉、移就），跳脱，转文。</p>
+<hr>
+<p> 【转自写客】</p>
+<p>一、组合</p>
+<p>在排除动词或形容词作谓语的前提下，用名词、名词短语直接排列组合而成。作用是叠用意象，具有整体美。</p>
+<p>例：1、枯藤老树昏鸦，小桥流水人家，古道西风瘦马</p>
+<p>2、鸡声茅店月，人迹板桥霜</p>
+<p>3、楼外白云，窗前翠竹，井底朱砂</p>
+<p>二、移时</p>
+<p>把古代事物与现代事物“生拉硬扯”组合在一起，以增强感染力。</p>
+<p>例：林冲出身枪棒教师的家庭，是属于小资产阶级的技术员。</p>
+<p>三、空设</p>
+<p>根据表达需要，临时设立一个没有的东西，以获得奇巧生动、幽默风趣的艺术效果。</p>
+<p>例：但我还是照常走，并且说明……他虽然属于绿林大学出身，而杀人又却不很高明。</p>
+<p>四、奇解</p>
+<p>在特定语言环境中，临时赋予一个词原来没有的某种新义而作出奇特的解释，产生网址生动的效果。</p>
+<p>例：没有平凡的工作者，领袖就成了“空军司令”</p>
+<p>五、闪避</p>
+<p>在实际场合，说话者不正面回答别人的问题，利用含义宽泛的概念或不太精确的语言，把话故意说得不明白，不具体，从而达到某个特定目的。</p>
+<p>例：1、大嫂，你别问了，我叫解放军，住在中国。</p>
+<p>六、精细</p>
+<p>在数字运用中，本可以模糊的地方却出人意料地使用十分精确的数据来表达，这故意的精确，独具匠心在特定表达情境中带来模糊数字望尘莫及的效果。</p>
+<p>例：1、孔乙己欠酒店掌柜的十九文钱。（显示潦倒）</p>
+<p>2、祥林嫂的工钱，一千七百五十文。（祥林嫂的勤劳节俭、婆家的刻薄）</p>
+<p>七、错综</p>
+<p>为避免词句的重复单调呆板，有意变换意义相同或相近的词语，使用参差变化的句型，使语言富于变化。</p>
+<p>（一）词的错综</p>
+<p>1、慧眼认英雄，睿目识豪杰</p>
+<p>2、今日的仇，昨日的恨</p>
+<p>3、余杭郡为最，龙隐寺为尤，冷泉亭为甲</p>
+<p>（二）句子的错综</p>
+<p>错木据水，则不若单鹭，历险乘危，则骐不如狐。</p>
+<p>八、返源</p>
+<p>在使用成语时，有意偏离成语的通用义，而返回它的字面义，直到奇特效果。</p>
+<p>例：1、牙刷好，一毛不拔</p>
+<p>2、青蛙对运动的物体明察秋毫，对静止的物体视而不见。</p>
+<p>3、火成岩诞生于水深火热之中</p>
+<p>九、析字（化用）</p>
+<p>利用汉字结构特点，把字的形体离析整合，起到雅俗共赏妙趣横生的作用</p>
+<p>例：1、成都十八子（李）</p>
+<p>2、何处合成愁，离人心上秋（愁）</p>
+<p>3、海动山倾古月摧（胡人）</p>
+<p>十、偏语</p>
+<p>讲述中故意偏离客观实际或事之常理，以不合理但合情的方式来表达某种感情的修辞（即知错说错有意为之）</p>
+<p>例：他年我若为青帝，报与桃花一处开（不能实现的）</p>
+<p>十一、增饰</p>
+<p>先说出一个中心词，后多次为中心词补加修饰限制成分。作用是为了丰富内涵，表义更具体、全面、准确、鲜明，增强语势，强调语境。</p>
+<p>例：1、不能用这样的方式对待人——一个有能力的人，有感情的人。</p>
+<p>2、它像个精灵——高傲的、黑色的、暴风雨中的精灵。</p>
+<p>3、下去试验——一次、两次、十次、几十次的试验</p>
+<p>十二、字示</p>
+<p>即用汉字或符号来表示某种形态，使之形象生动</p>
+<p>例：1、他留着“八”字胡。</p>
+<p>2、这兔子跑出了一个“8”字。</p>
+<p>3、十字路口</p>
+<p>4、S形大街</p>
+<p>十三、示现</p>
+<p>即把非眼前的情形说得如同就在眼前一样</p>
+<p>例：1、（悬想式）只听得轰的一声，一道金光从枕边飞出。</p>
+<p>2、（陈述式）脑海里闪出图画来：深蓝的天空中，挂着一轮明月。</p>
+<p>3、（预言式）春天来了，闭上眼，树上仿佛已满是桃儿、杏儿。</p>
+<p>十四、同字</p>
+<p>即将同一个汉字在上下相应相关语句中重复运用，以增强节奏，使其音韵和谐；表意生动活泼，妙趣横生。</p>
+<p>例：1、勤学习，勤思考，勤实践</p>
+<p>2、踢几脚球，赛几趟车，捉几回迷藏</p>
+<p>3、就是一个高尚的人，一个纯粹的人，一个有道德的人</p>
+<p>十五、析词</p>
+<p>出于表达上的特殊需要，有意把一个合成词临时拆开使用起到某种效果</p>
+<p>例：1、（突出特征）这鲜红如此之鲜，鲜红如此之红</p>
+<p>2、（反映心理）那才真是冤哉枉也</p>
+<p>3、（强化感情）时时想着祖国，念着祖国</p>
+<p>4、（用于讽刺）这里革过一命了</p>
+<p>5、（说理生动）事因难能，所以可贵</p>
+<p>6、（突出个性）这叫做人情，只要是人，就跟他讲情</p>
+<p>十六、转品</p>
+<p>即在具体语言环境中临时改变一个词的词性，产生特殊的表达效果</p>
+<p>例：这事，使全村妇人对于荷花家特别“戒严”</p>
+<p>十七、易色</p>
+<p>即在语言环境中临时改变一个词的感情色彩，使其与原词有相反的意味。</p>
+<p>例：这个“舞弊”的作法，被他发现了</p>
+<p>十八、断词</p>
+<p>在借用现成的成语时，单纯利用其中某一词的含义，而其他词只成了镶嵌进去的装饰，起用来凑足章节的作用，以求得幽默效果（只取原词某一半之意）</p>
+<p>例：1、你就是再嫁，也该嫁个梁上君子</p>
+<p>2、他腰上，挂了个依样画葫芦</p>
+<p>3、他听了，便拿了一把两面三刀追了出去</p>
+<p>十九、舛互（抵牾）（矛盾）</p>
+<p>即对某个事物全部肯定时又部分否定（或全部否定时又部分肯定）肯定是为了突出否定部分，否定是突出肯定部分。或者把两个矛盾的东西放在一起</p>
+<p>例：1、一进草原，什么声音也没有，什么东西也看不见，除了一些忽起忽落的小鸟。（衬静）</p>
+<p>2、他焦急而耐心地等待着，等待着……</p>
+<p>3、有人活着，他已经死了</p>
+<p>4、丑到极处，便是美到了极处。</p>
+<p>二十、错话（飞白）</p>
+<p>在特定语言环境中，故意让人物说错、说白，以起到幽默生动的效果</p>
+<p>例：1、（用词错）阿Q：我也投降了革命党了</p>
+<p>2、（谐音错）这个人很鸡集。（积极）</p>
+<p>这是柿油党的顶子（自由党）</p>
+<p>3、（推理错）总之是你错了，因为我说你错了</p>
+<p>看她艳如桃花，岂能无人勾引</p>
+<p>二十一、桑槐</p>
+<p>表面上说甲，实际上在说与甲相似的乙，以表达特殊的感情。（注，不同于双关，双关是有双重含义）</p>
+<p>例：1、你不分好歹何为地，错勘贤愚枉做天</p>
+<p>2、你们这些土偶木梗，有什么德能</p>
+<p>二十二、曲说</p>
+<p>即用与本意相关的事物，用曲折的语言，转弯兜圈子表达本意</p>
+<p>例：1、整个贾府，只有两个石狮子干净。</p>
+<p>2、它自己撞到我枪口上了。（该死）</p>
+<p>3、他若低头，断然看不到自己的脚尖（太胖）</p>
+<p>4、这些官员，穿着布衣来的，要不了几天，大概会换了皮袍的（蜕变）</p>
+<p>5、看戏看久了，只觉得戏子的脸渐渐有些稀奇：那五官平平的，再也没有什么高低。（疲倦了眼模糊）</p>
+<p>二十三、衬跌</p>
+<p>先用几句话作衬托，然后急速转变跌落，形成对比和反差，起幽默效果。</p>
+<p>例：1、天上飘飘降风雪，街前街后尽琼瑶。有朝一日天晴了，使扫帚的使扫帚，使铁锹的使铁锹。（后面的风格完全不同）</p>
+<p>2、发配在郧阳，见舅如见娘，两人齐泪下，三行。（最后一句两字，一跌，诙谐有趣）</p>
+<p>3、（征文：初恋，心中眼中只有她；热恋，妈妈叫我向东，爱人叫我向西向西；失恋，爱人结婚了，新郎不是我。（男子一往情深，结果竹篮打水一场空。由好跌坏，很有喜剧效果）</p>
+<p>二十四、曲解</p>
+<p>为了表达需要，对某些词语的意思有意地进行歪曲解释，产生幽默效果。</p>
+<p>例：1、周总理：我们中国人就是要走马路。（走马列道路。借曲解妙说。）</p>
+<p>2、我们就是要护短。（保护短文章）</p>
+<p>3、张大千对梅兰芳说：你是君子，我是小人。（你唱戏，动口，我画画，动手。）</p>
+<p>4、纪晓岚称乾隆老头子。（老，万岁；头，元首；子，真龙天子）</p>
+<p>二十五、补正</p>
+<p>即用“不”“或者说”“更确切地说”等词语，连接肯定部分和否定部分。其作用是对肯定部分的补充、扩展、矫正或深化。</p>
+<p>例：1、远远有一排树，不！或者三五株、一株白杨树。（通过数量范围，层递突出语意）</p>
+<p>2、它是没有风的，晴朗而温情的天气，或者说，它是有点风的。（通过补充，矫正反映感知过程）</p>
+<p>3、这是你？这当然不是你！（揭示和强调事物的本质）</p>
+<p>二十六、反饰</p>
+<p>即从反面对某种事物加以修饰、限制，看似矛盾，实为形象。</p>
+<p>例：1、陌生的朋友</p>
+<p>2、无情的情人</p>
+<p>3、含泪的微笑</p>
+<p>二十七、挑脱</p>
+<p>即在表达时，为了表达的表达的需要，让一部分意思含而不露，故意造成句子的不连接、句意的不完整，达到言尽而意不尽的效果。（不是省略）</p>
+<p>例：1、原来如此！……（抒含蓄深沉的感情）</p>
+<p>2、吃了么？好了么？……（刻画人物性格）</p>
+<p>3、可恶，然而……（刻画人物性格）</p>
+<p>4、救救孩子……（深化主题）</p>
+<p>二十八、互文</p>
+<p>即为了使诗文的语句显得精练工整，在彼此相对的文句中，常使前后词语互相呼应，在意义上互相补充。（即两物各说一半）</p>
+<p>例：1、不以物喜，不以己悲</p>
+<p>2、将军百战死，壮士十年归。</p>
+<p>3、新妇车在前，府吏马在后。</p>
+<p>4、左手持刀尺，右手持绫罗。</p>
+<p>二十九、诡谐</p>
+<p>即用看似荒谬的话语来表达某种特殊的意义，达到似是而非、似乎荒谬其实合理的效果</p>
+<p>1、寓庄于谐，用轻松的方法来解决严肃的问题，比一本正经的说法更让人接受。</p>
+<p>例：我说你真是糊涂一时，你要投河，好该先打个电话给我，我们再商量商量。</p>
+<p>2、无中生有，用显然错误的“有”，暗示本来的“无”</p>
+<p>例：有治女人妒病的方子吗？有，叫，“疗妒汤”，一剂无效吃十剂……</p>
+<p>3、反客为主，变被动为主动，把矛头指向对方</p>
+<p>例：谁收了人家的礼，谁就跟人家去。</p>
+<p>三十、顶释</p>
+<p>即先扼要概括地说出事物的总性质、总状态、总印象，然后用顶真形式对这一事物在程度上进行说明或进一步描述，以便把事物描述得更鲜明，把感受表达得更充分具体</p>
+<p>例：1、她的歌真优美，优美得像……一样。</p>
+<p>2、他长得白，白得跟……一样。</p>
+<p>三十一、激问</p>
+<p>无疑而问，表达一种超常感情，激动心理。（一般有完整问句标志）</p>
+<p>例：1、（赞问）明月几时有？</p>
+<p>2、（怨问）何事长向别时圆？</p>
+<p>3、（斥问）相煎何太急？</p>
+<p>三十二、借对</p>
+<p>即借音，借义来构成对偶，使语言含蓄，别有情趣</p>
+<p>例：1、（借音）谈笑有鸿儒，往来无白丁。（借“鸿”作红，与“白”对）</p>
+<p>2、（借义）酒债寻常行处有，人生七十古来稀（借“寻常”为数量词与“七十”相对）</p>
+<p>3、（借义）正望鸡鸣天下白，又惊鹅来海东青（“鹅”为“俄国”）玉玺不缘归日角，绵帆应是到天涯（“日角”本指李渊，借“角”与“涯”对）</p>
+<p>三十三、赘语</p>
+<p>为表达需要，有意使用一些仿佛与上下文陈述内容无关的多余的文字，来表达意在言外的效果，表达特定的思想感情</p>
+<p>例：1、这是我的叔叔，父亲的弟弟，我的亲叔叔（表达无尽的悲哀与无奈）</p>
+<p>2、听说雷峰塔倒掉了，听说而已，我没有亲见。（表达对塔倒漠不关心）</p>
+<h1 id="写作技巧"><a href="#写作技巧" class="headerlink" title="写作技巧"></a>写作技巧</h1><p>（转《无tag脑洞》贴）或许写作中要体现的绘画层次就是时间？和空间？要体现出来？像是聚光灯，不能只打在主角身上？</p>
+<p>发现自己有一个很大的缺陷，就是注意不到细节。玩Outer Wilds的时候，注意不到文本的细节（包括文字轻微变动和陌生概念的区别和对应）（还被人嘲“一看你玩游戏就不看文本”），可能是因为个人能力问题，也可能是因为当时已经有些生气了（导致心不在焉），也可能是因为视觉图像和六维操作太复杂了，分散了注意力。  <br>以及，在AO3上看见一个王学家，（忘了是不是狐狸），她写得东西超级超级细致，我问她是不是专门留心注意过或者在网上查了参考，她说没有，就是自己现写的。细致到什么程度，就是我看了之后能学到东西，能抄的这种程度。例如，写关于舞台剧团的时候，会写后台的各种情况，就，像科幻，每一步都写得符合道理和情境，像是很多年沉淀下来的历史一样（双层奶茶的茶水聚沉），写得非常细致（现在想想可能是因为我没有留心观察并思考原理吧，以后要多多留心）。<br>不过无论怎样，自己确实是有差强人意的地方，要多加注意和刻意练习。  <br>在上面开个专栏贴发现的小细节们吧。  </p>
+<div class="note info no-icon">
+            <h4 id="9-3让不入流的王学家咩碳来教你怎么优化句子吧！"><a href="#9-3让不入流的王学家咩碳来教你怎么优化句子吧！" class="headerlink" title="9.3让不入流的王学家咩碳来教你怎么优化句子吧！"></a>9.3让不入流的王学家咩碳来教你怎么优化句子吧！</h4><ol><li>变得文化。把口语化词转换为书面语。善用搜索引擎。善提离谱问题。（甚至可以尝试能否把一种复杂描述查出一个单词来代替）  </li><li>细节展开。</li></ol><p>例如，</p><ul><li>这件事是不可能的。<br>↓ “不可能”怎么更加“文化”一点？</li><li>这件事是无望的。<br>↓ “无望”如何进行展开描述？  </li><li>这件事是无望的。他想，就像那只永远跳不出玻璃罐的跳蚤，却仍在心里跳个不停。<br>——王学家咩碳会继续在下个星期五带着误人子弟的小tip回来！</li></ul>
+          </div>
+
+
+
+
+<h2 id="关于接吻"><a href="#关于接吻" class="headerlink" title="关于接吻"></a>关于接吻</h2><p>写快乐国王的时候突然想看看怎么描写接吻。（其实主要是想看看“吻上嘴唇”有没有更好的表达方式和词语。） </p>
+<p>先上个反例？  </p>
+<blockquote>
+<p>她吻了我，唇那么密，如玫瑰色的黄昏小雨。<br>–《呕吐》</p>
+</blockquote>
+<p>我来形容一下我看到这个句子时的感受。  </p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/meme/%E8%AE%A9%E6%88%91%E6%9D%A5%E5%BD%A2%E5%AE%B9%E4%B8%80%E4%B8%8B.jpg"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/IMG_8950.GIF"></p>
+<p>另外不仅是jojo，那一句我还想到了密集的嘴唇。  </p>
+<hr>
+<p>开始正题。  </p>
+<blockquote>
+<p>我把你紧紧地搂在怀中，吻你亿万次，像赤道上面那样炽热的吻。<br>–拿破仑</p>
+</blockquote>
+<blockquote>
+<p>云和枝在黄昏里接吻，海棠树望着还未把江山坐稳的春天，疑惑道：不知为什么，看见你就想开花了。<br>–味於《悠悠沉吟》</p>
+</blockquote>
+<p>OH SHIT     </p>
+<blockquote>
+<p>他探身掸了掸烟灰，别过头来吻她，一只鹿在潭边漫不经心啜了口水。额前垂着一绺子头发，头向她俯过来，像乌云蔽天，又像山间直罩下来的夜色。她晕眩地坠入黑暗中。</p>
+</blockquote>
+<p>–张爱玲《少帅》</p>
+<p>张爱玲真写的不错，不过容易直接看到“口水”产生不好联想.我个人喜欢这种，啊特别理性的爱。  </p>
+<blockquote>
+<p>慢地，慢慢地，他俯身，吻上了她苍白的唇。她并不反抗，只是一动不动，脸上的不知是冷漠还是惊愕的表情。他浅浅地吻着她，轻轻地吻着她的唇，然后，更深入地探索。</p>
+</blockquote>
+<p>？为什么一定要探索</p>
+<blockquote>
+<p>“光高于所有悬空的事物”他发现，恋人们接吻时，身体是半透明的。</p>
+</blockquote>
+<p>–胡弦《灯》</p>
+<p>不透明一点的话会把别人变成狗.  </p>
+<blockquote>
+<p>我的嘴唇承受着慵懒而凝重的力量，被温热紧紧地吸引住了。我的嘴唇打皱了，麻痹了，显露出危险的神色，抑或连神仙都不敢正视。<br>就这样，我感觉另一个嘴唇附着在我的嘴唇上了。<br>–三岛由纪夫《春子》</p>
+</blockquote>
+<p>“附”用的很不错诶！</p>
+<blockquote>
+<p>我跑上门，打开楼梯。说完睡衣，穿上祷告，关上门，钻进灯。所有这一切都是因为，道你晚安时你给我的一吻。<br>–《吻》</p>
+</blockquote>
+<p>我第一次竟然没看出端倪.我看到“钻进灯”之后才仔细看的句子。</p>
+<h1 id="喜欢的文风（兼Trigger）"><a href="#喜欢的文风（兼Trigger）" class="headerlink" title="喜欢的文风（兼Trigger）"></a>喜欢的文风（兼Trigger）</h1><h2 id="张爱玲"><a href="#张爱玲" class="headerlink" title="张爱玲"></a>张爱玲</h2><p>感觉或许是，不是自己迎合别人的Ne来让别人接受自己，而是想办法用自己的语言让别人接受自己。</p>
+<p>虽然但是，不太白话…  </p>
+<blockquote>
+<p>于千万人之中遇见你所要遇见的人，于千万年之中，时间的无涯的荒野里，没有早一步，也没有晚一步，刚巧赶上了，那也没有别的话可说，惟有轻轻地问一声：“噢，你也在这里吗？”<br>——张爱玲《爱》</p>
+</blockquote>
+<blockquote>
+<p>有些傻话，不但是要背着人说，还得背着自己。让自己听见了也怪难为情的。譬如说，我爱你，我一辈子都爱你。<br>——张爱玲《倾城之恋》</p>
+</blockquote>
+<blockquote>
+<p>生命是一袭华美的袍，爬满了蚤子。<br>——张爱玲《天才梦》</p>
+</blockquote>
+<blockquote>
+<p>回忆这东西若是有气味的话，那就是樟脑的香，甜而稳妥，像记得分明的快乐，甜而怅惘，像忘却了的忧愁。<br>——张爱玲《更衣记》</p>
+</blockquote>
+<p>这句再优美一点就文青了。  <br>其实文青，不就是一群人或一个人不理解另一个人的感受，没有另一个人的体验吗？  </p>
+<blockquote>
+<p>一恨鲥鱼多刺，二恨海棠无香，三恨《红楼梦》未完。</p>
+</blockquote>
+<p>感觉就，Se 和 Ne都很高。我特别缺Se，然后词汇量也很少。有些句子明明一个词，一个用典就能表述。  </p>
+<blockquote>
+<p>若只是喜欢，何必夸张成爱。若只是多心，何苦虚张成情。若只是微凉，何必虚夸成殇。若只是微苦，何必虚说成殇。若只是多情，何苦句句是恋。若只是心痛，何必说成心碎。若只是神伤，何必虚说成怨。</p>
+</blockquote>
+<blockquote>
+<p>我一直想从你的窗户里看月亮。这边屋里比那边看得清楚些。之前的遮遮掩掩缥缥缈缈其实都是那么撩人。只有这么躲躲闪闪地恋爱，才会让人觉得深刻。——《倾城之恋》</p>
+</blockquote>
+<blockquote>
+<p>爱上一个人，心会一直低，低到泥土里，在土里开出花来，如此卑微却又如此欣喜。</p>
+</blockquote>
+<blockquote>
+<p>恋爱着的男子向来是喜欢说，恋爱着的女人向来是喜欢听。恋爱着的女人破例地不大爱说话，因为下意识地她知道：男人彻底地懂得了一个女人之后，是不会爱她的。——《封锁》</p>
+</blockquote>
+<blockquote>
+<p>彼此都有意而不说出来是爱情的最高境界，因为这个时候两人都在尽情享受媚眼，尽情的享受目光相对时的火热心理，尽情的享受手指相碰时的惊心动魄。一旦说出来，味道会淡许。</p>
+</blockquote>
+<h3 id="文风启动开关（临摹）"><a href="#文风启动开关（临摹）" class="headerlink" title="文风启动开关（临摹）"></a>文风启动开关（临摹）</h3><p>1、</p>
+<p>在故事的开端，葛薇龙，一个极普通的上海女孩子，站在半山里一座大住宅的走廊上，向花园里远远望过去。薇龙到香港来了两年了，但是对于香港山头华贵的住宅区还是相当的生疏。这是第一次，她到姑妈家里来。姑母家里的花园不过是一个长方形的草坪，四周绕着矮矮的白石阑干，阑干外就是一片荒山。这园子仿佛是乱山中凭空擎出的一只金漆托盘。园子里也有一排修剪得齐齐整整的长青树，疏疏落落两个花床，种着纤细的英国玫瑰，都是布置谨严，一丝不乱，就像漆盘上淡淡的工笔彩绘。草坪的一角，栽了一颗小小的杜鹃花，正在开着，花朵儿粉红里略带些黄，是鲜亮的虾子红。墙里的春天，不过是虚应个景儿，谁知星星之火，可以燎原，墙里的春延烧到墙外去，满山轰轰烈烈开着野杜鹃，那灼灼的红色，一路摧枯拉朽烧下山坡子去了。杜鹃花外面，就是那浓蓝的海，海里泊着白色的大船。这里不单是色彩的强烈对比给予观者一种眩晕的不真实的感觉——处处都是对照，各种不调和的地方背景，时代气氛，全是硬生生地给掺揉在一起，造成一种奇幻的境界。</p>
+<p>山腰里这座白房子是流线形的，几何图案式的构造，类似最摩登的电影院。然而屋顶上却盖了一层仿古的碧色琉璃瓦。玻璃窗也是绿色的，配上鸡油黄嵌一道窄红的边框。窗上安着雕花铁栅栏，喷上鸡油黄的漆。屋子四周绕着宽绰的走廊，地下铺着红砖，支着巍峨的两三丈高的白石圆柱，那确是美国南部早期建筑的遗风。从走廊上的玻璃门里进去是客室，里面是立体的西式布置，但是也有几间雅俗共赏的中国摆设。炉台上陈列着翡翠鼻烟壶与象牙观音像，沙发前围着斑竹小屏风，可是这一点东方色彩的存在，显然是看在外国朋友们的面上。英国人老远的来看看中国，不能不给点中国给他们瞧瞧。但是这里的中国，是西方人心目中的中国，荒诞、精巧、滑稽。</p>
+<p>——《沉香屑：第一炉香》</p>
+<p>2、</p>
+<p>葛薇龙在玻璃门里瞥见她自己的影子——她自身也是殖民地所特有的东方色彩的一部分，她穿着南英中学的别致的制服，翠蓝竹布衫，长齐膝盖，下面是窄窄跨脚管，还是满清末年的款式；把女学生打扮成赛金花模样，那也是香港当局取悦于欧美游客的种种设施之一。然而薇龙和其他的女孩子一样的爱时髦，在竹布衫外面加一件绒线背心，短背心低下，露出一大截衫子，越发觉得非驴非马。</p>
+<p>薇龙对着玻璃门扯扯衣襟，理理头发。她的脸是平淡而美丽的小凸脸，现在，这一类“粉扑子脸”是过了时了。她的眼睛长而媚，双眼皮的深痕，直扫入鬓角里去。纤瘦的鼻子，肥圆的小嘴。也许她的面部表情稍嫌缺乏，但是，唯其因这呆滞，更加显出那温柔敦厚的古中国情调。她对于她那白净的皮肤，原是引为憾事的，一心想晒黑它，使它合于新时代的健康美的标准。但是她来到香港之后，眼中的粤东佳丽大都是橄榄色的皮肤。她在南英中学读书，物以稀为贵，倾倒于她的白的，大不乏人，曾经有人下过这样的考语：如果湘粤一带深目削颊的美人是糖醋排骨，上海女人就是粉蒸肉。薇龙端详着自己，这句“非礼之言”蓦地兜上心来。她把眉毛一皱，掉过身子去，将背倚在玻璃门上。</p>
+<p>——《沉香屑：第一炉香》</p>
+<p>3、</p>
+<p>他们家十一月里就生了火。小小的一个火盆，雪白的灰里窝着红炭。炭起初是树木，后来死了，现在，身子里通过红通通的火，又活过来了，然而，活着，就快成灰了。它第一个生命是青绿色的，第二个是暗红的。火盆有炭气，丢了一个红枣到里面，红枣燃烧起来，发出腊八粥的甜香。炭的轻微的爆炸，淅沥淅沥，如同冰屑。</p>
+<p>——《留情》</p>
+<p>4、</p>
+<p>姑母这里的娘姨大姐们，似乎都是俏皮人物，糖醋排骨之流，一个个拖着木屐，在走廊上踢托踢托底串来串去。这时候听到一个大姐娇滴滴地叫道：“睇睇，客厅里坐的是谁？”睇睇道：“想是少奶奶家的人。”听那睇睇的喉咙，想必就是刚才倒茶的那一个，长脸儿，水蛇腰，虽然背后一样的垂着辫子，额前却梳了虚笼笼的鬅头。</p>
+<p>——《沉香屑：第一炉香》</p>
+<p>5、</p>
+<p>一语未了，门开处，一个朱漆描金折枝梅的玲珑木屐溜溜地飞了进来，不偏不倚，恰巧打中薇龙的膝盖，痛得薇龙弯了腰直揉腿，再抬头看时，一个黑里俏的丫头，金鸡独立，一步步跳了进来，踏上那木屐，扬长而去了，正眼也不看薇龙一看。</p>
+<p>——《沉香屑：第一炉香》</p>
+<p>6、</p>
+<p>两人横穿过草地，看看走进了那盘花绿漆的小铁门。香港地气潮湿，富家宅第大都建在三四丈高的石基上，因此出了这门，还要爬下螺旋式的百级石阶，方才是马路。睇睇正在抽那门闩，底下一阵汽车喇叭响，睨儿不知从哪儿钻了出来，斜刺里掠过薇龙睇睇二人，蹬蹬瞪跑下石阶去，口中一路笑嚷：“少奶奶回来了！少奶奶回来了！”睇睇耸了耸肩冷笑道：“芝麻大的事，也值得这么舍命忘身的，抢着去拔个头筹！一般是奴才，我却看不惯那种下贱相！”一扭身便进去了。丢下薇龙一个人呆呆站在铁门边，她被睨儿乱哄哄这一阵搅，心里倒有些七上八下的发了慌。扶了铁门望下去，汽车门打开了，一个娇小个子的西装少妇跨出车来，一身黑，黑色草帽沿上垂下绿色的面网，上面扣着一个指甲大小的绿宝石蜘蛛，在日光下闪闪烁烁，正爬在她腮帮子上，一亮一暗，亮的时候像一个欲坠未坠的泪珠，暗的时候像一个青痣。那面网足有两三码长，像围巾似的兜在肩上，飘飘拂拂。</p>
+<p>——《沉香屑：第一炉香》</p>
+<hr>
+<h2 id="《边城》"><a href="#《边城》" class="headerlink" title="《边城》"></a>《边城》</h2><p>不是特别白话，感觉怪怪的。但Se很可。  </p>
+<blockquote>
+<p>翠翠在风日里长养着，把皮肤变得黑黑的，触目为青山绿水，一对眸子清明如水晶。自然既长养她且教育她，为人天真活泼，处处俨然如一只小兽物。人又那么乖，如山头黄麂一样，从不想到残忍事情，从不发愁，从不动气。平时在渡船上遇陌生人对她有所注意时，便把光光的眼睛瞅着那陌生人，作成随时皆可举步逃入深山的神气，但明白了人无机心后，就又从从容容的在水边玩耍了。老船夫不论晴雨，必守在船头。有人过渡时，便略弯着腰，两手缘引了竹缆，把船横渡过小溪。有时疲倦了，躺在临溪大石上睡着了，人在隔岸招手喊过渡，翠翠不让祖父起身，就跳下船去，很敏捷的替祖父把路人渡过溪，一切皆溜刷在行，从不误事。</p>
+</blockquote>
+<blockquote>
+<p>茶峒地方凭水依山筑城，近山的一面，城墙如一条长蛇，缘山爬去。临水一面则在城外河边留出余地设码头，湾泊小小篷船。船下行时运桐油青盐，染色的棓子。上行则运棉花棉纱以及布匹杂货同海味。贯串各个码头有一条河街，人家房子多一半着陆，一半在水，因为余地有限，那些房子莫不设有吊脚楼。河中涨了春水，到水逐渐进街后，河街上人家，便各用长长的梯子，一端搭在屋檐口，一端搭在城墙上，人人皆骂着嚷着，带了包袱、铺盖、米缸，从梯子上进城里去，水退时方又从城门口出城。某一年水若来得特别猛一些，沿河吊脚楼必有一处两处为大水冲去，大家皆在城上头呆望。受损失的也同样呆望着，对于所受的损失仿佛无话可说，与在自然安排下，眼见其他无可挽救的不幸来时相似。涨水时在城上还可望着骤然展宽的河面，流水浩浩荡荡，随同山水从上流浮沉而来的有房子、牛、羊、大树。于是在水势较缓处，税关趸船前面，便常常有人驾了小舢板，一见河心浮沉而来的是一匹牲畜，一段小木，或一只空船，船上有一个妇人或一个小孩哭喊的声音，便急急的把船桨去，在下游一些迎着了那个目的物，把它用长绳系定，再向岸边桨去。这些诚实勇敢的人，也爱利，也仗义，同一般当地人相似。不拘救人救物，却同样在一种愉快冒险行为中，做得十分敏捷勇敢，使人见及不能不为之喝彩。</p>
+</blockquote>
+<blockquote>
+<p>那条河水便是历史上知名的酉水，新名字叫作白河。白河下游到辰州与沅水汇流后，便略显浑浊，有出山泉水的意思。若溯流而上，则三丈五丈的深潭皆清澈见底。深潭为白日所映照，河底小小白石子，有花纹的玛瑙石子，全看得明明白白。水中游鱼来去，全如浮在空气里。两岸多高山，山中多可以造纸的细竹，长年作深翠颜色，逼人眼目。近水人家多在桃杏花里，春天时只需注意，凡有桃花处必有人家，凡有人家处必可沽酒。</p>
+</blockquote>
+<blockquote>
+<p>由于边地的风俗淳朴，便是作妓女，也永远那么浑厚，遇不相熟的人，做生意时得先交钱，再关门撒野，人既相熟后，钱便在可有可无之间了。</p>
+</blockquote>
+<blockquote>
+<p>蓬蓬鼓声掠水越山到了渡船头那里时，最先注意到的是那只黄狗。那黄狗汪汪的吠着，受了惊似的绕屋乱走，有人过渡时，便随船渡过河东岸去，且跑到那小山头向城里一方面大吠。<br>    翠翠正坐在门外大石上用棕叶编蚱蜢蜈蚣玩，见黄狗先在太阳下睡着，忽然醒来便发疯似的乱跑，过了河又回来，就问它骂它：<br>    “狗，狗，你做什么！不许这样子！”<br>    可是一会儿那声音被她发现了，她于是也绕屋跑着，且同黄狗一块儿渡过了小溪，站在小山头听了许久，让那点迷人的鼓声，把自己带到一个过去的节日里去。<br>    <br>吊脚楼上唱曲子声音热闹了一些，只听到下面船上有人说话，一个水手说：“金亭，你听你那铺子陪川东庄客喝酒唱曲子，我赌个手指，说这是她的声音！”另一个水手就说：“她陪他们喝酒唱曲子，心里可想我。她知道我在船上！”先前那一个又说：“身体让别人玩着，心还想着你；你有什么凭据？”另一个说：“有凭据。”于是这水手吹着唿哨，作出一个古怪的记号，一会儿，楼上歌声便停止了。歌声停止后，两个水手皆笑了。两人接着便说了些关于那个女人的一切，使用了不少粗鄙字眼，翠翠很不习惯把这种话听下去，但又不能走开。且听水手之一说，楼上妇人的爸爸是在棉花坡被人杀死的，一共杀了十七刀。翠翠心中那个古怪的想头，“爷爷死了呢？”便仍然占据到心里有一忽儿。<br>    两个水手还正在谈话，潭中那只白鸭慢慢的向翠翠所在的码头边游来，翠翠想：“再过来些我就捉住你！”于是静静的等着，但那鸭子将近岸边三丈远近时，却有个人笑着， 喊那船上水手。 原来水中还有个人，那人已把鸭子捉到手，却慢慢的“踹水”游近岸边的。船上人听到水面的喊声，在隐约里也喊道：“二老，二老，你真干，你今天得了五只吧。”那水上人说：“这家伙狡猾得很，现在可归我了。”“你这时捉鸭子，将来捉女人，一定有同样的本领。”水上那一个不再说什么，手脚并用的拍着水傍了码头。湿淋淋的爬上岸时，翠翠身旁的黄狗，仿佛警问水中人似的，汪汪的叫了几声，那人方注意到翠翠。码头上已无别的人，那人问：<br>    “是谁？”<br>    “是翠翠！”<br>    “翠翠又是谁？”<br>    “是碧溪岨撑渡船的孙女。”<br>    “你在这儿做什么？”<br>    “我等我爷爷。我等他来好回家去。”<br>    “等他来他可不会来，你爷爷一定到城里军营里喝了酒，醉倒后被人抬回去了！”<br>    “他不会。他答应来，他就一定会来的。”<br>    “这里等也不成。到我家里去，到那边点了灯的楼上去，等爷爷来找你好不好？”<br>    翠翠误会邀他进屋里去那个人的好意，正记着水手说的妇人丑事，她以为那男子就是要她上有女人唱歌的楼上去，本来从不骂人，这时正因等候祖父太久了，心中焦急得很，听人要她上去，以为欺侮了她，就轻轻的说：<br>    “你个悖时砍脑壳的！”<br>    话虽轻轻的，那男的却听得出，且从声音上听得出翠翠年纪，便带笑说：“怎么，你骂人！你不愿意上去，要呆在这儿，回头水里大鱼来咬了你，可不要叫喊！”<br>    翠翠说：“鱼咬了我也不管你的事。”<br>    那黄狗好象明白翠翠被人欺侮了，又汪汪的吠起来。那男子把手中白鸭举起，向黄狗吓了一下，便走上河街去了。黄狗为了自己被欺侮还想追过去，翠翠便喊：“狗，狗，你叫人也看人叫！”翠翠意思仿佛只在问给狗“那轻薄男子还不值得叫”，但男子听去的却是另外一种好意，男的以为是她要狗莫向好人叫，放肆的笑着，不见了。</p>
+</blockquote>
+<p> “砍脑壳”那段，我写得话就不会写这么透，就“她以为那男子就是要她上有女人唱歌的楼上去，本来从不骂人，这时正因等候祖父太久了，心中焦急得很，”这段我都不会描写，感觉很欺辱读者智商。我可能就会写“她方才听着水手们说话，满脑子想得只是“楼上妇人”和“杀十几刀”，这男子又是与他们相近熟悉。她本从不骂人的，但…”  </p>
+<hr>
+<h2 id="《文化苦旅》——余秋雨"><a href="#《文化苦旅》——余秋雨" class="headerlink" title="《文化苦旅》——余秋雨"></a>《文化苦旅》——余秋雨</h2><p>莫高窟大门外，有一条河，过河有一溜空地，高高低低建着几座僧人圆寂塔。塔呈圆形，状近葫芦，外敷白色。从几座坍弛的来看，塔心竖一木桩，四周以黄泥塑成，基座垒以青砖。历来住持莫高窟的僧侣都不富裕，从这里也可找见证明。夕阳西下，朔风凛冽，这个破落的塔群更显得悲凉。</p>
+<p>　　有一座塔，由于修建年代较近，保存得较为完整。塔身有碑文，移步读去，猛然一惊，它的主人，竟然就是那个王圆箓！</p>
+<p>　　历史已有记载，他是敦煌石窟的罪人。</p>
+<p>　　我见过他的照片，穿着土布棉衣，目光呆滞，畏畏缩缩，是那个时代到处可以遇见的一个中国平民。他原是湖北麻城的农民，逃荒到甘肃，做了道士。几经转折，不幸由他当了莫高窟的家，把持着中国古代最灿烂的文化。他从外国冒险家手里接过极少的钱财，让他们把难以计数的敦煌文物一箱箱运走。今天，敦煌研究院的专家们只得一次次屈辱地从外国博物馆买取敦煌文献的微缩胶卷，叹息一声，走到放大机前。</p>
+<p>　　完全可以把愤怒的洪水向他倾泄。但是，他太卑微，太渺小，太愚昧，最大的倾泄也只是对牛弹琴，换得一个漠然的表情。让他这具无知的躯体全然肩起这笔文化重债，连我们也会觉得无聊。</p>
+<p>　　这是一个巨大的民族悲剧。王道士只是这出悲剧中错步上前的小丑。一位年轻诗人写道，那天傍晚，当冒险家斯坦因装满箱子的一队牛车正要启程，他回头看了一眼西天凄艳的晚霞。那里，一个古老民族的伤口在滴血。</p>
+<p>　　真不知道一个堂堂佛教圣地，怎么会让一个道士来看管。中国的文官都到哪里去了，他们滔滔的奏招怎么从不提一句敦煌的事由？</p>
+<p>　　其时已是20世纪初年，欧美的艺术家正在酝酿着新世纪的突破。罗丹正在他的工作室里雕塑，雷诺阿、德加、塞尚已处于创作晚期，马奈早就展出过他的《草地上的午餐》。他们中有人已向东方艺术投来歆羡的目光，而敦煌艺术，正在王道士手上。</p>
+<p>　　王道士每天起得很早，喜欢到洞窟里转转，就像一个老农，看看他的宅院。他对洞窟里的壁画有点不满，暗乎乎的，看着有点眼花。亮堂一点多好呢，他找了两个帮手，拎来一桶石灰。草扎的刷子装上一个长把，在石灰桶里蘸一蘸，开始他的粉刷。第一遍石灰刷得太薄，五颜六色还隐隐显现，农民做事就讲个认真，他再细细刷上第二遍。这儿空气干燥，一会儿石灰已经干透。什么也没有了，唐代的笑容，宋代的衣冠，洞中成了一片净白。道士擦了一把汗憨厚地一笑，顺便打听了一下石灰的市价。他算来算去，觉得暂时没有必要把更多的洞窟刷白，就刷这几个吧，他达观地放下了刷把。</p>
+<p>　　当几面洞壁全都刷白，中座的塑雕就显得过分惹眼。在一个干干净净的农舍里，她们婀娜的体态过于招摇，她们柔美的浅笑有点尴尬。道士想起了自己的身份，一个道士，何不在这里搞上几个天师、灵宫菩萨？他吩咐帮手去借几个铁锤，让原先几座塑雕委曲一下。事情干得不赖，才几下，婀娜的体态变成碎片，柔美的浅笑变成了泥巴。听说邻村有几个泥匠，请了来，拌点泥，开始堆塑他的天师和灵宫。泥匠说从没干过这种活计，道士安慰道，不妨，有那点意思就成。于是，像顽童堆造雪人，这里是鼻子，这里是手脚，总算也能稳稳坐住。行了，再拿石灰，把它们刷白。画一双眼，还有胡子，像模像样。道士吐了一口气，谢过几个泥匠，再作下一步筹划。</p>
+<p>　　今天我走进这几个洞窟，对着惨白的墙壁、惨白的怪像，脑中也是一片惨白。我几乎不会言动，眼前直晃动着那些刷把和铁锤。“住手！”我在心底痛苦地呼喊，只见王道士转过脸来，满眼困惑不解。是啊，他在整理他的宅院，闲人何必喧哗？我甚至想向他跪下，低声求他：“请等一等，等一等……”但是等什么呢？我脑中依然一片惨白。</p>
+<p>　　1900年5月26日清晨，王道士依然早起，辛辛苦苦地清除着一个洞窟中的积沙。没想到墙壁一震，裂开一条缝，里边似乎还有一个隐藏的洞穴。王道士有点奇怪，急忙把洞穴打开，嗬，满满实实一洞的古物！</p>
+<p>　　王道士完全不能明白，这天早晨，他打开了一扇轰动世界的门户。一门永久性的学问，将靠着这个洞穴建立。无数才华横溢的学者，将为这个洞穴耗尽终生。中国的荣耀和耻辱，将由这个洞穴吞吐。</p>
+<p>　　现在，他正衔着旱烟管，扒在洞窟里随手捡翻。他当然看不懂这些东西，只觉得事情有点蹊跷。为何正好我在这儿时墙壁裂缝了呢？或许是神对我的酬劳。趁下次到县城，捡了几个经卷给县长看看，顺便说说这桩奇事。</p>
+<p>　　县长是个文官，稍稍掂出了事情的分量。不久甘肃学台叶炽昌也知道了，他是金石学家，懂得洞窟的价值，建议藩台把这些文物运到省城保管。但是东西很多，运费不低，官僚们又犹豫了。只有王道士一次次随手取一点出来的文物，在官场上送来送去。</p>
+<p>　　中国是穷。但只要看看这些官僚豪华的生活排场，就知道绝不会穷到筹不出这笔运费。中国官员也不是都没有学问，他们也已在窗明几净的书房里翻动出土经卷，推测着书写朝代了。但他们没有那副赤肠，下个决心，把祖国的遗产好好保护一下。他们文雅地摸着胡须，吩咐手下：“什么时候，叫那个道士再送几件来！”已得的几件，包装一下，算是送给哪位京官的生日礼品。</p>
+<p>　　就在这时，欧美的学者、汉学家、考古家、冒险家，却不远万里，风餐露宿，朝敦煌赶来。他们愿意变卖掉自己的全部财产，充作偷运一两件文物回去的路费。他们愿意吃苦，愿意冒着葬身沙漠的危险，甚至作好了被打、被杀的准备，朝这个刚刚打开的洞窟赶来。他们在沙漠里燃起了股股炊烟，而中国官员的客厅里，也正茶香缕缕。</p>
+<p>　　没有任何关卡，没有任何手续，外国人直接走到了那个洞窟跟前。洞窟砌了一道砖、上了一把锁，钥匙挂在王道士的裤腰带上。外国人未免有点遗憾，他们万里冲刺的最后一站，没有遇到森严的文物保护官邸，没有碰见冷漠的博物馆馆长，甚至没有遇到看守和门卫，一切的一切，竟是这个肮脏的土道士。他们只得幽默地耸耸肩。</p>
+<p>　　略略交谈几句，就知道了道士的品位。原先设想好的种种方案纯属多余，道士要的只是一笔最轻松的小买卖。就像用两枚针换一只鸡，一颗钮扣换一篮青菜。要详细地复述这笔交换帐，也许我的笔会不太沉稳，我只能简略地说：1905年10月，俄国人勃奥鲁切夫用一点点随身带着的俄国商品，换取了一大批文书经卷；1907年5月，匈牙利人斯坦因用一叠子银元换取了24大箱经卷、5箱织绢和绘画；1908年7月，法国人怕希和又用少量银元换去了10大车、6000多卷写本和画卷；1911年10月，日本人吉川小一郎和橘瑞超用难以想象的低价换取了300多卷写本和两尊唐塑；1914年，斯坦国第二次又来，仍用一点银元换去了5大箱、600多卷经卷；……</p>
+<p>　　道士也有过犹豫，怕这样会得罪了神。解除这种犹豫十分简单，那个斯坦国就哄他说，自己十分崇拜唐僧，这次是倒溯着唐僧的脚印，从印度到中国取经来了。好，既然是洋唐僧，那就取走吧，王道士爽快地打开了门。这里不用任何外交辞令，只需要几句现编的童话。</p>
+<p>　　一箱子，又一箱子。一大车，又一大车。都装好了，扎紧了。吁——，车队出发了。</p>
+<p>　　没有走向省城，因为老爷早就说过，没有运费。好吧，那就运到伦敦，运到巴黎，运到彼得堡，运到东京。 </p>
+<p>　　王道士频频点头，深深鞠躬，还送出一程。他恭敬地称斯坦因为“司大人讳代诺”，称伯希和为“贝大人讳希和”。他的口袋里有了一些沉甸甸的银元，这是平常化缘时很难得到的。他依依惜别，感谢司大人、贝大人的“布施”。车队已经驶远，他还站在路口。沙漠上，两道深深的车辙。</p>
+<p>　　斯坦因他们回到国外，受到了热烈的欢迎。他们的学术报告和探险报告，时时激起如雷的掌声。他们的叙述中常常提到古怪的王道士，让外国听众感到，从这么一个蠢人手中抢救出这笔遗产，是多么重要。他们不断暗示，是他们的长途跋涉，使敦煌文献从黑暗走向光明。</p>
+<p>　　他们都是富有实干精神的学者，在学术上，我可以佩服他们。但是，他们的论述中遗忘了一些极基本的前提。出来辩驳为时已晚，我心头只是浮现出一个当代中国青年的几行诗句，那是他写给火烧圆明园的额尔金勋爵的：</p>
+<p>　　我好恨</p>
+<p>　　恨我没早生一个世纪</p>
+<p>　　使我能与你对视着站立在</p>
+<p>　　阴森幽暗的古堡</p>
+<p>　　晨光微露的旷野</p>
+<p>　　要么我拾起你扔下的白手套</p>
+<p>　　要么你接住我甩过去的剑</p>
+<p>　　要么你我各乘一匹战马</p>
+<p>　　远远离开这天的帅旗</p>
+<p>　　离开如云的战阵</p>
+<p>　　决胜负于城下</p>
+<p>　　对于这批学者，这些诗句或许太硬。但我确实想用这种方式，拦住他们的车队。对视着，站立在沙漠里。他们会说，你们无力研究；那么好，先找一个地方，坐下来，比比学问高低。什么都成，就是不能这么悄悄地运走祖先给我们的遗赠。</p>
+<p>　　我不禁又叹息了，要是车队果真被我拦下来了，然后怎么办呢？我只得送缴当时的京城，运费姑且不计。但当时，洞窟文献不是确也有一批送京的吗？其情景是，没装木箱，只用席子乱捆，沿途官员伸手进去就取走一把，在哪儿歇脚又得留下几捆，结果，到京城时已零零落落，不成样子。</p>
+<p>　　偌大的中国，竟存不下几卷经文！比之于被官员大量糟践的情景，我有时甚至想狠心说一句：宁肯存放在伦敦博物馆里！这句话终究说得不太舒心。被我拦住的车队，究竟应该驶向哪里？这里也难，那里也难，我只能让它停驻在沙漠里，然后大哭一场。</p>
+<p>　　我好恨！</p>
+<p>　　不止是我在恨。敦煌研究院的专家们，比我恨得还狠。他们不愿意抒发感情，只是铁板着脸，一钻几十年，研究敦煌文献。文献的胶卷可以从外国买来，越是屈辱越是加紧钻研。</p>
+<p>　　我去时，一次敦煌学国际学术讨论会正在莫高窟举行。几天会罢，一位日本学者用沉重的声调作了一个说明：“我想纠正一个过去的说法。这几年的成果已经表明，敦煌在中国，敦煌学也在中国！”</p>
+<p>　　中国的专家没有太大的激动，他们默默地离开了会场，走过王道士的圆寂塔前。</p>
+<p>  …</p>
+<p>  　第二天，依然是这般喧闹，依然是这般无聊。船一程程行去，岁月一片片消逝，永远是喧闹的无聊，无聊的喧闹。</p>
+<p>　　我一次次抚摩过的船橹，竟是划出了这样一条水路？我梦中的亮晶晶的水路，竟会这般黯然？</p>
+<p>　　幸好，夜航船终于慢吞吞地走到了现代。吾乡的水路有了一点好的征兆：几位大师上船了。</p>
+<p>　　我仿佛记得曾坐小船经过山阴道，两岸边的乌柏，新禾，野花，鸡，狗，丛树和枯树，茅屋，塔，伽蓝，农夫和村妇，村女，晒着的衣裳，和尚，蓑笠，天，云，竹，……都倒影在澄碧的小河中，随着每一打桨，各各夹带了闪烁的日光，并水里的萍藻游鱼，一同荡漾。诸影诸物，无不解散，而且摇动，扩大，互相融和；刚一融和，却又退缩，复近于原形。边缘都参差如夏云头，镶着日光，发出水银色焰。</p>
+<p>　　——这是鲁迅在船上。</p>
+<p>　　夜间睡在舱中，听水声橹声，来往船只的招呼声，以及乡间的犬吠鸡鸣，也都很有意思。雇一只船到乡下去看庙戏，可以了解中国旧戏的真趣味，而且在船上行动自如，要看就看，要睡就睡，要喝酒就喝酒，我觉得也可以算是理想的行乐法。</p>
+<p>　　——这是周作人在船上。他不会再要高谈阔论的旅伴，只求个人的清静自由。</p>
+<p>　　早春晚秋，船价很便宜，学生的经济力也颇能胜任。每逢星期日，出三四毛钱雇一只船，载着二三同学，数册书，一壶茶，几包花生米，与几个馒头，便可优游湖中，尽一日之长。……随时随地可以吟诗作画。“野航恰受两三人。”“恰受”两字的状态，在这种船上最充分地表出着。</p>
+<p>　　——这是丰子恺在船上。他的船又热闹了，但全是同学少年，优游于艺术境界。</p>
+<p>　　这些现代中国的航船虽然还是比较平缓、狭小，却终于有了明代所不可能有的色泽和气氛。</p>
+<p>…这次夜航，要经过著名的垂虹桥。垂虹桥历时久远，早已老态龙钟，但十四桥孔仍在，不知夜航船会从哪个桥孔通过。</p>
+<h2 id="《城南旧事》"><a href="#《城南旧事》" class="headerlink" title="《城南旧事》"></a>《城南旧事》</h2><blockquote>
+<p>宋妈是顺义县的人，她也说不好北京话，她说成“惠难馆”，妈说成“灰娃馆”，爸说成“飞安馆”，我随着胡同里的孩子说“惠安馆”，到底哪一个对，我不知道。</p>
+</blockquote>
+<h2 id="Hades-文案"><a href="#Hades-文案" class="headerlink" title="Hades 文案"></a>Hades 文案</h2><p><a href="/p/220d.html#Hades-%E6%96%87%E6%A1%88">站内传送门</a></p>
+<p>关于赫尔墨斯（<del>飞毛腿之神</del> 捷足之神）的人设，他就是很轻快的小青年（？），然后会用“Boss”（译作了“老大”）来称呼主角。   </p>
+<hr>
+<h2 id="极乐迪斯科文风"><a href="#极乐迪斯科文风" class="headerlink" title="极乐迪斯科文风"></a>极乐迪斯科文风</h2><p><a href="/p/220d.html#%E6%9E%81%E4%B9%90%E8%BF%AA%E6%96%AF%E7%A7%91">站内传送门</a></p>
+<blockquote>
+<p>“教师”继续微笑着摇头：“少校，你以为我看不出你是个什么东西？你的血和我一样冷，你进来后，会用0.5秒抢走我的槍，再分别用0.25秒把两颗子弹送进我的两个眼窝。”</p>
+</blockquote>
+<blockquote>
+<p>之后我们谁都没有说话，盛夏的热风吹过楼顶，楼下不时响起急刹车的声音，紧接着是士兵下车时急骤的脚步声、武器和钢盔相互之间的碰撞声，除了几声简短的命令，没有更多的话音。在者声音中，我却感到一阵恐怖的死寂压倒了一切，其他的声音仿佛都极力想从这死寂中挣脱出来，但很快被它的巨掌窒息了。</p>
+</blockquote>
+<p>这些出自刘慈欣《球状闪电》，但我感觉和这个文风很相近。  </p>
+<h2 id="Omensight"><a href="#Omensight" class="headerlink" title="Omensight"></a>Omensight</h2><p>需要总结一下里面这只小老鼠形象。感觉像是成熟小孩子那种性格，就，这种如果是一个小孩子他会想怎么做，但他不一定真会这么做。    <br>以及这里君主养成有点…万能洗白剂。  </p>
+<p><a href="/p/220d.html#Omensight%E6%96%87%E6%A1%88">重点是小老鼠这个形象，要入库</a></p>
+<h2 id="起名（人名、物名、事件名、地名、章节名等）"><a href="#起名（人名、物名、事件名、地名、章节名等）" class="headerlink" title="起名（人名、物名、事件名、地名、章节名等）"></a>起名（人名、物名、事件名、地名、章节名等）</h2><p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E6%94%B9%E6%96%87/%E4%BB%80%E4%B9%88%E8%AF%AD%E5%86%85%E7%BF%BB%E8%AF%91.jpg" alt="什么语内翻译"></p>
+<p><span class="exturl" data-url="aHR0cDovL2Jvb2suc2JrazguY29tL3hpYW5kYWkvbGl1Y2l4aW56dW9waW5qaS9xaXV6aHVhbmdzaGFuZGlhbi8=">天涯知识库<i class="fa fa-external-link-alt"></i></span>  </p>
+<hr>
+<p>地形、事件可以按照神迹的思路起名，比如：  </p>
+<blockquote>
+<p>比如他神之一指，直接指出一块陨石，砸死了大魔王<br>所以这块盆地就叫b’s finger了，也可以是大魔王被砍断的手指头</p>
+</blockquote>
+<p>就，这个设定下起“陨石坑”这个名字的话就显得内容太少了，没有深度。pc问不出来啥，也不想问。  </p>
+<blockquote>
+<p>就是把地名结合nb角色事迹来起。<br>可以根据地形想事迹也可以根据事迹做地形。<br>真要搞那种丰富点的设定，起名还得加点符合历史发展的</p>
+</blockquote>
+<p>姓氏，有时间了解一下。  </p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzM2Mjg1MDAz">如何给小说角色想出很美的名字？ - 知乎<i class="fa fa-external-link-alt"></i></span></p>
+<p>提到了字的冷热，挺有启发。以及中药名可还行。  </p>
+<p>关于章节名，可以用这篇的主角（像《冰火》，写群像，使用该章节主角名。其实可以衍生下，用日期、地点、像《暴雨》那样的水位、等等，这种有特征的最好和小说主题挂钩）<br>总之章节名最好互相关联或者和作品关联。  </p>
+<p>起名，章节名，可以用上一章节提到的的某个句子或字词。</p>
+<p>多看看科幻小说。  </p>
+<p>物品名：   </p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzM0NTc2NjM3Mw==">怎么给小说里面的刀取名字? - 知乎<i class="fa fa-external-link-alt"></i></span></p>
+<p>关于事件名，可以多看看历史。  <br>“人类最大最恶绝望事件”都比我起的好听。哎。<br>噢噢噢噢！对了。看看游戏名（这个也适用于小说名，不过emmmm一般不太推荐游戏名…），看看名侦探柯南，对对，看看侦探小说。  </p>
+<p>以及病名。尤其是精神疾病。  <br>以及歌名。  </p>
+<hr>
+<p>日本轻小说起名诡异基本上是从“我的妹妹不可能这么可爱”开始的，开始变得“描述性”，意在从标题即可看出这篇文章的主题内容，增加销售额。 </p>
+<hr>
+<p>【转自Hades@Game】</p>
+<blockquote>
+<p>三头犬刻耳柏洛斯机警地站在冥界入口前，而传说中那些想越过这道门的蠢货下场都过于凄惨，这里不便描述。  </p>
+</blockquote>
+<p>嗯 这个起名的翻译有点意思。不翻译成塞布洛斯而是刻耳柏洛斯。</p>
+<hr>
+<h2 id="救猫咪（三部曲）"><a href="#救猫咪（三部曲）" class="headerlink" title="救猫咪（三部曲）"></a>救猫咪（三部曲）</h2><p>是电影编剧相关。  </p>
+<p><span class="exturl" data-url="aHR0cDovL21lYmlseWNoZW4tbWVkaWEudGVzdC51cGNkbi5uZXQvZG9jLyVFNiU5NSU5MSVFNyU4QyVBQiVFNSU5MiVBQSVFNCVCOCU4OSVFOSU4MyVBOCVFNiU5QiVCMi5wZGY=">救猫咪PDF<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="Neil-Gaiman"><a href="#Neil-Gaiman" class="headerlink" title="Neil Gaiman"></a>Neil Gaiman</h2><p><span class="exturl" data-url="aHR0cDovL21lYmlseWNoZW4tbWVkaWEudGVzdC51cGNkbi5uZXQvZG9jL05laWwlMjBHYWltYW4tQ29tcGxldGUlMjBXb3JrYm9va19vcHRpbWl6ZS5wZGY=">Neil的写作小课堂PDF<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cDovL21lYmlseWNoZW4tbWVkaWEudGVzdC51cGNkbi5uZXQvZG9jL05laWwlMjBHYWltYW4lRTclOUElODQlRTUlQTQlQTclRTUlQjglODglRTUlODYlOTklRTQlQkQlOUMlRTglQUYlQkUucGRm">尼尔的写作小课堂PDF中文（有道翻译）<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="Chuck-Palahniuk"><a href="#Chuck-Palahniuk" class="headerlink" title="Chuck Palahniuk"></a>Chuck Palahniuk</h2><p><span class="exturl" data-url="aHR0cHM6Ly9saXRyZWFjdG9yLmNvbS9lc3NheXMvMzYtd3JpdGluZy1lc3NheXMtYnktY2h1Y2stcGFsYWhuaXVr">Chuck的写作小课堂<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cDovL21lYmlseWNoZW4tbWVkaWEudGVzdC51cGNkbi5uZXQvZG9jLzM2LXdyaXRpbmctY3JhZnQtZXNzYXlzLWJ5LWNodWNrLXBhbGFobml1ay0xLnBkZg==">Chuck的写作小课堂PDF<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cDovL21lYmlseWNoZW4tbWVkaWEudGVzdC51cGNkbi5uZXQvZG9jLyVFNiU5RiVBNSVFNSU4NSU4QiVFNyU5QSU4NDM2JUU0JUI4JUFBJUU1JTg2JTk5JUU0JUJEJTlDJUU5JTlBJThGJUU3JUFDJTk0LnBkZg==">Chuck的写作小课堂PDF中文（有道翻译）<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="树立威信：Head-or-Heart"><a href="#树立威信：Head-or-Heart" class="headerlink" title="树立威信：Head or Heart"></a>树立威信：Head or Heart</h3><p>联想到叙述者置信度（读者是否应该相信叙述者）的问题。这个是主动破墙行为。      </p>
+<p>大概就是讲的，要在读者心中树立作者威信，使得读者觉得你怎么写都不尬。<br>（其实“树立威信”的主要对象指的是作者的叙述口吻，我有的地方延伸了一下，到了角色和叙述的相性）<br>大反例就是底特律的马库斯。这应该是Head Type，几乎没有一点Heart，导致一旦Heart起来马库斯就崩了。（其实更准确的应该说底特律，底特律整体都是Head Type）  <br>Head是指，将叙述口吻身段放平，或者提高，用自己的研究和收集到的干货震慑读者，让读者觉得“太专业太帅了，这作者好聪明，好有见识，我跟你走。”可以参考一下写论文的口吻。  <br>Heart是指将叙述的口吻身段降低，让读者感到自己有机会参与进来，用感情、高潮等震慑读者，让读者觉得“卧槽太虐了这个，太可爱了那个，这作者呆萌呆萌的啊，我跟你走。”一般是用在重生穿越逆袭系统且主角是菜鸡的网文比较多。</p>
+<p>像是你要是本来一个head型章节，高冷角色，突然安排了一个没道理的没逻辑的场景，瞬间威信就无了，不仅无了，还很尴尬。  <br>你要是heart型章节，突然开始搞黑深残，就显得太无病呻吟了。  </p>
+<p>彩虹就是纯Head Type；狐狸是Heart Type，但也有一些Head。  <br>那篇《我们的小小光芒》幼王文就是Heart Type，玩的很得心应手；但也能看出这篇文后期，陛下出落之后作者尝试使用head，但失败了，就显得很尬。  <br>黄文作者基本上都是Heart Type。但也有让我很欣赏的Head+Heart。</p>
+<p>另外还提到各一些如何用Head和Heart的小技巧，可以点进去看。  <br>主要陛下他。你就告诉我他怎么heart？除非失忆了。  <br>就陛下一定要像亚人作者那么聪明才行。就，很，难。（其实这么一想，似乎我看亚人漫画的时候也没有想去思考该如何解局，毕竟是作者自己定的设定，他一改设定我就凉凉） </p>
+<p>心脑派写法通常在章节前期或小说前期就已经确立。  </p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuZ29vZHJlYWRzLmNvbS93b3JrL3F1b3Rlcy8xMDMzOTYxLWplc3VzLXNvbi1zdG9yaWVz">心派提到了《耶稣之子》<i class="fa fa-external-link-alt"></i></span></p>
+<p>然后提到了一些脑派写法：</p>
+<ul>
+<li>Being Clever：最常用的，但是容易玩脱，而且容易让人厌烦。让人觉得作者水平还不如自己，想自己拿笔上去写。尤其是在埋伏笔的时候像是在故意避开重要话题一样。</li>
+<li>解说式写法：第三人称和上帝视角。让读者停止思考，让他完全相信你说的“他应该有的所有想法、感情和反应”。但也是，我很讨厌这种写法，另外看多了也容易厌烦。</li>
+<li>文艺句子：用晦涩比喻和文艺手法来震慑读者，但不能也一直用，还是要结合实际的东西。</li>
+</ul>
+<p>收集脑派信息需要经常社交和调研。  </p>
+<p>简单练习一下吧，就用… @白色魔术 的设定吧（其实我 @白色魔术 以及 @Re 比较head，heart是 @养成手册 那种..我去，我似乎不怎么写heart，除了小段子，小段子几乎都是heart）  <br>简单确定一下场景，就比如…卢子和陛下一起去mall里帮陛下挑一双新手套。  </p>
+<blockquote>
+<p>Head (原作风格)</p>
+</blockquote>
+<p>沃姆皱起眉。他低下头盯着自己的爪套，用爪子轻轻揉捏着，像是想证明它还可以再穿一个世纪。  <br>门口的卢瑞恩已经披上自己的风衣了。“快。”他用头示意着街口等候着的马车，催促道。  <br>门外一阵微风拂过他的面具，沃姆很明显地踌躇了。如触电一般，他向后退了一步，回到了舒适的阴影里。他的表情从迟疑变成退却。  <br>卢瑞恩睁大眼睛看着面前的这场谢幕，“…别告诉我你从来没出过门。”  <br>“不。”沃姆只是在径直否决着这一提案。  <br>“那你——”卢瑞恩在问题完全问出口之前花了一秒钟来思考，“——哦，当然是你亲爱的团长干的好事。”他扶着额头叹气。    <br>沃姆的上半身覆盖着一层阴影，只有他的黑眼睛还像往常一样漆黑。  <br>“但是你答应过我的，沃姆，”卢瑞恩作势用单手叉起腰。  <br>沃姆似乎又往后退了一步——还是说只是那些阴影更浓重了些？  <br>从远处传来了一阵颇为不耐烦的摇铃声。  <br>“天啊——！”卢瑞恩喊出声的那一刻——甚至还没有向沃姆走过去，对方就已经像被鸟儿盯住的小虫那般，浑身一僵，做好逃跑的准备了。   </p>
+<div class="note primary"><p style="color:#7042C1">突然想到小时候那株路灯下为我盛开的向日葵。忘了有没有写过。 </p> </div>
+见此情景，卢瑞恩反而泄了气，“...你要真不想去就算了，我去和车夫说一声。”他又叹了口气——这回更沉重些。他转过身。  
+<div class="note primary"><p style="color:#7042C1">艹，结果最后连门都没出去，陛下。 </p> </div>
+
+<blockquote>
+<p>Heart（本来想直接跳到选手套那里，但为了对比，还是算了）</p>
+</blockquote>
+<p>这绝对行不通的，他想。沃姆是那种，像是，宁可把自己黏在蜘蛛网上也不会碰一下门把手的虫子。  <br>他看着不停拨弄自己爪套以逃避现实的小魔术师，脑内不停回忆着这位小大人之前的名言警句：“其实我还蛮喜欢瘟疫的”。卢瑞恩虽然也不是擅长社交的类型，但也不会堕落成这个模样。  <br>沃姆终于抬起头，望着他。或许这一切还有一线希望？  <br>卢瑞恩立即抓住机会，迅速套上自己的外套，“快。”他瞥了一眼路边停着的马车，车夫还在不耐烦地玩着鞭子。情况还不算太坏。  <br>沃姆却突然注意到了什么。他的视线越过卢瑞恩，<span class="hint--info hint--rounded hint--top" data-hint ontouchstart>像一只警惕的食腐动物一般食腐动物，后面是僵尸？不太好，改了</span>，向后退了一步，显然，他非常不想被推出去面对一群在自己背后四处游荡的捕食者。他的脸上满是拒绝和否定。  <br>卢瑞恩整理领口的动作凝滞了，他知道自己脑内的神明从来只彰示真相，“…别告诉我你从来没出过门。”  </p>
+<div class="note primary"><p style="color:#7042C1">因为要参考之前的剧情，写着写着就变成原来的味道了/捂脸 </p> </div>
+“不。”沃姆回答。  
+“那你——”卢瑞恩盯着沃姆的黑眼睛，生怕它继续和黑暗融为一体。他做了个深呼吸，给大脑提供了充足的氧气，“——哦，当然是你亲爱的团长了。”他绝望地捂上脸。  
+<div class="note primary"><p style="color:#7042C1">先写到这（咕咕）。我发现我总是想用“似乎”“像是”“就像”这样的词来表示我要开始引申意象了，有点枯燥。可以去看看极乐怎么写的。有种想办法硬是把虚构的感觉变成陈述事实的感觉。啊，所以要有借物生情。 </p> </div>
+
+<hr>
+<h3 id="Developing-a-Theme"><a href="#Developing-a-Theme" class="headerlink" title="Developing a Theme"></a>Developing a Theme</h3><p>大概就是，收集足够多的故事（引入主题后听别人讲），然后总结一个模式：    </p>
+<blockquote>
+<p>例如：1.不好的事情 2.试图解决不好的事情，却引发了更多不好的事情</p>
+</blockquote>
+<p>就像在总结meme。<br>在写作的时候，有一种极简主义，就是围绕一个主题，不停扩展。通过限制主题，可以集中发掘主题的深度。  <br>比如，壁炉。  <br>在这篇里，查克先是（用Se）描述了壁炉（主题）的模样、特征、功能、特殊点，然后开始发散其相关的故事和人物。  <br>（不知道是不是翻译问题，我看后面很多部分似乎和壁炉没啥关系了。有蝎子住在壁炉下面？妈妈被蜇伤了？表弟爬进壁炉，失踪了？）  <br>反正就是，最好是在讲故事，就，是在讲一个你真正见证过经历过的故事。  </p>
+<p>后面也有提到，就是多多吃瓜，最好能面对面听故事，然后做笔记，收集素材。  </p>
+<hr>
+<h3 id="如何训练Se并应用"><a href="#如何训练Se并应用" class="headerlink" title="如何训练Se并应用"></a>如何训练Se并应用</h3><p>主要就是，我去，让读者感到疼痛。  <br>比如，描写针扎入脚掌…艹，我光是看到这句话我就疼。我就会跳过这段。但是读者感不到疼，你就需要像写黄文一样写这个针怎么扎进去，现场怎么鲜血淋漓，主角感到如何如何的奇异感受。    <br>训练就可以在自己生病（有任何异常感受）的时候，记下自己的感受。  <br>有几个tips，就是：</p>
+<ol>
+<li>时刻记录自己的感受并用文字表述出来，不能用“我气得头疼”这类词。  </li>
+<li>使用医学术语迷惑读者，有时复杂迷幻的术语会让读者停下来尝试解读，吸引注意力，并且建立head型的权威。</li>
+<li>做爱、生病、受伤、打人</li>
+</ol>
+<p>就 我没体验过的事情我就不敢写 因为我怕写的是错的 不知道帕克是怎么写肠子出来的  </p>
+<hr>
+<h3 id="作者（I）的隐身"><a href="#作者（I）的隐身" class="headerlink" title="作者（I）的隐身"></a>作者（I）的隐身</h3><p>这个是针对第一人称叙述的。 </p>
+<p>艹，我竟然在看这么多种打飞机方式（和陛下一起老脸一红）。<br>呕——————————<br>呕—————<br>呕。  <br>咳咳。  </p>
+<p>好吧，主要讲的就是，呃，分析了一下他的《肠子》这篇文，就是如何隐藏“我（I）”一开始讲了别人的故事，并用医学权威树立了权威（Head），并用情感（Heart）表现了这两个是多么不幸的故事。之后，他才展示出要讲的是他自己的故事，这时读者已经快意识不到“我”了。<br>主要就是：</p>
+<ol>
+<li>尽量不要出现“我（要主动做什么）（I）”，要换成第三人称或者“这个（mine、my），我（被做了什么）（me）”（不好意思，我真不知该怎么翻译了）</li>
+<li>把摄像机拉远，不要让读者意识到你的存在。让读者把注意力集中在你讲的故事，而不是你。  </li>
+</ol>
+<p>cue了一下Christopher的<em>Campfires of the Dead</em>，但是我找不到copy。  </p>
+<hr>
+<h3 id="藏枪（短篇小说）"><a href="#藏枪（短篇小说）" class="headerlink" title="藏枪（短篇小说）"></a>藏枪（短篇小说）</h3><p>简单来说就是埋伏笔。这个伏笔一个作用是，呃，伏笔，还有一个作用就是限制故事长度。故事高潮的时候，就可以是枪打出来的时候。嗯，我一直想找一些能帮我写好短篇小说的法子来着。陷入囹圄的时候可以回顾一下之前的篇章，找一个细节做伏笔，在后面提起。就像是：  </p>
+<blockquote>
+<p>我之前犯了一个小错误，没啥大不了了——所有人都忘了。但最后因为这个小错误，我死了。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzIwMjU3NTU2">如何写好短篇小说？ - 知乎<i class="fa fa-external-link-alt"></i></span></p>
+<blockquote>
+<p>其中一个答主：<br>字数分配，按1：3：1来分。<br>即开篇内容1，事件过程3，结尾1。从1万字的故事来说，就是2000字开头，6000字过程，2000字结尾。</p>
+</blockquote>
+<p>继续。<br> cue了一下<em>This is us, excellent</em>，但是我找到的copy下不下来。<br> 艹。<br> 就像是flag那样，角色说，我肯定不会xxx，但你就知道他后面一定会xxx。 </p>
+<p> 另外可以让角色/叙述者通过说谎藏枪（虽然会被指责“不真实”）。</p>
+<blockquote>
+<p>同样，考虑故事中最初出现的承诺都是谎言。通常都是些无聊的父亲的电影缺席的父亲会对疏远的孩子做出不可能的承诺。到了第三幕，出乎意料的是，这位父亲以某种方式<br>实现了他并没有真正打算完成的承诺。转变发生了，每个人都很开心。再一次，不真诚<br>的承诺是谎言是枪。犯罪或秘密是谎言是枪。<br>是的,好的。这是人为的，但隐藏的谎言可以让你避免写 800 页的文章，也避免你永<br>远找不到情节的高潮。生活似乎一直拖着，但小说不应该。</p>
+</blockquote>
+<blockquote>
+<p>找出你最喜欢的电影里那些像枪一样的谎言。大谎言在哪里被揭露?在“雾” ?请注意，很多故事都是在故事开始之前就把谎言或犯罪放在那里的。这样一来，书中的人物天真而无知，读者也是天真的，大家一起享受这个发现的过程。</p>
+</blockquote>
+<div class="note info no-icon"> <p style="color:#438BCA">2021.10.6 2:37 结业纪念 </p> </div>
+
+<hr>
+<h3 id="注意主题陈述句（Thesis-Statement）"><a href="#注意主题陈述句（Thesis-Statement）" class="headerlink" title="注意主题陈述句（Thesis Statement）"></a>注意主题陈述句（Thesis Statement）</h3><p>这种句子例如：</p>
+<ul>
+<li>我吃了脏东西，觉得很难受。</li>
+<li>他醒了，开始痛恨生活。</li>
+<li>她永远不能和他好好相处。</li>
+<li>这个地方很难找。</li>
+</ul>
+<p>要这样改：</p>
+<blockquote>
+<p>或许是蛋黄酱的问题。那些黏糊糊，不停流淌的黄色液体从下一秒就会发霉的潮湿面包里面漏出来。那些生菜叶，哦，那些生菜叶，都被某种幼虫啃出了细小的孔洞，一路延伸到它们的安乐窝。</p>
+</blockquote>
+<p>然后自然就引出了，你吃了脏东西，你肚子疼。  </p>
+<p>避免“thought”类动词，就，这种动词不够描述性，没有细节，没有共鸣。  </p>
+<hr>
+<h3 id="Beta测试：大声朗读"><a href="#Beta测试：大声朗读" class="headerlink" title="Beta测试：大声朗读"></a>Beta测试：大声朗读</h3><p>是的，大声朗读，在会肆无忌惮嘲笑你同行和读者面前（无讽刺意味）。  <br>只有读出来才能意识到一些细节问题。包括发音问题。另外，通过朗读，你会把这个个人问题转化成公众问题。    <br>like，要，读出声。  </p>
+<p>作业：我怎么看待“时间”？我怎么感知时间？  <br>呃，就，画画和写文和玩游戏的时候，时间会消失？然后我结束的时候（时间重新出现）就该睡觉了？起来之后用10min处理社交软件？然后吃饭？然后继续让时间消失。  <br>我就祈祷着能够让时间消失，因为一般这样我就会很开心。  </p>
+<div class="note primary"><p style="color:#7042C1"> 陛下能Deny time！</p> </div>
+然后就是，看天色吧，以及其他人的daily routine。  
+毕竟我没有daily routine。   
+
+<hr>
+<h3 id="插入停顿、标点和动作"><a href="#插入停顿、标点和动作" class="headerlink" title="插入停顿、标点和动作"></a>插入停顿、标点和动作</h3><p>呃，就是，呃——像这样。  <br>在对话中间插入停顿（包括标点和动作），大部分情况下读者都不会注意到。通常用于分割对话节奏，以执行任务（动作）、“，xx说”、手势、表情，甚至cue一下周围物体，都可以。  <br>然后练习方式就是多看电影。  </p>
+<hr>
+<h3 id="cliche（约定俗成）-和连字符"><a href="#cliche（约定俗成）-和连字符" class="headerlink" title="cliche（约定俗成） 和连字符"></a>cliche（约定俗成） 和连字符</h3><p>具体表现为，当一个作家使用“心悸”这个约定俗成的词的时候，没有经历过的读者可能没有深刻体会——甚至作家本人都没有深刻体会过。（就像我以前讨论过的，像“鲜虾鱼板面的味道”）但当你有过类似经验，你就可以有一种“啊！原来这个词是这个意思！”的感受，然后把这个词能够用自己的词语编织出来——让读者也能重新认识一下这个词。  <br>至于连字符，就是：</p>
+<blockquote>
+<p>他耸耸肩，给了她一个“我早就告诉你了（I-told-you-so）”的眼神。  </p>
+</blockquote>
+<p>这个在起草稿的时候很有用，可以当做占字符，但后期最好修正过来。（这位作者认为连字符虽然很聪明，但是很作弊）<br>我写过的有一个类似的就是“摆了一个‘这你还看不出来？’的手势”。    </p>
+<hr>
+<h3 id="叙事时间线的形状"><a href="#叙事时间线的形状" class="headerlink" title="叙事时间线的形状"></a>叙事时间线的形状</h3><ol>
+<li>线性：直线，通常很俗套</li>
+<li>O型：从一个激动人心的时间点入手（可以是未来，可以是过去），开始倒叙或者插叙，迂回叙述整个故事。</li>
+<li>被子型：独立时间线拼凑在一起:像是七日谈这类的每人讲一个故事的小说。</li>
+</ol>
+<h4 id="叙事信息的材质"><a href="#叙事信息的材质" class="headerlink" title="叙事信息的材质"></a>叙事信息的材质</h4><p>就是如何表述一个信息。</p>
+<ol>
+<li><p>名字相比于性格行为装扮而言很不重要。</p>
+</li>
+<li><p>多看看纪录片，看他们是如何用不同的方式表述信息的</p>
+</li>
+<li><p>Recipes：食谱，展示食谱。嗯。</p>
+</li>
+<li><p>Lists：展示列表，嗯。  </p>
+</li>
+<li><p>Definition：创造并定义词语。  </p>
+</li>
+</ol>
+<p>Consider also epitaphs（墓志铭）, graffiti, poetry. Jargon. Slogans. Advertising. All the non-fiction forms of dictionaries and encyclopedias. The call and response of religious ceremonies. Anecdotes. Speeches. The staging or camera directions built into screenplays. Prayers and magic spells. Those little “fabric care” labels sewn into your clothes. The legal warnings printed on a pack of cigarettes. Dance instructions. Street directions. Tour guide speeches. Greeting card messages. Fortune cookie fortunes. T-shirt sayings. Tattoos.</p>
+<p>可以用这些信息的展示方式过渡到下一场景：</p>
+<blockquote>
+<p>他的手里是一张泛黄的宾客名单，墨迹已经模糊不清，大小不齐的咬痕遍布边缘。  <br>他看到了那个人名，xxx，虽然已经和其他名字混在了一起，但他还是一眼就发现了它。<br>（转场）  <br>xxx是……</p>
+</blockquote>
+<p>Consider name tags – “Patricia Runningbear” – as very short stories. Photo captions. Headlines. Autopsy reports. School report cards. Even the stuff that people write with their finger, in the dirt on your car, that’s a form of written story telling. Even the language of classified ads in the newspaper. The billboards on a freeway. Junk mail. Chain letters.</p>
+<p>要注意的是这些介质是建立在真实世界可信度的基础上的。（这意味着你可以试着打破它）</p>
+<h4 id="故事的结构形状"><a href="#故事的结构形状" class="headerlink" title="故事的结构形状"></a>故事的结构形状</h4><p>接之前讨论过的O和直线。</p>
+<ol>
+<li>缩略图：指在开篇时对要发生的事件进行暗示。这涉及到一个叙述者矛盾的问题：他是在经历过后讲述这个故事，还是不知道即将到来的灾难？</li>
+<li>O型：从高潮讲述，然后插叙倒叙，回到高潮</li>
+<li>直线型：A发生了，之后B发生了，之后C发生了</li>
+<li>循环式：就是这个故事看似很新，但其实在小说世界观中已经反复发生了好几次了（参考恐怖游轮、尸体派对、什么什么月亮的那个韩剧）。大概就是1.吸引受害者2.受害者无视警告3.警告升级（次要角色死亡），受害者开始接受事实并做出改变4.为时已晚，受害者死亡5.重复第一步</li>
+<li>叛逆者、追随者和见证者：反抗社会的人+维护社会的人两个极端最后都无了，只剩下中和并从冲突中获得启示的见证者。</li>
+</ol>
+<p>？？？说好的六种呢？</p>
+<hr>
+<h3 id="明喻和暗喻"><a href="#明喻和暗喻" class="headerlink" title="明喻和暗喻"></a>明喻和暗喻</h3><p>我知道了，我就是老用明喻。就那个“就像”“像是”“似乎”“好像”的诅咒。  <br>暗喻通常会比明喻更好。  <br>老子感觉自己已经有十八年没用过“仿佛”了。</p>
+<blockquote>
+<p>Anytime you want to use a simile, a metaphor will usually work better. Stronger. Instead of: “Being married to Jim was <em>like</em> driving five years down a dirt road”… the stronger version is: “Being married to Jim was five years of driving down a dirt road.” Or better yet, “Being married to Jim left you shaky as a five-year drive down a dirt road.”</p>
+</blockquote>
+<p>相当于，  </p>
+<blockquote>
+<p>陛下反复摩挲着他的旧手套，似乎<em>是</em>想证明它还可以再用五百年一样。  <br>↓<br>陛下反复摩挲着他的旧手套，<em>似乎</em>想证明它还可以再用五百年。  <br>↓<br>陛下反复摩挲着他的旧手套，无声证明着它还可以再用五百年。  </p>
+</blockquote>
+<p>以及，太多的比喻会转移读者的注意力（因为这个比喻并不在场景里，读者要去花精力想象），可以尝试使用相近或者相同的比喻。  </p>
+<blockquote>
+<p>陛下再次摩挲起他那双能用五百年的旧手套——现在它看起来能用五百零一年了。  </p>
+</blockquote>
+<p>联系场景使用暗喻：</p>
+<blockquote>
+<p>陛下不情不愿地抬起眼，货架上倒吊着一双双他只会用一分钟的手套。  </p>
+</blockquote>
+<p>要少用“像是”和“像/就像”(is、like)、“有/有着（have）”：</p>
+<blockquote>
+<p>卢瑞恩随着音乐摇摆着身子，活像一只竹篮里的眼镜蛇。  <br>↓  <br>哪怕是竹篮里的眼睛蛇，也没有卢瑞恩此刻激情四射。  <br>↓<br>哪怕是竹篮里的眼睛蛇，也扭不出卢瑞恩此刻的激情四射。  </p>
+</blockquote>
+<blockquote>
+<p>陛下长着七根尖尖的长角，围成了一个看起来会很痛的王冠。  <br>↓  <br>七根尖尖的长角在陛下头顶上围出了一个很痛的王冠——无论你想看还是想摸。</p>
+</blockquote>
+<blockquote>
+<p>This brings us to three types of words to still avoid:<br>“Like” comparisons.<br>“Is” and “has” verbs (“the dog had a limp” is never as strong as “the dog walked with a limp”).<br>And, the dreaded “thought” verbs such as, “knew, realized, believed, worried, understood,” that let you spoon-feed your reader, instead of letting the reader think.</p>
+</blockquote>
+<hr>
+<h3 id="书签：p82"><a href="#书签：p82" class="headerlink" title="书签：p82"></a>书签：p82</h3><p>先写几个先睹为快：  </p>
+<ol>
+<li>重复出现的关键对象：例如一个项链，要保证它每次出现都物是人非，并加入新的含义，然后让它被很快忘记，为了在后期再次被提及。也可以作为场景连贯性的细节。</li>
+</ol>
+<blockquote>
+<p>现在，让我们看看对象在故事中的一些功能:<br>记忆线索:就像合唱一样，一个物体可以呼应过去的情节点，重现过去的所有情感/智慧。<br>埋藏的枪（伏笔）:一直藏到需要的时候。<br>手势道具:允许角色用身体表达自己，而不只是使用语言。<br>贯穿线图像:重复出现只是为了增加另一个元素的连续性</p>
+</blockquote>
+<ol start="2">
+<li>观察默片（看电影关掉声音），积累动作描写。</li>
+<li>不会再出现的配角不配得到名字，就，不要给名字（反正也会忘），要用人物特征指代。  </li>
+<li>突然沉默时（不知该如何表现时）角色（或者是作者让角色）会如何表现，即，角色不知该说什么时，他会说什么。可以从别人的经历中取材。（感觉有点像口癖，“啊这”“这样的吗”“妈耶”“emm”这样的。）</li>
+</ol>
+<blockquote>
+<p>陛下表示他会保持沉默。用小动作表示他的情感波动。  </p>
+</blockquote>
+<ol start="5">
+<li>用穿衣舞娘作比，脱衣服不能太快，不能太慢，也不能太快立场，要制造悬念，把握节奏</li>
+<li>不用非要把时间连上，让每个事件都填满，连不上就不连了（我之前写memo就是这样）</li>
+<li>能唤起故事的故事才是好故事。恭维的最高形式不是模仿，而是看到你的工作成为他人表达想法的催化剂。</li>
+<li>不真诚的承诺是谎言是枪（伏笔）。犯罪或秘密是谎言是枪（伏笔）除此之外，寻找那些真实的人加倍努力掩盖的谎言。看起来很聪明的人通常都在试图掩盖他们觉得自己很愚蠢的事实。美丽的人总是隐藏自己的丑陋。勤奋的人隐藏着他们内心的懒惰感。他们会一直说谎，直到不可能。</li>
+<li>第一人称的叙述者也是角色，要注意塑造：例如他不了解的领域和词汇。 </li>
+<li>依旧是注意专业词汇的收集和使用。  </li>
+</ol>
+<hr>
+<h3 id="关键objects"><a href="#关键objects" class="headerlink" title="关键objects"></a>关键objects</h3><p>重要物件可以反复出现在故事里，起到不同作用（放在先睹里了）。  <br>练习方式是寻找自己和日常生活中（他人的）的重要物件。看电影。  <br>物件每次出现都可以给它赋予新的意义。<br>不关键的物件一般不要过多强调（描写）。  </p>
+<blockquote>
+<p>寻找在故事中反复出现但意义改变的关键道具或物体。当你发现了这样一件物品后，考虑它的用途、原因或意义。<br>物体是“枪” 吗?它会进化到故事的结尾吗?迫使情节陷入危机。<br>对象是否用于代替缺席的字符?<br>物体是代表角色的目标和梦想的东西吗?或者代表力量？  </p>
+</blockquote>
+<blockquote>
+<p>当你学习在故事中寻找关键对象时，请注意那些非常非常优秀的对象是如何演变成几<br>个不同的情节点的。与有限的角色数量一样，有限的关键对象能够让你更快地营造紧张感。一旦你的对象被引入，你就不需要在描述新对象时失去动力。随着场景、角色和道具的增多，能量和焦点也会消散。所以，请注意，最好的故事——就像舞台剧一样——都有一些有限的道具，但却有几个不同的关键功能。  </p>
+</blockquote>
+<p>关键物品/人物不要太多，不然很分散注意力。  </p>
+<hr>
+<h3 id="几个点子"><a href="#几个点子" class="headerlink" title="几个点子"></a>几个点子</h3><ol>
+<li>卡关的时候往前看看自己的内容，看有没有埋的伏笔/可以作为伏笔在后期出现的线索。</li>
+<li>不要急于或强迫一个故事或一本书的结局。要善于等待是否有新发展。  </li>
+<li>要对角色产生感情，然后切断感情，不断重复。（原文是指在改稿的过程中删改角色/角色名）  </li>
+<li>There are three types of speech – I don’t know if this is TRUE, but I heard it in a seminar and it made sense. The three types are: Descriptive, Instructive, and Expressive. Descriptive: “The sun rose high…” Instructive: “Walk, don’t run…” Expressive: “Ouch!”Most fiction writers will only use one – at most, two – of these forms. So use all three.Mix them up. It’s how people talk.</li>
+<li>Write about the issues that really upset you.!ose are the only things worth writing about. </li>
+<li>呃，就，观察一个人然后猜他的故事？或者直接去问。  </li>
+<li>Imagine a stripper taking the stage, loud music, colored lights, the moment she enters, the stripper drops her dress to reveal herself fully nude. In that first minute in the spotlight she’s already naked, not dancing, simply standing there with a stern face and she says,“This is my vagina… any questions?”That’s why fiction – or nonfiction – needs good plotting: to reveal the secret of the story in a gradual, teasing way similar to how we learn most things in real life. It’s a constant play between denial and gratification. A sort-of tantric tension. If the stripper sheds clothing too fast, we don’t crave the ultimate discovery. Too slow, and we lose interest, overwhelmed by too much tension over too long a period of time. If the stripper is nude too long, the dance becomes silly, continuing beyond the release of tension. And if the dancer leaves the stage too quickly after the full reveal, we’re left confused and feeling cheated.</li>
+</ol>
+<hr>
+<h3 id="时间流逝"><a href="#时间流逝" class="headerlink" title="时间流逝"></a>时间流逝</h3><p>小说里时间的流逝是需要叙述者控制的：剧情发展——时间流动；说明解释和事实数据——时间暂停。要把这个世界建的很真实，让人物生活在时间里。  <br>必要时可以用提示时间的词语。</p>
+<blockquote>
+<p>作为练习，看一些你最喜欢的电影，并注意它们是如何暗示时间流逝的。阅读一些<br>小说，寻找那些创造权威、暗示精神状态、控制情节节奏的信息转储。</p>
+</blockquote>
+<blockquote>
+<p>除此之外，为你的角色列出一份真正有趣的事实清单，让他(她)能够滔滔不绝地说<br>出来，或者在他(她)的脑海中反复思考。同样，让每个事实都是独立的。保持简短有<br>吸引力。</p>
+</blockquote>
+<blockquote>
+<p>同时，当你在故事中注入事实时，不要费事去解释角色是如何知道这个或那个的。只<br>要坚持事实——要么你已经解释了角色过去的教育，要么你将解释教育作为不断发现过程的一部分。如果你把事实加上来源加进去，你就冒着把读者带离当前情节太远的风险。只是让你的事实作为事实出现。不要破坏你的角色世界的真实性。</p>
+</blockquote>
+<hr>
+<h3 id="断片对话"><a href="#断片对话" class="headerlink" title="断片对话"></a>断片对话</h3><p>大概就是类似Oblivion的npc对话。所答非所问。    </p>
+<blockquote>
+<p>One of the most common weaknesses in the work of new writers is that tendency to volley questions and answers, completing each exchange and leaving the energy flat. For example:<br>“Did you walk the dogs?”<br>“Yeah, an hour ago.”<br>“Do they need to go out, now?”<br>“They should be fine.”</p>
+</blockquote>
+<blockquote>
+<p>about the “A, B, and C choices” for dialogue. !e A choice might simply complete the expectation of the question: “Did you walk the dogs?” The A choice: “Yeah, an hour ago.” Energy complete and flat.<br>The B choice might still respond to the original question, but spins it a little for tension: “Did you walk the dogs?” B choice: “They’re your dogs…”<br>But, the C choice ignores the original question and shows us the inner world of the responding character: “Did you walk the dogs?” C choice: “Stop attacking me!”<br>Or: “Did you walk the dogs?” C choice: “Did you fuck my friend, Gwen?”<br>Or: “Did you walk the dogs?” C choice: “The lab called with your test results.”<br>So, forget being clever. Leave that to television sit-coms. If you’re going to use dialogue, forget being witty – okay, you can do that occasionally, but we’ll talk about“black-out lines” later.</p>
+</blockquote>
+<hr>
+<h3 id="肢体语言"><a href="#肢体语言" class="headerlink" title="肢体语言"></a>肢体语言</h3><blockquote>
+<p>读者阅读一个动词时，它会刺激读者大脑中参与实际行动的那部分。当你读到“踢” 这个词时，大脑中负责踢的部分就会兴奋起来。你读的肢体动作动词越多——吻、踢、跑、跳——你的大脑就越活跃。  </p>
+</blockquote>
+<p>观察动作和默片，建立自己的动作库。</p>
+<blockquote>
+<p>多年前，在采访一位非常成功的知名记者时，我问她为什么一直用另一只手的手指捏<br>自己的胳膊肘。她睁开眼睛，扬起下巴。她眨了几下眼睛，很快，不再碰肘部，把手放在膝盖上。事实证明，她多年来一直患有厌食症，但仍然无意识地感觉到肘关节的间隙，从而确定了她目前的体脂水平。如果她的食指与关节吻合，那么她的体脂是5%。如果她的小指合身，她的体脂就会膨胀到8%。</p>
+</blockquote>
+<blockquote>
+<p>角色的手势和姿势是如何帮助讲述故事的?动作如何从笨拙的叙述性对话中转移观众<br>的注意力?动作或手势如何有助于加快对话的节奏，从而建立紧张关系?手势是如何<br>强调笑话的?</p>
+</blockquote>
+<hr>
+<h3 id="荒诞"><a href="#荒诞" class="headerlink" title="荒诞"></a>荒诞</h3><p><span class="exturl" data-url="aHR0cDovL2R1c2h1LnFxLmNvbS9yZWFkLmh0bWw/YmlkPTI1NzkyNTM1JmNpZD04">杰克逊随笔《我和 R.H.梅西的生活》<i class="fa fa-external-link-alt"></i></span></p>
+<blockquote>
+<p>杰克逊的权威来自于她源源不断的新细节和她缺乏解释，而她的幽默则来自于她对平凡的任务过于认真，对严肃的任务过于乐观。例如，鞠躬和崇拜时钟，却把顾客给她的钱装入口袋。毫无意义的俚语、缩略语和数字都迫使读者接受每一个动作，给你留下叙述者一样的习得性无助感。</p>
+</blockquote>
+<blockquote>
+<p>以“And” 开头的，暗示着一些事情已经过去了。</p>
+</blockquote>
+<blockquote>
+<p>注意杰克逊是如何把她所有的次要角色都塑造成不太真实的。他们都<br>叫库珀小姐。 “他们都穿西装。要么，要么他们只是他们的员工号码或“一个客户”。“除了叙述者，没有人是真实的，这样读者就不得不接受叙述者对现实的描述。 在描述新演员时，杰克逊从不放慢故事的节奏:总是一个普通的库珀小姐或顾客来提出要求或下订单.只有最重要的角色才应该有名字。 较小的角色应该根据他们的角色或身体特征获得昵称。  </p>
+</blockquote>
+<p><a href>E.B.怀特《穿着凶猛睡衣的黄昏》（没找到）</a></p>
+<blockquote>
+<p>叙述者也用具体的图像和细节让读者不知所措，这些图像和细节组合得太密集，<br>传达得太快，让人难以理解。</p>
+</blockquote>
+<blockquote>
+<p>记住要快速进入故事。就像一首朋克歌曲(所有的歌曲开始很快，持续两分半钟，然后突然结束)。确保每个细节都很具体，以此树立你的权威。让你的次要角色保持模糊——让他们为自己的目的服务并离开。快速构建荒谬，然后快速退出。  </p>
+</blockquote>
+<hr>
+<h3 id="名字和指代"><a href="#名字和指代" class="headerlink" title="名字和指代"></a>名字和指代</h3><p>就是不要总是干巴巴地说他，而是要抓住机会塑造形象？相当于积累一个名单，只不过名单上都是同一个人的不同指代方式。   </p>
+<blockquote>
+<p>也就是说……永远不要使用第三人称代词。不是”他说”或”她走”或”它飞”。相反，你应该用更具体的方式来指代角色。如果你还没有注意到，我的目标是总是使用最小的元素创造最大的紧张感——有限的设置，角色和时间。通过使用相同的元素，我可以专注于物理动作，避免引入新角色和背景所需的描述减慢故事速度。<br>避免使用代词的一个明显问题是重复名词直到它们变得单调。例如， “雪莱· 帕<br>克合上书。然后，雪莱· 帕克把书掉在了地板上。雪莱· 帕克弯下腰去拿书。<br>不，使用代词“她” 和“它” 不会让这些句子更好，只会更短。<br>所以，要考虑到所有事物都有多个名称，最弱的是常用的名词。例如， “雪莱· 帕<br>克合上书。然后，帕克小姐把那沾满灰尘的东西扔在了地板上。那个腼腆的姑娘弯下腰去捡起那堆皱巴巴的书页。 ”</p>
+</blockquote>
+<blockquote>
+<p>但在我们讨论专有名称之前，让我们考虑一下其他更有力的标签。当我们第一次意识<br>到一个人时，我们很可能会根据他们的行为和外表给他们贴上标签。例如， “在那部电影中死去的金发男人” 或“戴着帽子唱歌的高个女人” 。<br>除此之外，我们很可能会根据他们与我们的关系给他们贴上标签。例如， “在高速<br>公路上拦住我车的混蛋” 或“舔我手的狗” 。<br>通常，我们记得的关于某人的最后一个细节就是他们的名字。雪莱或圣劳伦斯。即<br>使这样，你也可以用头衔或昵称来改变名字:特纳小姐、刘易斯医生、甜甜派巴恩斯。加上任何的亲昵-亲爱的，亲爱的，我的甜心。 “玛丽安对我眨了眨眼，那个瘦巫婆说，‘去死吧’ 。 ”</p>
+</blockquote>
+<blockquote>
+<p>当然，你需要小心不要弄丢或迷惑你的读者。如果你用不同的方式描述一个角色，你<br>可能需要在描述每个角色时创建一个新的段落。同样重要的是，你需要为每个角色创造标准的、一致的身体特征和昵称或喜爱之处。  </p>
+</blockquote>
+<blockquote>
+<p>第一印象是建立在外表和肢体动作上的。<br>接下来是关系——这对我有什么影响?<br>最后是一个真实的名字. </p>
+</blockquote>
+<hr>
+<h3 id="情节的作用"><a href="#情节的作用" class="headerlink" title="情节的作用"></a>情节的作用</h3><blockquote>
+<p>最好的故事不是那些让观众目瞪口呆的故事。更常见的是，最好的故事会让读者或观众感到兴奋，让每个人同时谈论起一连串的个人轶事，激动地发现自己与更大的世界之间的新联系。通过这种方式，一个好的故事能够识别世界上的某些东西，并允许人们去探索它。通常，故事也会给话题提供一种共同的语言和支持隐喻，让人们可以讨论它。同样，能唤起故事的故事才是好故事。</p>
+</blockquote>
+<blockquote>
+<p>但在你写之前，你需要知道每个场景、章节或段落的目的。为了让故事的每个部分都发挥其作用，你需要非常清楚任务的目标是什么。这个场景是为了最终获得回报而设置的吗?场景或章节是揭示还是回报?<br>场景或段落是否在故事中充当了一个停顿，减缓了节奏，以便随后的结果产生更强<br>烈的反应?<br>同时，问问自己，并且非常清楚当前场景会回答哪些早前的问题。这一幕又会带<br>来什么新的、更大的问题呢?下一章或场景会是闪回吗?切换?这将如何支持接下来的章节?这个场景是为了抓住读者的注意力而设计的“扣人心弦的场景” 吗?这是不是一种<br>“逆转” ，即力量完全从强者转向弱者?</p>
+</blockquote>
+<hr>
+<h3 id="Nuts-and-Bolts-六秒钟后你会恨死我"><a href="#Nuts-and-Bolts-六秒钟后你会恨死我" class="headerlink" title="Nuts and Bolts: 六秒钟后你会恨死我"></a>Nuts and Bolts: 六秒钟后你会恨死我</h3><p><strong>是的我就是有意识在这么干的，我真nb：</strong></p>
+<p>总结一下就是，角色能得出的结论，要让读者自己得出。<br>结论可以写，作为总结，比如“巴拉巴拉巴拉…。夫人生气了，白王如此判断。”在但前提是读者能（提前）看出来——除非像陛下这种结论狂魔，可以先让角色有这个结论然后acting like that.  </p>
+<p>然后还有一点就是近义词。  </p>
+<p>还有就是扩展细节。  </p>
+<p>对于我这样又要构建故事框架还要精雕细啄但不能同时实现的，可以先列框架，再扩展。（所以我说站子里那些没写好的都是Demo）</p>
+<p>by Chuck Palahniuk</p>
+<p>In six seconds, you’ll hate me.<br>But in six months, you’ll be a better writer.<br>From this point forward—at least for the next half year—you may not use “thought” verbs. These include: Thinks, Knows, Understands, Realizes, Believes, Wants, Remembers, Imagines, Desires, and a hundred others you love to use.</p>
+<p>The list should also include: Loves and Hates.</p>
+<p>And it should include: Is and Has, but we’ll get to those later.</p>
+<p>Until some time around Christmas, you can’t write: Kenny wondered if Monica didn’t like him going out at night…”Instead, you’ll have to Un-pack that to something like: “The mornings after Kenny had stayed out, beyond the last bus, until he’d had to bum a ride or pay for a cab and got home to find Monica faking sleep, faking because she never slept that quiet, those mornings, she’d only put her own cup of coffee in the microwave. Never his.”</p>
+<p>Instead of characters knowing anything, you must now present the details that allow the reader to know them. Instead of a character wanting something, you must now describe the thing so that the reader wants it.</p>
+<p>Instead of saying: “Adam knew Gwen liked him.” You’ll have to say: “Between classes, Gwen had always leaned on his locker when he’d go to open it. She’s roll her eyes and shove off with one foot, leaving a black-heel mark on the painted metal, but she also left the smell of her perfume. The combination lock would still be warm from her butt. And the next break, Gwen would be leaned there, again.”</p>
+<p>In short, no more short-cuts. Only specific sensory detail: action, smell, taste, sound, and feeling.</p>
+<p>Typically, writers use these “thought” verbs at the beginning of a paragraph (In this form, you can call them “Thesis Statements” and I’ll rail against those, later). In a way, they state the intention of the paragraph. And what follows, illustrates them.</p>
+<p>For example:</p>
+<p>“Brenda knew she’d never make the deadline. Traffic was backed up from the bridge, past the first eight or nine exits. Her cell phone battery was dead. At home, the dogs would need to go out, or there would be a mess to clean up. Plus, she’d promised to water the plants for her neighbor…”</p>
+<p>Do you see how the opening “thesis statement” steals the thunder of what follows? Don’t do it.</p>
+<p>If nothing else, cut the opening sentence and place it after all the others. Better yet, transplant it and change it to: Brenda would never make the deadline.</p>
+<p>Thinking is abstract. Knowing and believing are intangible. Your story will always be stronger if you just show the physical actions and details of your characters and allow your reader to do the thinking and knowing. And loving and hating.</p>
+<p>Don’t tell your reader: “Lisa hated Tom.”</p>
+<p>Instead, make your case like a lawyer in court, detail by detail.</p>
+<p>Present each piece of evidence. For example:</p>
+<p>“During roll call, in the breath after the teacher said Tom’s name, in that moment before he could answer, right then, Lisa would whisper-shout ‘Butt Wipe,’ just as Tom was saying, ‘Here’.”</p>
+<p>One of the most-common mistakes that beginning writers make is leaving their characters alone. Writing, you may be alone. Reading, your audience may be alone. But your character should spend very, very little time alone. Because a solitary character starts thinking or worrying or wondering.</p>
+<p>For example: Waiting for the bus, Mark started to worry about how long the trip would take…”</p>
+<p>A better break-down might be: “The schedule said the bus would come by at noon, but Mark’s watch said it was already 11:57. You could see all the way down the road, as far as the Mall, and not see a bus. No doubt, the driver was parked at the turn-around, the far end of the line, taking a nap. The driver was kicked back, asleep, and Mark was going to be late. Or worse, the driver was drinking, and he’d pull up drunk and charge Mark seventy-five cents for death in a fiery traffic accident…”</p>
+<p>A character alone must lapse into fantasy or memory, but even then you can’t use “thought” verbs or any of their abstract relatives.</p>
+<p>Oh, and you can just forget about using the verbs forget and remember.</p>
+<p>No more transitions such as: “Wanda remembered how Nelson used to brush her hair.”</p>
+<p>Instead: “Back in their sophomore year, Nelson used to brush her hair with smooth, long strokes of his hand.”</p>
+<p>Again, Un-pack. Don’t take short-cuts.</p>
+<p>Better yet, get your character with another character, fast. Get them together and get the action started. Let their actions and words show their thoughts. You—stay out of their heads.</p>
+<p>And while you’re avoiding “thought” verbs, be very wary about using the bland verbs “is” and “have.”</p>
+<p>For example:</p>
+<p>“Ann’s eyes are blue.”</p>
+<p>“Ann has blue eyes.”</p>
+<p>Versus:</p>
+<p>“Ann coughed and waved one hand past her face, clearing the cigarette smoke from her eyes, blue eyes, before she smiled…”</p>
+<p>Instead of bland “is” and “has” statements, try burying your details of what a character has or is, in actions or gestures. At its most basic, this is showing your story instead of telling it.</p>
+<p>And forever after, once you’ve learned to Un-pack your characters, you’ll hate the lazy writer who settles for: “Jim sat beside the telephone, wondering why Amanda didn’t call.”</p>
+<p>Please. For now, hate me all you want, but don’t use thought verbs. After Christmas, go crazy, but I’d bet money you won’t.</p>
+<p>(…)</p>
+<p>For this month’s homework, pick through your writing and circle every “thought” verb. Then, find some way to eliminate it. Kill it by Un-packing it.</p>
+<p>Then, pick through some published fiction and do the same thing. Be ruthless.</p>
+<p>“Marty imagined fish, jumping in the moonlight…”</p>
+<p>“Nancy recalled the way the wine tasted…”</p>
+<p>“Larry knew he was a dead man…”</p>
+<p>Find them. After that, find a way to re-write them. Make them stronger.</p>
+<p>“机翻”：</p>
+<p>文/恰克·帕拉尼克<br>再过六秒钟，你会恨死我。<br>但再过六个月，你会成为一个更好的作家。<br>从现在开始——至少接下来半年之内——你不能用“想”动词。这包括：觉得，知道，明白，懂得，相信，想要，记得，想象，欲求，还有其他那一百个你喜欢用的词。<br>这张单子还包括：<br>爱和恨。<br>它也包括：是和有，但这两个过一阵再说。<br>直到圣诞节左右，你都不能写：肯尼觉得莫妮卡也许不喜欢他夜里外出……<br>作为代替，你必须把这句话分解成：“有些早晨，肯尼在外面待得很晚，错过最后一班公交，直到他不得不搭便车或付钱搭出租，然后回到家发现莫妮卡在装睡，因为她从不如此安静地睡着，那些早晨，她只会把自己那杯咖啡放进微波炉里。从没有他的。”<br>比起写你的角色知道什么是，你现在必须提供细节，让读者知道那些事。比起写一个角色想要什么东西，你现在必须描述那个东西，让读者也想要它。<br>比起说：“亚当知道格温喜欢他。”你必须要说：“在课间，他去打开他的储物柜时，格温总是倚在它上面。她会翻翻眼睛，用一只脚把自己推开，在被漆过的金属上留下一道黑色的鞋跟印，但她也留下了她的香水味。组合锁上还有她臀部的温度。下一个课间，格温又会倚在那儿。”<br>简单来说，没有捷径了。只有具体的感官细节：动作，气味，味道，声音，以及感觉。<br>一般情况下，作者总会在一段话的开头使用这些“想”动词（在这里，你可以管他们叫“中心句”，我等会儿再抱怨这个）。某种意义上，他们点出了整段话的意图。接下来的部分来详细解释这些意图。<br>比如说：<br>“布兰达知道她不可能赶得上截止时间。她从桥那边过来，经过八或九个出口。她的手机没电了。家里，狗需要出去散步，要不就会弄得一团乱需要收拾。再加上她答应要帮邻居浇花……”<br>你看出开场的中心句如何抢了下面那段话的风头吗？别这么干。<br>最少也要把开场白拿掉，放在其他所有句子的后面。更好的是，把他换个地方，改成：布兰达赶不上截止时间了。<br>思考是抽象的。了解和相信是无形的。如果你只展现出物理活动和角色的细节，让你的读者去执行思考和了解，以及爱与恨的话，你的故事总会更有力。<br>别告诉你的读者“丽莎恨汤姆。”<br>作为代替，像法庭上的律师一样据理力争，用细节说话。<br>展示出每一件证据。比如说：<br>“点名时，在老师叫到汤姆的名字之后的一喘气之间，在他应答之前的那个瞬间，就在那时，丽莎会小声叫出‘讨厌鬼’。就在汤姆说‘到’的时候。”<br>新手作者最常犯的错误之一就是让他们的角色一个人待着。写作时，你可以是一个人。阅读时，你的读者可以是一个人。但你的角色应该很少、很少一个人待着。因为一个孤独的角色会开始思考、担忧、或者好奇。<br>比如说：“在等公交时，马克开始担心这趟路程会花费多久……”<br>更好的展示方法可以是：“时刻表写着公交会在中午到达，但马克的表显示已经11：57了。你可以看到路的尽头，一直到购物中心的那本，一辆巴士都没有。毫无疑问，司机停在了中转站，路线的最那头，正在打盹。司机很放松，睡得正香，而马克就要迟到了。或者更早，司机正在喝酒，那他就会停在路边，收马克七十五分钱来给他一场严重交通事故中的凄惨死亡……”<br>一个独自一人的角色必须进入幻想或回忆中，但即便那样你也不能用“想”动词，或者任何它的抽象动词亲戚们。<br>哦，你可以忘掉忘记和记得这两个词了。<br>再不能用这种转换句：“旺达记得尼尔森以前如何梳过她的头发。”<br>再说一遍，分解。别走捷径。<br>更好的是，让你的角色遇到另一个角色。越快越好。<br>让他们待在一起，开始活动。让他们的活动和谈话展现出他们的想法。你一一别进到他们的脑袋里面去。<br>在你躲避“想”动词时，要特别注意“是”和“有”这两个平凡的动词。<br>比如说：<br>“安的眼睛是蓝色的。”<br>“安有蓝色的眼睛。”<br>“安咳了一声，抬起手在面前挥舞，把香烟烟雾从她的眼睛，蓝色的眼睛，中赶走，然后微笑道……<br>比起使用平淡的“是”和“有”陈述句，试着把一个角色是什么和有什么的细节埋进动作或者手势里。最基础地，这就是呈现而非讲述你的故事。<br>很久以后，一旦你学会了分解你的角色，你就会恨死那些偷懒的作者，他们只满足于：“吉姆坐在电话旁边，想知道为什么阿曼达没有打来。”<br>拜托，此时此刻，随便你怎么恨我，但别用“想”动词。等到圣诞节后，想怎么写就怎么写吧，但我打赌你不会的。<br>……<br>这个月的作业是，读一遍你的作品，圈出每一个“想”动词来。然后，找到消灭他们的办法。通过分解它来消灭它。<br>然后，读一些已出版的小说，做相同的事。不要手下留情。<br>“马蒂想象着鱼儿们，在月光下跳动。<br>“南希回忆着那酒的味道。<br>“拉里知道他死定了。<br>找到他们。那之后，找到重写他们的方式，让他们变得更有力。</p>
+<hr>
+<h1 id="名句Quote"><a href="#名句Quote" class="headerlink" title="名句Quote"></a>名句Quote</h1><p>挺喜欢这种风格的:</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ib29rcm9vLmNvbS9xdW90ZXM=">Bookroo<i class="fa fa-external-link-alt"></i></span></p>
+<hr>
+<h1 id="历史上的今天"><a href="#历史上的今天" class="headerlink" title="历史上的今天"></a>历史上的今天</h1><p><span class="exturl" data-url="aHR0cHM6Ly9tLjg2ODQuY24vdG9kYXlfZDA5MDk/aXZrX3NhPTEwMjQzMjB1">9月9日是陛下的破壳日啦<i class="fa fa-external-link-alt"></i></span></p>
+<hr>
+<h1 id="DnD-阵营"><a href="#DnD-阵营" class="headerlink" title="DnD 阵营"></a>DnD 阵营</h1><p>转自外网某论坛以及Google以及DnD Fandom Wiki</p>
+<p>Lawful Good = Control Freak<br>Neutral Good = Neurotypical<br>Chaotic Good = SJW<br>Lawful Neutral = Normie<br>(True) Neutral = Chilled<br>Chaotic Neutral = Edgy<br>Lawful Evil = Asshat<br>Neutral Evil = Cold<br>Chaotic Evil = Psycho</p>
+<p>The Nine Alignments<br>    •    Lawful Good, “Crusader”<br>    •    Neutral Good, “Benefactor”<br>    •    Chaotic Good, “Rebel”<br>    •    Lawful Neutral, “Judge”<br>    •    Neutral, “Undecided”<br>    •    Chaotic Neutral, “Free Spirit”<br>    •    Lawful Evil, “Dominator”<br>    •    Neutral Evil, “Malefactor”</p>
+<p><strong>Law vs chaos</strong><br>Law and Chaos represent the opposing principles of order vs entropy, control vs chaos, society vs the individual, and stability vs change. Law and chaos are neither good nor evil; they simply are.<br>According to TSR employee Tim Kask, law represents predictability and rational thought, while chaos represents the opposite:[1]<br>As originally conceived, lawful meant that you were a creature of habit, not that you wore a badge. You could be predicted to react in a familiar way given a familiar situation, time and time again. You weren’t a kender or an elf who was constantly flitting off, okay, that’s chaotic.<br>The personality that can’t focus, or won’t focus on something, or you literally have no idea how they’re likely to react at any given provocation, even if they reacted one way before, they might react a different way. That’s chaotic.<br><strong>Good vs evil</strong><br>Good and Evil represent the familiar moral divide of altruism vs harm, kindness vs hatred, and mercy vs malevolence.</p>
+<hr>
+<p><strong>Lawful good</strong><br>A lawful good character is a protector. The iconic example of lawful good is a paladin, a holy knight who protects the weak and destroys evil.<br>The D&amp;D 3.5 Player’s Handbook, p.104-106, which provides nicknames for each of the nine alignments, refers to this alignment as “Crusader”.<br><strong>Neutral good</strong><br>A neutral good character believes in altruism over all else.<br>The D&amp;D 3.5 Player’s Handbook nicknames this alignment “Benefactor”.<br><strong>Chaotic good</strong><br>A Chaotic Good character believes in freedom as the highest virtue. The iconic example of chaotic good is Robin Hood, who rebels against authority as a way to protect the poor from poverty and suffering.<br>The D&amp;D 3.5 Player’s Handbook nicknames this alignment “Rebel”.<br><strong>Lawful neutral</strong><br>A lawful neutral character obeys principle as the highest virtue. For example, a judge who treats all fairly and equally would be considered lawful neutral.<br>The D&amp;D 3.5 Player’s Handbook nicknames this alignment “Judge”.<br><strong>True neutral</strong><br>A true neutral character is neutral on both axes, and cares not for any stance of alignment. This often describes someone who cares only for their own personal needs, neither inclined to hurt or harm others, nor to obey or rebel.<br>A few true neutral characters rather follow an intentional philosophy of balance. One such example is Mordenkainen, an archmage on the world of Oerth, who uses his great power to maintain the status quo and prevent any one force from becoming too powerful. D&amp;D creator Gary Gygax preferred this definition of true neutral.[2]<br>In Dungeons &amp; Dragons 3rd edition and earlier, this category included unaligned animals, who have no sense of ethics beyond their own survival needs, and so cannot really be described as good or evil in human terms.[3][4]<br>In D&amp;D 5th edition, animals are instead considered unaligned, a separate category for creatures which lack an alignment.<br>True neutral is also referred to as “neutral” or rarely “neutral neutral”.[5][6][7] It is abbreviated N or TN.<br>The D&amp;D 3.5 Player’s Handbook nicknames this alignment “Undecided”.<br><strong>Chaotic neutral</strong><br>A chaotic neutral character follows their heart, but without the willingness to self-sacrifice as a chaotic good character might. A great many adventurers are chaotic neutral, doing what they wish and rejecting all forms of authority. Some chaotic neutral characters follow a deliberate philosophy of destroying the old to make way for the new.<br>The D&amp;D 3.5 Player’s Handbook nicknames this alignment “Free Spirit”.<br><strong>Lawful evil</strong><br>A lawful evil character is a tyrant. They have no moral qualms about punishing individuals for the greater goal of furthering society. A lawful evil villain is often easy to deal with, as they can often be trusted to keep their word.<br>The D&amp;D 3.5 Player’s Handbook nicknames this alignment “Dominator”.<br><strong>Neutral evil</strong><br>A neutral evil character is selfish, and has no problem harming others to get what they want - if they can get away with it.<br>The D&amp;D 3.5 Player’s Handbook nicknames this alignment “Malefactor”.<br><strong>Chaotic evil</strong><br>A chaotic evil character is malevolent. A villain bent on revenge might be of this alignment. Where the most powerful lawful evil villains might aim to conquer the world, this might be preferable to their chaotic evil counterparts, who would destroy it.<br>The D&amp;D 3.5 Player’s Handbook nicknames this alignment “Destroyer”.<br><strong>Unaligned</strong><br>A creature without the ability to make rational moral choices may be considered to have no alignment at all. In Dungeons &amp; Dragons 5th edition, creatures such as animals fall into this category and are considered unaligned.<br>In Dungeons &amp; Dragons 4th edition, unaligned referred to all creatures who were neither good nor evil, including what other editions of the game would consider to be neutral alignment.<br>In Dungeons &amp; Dragons 3rd edition and earlier, the unaligned status did not exist, and such creatures were simply considered neutral or true neutral.</p>
+<p>Order vs Chaos is a far more interesting and creative set-up than Good vs Evil, in my opinion. Warhammer got that spot on.</p>
+<p><span class="exturl" data-url="aHR0cDovL2Vhc3lkYW11cy5jb20vYWxpZ25tZW50dGVzdC5odG1s">测九阵营以及九阵营相关<i class="fa fa-external-link-alt"></i></span></p>
+<p>ps.老子是无序中立</p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/IMG_7551(20210823-025415).PNG" alt="Chaotic Neutral"></p>
+<h2 id="其他-素材-积累-大概-吧"><a href="#其他-素材-积累-大概-吧" class="headerlink" title="其他 | 素材 | 积累 | 大概 | 吧"></a>其他 | 素材 | 积累 | 大概 | 吧</h2><p><img data-src="https://i.loli.net/2021/11/05/sNGcr7zLveERQS5.png" alt="感觉挺有意思的，存一下"></p>
+<p>还有什么，</p>
+<ul>
+<li>月白是淡蓝色</li>
+<li>谪仙</li>
+</ul>
+<h2 id="海龟汤"><a href="#海龟汤" class="headerlink" title="海龟汤"></a>海龟汤</h2><p>法官(煲汤人)给出故事题目、开头和结尾，玩家通过答复是是不是的句式进行提问，获得线索。法官只能回答“是”，“不是”，“是也不是”，“不重要”。游戏考验发散思维，法官可以通过减少故事题目里的线索来提高游戏难度。海龟汤玩法传自国外，学名情景推理游戏，有Lateral thinking Puzzle(水平思考游戏/横向思维游戏/猜谜游戏)，也称Situation puzzle(情景推理/情景猜谜)，在国内还属小众游戏，分类并不清晰，但已有的包括剧情侧，恐怖侧，极限脑洞侧，强逻辑侧，文字侧，脑筋急转弯侧等，更多的则是很多侧结合的故事。经过线下不断尝试得出，以恐怖为底色，剧情优秀和挑战脑洞的本是最为受线下聚会喜欢的，气氛的反馈度也是最高的，但也有相当部分玩家推崇逻辑至上，因此本文的选本以这些侧为主。当然一般来讲，追求故事严谨会牺牲一定的恐怖性，恐怖性为主则会牺牲一定的严谨性。海龟汤一词出自一个同名故事，第一碗汤就是这个真实事件改编而成的(后附其故事)。另外也有其他称呼，例如“黑故事”等，但海龟汤的称呼最为深谙游戏本质，进行游戏与喝汤一样，通过不断推测线索，一口一口喝到碗底，煲汤人的乐趣之一也是看着喝汤的人四处碰壁而苦思冥想。</p>
+<p>汤面分为horror（恐怖氛围）、weird（诡秘脑洞）、ratiocinate（断案推理）、tale（剧情故事）、taste（趣味猜谜）、fairy（仙境迷踪）、event（新闻实事）七个系列，系列介绍在评论席的补充楼中。</p>
+<p>其实和跑团还有点像的感觉..我觉得 有点像的点是kp的存在吧可能</p>
+<p>咩碳 11:24:17<br>还汤底汤面</p>
+<p>咩碳 11:24:25<br>很专业了</p>
+<p>咩碳 11:25:05<br>脑叶公司</p>
+<p>咩碳 11:25:19<br>给scp的时候不是有一句话总结吗</p>
+<p>咩碳 11:25:26<br>有一天女明星在家里，坐在沙发上看电视，忽然发出了撕心裂肺的尖叫。</p>
+<p>咩碳 11:25:38<br>新娘死了，但是新郎很开心。</p>
+<p>咩碳 11:25:44<br>都可以搞scp</p>
+<p>咩碳 11:25:47<br>呸</p>
+<p>咩碳 11:25:52<br>脑叶scp</p>
+<h2 id="文手九宫格"><a href="#文手九宫格" class="headerlink" title="文手九宫格"></a>文手九宫格</h2><p><img data-src="http://mebilychen-media.test.upcdn.net/image/OC/%E6%96%87%E6%89%8B%E4%B9%9D%E5%AE%AB%E6%A0%BC.png"></p>
+<h2 id="恶役问卷"><a href="#恶役问卷" class="headerlink" title="恶役问卷"></a>恶役问卷</h2><p>在此给不明所以的填卷人做出解释:这个问卷中的恶役是指在当前的世界被判定为恶人或者反派阵营的角色，与当事人的意志或者真实想法无关</p>
+<p>首先我们在此承诺，无论您现在身份是否暴露或者有意暴露，此份问卷都不会泄露出去，也不会对您的名声和财富造成任何影响。所以请尽量填写您的真实信息<br>那么接下来开始答卷<br>1.那么首先请提供您的基本信息，包括但不限于姓名，性别，年龄等<br>2.您位于一个什么样的世界?什么时代?是否有魔法?科技是否先进?<br>3.您是否清楚自己是一个什么样的恶役?如果是能否叙述一下?<br>4.您觉得是什么样的理由导致您成为恶役?<br>5.与您相对的善役的人对您来说是什么样的存在?<br>6.他或者他们是否有意识到您是恶役?如果是，是否有采取行动?或者您认为会如何行动?<br>7.您是否有掌握一-定的财富或者地位，亦或者某种能力?亦或有过人的头脑?<br>8.您有某种计划吗?或者说野心?<br>9.您是独自行动的吗?还是与人合作或者操控他人为您卖命?亦或者您是为某人干事的那个?<br>10.对于阻碍您行动的人您一般如何处置?<br>11.您大概是什么时候意识到自己是恶役的?<br>12.接上，这对当时的您是否造成了影响?<br>13.现在的您是否对自己的身份感到满意?<br>14.有没有什么让您查无法释怀的事情? 那是您成为恶役的原因吗?<br>15.作为恶役至今您是否有做出过什么惊人的举动或<br>者发生过让您难以忘怀的事情?<br>16.您希望今后会发生什么呢?或者您在意的事情最<br>好以什么样的方式发展?<br>17.接上，最后如何收尾呢?<br>18.依然接上，您有希望从中获得东西吗?<br>19.您又希望自己最后是一个什么样的结局呢?<br>20.最后，随便说点什么吧。</p>
+
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/8b70.html">【重难点】写作技巧</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2021年08月08日 - 22:29</p>
+ <p><span>最后更新:</span>2022年01月05日 - 16:54</p>
+ <p><span>原始链接:</span><a href="/p/8b70.html" title="【重难点】写作技巧">https://mebilychen.github.io/p/8b70.html</a>
+    
+ </p>
+ <p><span>许可协议:</span>除非文章内另行声明，遵守 cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script data-pjax> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%A7%AF%E7%B4%AF%E6%9C%AC/" rel="tag"><i class="fa fa-tag"></i> 积累本</a>
+              <a href="/tags/%E5%86%99%E4%BD%9C/" rel="tag"><i class="fa fa-tag"></i> 写作</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/e3a42.html" rel="prev" title="【参考】绘画参考+ Wave 2">
+      <i class="fa fa-chevron-left"></i> 【参考】绘画参考+ Wave 2
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/fb0e.html" rel="next" title="【角色研究】朔月">
+      【角色研究】朔月 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%99%E4%B8%AA%E8%A7%92%E8%90%BD%E8%97%8F%E7%9D%80%E4%B8%80%E4%B8%AA%E5%B0%8F%E7%A1%AE%E5%B9%B8-%E8%A1%B7%E8%8B%A6%E3%80%81"><span class="nav-text">这个角落藏着一个小确幸&#x2F;衷苦、</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%A7%E6%9C%AC%E5%86%99%E4%BD%9C"><span class="nav-text">剧本写作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%BA%E7%89%A9%E6%9E%84%E5%BB%BA"><span class="nav-text">人物构建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E5%86%99%E4%BD%9C%E8%8A%82%E5%A5%8F"><span class="nav-text">关于写作节奏</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E4%BD%9C%E6%89%8B%E6%B3%95"><span class="nav-text">写作手法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E4%BD%9C%E6%8A%80%E5%B7%A7"><span class="nav-text">写作技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-3%E8%AE%A9%E4%B8%8D%E5%85%A5%E6%B5%81%E7%9A%84%E7%8E%8B%E5%AD%A6%E5%AE%B6%E5%92%A9%E7%A2%B3%E6%9D%A5%E6%95%99%E4%BD%A0%E6%80%8E%E4%B9%88%E4%BC%98%E5%8C%96%E5%8F%A5%E5%AD%90%E5%90%A7%EF%BC%81"><span class="nav-text">9.3让不入流的王学家咩碳来教你怎么优化句子吧！</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E6%8E%A5%E5%90%BB"><span class="nav-text">关于接吻</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%96%9C%E6%AC%A2%E7%9A%84%E6%96%87%E9%A3%8E%EF%BC%88%E5%85%BCTrigger%EF%BC%89"><span class="nav-text">喜欢的文风（兼Trigger）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%A0%E7%88%B1%E7%8E%B2"><span class="nav-text">张爱玲</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E9%A3%8E%E5%90%AF%E5%8A%A8%E5%BC%80%E5%85%B3%EF%BC%88%E4%B8%B4%E6%91%B9%EF%BC%89"><span class="nav-text">文风启动开关（临摹）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%80%8A%E8%BE%B9%E5%9F%8E%E3%80%8B"><span class="nav-text">《边城》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%80%8A%E6%96%87%E5%8C%96%E8%8B%A6%E6%97%85%E3%80%8B%E2%80%94%E2%80%94%E4%BD%99%E7%A7%8B%E9%9B%A8"><span class="nav-text">《文化苦旅》——余秋雨</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%80%8A%E5%9F%8E%E5%8D%97%E6%97%A7%E4%BA%8B%E3%80%8B"><span class="nav-text">《城南旧事》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hades-%E6%96%87%E6%A1%88"><span class="nav-text">Hades 文案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%81%E4%B9%90%E8%BF%AA%E6%96%AF%E7%A7%91%E6%96%87%E9%A3%8E"><span class="nav-text">极乐迪斯科文风</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Omensight"><span class="nav-text">Omensight</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B5%B7%E5%90%8D%EF%BC%88%E4%BA%BA%E5%90%8D%E3%80%81%E7%89%A9%E5%90%8D%E3%80%81%E4%BA%8B%E4%BB%B6%E5%90%8D%E3%80%81%E5%9C%B0%E5%90%8D%E3%80%81%E7%AB%A0%E8%8A%82%E5%90%8D%E7%AD%89%EF%BC%89"><span class="nav-text">起名（人名、物名、事件名、地名、章节名等）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%91%E7%8C%AB%E5%92%AA%EF%BC%88%E4%B8%89%E9%83%A8%E6%9B%B2%EF%BC%89"><span class="nav-text">救猫咪（三部曲）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Neil-Gaiman"><span class="nav-text">Neil Gaiman</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chuck-Palahniuk"><span class="nav-text">Chuck Palahniuk</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%91%E7%AB%8B%E5%A8%81%E4%BF%A1%EF%BC%9AHead-or-Heart"><span class="nav-text">树立威信：Head or Heart</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Developing-a-Theme"><span class="nav-text">Developing a Theme</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%AE%AD%E7%BB%83Se%E5%B9%B6%E5%BA%94%E7%94%A8"><span class="nav-text">如何训练Se并应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%9C%E8%80%85%EF%BC%88I%EF%BC%89%E7%9A%84%E9%9A%90%E8%BA%AB"><span class="nav-text">作者（I）的隐身</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%97%8F%E6%9E%AA%EF%BC%88%E7%9F%AD%E7%AF%87%E5%B0%8F%E8%AF%B4%EF%BC%89"><span class="nav-text">藏枪（短篇小说）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%B8%BB%E9%A2%98%E9%99%88%E8%BF%B0%E5%8F%A5%EF%BC%88Thesis-Statement%EF%BC%89"><span class="nav-text">注意主题陈述句（Thesis Statement）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Beta%E6%B5%8B%E8%AF%95%EF%BC%9A%E5%A4%A7%E5%A3%B0%E6%9C%97%E8%AF%BB"><span class="nav-text">Beta测试：大声朗读</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%92%E5%85%A5%E5%81%9C%E9%A1%BF%E3%80%81%E6%A0%87%E7%82%B9%E5%92%8C%E5%8A%A8%E4%BD%9C"><span class="nav-text">插入停顿、标点和动作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cliche%EF%BC%88%E7%BA%A6%E5%AE%9A%E4%BF%97%E6%88%90%EF%BC%89-%E5%92%8C%E8%BF%9E%E5%AD%97%E7%AC%A6"><span class="nav-text">cliche（约定俗成） 和连字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%99%E4%BA%8B%E6%97%B6%E9%97%B4%E7%BA%BF%E7%9A%84%E5%BD%A2%E7%8A%B6"><span class="nav-text">叙事时间线的形状</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%99%E4%BA%8B%E4%BF%A1%E6%81%AF%E7%9A%84%E6%9D%90%E8%B4%A8"><span class="nav-text">叙事信息的材质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%85%E4%BA%8B%E7%9A%84%E7%BB%93%E6%9E%84%E5%BD%A2%E7%8A%B6"><span class="nav-text">故事的结构形状</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%98%8E%E5%96%BB%E5%92%8C%E6%9A%97%E5%96%BB"><span class="nav-text">明喻和暗喻</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B9%A6%E7%AD%BE%EF%BC%9Ap82"><span class="nav-text">书签：p82</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E9%94%AEobjects"><span class="nav-text">关键objects</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%A0%E4%B8%AA%E7%82%B9%E5%AD%90"><span class="nav-text">几个点子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E6%B5%81%E9%80%9D"><span class="nav-text">时间流逝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%AD%E7%89%87%E5%AF%B9%E8%AF%9D"><span class="nav-text">断片对话</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%82%A2%E4%BD%93%E8%AF%AD%E8%A8%80"><span class="nav-text">肢体语言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8D%92%E8%AF%9E"><span class="nav-text">荒诞</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8D%E5%AD%97%E5%92%8C%E6%8C%87%E4%BB%A3"><span class="nav-text">名字和指代</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%83%85%E8%8A%82%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-text">情节的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nuts-and-Bolts-%E5%85%AD%E7%A7%92%E9%92%9F%E5%90%8E%E4%BD%A0%E4%BC%9A%E6%81%A8%E6%AD%BB%E6%88%91"><span class="nav-text">Nuts and Bolts: 六秒钟后你会恨死我</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%8D%E5%8F%A5Quote"><span class="nav-text">名句Quote</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8E%86%E5%8F%B2%E4%B8%8A%E7%9A%84%E4%BB%8A%E5%A4%A9"><span class="nav-text">历史上的今天</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DnD-%E9%98%B5%E8%90%A5"><span class="nav-text">DnD 阵营</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96-%E7%B4%A0%E6%9D%90-%E7%A7%AF%E7%B4%AF-%E5%A4%A7%E6%A6%82-%E5%90%A7"><span class="nav-text">其他 | 素材 | 积累 | 大概 | 吧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%B7%E9%BE%9F%E6%B1%A4"><span class="nav-text">海龟汤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%89%8B%E4%B9%9D%E5%AE%AB%E6%A0%BC"><span class="nav-text">文手九宫格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%81%B6%E5%BD%B9%E9%97%AE%E5%8D%B7"><span class="nav-text">恶役问卷</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar3.jpg">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">155</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">54</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">161</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjEwMTM3MTIxMjdAcXEuY29t" title="E-Mail → mailto:1013712127@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9tZWJpbHkxMzE0" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      猜猜这是什么鬼地方？
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9tZWJpbHljaGVuLmxvZnRlci5jb20v" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;">LOFTER</span>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/p/e3a422.html" title="p&#x2F;e3a422.html">【参考】衣|料专版</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/4eb5.html" title="p&#x2F;4eb5.html">遗书</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ce0f2.html" title="p&#x2F;ce0f2.html">Dreamily.AI专场</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/b6c1.html" title="p&#x2F;b6c1.html">关于动保和动不动就保和虐杀</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/754d1.html" title="p&#x2F;754d1.html">《致咩碳》</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/300011.html" title="p&#x2F;300011.html">【#快乐王子】HP开题Demo&记录</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/190c3.html" title="p&#x2F;190c3.html">【角色研究】关于沃姆</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/p/24b8.html" title="p&#x2F;24b8.html">【日常】虫虫和虫虫和虫虫们</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/190c3.html" title="p&#x2F;190c3.html">【角色研究】关于沃姆</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/d846.html" title="p&#x2F;d846.html">【歌单】歌曲开荒</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">1.6m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">23:53</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "站子已虔诚祈祷 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+     //'.site-meta',
+    //'.site-nav',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>

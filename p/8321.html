@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="article">
+<meta property="og:title" content="MEMEs!">
+<meta property="og:url" content="https://mebilychen.github.io/p/8321.html">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:locale">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/Works/IMG_6518(20210610-003203).PNG">
+<meta property="og:image" content="https://i.loli.net/2021/04/12/aR6erUH5X2jg1vA.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/12/SuvyJ45LC9kQwls.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/12/PQtMD9qUETvuAZg.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/12/gXRDvdLYjWUpFSO.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/04/12/W8ayIkcLtY9ZmJw.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/12/eSgML5Z3xRG19VO.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/16/o5CSipvqUHu6M8F.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/04/12/uz4hRxCSc8LAUOo.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/12/4GhNDw8cIPtU9fo.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/12/wNjHRiCeElSykMA.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/12/h7a1DSAz3PKxEXe.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/12/jGCfbzFJQcLSNvM.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/12/fDXoqaWJN2y6OZd.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/12/e6EWbVTuD5XBoxl.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/12/mqEhRd7K6s3CvLu.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/12/LJxTuBYHsfbDUKj.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/12/fPMYdzW4Vr7Uu9b.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/12/4mQdKPta6p21ywL.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/16/Zq7gAebGcTn5hSv.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/16/17wnLXbFQrI6Ehl.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/16/ijQmGOJoXS8xYZD.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/16/qAR2NoLt7xXilSf.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/16/rHJe5Ds7jtTlxka.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/16/2dJkoeCE9bOcfY5.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/16/M5ICbzxfdRHPcp3.png">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/Works/memes/joker2.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/Works/memes/joker3.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/Works/memes/gdaydiahc.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/04/16/QjeDf4PoXMRLhdB.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/16/aMUFc6u4pb8Pr37.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/16/rw6UfToFDtL1QVm.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/16/Q3WnFpSIvtAmZNr.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/16/FVrjtNEKZBi619C.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/16/RJZcLqa6mnolPIK.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/16/CPkpFxAtOfKba4G.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/16/YKgeH8cGnWBuy52.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/16/nHzTbYi8Fc2okmA.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/17/B31AmL6IgKUF5tR.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/17/t2kL9dPSRwIQDxT.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/17/sNcZAPb69aF8QRC.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/17/zbRe4tFJBmO3KZH.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/17/a781DJriu4OTKcW.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/17/3V6ljqOexgTJUL8.png">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/Works/memes/%E4%BD%8E%E9%85%8D%E4%B8%9D%E9%B8%BD.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/FromAnUnknownPlatform/PhoneAlbum/F17640E2DBBF94E3BF2CE83D12F1582A.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/11/jWMK97aDldUv8gN.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/11/QTyrC8KqGIRatPi.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/11/xZTsIS58oCOA1J2.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/11/EkMfa7lUuJqTtbW.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/13/qHnszXylmGZWJj2.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/rules.jpg.jpg">
+<meta property="og:image" content="http://media.ign.com/games/image/article/738/738102/gaijin4koma_peersblog_1200684654.jpg">
+<meta property="og:image" content="https://i.kym-cdn.com/photos/images/newsfeed/000/131/896/gaijin4koma2_peersblog_1200684608.jpg?!1307579749">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/Works/memes/%E9%81%97%E5%BC%83%E7%A5%9E.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/659.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/Works/memes/8097E6FEA798266E78281F65CFF4428D.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/08/09/g53nsBcIvQ7Oifj.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/Works/memes/IMG_7388.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/meme/579.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/09/12/BhKVoCLjY9WHz4t.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%AB%E7%BB%B4%E5%9B%BE%E8%A7%A3/random%20NT%20boys.PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/Works/memes/2k0qad.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/Works/memes/%E6%BF%80%E6%80%92Fi.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/meme/IMG_8800(20211027-215718).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/meme/%E4%BA%8C%E7%8B%97.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/meme/IMG_9838(20211210-180944).JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/meme/IMG_9840(20211210-181756).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/meme/IMG_9839(20211210-181330).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/meme/IMG_9841(20211210-182045).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/meme/IMG_9842(20211210-182159).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/meme/IMG_9843(20211210-182654).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/meme/%E7%AE%97%E6%88%91%E8%BE%93.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/meme/Wyrm.exe%E7%AE%97%E6%88%91%E8%BE%93.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/meme/QQ%E6%88%AA%E5%9B%BE20220103144354.png">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/meme/8742332B9452457CC2751469CADDC87C.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/12/1bmtTcVIXMFR9Oy.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/16/uECGPbYyfzK62FL.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/17/cq3Rz1GnxYHhJm5.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/11/ACd3BjD2sXkMIRH.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/13/tbzldYp7ZO9TekR.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/meme/IMG_7658(20210901-074517).JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/meme/QQ%E6%88%AA%E5%9B%BE20210914131340.png">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/meme/%E5%AF%8C%E4%BA%BA%E7%9A%84%E4%B8%96%E7%95%8C.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/meme/IMG_8954(20211103-153435).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/meme/IMG_9253(20211123-110444).JPG">
+<meta property="article:published_time" content="2021-04-12T05:53:00.000Z">
+<meta property="article:modified_time" content="2022-01-03T10:33:07.418Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="点子生成法">
+<meta property="article:tag" content="积累本">
+<meta property="article:tag" content="沙雕">
+<meta property="article:tag" content="meme">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://mebilychen-media.test.upcdn.net/image/Works/IMG_6518(20210610-003203).PNG">
+
+<link rel="canonical" href="https://mebilychen.github.io/p/8321.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : '中文'
+  };
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    
+      if (NexT.utils.hasMobileUA()) return;
+    
+    let time, hidden, visible, title = document.title;
+    let favicon = document.querySelector('link[rel="icon"]');
+    
+      hidden = ["盯————","*探*","?","......","*观察*"];
+      visible = ["*偏转视线*","*缩*","*强装镇定*","！","*低头*"];
+    
+    let random = t => t[Math.floor(Math.random() * t.length)];
+    const change = () => {
+      if (document.hidden) {
+        favicon.setAttribute('href', '/images/favicon-32x32-king-black.png');
+        
+          document.title = random(hidden);
+        
+        clearTimeout(time);
+      } else {
+        favicon.setAttribute('href', '/images/favicon-32x32-brand-black.png');
+        
+          document.title = random(visible);
+        
+        time = setTimeout(() => {
+          document.title = '碳素的小作坊';
+        }, 1000);
+      }
+    }
+    document.addEventListener('visibilitychange', change, false);
+  });
+</script>
+
+  <title>MEMEs! | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<script src="/assets/js/DPlayer.min.js"></script></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;调谐中...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">161</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">54</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">155</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-image fa-fw"></i>画廊</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/random.html" rel="section"><i class="fa fa-question fa-fw"></i>抽</a>
+
+  </li>
+        <li class="menu-item menu-item-lang">
+
+    <a href="/en/" rel="section"><i class="fa fa-globe fa-fw"></i>->English</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-17081-597255-1305127431.cos-website.ap-hongkong.myqcloud.com' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/8321.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          MEMEs!
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-04-12 13:53:00" itemprop="dateCreated datePublished" datetime="2021-04-12T13:53:00+08:00">2021-04-12</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2022-01-03 18:33:07" itemprop="dateModified" datetime="2022-01-03T18:33:07+08:00">2022-01-03 18:33:07</time>
+                </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%90%8C%E4%BA%BA%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">同人研究笔记</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>6.8k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>6 分钟</span>
+            </span>
+            <div class="post-description"><center></div>
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%82%B9%E5%AD%90%E7%94%9F%E6%88%90%E6%B3%95/" rel="tag"><i class="fa fa-tag"></i> 点子生成法</a>
+              <a href="/tags/%E7%A7%AF%E7%B4%AF%E6%9C%AC/" rel="tag"><i class="fa fa-tag"></i> 积累本</a>
+              <a href="/tags/%E6%B2%99%E9%9B%95/" rel="tag"><i class="fa fa-tag"></i> 沙雕</a>
+              <a href="/tags/meme/" rel="tag"><i class="fa fa-tag"></i> meme</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p><span class="exturl" data-url="aHR0cHM6Ly9rbm93eW91cm1lbWUuY29tLw==">Know your meme<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly93d3cueW91dHViZS5jb20vcGxheWxpc3Q/bGlzdD1QTFlIOFd2TlYxWUVuX2lpQk1aaVoyYVd1Z1FmTjFxVmZN">Pew教你学meme<i class="fa fa-external-link-alt"></i></span><br><a href="/p/8384.html">笑点研究</a> </p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/Works/IMG_6518(20210610-003203).PNG" alt="负责可爱"></p>
+<p>5.11 是一堆和meme无关的废话</p>
+<p>今天看pew的视频的时候突然想起来辱男那个女的（忘了名字了）的事，pew也在视频里嘲讽女性，但是我就不会生气，反而很开心，为什么呢，因为我知道他是在开玩笑，我知道他也知道自己是在开玩笑，为什么呢，因为气氛很不认真，pew没有理由得罪他的女性观众。你要是真因为这事生气，反而会被嘲笑。这事需要理性判断，但不需要理性解读，而是感性解读。  <br>我又想起来之前看mark吐槽某公司不给他sponsorship的视频，我却看得很生气，为什么呢，因为我不知道他是不是在开玩笑，为什么呢，因为气氛很严肃。虽然有人也指出来mark肯定是在开玩笑，从理性角度考虑，确实，他没有理由去真的骂公司不给他sponsor，但是没有，我看到的他神情严肃——过于严肃了，我认为他是真的在生气。同样，第一眼看过去他没有必要因为这件事而惹怒sponsor以及粉丝们，但是，刺激的来了：我发现mark似乎很认真-》什么他难道真的很生气-》他好像真的很生气啊！；然后我就开始翻评论，开始怀疑是不是文化差异导致我没有把这件事当回事，是不是在国外的确up主可以通过贬低某公司产品要挟某公司给他sponsorship，无果。在这里，我的感性解读出了愤怒的情绪：他当真了，于是开始压过理性判断，甚至开始重塑理性判断。<br>我又去重看了一遍以便缕清思路。很重要的一点是：我拿什么判断他当真了？given the facts that he may be acting？然后我回忆起了很重要的一点：是的，你可以表演抱怨，通过表演你很不爽某个小事而大张旗鼓而营造搞笑氛围，但是你不能表演什么？表演杀人、表演贩毒、表演任何有害于其他个体的事情。这时就是我的感性受伤，开始handle不了，于是叫来理性的part了。  <br>其实本来，在他开始diss这个公司的产品之前，我就已经有点不爽了。我看到一个大男人，抱怨自己收到了两箱豆子。这时的我是疑惑的，苦笑着的，直到那个决定性的瞬间。或许这个公司已经足够大到，没有人会care的程度，就像国内一个up主扬言要去腾讯HQ质问马化腾一样。<br>我就想到，“度”的这个问题。一个在引发感性还是引发理性之间取得平衡的问题。<br>有的时候，你这个人的所作所为本身就会沾染上一些，vibe，像烟雾那样围绕在你身边，mark的视频是严肃和搞笑参半偏向搞笑的，所以当他严肃起来，我就觉得他可能是真的严肃了，当他搞笑起来，我有时也会想他是不是在反讽。  <br>而pew的视频，都是搞笑的vibe，我（几乎）没有见他认真过，因此无论他说什么，都有可能不是真心的，这也是给他自己一个台阶下的手段。</p>
+<p>反过来看辱男那个女的，脱口秀的定义我不太了解，或许他就默认要求了一种“搞笑”的vibe，就是凡事都不要当真的vibe，但是让男性们生气的，第一是表演者体现出“当真”了，这个还比较难证明，但是，第二是，其实这个是重点，粉丝们，那些愚昧无知的大众对这句话的滥用。</p>
+<p>或许辱男那个女的并没有错，但是她确实是错了。错在没有澄清，没有管理，错在她妄图成为神，却抛弃了神的责任，混在她的信徒中间，盼望法不责众，但是不好意思，只有你有名有姓，打的就是你，你一点都不无辜。</p>
+<p>或许我本人也有问题，在这种事情里。如果有一个人仅仅只是做了几个视频，就抱怨自己只是收到了一箱金币，而不是拿到对方源源不断的金币，更甚者，因为这件事开始diss对方公司。因为嫉妒，我的感情便会受伤：这有什么好笑的吗？我没有那些金币。感情受伤后，我的理性便会开始运转，开始思考，开始“抬杠”。是“无知”伤害了我。</p>
+<p>从另一个角度定义了“my life came from pain”。</p>
+<p>有时候我也挺恶心的，也许他们其实值得这么多名利，我只是没有看见，也不想看见罢了。我是躲在无名大众里的一员，利用着大众，借用着“公众道德”，去diss任何伤害我感情的东西。</p>
+<p>炫耀会伤害感情。看到知乎上一个答主对“炫耀”的定义，我延伸一下：<br>从他人角度来看，可以假设一个陈述：</p>
+<ol>
+<li>该陈述是否为自己创造价值（以及价值的多少）</li>
+<li>该陈述是否符合自己水平（学历、出身、经历、能力等）</li>
+<li>该陈述是否符合当前场景（是否刻意引导话题）（凡尔赛文学）</li>
+<li>该陈述是否符合说话人言行举止的一贯印象（常态）（存疑，其实这个判据对证实而言不太重要，这一条是他人试图证伪炫耀时候用的）</li>
+<li>说话人的目的意图（存疑）<br>从自身角度来看，自己是否在炫耀只有自己知道，甚至连自己也不知道。知道该陈述有可能被定义为炫耀却依旧说出来，嗯？不是炫耀是什么？但，炫耀这个词是他人定义的，说话人无权评判，否则就失去了讨论的意义，不是么？<br>炫耀通常是未成为自身常态的事物，嗯，很对，特征之一。  <br>目的是社交时，说话人要照顾对话人，该闭嘴时闭嘴，否则就只能等着被定义为炫耀，不要喊冤，判断不出别人可能的评价，是你的能力问题，受着。你不能，不清楚，嫌麻烦？那你就还不够格。遇到穷人？谈穷。遇到富人？谈富。否则就是找打，你错在情商低，无他。<br>另外，很重要的一点，明确目的。你说话的目的是什么？自己要搞清楚。其实说实在的，别人说你炫耀，而你知道你目的不是在炫耀，就够了。</li>
+</ol>
+<p>我想起来我一个朋友单亲家庭，只有父亲带她。于是我父亲就成了每个活动的主语。“我…爸爸昨天带我去买东西。”偶尔有几次我说的太开心而忘记了，脱口而出“我妈妈”，我就会很自责很后悔，希望没有伤害到她。现在我没有朋友可以说话了，但我真心希望自己没有忘记这么美好的特质。</p>
+<p>三观可以约束自己，对。三观可以约束别人，错。<br>道德是约束自己的，对。（公众）道德可以约束别人？对。<br>法律是约束自己的，对。法律是约束别人的，对。</p>
+<p>道德可以约束别人，对，但是，什么是道德？你如何知道，如何证明，你所谓的道德不是你自己的三观？</p>
+<p>4.12 meme收集</p>
+<p>一个meme（收集）块儿可以包含：</p>
+<ol>
+<li>meme源头/meme形式（第一个meme）</li>
+<li>meme发散（尽量收集多元、有自己的原创性的）  </li>
+<li>自己仿写一个meme</li>
+</ol>
+<p>不仅是meme，也要注意Mark、pewds他们的“editing skill”。也就是“Editors”。像lixian是怎么把生肉实况煮熟装盘的。  </p>
+<p>除了以下基操：</p>
+<ol>
+<li>根据mark的鼠标和看到的东西放大缩小画面，让观众也能看见</li>
+<li>根据context加入音效和背景音乐</li>
+<li>基本视频编辑技巧的运用：哈哈镜效果（Big brain）、字幕（文字动画）。这部分重要的是context。</li>
+<li>敏锐察觉到笑点并展示、夸张出来（这里和meme有联系）</li>
+</ol>
+<p>pew提到“如何处理spoilers”，不是去喊“不要剧透”，而是应该“发很多假的剧透使得大家不知道哪个是真的”。这个思路可以用简式创新思维（密室逃脱）来分析，这个思路要争取进入潜意识：</p>
+<ol>
+<li>明确当前情景问题：剧透影响观影体验</li>
+<li>描述当前问题情景：网上有太多的剧透了，我不小心看到它们之后就知道结局是什么了，很影响我的观影体验</li>
+<li>分析要素组成和定义：网上（环境） 太多（数量） 剧透（表达方式） 不小心（个人） 看到（动作） 知道结局是什么（后果） 影响观影体验（后果）</li>
+<li>解决方案：对要素进行否定：不要上网、减少剧透、暗示而非明示剧透、提高警惕、遮住眼睛、假剧透、不要看电影</li>
+<li>做成meme</li>
+</ol>
+<p>undertale meme： <em>exists</em><br>Internet：<em>cheers</em><br>Me，who doesn’t like UT：“u shut the fuck up，u SHUT the fuck up，u shut the FUCK up”</p>
+<p>undertale meme： <em>enters chat</em><br>Me：<em>leave chat</em></p>
+<p>哈哈，刚刚我一看见黑洞照片变成蓝色我就知道该死omfg的 undertale-meme is on its way，所以我笑容提前消失 to pay respect。  </p>
+<p>提问：怎么判断一个meme已死？怎么杀死一个meme？</p>
+<p>感觉像是，</p>
+<ol>
+<li>这个meme已经令人厌烦了</li>
+<li>这个meme已经衍生出了足够的多的变种</li>
+</ol>
+<p>提问：如何发现一个潜在meme？强烈的情感？使用理性冲击强烈的情感？meme is merciless.</p>
+<p>这个视频（需刷新）：</p>
+<div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/media/RPReplay_Final1627048217~1.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+<p>以及鱼罐头倒放，是一种meme发掘方式，厂家直销，behind the scenes。  </p>
+<hr>
+<h3 id="1-“this-is-a-bucket-dear-god-there’s-more-no”"><a href="#1-“this-is-a-bucket-dear-god-there’s-more-no”" class="headerlink" title="1. “this is a bucket dear god there’s more no”"></a>1. “this is a bucket dear god there’s more no”</h3><p>白后和陛下的对话：<br>“this is a vessel dear god there’s more no”  </p>
+<p>我希望有个基友能和我对上电波：<br>我：（把奶茶砸在桌上）“this is a milk tea”  <br>ta：（震惊）“dear god”  <br>我：（眯眼）“there’s more”  <br>ta：（惊惧）“no”  <br>我：（把（第二杯）奶茶砸在桌上）“this is a milk tea”</p>
+<hr>
+<h3 id="2-“my-bike-got-stolen-”-stolen-bike-meme-小webcomic风格"><a href="#2-“my-bike-got-stolen-”-stolen-bike-meme-小webcomic风格" class="headerlink" title="2. “my bike got stolen.”- stolen bike meme - 小webcomic风格"></a>2. “my bike got stolen.”- stolen bike meme - 小webcomic风格</h3><p>  <img data-src="https://i.loli.net/2021/04/12/aR6erUH5X2jg1vA.png" alt="原图"></p>
+<p>小孩：“我车被偷了”“我很难过”“但我想到，得到我车的人的幸福感，会比我丢掉车所体验到的伤心更多”“世界总体的幸福感提升了，挺好”</p>
+<p><img data-src="https://i.loli.net/2021/04/12/SuvyJ45LC9kQwls.png"></p>
+<p>Tails：“索尼克死了”“我很难过”“但我想到，杀死索尼克的人的幸福感，会比我失去索尼克所体验到的伤心更多”“世界总体的幸福感提升了，挺好”</p>
+<p>我：“陛下被玩家骂了”“我很难过”“但我想到，骂陛下的人的幸福感，会比我看到陛下被骂所体验到的伤心更多”“世界总体的幸福感提升了，但是这又怎样呢，陛下被骂了，我要替他骂回去”</p>
+<hr>
+<h3 id="3-CAD-loss-meme"><a href="#3-CAD-loss-meme" class="headerlink" title="3. CAD/loss meme"></a>3. CAD/loss meme</h3><p>类比日本那边的“7”，但是并没有想表达的思想在里面（一般而言）。</p>
+<p><img data-src="https://i.loli.net/2021/04/12/PQtMD9qUETvuAZg.png" alt="原图"></p>
+<p><img data-src="https://i.loli.net/2021/04/12/gXRDvdLYjWUpFSO.jpg" alt="LOSS"></p>
+<p>这个meme创作需要上图  <br>因为没有全篇没有文字</p>
+<p>虽然没啥感觉，感觉meme笑点主体偏向的是meme的格式本身而不是内容…<br>我理解的就是pew说的，通常四格漫画第四格应该是punchline，但是这个webcomic（CAD，ctrl+alt+delete）的作者太不会叙事，把本应该很sad的剧情放在了第四格，读者就把这个当做punchline看了，就搞笑了起来。  <br>类比一下，就是白展堂拍什么戏都是白展堂。<br>无文字喜剧可以类比一下，lily’s garden的sd广告宣传片。</p>
+<hr>
+<h3 id="4-Monkey-Haircut-Petting-Dog-meme"><a href="#4-Monkey-Haircut-Petting-Dog-meme" class="headerlink" title="4. Monkey Haircut/Petting Dog meme"></a>4. Monkey Haircut/Petting Dog meme</h3><p>嗯，哈哈哈<br>放在这，指这一类meme，后面虽然有很多变种但是主要形式还是MH/PD的“技术”衍生。<br>这个meme需要上图。</p>
+<p><img data-src="https://i.loli.net/2021/04/12/W8ayIkcLtY9ZmJw.png"></p>
+<hr>
+<h3 id="5-U’r-fk-precious-when-you-smile"><a href="#5-U’r-fk-precious-when-you-smile" class="headerlink" title="5. U’r fk precious when you smile"></a>5. U’r fk precious when you smile</h3><p>这个需要上视频（刷新）：  </p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hc9Ia9FVHWI?start=247" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>pew说得对，一部分是嘲讽ins上装十三的剪辑视频的</p>
+<hr>
+<h3 id="6-世界-vs-me"><a href="#6-世界-vs-me" class="headerlink" title="6. 世界 vs. me"></a>6. 世界 vs. me</h3><p>形式雷同，内容多变<br><img data-src="https://i.loli.net/2021/04/12/eSgML5Z3xRG19VO.png"></p>
+<p>自创的抖机灵就不打水印了  <br>而且，我估计享受不到这待遇了…<br><img data-src="https://i.loli.net/2021/04/16/o5CSipvqUHu6M8F.jpg"></p>
+<hr>
+<h3 id="7-𝓘𝓼𝓸𝓹𝓸𝓭"><a href="#7-𝓘𝓼𝓸𝓹𝓸𝓭" class="headerlink" title="7. 𝓘𝓼𝓸𝓹𝓸𝓭"></a>7. 𝓘𝓼𝓸𝓹𝓸𝓭</h3><p>联动tidepods，世界上最好吃的糖果。<br>大型西瓜虫。  <br>我是认真的，这么可爱的虫虫（虽然不是虫虫），对它的喜爱之情怎么会成为meme？  </p>
+<p><img data-src="https://i.loli.net/2021/04/12/uz4hRxCSc8LAUOo.png"></p>
+<hr>
+<h3 id="8-going-home-together，sees-photo，disappeared"><a href="#8-going-home-together，sees-photo，disappeared" class="headerlink" title="8. going home together，sees photo，disappeared."></a>8. <em>going home together</em>，<em>sees photo</em>，<em>disappeared</em>.</h3><p><img data-src="https://i.loli.net/2021/04/12/4GhNDw8cIPtU9fo.png" alt="原图"></p>
+<p><img data-src="https://i.loli.net/2021/04/12/wNjHRiCeElSykMA.png"></p>
+<p>当一个人的价值观compels yours too much.</p>
+<hr>
+<h3 id="9-针对meme的meme成为meme"><a href="#9-针对meme的meme成为meme" class="headerlink" title="9. 针对meme的meme成为meme"></a>9. 针对meme的meme成为meme</h3><p>联动ajit pai和Knuckles </p>
+<p><img data-src="https://i.loli.net/2021/04/12/h7a1DSAz3PKxEXe.png"></p>
+<p><img data-src="https://i.loli.net/2021/04/12/jGCfbzFJQcLSNvM.png"></p>
+<hr>
+<h3 id="10-Connect-Four"><a href="#10-Connect-Four" class="headerlink" title="10. Connect Four"></a>10. Connect Four</h3><p><img data-src="https://i.loli.net/2021/04/12/fDXoqaWJN2y6OZd.png" alt="原图"></p>
+<p><img data-src="https://i.loli.net/2021/04/12/e6EWbVTuD5XBoxl.png"></p>
+<p><img data-src="https://i.loli.net/2021/04/12/mqEhRd7K6s3CvLu.png"></p>
+<p><img data-src="https://i.loli.net/2021/04/12/LJxTuBYHsfbDUKj.png"></p>
+<p><img data-src="https://i.loli.net/2021/04/12/fPMYdzW4Vr7Uu9b.png"></p>
+<p><img data-src="https://i.loli.net/2021/04/12/4mQdKPta6p21ywL.png" alt="阻止meme的唯一方法就是用meme，无他，魔法"></p>
+<hr>
+<h3 id="11-Salesman"><a href="#11-Salesman" class="headerlink" title="11. Salesman"></a>11. Salesman</h3><p>salesman：<em>slaps merch</em><br>salesman：This bad boy could withhold all of your desires</p>
+<p><img data-src="https://i.loli.net/2021/04/16/Zq7gAebGcTn5hSv.png"></p>
+<p>salesman：<em>slaps customer</em></p>
+<hr>
+<h3 id="12-Joker"><a href="#12-Joker" class="headerlink" title="12. Joker"></a>12. Joker</h3><p><img data-src="https://i.loli.net/2021/04/16/17wnLXbFQrI6Ehl.png" alt="1"></p>
+<p><img data-src="https://i.loli.net/2021/04/16/ijQmGOJoXS8xYZD.png" alt="2"></p>
+<p><img data-src="https://i.loli.net/2021/04/16/qAR2NoLt7xXilSf.png" alt="3"></p>
+<p><img data-src="https://i.loli.net/2021/04/16/rHJe5Ds7jtTlxka.png" alt="变形"></p>
+<p><img data-src="https://i.loli.net/2021/04/16/2dJkoeCE9bOcfY5.png" alt="离我和我的儿子远一点"></p>
+<p><img data-src="https://i.loli.net/2021/04/16/M5ICbzxfdRHPcp3.png"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/Works/memes/joker2.jpg" alt="2格"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/Works/memes/joker3.jpg" alt="3格"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/Works/memes/gdaydiahc.jpg" alt="自制"></p>
+<hr>
+<h3 id="13-Vibe-Check"><a href="#13-Vibe-Check" class="headerlink" title="13. Vibe Check"></a>13. Vibe Check</h3><p><img data-src="https://i.loli.net/2021/04/16/QjeDf4PoXMRLhdB.png"></p>
+<p><img data-src="https://i.loli.net/2021/04/16/aMUFc6u4pb8Pr37.png"></p>
+<p><img data-src="https://i.loli.net/2021/04/16/rw6UfToFDtL1QVm.png"></p>
+<hr>
+<h3 id="14-Gang"><a href="#14-Gang" class="headerlink" title="14. Gang"></a>14. Gang</h3><p>通常和“imagine….”合用。</p>
+<p><img data-src="https://i.loli.net/2021/04/16/Q3WnFpSIvtAmZNr.png"></p>
+<p><img data-src="https://i.loli.net/2021/04/16/FVrjtNEKZBi619C.png"></p>
+<p><img data-src="https://i.loli.net/2021/04/16/RJZcLqa6mnolPIK.png"></p>
+<hr>
+<h3 id="15-（搜索引擎）拟人"><a href="#15-（搜索引擎）拟人" class="headerlink" title="15. （搜索引擎）拟人"></a>15. （搜索引擎）拟人</h3><p><img data-src="https://i.loli.net/2021/04/16/CPkpFxAtOfKba4G.png"></p>
+<p><img data-src="https://i.loli.net/2021/04/16/YKgeH8cGnWBuy52.png"></p>
+<hr>
+<h3 id="16-Go-prrrr"><a href="#16-Go-prrrr" class="headerlink" title="16. Go prrrr"></a>16. Go prrrr</h3><p><img data-src="https://i.loli.net/2021/04/16/nHzTbYi8Fc2okmA.png"></p>
+<p><img data-src="https://i.loli.net/2021/04/17/B31AmL6IgKUF5tR.png" alt="IMG_5960.PNG"></p>
+<hr>
+<h3 id="17-黑人抬棺变种"><a href="#17-黑人抬棺变种" class="headerlink" title="17.黑人抬棺变种"></a>17.黑人抬棺变种</h3><p><img data-src="https://i.loli.net/2021/04/17/t2kL9dPSRwIQDxT.png" alt="1"></p>
+<p><img data-src="https://i.loli.net/2021/04/17/sNcZAPb69aF8QRC.png" alt="2"></p>
+<p><img data-src="https://i.loli.net/2021/04/17/zbRe4tFJBmO3KZH.png" alt="3"></p>
+<hr>
+<h3 id="18-Pickle-Riiiick"><a href="#18-Pickle-Riiiick" class="headerlink" title="18. Pickle Riiiick"></a>18. Pickle Riiiick</h3><p><img data-src="https://i.loli.net/2021/04/17/a781DJriu4OTKcW.png"></p>
+<p><img data-src="https://i.loli.net/2021/04/17/3V6ljqOexgTJUL8.png"></p>
+<hr>
+<h3 id="19-咱家里有这个了"><a href="#19-咱家里有这个了" class="headerlink" title="19. 咱家里有这个了"></a>19. 咱家里有这个了</h3><p>kid：我想要这个  <br>mom：不，咱家里有这个了<br>家里的这个：  </p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/Works/memes/%E4%BD%8E%E9%85%8D%E4%B8%9D%E9%B8%BD.jpg" alt="举个低配丝鸽的例子"></p>
+<hr>
+<h3 id="20-xxx不是真的，他害不了你"><a href="#20-xxx不是真的，他害不了你" class="headerlink" title="20. xxx不是真的，他害不了你"></a>20. xxx不是真的，他害不了你</h3><p>心理医生：“白王死了”不是真的它伤害不了你<br>“白王死了”：</p>
+<hr>
+<h3 id="21-男女locker-room"><a href="#21-男女locker-room" class="headerlink" title="21. 男女locker room"></a>21. 男女locker room</h3><p>Girls locker room:“天哪肖战哥哥又出新歌了！快，快买106张。”</p>
+<p>Boys locker room: <em>裹着眼睛被戳了孔露出那啥的肖战海报裸奔</em></p>
+<hr>
+<h3 id="22-me-and-the-boys"><a href="#22-me-and-the-boys" class="headerlink" title="22. me and the boys"></a>22. me and the boys</h3><p>me and my boys: 和meme死神合影.jpg<br>（这是图的形式但是我懒得截图了）</p>
+<hr>
+<h3 id="23-口音地图炮梗"><a href="#23-口音地图炮梗" class="headerlink" title="23. 口音地图炮梗"></a>23. 口音地图炮梗</h3><p>RT，中国的狗都会说中文，它们不会“woof”，而是会“汪”    <br>中国的白狗不是“white”，而是“白的”<br>和这个相近的还有那个谷歌翻译=》旅游梗  </p>
+<hr>
+<h3 id="24-任天堂中心的粉丝欢呼"><a href="#24-任天堂中心的粉丝欢呼" class="headerlink" title="24. 任天堂中心的粉丝欢呼"></a>24. 任天堂中心的粉丝欢呼</h3><p>RT，是视频，那个把大屏幕中视频替换成任意一个视频的。<br>和Keanu Reeves的“check this out”联动  </p>
+<hr>
+<h3 id="25-暂停视频然后“Pia！”以达到出其不意的目的"><a href="#25-暂停视频然后“Pia！”以达到出其不意的目的" class="headerlink" title="25. 暂停视频然后“Pia！”以达到出其不意的目的"></a>25. 暂停视频然后“Pia！”以达到出其不意的目的</h3><p>万恶之源是一只小狗“Pia！”的打出一个香烟：“烟？”（我猜那个词应该是这个意思吧） </p>
+<hr>
+<h3 id="26-STFU，我在听xxx歌"><a href="#26-STFU，我在听xxx歌" class="headerlink" title="26. STFU，我在听xxx歌"></a>26. STFU，我在听xxx歌</h3><p>是视频，但是我懒 </p>
+<hr>
+<h3 id="27-normies-be-like，decent-people-be-like"><a href="#27-normies-be-like，decent-people-be-like" class="headerlink" title="27. normies be like，decent people be like"></a>27. normies be like，decent people be like</h3><p>联动那张，光芒逐渐从脑壳中溢出的meme</p>
+<p>呃，现在再看就没有之前那种 啊 有人懂我了啊 的喜悦了  <br>而只是 …滚 的愠怒  <br>不知道为啥。  </p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/FromAnUnknownPlatform/PhoneAlbum/F17640E2DBBF94E3BF2CE83D12F1582A.png"></p>
+<p><img data-src="https://i.loli.net/2021/05/11/jWMK97aDldUv8gN.png"></p>
+<p><img data-src="https://i.loli.net/2021/05/11/QTyrC8KqGIRatPi.png"></p>
+<p><img data-src="https://i.loli.net/2021/05/11/xZTsIS58oCOA1J2.png"></p>
+<p><img data-src="https://i.loli.net/2021/05/11/EkMfa7lUuJqTtbW.png"></p>
+<hr>
+<h3 id="27-死神敲门"><a href="#27-死神敲门" class="headerlink" title="27. 死神敲门"></a>27. 死神敲门</h3><p>是图，但是我懒。  <br>这个也可以针对meme，是，scp里盒子级别的那种  <br>联动“该走了”“我是个好meme吗”“不”</p>
+<hr>
+<h3 id="28-Ah，shit，here-we-go-again"><a href="#28-Ah，shit，here-we-go-again" class="headerlink" title="28. Ah，shit，here we go again"></a>28. Ah，shit，here we go again</h3><p>是视频，但是我懒。  <br>这个是那种，可嵌套的meme。<br> <strong>寄生型meme</strong></p>
+<hr>
+<h3 id="29-记下来快记下来！"><a href="#29-记下来快记下来！" class="headerlink" title="29. 记下来快记下来！"></a>29. 记下来快记下来！</h3><p>是图，出自海棉宝宝</p>
+<p>自创：<br>me（INFP）: <em>mental breakdown</em>      <br>me（INTJ，或许是陛下）：  <br><img data-src="https://i.loli.net/2021/05/13/qHnszXylmGZWJj2.jpg"></p>
+<hr>
+<h3 id="30-xxxx是xxx，change-my-mind"><a href="#30-xxxx是xxx，change-my-mind" class="headerlink" title="30. xxxx是xxx，change my mind"></a>30. xxxx是xxx，change my mind</h3><p>meme+1:“change my mind”</p>
+<p>是图，懒得放了，一搜就应该有</p>
+<hr>
+<h3 id="31-Rule-63"><a href="#31-Rule-63" class="headerlink" title="31.Rule 63"></a>31.Rule 63</h3><p>Rule 63 is an internet adage which states that for every fictional character, there exists an opposite-gender counterpart. It is considered a notable tenet of the anonymously-written Rules of the Internet, next to Rules 1 &amp; 2 and Rule 34.</p>
+<h4 id="Rule-34"><a href="#Rule-34" class="headerlink" title="Rule 34"></a>Rule 34</h4><p> Rule 34是指，万物皆可黄。 </p>
+<h4 id="其他Rule"><a href="#其他Rule" class="headerlink" title="其他Rule"></a>其他Rule</h4><p> <img data-src="http://mebilychen-media.test.upcdn.net/image/rules.jpg.jpg"></p>
+<hr>
+<h3 id="Ohhhhh——-Reaction-Guys"><a href="#Ohhhhh——-Reaction-Guys" class="headerlink" title="Ohhhhh——(Reaction Guys)"></a>Ohhhhh——(Reaction Guys)</h3><p><img data-src="http://media.ign.com/games/image/article/738/738102/gaijin4koma_peersblog_1200684654.jpg"><br><img data-src="https://i.kym-cdn.com/photos/images/newsfeed/000/131/896/gaijin4koma2_peersblog_1200684608.jpg?!1307579749"></p>
+<p>铁住了 <del>就是OuterWilds里把“锁”打成了“铁”</del>  </p>
+<p>难铁。  </p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/Works/memes/%E9%81%97%E5%BC%83%E7%A5%9E.jpg"></p>
+<hr>
+<h3 id="Disappointed-Black-Guy"><a href="#Disappointed-Black-Guy" class="headerlink" title="Disappointed Black Guy"></a>Disappointed Black Guy</h3><p>找了好久。</p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/659.jpg"></p>
+<p>自己做的一张：  <br>太谢谢了，以后写十万字才可能看见进展了。  <br><img data-src="http://mebilychen-media.test.upcdn.net/image/Works/memes/8097E6FEA798266E78281F65CFF4428D.jpg"></p>
+<hr>
+<h3 id="For-the-Better，Right？"><a href="#For-the-Better，Right？" class="headerlink" title="For the Better，Right？"></a>For the Better，Right？</h3><p><img data-src="https://i.loli.net/2021/08/09/g53nsBcIvQ7Oifj.jpg" alt="For_the_Better_Right.jpg"></p>
+<hr>
+<h3 id="x-amp-√"><a href="#x-amp-√" class="headerlink" title="x &amp; √"></a>x &amp; √</h3><p><img data-src="http://mebilychen-media.test.upcdn.net/image/Works/memes/IMG_7388.jpg"></p>
+<hr>
+<h3 id="Master’s-blessing-meme"><a href="#Master’s-blessing-meme" class="headerlink" title="Master’s blessing meme"></a>Master’s blessing meme</h3><p><img data-src="http://mebilychen-media.test.upcdn.net/image/meme/579.jpg"></p>
+<hr>
+<h3 id="MBTI-MEMES"><a href="#MBTI-MEMES" class="headerlink" title="MBTI MEMES"></a>MBTI MEMES</h3><p><img data-src="https://i.loli.net/2021/09/12/BhKVoCLjY9WHz4t.jpg" alt="IMG_7785_20210911-183530_.PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%AB%E7%BB%B4%E5%9B%BE%E8%A7%A3/random%20NT%20boys.PNG"></p>
+<hr>
+<h3 id="激怒Meme"><a href="#激怒Meme" class="headerlink" title="激怒Meme"></a>激怒Meme</h3><p><img data-src="http://mebilychen-media.test.upcdn.net/image/Works/memes/2k0qad.jpg" alt="模板"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/Works/memes/%E6%BF%80%E6%80%92Fi.jpg" alt="激怒Fi，做得不太好"></p>
+<hr>
+<h3 id="在xxx被发现-发明之前…"><a href="#在xxx被发现-发明之前…" class="headerlink" title="在xxx被发现/发明之前…"></a>在xxx被发现/发明之前…</h3><p><img data-src="http://mebilychen-media.test.upcdn.net/image/meme/IMG_8800(20211027-215718).PNG"></p>
+<hr>
+<h3 id="二狗"><a href="#二狗" class="headerlink" title="二狗"></a>二狗</h3><p><img data-src="http://mebilychen-media.test.upcdn.net/image/meme/%E4%BA%8C%E7%8B%97.jpg"></p>
+<hr>
+<h3 id="Devilish-Girl"><a href="#Devilish-Girl" class="headerlink" title="Devilish Girl"></a>Devilish Girl</h3><p><img data-src="http://mebilychen-media.test.upcdn.net/image/meme/IMG_9838(20211210-180944).JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/meme/IMG_9840(20211210-181756).PNG"></p>
+<hr>
+<h3 id><a href="#" class="headerlink" title="(. )(. )|( .)(. )"></a>(. )(. )|( .)(. )</h3><p><img data-src="http://mebilychen-media.test.upcdn.net/image/meme/IMG_9839(20211210-181330).PNG"></p>
+<hr>
+<h3 id="-1"><a href="#-1" class="headerlink" title=":)  :|"></a>:)  :|</h3><p><img data-src="http://mebilychen-media.test.upcdn.net/image/meme/IMG_9841(20211210-182045).PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/meme/IMG_9842(20211210-182159).PNG"></p>
+<hr>
+<h3 id="Woman-yells-at-a-cat"><a href="#Woman-yells-at-a-cat" class="headerlink" title="Woman yells at a cat"></a>Woman yells at a cat</h3><p><img data-src="http://mebilychen-media.test.upcdn.net/image/meme/IMG_9843(20211210-182654).PNG"></p>
+<hr>
+<h3 id="算我输（Chs）"><a href="#算我输（Chs）" class="headerlink" title="算我输（Chs）"></a>算我输（Chs）</h3><p><img data-src="http://mebilychen-media.test.upcdn.net/image/meme/%E7%AE%97%E6%88%91%E8%BE%93.jpg"></p>
+<p>自制：</p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/meme/Wyrm.exe%E7%AE%97%E6%88%91%E8%BE%93.jpg"></p>
+<h3 id="BINGO-Chart"><a href="#BINGO-Chart" class="headerlink" title="BINGO Chart"></a>BINGO Chart</h3><p><img data-src="http://mebilychen-media.test.upcdn.net/image/meme/QQ%E6%88%AA%E5%9B%BE20220103144354.png"></p>
+<hr>
+<h3 id="其他一些不成气候的小meme"><a href="#其他一些不成气候的小meme" class="headerlink" title="其他一些不成气候的小meme"></a>其他一些不成气候的小meme</h3><p>刷新看吐槽宗教文化</p>
+<div id="dplayer1" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer1"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/media/RPReplay_Final1637636516~1.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
+
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/meme/8742332B9452457CC2751469CADDC87C.png" alt="码住，感觉我能用这个temp做出点啥"></p>
+<p><img data-src="https://i.loli.net/2021/04/12/1bmtTcVIXMFR9Oy.png" alt="一种小确幸"></p>
+<p><img data-src="https://i.loli.net/2021/04/16/uECGPbYyfzK62FL.png" alt="JOKER STaiRs"></p>
+<p><img data-src="https://i.loli.net/2021/04/17/cq3Rz1GnxYHhJm5.png" alt="不可能再经济康复了"></p>
+<p><img data-src="https://i.loli.net/2021/05/11/ACd3BjD2sXkMIRH.png" alt="驯龙记2"></p>
+<p>以及自制：  <br>Introverts：<br><img data-src="https://i.loli.net/2021/05/13/tbzldYp7ZO9TekR.jpg"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/meme/IMG_7658(20210901-074517).JPG" alt="小丑...!"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/meme/QQ%E6%88%AA%E5%9B%BE20210914131340.png" alt="自制1"><br>???是不是粘错了 但是找不到原图了</p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/meme/%E5%AF%8C%E4%BA%BA%E7%9A%84%E4%B8%96%E7%95%8C.jpg" alt="自制富人的世界"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/meme/IMG_8954(20211103-153435).PNG" alt="河流拟人"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/meme/IMG_9253(20211123-110444).JPG"></p>
+<p>me: god damn…holy shit mY FAMILY！<em>starts panic</em></p>
+<h4 id="Birbs"><a href="#Birbs" class="headerlink" title="Birbs"></a>Birbs</h4><p>视频刷新。  </p>
+<div id="dplayer2" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer2"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/media/RPReplay_Final1627303837~1.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
+<hr>
+
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/8321.html">MEMEs!</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2021年04月12日 - 13:53</p>
+ <p><span>最后更新:</span>2022年01月03日 - 18:33</p>
+ <p><span>原始链接:</span><a href="/p/8321.html" title="MEMEs!">https://mebilychen.github.io/p/8321.html</a>
+    
+ </p>
+ <p><span>许可协议:</span>除非文章内另行声明，遵守 cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script data-pjax> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%82%B9%E5%AD%90%E7%94%9F%E6%88%90%E6%B3%95/" rel="tag"><i class="fa fa-tag"></i> 点子生成法</a>
+              <a href="/tags/%E7%A7%AF%E7%B4%AF%E6%9C%AC/" rel="tag"><i class="fa fa-tag"></i> 积累本</a>
+              <a href="/tags/%E6%B2%99%E9%9B%95/" rel="tag"><i class="fa fa-tag"></i> 沙雕</a>
+              <a href="/tags/meme/" rel="tag"><i class="fa fa-tag"></i> meme</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/10fc.html" rel="prev" title="🏃‍？">
+      <i class="fa fa-chevron-left"></i> 🏃‍？
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/9986.html" rel="next" title="其他同人的曲">
+      其他同人的曲 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E2%80%9Cthis-is-a-bucket-dear-god-there%E2%80%99s-more-no%E2%80%9D"><span class="nav-text">1. “this is a bucket dear god there’s more no”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E2%80%9Cmy-bike-got-stolen-%E2%80%9D-stolen-bike-meme-%E5%B0%8Fwebcomic%E9%A3%8E%E6%A0%BC"><span class="nav-text">2. “my bike got stolen.”- stolen bike meme - 小webcomic风格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-CAD-loss-meme"><span class="nav-text">3. CAD&#x2F;loss meme</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-Monkey-Haircut-Petting-Dog-meme"><span class="nav-text">4. Monkey Haircut&#x2F;Petting Dog meme</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-U%E2%80%99r-fk-precious-when-you-smile"><span class="nav-text">5. U’r fk precious when you smile</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E4%B8%96%E7%95%8C-vs-me"><span class="nav-text">6. 世界 vs. me</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%F0%9D%93%98%F0%9D%93%BC%F0%9D%93%B8%F0%9D%93%B9%F0%9D%93%B8%F0%9D%93%AD"><span class="nav-text">7. 𝓘𝓼𝓸𝓹𝓸𝓭</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-going-home-together%EF%BC%8Csees-photo%EF%BC%8Cdisappeared"><span class="nav-text">8. going home together，sees photo，disappeared.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-%E9%92%88%E5%AF%B9meme%E7%9A%84meme%E6%88%90%E4%B8%BAmeme"><span class="nav-text">9. 针对meme的meme成为meme</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-Connect-Four"><span class="nav-text">10. Connect Four</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-Salesman"><span class="nav-text">11. Salesman</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-Joker"><span class="nav-text">12. Joker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-Vibe-Check"><span class="nav-text">13. Vibe Check</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-Gang"><span class="nav-text">14. Gang</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15-%EF%BC%88%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%EF%BC%89%E6%8B%9F%E4%BA%BA"><span class="nav-text">15. （搜索引擎）拟人</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-Go-prrrr"><span class="nav-text">16. Go prrrr</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17-%E9%BB%91%E4%BA%BA%E6%8A%AC%E6%A3%BA%E5%8F%98%E7%A7%8D"><span class="nav-text">17.黑人抬棺变种</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-Pickle-Riiiick"><span class="nav-text">18. Pickle Riiiick</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19-%E5%92%B1%E5%AE%B6%E9%87%8C%E6%9C%89%E8%BF%99%E4%B8%AA%E4%BA%86"><span class="nav-text">19. 咱家里有这个了</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20-xxx%E4%B8%8D%E6%98%AF%E7%9C%9F%E7%9A%84%EF%BC%8C%E4%BB%96%E5%AE%B3%E4%B8%8D%E4%BA%86%E4%BD%A0"><span class="nav-text">20. xxx不是真的，他害不了你</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#21-%E7%94%B7%E5%A5%B3locker-room"><span class="nav-text">21. 男女locker room</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-me-and-the-boys"><span class="nav-text">22. me and the boys</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#23-%E5%8F%A3%E9%9F%B3%E5%9C%B0%E5%9B%BE%E7%82%AE%E6%A2%97"><span class="nav-text">23. 口音地图炮梗</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#24-%E4%BB%BB%E5%A4%A9%E5%A0%82%E4%B8%AD%E5%BF%83%E7%9A%84%E7%B2%89%E4%B8%9D%E6%AC%A2%E5%91%BC"><span class="nav-text">24. 任天堂中心的粉丝欢呼</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#25-%E6%9A%82%E5%81%9C%E8%A7%86%E9%A2%91%E7%84%B6%E5%90%8E%E2%80%9CPia%EF%BC%81%E2%80%9D%E4%BB%A5%E8%BE%BE%E5%88%B0%E5%87%BA%E5%85%B6%E4%B8%8D%E6%84%8F%E7%9A%84%E7%9B%AE%E7%9A%84"><span class="nav-text">25. 暂停视频然后“Pia！”以达到出其不意的目的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#26-STFU%EF%BC%8C%E6%88%91%E5%9C%A8%E5%90%ACxxx%E6%AD%8C"><span class="nav-text">26. STFU，我在听xxx歌</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#27-normies-be-like%EF%BC%8Cdecent-people-be-like"><span class="nav-text">27. normies be like，decent people be like</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#27-%E6%AD%BB%E7%A5%9E%E6%95%B2%E9%97%A8"><span class="nav-text">27. 死神敲门</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#28-Ah%EF%BC%8Cshit%EF%BC%8Chere-we-go-again"><span class="nav-text">28. Ah，shit，here we go again</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#29-%E8%AE%B0%E4%B8%8B%E6%9D%A5%E5%BF%AB%E8%AE%B0%E4%B8%8B%E6%9D%A5%EF%BC%81"><span class="nav-text">29. 记下来快记下来！</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#30-xxxx%E6%98%AFxxx%EF%BC%8Cchange-my-mind"><span class="nav-text">30. xxxx是xxx，change my mind</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#31-Rule-63"><span class="nav-text">31.Rule 63</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Rule-34"><span class="nav-text">Rule 34</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B6%E4%BB%96Rule"><span class="nav-text">其他Rule</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ohhhhh%E2%80%94%E2%80%94-Reaction-Guys"><span class="nav-text">Ohhhhh——(Reaction Guys)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Disappointed-Black-Guy"><span class="nav-text">Disappointed Black Guy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#For-the-Better%EF%BC%8CRight%EF%BC%9F"><span class="nav-text">For the Better，Right？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#x-amp-%E2%88%9A"><span class="nav-text">x &amp; √</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Master%E2%80%99s-blessing-meme"><span class="nav-text">Master’s blessing meme</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MBTI-MEMES"><span class="nav-text">MBTI MEMES</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%BF%80%E6%80%92Meme"><span class="nav-text">激怒Meme</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8xxx%E8%A2%AB%E5%8F%91%E7%8E%B0-%E5%8F%91%E6%98%8E%E4%B9%8B%E5%89%8D%E2%80%A6"><span class="nav-text">在xxx被发现&#x2F;发明之前…</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E7%8B%97"><span class="nav-text">二狗</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Devilish-Girl"><span class="nav-text">Devilish Girl</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-text">(. )(. )|( .)(. )</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-1"><span class="nav-text">:)  :|</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Woman-yells-at-a-cat"><span class="nav-text">Woman yells at a cat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%97%E6%88%91%E8%BE%93%EF%BC%88Chs%EF%BC%89"><span class="nav-text">算我输（Chs）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BINGO-Chart"><span class="nav-text">BINGO Chart</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E4%B8%80%E4%BA%9B%E4%B8%8D%E6%88%90%E6%B0%94%E5%80%99%E7%9A%84%E5%B0%8Fmeme"><span class="nav-text">其他一些不成气候的小meme</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Birbs"><span class="nav-text">Birbs</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar3.jpg">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">155</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">54</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">161</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjEwMTM3MTIxMjdAcXEuY29t" title="E-Mail → mailto:1013712127@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9tZWJpbHkxMzE0" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      猜猜这是什么鬼地方？
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9tZWJpbHljaGVuLmxvZnRlci5jb20v" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;">LOFTER</span>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/p/e3a422.html" title="p&#x2F;e3a422.html">【参考】衣|料专版</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/4eb5.html" title="p&#x2F;4eb5.html">遗书</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ce0f2.html" title="p&#x2F;ce0f2.html">Dreamily.AI专场</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/b6c1.html" title="p&#x2F;b6c1.html">关于动保和动不动就保和虐杀</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/754d1.html" title="p&#x2F;754d1.html">《致咩碳》</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/300011.html" title="p&#x2F;300011.html">【#快乐王子】HP开题Demo&记录</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/190c3.html" title="p&#x2F;190c3.html">【角色研究】关于沃姆</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/p/24b8.html" title="p&#x2F;24b8.html">【日常】虫虫和虫虫和虫虫们</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/190c3.html" title="p&#x2F;190c3.html">【角色研究】关于沃姆</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/d846.html" title="p&#x2F;d846.html">【歌单】歌曲开荒</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">1.6m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">23:53</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "站子已虔诚祈祷 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+     //'.site-meta',
+    //'.site-nav',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>

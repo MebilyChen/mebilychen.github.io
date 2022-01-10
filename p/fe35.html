@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="梦">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【合集】日常做梦">
+<meta property="og:url" content="https://mebilychen.github.io/p/fe35.html">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:description" content="梦">
+<meta property="og:locale">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/OC/IMG_0168.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/QQ%E6%88%AA%E5%9B%BE20211105152258.png">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%A8%83%E5%A8%83%E8%AE%BE%E5%AE%9A%E5%9B%BE.JPG">
+<meta property="article:published_time" content="2021-03-07T14:37:00.000Z">
+<meta property="article:modified_time" content="2022-01-07T04:09:30.755Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="黄莲">
+<meta property="article:tag" content="虫与虫与虫">
+<meta property="article:tag" content="日常">
+<meta property="article:tag" content="梦">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://mebilychen-media.test.upcdn.net/image/OC/IMG_0168.JPG">
+
+<link rel="canonical" href="https://mebilychen.github.io/p/fe35.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : '中文'
+  };
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    
+      if (NexT.utils.hasMobileUA()) return;
+    
+    let time, hidden, visible, title = document.title;
+    let favicon = document.querySelector('link[rel="icon"]');
+    
+      hidden = ["盯————","*探*","?","......","*观察*"];
+      visible = ["*偏转视线*","*缩*","*强装镇定*","！","*低头*"];
+    
+    let random = t => t[Math.floor(Math.random() * t.length)];
+    const change = () => {
+      if (document.hidden) {
+        favicon.setAttribute('href', '/images/favicon-32x32-king-black.png');
+        
+          document.title = random(hidden);
+        
+        clearTimeout(time);
+      } else {
+        favicon.setAttribute('href', '/images/favicon-32x32-brand-black.png');
+        
+          document.title = random(visible);
+        
+        time = setTimeout(() => {
+          document.title = '碳素的小作坊';
+        }, 1000);
+      }
+    }
+    document.addEventListener('visibilitychange', change, false);
+  });
+</script>
+
+  <title>【合集】日常做梦 | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;调谐中...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">161</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">54</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">155</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-image fa-fw"></i>画廊</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/random.html" rel="section"><i class="fa fa-question fa-fw"></i>抽</a>
+
+  </li>
+        <li class="menu-item menu-item-lang">
+
+    <a href="/en/" rel="section"><i class="fa fa-globe fa-fw"></i>->English</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-17081-597255-1305127431.cos-website.ap-hongkong.myqcloud.com' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/fe35.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【合集】日常做梦
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-07 22:37:00" itemprop="dateCreated datePublished" datetime="2021-03-07T22:37:00+08:00">2021-03-07</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2022-01-07 12:09:30" itemprop="dateModified" datetime="2022-01-07T12:09:30+08:00">2022-01-07 12:09:30</time>
+                </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A2%B3%E9%85%B8%E7%9A%84%E6%B1%82%E7%94%9F%E4%B9%8B%E8%B7%AF/" itemprop="url" rel="index"><span itemprop="name">碳酸的求生之路</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A2%B3%E9%85%B8%E7%9A%84%E6%B1%82%E7%94%9F%E4%B9%8B%E8%B7%AF/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" itemprop="url" rel="index"><span itemprop="name">碎碎念</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>20k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>19 分钟</span>
+            </span>
+            <div class="post-description"><center>梦</div>
+          
+          <div class="post-tags">
+              <a href="/tags/%E9%BB%84%E8%8E%B2/" rel="tag"><i class="fa fa-tag"></i> 黄莲</a>
+              <a href="/tags/%E8%99%AB%E4%B8%8E%E8%99%AB%E4%B8%8E%E8%99%AB/" rel="tag"><i class="fa fa-tag"></i> 虫与虫与虫</a>
+              <a href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag"><i class="fa fa-tag"></i> 日常</a>
+              <a href="/tags/%E6%A2%A6/" rel="tag"><i class="fa fa-tag"></i> 梦</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p>10.9 插一句，不是我懒了，是因为好久没梦到陛下了。</p>
+<p>我发现我做梦越来越游戏方向专精了，不知道其他的梦境会是什么样呢？</p>
+<p>陛下的呼唤 谁顶得住啊  </p>
+<p>我竟然熬夜熬了一个轮回 从美国作息变回中国作息了？<br>原来是5点睡12点醒<br>然后是9点睡16点醒<br>然后是13点睡20点醒<br>然后是16点睡0点醒<br>然后我今天是22点睡5点醒<br>太精彩了 我为自己鼓掌</p>
+<hr>
+<blockquote>
+<p>2022-1-7的梦</p>
+</blockquote>
+<p>做了一个很诡谲的梦<br>忘了是不是陛下了，反正我找了个男朋友，高富帅还很温柔，对我特别有耐心，家里大house跟大公司一样。然后我们还在高高天台上看风景，做arduino小车（或者小机器人）。做小车他很擅长，然后我就在一边惊讶+膜拜<br>后来他上班工作去了，我就一个人在（大公司一样的）他家里自娱自乐，就看到很多新奇东西。我学着他样子自己做了一个小车，能遥控跑起来的那种，然后在大house里派处乱跑。然后我和小车跑到门口，正好他回来了，看见我的塑料小车直接弯下腰捡起来丢进了垃圾桶。我就比较尴尬，就说那个是我做的，就心里本来还想着给他一个惊喜。他（这里记不太清了）就也没什么表示，直接就没搭理我就进门了，我后来听说他是在外面遇到了什么糟心事情，我就想去问他怎么了，就一直追着问，说想帮他一起解决，结果就被（这里也记不太清了..）很粗暴的对待了这样子，后来似乎还发现（或者只是我自己怀疑）他有了新欢。<br>然后有一个女仆看我不顺眼，想用书砸死我，然后我就突然黑化了，我就抢过书砸死了另一个过来劝架的女仆然后栽赃陷害。然后我就准备跑路（指离开大house）了，然后我就醒了。</p>
+<blockquote>
+<p>2021-12-26的梦</p>
+</blockquote>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/OC/IMG_0168.JPG"></p>
+<blockquote>
+<p>2021-12-8的梦</p>
+</blockquote>
+<p>啊哈！我梦见一个游戏，塞尔达那样的，然后进行到我获得“鹰”技能（就是我可以放出一只鹰然后点击左键传送到鹰的位置，可以用这个技能滞空），我突然感到周围很陌生很害怕（半空中有一个不自然的东西，“unwanted attention”），然后就不怎么敢用这个技能。然后游戏画风急转直下，突然出现了一群僵尸怪物，移速超快，要生吃活剥我，我就想到可能是要我用“鹰”技能逃到一个树桩（上去之后发现有个洞）上面，但是我忘了怎么用，结果第一次就被生吃活剥（这里我都不敢去想，就是梦境模糊化处理了），第二次我就慌忙逃到上面，然后跳下洞，发现自己来到了一个大舞台上，有个主持人又像是演马戏又像是演魔术的，然后把困住和即将追过来的僵尸怪物角斗。<br>然后！我竟然变成了陛下！就！然后怪物在主持人指挥下就冲过去欺负陛下（细节我就不详述了，什么陛下本以为自己要被杀死了但主持人暗示了更悲惨的展开什么的），然后主持人笑着说要砍陛下翅膀“反正你也不想离开这里了对吧”，然后就让怪物去掀他衣服。<br>然后我就被学姐的猫（关在她房间里，在我隔壁）吵醒了，我就迷迷糊糊想抓住这个梦就想继续做梦，然后我就相当于半醒着做这个梦，然后我就加了很多logic进去。之前做梦一直在想砍翅膀这茬事嘛，就继续补了很多东西。什么，让陛下自己展开翅膀给观众老爷们看看啊什么嘲讽欺负的话。然后我想着想着，突然想把陛下变成陛下他爸爸，就相当于一家人被抓住关马戏团供人取乐，陛下那时候还没羽化是个幼王，然后相当于他看着自己爸爸（和一个刚孵出来没多久的弟弟也无了，是被割开翅苞随后被一脚踩死）为了保护自己孩子而（因为被禁锢了法术选择丧失理性去用爪子）被杀死（相当于失败了），这样。  <br>然后我做了一个失火的梦，就是我们初中班去上课的时候突然失火了（在地下），然后我准备一个箭步开溜，都站起身了，结果看大家都没动，我就忍住了，看有个同学拿起灭火器灭火，灭了半天失败了“大家快跑吧！”，然后我们就立刻开溜，我跟着第一批坐电梯到楼上，然后后来一摸身上啥也没带，觉得太没面子，给自己补了一部手机（我善于meta），后来我还想再进去拿大姨送我的小书包，但是火太大了不敢进，只能眼睁睁想象着包被烧没了。更气的是我看见后几批人出来慢悠悠把自己身上东西都带全了，我就更气了。<br>然后我后来见到我爸，就把这些事和他抱怨了一番。  </p>
+<blockquote>
+<p>2021-11-28的梦</p>
+</blockquote>
+<p>我去我睡觉被子捂住鼻子了，然后我想把自然挪开翻个身，结果发现手是麻的动不了，然后就满是自己要窒息的惊慌</p>
+<p>梦见有人来卖他的书 一本30起 还拉pewds给他做广告<br>然后一共有六本书 似乎是分析他的一部电影是怎么做成功的<br>我就翻目录，第一本讲配色的，第二本讲的音乐，第三本讲剧情 ，第四还有服饰穿搭（里面有一只陛下的礼服图 超美）第五不知为啥是数学，老厚，第六是虫子和动物的参考图</p>
+<blockquote>
+<p>2021-11-21的梦</p>
+</blockquote>
+<p>回忆一下今天的梦<br>睡了14个小时的梦 主要太有意思了跟玩游戏似的，不想醒过来。<br>第一个梦和超能力有关，是超能力+黎明杀机<br>忘了到底是真的还是个游戏了。<br>反正就是一众人到一个大房子里，有个变态神明给我们随机发放超能力，然后让大家给他献祭血液（每人都要用小刀划自己胳膊），他会吸伤口的血，这个操作有几率会把玩家变成鬼，鬼就是抵御一切攻击，有超快移动，让接触到它的人逐渐腐朽（会传染）、爆炸，但他唯一的弱点就是“观察者”（？忘了，似乎不是这个词）这些人的攻击对鬼是有效的（他们的攻击是蓝色的）。所以鬼其实把观察者都杀死他就赢了。<br>我上去割自己手腕的时候犹豫了，就说我想让别人帮我割，因为我怕割到自己动脉，他就沿着我旧伤口（有三道，是自残啥的。神还看着我的伤口思索了半天）割开了。结果后来这层皮裂开了，露出我下面第二层皮，（就像脱下了一层衣服那样，但内层还是血肉模糊的），然后血都几乎流干了让我开始害怕我是不是要再割一次。神和他助手就帮我把皮缝上……助手扯皮的力气好大，我都怕他会不会把我皮扯烂。</p>
+<p>然后选中我当鬼嘛，我还问神明（吸血鬼？）是不是表演，疼不疼，他还说没事。艹。</p>
+<p>然后就是梦见学院生活。我去商店买东西，买了好多好吃的好喝的，然后逛到宠物区和文具区，宠物区有好多虫虫，我还亲眼看见一个水果被一只虫虫掰开之后里面都是肉虫虫（他们有专门的虫虫食物）。我看到有个本子被摆到商店里展示，封面画的是我黑历史，我还核对本子上的信息，姓名学院班级日期啥的都有，里面画得都是陛下（实际上我那个本子里应该都是娘三），我就准备要回来。</p>
+<blockquote>
+<p>2021-11-5的梦</p>
+</blockquote>
+<p>今天梦到自己去魔法学校上课，不被老师待见<br>看到大家在讨论数理统计，我就吐槽了一句“还好我不上计算方法”  </p>
+<p>然后有没有陛下相关忘了，就记得有一个小精灵，相当于陪伴精灵吧。我还记得它们的样子：</p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/QQ%E6%88%AA%E5%9B%BE20211105152258.png" alt="结构类似这样"></p>
+<p>就是有一只金黄色萤火的小蝴蝶在中间，只有那个才是实体，其余的都是虚的，是影子。我看到两只小精灵交互的时候是用蝴蝶的翅膀碰触对方，其余的部分直接重叠。  </p>
+<hr>
+<blockquote>
+<p>2021-10-31的梦</p>
+</blockquote>
+<p>我今天做梦梦到看合唱表演 醒来发现声音还有 一看 有合唱比赛</p>
+<hr>
+<blockquote>
+<p>2021-10-30的梦</p>
+</blockquote>
+<p>梦见陛下了  <br>准确的说是“梦见我自己在梦里还在膜陛下了”</p>
+<p>是似乎是玩一个游戏 还是一个现实场景，恶势力入侵了宅邸然后要求玩一个游戏 具体是玩什么游戏我忘了 救人？但是后面要求是留下宅邸中的一个人/多个人 其他的都杀光<br>然后就让我选人嘛，我就想选陛下和卢瑞恩 但是清单上没有 空洞这边就只有老师 有一堆anime人物和其他游戏的人物<br>（偷偷说一句还有一个选自己和这个角色的关系的选项是“虐待/拘留”、“协助”、“拯救”啥的）<br>我不就找不到陛下和卢瑞恩嘛，就一直不选，等着刷新和翻页，然后dm就一直给我刷新给我翻页，最后他也受不了了，干脆“这是所有的可选角色，你慢慢选吧”就全给我列出来了。（我还看到有个选项是哈利波特的金色飞贼…）</p>
+<p>然后后面就换了个场景，我梦见画陛下的龙设定了！就我买了一个白龙的长枕头，就看到它的爪子，是那种鸡爪子结构嘛，然后我就看到我给陛下的设定，是一根突刺的那种虫爪，就很苍白，然后我就想也给陛下配一个好看的爪子，就，最后似乎是结合了螳螂爪？最后还梦见了一堆画前辈的同人。然后我就醒过来了。</p>
+<hr>
+<blockquote>
+<p>2021-10-17的梦</p>
+</blockquote>
+<p>我去 我没有记下来？<br>我在梦里梦见我记下来了我去。<br>就两个，第一是关于萌萌的陛下和卢瑞恩，画法，面具的眼睛单拿出来很像一条竖着的鱼（？）。<br>然后我梦见我变成宇宙之眼（被有点像grime那样的圈圈围着），被抓住然后强行创造宇宙。</p>
+<blockquote>
+<p>2021-10-16的梦</p>
+</blockquote>
+<p>这次做梦是这样<br>梦见地球毁灭了 我坐着outerwilds那样的小飞船 和我的底特律安卓机器人一起游荡太空 找可居住的星球/文明<br>然后我看到一个超级漂亮/震撼的星球，它看起来就像是位于一个黑洞的中心一样，光线都绕过了它，然后“黑洞”很大，这个星球很小，就藏在里面。特别美，颜色那些的，我和我僚机特别高兴（下面就叫她僚机了，忘了名字）然后我们就登陆了（我还开了outerwilds式的自动驾驶）。结果迎面遇到监管人员，长得很像人类，他们很暴力地让我们跪下查验什么东西，然后给我打了一针不知什么针剂，才给我放行。我们被带到一个集体宿舍，拿到了床位号。这时我看见我初恋和我另一个高中的女学霸在一起唱歌，关于掐脸蛋的。他一边唱一边掐别的女生脸蛋，然后我就按照我之前的想法想要去让他做一些很败坏形象的事（这里破墙了），我就想着让他做点出格的事，但是梦没有听我的。<br>这段结束后就是到了一个新人讲座。我和僚机是中途来的，（刚刚连床位号都差点没找到，他那个床位号是个计算公式，最后的得数才是床位号，我也是服了）所以只听到最后一段，她说是他们在这里建立文明，是为了要规避宇宙毁灭，规避坏蛋的袭击什么什么的，然后希望来这里的人都团结起来好好工作，他们不会亏待我们。然后我和僚机点点头，她就看着我们说“你们有些人竟然能听得懂高等种族的语言，这一阶层里的人大部分都听不完全。”<br>后面就是我和僚机出去熟悉环境（赏景），真的很漂亮，我们出发之前我指着集体宿舍窗户外面的月亮，可大（离得可近），我就说“快看！那个是这里的月亮吗？”（僚机当时在做别的事，没听到我说话，我还有点尴尬，又说了一遍）<br>然后这个星球似乎有很严重的臭氧层/大气层空洞，进来的时候就能看见，有洞洞。我们出去之前我还很担心“咱们是不是不能往空洞区走啊”，还想了一下或许这里的人会建个建筑什么的挡一下。然后这里的四季不是按时间划分的，而是按地域。我们在落樱的春季见到了远方一个冬季区，白雪皑皑覆盖着日式房屋，很美。<br>后面就是那个负责人，讲话的那个，突然和我袒露真意了，说其实他们都是人类，他们的目的其实是致力于让人变成安卓人。然后我就一堆问号，不赞同她们的观点，这时候有人走过来了，她就立刻走开，最后指着我的僚机，说“安卓人终究只是安卓人，它总有一天会显露真性的”。然后我不听她的，我一看到我的僚机，我就冲过去抱住了她，以示我的坚定立场。<br>然后我们这里突然经历了大规模停电，都黑了，然后有人疏散，说是有敌人来袭。那个冲击波来了两次，每次都震得我头晕眼花。后来我疏散的时候偶然听说组织的二把手生病了，要死了（说是“这次可能真的不行了”），然后刚刚那个负责人就离开住处去看她，这时候我看见我那个高中女学霸，偷摸摸假装路过然后又折返回了负责人的家，然后我就意识到可能她是间谍，我就跟上去了。进去之后，正好看见她在摸一个柜子，里面的各色思考帽（？），都被拿了出来按顺序摞起来了。她一看见我立刻就跑了，我就愣在当场，我就在想要不要让自己被当作间谍抓起来，就要不要这时候让警察进来看见我和翻箱倒柜（二次破墙）然后我就想着思考帽摞起来的顺序可以给我作证，但是又想到这个证据太弱了，不行，就放弃了。<br>大概就这么多，现在也忘得差不多了。</p>
+<blockquote>
+<p>2021-10-15的梦</p>
+</blockquote>
+<p>梦到了满满的陛下和难受。<br>一件件来。<br>首先是到AO3上逛，看见了卢瑞恩x莫诺萌的CP，然后特别火，大家都在看，tag标的是专有cp tag（就类似，lu-nomon 这样的（lemon？？）），还有人给画同人图（卢瑞恩和莫诺萌的拟人），卢瑞恩是…那种发型，就，短短的贵族中分…然后墨蓝头发紫色挑染（也有可能是艺术效果），戴了眼镜？长得很…儒雅。然后上面写了一行小字，似乎是感谢什么的吧，我眼睛都快看瞎了都看不清。老师就是，呃，草绿头发？还是果冻…？？记不得了。我记得文似乎是卢瑞恩是刺客小偷一类的？名字是…呃，忘了…Intertwined？刚刚瞎起的，就这个感觉。老师是公主？还是说是现代都市设定？反正两只都挺年轻的，甚至有幼驯染倾向。开场似乎是卢瑞恩还是是老师潜入了一个宫殿还是大house，然后两小只就撞到了…我当时是跟风误入，看着看着我就发现“我去，这不会是卢瑞恩和老师的cp吧”，然后我就赶紧check了一下tag，果然。然后就有点难受到缩进叶子里。其次是梦到了陛下的手办和娃娃和羊毛毡。<br>我一个个说，先是这件事的起因，我看到一个人晒自己的什么手办，然后照片里入镜了一只陛下的手办，被小骑士的大手办（道理我都懂，但为什么那么大）半遮着（这人桌子上全都是手办）。怎么形容呢，就，超美丽的陛下（梦里来看）然后这个手办我记得（在梦里），是樱桃联动谁办一个什么活动，买一个产品附赠的，有两款，金色款和银色款，那个产品两套都是限量限时发售。我不知道这个消息，看到的时候就只剩下银色款了。然后我因为要那个产品也没用，而且不是很喜欢银色款，就没买（后面就后悔死我了）。<br>后来产品就绝版了，但是我现在看见似乎每一个空洞圈子里的人都有一只陛下的手办。然后我就有点，嗯。<br>形容一下那个金色的陛下手办吧。现在回想起来有点中二：现在想起感觉用“小丑帽”来形容比较合适（？），但当时估计是联想到了超级拉姆（？）：陛下的七根角，有点像小丑帽那样弯下来，（高低不一？飘动状态？也有弯成一个国王圣印的？）然后穿着镶着圣巢纹路样式金边的白袍子（银色款的是银色的边）——这个金边白袍子真的帅死我了好吧，可以参考下某只Dragon Village M的C位白神龙——然后红黄蓝的球球绕在陛下身后绕成一个金环（所以说是超级拉姆，嗯，小丑抛球，嗯，超拉+阿尔宙斯）。这手办真的做的很精致，是我喜欢的外型比例，似乎没有袖子？有？是个袖手的姿势？忘了。那个的设定描述似乎是，呃，有点阿尔宙斯创世神的味道。<br>对，就跟雪初音，樱初音那味儿一样。给陛下主题换装。<br>世上最遥远的距离就是我看到他有你的手办，但我没有。/菜狗<br>后来我去ebay、amazon、淘宝上搜陛下周边，想着能不能搜到这个绝版，我真的充满绝望，我心里想一千两千我都会付。搜到有点丑的陛下娃娃、陛下手办，（很多产品描述不是写的“白王”而是“陛下”/滑稽）还有陛下的DIY羊毛毡，都不是官方的。设计很奇怪，陛下的七根角不是围着长了一圈，（也不是长成一个扁椭圆）而是，呃，像海参那样长的，就，意会一下。（还看见了我给陛下做的娃娃），但即便感觉有点丑，我还是下单了一个高高瘦瘦的陛下（指陛下的胳膊腿都很长）娃娃，因为这个娃娃穿着那个手办的衣服。还有个娃娃是白白胖胖的，但是爪爪是…爪爪，就，是手，有手指。有一个手办是借的金色陛下的造型，但是陛下的姿势是盘着腿浮坐在空中的，我也下了单。（还看见一个小骑士和他的影子的吧唧，写真图是用了别家一个不认识的角色的吧唧（我是真不认识，似乎是什么热血动漫）的背面做白底，然后给小骑士吧唧打光投个影，再把影子吧唧对应在投影里。产品名我忘了，只记得还挺帅气。）<br>然后…大概就这样。我醒过来的时候还很难受，怕这一切都是真的——作为王学家竟然没有陛下的周边！/菜狗<br>主要金边陛下真的很帅啊！白白的陛下……艹好饿，饿了一天，溜了溜了。</p>
+<blockquote>
+<p>2021-10-14的梦</p>
+</blockquote>
+<p>我现在还能想到当时白蛾子在我手上爬动的感觉<br>就 记得晚了 差不多都忘光了 大概写一下吧 有个黑蛾子 有个白蛾子 似乎开局可以选角色？然后每个角色的技能都不一样 选多个角色的时候角色之间也互相有影响<br>有好多角色 也不都是虫虫 我现在就记得黑蛾子和白蛾子了，就 白蛾子毛茸茸 爪爪也特别尖 爬在我手上的时候就有那种 呃 虫虫爬动然后抓得可紧的感觉 就那个知了有的时候就抓得挺紧的 然后黑蛾子就黑乎乎的 带白点点 白蛾子超美丽可爱 纯白无瑕 白蛾子我是后来才“解锁”的 似乎是在游戏里解救的吧 之前那个黑蛾子一看见白蛾子就凑上去了 一碰白蛾子 黑蛾子就炸成灰了 然后我一看说明 说是要满足一定条件才能碰她 （似乎是 白蛾子在成蛹的时候不能碰？）然后我重置了场景 没让黑蛾子碰她 要等满足条件才能在一起这样</p>
+<blockquote>
+<p>2021-10-13的梦</p>
+</blockquote>
+<p>梦见开outerwilds的小破飞船上天试飞了<br>爽！老子漂移着陆<br>梦见在精品店买虫虫玻璃瓶<br>看见了小蜈蚣 小萤火虫 还有好多小甲虫！挑来挑去挑了一个超可爱的小甲虫爬爬<br>在我对着虫虫们冒星星眼的时候 基友在一边让我做个人<br>…怎么没有陛下？（惊）</p>
+<blockquote>
+<p>2021-10-8的梦</p>
+</blockquote>
+<p>我去，我怀疑我是跟很多人一起做的梦，真的，卧槽，我不可能想到这么多细节，就一秒钟的时间，我注意力集中在手头的工作上，然后其他人，每一个都细节满满，我去，我不可能想出来的。  </p>
+<p>既然吐槽了，我就大概说一下吧。就是有个奇怪的机器，它可以任意改变你平板或者手机的尺寸大小。就，它大概长的样子是一个矩形，但是每个边都有不同长宽的矩形，这第二个矩形有开口，你可以从任意一个口塞进去，然后从其他边的任意一个口拿出来，你的平板的长或者宽就变成那个宽度了。  <br>然后我玩了下，把我的pad的屏幕缩成iphone4了，然后我想复原，结果复不了了，大家一起给我出谋划策，但其实是因为他们也想用。有个人临走前说“你这个可能没有这个尺寸，恢复不了了吧”，有几个外国人说着英语经过我这里，说他要参加生日聚会，让我让一下，我让了。  <br>然后我们捣鼓了一会儿，这个机器就被锁住了，原来之前那个小哥解锁了之后大家都凑过来用，但是这个是有使用时限的。我试着解了一下，发现怎么点都点不开设置，语言都是看不懂的俄语。然后我就说“这个是伪装的OS！”然后始作俑者就出来夸我眼神犀利，我就和他说，你快把这个解开，我没时间陪你玩游戏。然后他就解开了，我用着那个东西，还是恢复不了原来的大小，我的平板一会儿长一会儿宽，就和我解密解不出来一样慌。然后突然不知怎的我们还在场的人就开始被迫玩逃杀游戏，就，他们每一轮都会选一个大家都最不喜欢的人处刑，同时完成任务收集星星，收集齐了就可以使用那个机器了。我就想跑了，我不想让我平板复原了。然后得知是要在手背上集满五个星星才有资格离开而不被杀。我和我周围的人说我好想放弃啊咱们一起离开吧，他们都不答应，然后我就慌了，我怕我会因为总是打退堂鼓被当成最不受欢迎的人被处决，就更想跑了。  <br>我醒过来之前一幕是我们有一半的人跪在了一个巨婴皇帝跟前（我没跪），然后巨婴高兴了，他说“哎呀你看看你们，我没有这个意思。”“有赏有赏！”然后下跪的人每人得了两个星星，其他人得了一个星星，我一看手背，是四个星星。</p>
+<p>哦，我醒了又睡了，我梦见我换了一个宿舍，现在我的房间有独浴独卫了，然后我特别高兴，立刻去洗衣服去洗澡，然后我发现其他人也来用我的独浴独卫，原来朝着走廊也开了一道门。  <br>我的房间里有很奇怪的按钮，我不会用，按下之后我的一台老式拳皇计算机亮起来了噪音很大，再按一下就响起了警报声。然后我学姐冲进来，她说你别乱按，很吵，然后就关了。然后我想开灯，又按了一下，警报声又响起来了，我就慌忙关了。结果灯一直没打开。  </p>
+<blockquote>
+<p>未知时间的梦</p>
+</blockquote>
+<p>忘了是什么时候了，或许是今天？反正我梦见创新港，广场可大，有个恐龙化石雕像可大，夜空可美，有极光，有星座，我照相。  <br>然后似乎是什么体育课吧，因为我记得要脱鞋。我梦见我从小到大所有“朋友”大杂烩，然后她们一个个的，都不喜欢我了，自己三五成群，看见我就躲。我就受不了了，我就拉上一个人，我就说，你们怎么不喜欢我？然后她们就接受我了，我们就又一起走了。  </p>
+<p>忘了是什么时候了，那阵是把自己饿着了。首先，我和朋友去买饭，自选餐厅，超大，就和书店那样。我没看到托盘，也没看到有人拿着托盘，我就拿了很多个碗，把菜啊米饭啊都挤在一起放在那些碗里了，我挑了好多好吃的。结果结账的时候我才看见大家都拿着托盘，然后我就有点不对劲了，那个食堂阿姨一看我这个，她说你别走，在这等着，我得把菜都分好类才能给你结账。我和我朋友说你们等会儿我，她们就坐在那了。然后阿姨一直在分类，还怪罪我，我就说我没看见要用托盘。我就说称重算钱不行吗，她就非要分好类才能结账。然后我就一直等，等到天黑商场快关门了，我和我朋友说你们先走吧，她们就走了。  <br>然后那个碧池还在分拣，我就溜达到商场的阁楼了，被锁在里面，迷路了，很黑，超害怕。后来我终于找到路回来，我看她还在拣，排了一排排的碗，里面都是菜。我问好了没啊，她说没有。我就缩在角落就哭了。  </p>
+<p>忘了什么时候了，我曾经梦见过pc系统会向手机系统对齐</p>
+<blockquote>
+<p>2021-9-17的梦</p>
+</blockquote>
+<p>今天梦见我变成了下一个被赶出寝室的人（上一个是2号房的，太惨了。）因为要修东西，因为安全问题所以要暂时搬出去。于是他们物业给我找了一个都是外国人的宿舍，一张大床可以睡三个人挤四个人，和两张小床，于是他们都挤在了大床上，我睡小床。<br>今天又梦见我初恋了，然后我就挤在他身边坐，就感觉真的很就这么坐着就幸福。然后我突然就觉得自己逐渐有了勇气问他有没有女朋友，最近过得怎么样。然后填表的时候他跟老师说自己钢琴弹的中等，老师就说不行，要很好才行，我就插话说他其实弹的很好的，然后他就改口说他弹的很好，然后我看了看他，他并没有看我。之后他突然跟我旁边一个外籍女学生说“关于xxx（我没听清，似乎是本书），咱们讨论一下”，然后女学生怯怯地笑了一下，他们就一起出去了，我就自己坐在那里怅然若失。可能是心思不在位置上了吧，我下课之后走到一半路，突然发现自己手机没了，就赶紧回去找，发现在一个地方丢的全都是手机，我的已经被踩的踩软了，和防弹玻璃一个效果。我就很心疼，想着很多数据还有站子都在这个上面，要回去导出来才行。就用抱婴儿的姿势抱着它，一边学生看见了，和另一个人说“你不会也想做它儿子吧。（指手机是老子）”</p>
+<p>其实啊如果下次的梦境里，他不是那么优秀，我估计就不会那么留恋他了。</p>
+<blockquote>
+<p>2021-9-4的梦</p>
+</blockquote>
+<p>？？？<br>我就不说最开始是个鸡的副本了（但还是说了），我扮演一只小鸡，孵出来，挤出笼子和工人斗。目标是逃离这里。还有一只大鸡，被（暂时）关在工人运输货物的防爆门电梯里面。我一开始想进电梯，总是被工人发现，把我们两抓起来说要做烤鸡。然后我后来不知怎的就达成了我们两在电梯里，工人在外面的效果。然后我想让电梯启动，一看面板复杂得一批，随便点点没有用，那边工人就把门打开了把我两抓住了。</p>
+<p>鸡的之前还有一个副本，但是我忘记了。</p>
+<p>之后重点的是这个，有一个虚空的恶魔，世界在被他逐渐吞噬，然后紧急关头，有一群陌生人分别相遇了，他们是：一个流浪忍者，比较利己主义；一个流水线操作工和她的师傅（这里我记得是因为平台跳跃的时候路过）；似乎还有个公主还是女战士；还有谁我忘记了。<br>我就分别扮演这些角色，赶在黑暗吞噬一切之前（有点outer wilds的效果）阻止这一切，失败了会开启循环。<br>我记得最清楚的是，有一段平台跳跃，我第二次成功了，拿到了隐藏在迷你速冻肉汤的重要能源卷轴，然后我来不及逃出去（以及不知道怎么用）就被黑暗吞没了（死了）。<br>之后我就再也没成功进去那个房间，然后本来恶魔每次都会在我耳边bb几句嘲讽的话，我失败了十来次之后（是真的在梦里失败了十来次），恶魔突然说，“我们降低一些难度吧，那个能源卷轴，我藏在了这里，”然后他拎出来一个迷你速冻肉汤罐给我看，打开给我展示另一个卷轴，还给我把那个房间里的罐子高亮了。我瞟了一眼，我说“哦”，就把这个罐还给他了。</p>
+<p>然后那个流浪忍者，一身好功夫，还会吟诗，（不知是旁白还是啥），反正他要杀人的时候都要吟两句诗，水平还挺高。我一听我就想，诶！这可是我的梦！这诗我从来没听过，不就说明我水平很高嘛！赶快记下来放到站子里！</p>
+<p>然后我挣扎着醒过来，我想至少把两句写在纸上，但我只能找到演草纸。上面没啥空间了，还找不到笔，我就一直叨叨着那两句诗，觉得我记忆逐渐流失，很着急。</p>
+<p>然后我醒了。</p>
+<blockquote>
+<p>2021-8-28的梦</p>
+</blockquote>
+<p>梦见翻墙到国外看了陛下的同人 和MBTI<br>陛下同人有包括。梳着麻花辫的辐光（我还想着要不要给陛下也梳一个）。<br>还有一个我记得可清楚的，就是像素风，动漫战斗场景，gif（类似贴吧签名那样），摄像机躲在草丛里绕着arena公转，每被草丛遮一下就换一个人，包括（按顺序）：</p>
+<ol>
+<li>陛下 vs 前辈</li>
+<li>团长 vs 前辈</li>
+<li>团长 vs 被虚空腐化的团长</li>
+<li>小姐姐 vs 被虚空腐化的小姐姐</li>
+<li>不确定有没有小姐姐 vs 前辈</li>
+</ol>
+<p>还有一个，我电脑桌面是撒哈拉沙漠绿洲城镇放烟花，昼夜交替。<br>MBTI就是误入一个首八维是Zx的型，然后我就想，哇，真的有这么外向的mbti啊（？）。community里大家对自己的形容都是“辣”、“草”、“野”，这样。<br>以及想搜索“飞虫扇翅膀”的动画概括，想给陛下画，结果一直搜不到，没关系，我醒过来搜。</p>
+<blockquote>
+<p>2021-8-27的梦</p>
+</blockquote>
+<p>梦见幼王了，但具体记不得了，只记得梦见幼王，然后我会用类似hololens的法术（闭眼构思一个场景，能在手中以立方体呈现，还可以缩小放大），然后记得幼王会撒娇一样的叫。  </p>
+<blockquote>
+<p>2021-8-22的梦</p>
+</blockquote>
+<p>卧槽，哈哈哈哈，卧槽，哈哈哈哈哈哈，卧槽，哈哈哈哈  <br>我不光梦见了陛下，我梦见了大沃姆！——的骨架，还是纸糊的。  <br>我们坐游轮出去玩，然后似乎发生了什么不公正的事情？我就许愿让大沃姆过来惩罚船上的人，结果人都快走光了大沃姆才姗姗来迟（冲破地面），然后我上前一抱，丫的是假的，动不了的骨架。  <br>不知道陛下是不是在哪看我的笑话。  </p>
+<blockquote>
+<p>2021-8-20的梦</p>
+</blockquote>
+<p>梦见一个大机器人</p>
+<p>这个机器人是（美国）前第一战斗机器人（斗兽场那种）（型号曾出现在榜单上，后来被CT取代） 被淘汰了 扔在了垃圾场然后被“爸爸”（一个反动派机器人博士）拣回来了，拣回来的时候缺了能量箱，以及火箭筒等很多武器（我知道是因为我能在下方的任务栏里看见）…</p>
+<p>然后我醒过来 我想 得把这事记在站子里 然后我闭上眼睛开始回忆整理这个梦境…然后进入了第二个梦境:）</p>
+<p>博士为了给机器人接上心脏永动机，杀了一个人拿一个人类心脏和我一起研究怎么接上？</p>
+<p>结果我第一个梦境想不起了:）</p>
+<blockquote>
+<p>2021-8-18的梦</p>
+</blockquote>
+<p>我梦见我国被万国围攻了<br>对方大军压境 逼着我们军演 围观我们出丑<br>升个国旗升的是白棋放的国歌都被他们瞎改过“起来，不愿做人们的奴隶”他们说他们是瞎改的，就换了个顺序。我们不知道，傻兮兮的升起来了。<br>军演有很多动物昆虫军团参加，相当于我们和它们结盟了。敌军让我们把蜂军团灭了，领导人同意之后，骗蜂向北飞行，让鲸或者啥的动物把它们杀死。但我们青年就喊话制止了蜂，让他们回森林了。<br>有一个神殿任务，多人合作，完成之后可以救国家于水火。相当于把现实世界变成一个游戏，然后有一个双人关卡，超搞笑，关于过山车的，我1p，另一个人2p，我们正探索怎么解密的时候，我触发了一个过山车的机关，我就被过山车拽着搭了几圈过山车，最后因为机关没破解，轨道没联通，车子被甩出天际，撞到广告牌上，我就被创死了。然后我又回到出生点了。</p>
+<blockquote>
+<p>2021-8-17的梦</p>
+</blockquote>
+<p>又梦见陛下了啊哈哈哈<br>还梦见团长和卢瑞恩！<br>卢瑞恩好高（）好优雅<br>这个场景就是一般RPG一行人冒险游历，然后到了一个洞窟里，这里的蚂蚁们喜欢吃神。对就是吃东西，咬，不过咬下来之后不觉得疼，那一部分的肉会变成透明幽灵状随后再回复。然后为了过洞窟大家被咬的不成虫型。这个被吃似乎是交易，我看大家都挺看的开的。然后我就问卢瑞恩呢？卢瑞恩当时和团长在一起，然后我就问卢瑞恩陛下呢，然后他指了指陛下。</p>
+<p>我梦见每人一学期要带大家进行一个活动，我选的是画水彩，我想画小骑士的水彩（竟然是小骑士），背景是深巢，然后我画着画着大家就都把我忘了，我就很开心的把自己的画据为己有了，也不用社交，真好。我还尝试了多足的画法（就是一个腿上长出来附肢，虽然失败了但我说我会练出来的。然后我画的那张画，被画里的一只大青虫吞噬了，大青虫吃了太多东西长得太肥大，我们就帮他减肥。最后找了一个喜欢养虫子的饲主。</p>
+<blockquote>
+<p>2021-8-15的梦</p>
+</blockquote>
+<p>梦见滑冰抓宝可梦。  <br>但是因为不知如何同步宝可梦到组委会，于是弃权醒来了。  </p>
+<blockquote>
+<p>2021-8-11的梦</p>
+</blockquote>
+<p>我去，我梦见VR版弹丸论破，被凶手完虐，丢死人；然后随着调查我发现这个凶手是人格分裂+其中一个是精神病，三个不同人格挤在一起的那种，是科学实验的产物。<br>然后不知怎的，诶，我就想到一个点子：“如果一开始完全不同的人被调教成近乎一样的精神病人格，然后塞到各自不同的身体里去（互换身体），还能分辨出来ta究竟是谁吗？然后我的脑子就：“好点子！快写陛下！”然后我就梦到三个这样的精神病人，威胁陛下认出她们，还拿刀子在被绑在椅子上的卢瑞恩身上比划。然后陛下虽然很努力区分，比如说话方式、用词、信息什么的（艹，怕不是我研究grime lore时的后遗症），但三个人完全就像是同一个人，完全分不清。然后陛下看着刀子扎卢瑞恩身子上了，就急了：“Stop！I will give you anything！”然后她们就说“Anything？”然后卢瑞恩就惊恐+悲愤的看着三个人（有可能原型是生化8里的苍蝇小姐）把陛下身体给瓜分了（三个都挤进去了这样）。</p>
+<blockquote>
+<p>2021-8-8的梦</p>
+</blockquote>
+<p>两个。</p>
+<ul>
+<li>关于“直觉沃姆”  </li>
+</ul>
+<p>这个梦我超级喜欢。因为它！是！陛！下！的！同！人！游戏！  </p>
+<span class="hint--info hint--rounded hint--top" data-hint="“Instinct Wyrm”
+神赋沃姆" ontouchstart>“直觉沃姆”</span>似乎是个成就，似乎是个称号，忘了。然后游戏是塞尔达风之杖的3D游戏模式。陛下属于可以在两个模式切换，大沃姆模式和虫型模式。emm，不过似乎是有诅咒让陛下只能在虫型模式了，这时就获得一个成就“沃姆”。我估计是“无上辐光”和“辐光”的区别。成就的图案是土黄色石板雕的大沃姆咆哮图案。  
+
+<ul>
+<li>关于“校花”</li>
+</ul>
+<p>这个我很不爽。  <br>事情是这样的，我家是一个贫困小家庭（大门都破了关不上），然后我上高中之后宿舍同居，有一个长得漂亮，学习很好，很有礼貌，还很有故事的女的和我一个宿舍，然后我们宿舍三个人，我就叫那个女的A吧，另一个女生B。然后A就告诉我们她的经历，她曾经遇到过两个男生，对其中一个一见钟情，初恋，她初恋似乎也喜欢她，一见钟情，但并没有明显表示，另一个男生还在一边调侃初恋，然后两人就十分羞涩的擦肩而过，就再也找不着了。  <br>之后我们参加学生会竞选，我准备了好久面试内容，结果面试的老师上来就问“你们两个先解释一下为什么驼背吧。”他说的“两个”其中就有我，然后我当时腿就是放不下来，嗯，梦中常有的奇奇怪怪的病症，只能弯着，单脚站着，我就说“我只能这样站着。”然后老师就说“可是这里是面试现场。”（？？？？？？）就不理我了。然后我就知道我这次面试凉了，就很不甘心。然后A也参加竞选了，她自我介绍的时候一通描述催泪升华，随后潸然泪下，听得老师同学们一阵鼓掌，老师大吼“这才是人才”，她还几次cue了我还有B，表现自己学识和认识有多么多么高深，然后我就特别不爽。随后的上任仪式上，B准备了一个惊喜，就是给她初恋的那个朋友打电话，找到了她初恋，然后完满人生。我就特别不爽，凭什么她就是主角，就是世界中心。然后后来校委会查出她有问题不让她上岗的时候我还很爽，但后来她还是用各种催泪技巧让校委会答应了，然后我就强迫自己气醒了。  <br>也可以说是梦中的我不想再存在了所以自杀了。  <br>梦中的这个人是有原型的，就是我之前提到过初中的那个作文写得很好的女孩，再美化一些，就是梦里的这个人。  <br>说真心话，她把我当朋友，但我其实很讨厌她。不如说我讨厌所有看不起我的人。  <br>真的都是我的错吗？不如问问教育机制为何能让一个孩子觉得自己的作文被否定就是失去了全世界吧。</p>
+<blockquote>
+<p>2021-8-5的梦</p>
+</blockquote>
+<p>我睡了一整天 刚刚才醒 简单记一下梦<br>有很多都忘记了，只记得一点片段。</p>
+<ul>
+<li>梦到了神性讨人厌的自己（在学校）：</li>
+</ul>
+<p>包括被老师骂的时候无动于衷，假装听不懂中文。<br>包括同学尝试和我社交的时候我谁都不搭理继续保持扑克脸。（他们讲笑话我差点没憋住笑）<br>包括我动辄语出惊人，吐槽很符合时机，搞的大家都在笑，我一副扑克脸，但后面（因为大家都在笑）又有些忍不住笑了。<br>包括穿着很容易掉（但很漂亮）的好几层的裙子，走一步掉一下，导致我最后像团长那样把手缩到衣服里拽着，然后坐到教室照常绕过一堆女生坐到了角落里最后一个座位，被打报告说成“太过分了吧”“怎么这么洁癖”。英语老师就说你看她拿书是不是把手伸出来再做判断。<br>然后我忘带了英语书。还好我就换梦了不然我得尬死。<br>我终于不管别人的看法和感受了，一直保持一张扑克脸面对世界。当时应该是高中的样子，可能我做这个梦是为了想圆满遗憾吧。<br>哦对，差点就忘了。<br>我当时认识一个小姐姐，也算是个当地小明星吧，她有抑郁症，总是尝试自杀。然后我们算是…好朋友？我也有抑郁症，我就想着如果她自杀成功了，我就跟着自杀。<br>然后那天我正上着学，突然小道消息传过来说她尝试自杀尝试了很多次，终于成功跳楼自杀了。她和我差不多，怕死也都是害怕痛苦。然后我听到消息之后，我就想像着自己像她一样克服恐惧走到楼顶跳楼的场景，但是因为这是梦境，所以相当于我真的走上去了（下面xz那个yy也是），然后我就又想像着自己跳下去周围环境加速飞过…然后就没有然后了，可能是换梦了或者我醒了。</p>
+<ul>
+<li>梦到了狗狗其实都会说话，只是逐渐忘记了：</li>
+</ul>
+<p>这一段只记得自己是一个什么有任务在身的狗狗，去找（一直没回来的？）前辈狗狗，发现对方真的成狗了。<br>然后就记得有一段我们两（我为了不引起人类怀疑）玩球，并排跑的时候对方用后半身撞了我一下，我没回应，然后有个不知哪来的解说：“很可惜对方没有在发情期”。我直接尬死。</p>
+<ul>
+<li>梦到了xz：</li>
+</ul>
+<p>当然这段主角不应该是xz。但是我只记得xz这段。首先，有一个什么纪念庆典，可能类似于是明星艺术展之类的吧，然后xz出了个主意，就是一个水族管道，每一条鱼身上都贴一首便利贴小诗。<br>是朋友先提到了“xz的诗也都掉下来了”然后我不知道这个作品还问了一句，他解释完我就看到了，鱼群和便利贴颜色交错确实…有点好看，不过是鱼群壮观而已。但我没有说，我就心里吐槽说不如拴在鱼身上，然后就和朋友吐槽“他好闲啊”，然后我们就一起yy他怎么粘的，说是“xz找了一堆女粉丝，一边挠骚一边作诗，让女粉丝粘。怎么作诗呢，就是让女粉丝说关键词：比如“初恋”、“情人”那些，xz就给那个粉丝写“你是我第一百零一个情人”等等。</p>
+<p>只有我的本命才有资格进入我的梦境。xz这情况算是恨之入骨的仇人吧。</p>
+<blockquote>
+<p>2021-7-29的梦</p>
+</blockquote>
+<p>神了。我不是写过一篇送子鹤吗。这梦里有个npc给我说，他看过一篇王文是“报恩”，讲陛下变成（女孩子）仙鹤报恩。  <br>然后我还有点不太爽，想着自己果然不应该来看同人圈子。然后我醒过来才发现这是梦啊是梦啊！  <br>我要写。  </p>
+<blockquote>
+<p>2021-7-25的梦</p>
+</blockquote>
+<p>哦对，我做梦梦见自己变成逼良成奸的懦弱盗贼了，作为一个萌新去和犯罪团伙合作，似乎还见到了陛下。<br>我一边做着梦一边想着“我醒过来一定要写小说醒过来一定要写小说”</p>
+<blockquote>
+<p>2021-7-23的梦</p>
+</blockquote>
+<p>这两天发烧。  <br>醒了睡睡了醒，做了好多梦。<br>发烧那天（7.22）做了个我去澳大利亚留学，当地火山爆发的梦。喷出来的都是瘟疫泡泡。醒过来就发烧了，现在想一想是不是3D全景视角画面太宏大导致gpu过热。 </p>
+<p>和陛下相关的，有一个是我进到一个邪教村落里，环境阴森恐怖，然后有几张宣传海报，还有贴纸之类的，印的都是我过去给陛下画的画。然后我就不害怕了。还觉得哇，这怎么算，我算是邪教头子的小跟班？然后陛下似乎是出场了，超美丽，忘记是我后来加的还是原本就出场了。</p>
+<p>还有一个是关于陛下那首Boss曲的。梦里的我突然想到，可以模仿辐光团长和大部分Boss战，把长音的部分加上轰雷滚滚的那种调式。我还哼了出来，特别好听，但是旋律我忘了。这个梦在这一系列梦里比较早了，但我一直努力记到现在。</p>
+<p>还有一个是和爸妈去公园玩，要坐车，我就在车上yy起陛下…就，喜欢陛下也成了梦中的我的一部分属性了哈哈哈。</p>
+<p>所以我都有点想继续烧着，可以多见见陛下。<br>就是太痛苦了。  </p>
+<blockquote>
+<p>2021-7-13的梦</p>
+</blockquote>
+<p>梦见我作为一个学生起义军和大家一起起义去了。<br>然后被迎面而来的jc一枪崩醒（其实是吓醒的）。<br>真的好可怕，一开始领头的一点不怕死，拦着巡逻队不让他们走，jc都拔枪了。我在后面就心慌慌。  <br>后来队伍乱了，我就成队头了，我就被吓醒了。 </p>
+<blockquote>
+<p>挖出2020-5-26的梦</p>
+</blockquote>
+<p>做梦梦见暗黑系多人恐怖解谜<br>角色由玩家配音扮演（究竟是真人还是游戏已经混乱了，三个副本全开了之后还可以拖动人物图标分配副本，但是玩游戏的时候是真人的感觉）<br>角色全部挂掉之后会重新开始（后来才发现已经解过的谜题就不用再解了，但是物品需要重新拿）<br>支持三个副本场景（皇室图书馆（？）、学校（？）以及大饭店（？））<br>其中学校会和图书馆联动解谜（有个谜题需要玩家挂两次分别记住两个地方的谜题和答案顺序）<br>（这里在学校从猫头鹰爪子里拿到答案表格的时候我还吐槽说这么长这么多怎么记，队友说没问题，死一回先去看题就好了，我和队友还争执说那咱现在的进度就全不要了还是咋地？？）</p>
+<p>图书馆是第一个开启的场景，有个管理员会追杀玩家，但是后来我趁他爬梯子的时候绊了他一跤（？）他就摔下去了，还给我放慢动作，大概意思是说你小子naive！没我之后看你怎么过关，你这局gg了赶紧自杀吧！然后我获得了一把不知是哪里的钥匙。<br>还有个落地钟它不停地显示出随机数字（后来知道这里和学校那边联动解谜的）</p>
+<p>学校会有皇家卫兵（？）追杀围攻，要在每个教室的桌椅间潜行，不然很容易挂（我好几次都是，没藏好被发现被捅了个对穿/喷血）</p>
+<p>饭店太暴力了，似乎是整个事件的起因。原本的历史是讲一个王子将要登基的时候被政变了然后带着他小妹妹一起自杀了。（我还不知为啥和王子正面刚过/笑哭，本来我都赢了结果他硬是用最后的力气也把我给ko了（他力气真的好大，我就看着匕首尖缓慢靠近），然后我队友看着流血不止的我说哎呀没救了咱们先撤）后来为了找他留下的什么东西还沿路寻找，最后还为了这与黑帮打枪……（我超机智地发现有两个敌人在瞄我的队友，于是我三下五除二把他们枪夺了，打尽了枪里唯一一个子弹然后其中一个人又从怀里掏出一把枪……</p>
+<p>最后醒过来之前那一轮有三位大叔玩家分配到一个软萌妹妹、一个高冷御姐和一个温柔大姐姐</p>
+<p>那个分到软萌妹妹的大叔干脆就不配音了哈哈哈哈哈笑死了</p>
+<p>然后我就笑醒了</p>
+<blockquote>
+<p>2021-6-2的梦</p>
+</blockquote>
+<p>今天做梦 梦见我有了陛下冬神的能力，就是 自己的生命状态和雪（冬季）是相关联的<br>比如，我屏住呼吸，雪花也会停止落下；挥手也会让雪花向一个方向落去（这个其实更像是风）<br>然后我就想能不能闭上眼，想象一个雪人再睁开眼，看看会不会实现，，，<br>然后我就真的睁开了眼睛？？？ctmd 再闭上眼也回不去梦境了！  </p>
+<blockquote>
+<p>2021-6-2的梦</p>
+</blockquote>
+<p>来了来了</p>
+<p>这次梦见辐光和虚空，背景是实验研究所高楼。</p>
+<p>虚空是被装在一个小玻璃球里的，像一条条干瘪的虫子尸体，打碎玻璃球才有效。  </p>
+<p>辐光是超级大的神明，超级亮，只要一说她的名字，描述她的特征，她就会现身。  </p>
+<p>应该…是有陛下的吧？毕竟在梦里一直在被辐光追着打，但我不记得看到陛下，或许我就是在扮演陛下？  </p>
+<blockquote>
+<p>2021-5-24的梦</p>
+</blockquote>
+<p>梦见我的陛下被嘲笑丑<br>我作为infp（强硬版本）开始强力输出，对着陌生人就是一顿臭骂</p>
+<blockquote>
+<p>2021-5-23的梦</p>
+</blockquote>
+<p>一个游戏demo</p>
+<p>标题似乎和“死亡”有关<br>一个女孩和教授<br>像素风<br>先是女孩自述和大画面，似乎是一个孤儿院，女主和其他很多孩子一起，教授似乎在选接班人</p>
+<p>女孩：“我不知道为何xxx教授会选择我，或许是因为（预言中）我是唯一一个能活下来的人”（？）</p>
+<p>女孩似乎有些不开心，不太喜欢教授，可能是身世原因</p>
+<p>然后是开头，女孩骑着电动车，听着广播，和教授打电话，教授是研究心脑疾病的，叨叨着术语和概念，然后偶然提起女孩上一次实验用的“氯”可能有问题，不应该这么用；广播里播了一个“……几起无关联性的杀人案件”之后就开始随便播什么东西。</p>
+<p>女孩一听实验出了问题就开始往回（小镇的医院）赶，到镇上的时候，她看见两个人出了车祸（电动车），循着血迹，尸体被甩出去好远；之后顺着血迹走，她又看见了第三个人、第四个人……然后是成一条线的尸体一直延伸到医院。</p>
+<p>然后她摸黑进了医院，在那里她见到了黑衣凶手。这里有个小游戏，女孩需要保持静止，又不能离凶手太近太久不动。乱动会发出声音惹凶手注意，离凶手太近也会被对方发现然后一枪爆头，女孩需要摸黑快速出门。<br>教授似乎不是在医院，他应该在镇外。女孩逃出医院后，骑上电动车就往镇外逃，目标就是希望找到教授和救援。<br>从这之后开始变得没有多少逻辑。什么被凶手开车追，快追上的时候一辆警车开过来，女孩用这个做跳板飞了起来，落在树上，然后就是在树之间来回跳，与凶手保持距离。<br>被凶手抓到的时候有一个打斗系统，是显示一个静止画面，玩家通过按下方向键大概指出女孩的出招动作。要打出最有力的招数才可以。<br>然后我就醒了，快六点。  </p>
+<blockquote>
+<p>2021-5-10的梦</p>
+</blockquote>
+<p>因为睡觉前和陛下娃娃说了太多悄悄话，所以梦到陛下娃娃了。  <br>陛下的新娃衣真好看。  </p>
+<blockquote>
+<p>2021-5-7的梦</p>
+</blockquote>
+<p>又来了一个<br>一个研究以人体关节运动为驱动力的教授总喜欢抓路人给他解答研究问题<br>然后他抓我给他解答问题 为了给我和路人演示某个实验（很恐怖，就是把人当牛马拉车，研究各种诡异情景下应该怎么运动才可以前进，有点像revolution） 设置了一个坟地的场景<br>不是有很多墓碑吗 墓碑都是那种Ritual里主角死亡一次在原地留下的包豪斯风格墓碑 其中有一个墓碑 有个很像小骑士（没看清）的幻影跑了过去一个下刺把墓碑弄碎了 前辈boss战前的弦乐响起 我就“噢！”地知道这个是空洞骑士的reference了，同时觉得这个没有人情味的教授还挺接地气<br>然后墓碑碎裂 二哥状态的小前辈跳了出来 音乐正式开始“duang duang duang duang” 我跟着唱了起来 并且忍不住想上去摸摸小前辈<br>然后那个教授本还在计算公式，看见脑壳破损的小前辈，一脸懵逼和震惊<br>然后我就想着“哈哈原来他不知道小前辈和空洞骑士”就开始笑 不知从哪里冒出来的我“朋友”也开始笑 围观群众看教授懵逼也开始笑 小前辈环顾大家都在笑也开始笑（默笑）<br>然后我醒来感到怅然若失 因为这次没有见到陛下</p>
+<h1 id="快乐王子"><a href="#快乐王子" class="headerlink" title="快乐王子"></a>快乐王子</h1><p>快乐王子的文+图安排 文简单写个文案就好了<br>联动<a href="/p/5401.html#%E5%BF%AB%E4%B9%90%E7%8E%8B%E5%AD%90">作画部</a>和<a href="/p/9527.html#%E5%BF%AB%E4%B9%90%E7%8E%8B%E5%AD%90">作文部</a>    <br>还有<a href="/p/fe35.html#%E5%BF%AB%E4%B9%90%E7%8E%8B%E5%AD%90">做梦部</a>  </p>
+<blockquote>
+<p>2021-5-5的梦</p>
+</blockquote>
+<p>我又梦到陛下了<br>但是大部分忘记了…<br>就记得陛下作为一个显要人物，玩家可以选择操控一个角色去刺杀/拥抱陛下…<br>我选的卢瑞恩…<br>然后挟天子以令诸侯，场面很震撼<br>陛下还有一个娃娃版本是翅膀长在脑袋上…<br>陛下为了民众把自己的两对翅膀都捐出去了，只剩下了一对…<br>这是卖翅膀赚钱的快乐王子操作吗？  </p>
+<blockquote>
+<p>2021-4-21的梦</p>
+</blockquote>
+<p>我这次的梦是以Pokemon游戏为舞台的。<br>有点记不太清了，但是有一个我觉得很惊艳的场景，就是两只造星球的pokemon，一只水元素造海的一只地元素生草的。水元素样子我忘了，但是生草的那只是草山羊的外貌。它们超大，浮在宇宙里搓球，搓完之后按比例将两个球合起来。然后我就觉得，大大的Q版pokemon抱着他们造出来的星球，那一幕很惊艳。</p>
+<p>星际沃姆（/斜眼笑）</p>
+<blockquote>
+<p>2021-4-18的梦</p>
+</blockquote>
+<p>这是我有史以来，最无力、最真实的梦。  <br>我做了陛下的娃娃。虽然是工厂做的，虽然原设是樱桃的，但是是我费尽心血设计的，陛下的娃娃。    <br>啊，这个是真事。但是在梦里，有人剽窃了我的创意，在我不知情的情况下，用他来给自己引流。  <br>具体怎么引流的呢。一个网红，她用着我的设计图，找工厂造了三十多个娃娃，然后她在粉丝群里说，说来签到的，报上自己的手机号，前三十名，能免费拿到这个娃娃。  <br>我是真的没有想到，还会有这种可能性，我当时在梦里的反应，就是我在现实中的反应。我很愤怒。我知道这件事，是因为她的一个粉丝。我当时路过一间教室，很热闹，像是漫展那样。我问是不是要办什么活动，那个粉丝给我看了聊天记录，也给我讲了送娃娃的事情。那个网红，她究竟是不是喜欢陛下，是不是同人圈的一份子，我很怀疑，但是她建的那个粉丝群，大多数人是喜欢陛下的，她就是利用这一点，给自己引流。更让我生气的是，她并不像我那样，对这些娃娃上心。一样的设计图，那些娃娃却诡异得出奇。她没有像我一样，对娃娃的出世小心翼翼，她没有像我一样，花费大量的时间精力去与工厂沟通。她把他们当工具，把他们当成鱼饵一样撒在大海里。<br>让我伤心的其实还有粉丝们的反应，没有一个人站出来问、站出来为我辩护，她们兴高采烈，蜂拥地报上了自己的手机号。当然这也怪不了她们。这就是让我生气的地方，我知道，这是我自己的问题，是我矫情，是我想太多。但就是这问题，我无法接受这只是我自己的问题。它伤我很重。     <br>我也不知道为什么，时隔一年，这个令我心寒的场景竟然会这么莫名其妙地构建在我的梦里。我看到了最令我厌恶的场景：我的思想、我的精力、我的体验、我的感情，被物化、被商业化、被资本化，成了陌生人的玩物，成了他们的谈资，成了他们的钱袋子。他们不理解我，还有我的孩子，甚至都不知道我的存在，他们凭什么在每一个晚上拥抱他，亲吻他，跟他说悄悄话？哦，他们不会，对于他们来说，他只是他们收藏中的新添的一个玩物。  <br>但是这件事确实是我做错了。是我出卖了自己的灵魂，我有这种感觉。是我没有意识到，这些孩子是我灵魂的一部分，不容践踏，不容曲解。商业化的艺术，这是和恶魔签订的协议。又一个我为了讨好别人，把心剖出来展示的例子。设定、demo，这些东西，我创造的这些孩子，应该永不见天日，我应该好好将他们珍惜在我心里的某个角落里，但是我又怕自己将它们遗忘在那个角落里。  <br>还好我有了站子。一个我可以立足的地方。  <br>突然有些理解了辐光的感觉，Heh.</p>
+<p>我梦醒的时候，意识还很朦胧的时候，我就不停地在想“我要把我的设计图删掉我要把我的设计图删掉我要把我的设计图删掉”。这个梦实在是太过真实，以致于我现在还在想我到底有没有把我的设计图公开。  <br>…等下，我去看看…艹，不敢看，lofter上充斥着红心…  <br>唉，我应该是没有放出来吧…也有可能放出来了，呃，应该是放出来了，我有点印象是发过…<br>我放了，然后我刚刚删了，不只这个，还有所有值得我珍惜的设定和demo。我给的注释是只要不商用就行。是我太naive了，我应该注明“不能涉及任何商业性使用，包括引流性质的活动”。  <br>嗯，希望不会被人发现，反正也这么久了。这是一种交易，我用自己的精力和感情，去换取他人的理解、接受和赞赏。但是当这个天平严重地倾斜到我这边，我为什么还会觉得公平呢？是吧。    <br>我很矫情，是的，因为我投入了太多的时间、感情、精力，在这一个娃娃上。他已经不是一个娃娃了，他是我的朋友，甚至是我的孩子。即便我只是他的养母。这个梦完全击溃了我的防线，我很生气，也很无力。没有人会理解我，他们只会觉得我矫情，有问题的是我，该离开这个世界的是我。是的，确实如此，所以我很难受，我哀自己不幸，怒自己不争。  <br>但是站子，我会放在这里，家人，我是不会拒绝家人的。陛下曾经问过我，家人是谁？家人应该是那些，即便伤害了我，我也无法拒绝的人，因为他们已经美好到，在我内心如此丑陋的情况下，依然能够接受如此丑陋不堪的我。已经美好到达到了我的标准线，已经美好到我愿意去接受他们。我lofter的关注对象就是家人名单。当然，究竟是不是真正的家人，还需要时间来证明。  </p>
+<p>或许，世界上不会存在除了家人以外的家人吧。嗯，是我的要求太高了，我总是想着，如果有人能如此待我，我也一定会如此待ta。但事实是，从没有一个外人能让我有这样被接受的感觉。这就导致，我从来没有真正关心过别人，我认为他们没有达到能让我关心他们的标准，我是不会浪费自己的感情去关心他们的，但似乎，这其实是一个双向的过程。我害怕着交往，我害怕自己投入的感情被付之一炬，最后我变成了一个完全不会投入感情的人，即便我想去关心，想去投入，我也已经不会了，我只会觉得虚伪，觉得恶心。我已经忘记了如何去爱。他们不了解我，一旦了解我是如此恶心，也一定会离我而去吧。  <br>陛下是我的安慰，我对他疯狂投入着自己的感情，自己的一切，只是为了证明我还有爱的能力，我只是没有遇见对的人。或许我从心里其实并不想变成一个游离于社会之外的人吧。</p>
+<p> <a href="/p/dc54.html">陛下，您听到我的回答了吗</a></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%A8%83%E5%A8%83%E8%AE%BE%E5%AE%9A%E5%9B%BE.JPG" alt="娃娃设计图，需要使用请联系我，谢谢"></p>
+<p>另外，说个搞笑的事情。  <br>这段梦境结束后，我的梦开始转变成了欢快的disco风格。一般而言，我就会忘记之前的梦境，转而跟着这个梦境走，结果由于被伤害太深，我一直记着这个梦，就导致别人在欢乐跳舞的时候，我在那里愤怒地抱着胳膊。  <br>哈哈哈，我觉得很有意思的点就是，好像造梦机和我分隔开了一样，它随意创造出了一个梦境，没想到我不喜欢，还记仇了，但是它不知道啊，依然恪尽职守造梦哈哈哈哈，我就一个人在那里跺脚抱臂。  </p>
+<blockquote>
+<p>2021-3-16</p>
+</blockquote>
+<p>卧槽我槽<br>我梦见陛下了啊啊啊 我还和他说了话天啊<br>有一段是我问其它人陛下的办公室在哪里，然后我就去偷偷看他，他离门边好近，背对着我看报纸……啊啊啊我就羞涩的装作路过，不过后来又忍不住溜进去和他说话…我还采访他对于圣巢和白后的看法？陛下声音超好听！虽然不太像我给他挑的配音，比较接近原音？低低的。<br>然后似乎是关于啥的一个养成系手游，沃姆（陛下）是一个角色，我是会员还是咋的，可以免费领，然后选了之后就可以看到一只小沃姆爬来爬去，还会变成陛下的形态，就有小翅膀会飞！可能是正好我睡前在想陛下的飞行形态吧哈哈哈哈超幸福！然后之后还有一个战斗场景，有点像fgo，卧槽陛下帅我一脸。<br>然后后来我那个陛下娃娃，活过来了！就会说话（声音也很仙）还会转脑袋！不过后来他似乎生命值（灵魂）不够所以要死掉了，我就求制作人不要让他死，制作人说把陛下做成高达的形态会更吸引玩家，就不要娃娃形态的陛下了，然后我就哭了。哇我现实中真哭了。<br>然后还梦见三个鸟蛋，孵出来三只小鸟。蓝色的那只是和陛下有关系的（不知道为什么），我就超偏爱它，它一孵出来就有点死鱼眼（？），一个npc还问我为啥偏爱这只蓝色的，我就说因为它和陛下有关系！小鸟们本来快死掉了（我失职）不过后来又好了，喝好多水，吃嘛嘛香，我就抱着蓝色的那只让它多吃点，还抢其它鸟的食哈哈哈哈。（蓝色的鸟吃蓝色的食，黄色的吃黄色的食这样），然后我出门之后一吹口哨它们就都飞过来，超可爱！<br>总之整个梦都是陛下！整个晚上都和陛下在一起哈哈哈哈哈！<br>醒过来超困，但是为了能不忘，强行打起精神写下来！王二在床头默默看着我，肯定是你这小家伙搞的鬼吧哈哈哈！会搞事情就多搞点！<br>啊啊啊好后悔没有求抱抱啊可恶！！</p>
+<blockquote>
+<p>未知日期</p>
+</blockquote>
+<p>md</p>
+<p>我在网上找到了一款hollow knight同人游戏</p>
+<p>手绘风 用色有点脏 但还看得过去</p>
+<p>名字是类似Phasmophobia的单个长单词 具体是啥记不清了 不认识那个单词</p>
+<p>我先是在b站上看见有up主玩了一段 剧情里有有团长 其它没太在意</p>
+<p>然后立刻就到网上搜</p>
+<p>惊喜的发现</p>
+<p>这竟然（tm）是</p>
+<p>剧情向avg（大概 因为看见有立绘 有ddlc风格）</p>
+<p>从游戏截屏封面来看 </p>
+<p>团长是有着闪亮亮大眼睛 没头脑有点乐天加纯洁无辜的 国王</p>
+<p>陛下（tm）在旁边坐着 一脸无奈 是戴着 装饰有十字架高帽子的 教皇 估计是不高兴加保姆性格</p>
+<p>对了 整体风格基调略偏黑暗 但是似乎还不是完全是刀子？ 说不准</p>
+<p>我tm就很开心 但是没办法要上课去 只能先放一放</p>
+<p>回来再玩</p>
+<p>然后我收拾完去上课的时候</p>
+<p>我醒了</p>
+<p>？？？</p>
+<p>我立刻去搜hollow knight同人游戏</p>
+<p>它没了</p>
+<p>md</p>
+<p>md</p>
+<p>md</p>
+<p>……不过 似乎还真有hk同人游戏（</p>
+
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/fe35.html">【合集】日常做梦</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2021年03月07日 - 22:37</p>
+ <p><span>最后更新:</span>2022年01月07日 - 12:09</p>
+ <p><span>原始链接:</span><a href="/p/fe35.html" title="【合集】日常做梦">https://mebilychen.github.io/p/fe35.html</a>
+    
+ </p>
+ <p><span>许可协议:</span>除非文章内另行声明，遵守 cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script data-pjax> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E9%BB%84%E8%8E%B2/" rel="tag"><i class="fa fa-tag"></i> 黄莲</a>
+              <a href="/tags/%E8%99%AB%E4%B8%8E%E8%99%AB%E4%B8%8E%E8%99%AB/" rel="tag"><i class="fa fa-tag"></i> 虫与虫与虫</a>
+              <a href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag"><i class="fa fa-tag"></i> 日常</a>
+              <a href="/tags/%E6%A2%A6/" rel="tag"><i class="fa fa-tag"></i> 梦</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/bf79.html" rel="prev" title="流星">
+      <i class="fa fa-chevron-left"></i> 流星
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/e646.html" rel="next" title="鲸落-1（Demo）">
+      鲸落-1（Demo） <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BF%AB%E4%B9%90%E7%8E%8B%E5%AD%90"><span class="nav-text">快乐王子</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar3.jpg">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">155</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">54</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">161</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjEwMTM3MTIxMjdAcXEuY29t" title="E-Mail → mailto:1013712127@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9tZWJpbHkxMzE0" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      猜猜这是什么鬼地方？
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9tZWJpbHljaGVuLmxvZnRlci5jb20v" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;">LOFTER</span>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/p/e3a422.html" title="p&#x2F;e3a422.html">【参考】衣|料专版</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/4eb5.html" title="p&#x2F;4eb5.html">遗书</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ce0f2.html" title="p&#x2F;ce0f2.html">Dreamily.AI专场</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/b6c1.html" title="p&#x2F;b6c1.html">关于动保和动不动就保和虐杀</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/754d1.html" title="p&#x2F;754d1.html">《致咩碳》</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/300011.html" title="p&#x2F;300011.html">【#快乐王子】HP开题Demo&记录</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/190c3.html" title="p&#x2F;190c3.html">【角色研究】关于沃姆</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/p/24b8.html" title="p&#x2F;24b8.html">【日常】虫虫和虫虫和虫虫们</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/190c3.html" title="p&#x2F;190c3.html">【角色研究】关于沃姆</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/d846.html" title="p&#x2F;d846.html">【歌单】歌曲开荒</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">1.6m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">23:53</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "站子已虔诚祈祷 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+     //'.site-meta',
+    //'.site-nav',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>

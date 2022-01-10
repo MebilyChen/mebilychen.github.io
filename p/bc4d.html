@@ -1,0 +1,1666 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="article">
+<meta property="og:title" content="暗恋日记">
+<meta property="og:url" content="https://mebilychen.github.io/p/bc4d.html">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:locale">
+<meta property="article:published_time" content="2018-08-08T05:52:00.000Z">
+<meta property="article:modified_time" content="2021-05-17T06:40:05.373Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="积累本">
+<meta property="article:tag" content="虐">
+<meta property="article:tag" content="吐槽">
+<meta property="article:tag" content="虫与虫与虫">
+<meta property="article:tag" content="日常">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://mebilychen.github.io/p/bc4d.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : '中文'
+  };
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    
+      if (NexT.utils.hasMobileUA()) return;
+    
+    let time, hidden, visible, title = document.title;
+    let favicon = document.querySelector('link[rel="icon"]');
+    
+      hidden = ["盯————","*探*","?","......","*观察*"];
+      visible = ["*偏转视线*","*缩*","*强装镇定*","！","*低头*"];
+    
+    let random = t => t[Math.floor(Math.random() * t.length)];
+    const change = () => {
+      if (document.hidden) {
+        favicon.setAttribute('href', '/images/favicon-32x32-king-black.png');
+        
+          document.title = random(hidden);
+        
+        clearTimeout(time);
+      } else {
+        favicon.setAttribute('href', '/images/favicon-32x32-brand-black.png');
+        
+          document.title = random(visible);
+        
+        time = setTimeout(() => {
+          document.title = '碳素的小作坊';
+        }, 1000);
+      }
+    }
+    document.addEventListener('visibilitychange', change, false);
+  });
+</script>
+
+  <title>暗恋日记 | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;调谐中...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">161</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">54</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">155</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-image fa-fw"></i>画廊</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/random.html" rel="section"><i class="fa fa-question fa-fw"></i>抽</a>
+
+  </li>
+        <li class="menu-item menu-item-lang">
+
+    <a href="/en/" rel="section"><i class="fa fa-globe fa-fw"></i>->English</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-17081-597255-1305127431.cos-website.ap-hongkong.myqcloud.com' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/bc4d.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          暗恋日记
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-08-08 13:52:00" itemprop="dateCreated datePublished" datetime="2018-08-08T13:52:00+08:00">2018-08-08</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2021-05-17 14:40:05" itemprop="dateModified" datetime="2021-05-17T14:40:05+08:00">2021-05-17 14:40:05</time>
+                </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A2%B3%E9%85%B8%E7%9A%84%E6%B1%82%E7%94%9F%E4%B9%8B%E8%B7%AF/" itemprop="url" rel="index"><span itemprop="name">碳酸的求生之路</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A2%B3%E9%85%B8%E7%9A%84%E6%B1%82%E7%94%9F%E4%B9%8B%E8%B7%AF/%E6%9C%89%E8%99%AB%E8%99%AB%E9%99%AA%E4%BC%B4/" itemprop="url" rel="index"><span itemprop="name">有虫虫陪伴</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>7.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>6 分钟</span>
+            </span>
+            <div class="post-description"><center></div>
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%A7%AF%E7%B4%AF%E6%9C%AC/" rel="tag"><i class="fa fa-tag"></i> 积累本</a>
+              <a href="/tags/%E8%99%90/" rel="tag"><i class="fa fa-tag"></i> 虐</a>
+              <a href="/tags/%E5%90%90%E6%A7%BD/" rel="tag"><i class="fa fa-tag"></i> 吐槽</a>
+              <a href="/tags/%E8%99%AB%E4%B8%8E%E8%99%AB%E4%B8%8E%E8%99%AB/" rel="tag"><i class="fa fa-tag"></i> 虫与虫与虫</a>
+              <a href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag"><i class="fa fa-tag"></i> 日常</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p>我要在处于这段感情之中时<br>
+每一次我情感需要发泄的时候，把它记录在这里<br>
+我想知道我的感情是不是只是一时冲动</p>
+
+<p>………</p>
+
+<p>2018.8.8<br>
+xxx<br>
+我喜欢你呀<br>
+但是我不敢说出来<br>
+我怕我对你的感情不是真正的爱情…也许只是欣赏…我怕只是因为我受不了寂寞…我怕耽误了你…我怕咱们之间的感情闹僵…我怕你说你不喜欢我…但其实我最怕的是因为我对感情的判断失误，万一、万一之后能跟你在一起，突然有一天发现我其实不是“爱”你，甚至更糟一点，只是对你感兴趣而已…然后就可能冷落你…然后…我都不敢想象<br>
+你在小学期的那张自拍，也许是让我喜欢上你的契机吧<br>
+我觉得你好可爱…就是单纯的觉得你好可爱<br>
+那是我第一次理解“眼角带笑”，应该…<br>
+嗯…其实那张照片…我现在还存着…</p>
+
+<p>哎呀怎么突然变成流氓…</p>
+
+<p>也许你能感受到…之后我对你突然热情了起来<br>
+我想坐在你身边，我想牵着你的手…<br>
+其实现在想想，我觉得自己好过分<br>
+之前也跟你提到过的，我以为你是个不懂事的小孩子，容易兴奋，有些ky…总是在笑<br>
+但是，那次吃饭的时候…你说你讨厌提到军训的事情，你说你笑不是因为你想笑，你说其实你不喜欢在很多人面前讲话，我突然觉得，你其实不是我想的那样，你其实是一个心思超细腻的女孩子<br>
+可能…就是有时候心有点大？<br>
+也许这也是伪装的？…</p>
+
+<p>那次之后<br>
+我无意间<br>
+真的是无意间<br>
+翻到你的说说<br>
+我就想<br>
+你的过去到底是什么样的呢<br>
+我就开始往后翻<br>
+说真的<br>
+你大多数的说说都是没有任何评论的转发<br>
+我唯三在意的<br>
+第一个是你说火灾的事情<br>
+第二个是你说思念亲人的事情<br>
+第三个是你说你没有朋友的事情<br>
+…这其实也是之后我问你关于真正朋友的定义是什么的原因<br>
+我还去查了你的百度账号…<br>
+这样的我会吓到你吧<br>
+像个跟踪狂一样…</p>
+
+<p>我曾经以为我对你的感情是同情心，其实更多的也许是同理心吧…你不要生气…<br>
+我只是想照顾你，想当你真正的朋友<br>
+当时我是这么宽慰自己的<br>
+我还发了一个匿名说说<br>
+但是…我其实到现在也说不清楚…我大概是错了吧？</p>
+
+<p>但是我觉得你是不一样的…<br>
+在遇到你之前…不，是和你相处之前…<br>
+我从来没有过这种感觉…<br>
+我差点发表白墙…<br>
+你生日那天还差点想着在墙上匿名发一个生日快乐…</p>
+
+<p>我…其实已经跟我妈妈提到过这件事了<br>
+因为当时的我…真的好难受好难受<br>
+你还记得<br>
+那次你们在宿舍里玩王者荣耀<br>
+我一个人在阳台上的时候吗<br>
+我记得那时你似乎还说了一句<br>
+好像冷落了我<br>
+我真的快哭了<br>
+在那之前我曾经试探性的问过我妈妈</p>
+
+<p>妈如果我是同性恋你们会怎么样<br>
+“那我和你爸就没脸见人了”</p>
+
+<p>所以我不敢说明白<br>
+我只敢用模糊的描述来向我妈妈倾诉</p>
+
+<p>————————</p>
+
+<p>（8.16 终于下决心整理我和我妈的聊天记录了）</p>
+
+<p>2018.7.9<br>
+老妈<br>
+我有一个严肃的问题</p>
+
+<p>“啥事啊？”</p>
+
+<p>就是<br>
+唉<br>
+【哭泣表情】<br>
+我交到一个好朋友<br>
+其实我们上学期就认识了<br>
+但是不怎么熟<br>
+最近不是小学期吗<br>
+在一起时间比较多</p>
+
+<p>“然后呢？”</p>
+
+<p>然后就突然觉得离不开这个朋友了【发抖】<br>
+就是<br>
+感觉他和别人在一起玩的时候心里很难过😂<br>
+😂😂😂</p>
+
+<p>“哦，”</p>
+
+<p>哦<br>
+【哭泣表情】<br>
+很纠结<br>
+【哭泣表情】</p>
+
+<p>“以前没有过这样的想法嘛？”</p>
+
+<p>没有<br>
+第一次感觉到<br>
+【哭泣表情】<br>
+都有些嫉妒那些和他在一起的人<br>
+【吐血表情】</p>
+
+<p>“嗯，也正常啊。也许只是习惯吧”</p>
+
+<p>然后这次分专业他去材料了，我突然有点后悔去了机械<br>
+【趴在地上哭】</p>
+
+<p>“那孩子学习好吗？”</p>
+
+<p>不过我肯定不是爱情<br>
+你放心<br>
+就是友情<br>
+不要问我怎么知道的<br>
+（现在看到这里感觉真是打脸_(:з」∠)_那时候似乎还不知道你的情况_(:з」∠)_）<br>
+还好吧</p>
+
+<p>“比你学的好吗？你觉得他哪里比别人优秀，还是仅习惯在一起呢？”</p>
+
+<p>不知道呢<br>
+上学期就认识了<br>
+只是见的不多</p>
+
+<p>“嗯，朋友也会有排他性吧。就像自己喜欢的东西有事就不愿意跟人分享一样。但一旦发现有更好的玩具也就不在乎了”</p>
+
+<p>然后就没有这种感觉<br>
+小学期的时候突然就成这样了<br>
+【吐血表情】</p>
+
+<p>“嗯。是你认识的朋友太少了”</p>
+
+<p>问题就在<br>
+我对其他朋友都没有这种感觉<br>
+【吐血表情】</p>
+
+<p>“女孩子都会有心事。正常。但不能凑合”</p>
+
+<p>不能凑合是什么意思……</p>
+
+<p>“发展成男女关系之前。先清楚自己条件和对未来的规划里是否合适”</p>
+
+<p>都说了不是恋爱<br>
+【吐血】<br>
+我现在一看见他跟别人亲近就难受<br>
+【吐血】<br>
+我需要治疗<br>
+【吐血】<br>
+不会发展成恋爱的<br>
+【跪】<br>
+放心<br>
+【跪】<br>
+我心里有数<br>
+（(；▽；)）</p>
+
+<p>“那倒不必。有心事说明咱家妞长大了。”</p>
+
+<p>难受啊<br>
+【捂脸】<br>
+问题是！<br>
+唉<br>
+【哭泣表情】<br>
+就我受不了别人向他撒娇<br>
+【哭泣表情】</p>
+
+<p>“你现在就是积累人脉的时候。无论男生女生只要人品好就要好好对待。喜欢那个人可以找机会去聊聊天啥的。”</p>
+
+<p>我可以和他聊<br>
+主要我受不了别人和他聊<br>
+【吐血】<br>
+撒娇卖萌的聊<br>
+【吐血】<br>
+唉<br>
+虽然还不至于朝思暮想<br>
+但是在旁边看着他跟别人亲近就很难受<br>
+【跪】</p>
+
+<p>“你现在社交圈太小了。”</p>
+
+<p>我也在想他到底哪里吸引我<br>
+我可能单纯的就觉得他萌吧……<br>
+【跪】</p>
+
+<p>“我觉得你不是欣赏那个男生吧，你就是没有认识很多的人而已”</p>
+
+<p>我都不敢接着说了<br>
+【躺哭】<br>
+（这里是因为我不敢说不是“他”是“她”_(:з」∠)_）</p>
+
+<p>“男孩子最重要的是有担当和责任意识。还要有强烈的上进心”</p>
+
+<p>问题是！<br>
+我们<br>
+（犹豫了一下）<br>
+是闺蜜啊！【捂脸】</p>
+
+<p>“嗯。闺蜜有时也会有排他心。正常。但这属于负面情绪。自己要克服”</p>
+
+<p>是闺蜜啊！“闺”蜜啊妈！</p>
+
+<p>“能成为好朋友但要把握尺度。毕竟男女有别。”<br>
+“我明白”</p>
+
+<p>你明白啥了【发呆】</p>
+
+<p>“但旁人未必了解”<br>
+“明白你有个感到还不错的朋友，希望他只对你好。但还无关爱情。”</p>
+
+<p>嗯<br>
+（意识到我妈没get到之后，还是没敢说你是女生_(:з」∠)_）<br>
+惨啊<br>
+哭啊<br>
+累啊<br>
+【吐血】<br>
+哭得像个47kg的孩子<br>
+还有就是我在他空间里看到他说自己没朋友<br>
+（xxx不要打我(;´༎ຶД༎ຶ`)）</p>
+
+<p>“哈哈，都是成长的烦恼”</p>
+
+<p>然后就可想让他知道世界上是有真心对他好的人的<br>
+真心对他好的朋友<br>
+【委屈吃雪小海豹】</p>
+
+<p>“等过段时间就会明白，每个人都有自己的人生帮的了一时帮不了一世”</p>
+
+<p>唉<br>
+我再等等看吧<br>
+也许是一时冲动<br>
+【嘿哈】</p>
+
+<p>（然后我妈长篇大论讲述她的恋爱史_(:з」∠)_）</p>
+
+<p>7.12</p>
+
+<p>但是我说只是闺蜜的原因是</p>
+
+<p>（我妈继续长篇大论）</p>
+
+<p>可是我闺蜜是女生呀😂😂😂所以不存在在不在一起的问题😂😂😂</p>
+
+<p>“😂”</p>
+
+<p>😂</p>
+
+<p>“你确定你对男孩子没感觉吗？”</p>
+
+<p>（我开始解释我小时候怎么暗恋过两次男生）</p>
+
+<p>😂<br>
+我控制不住我自己啊😂<br>
+就是很伤心很难受</p>
+
+<p>“没别的办法。要不你这期间不要去找她了。反正也放假了。时间会解决这问题的，不必过于担心</p>
+
+<p>😂</p>
+
+<p>“一定要避免做出过火的事会让人笑话的”</p>
+
+<p>————————</p>
+
+<p>为什么<br>
+在我还没有玩王者荣耀的时候<br>
+每一次每一次你们开黑<br>
+我都是可难受的啊<br>
+每一次我听见你们那么开心<br>
+说实话<br>
+我难过<br>
+我难过和你一起开心的人里没有我<br>
+你问我为什么玩王者荣耀<br>
+是为了你呀<br>
+而不是为了你“们”<br>
+只是因为你呀xxx<br>
+我才不管她们说什么我听不懂的术语<br>
+才不管什么社交游戏<br>
+才不管这个方法有没有用<br>
+只是因为你在玩<br>
+我才会感兴趣啊<br>
+跑团<br>
+克苏鲁<br>
+科幻小说<br>
+魔兽</p>
+
+<p>王者荣耀<br>
+我恨不得它早点过气<br>
+就像等undertale一样<br>
+反正终究会过气的<br>
+我生来就不适合玩王者荣耀</p>
+
+<p>话说你知道向日葵🌻的花语吗<br>
+沉默的爱<br>
+MOTHER3的标志之一就是向日葵<br>
+这不光是我喜欢向日葵的理由</p>
+
+<p>之后，情况越变越危险<br>
+我开始<br>
+讨厌xx和xx<br>
+甚至还开始嫉妒xxx<br>
+是的…<br>
+我太自私了<br>
+我太敏感了<br>
+xx她…是个很可爱的女孩子<br>
+她有的时候也会对我撒娇<br>
+但是<br>
+你应该是感受不到<br>
+xx<br>
+应该是能感觉得到吧<br>
+每次她一对着你撒娇<br>
+让你给她喂吃的<br>
+枕在你的腿上<br>
+主动让你拥抱她<br>
+我<br>
+真的心痛<br>
+更确切的是胸闷<br>
+感觉有什么东西堵在了心里<br>
+很难受很难受<br>
+很难受很难受<br>
+我都以“xx有了喜欢的男生了”为由去安慰自己<br>
+但是我最嫉妒的就是专业分班<br>
+你跟xx一个班<br>
+我不是<br>
+你们在xx<br>
+我在xx<br>
+你们是xx学院<br>
+我是xx学院<br>
+…<br>
+这意味着<br>
+我不可能再和你一个班了<br>
+之后还会更糟<br>
+我不能再和你一起学习了<br>
+而xx…<br>
+你说过<br>
+你要抱紧xx这条大腿<br>
+你们之后，会约着学习<br>
+下了课，约着吃饭<br>
+我<br>
+…<br>
+…<br>
+你和xx的关系<br>
+突然<br>
+也许也像我这样突然<br>
+突然变得特别亲近<br>
+让我害怕<br>
+让我嫉妒<br>
+那次你过生日<br>
+xx要你喂她<br>
+我转过身了<br>
+我不敢看<br>
+我怕我的表情会十分扭曲<br>
+她出门的时候<br>
+我跟她说再见<br>
+那个沙哑低沉的声音<br>
+把我自己都吓到了<br>
+也许xx也被吓了一跳吧</p>
+
+<p>还有xx<br>
+xx她也是一个特别爱撒娇的女生<br>
+我觉得你应该也能感受得到<br>
+xx有一次说：“如果我是男的我会喜欢上你”<br>
+我当时的真感觉猛地一滞<br>
+再想一想，xx也会<br>
+靠着你<br>
+枕着你的腿<br>
+和你做很多亲密的动作</p>
+
+<p>我<br>
+跟xx和xx不一样<br>
+我觉得你应该了解我的<br>
+除了在网络上不见面的卖萌<br>
+我不会主动那么黏人<br>
+但是每次<br>
+我都在尝试<br>
+我在尝试靠住你的头<br>
+拥抱你<br>
+我真的<br>
+挺不习惯抱人的其实<br>
+之前 我拥抱的次数屈指可数<br>
+不怕你笑话<br>
+我初中同学因为我答应她中考完之后给她一个拥抱还激动了一小下</p>
+
+<p>但是xx和xx都是有喜欢的男生啊<br>
+我觉得是我太可笑了</p>
+
+<p>xxx<br>
+你知道有多少次我梦见你了吗<br>
+每次的剧情都差不多<br>
+你和其他人聊得特别开心<br>
+我只能在一旁观望<br>
+是的<br>
+就是我说的咱们去旅游那次<br>
+就是在车站<br>
+我忘记了我有没有牵着你的手<br>
+我只记得我当时跑开了<br>
+然后你追了过来…</p>
+
+<p>至于卖萌…<br>
+与其说是卖萌<br>
+不如说我在对你撒娇…</p>
+
+<p>以上就是至8月8日为止我所印象深刻的所有事情</p>
+
+<p>23:02<br>
+我发了一条“那我总不能表现得太明显”<br>
+不过我很快就撤回了<br>
+你可能会误解吧<br>
+或者你根本就没有看到？<br>
+我其实的意思是<br>
+“那我总不能老是想和你加入同一个社团，这样会让我对你的感情太明显”<br>
+不过你之后没有再追问我这句话…<br>
+其实有点担心你会错意了…<br>
+我一直在发想看你弹古筝<br>
+想看你射箭<br>
+我真的想<br>
+我觉得我有点混乱了<br>
+我想看你各种各样的生活姿态<br>
+我想更了解你……</p>
+
+<p>8.9 1:13<br>
+我太胆小了…我真的很想说“xxx 我可能喜欢你”<br>
+但是想一想<br>
+最多，发一个音吧<br>
+“xxx 我可能 x…<br>
+先要跟你说晚安了”<br>
+我专门断开了句子<br>
+只是为了安慰我自己罢了<br>
+一到晚上就开始想你<br>
+“我有点困了”</p>
+
+<p>去了博物馆<br>
+突然发现自己越来越喜欢“x”这个字了<br>
+<u>(´ཀ`」 ∠)</u></p>
+
+<p>8.9 20:13<br>
+看完电影出来，打开4G<br>
+你没有回复<br>
+有点想你<br>
+…</p>
+
+<p>8.9 23:52<br>
+你说你和好朋友浪了一天<br>
+还准备约华山<br>
+……<br>
+我他喵好想和你一起出去玩啊(;´༎ຶД༎ຶ`)</p>
+
+<p>8.10<br>
+刚刚做过的梦<br>
+梦见你和xx在打电话<br>
+她说她马上就回学校了</p>
+
+<p>8.11<br>
+emm<br>
+说实在的你吓到我了<br>
+我第一次体会到说也不是不说也不是的困境<br>
+急的冒汗_(:з」∠)_<br>
+我还以为你知道了<br>
+知道我喜欢你这件事_(:з」∠)_<br>
+真的<br>
+差点<br>
+差点跟你表白_(:з」∠)_</p>
+
+<p>8.12<br>
+突然对你没感觉了<br>
+有些害怕<br>
+希望只是因为发烧造成的吧……</p>
+
+<p>8.13<br>
+该了该了怎么没感觉了好慌</p>
+
+<p>8.16<br>
+emm<br>
+所以就只维持了一个半月？_(:з」∠)_</p>
+
+<p>……<br>
+呃<br>
+突然疲惫</p>
+
+<p>喵的怕不是成习惯了_(:з」∠)_<br>
+等你回信_(:з」∠)_<br>
+还以为是你的消息结果一看发现<br>
+是我给我的小号发了消息然后关联账号提醒_(:з」∠)_</p>
+
+<p>我发现每次都是到晚上的时候<br>
+脑子就不正常了起来_(:з」∠)_</p>
+
+<p>8.17<br>
+把音乐音量调到了最大</p>
+
+<p>我还应该喜欢你吗</p>
+
+<p>先暂时再见吧<br>
+再见了🔥<br>
+再见了⛵️<br>
+反正这些也不重要</p>
+
+<p>stm我好像把你当男朋友对待了🤯<br>
+刚差点哭出来🌚<br>
+嘴角抽了一下忍住了🌝</p>
+
+<p>喵的当初我暗恋小男生的时候也没吃过这么多醋啊🌚<br>
+还是先不要回消息比较好（小声嘀咕）<br>
+你不知道<br>
+你什么都不知道<br>
+啊啊啊啊啊啊啊啊啊啊啊啊<br>
+想把这些改写成小说🤯<br>
+你知道吗刚刚<br>
+我想着你们玩游戏的样子<br>
+我🤯<br>
+啊啊啊啊啊<br>
+抱歉了<br>
+今天不会跟你说晚安了<br>
+另外…暂时取关<br>
+（早就把作业群屏蔽掉了🌝）</p>
+
+<p>你为什么不再说话了啊嘤嘤嘤嘤嘤(;´༎ຶД༎ຶ<code>)<br>
+嘤嘤嘤嘤嘤我错了我太做作了我太想当然了对不起(;´༎ຶД༎ຶ</code>)<br>
+但是我还是不能回你消息抱歉(;´༎ຶД༎ຶ`)</p>
+
+<p>但是刚刚又想了一下<br>
+我宁愿你有男朋友<br>
+当着我的面撒狗粮都没问题<br>
+emmmm<br>
+（挠头）<br>
+…越来越搞不懂我的感情到底是什么了🤯<br>
+我试试啊<br>
+如果你对其他人撒娇卖萌的话…<br>
+emmm<br>
+有点小嫉妒🤯<br>
+什么鬼？！？！</p>
+
+<p>8.21<br>
+嘤——</p>
+
+<p>9.2<br>
+我又不清楚我到底是什么感情了<br>
+如果只是“竞争”<br>
+那就是错误的_(:з」∠)_<br>
+另外有点开心<br>
+又是🔥又是🚢什么的<br>
+<u>(:з」∠)</u></p>
+
+<p>一个学期<br>
+应该足够我搞清楚我的感情了<br>
+我记得一个说说<br>
+说是喜欢男孩子的男孩子不会见一个男孩子就喜欢<br>
+我现在真想给你发消息<br>
+让你帮我死了这条心<br>
+我觉得我糊涂了<br>
+从头到尾都是我一人在唱独角戏<br>
+但是还是等这学期结束吧<br>
+我倒要看看你能把我折磨成什么样<br>
+持续更新<br>
+睡觉睡觉！</p>
+
+<p>9.11<br>
+今天看到了表白墙上一个妹子说自己喜欢上同班一个妹子<br>
+我突然又想到了这篇……额<br>
+情书？<br>
+呸呸呸<br>
+怎么说呢<br>
+我觉得可能我已经把跟你说话当成习惯了吧<br>
+我觉得很开心<br>
+不用再日常嫉妒了_(:з」∠)_<br>
+不用再累心了_(:з」∠)_<br>
+真的 xx说要和你一起去吃饭<br>
+我一点感觉都没有了(´･ω･`)<br>
+所以我现在也不知道我还喜不喜欢你_(:з」∠)_</p>
+
+<p>9.12<br>
+即便你不再想拥抱我了<br>
+我觉得我还是做一个称职的朋友比较好<br>
+抱歉哈<br>
+我们永远都是朋友</p>
+
+<p>9.13<br>
+是我不够主动，不够粘人吗？<br>
+我们班那个短头发的妹子<br>
+…呃……<br>
+我意识到自己的不对了</p>
+
+<p>10.12<br>
+结束吧。<br>
+不是要责备你的意思<br>
+但是我觉得<br>
+我看不透你<br>
+我分不清你说的是真话还是假话<br>
+好累。<br>
+每次觉得已经可以结束的时候<br>
+你会突然热情起来<br>
+然后我的感情就又死灰复燃<br>
+可是在伤口上继续补刀<br>
+真的很痛</p>
+
+<p>上一次<br>
+我说晚上真冷<br>
+我很难受<br>
+真的真的很难受<br>
+笑不出来<br>
+怎么努力想开心都不能成功<br>
+因为你前一天晚上还跟我聊得很开心<br>
+第二天早上又主动给我发信息<br>
+结果晚上我看见你回复了xx<br>
+没有回复我<br>
+……<br>
+我已经对班里那个短头发的妹子没有感觉了<br>
+我最大的错误<br>
+就是选择了暗恋吧<br>
+A world forever unchanging.<br>
+Better，an end.</p>
+
+<p>2020.5.16 2:26</p>
+
+<p>嗯，我觉得，应该是我们都是in的关系🌚<br>
+看来in真的会互相吸引啊🌝</p>
+
+<p>5:17</p>
+
+<p>重温 md 真的是 陷入恋爱的神都会变成人</p>
+
+<p>2020.6.5 1:17</p>
+
+<p>对不起</p>
+
+<p>———————<br>
+2018.8.8</p>
+
+<p>如果在这学期结束后，我依然对你有像现在这样的感情，我…<br>
+应该能下决心把这些文字发给你<br>
+如果我的“热情”消退了…<br>
+那并不代表你不好<br>
+你很优秀，所以一开始你能吸引我<br>
+我就是觉得…这样不对，这样不好<br>
+我妈妈她的态度…是不同意的…<br>
+也许让时间来终结这段感情是最好的选择<br>
+如果我对你不再有这种感情<br>
+我希望那时的我还能跟你做朋友<br>
+我希望那时的我不会冷落了你<br>
+…<br>
+我真的好想把这些文字给你发过去<br>
+但是我知道时间不对<br>
+可能我还没有做好准备<br>
+…<br>
+如果我对你的感情真的只是一时的冲动<br>
+虽然不愿承认，不过那时我应该就会…冷落你吧…<br>
+如果你质问我的话<br>
+我也准备把这一段文字发给你<br>
+希望我们还是朋友</p>
+
+<p>…</p>
+
+<p>也有可能<br>
+这会成为我永远的秘密</p>
+
+<p>———————<br>
+2020.6.5</p>
+
+<p>真没想到最后竟然可能连朋友都做不成<br>
+也好，终于能把这些文字发给你了，憋坏了吧<br>
+我怎么就那么贱<br>
+真的是自作自受，聪明误聪明<br>
+自作聪明<br>
+不过没事<br>
+以后我还有陛下<br>
+其实陛下凶起来挺可怕的<br>
+我和你道歉的时候，眼泪止不住往下流，不想让你走<br>
+但是陛下却一直在骂我，说我矫情，说我根本就不在乎你，说我恶心，下作，垃圾，贱人，骗子，活该一个人待着，一个人多好，有更多的时间可以搞设计<br>
+他说我给你打出的那些话都不是真心的，虚伪，做作，根本不知道自己错在哪里，还自以为能揣测对别人的心理，装深沉<br>
+他说如果我一个人会过的更好，对谁都好<br>
+一个人的话，就可以避免冲突，避免伤害，永远挂着善解人意的微笑，把那些令人反胃的负面情感都埋在里面<br>
+但是他不知道你不一样啊…<br>
+…他质问我你不一样在哪里<br>
+对不起，我答不上来，但是你就是和别人不一样，我能感觉到<br>
+对不起<br>
+我真的希望这篇文章能够在我们毕业后再让你看见</p>
+
+<p>真的吗？我怎么没有感觉，没有哭得撕心裂肺，没有夜不能寐，就掉了几滴眼泪，哭了几声，我真的在乎我的朋友吗<br>
+被要求回答问题的第一反应是浪费时间，真有你的呀<br>
+分析呀，你不是自诩自己很会分析吗？分析出她喜欢什么答案呀？看看“夏天”这个提示，你能分析出来什么？猜错了你就又是一个人了哦。哦对了，她或许不喜欢的就是你选择她喜欢的答案呢，垃圾<br>
+哭，从小到大你只会哭，再哭也不会有人喜欢你，贱人<br>
+我错了，陛下我错了<br>
+我好恶心，世界上怎么会有这么恶心的人，离自己越近伤害得越深，去死吧<br>
+死死死<br>
+这样你就开心了？以为骂自己几句就置身事外了？<br>
+有本事不回复啊？有本事把我所有的话都打出来给她看啊？有本事真的让她走啊？有本事真的去自杀啊？不敢吧？不值得？别找借口了，笑死人了：）你觉得这会是很好的小说素材吗：）恶心。看看时间，2:14，看看电脑，你的作业做不完了哦：）<br>
+头痛。<br>
+想吐。<br>
+想你这样经不住一点打击的人，活该被淘汰掉：）怎么，这不是你一直推崇的自然选择吗：）<br>
+不要再戏精了好吗，你在给谁看<br>
+哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+
+<p>2021.5.17 整理</p>
+
+<p>不知道说啥好 感觉好中二啊 是不是恋爱的人都很中二…<br>
+还“结束吧”，就，挠头</p>
+
+<p>楼上那次我记得，说了不该说的话，把她气走了。当时我在外面背单词练口语，然后讨论到黑人的事情，我一上头就说了她一句，然后…然后我意识到她失望的时候我就哭了，不知道该怎么办，脑子是清醒的，超级清醒，但是眼泪止不住往下掉，手上止不住打出道歉的话……然后，受刺激的我为了寻找安慰，第一次主动去敲了lof那位家人的门……然后就……我真的没有这个意思，但是我怕家人觉得自己是被利用了…用完就扔……<br>
+我真的好恶心，希望不再有别人会被我霍霍到。<br>
+啊，不过这是陛下…不，那不是陛下…它第一次骂我，也…蛮有纪念意义的…？</p>
+
+<p>“话说你知不知道我曾经喜欢过你？”这句话，我琢磨了两年，预测了很多种她的回答，又不敢发了。我无法准确预测，而且失败的代价太高。万一她会感情受伤怎么办？</p>
+
+<p>刚开始追她那阵子真的是疯了一般，不像自己了。忍着尴尬和恐惧，不停地试探着自己和他人的社交极限。每晚都要跟她说晚安，就像轰炸一般，直到她也开始和我说晚安。还记得那次熬夜，互相表情包套娃，两边都不想做最后一个不回复的。那个晚上是我真的觉得，“追到手了”，的晚上。后来我和她聊起来，她却说她觉得是她追着我，害。</p>
+
+<p>很尬啊，但是这就是不会社交的infp，强硬起来的表现，哈哈哈。</p>
+
+<p>……好对不起她感觉，当时一本正经地说“我要做你真正的朋友”，现在却觉得她有时候很烦人…真的…我太虚伪了。</p>
+
+<p>还好，还好没有说我爱你。（虫虫松气）</p>
+
+
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/bc4d.html">暗恋日记</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2018年08月08日 - 13:52</p>
+ <p><span>最后更新:</span>2021年05月17日 - 14:40</p>
+ <p><span>原始链接:</span><a href="/p/bc4d.html" title="暗恋日记">https://mebilychen.github.io/p/bc4d.html</a>
+    
+ </p>
+ <p><span>许可协议:</span>除非文章内另行声明，遵守 cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script data-pjax> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%A7%AF%E7%B4%AF%E6%9C%AC/" rel="tag"><i class="fa fa-tag"></i> 积累本</a>
+              <a href="/tags/%E8%99%90/" rel="tag"><i class="fa fa-tag"></i> 虐</a>
+              <a href="/tags/%E5%90%90%E6%A7%BD/" rel="tag"><i class="fa fa-tag"></i> 吐槽</a>
+              <a href="/tags/%E8%99%AB%E4%B8%8E%E8%99%AB%E4%B8%8E%E8%99%AB/" rel="tag"><i class="fa fa-tag"></i> 虫与虫与虫</a>
+              <a href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag"><i class="fa fa-tag"></i> 日常</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/7803.html" rel="prev" title="Undercover/伪装">
+      <i class="fa fa-chevron-left"></i> Undercover/伪装
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/621f.html" rel="next" title="娘3×V3纪念">
+      娘3×V3纪念 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar3.jpg">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">155</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">54</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">161</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjEwMTM3MTIxMjdAcXEuY29t" title="E-Mail → mailto:1013712127@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9tZWJpbHkxMzE0" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      猜猜这是什么鬼地方？
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9tZWJpbHljaGVuLmxvZnRlci5jb20v" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;">LOFTER</span>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/p/e3a422.html" title="p&#x2F;e3a422.html">【参考】衣|料专版</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/4eb5.html" title="p&#x2F;4eb5.html">遗书</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ce0f2.html" title="p&#x2F;ce0f2.html">Dreamily.AI专场</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/b6c1.html" title="p&#x2F;b6c1.html">关于动保和动不动就保和虐杀</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/754d1.html" title="p&#x2F;754d1.html">《致咩碳》</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/300011.html" title="p&#x2F;300011.html">【#快乐王子】HP开题Demo&记录</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/190c3.html" title="p&#x2F;190c3.html">【角色研究】关于沃姆</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/p/24b8.html" title="p&#x2F;24b8.html">【日常】虫虫和虫虫和虫虫们</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/190c3.html" title="p&#x2F;190c3.html">【角色研究】关于沃姆</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/d846.html" title="p&#x2F;d846.html">【歌单】歌曲开荒</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">1.6m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">23:53</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "站子已虔诚祈祷 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+     //'.site-meta',
+    //'.site-nav',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>

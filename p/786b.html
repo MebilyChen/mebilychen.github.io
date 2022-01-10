@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="早上好呀咩碳 别忘了开个帖子研究一下爽文和爽点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何写好爽文&#x2F;忧伤文学">
+<meta property="og:url" content="https://mebilychen.github.io/p/786b.html">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:description" content="早上好呀咩碳 别忘了开个帖子研究一下爽文和爽点">
+<meta property="og:locale">
+<meta property="og:image" content="https://i.loli.net/2021/07/06/SkBOJ8dNs1aKimZ.jpg">
+<meta property="article:published_time" content="2021-04-20T07:48:00.000Z">
+<meta property="article:modified_time" content="2022-01-08T16:21:21.779Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="爽文">
+<meta property="article:tag" content="鉴">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/07/06/SkBOJ8dNs1aKimZ.jpg">
+
+<link rel="canonical" href="https://mebilychen.github.io/p/786b.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : '中文'
+  };
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    
+      if (NexT.utils.hasMobileUA()) return;
+    
+    let time, hidden, visible, title = document.title;
+    let favicon = document.querySelector('link[rel="icon"]');
+    
+      hidden = ["盯————","*探*","?","......","*观察*"];
+      visible = ["*偏转视线*","*缩*","*强装镇定*","！","*低头*"];
+    
+    let random = t => t[Math.floor(Math.random() * t.length)];
+    const change = () => {
+      if (document.hidden) {
+        favicon.setAttribute('href', '/images/favicon-32x32-king-black.png');
+        
+          document.title = random(hidden);
+        
+        clearTimeout(time);
+      } else {
+        favicon.setAttribute('href', '/images/favicon-32x32-brand-black.png');
+        
+          document.title = random(visible);
+        
+        time = setTimeout(() => {
+          document.title = '碳素的小作坊';
+        }, 1000);
+      }
+    }
+    document.addEventListener('visibilitychange', change, false);
+  });
+</script>
+
+  <title>如何写好爽文/忧伤文学 | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;调谐中...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">161</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">54</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">155</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-image fa-fw"></i>画廊</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/random.html" rel="section"><i class="fa fa-question fa-fw"></i>抽</a>
+
+  </li>
+        <li class="menu-item menu-item-lang">
+
+    <a href="/en/" rel="section"><i class="fa fa-globe fa-fw"></i>->English</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-17081-597255-1305127431.cos-website.ap-hongkong.myqcloud.com' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/786b.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          如何写好爽文/忧伤文学
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-04-20 15:48:00" itemprop="dateCreated datePublished" datetime="2021-04-20T15:48:00+08:00">2021-04-20</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2022-01-09 00:21:21" itemprop="dateModified" datetime="2022-01-09T00:21:21+08:00">2022-01-09 00:21:21</time>
+                </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%90%8C%E4%BA%BA%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">同人研究笔记</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>10k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>9 分钟</span>
+            </span>
+            <div class="post-description"><center>早上好呀咩碳 别忘了开个帖子研究一下爽文和爽点</div>
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%88%BD%E6%96%87/" rel="tag"><i class="fa fa-tag"></i> 爽文</a>
+              <a href="/tags/%E9%89%B4/" rel="tag"><i class="fa fa-tag"></i> 鉴</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p>早上好呀咩碳 别忘了开个帖子研究一下爽文和爽点  </p>
+<p>我知道你不太想学。是因为害怕连这个借口都没有的话，会直接怀疑到自己的写作能力，让你很难受。但是啊咩碳，你要知道，你写作能力就是很差。哈哈哈听我说完，很差，所以才要学啊？你难道不觉得兴奋吗？即将学习到新的知识，即将成为一个比过去1s更优秀的一个你？不仅是写作，还有编曲、画画那些，都是如此。如果你很优秀，前面的风景一览无余，奔跑还有什么意义？当你停止了奔跑，人生还有什么意义？加油哦咩碳，我知道你能行的。我们都知道你能行的。  <br>我是谁？感到有些惊讶吧？即不像幼王那样原始性情，也不像陛下那样严苛直接，更不像，按你的话说，来凑热闹的团长那样不正经。<br>我是你的老朋友Ninten啊。六人组的鸡汤代表，忘记了？  <br>哈哈我才不腹黑呢小傻瓜。  <br>好吧，你认为这样就是这样吧。  <br>嗯，很高兴再见到你，LT3.<br>没事没事，我知道他们也没有恶意，只是来交朋友的。  <br>我也不知道我会呆多久…一切随缘吧~ </p>
+<p>啊，走掉了。估计是因为你心情没那么放松了吧哈哈哈  <br>加油。  </p>
+<p>别忘了百度网盘里还存着网文速成指南。  <br>以及美国众神作者的大师课（不好意思我忘了大师名字）<br>突然想写一下王文速成指南。  </p>
+<h1 id="研究背景"><a href="#研究背景" class="headerlink" title="研究背景"></a>研究背景</h1><p>我总是鄙视爽文 但我今天看着一个超级平庸低劣查重百分百不出彩的点子竟然有很多人赞 只是因为 其中有爽点 我突然觉得凡事都有两面性 说不定写一写能收获新的认知 主要是写虐文写多了有点腻了 我陛下总是被压着打 陛下都炸毛了 “老子可是国王老子整不死你们”<br>啊 但是不要看网文哦 浪费时间哦 我去给你翻翻名著爽文 推荐一下  <br>《基督山伯爵》  <br>哦 想起来妈妈都说过看着很爽哦<br>不过当时我就回了：真无聊 一点都不真实<br>啊但是现实已经很令人难受了 大家当然更愿意看爽文啊<br>既然爽文的本质这么令人失望 那么写好爽文就是更加有挑战性的任务了呢不是吗<br>才不是觉得没人看感到孤独呢 哼<br>记住 要爽 要有逻辑的爽<br>而且不要千篇一律<br>但是我寻思着我写文的时候就很爽啊 被虐的很爽啊这<br>难道！因为我喜欢小说里的人物经历我感受到的痛苦所以我会很爽！<br>啊！似乎说的通呢！<br>😗<br>PAIN！<br>you made me a you made me a believer！believer！<br>PAIN！<br>you break me down you build me up believer！believer！<br>😗<br>😆PAIN！<br>😀you made me a you made me a believer！believer！<br>😆PAIN！<br>😃you break me down you build me up believer！believer！<br>跑步 突然发现“pain的时候和全速跑完八百米一样胸闷气短”<br>或许这样的比喻可以让那些正常人理解你有多痛苦吧<br>🤣PAIN！  </p>
+<hr>
+<p>8.1关于感伤文学。  <br>提起这项研究是因为不想也被鄙视成贬义性质的“文青”。  <br>啊但是即便被鄙视了又怎样呢？  <br>但是自己也要好好学习。  </p>
+<h1 id="爽文研究"><a href="#爽文研究" class="headerlink" title="爽文研究"></a>爽文研究</h1><blockquote>
+<p>啊但是现实已经很令人难受了,大家当然更愿意看爽文啊.  <br>既然爽文的本质这么令人失望,那么写好爽文就是更加有挑战性的任务了呢不是吗. </p>
+</blockquote>
+<h2 id="爽文名著鉴赏——基督山伯爵"><a href="#爽文名著鉴赏——基督山伯爵" class="headerlink" title="爽文名著鉴赏——基督山伯爵"></a>爽文名著鉴赏——基督山伯爵</h2><p>😗<br>🤣PAIN！</p>
+<h2 id="爽文特征"><a href="#爽文特征" class="headerlink" title="爽文特征"></a>爽文特征</h2><p>千篇一律，没有新意，没有水平，没有价值，没有意义，没有内涵，没有与成果相等的付出，<del>却还被大众推崇和接受</del></p>
+<p>但其实不是这样的，这只是网文中的爽文。  </p>
+<p>视野太狭窄了！咩碳！睁开你的复眼看看名著吧！</p>
+<h3 id="爽点"><a href="#爽点" class="headerlink" title="爽点"></a>爽点</h3><ul>
+<li>在现实中想要做，但做不成的事，SkrSkrSkr，满足意淫。最明显的例子就是色情，还可以看看美食、运动、交际花、某领域专家、玛丽杰克苏、第二人称视角等等一系列和欲望有关的东西）  </li>
+<li>好人有好报</li>
+<li>恶人有恶报</li>
+<li>连傻子都看得懂，不用过多思考，比如，善恶分明（？），比如，旁白解释。（我至今记得白绝冒个头来解释兄弟决战那一场，还有JO1的老哥解说，woc，尬死我了，当我是白痴吗不会做阅读理解？有被冒犯到。）</li>
+<li>复仇。哈哈哈多爽啊是不是？   </li>
+<li>逆袭。比如重生，比如穿越，比如后悔药，附加复仇属性。比如小黄本里的丑大爷总是会以千奇百怪的理由艹上美女指挥官。  </li>
+</ul>
+<p>小时候喜欢自己意淫。nonono，这没有水平。有水平的是让大家跟着你一起意淫；最高级别是大家觉得是自己在意淫，却没有发现你也在意淫。</p>
+<p>11.11补  </p>
+<p>总结一下一罐遇到过的sb女“忧伤”凡尔赛（如果是男生权当我视野狭隘）：</p>
+<ol>
+<li>我上次路过一个旧书摊，竟然看到我多年前闲的没事花了几天随意写得烂文（注意要强调自己觉得有多烂）被摆在上面卖，好家伙都给我整出书了，不嫌丢人啊太恶心了。</li>
+<li>领导给我涨薪了，涨了好多，多到我好愧疚，我难过得要死了，跟亲朋好友都抱怨了一番。  </li>
+<li>（发了很多大胸照片）卧槽这帮郭楠有病吧，谁愿意搭理你们啊，冲业绩一样给我发私信，抑郁了。（这个其实不太算）</li>
+<li>奖学金太好拿了吧，我看别人都在卷，我就整天躺床上啥都没有最后还评上了，怪不好意思的。</li>
+</ol>
+<p>总结一下sb女“忧伤”凡尔赛的要点：</p>
+<ol>
+<li>一定要贬低自己，毫不留情地贬低自己，可以举出有利于贬低自己的事实，但要体现出这只是自己的想法</li>
+<li>摆出一个事实证明自己的想法是错的，（毫不留情地）抬高自己，体现自己现实的美好和自己自卑想法的冲突</li>
+<li>作为一个sb女的“忧伤”凡尔赛的重点来了：在最后的总结句一定要传达“丧”或“厌恶”等的负面气息，不承认或避免承认现实的美好，继续强调自己的自卑想法。比如自己因为这件事而伤心，做出了什么伤心的举动（还影响了别人）。</li>
+</ol>
+<p>重点就是，现实说明你很棒，但是你不认为你很棒，最后你否定了现实继续认为你很烂，其实到这里还可以接受，你就自卑呗。但你言语间种种迹象表明你认为自己不烂。你在认为自己不烂的情况下摆出了认为自己不烂的理由，甚至为了强调自己不烂还专门强调出现实情况有多美好，最后结论却说了一句“我很烂”。<br>我直接？？？，给我爬。    </p>
+<p>举例：就说涨薪吧。<br>正常人：领导给我涨薪啦哈哈哈没有白努力  <br>自卑女： 我什么都没干，领导就给我涨薪了，感觉好愧疚 <br>sb“忧伤”凡尔赛女：领导给我涨了好多钱，实在太多了，都跟他秘书差不多一样了，我也没做啥呀，整天混吃等死，也就突发奇想努努力，不知怎的就冲上了业绩。隔壁小哥比我努力多了，半天没啥成果，就没给他涨薪。哎呀想想多不好意思，我明天请他吃顿饭吧（emm这个其实感觉还好？）  <br>sb“忧伤”凡尔赛女（再试一次）：领导给我涨了好多钱，好愧疚，赶紧和朋友吐槽了一番；我轻松评上奖学金，看别人都块卷死了，真抱歉  <br>艹，我真的写不出那个味道，艹，果然人之间是有差距的</p>
+<p>像我原来形容这种人就都是“得便宜还卖乖”，现在可以再加一句“NMSL”</p>
+<h2 id="为何会讨厌爽文——爽文的缺点"><a href="#为何会讨厌爽文——爽文的缺点" class="headerlink" title="为何会讨厌爽文——爽文的缺点"></a>为何会讨厌爽文——爽文的缺点</h2><p>千篇一律，没有新意，没有水平，没有价值，没有意义，没有内涵，没有与成果相等的付出，<del>却还被大众推崇和接受</del>  <br>哼！<br>不觉得很Pathetic吗？日常爽一爽能理解，毕竟人都是要发泄欲望，但总是看这种文，不Pathetic吗？<br><img data-src="https://i.loli.net/2021/07/06/SkBOJ8dNs1aKimZ.jpg"></p>
+<h2 id="如何写出自己满意的爽文"><a href="#如何写出自己满意的爽文" class="headerlink" title="如何写出自己满意的爽文"></a>如何写出自己满意的爽文</h2><p>要把爽文的缺点避开，不能失了自己本色，让自己恶心，也不能太恶心别人。  <br>等等，又没有人看 我恶心别人又何妨  </p>
+<h2 id="别人的总结"><a href="#别人的总结" class="headerlink" title="别人的总结"></a>别人的总结</h2><p>以《射雕英雄传》为例：</p>
+<blockquote>
+<p>段落1：设下第一层铺垫，抬高敌人，贬低主角，这里最重要的是主角自己都认为要输。<br>段落2：设下第二层铺垫，继续抬高敌人，黄蓉暗中相助而主角错失，把读者最后一丝希望灭掉。<br>段落3：设下第三层铺垫，主角开始胡来了，让人嘲笑之余，也勾起了强烈的好奇心——这傻小子在干吗？<br>段落4：继续推进剧情，明示主角把这场比试给“误会”了，他认为还是考校武艺，继续吊高读者期待，大家会觉得傻小子郭靖能胜过武学大宗师黄药师吗？（这里欧阳克已经退出比赛，对手转换成黄药师，真正的较量开始）<br>段落5：用大段的描写烘托碧海潮生曲的厉害，但是郭靖守得严密，令读者大感兴趣，这时候肯定都隐隐兴奋起来了吧？<br>段落6：这一段非常重要，可以说是这段高潮中的顶点，妙笔生花的那朵花。黄药师继续加大功力，配角欧阳锋和洪七公都不得不暗暗抵御，说明黄药师动了真格的了，而郭靖居然能用左右互搏化解。依然是难听的空空空、突突突，甚至脱下鞋子“不雅”地抗衡。<br>请问看到这里有哪位读者会嘲笑郭靖傻吗？只怕都惊讶地张大了嘴巴，好笑之中却又觉得极度的爽快了吧？以一种粗鄙的方式挑战权威，让城里人别再看不起乡下人，这种效果可说让人爽到了骨头缝里去了！<br>段落7：是高潮过后开始回落，郭靖表现再出色也不可能打败黄药师，出于爱才的心思，黄药师收手了。<br>段落8：大妙！极秒！绝妙！是画龙点睛的那一笔。<br>因为郭靖的出色表现黄药师改变了主意，想把黄蓉许配给他，可是傻小子到底是傻小子，在黄蓉的暗示下匆忙磕头，但却搞不懂这是什么意思，从而错失机会。</p>
+</blockquote>
+<blockquote>
+<p>设一些隐藏的危险，或无奈或无法解决的事，让主角着急，读者也着急，迫切的想让主角变强来解决事情。高手会在恰当的时机，提醒一下读者，主角有深仇大恨，现在正在努力修炼，日后好报仇雪恨。而新手，埋设了伏笔之后，却是丢在一边，按照自己布置的情节走向走下去，直达最后揭开谜底，中间一点提醒都没有。高手因为不断强化他所埋设的伏笔，用类似吊在驴前面的草这样的手法，告诉读者，就快吃到草了，也就是说，高手利用这种手段不断刺激读者，使他们对伏笔的结局或者高潮，有一个很强的期待感。我们想要让读者追看你的书，就要善于利用这种：提醒读者，加强对结局的好奇心，增强读者期待感的方式。(藏枪和反复提及某一线索)</p>
+</blockquote>
+<blockquote>
+<p>关于高潮：连环伏笔，一环扣一环。某个重要配角生病，需要找到某个医生（场景大高潮），为了要这个医生出来，必须要得到药物一药物二。（大高潮伏笔，也是中高潮的结局）那么主角开始找药物，在找到药物一（小高潮）之前，主角得到了药物二的线索（小高潮之前的第二个情节伏笔埋设），当主角得到了药物一之后，顺理成章的进入到药物二的情节。是预先给予一部分好处，让读者感觉，主角可能得到更多的好处。强化存在感，让读者觉得这东西必须要得到</p>
+</blockquote>
+<blockquote>
+<p>关于不知敌人阴谋，看着压抑的问题，要让读者的眼光，跟着主角的眼光，如果主角提前有所判断，那读者就不会有压抑了，只有期待。所拥有的东西对自己来说并没多大用处，或自己不懂得他的价值，但是却是别人一生苦苦追求的东西。别人求都求不到,可是那些拥有的人却强求他要收下.设一些隐藏的危险，或无奈或无法解决的事，让主角着急，读者也着急，迫切的想让主角变强来解决事情。</p>
+</blockquote>
+<blockquote>
+<p>利用误导和诱导的手法，让读者对情节产生错误的判断，一旦读者有了判断，他们就会想要看看结局是否和他们判断的一样。可是当读者看到结局却是相反的结局，却又那么顺利成章，那么，读者是不是会感觉一种非常刺激的感觉？夸大那件事的不可能性困难性，误导读者进入那种感觉（越真实越好），使其自己也觉得失望，轻而易举的使用别人想不到的方法去完成。让别人都觉得他做的事很荒唐，可最后却出人意料，带给别人意想不到的效果或是成绩。</p>
+</blockquote>
+<blockquote>
+<p>爽的爆点就在于任务的收获和奖励，升级后的变化。网文就是要让人得到一种经历过程的期待收获奖励的快感的体验，才有人爱看。</p>
+</blockquote>
+<blockquote>
+<p>关于一些爽点的设置：  </p>
+</blockquote>
+<ol>
+<li>扶起一个阿斗效忠自己，但是其实谁也不知道背后的主导者是主角。只有读者知道。</li>
+<li>金手指：主角的现状中，急需要丹药、武器等东西，及需要某物品才能提升。得到新手指，读者期待用其出风头和再得好处，如：对主角的修炼升级、打败敌人、和改变现状。（冲突：主角正需要某丹（东西），准备得到时，却出现另一个敌人打断了他要得到，或被他得到。主角修炼出了岔子，处于极度危险之中，出现了敌人。）</li>
+<li>受保护人的，反而保护了大家</li>
+<li>连续爆发杀仇人</li>
+<li>校花或厉害人物送东西给主角</li>
+<li>设定目标，主角实现</li>
+<li>被别人忌妒的感觉（别人为求一件上刀山，下油锅的宝物，主角那里摆地摊似地送，要多少有多少，一群大官贵族艳羡，眼气，嫉妒的要死，但是还不能不巴结。<br>）</li>
+<li>主角冒充有名气的人，去某处骗东西(百万英镑)</li>
+<li>没有名气的时候（或许只是个扫地的，看图书馆的。）却有很多大的帮派或者人物对他毕恭毕敬。（隐藏身份）可是顶头上司却看不上他。最后出事的时候站出来，遭到上司呵斥，可是对方的敌人却被他吓的慌张撤退。</li>
+<li>聪明人都会叫自己身边的人或主人别去惹主角，推出一个强大的人物说宁愿得罪那强大的人也不能去惹到主角。</li>
+<li>将别人视为不可抵挡的致命一击轻松的化解，如把别人释放来的魔法光球揉捏成团当球踢还，或是拿他的法力来玩，如用他用本命真元放出的三位真火做烤肉。</li>
+<li>别人拿自己儿子的优点来鄙视主角，却不知道他儿子的能力却是主角的功劳。</li>
+<li>最烂最没用的东西，到了他手里却全成了宝，或是改成了宝，拿去坑人，或是扭转乾坤改造成真正具有价值的东西。</li>
+<li>跟正派的人打架，别人都以为他会用光明正大的手法，谁知道他却用阴的手段打。还一脸的引以为傲。</li>
+<li>对战的时候主角只是拿了一把破刀子，而对手拿的却是一把削铁如泥的宝刀。大家都以为主角会败，不成想那刀却被主角给搞断了。一把厉害的刀厉害的不在与它本身，而在于使用它的人。</li>
+<li>一个个别人都很尊敬的人物，可是一看到主角的出现就都乖乖的低首，与之前的叱咤风云的高傲大相径庭。</li>
+<li>释放绝技时，周围人的震撼，可是结束以后却淡淡的一句：一会去哪嫖娼？</li>
+<li>破坏规则，挑战权威，满足叛逆心理。</li>
+<li>升级中出现高级才有的异像（或一开始修炼就有高深的理解），短时间内完成别人快要绝望的事</li>
+<li>设定一个强大的组织，让主角成为组织里的头号通缉犯或是拉拢对象，或是那个组织惧怕的人物。神秘的身份。</li>
+</ol>
+<hr>
+<p>“爽”点的本质以及一些衍生</p>
+<p>讲一下到底什么是爽点，普遍大家知道的就是打脸，但如果一篇文完全走感情流类型或者比较日常向，非事业线打脸文，不靠打脸又改怎么去满足读者？<br>这里我讲一种方法:调动情绪满足法。</p>
+<p>大多剧情流文的普遍看点在爽字上，爽点为什么能拉住读者接着往下看，其实本质就是看到主角受欺负，调动了读者的愤怒，所以作者利用打脸配角去满足抚平读者情绪。</p>
+<p>方法本质:作者利用剧情调动读者情绪，满足读者情绪需求，拿情绪去吊胃口。<br>情绪划分:喜怒哀乐甚至更多，在要达到“爽”的结果时，分调动读者一种情绪和一种以上。<br>一种的，直接调动读者“爽”情绪:一下子爽，举例为花很多钱想买什么买什么，中了好几个亿，大佬们都爱我。</p>
+<p>2种及以上的:就要分析先靠一个剧情调动读者某种情绪，再靠另一个剧情抚平读者该种情绪。<br>打脸剧情:先安排主角惨，被配角搞，调动读者对主角的同情情绪以及对配角的愤怒，这个时候作者接下来就分别靠主角高光时刻，以及配角惨来满足抚平读者。</p>
+<p>再比如受或者攻是渣男，受渣了攻，或者攻渣了受，调动了读者的愤怒情绪，读者期望看到虐渣，这个时候不一定靠打脸剧情来满足读者的爽点，可以靠虐渣男，渣男想得到什么却得不到这种方式来满足，进一步再让渣男从中成长，读者会有种人物被教训后成长懂事的满足感。</p>
+<p>在这个过程中要有指向性，你要明白这个剧情你调动了读者对文中哪个人物或者几个人物哪几种情绪，再分别在接下来安排剧情一一满足。</p>
+<p>再分析一个套路“追妻火葬场”:读者喜欢这个剧情，为什么，因为爽，如何体现爽，普遍两种写法。<br>第一种:女主/受不爱了，渣男反而回心转意爱了，而在之前作者已经通过一些剧情调动了读者对渣男的愤怒，之后作者开始抚平读者，渣男想要得到女主爱但得不到来虐渣男，这里甚至不用普遍的打脸配角之类的就可以达到爽的感觉，重点指向在渣男。<br>第二种:前期调动了读者对女主/受的同情，后期不仅让渣男得不到主角的爱，还要让主角发展更好，一般就是娱乐圈文主角突然火了。<br>在追妻这个过程中，前期调动了读者对于女主和男主两个人物两种情绪，第二种写法就是分别满足了读者对于这两个人物期望看到的。<br>　　<br>再举个例子，无限流闯关类的文，看点是什么，每章也可以调动读者情绪再去满足吗？</p>
+<p>我拿无限流解密类文举个例子，所有人被困，怎么脱困，这是从剧情上去解决，前期可以调动读者情绪有恐惧，惊疑，读者期待主角去解决甚至期待主角能碾压恐怖的boss，或者我这里不把读者情绪当回事，我把解密吊胃口归类为靠主线剧情拉读者期待感的谜团解惑法。<br>但谜团解惑可以再跟调动情绪满足法两种结合，比如可以普遍到刑侦文，我靠谜团解惑拉主线吊读者胃口，嫌疑人是谁，我再靠情绪调动法激起读者对某个配角行为的厌恶愤怒，希望惩治他，然后主角的有所作为就是再满足抚平读者这种情绪。</p>
+<p>为什么要说到爽点本质是在调动读者情绪再去满足读者期待，抚平，是希望在安排剧情时，大家总体的要去看这章是不是过于平淡，有没有调动读者情绪，或者一个大剧情是不是有点没头没尾，你调动了读者情绪后，却不去满足，或者连续的几章调动读者某种情绪却不去满足是不是让读者失去耐心。</p>
+<blockquote>
+<p>Source：淘宝晋江文学总结店铺-小兔基</p>
+</blockquote>
+<h1 id="忧伤文学"><a href="#忧伤文学" class="headerlink" title="忧伤文学"></a>忧伤文学</h1><blockquote>
+<p>悲剧<br>在艺术上，靠变故、车祸、意外实现的悲剧都不是好的悲剧。真正好的悲剧，是所有事情都是合逻辑的，所有人都是正常的，甚至是善良的。事情仍然无可挽回地缓缓滑向溃败。没有赢家，没有幸存者。<br>偶然性，在悲剧中是没有一席之地的。</p>
+</blockquote>
+<p>参考Reddit：<span class="exturl" data-url="aHR0cHM6Ly93d3cucmVkZGl0LmNvbS9yL2ltMTRhbmR0aGlzaXNkZWVwLw==">r/im14andthisisdeep<i class="fa fa-external-link-alt"></i></span>。  <br>当然，我分得清文豪忧伤和小p孩忧伤。  <br>Or do I？（*<em>Vsauce music</em>）</p>
+<h2 id="比较高大上的定义"><a href="#比较高大上的定义" class="headerlink" title="比较高大上的定义"></a>比较高大上的定义</h2><h3 id="感伤主义文学"><a href="#感伤主义文学" class="headerlink" title="感伤主义文学"></a><span class="exturl" data-url="aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTYlODQlOUYlRTQlQkMlQTQlRTQlQjglQkIlRTQlQjklODklRTYlOTYlODclRTUlQUQlQTYvODEwNDA4P2ZyPWFsYWRkaW4=">感伤主义文学<i class="fa fa-external-link-alt"></i></span></h3><blockquote>
+<p>感伤主义文学：得名于英国作家斯泰恩的游记《感伤的旅行》 “墓园诗派”。启蒙文学的支流或是其继续和发展。它产生于英国，是当时英国软弱的城乡中小资产者情绪的反映。面对大变动的社会现实，痛感自己生活的失败，既不满贵族和资产阶级的暴虐，又不理解社会变革的原因，产生了感伤的情绪。感伤主义作家在创作上突出地强调感觉和感情，着力描写个人内心的感受，渲染中下层人物的痛苦和不幸，作品充满感伤情调。</p>
+</blockquote>
+<blockquote>
+<p>这派作家夸大感情的作用，细致地描写人物的心情和不幸遭遇，以引起读者的同情和共鸣，表现了对社会现实的不满和对劳动人民的怜悯之心，具有资产阶级人道主义思想，反映了新兴资产阶级的愿望与要求。他们常以生、死、黑夜、孤独为题材，抒发自己的哀思的失意，格调悲哀，语言晦暗，充满悲观失望的情调。喜用哀歌、旅行日记、回忆录、书简等文学体裁。感伤主义文学流传到法国、德国和俄国，影响了一批作家的创作风格，其中最著名的感伤主义作家有英国的劳伦斯·斯泰恩和詹姆斯汤姆生、法国的卢梭、德国的歌德、俄国的卡拉姆辛等。</p>
+</blockquote>
+<h3 id="伤感-伤痕文学"><a href="#伤感-伤痕文学" class="headerlink" title="伤感/伤痕文学"></a><span class="exturl" data-url="aHR0cHM6Ly96aGlkYW8uYmFpZHUuY29tL3F1ZXN0aW9uLzU1MDM4MDkwNi5odG1s">伤感/伤痕文学<i class="fa fa-external-link-alt"></i></span></h3><blockquote>
+<p>伤感文学 是作者抒发自己感情或对社会的悲伤、忧伤的、心凉的作品。而伤痕文学 典故和由来：十年文革期间，无数知识青年被卷入了上山下乡运动中。“伤痕文学”的出现直接起因于上山下乡，它主要描述了知青、知识分子，受迫害官员及城乡普通民众在那个不堪回首的年代悲剧性的遭遇。</p>
+</blockquote>
+<blockquote>
+<p>其次 ，在艺术表现上，”伤痕文学”显得十分幼稚。我们可以发现，许多小说中的语言明显带有文革左倾的印痕，如在《班主任》中，作者这样形容张俊石老师：”像一架永不生锈的播种机，不断在学生们的心田上播下革命思想和知识的种子。”另外，<strong>由于”伤痕文学”作者们关注现实的强烈的责任感，他们常常会压抑不住激荡的情感而跳出来对某个情节直接高谈阔论，表述自己疗救时弊的观点，使作品的情感表露不免趋于肤浅。</strong></p>
+</blockquote>
+<blockquote>
+<p>极左，简单的说就是过高地估计自己，过低地评价困难和敌人。极左也就是把左派的思路推向极端，突破”自由的底限”。为获得无差别的公正，而取消绝大部分的自由，为取消绝大部分的自由，必须建立一个无比强大的国家机器，将人民的一切活动处于国家的控制之下。（百度百科）所谓极右，如果把右派的思路推向极端，突破”平等的底限”。把反对国家限制强者推演成要强者控制国家欺凌弱者，宣称”国家就是为强者存在的”（斯托雷平），实行寡头专政，取消对弱者的一切保护，一切自由。（百度知道）</p>
+</blockquote>
+<blockquote>
+<p>第三，”伤痕文学”作品中虽然重新出现了悲剧意识，但其悲剧精神却具有表层性的弱点。鲁迅曾经说过，”悲剧将人生有价值的东西毁灭给人看。”可见，悲剧的深化应该有两个层次：其一，是表现灾难；其二，是在灾难中展现崇高。而”伤痕文学”只是停留在悲剧的第一个层次上，<strong>作品一味注重悲惨故事的叙述而忽视了对人格的刻划。这样，主人公就只是单纯的受难者而非美的体现者，其悲剧只是灾难的展现而不是”美的毁灭”，只能引起人们”兔死狐悲式”的同情而不能给人以永恒的的震撼和心灵的升华。</strong></p>
+</blockquote>
+<blockquote>
+<p>例如，在孔捷生的短篇小说《在小河那边》（1979，2）中，作者力图展现在文革”血统论”的错误导向下所造成的悲剧：因父母被打倒，主人公严凉与穆兰受尽了折磨，他们在小河边相识并相爱结合了，幸福似乎降临在他们头上，然而他们却发现两人竟然是姐弟关系－－历史把他们分开，历史又这样无情地捉弄了他们！小说的悲剧色彩在这时达到了高潮，但在读者<strong>为这种”乱伦”惨剧叹息的同时却不能不感到其中过分的偶然性因素，这种刻意添加的悲惨无疑使作品显得虚假，同时也无法产生使人震撼的力度。</strong><br>最典型的例子就是刚刚提到的《在小河那边》，在作品描写了一场”乱伦”惨剧后，笔锋一转，写到了四人帮被粉碎，姐弟二人得到母亲被平反的消息，母亲工作的银行也表示要将二人从农村调回，安排工作，最令人吃惊的是，从母亲留下的一封遗书中他们得知，原来穆兰是母亲在战争中抱养的女儿，与严凉并无血缘关系！－－一切的阴翳都被排除，正像小说最后两节的题目一样：”飞向光明”、”鹊桥相会”。<strong>这种完满的”大团圆”结局无疑充满了人为的痕迹。</strong><br>又如，《从森林里来的孩子》林中少年孙长宁带着老师的遗愿与笛声，在无法报名的情况下闯进了音乐学院的考场，并恰巧碰到老师的知己主考。后者听着少年的笛声，仿佛看到了老朋友的身影，感到了老朋友生命的继续。这个情节无疑暗示了少年前途的光明，但其中却<strong>不免因其过份巧合与顺利而显得不够真实。</strong><br>再如，在《伤痕》中，当王晓华读罢母亲的遗书后，作者进行了一段人物”化悲痛为力量”的描写：<br>“她的苦痛的面庞忽然变得那样激愤。她默默无言地紧攥着小苏的手，瞪大了燃烧着火样的眸子，然后在心中低低地、缓缓地、一字一句地说道：’妈妈，亲爱的妈妈，你放心吧，女儿永远也不会忘记您和我心上的伤痛是谁戳下的。我一定不忘党的恩情，紧跟党中央，为党的事业贡献自己毕生的力量！’<br>夜，是静静的。黄浦江的水在向东滚滚奔流。忽然，远处传来巨轮上汽笛的大声怒吼。晓华便觉得浑身的热血一下子都在往上沸涌。于是，她猛地一把拉了小苏的胳膊，下了石阶，朝着灯火通明的南京路大步走去……”<br>这两个段落无疑是在讲述了一个悲惨故事之后，预示了前途的无限光明，然而这种预言又因<strong>毫无根据</strong>而显得十分空洞。</p>
+</blockquote>
+<blockquote>
+<p>在灾难中展现崇高。</p>
+</blockquote>
+<p>我想到《艾迪芬奇的秘密》里，祖母Edie作为见证了无数子女惨死的唯一幸存者，逐渐开始接受这个诅咒，并且主动为孩子们的死亡打造了童话般的故事。感觉…某种意义上来说也很可爱吧。算不上崇高，但是有这个影子。</p>
+<p>看到极左有点Fi爆表。但是我不去写自己，不去用自己的Fi，我写什么小说？我又不是吃这碗饭的。</p>
+<h2 id="（青春）疼痛-伤痛文学"><a href="#（青春）疼痛-伤痛文学" class="headerlink" title="（青春）疼痛/伤痛文学"></a>（青春）疼痛/伤痛文学</h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuZG91YmFuLmNvbS9ncm91cC90b3BpYy8yMzA1MDU0Njkv">豆瓣：疼痛文学俗成宝典<i class="fa fa-external-link-alt"></i></span></p>
+<blockquote>
+<p>笔者提供以下几点，以供大家参考<br>1.你的书需要一个朗朗上口又不知所云的名字，举例<br>《从你的全世界路过》《乖，摸摸头》《阿弥陀佛么么哒》《好吗好的》《愿你历尽千帆，归来仍是少年》<br>2.你需要给自己立一个人设<br>常见的有：干过各种工作看起来不是好人的有着一颗少年赤诚真心的中年男子<br>清华/北大/哈佛/耶鲁毕业的放弃高薪工作环球旅行追求写作梦想的文艺青年  </p>
+</blockquote>
+<blockquote>
+<p>那么做到这些，我们的准备工作也就做完了。接下来，笔者会提供一些这类文学的常用套路<br>1.写爱情必BE原则。少年炽热的感情败于残酷的现实，很多年后当年的女神已嫁作他人妇，主角悲伤地点了一根烟追忆往昔<br>2.善于运用脏话。两位角色正常对话中必须插入“他妈的”“操！”这类词语辅助情感宣泄，就算没有情感需要宣泄，也需要加入这类词语以示作者的幽默（然而并不幽默）。<br>当然笔者建议大家在仿写疼痛鸡汤类文学时将“他妈的”改为“他爹的”，“操”改为“骟”<br>3.选取地点的注意事项。<br>这类文学常发生在<br>a.东北——角色少年时在东北喝酒撸串打架以示社会气质<br>b. 重庆成都——角色中年时在露天火锅店点燃一支香烟追忆往昔侃侃而谈<br>c.云南——角色前往大理，怀着文艺青年的心态梦想洗涤灵魂<br>d. 国外——角色学生时代的经历附以青涩的校园爱情（注意：国外可以写英美日韩，但不建议写非洲）<br>当然笔者不建议大家在仿写时运用d，现在国外疫情严重，写爱情也只能写网恋，没有这个必要<br>4.你需要一些看起来很文艺却没什么内涵金句。举例:大冰  </p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzMyMDk4MzM3">知乎：为何批判青春伤痛文学<i class="fa fa-external-link-alt"></i></span></p>
+<ol>
+<li>青春疼痛文学，是指描述主人公青春时期的伤痛的文学作品，主要是指的是这个小说或者文章的主人公在青春期的那段时间的伤痛。青春疼痛文学作品一般里面的内容都是包括失恋，堕胎，打架，自杀等等一些比较颓废的事情。</li>
+<li>当然这些文学作品大家往往也是青春期的时候比较喜欢看，但是当回过味来会发现这种作品里充斥着“为赋新词强说愁”的感觉，而且作品内容十分不贴合现实，而是为了疼痛而疼痛，所以被称为青春疼痛文学。</li>
+<li>现在青春疼痛文学可用来代指那些很矫情、非主流的文字以及大家都有过的那段羞耻的青春期。</li>
+<li>现在这个“青春疼痛文学”基本上就是指的那些非主流的文字写出来的一些青春期的文章。罗志祥在520当天的微博上发了一个长文，标题是《男孩，女孩》。这篇长文真的是像极了非主流时期写的文章。所以网友直接调侃，罗志祥是青春疼痛文学的作者。</li>
+</ol>
+<h2 id="“苏”"><a href="#“苏”" class="headerlink" title="“苏”"></a>“苏”</h2><p>12.7 码</p>
+
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/786b.html">如何写好爽文/忧伤文学</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2021年04月20日 - 15:48</p>
+ <p><span>最后更新:</span>2022年01月09日 - 00:21</p>
+ <p><span>原始链接:</span><a href="/p/786b.html" title="如何写好爽文/忧伤文学">https://mebilychen.github.io/p/786b.html</a>
+    
+ </p>
+ <p><span>许可协议:</span>除非文章内另行声明，遵守 cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script data-pjax> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%88%BD%E6%96%87/" rel="tag"><i class="fa fa-tag"></i> 爽文</a>
+              <a href="/tags/%E9%89%B4/" rel="tag"><i class="fa fa-tag"></i> 鉴</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/b380.html" rel="prev" title="《难言词典》">
+      <i class="fa fa-chevron-left"></i> 《难言词典》
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/8809.html" rel="next" title="陛下的桌宠（Shimeji）项目">
+      陛下的桌宠（Shimeji）项目 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A0%94%E7%A9%B6%E8%83%8C%E6%99%AF"><span class="nav-text">研究背景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%88%BD%E6%96%87%E7%A0%94%E7%A9%B6"><span class="nav-text">爽文研究</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%88%BD%E6%96%87%E5%90%8D%E8%91%97%E9%89%B4%E8%B5%8F%E2%80%94%E2%80%94%E5%9F%BA%E7%9D%A3%E5%B1%B1%E4%BC%AF%E7%88%B5"><span class="nav-text">爽文名著鉴赏——基督山伯爵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%88%BD%E6%96%87%E7%89%B9%E5%BE%81"><span class="nav-text">爽文特征</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%88%BD%E7%82%B9"><span class="nav-text">爽点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BD%95%E4%BC%9A%E8%AE%A8%E5%8E%8C%E7%88%BD%E6%96%87%E2%80%94%E2%80%94%E7%88%BD%E6%96%87%E7%9A%84%E7%BC%BA%E7%82%B9"><span class="nav-text">为何会讨厌爽文——爽文的缺点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%86%99%E5%87%BA%E8%87%AA%E5%B7%B1%E6%BB%A1%E6%84%8F%E7%9A%84%E7%88%BD%E6%96%87"><span class="nav-text">如何写出自己满意的爽文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%AB%E4%BA%BA%E7%9A%84%E6%80%BB%E7%BB%93"><span class="nav-text">别人的总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BF%A7%E4%BC%A4%E6%96%87%E5%AD%A6"><span class="nav-text">忧伤文学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AF%94%E8%BE%83%E9%AB%98%E5%A4%A7%E4%B8%8A%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-text">比较高大上的定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%84%9F%E4%BC%A4%E4%B8%BB%E4%B9%89%E6%96%87%E5%AD%A6"><span class="nav-text">感伤主义文学</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%A4%E6%84%9F-%E4%BC%A4%E7%97%95%E6%96%87%E5%AD%A6"><span class="nav-text">伤感&#x2F;伤痕文学</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E9%9D%92%E6%98%A5%EF%BC%89%E7%96%BC%E7%97%9B-%E4%BC%A4%E7%97%9B%E6%96%87%E5%AD%A6"><span class="nav-text">（青春）疼痛&#x2F;伤痛文学</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%80%9C%E8%8B%8F%E2%80%9D"><span class="nav-text">“苏”</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar3.jpg">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">155</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">54</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">161</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjEwMTM3MTIxMjdAcXEuY29t" title="E-Mail → mailto:1013712127@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9tZWJpbHkxMzE0" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      猜猜这是什么鬼地方？
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9tZWJpbHljaGVuLmxvZnRlci5jb20v" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;">LOFTER</span>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/p/e3a422.html" title="p&#x2F;e3a422.html">【参考】衣|料专版</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/4eb5.html" title="p&#x2F;4eb5.html">遗书</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ce0f2.html" title="p&#x2F;ce0f2.html">Dreamily.AI专场</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/b6c1.html" title="p&#x2F;b6c1.html">关于动保和动不动就保和虐杀</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/754d1.html" title="p&#x2F;754d1.html">《致咩碳》</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/300011.html" title="p&#x2F;300011.html">【#快乐王子】HP开题Demo&记录</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/190c3.html" title="p&#x2F;190c3.html">【角色研究】关于沃姆</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/p/24b8.html" title="p&#x2F;24b8.html">【日常】虫虫和虫虫和虫虫们</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/190c3.html" title="p&#x2F;190c3.html">【角色研究】关于沃姆</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/d846.html" title="p&#x2F;d846.html">【歌单】歌曲开荒</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">1.6m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">23:53</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "站子已虔诚祈祷 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+     //'.site-meta',
+    //'.site-nav',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>

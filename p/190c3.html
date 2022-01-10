@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="沃姆">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【角色研究】关于沃姆">
+<meta property="og:url" content="https://mebilychen.github.io/p/190c3.html">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:description" content="沃姆">
+<meta property="og:locale">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/Works/IMG_9502(20211202-011039).PNG">
+<meta property="og:image" content="https://pic1.zhimg.com/80/bcea62d15c0ba86c6fc1d81bb69265ac_1440w.jpg?source=1940ef5c">
+<meta property="article:published_time" content="2021-10-08T18:06:00.000Z">
+<meta property="article:modified_time" content="2022-01-10T00:36:09.083Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="设定">
+<meta property="article:tag" content="白王">
+<meta property="article:tag" content="角色研究">
+<meta property="article:tag" content="沃姆">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://mebilychen-media.test.upcdn.net/image/Works/IMG_9502(20211202-011039).PNG">
+
+<link rel="canonical" href="https://mebilychen.github.io/p/190c3.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : '中文'
+  };
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    
+      if (NexT.utils.hasMobileUA()) return;
+    
+    let time, hidden, visible, title = document.title;
+    let favicon = document.querySelector('link[rel="icon"]');
+    
+      hidden = ["盯————","*探*","?","......","*观察*"];
+      visible = ["*偏转视线*","*缩*","*强装镇定*","！","*低头*"];
+    
+    let random = t => t[Math.floor(Math.random() * t.length)];
+    const change = () => {
+      if (document.hidden) {
+        favicon.setAttribute('href', '/images/favicon-32x32-king-black.png');
+        
+          document.title = random(hidden);
+        
+        clearTimeout(time);
+      } else {
+        favicon.setAttribute('href', '/images/favicon-32x32-brand-black.png');
+        
+          document.title = random(visible);
+        
+        time = setTimeout(() => {
+          document.title = '碳素的小作坊';
+        }, 1000);
+      }
+    }
+    document.addEventListener('visibilitychange', change, false);
+  });
+</script>
+
+  <title>【角色研究】关于沃姆 | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;调谐中...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">161</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">54</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">155</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-image fa-fw"></i>画廊</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/random.html" rel="section"><i class="fa fa-question fa-fw"></i>抽</a>
+
+  </li>
+        <li class="menu-item menu-item-lang">
+
+    <a href="/en/" rel="section"><i class="fa fa-globe fa-fw"></i>->English</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-17081-597255-1305127431.cos-website.ap-hongkong.myqcloud.com' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/190c3.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【角色研究】关于沃姆
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-09 02:06:00" itemprop="dateCreated datePublished" datetime="2021-10-09T02:06:00+08:00">2021-10-09</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2022-01-10 08:36:09" itemprop="dateModified" datetime="2022-01-10T08:36:09+08:00">Today at 8:36 AM</time>
+                </span>
+              
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%90%8C%E4%BA%BA%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">同人研究笔记</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+            <div class="post-description"><center>沃姆</div>
+          
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%BE%E5%AE%9A/" rel="tag"><i class="fa fa-tag"></i> 设定</a>
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E8%A7%92%E8%89%B2%E7%A0%94%E7%A9%B6/" rel="tag"><i class="fa fa-tag"></i> 角色研究</a>
+              <a href="/tags/%E6%B2%83%E5%A7%86/" rel="tag"><i class="fa fa-tag"></i> 沃姆</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p><img data-src="http://mebilychen-media.test.upcdn.net/image/Works/IMG_9502(20211202-011039).PNG"></p>
+<p>1.7</p>
+<p>看到dune的生物学解释<br>emm，  </p>
+<ol>
+<li>大沃姆能听到雪上面的声音（区分规律/非规律活动）</li>
+<li>大沃姆杂食+吃大量微生物</li>
+<li>大沃姆吃自己baby【baby就是微生物】（生物界部分baby长了牙，可以吃没长牙的兄弟姐妹们）</li>
+<li>大沃姆在雪泳的时候，将固体液化，形成液体降低阻力。</li>
+<li>大沃姆有过滤腮（嘴里也有）过滤杂质吃微生物（其实就是吃雪..）</li>
+<li>大沃姆跃起很壮观（沙沃姆能引起雷电）</li>
+<li>大沃姆只是想保护自己的领地（bruh）  </li>
+</ol>
+<p>1.6</p>
+<p>看到雪崩分不清上下左右<br>在想陛下应该有感受器或者陀螺仪来解决这个问题吧。  <br>这么说陛下应该不会迷路…..</p>
+<p>–</p>
+<p>看到happy game里有两个世界，生物在其中一个世界没有嘴，另一个影子世界是有嘴的。<br>所以还是可以吃东西的，有感  </p>
+<p>可以给个陛下（戴面具的虫）+陛下影子（龙）的设定。</p>
+<p>12.13</p>
+<p>我yy沃姆种族的规矩“沃姆不能被tamed” 然后在想反派把陛下关起来tame陛下该怎么办 然后就想到向其他沃姆求援 然后就突然脑子里蹦出来“沃姆不能被tamed。你被tamed你就不是沃姆”然后拒绝了陛下的请求</p>
+<p>因为陛下生理上（理应是的）的配偶很大所以陛下倾向于喜欢夫人这样的庞大体型！</p>
+<p>12.12</p>
+<p>我就喜欢让陛下被团长气得骂脏话（现在想想其实应该骂古神语可能会好一点 嗯）</p>
+<p>古神语码一下。（钻研一套古神语只为了让陛下骂街）</p>
+<p>12.9</p>
+<p>补充设定：年长雄沃姆（可以是幼体，不过当然要睁眼有自主能力才行）会自动负责（保护）比他年幼的沃姆 然后因为“沃姆不会被驯服”（源自eili（？）的“Wyrm will never be tamed”）这一定律 成年雄沃姆会在被抓住（也是很难抓的其实）的时候把也同时被抓到的幼年沃姆通通杀死 包括自己的孩子 然后选择能带几个敌人就带几个敌人地去自杀<br>然后通常选择栖息在配偶身上的爸爸（们）会在被抓住之后选择用一个其他物种几乎听不见的低频声音把雌沃姆吵醒（引起注意/激怒）让她来攻击自己和入侵者</p>
+<p>12.8 做梦：  <br>雄沃姆负责抚养小沃姆（也可以设定成共同抚养）。  <br>倾向于，妈妈由于是beast，不懂事的，得爸爸来照顾幼崽。然后就可以衍生出，妈妈相当于生育超市，爸爸过来简单结合一下然后把卵取走，就自己照顾自己娃娃去了（藏在大沃姆身上）。  <br>其实住在嘴里挺好的，但主要就是我主观情感上觉得很恶心，，，就比较排斥吧。</p>
+<p>12.4 看mating game：  <br>三种mating模式：</p>
+<ol>
+<li>竞争（多只雄性竞争一只雌性，产生争斗）</li>
+<li>选择（雌性选择雄性/雄性选择雌性，较为和平）</li>
+<li>直接上（通常因为见面几率渺茫/紧急情况）</li>
+</ol>
+<p>11.15 人类中心思维<br>在孩童身上观察到的一种倾向，以人类当作类比来推测其他不熟悉的生物现象 。</p>
+<p>嗯，想着是总结下沃姆种群的设定。就，偏向纪录片的设定。  <br>看完mating game之后yy了一下作为外星种族的陛下种群（@量子恋人），母沃姆吃星球，星球吃完会进行旅行，找下一个星球。之前的残羹剩饭（不够支撑大沃姆体型）足够给小母沃姆做温床；然后至于陛下他们会住在妈妈身上（妈妈出发时会抓着妈妈身上（可能长出的奇奇怪怪的寄生生物（不））不放），跟着妈妈一起旅行，靠吃星球上以及妈妈身上寄生生物（比如小树林的甜果子）可提供的生物组织存活（没有吃的也不是不行），一直到他们成年。他们在妈妈身上羽化，但不会到处乱跑，因为宇宙太大母沃姆太少（一窝（指一次受精，母沃姆可以同时被受很多次精）2雄1母差不多），而且雄性体型太小了，容易死。所以。</p>
+<p>咩碳 1:17:59<br>生物光不能科幻一下？</p>
+<p>咩碳 1:18:43<br>那我反射其他星球光？和自己的光叠加？</p>
+<p>咩碳 1:20:36<br>可以让陛下去找合适的地方</p>
+<p>咩碳 1:20:51<br>啊但是</p>
+<p>咩碳 1:21:05<br>怎么知道是陛下而不是星球呢</p>
+<p>咩碳 1:21:46<br>要不让雌沃姆吃发光星球吧</p>
+<p>咩碳 1:22:14<br>陛下：（伪装成星球）</p>
+<p>10.27 我去，谁先用dick插到谁谁就怀孕做妈妈孵蛋还是对方基因对方娃这个设定（海毯虫）也太….那个了吧。</p>
+<p>主要涉及的是他们的交配…. </p>
+<p>最开始用这种…雌雄差异巨大（也有的王文是写陛下雌雄同体），是在 @不正当竞争 的。  </p>
+<p>10.9 补。雄性沃姆能够有让其他（大多数）虫子（管他是信息素还是啥）着迷的被动技能，有点相当于催眠。在有主观意识的虫子那里，他们可能会误以为这是mating call（就是说他们会觉得陛下很漂亮，一见倾心，二见钟情）。<br>但是对不起，这只是为了防止雄性小正太在接近雌性大沃姆的时候被吞下肚/压碎的防御机制。对大多数虫子有效是因为大多数虫子没有抵御这一技能的基因（不算同地位高等种族），哪怕这其实只是针对雌性大沃姆设计的。这种（信息素？）（@量子恋人 里面是用翅膀发迷幻虹光的“光舞” ）技能能够让雌性大沃姆注意到咱们的小正太伴侣，然后紧紧盯着他，张着嘴，就这样：⊙o⊙。相当于被雄性催眠的蜘蛛，完全被魅惑了，无法移开视线，无法行动。雄性（一般）会在完成交配之后慌忙跑路，不然会被咽下肚子。 <br>还在想一个更…优雅的交配方式，就，别进嘴里啊至少。想的是就摸一摸就怀孕这样（啊这），就，陛下会捧着…呃，花花，对，（stm捧着精子，想都别想），就下一代小沃姆的soul，就发光光，然后雌性会注意到，然后飞扑过来，操作失误的话父子就会被一同吞咽下肚…emm想写成斗牛那样，就，雄性要避开雌性的飞扑掠食，但同时要，就，跳斗牛式的交配舞…雌性累了才算是同意和你交配，就看你表现，给你打个分。如果你不行，soul团团就会进她消化道，如果你行，就会进子宫….这样。<br>不过也想把雌性塑造成完全的野兽这样，就相当于，雄性的任务是：</p>
+<ol>
+<li>找到雌性</li>
+<li>发光光（并伪造猎物的气息）吸引雌性注意</li>
+<li>和雌性打一架（不要死），如果雄性觉得雌性可以，开始斗牛，相当于求爱；如果不可以就跑路（再次，不要死）</li>
+<li>把雌性斗累了，雌性会暂时缓神，雄性趁机献花（？），然后信息素会起作用，雌性就眼睁睁看着雄性跑路（毕竟雄性也快累死了）。</li>
+</ol>
+<p>fk，我看到体型小的雄性和大体型雌性是用雄性融合在雌性身上（而且充当雄性生殖器方便雌性自交）的fk设定了。小雄性吃不了饭没有攻击能力它们一生的目的就是躲天敌找雌性然后与之融合。<br>我和陛下说了下，陛下扇了我一巴掌，好痛（呜呜呜）。<br>其实可以说陛下就相当于啊，詹姆斯邦德，一顿操作猛如虎，就是为了把花花黏在雌性的某个位置方便她自交？？？？？<br>艹。插花艺术。  </p>
+<p><img data-src="https://pic1.zhimg.com/80/bcea62d15c0ba86c6fc1d81bb69265ac_1440w.jpg?source=1940ef5c"></p>
+<p>那个黑点点是雄性:)  </p>
+<p>也可以说陛下的魅惑属性也是因为他老人家就是个小白兔，等着被普通猎物吃的那种。</p>
+<blockquote>
+<p>某些螨虫，如Acarophenax mahunkai母螨每次产下数十只卵，其中只有1~2只会孵化为雄性，其余都是雌性。自孵化之后，雄性唯一的使命就是和姊妹交配，然后就死亡，有些雄性甚至连嘴都没有。而Acarophenax mahunkai尤其奇葩之处在于它的卵是在母体内孵化发育并交配的，然后母虫肚子爆裂，新生的雌性螨虫寻找新的寄主，而雄性就陪伴着母亲的遗体一起死亡——《性别战争》（Sex advice to all creation）</p>
+</blockquote>
+<p>有一个救星！就是说雄虫会生活在雌虫的身体上（筑巢）。然后我就可以略过一大堆献花场景了。  </p>
+<p>大概就是想取，陛下小小只+陛下很稀少+一生逍遥不用吃喝目的就是为了找另一半+但是如果想活着也可以吃喝+和雌性是驯兽师与兽的关系+一夫一妻但是不敢正大光明回家+宅男+会把窝筑在雌性身上+雌性死了可以选择住在骨架里一直孤独或者直接饿死+小沃姆是从母亲嘴里出来的（还没有确定母沃姆会不会死，可能是有的会死吧。以及是吐蛋还是直接吐虫。母亲会死的话，母沃姆孵蛋其实就是缩在巢里等死）+陛下会承担一定的父亲责任，但主要是照顾小陛下。  </p>
+<p>以下来自 @不正当竞争：</p>
+<hr>
+<p>刚想到的，@不正当竞争的沃姆设定的话，其实可以写…… 沃姆们是在里面做爱的…… 对…… 就…… 从蛋里孵出来的时候，都是小沃姆，但是雄性会变态、羽化，蜕变成小个子虫型，而雌性会一直蜕皮，成为大个子沃姆型；然后造娃的时候，小个子走进雌性嘴巴里，顺着一个特别的通道给雌性受精，再走出来（饥饿的雌性会直接吃掉雄性，）。做爱过程没有任何感觉，而且雄性一方其实只是相当于掏出一颗 “能量球” 塞进 “子宫” 罢了，有点像种下一颗种子（这个种子可以在任何 “子宫” 繁育）。雌性最后会把成形的卵吐出来。雌性的沃姆形态是没有智商的，只能顺着本能行动，她们在交配前也会吃雪什么的、大张着嘴一动不动什么的，方便雄性进来。智商的话只有雄性有，但雄性基本上… 看着很弱。这样子。而且雄性是有着 “天生无法抗拒之美” 的，辐射范围是所有物种。想设定是一夫一妻制，但不勉强。一夫一妻的话，其实有点像<span class="hint--info hint--rounded hint--top" data-hint="艹
+我真是始终如一" ontouchstart>驯兽员和兽的关系</span>，在一起共同抚育小沃姆们。然后雄性出生率比雌性低很多，很稀少，差不多 1:100，所以成年沃姆比较多（不会死），卵很难找。  <br>啊，说着说着觉得好恶心… 不好意思陛下，是我的问题呕 ——  <br>咳咳，不好意思…</p>
+<p>沃姆孵出来时是雌性沃姆形态<br>
+长到一定程度，受到不同的刺激（雌性多的环境里变成雄性，以此类推），有的沃姆继续长大，变成雌性大沃姆，有的沃姆会成蛹羽化（蛹会生成在躯壳里面），变成雄性沃姆（虫形态）<br>
+沃姆的交配是在沃姆形态完成的。沃姆形态时，如果只有两只雌性，没有配对的雄性，交配时弱势的一方一定会变成雄性（？）（是的 雄性是被压着打的）<br>
+沃姆形态是雌性，虫形态是雄性。<br>
+一般而言，虫形态只会在交配完后出现。雌性沃姆仍可以成蛹变成雄性，但雄性变不回雌性。</p>
+
+
+<p>不过陛下由于是落脚虫，很早就进入了分化期，然后在雌性堆里莫名其妙地变成了雄性（？）<br>
+虫形态可以学习正常的话，沃姆形态只能说沃姆语。</p>
+
+<p>陛下的父母不是他真正的父母。陛下是真正意义上的神子，是被从他真正的父母那里偷回来，为了引入神族血脉的。<br>
+（插一句，雄性沃姆会从蠕虫形态羽化成虫形态，变得很小只，雌性沃姆不会，她们很大）<br>
+（这项设定应用于所有幼王文）<br>
+（不要问我他们怎么造孩子）</p>
+
+<hr>
+<p>The Wyrms were ancient beings who pulled bugs into their thrall. They were larger than Bardoon, though they had fewer limbs. They also had the ability of foresight, meaning that they could predict the future to some extent. One of these Wyrms died in Kingdom’s Edge, transforming into the Pale King. A Lore Tablet in the Fungal Wastes remarks on him having prescience as well.</p>
+<p>There is a reference to another being called the Blackwyrm in White Defender’s journal entry. This creature shares the word “wyrm” in its name; however, it is unclear whether it is related to the Wyrms or not.</p>
+<p>At a certain point, all Wyrms died out or were wiped out from Hallownest.</p>
+<hr>
+<p>嗯，然后就是顺便讨论一下陛下的法术吧。就，彩虹写的就是，克制型的光。有点像，激光切割的感觉，精准、致命。但是相比于辐光，就没有她那么粗暴野蛮。  <br>就相当于，辐光是直接强光把敌人晒成灰；陛下是用激光把敌人庖丁解牛。  <br>辐光不管致命点，直接轰上去管你哪里致命；陛下是只会在你致命位置打个穿孔，然后你就死了。</p>
+
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/190c3.html">【角色研究】关于沃姆</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2021年10月09日 - 02:06</p>
+ <p><span>最后更新:</span>2022年01月10日 - 08:36</p>
+ <p><span>原始链接:</span><a href="/p/190c3.html" title="【角色研究】关于沃姆">https://mebilychen.github.io/p/190c3.html</a>
+    
+ </p>
+ <p><span>许可协议:</span>除非文章内另行声明，遵守 cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script data-pjax> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%BE%E5%AE%9A/" rel="tag"><i class="fa fa-tag"></i> 设定</a>
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E8%A7%92%E8%89%B2%E7%A0%94%E7%A9%B6/" rel="tag"><i class="fa fa-tag"></i> 角色研究</a>
+              <a href="/tags/%E6%B2%83%E5%A7%86/" rel="tag"><i class="fa fa-tag"></i> 沃姆</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/300011.html" rel="prev" title="【#快乐王子】HP开题Demo&记录">
+      <i class="fa fa-chevron-left"></i> 【#快乐王子】HP开题Demo&记录
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/5a1d2.html" rel="next" title="【@量子恋人AU】量子恋人开题">
+      【@量子恋人AU】量子恋人开题 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar3.jpg">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">155</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">54</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">161</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjEwMTM3MTIxMjdAcXEuY29t" title="E-Mail → mailto:1013712127@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9tZWJpbHkxMzE0" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      猜猜这是什么鬼地方？
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9tZWJpbHljaGVuLmxvZnRlci5jb20v" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;">LOFTER</span>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/p/e3a422.html" title="p&#x2F;e3a422.html">【参考】衣|料专版</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/4eb5.html" title="p&#x2F;4eb5.html">遗书</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ce0f2.html" title="p&#x2F;ce0f2.html">Dreamily.AI专场</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/b6c1.html" title="p&#x2F;b6c1.html">关于动保和动不动就保和虐杀</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/754d1.html" title="p&#x2F;754d1.html">《致咩碳》</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/300011.html" title="p&#x2F;300011.html">【#快乐王子】HP开题Demo&记录</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/190c3.html" title="p&#x2F;190c3.html">【角色研究】关于沃姆</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/p/24b8.html" title="p&#x2F;24b8.html">【日常】虫虫和虫虫和虫虫们</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/190c3.html" title="p&#x2F;190c3.html">【角色研究】关于沃姆</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/d846.html" title="p&#x2F;d846.html">【歌单】歌曲开荒</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">1.6m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">23:53</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "站子已虔诚祈祷 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+     //'.site-meta',
+    //'.site-nav',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="看科幻世界的时候，有篇魔术师之死的短篇让我注意到了“魔术师”和“马戏团”两个关键词，于是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="白色魔术-设定+Demo">
+<meta property="og:url" content="https://mebilychen.github.io/p/cf86.html">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:description" content="看科幻世界的时候，有篇魔术师之死的短篇让我注意到了“魔术师”和“马戏团”两个关键词，于是">
+<meta property="og:locale">
+<meta property="article:published_time" content="2021-01-14T04:48:00.000Z">
+<meta property="article:modified_time" content="2021-09-18T05:28:48.422Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="君臣组">
+<meta property="article:tag" content="设定">
+<meta property="article:tag" content="白王">
+<meta property="article:tag" content="格林">
+<meta property="article:tag" content="卢瑞恩">
+<meta property="article:tag" content="@白色魔术">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://mebilychen.github.io/p/cf86.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : '中文'
+  };
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    
+      if (NexT.utils.hasMobileUA()) return;
+    
+    let time, hidden, visible, title = document.title;
+    let favicon = document.querySelector('link[rel="icon"]');
+    
+      hidden = ["盯————","*探*","?","......","*观察*"];
+      visible = ["*偏转视线*","*缩*","*强装镇定*","！","*低头*"];
+    
+    let random = t => t[Math.floor(Math.random() * t.length)];
+    const change = () => {
+      if (document.hidden) {
+        favicon.setAttribute('href', '/images/favicon-32x32-king-black.png');
+        
+          document.title = random(hidden);
+        
+        clearTimeout(time);
+      } else {
+        favicon.setAttribute('href', '/images/favicon-32x32-brand-black.png');
+        
+          document.title = random(visible);
+        
+        time = setTimeout(() => {
+          document.title = '碳素的小作坊';
+        }, 1000);
+      }
+    }
+    document.addEventListener('visibilitychange', change, false);
+  });
+</script>
+
+  <title>白色魔术-设定+Demo | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;调谐中...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">161</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">54</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">155</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-image fa-fw"></i>画廊</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/random.html" rel="section"><i class="fa fa-question fa-fw"></i>抽</a>
+
+  </li>
+        <li class="menu-item menu-item-lang">
+
+    <a href="/en/" rel="section"><i class="fa fa-globe fa-fw"></i>->English</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-17081-597255-1305127431.cos-website.ap-hongkong.myqcloud.com' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/cf86.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          白色魔术-设定+Demo
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-01-14 12:48:00" itemprop="dateCreated datePublished" datetime="2021-01-14T12:48:00+08:00">2021-01-14</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2021-09-18 13:28:48" itemprop="dateModified" datetime="2021-09-18T13:28:48+08:00">2021-09-18 13:28:48</time>
+                </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">王文</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/%E7%8E%8B%E6%96%87-%E7%99%BD%E8%89%B2%E9%AD%94%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">王文@白色魔术</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>7.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>6 分钟</span>
+            </span>
+            <div class="post-description"><center>看科幻世界的时候，有篇魔术师之死的短篇让我注意到了“魔术师”和“马戏团”两个关键词，于是</div>
+          
+          <div class="post-tags">
+              <a href="/tags/%E5%90%9B%E8%87%A3%E7%BB%84/" rel="tag"><i class="fa fa-tag"></i> 君臣组</a>
+              <a href="/tags/%E8%AE%BE%E5%AE%9A/" rel="tag"><i class="fa fa-tag"></i> 设定</a>
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E6%A0%BC%E6%9E%97/" rel="tag"><i class="fa fa-tag"></i> 格林</a>
+              <a href="/tags/%E5%8D%A2%E7%91%9E%E6%81%A9/" rel="tag"><i class="fa fa-tag"></i> 卢瑞恩</a>
+              <a href="/tags/%E7%99%BD%E8%89%B2%E9%AD%94%E6%9C%AF/" rel="tag"><i class="fa fa-tag"></i> @白色魔术</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><div class="note info"> <p style="color:#438BCA">这里的团长是搞“慈善事业”的好团长</p> </div>
+
+<div class="note info no-icon"> <p style="color:#438BCA">原名白色魔术师</p> </div>
+
+<h2 id="白化与白变"><a href="#白化与白变" class="headerlink" title="白化与白变"></a>白化与白变</h2><p>2021.9.18 先天性色素欠乏症（leucistic） &amp; 白化（albinism）    <br>突然对白色自然物感兴趣了，想起原来之前还有这一篇聚焦颜色的王文。  <br>想弄明白几个问题：</p>
+<ol>
+<li>自然界都有哪些白色的自然物？（包括动物、植物、昆虫等，不包括白化）</li>
+<li>自然界的白化现象？  <br>千百万只中的500只\400只\1只。白化的动物眼睛通常会是粉红色/蓝色/黑色。  </li>
+<li>白色自然物数量少吗？如果少的的话，为什么？因为容易被目击？<br>人类也会去抓去打。  </li>
+</ol>
+<p><span class="exturl" data-url="aHR0cDovL3d3dy4zNjBkb2MuY29tL2NvbnRlbnQvMTQvMDcyOC8xMS85NTYzMzczXzM5NzYwOTU4Mi5zaHRtbA==">十大北极白色动物<i class="fa fa-external-link-alt"></i></span></p>
+<blockquote>
+<p>白色植物  </p>
+</blockquote>
+<ol>
+<li>玉叶金花的部分叶子是白色的。玉叶金花中所谓的“玉叶”其实指的是它的萼片变形而来，一朵玉叶金花的花萼有五枚萼片，其中一枚变形为叶片状，有些栽培品种的五片萼片都会变形成为叶片状，白色，且有长柄，通常称花叶。它的花小形而且是金黄色，故名“金花”。</li>
+<li>水晶兰。全株无叶绿素，白色，肉质，叶片互生。  </li>
+<li>雪叶菊（银叶菊）。全株具白色绒毛。</li>
+</ol>
+<blockquote>
+<p>白化的幼体比正常颜色的幼体成活难</p>
+</blockquote>
+<blockquote>
+<p>雪貂的皮毛在冬季变成白色，夏季变成棕红色。  </p>
+</blockquote>
+<blockquote>
+<p>专家表示，白色型的野生动物之所以少见，主要是基因突变的概率本身就很低，如果产生的是不利于生物生存的突变，就容易被自然选择淘汰。</p>
+</blockquote>
+<blockquote>
+<p>白象：大象在泰国有着特殊的地位，白象尤其是神圣和幸运的象征，因为它们与佛祖的诞生有关。泰国政府的法律规定，所有的白象都属于泰国国王。在泰国和缅甸，自古这白色的大象是不能骑乘，只能供养。</p>
+</blockquote>
+<blockquote>
+<p>白化动物是世上最美丽和外表神秘的动物，这里有五条关于野生白化动物的事实你可能不知道<br>Albino animals are some of the most beautiful and mystical looking creatures in the world.And here are five facts you probably didn’t know about albinos in the wild.<br>第一 有些人搞不清白化基因和白化病的区别，它们都是由隐形基因导致色素疾病，但是白化病降低了皮肤色素或黑色素，导致生物体拥有红眼睛。白化基因降低所有形式的色素，不仅是黑色素，但生物体依然拥有正常的眼睛<br>Number one, many people confuse leucism with albinism. They’re both pigment disorders caused by recessive allele. But albinism reduces skin pigment or melanin and causes the organism that to red eyes. Leucism reduces all forms of pigment not just melanin. But the organism will still have normal eyes.<br>第二 albino这个词来自拉丁语，词源Albus意思是白色，像你们那些哈迷的阿不思·邓布利多一样，<br>Number two, the word albino comes from Latin. The root Albus means white as in Albus Dumbledore for you<br>Harry Potter fans out there.<br>第三 白化病老鼠和实验室研究是老相识了，实际上 他们是第一种特别为科研驯化的动物，使用白化病成为历史，因为它们易于区分，而现在现代实验室老鼠是他们的后代<br>Number three, albino rats in lab research go way back. In fact, they were the first animals to be domesticated specifically for science. Albinos were historically used because they were easy to identify. And now, modern lab rats are their descents.<br>第四 白化动物在野外的生活不会总是很困难，白化动物经常有视力问题，而且他们确实很难在捕食者眼中伪装起来，但除了看起来很漂亮，有时这也是他们的优势，有时捕食者甚至不能发现白化动物作为猎物<br>Number four, albino animals don’t always have a tough time in the wild. Albino animals often have eyesight problems, and it’s true that they may not be able to camouflage themselves from predators. But aside from looking snazzy, sometimes that works to their advantage. Sometimes predators don’t even recognize the albino animals<br>as food.<br>第五 有至少四个美国城镇有白化病松鼠群，如果你住在田纳西、伊利诺斯、密苏里或北卡罗来纳州 你可能能见到一些居民保护它们，而仅在伊利诺斯这些松鼠有权走在每条街上，如果你碾过一只的话会面临巨额罚款。有些是真正的白化病 有些只是拥有白化基因，但他们都很可爱，现在你知道了关于你喜欢的动物的五条不可思议的事实<br>Number five, there are at least four towns in the US with white squirrel populations. If you live in Tennessee, Illinois, Missouri, or North Carolina, maybe you’ve seen a few residents protect them. And in only Illinois, these squirrels have the right of way on every street. There’s a big fine if you run one over. Some are truly albino, and some are leucistic. But all of them are cute. Now you know five more amazing facts about animals you love.</p>
+</blockquote>
+<blockquote>
+<p>白化症，或白化病（Albinism）是一类以皮肤、毛发以及眼睛虹膜黑色素缺乏为特征的遗传病。一般来说，白化病是常染色体隐性遗传的，由于种种原因，患者体内的酪氨酸酶出现了异常，而酪氨酸是黑色素的前体物。所以患有这类疾病的个体虽然有正常的黑色素细胞，但是苦于没有原料，所以无法合成黑色素。这种遗传病在各种脊椎动物中都存在，在哺乳类和鸟类中，大约每一万至两万个幼兽幼鸟中便会有一例白化病。白鼠、白兔其实就是白化种的动物。白化动物最显著的特征是它们的眼睛。由于缺乏黑色素，它们的虹膜（也就是俗称的黑眼珠）颜色很浅，为淡蓝色或者淡紫色，而整个眼睛往往呈现红色，那是眼底血管中血液的颜色。<br>另外有一些突然变白的动物，虽然身体颜色很浅，但是眼睛（也就是虹膜）的颜色是正常的。这类变白的现象一般称为“白变症”（Leucism）。白变症是由于源自胚胎神经嵴的黑色素细胞本身缺陷造成的。机体中绝大部分黑色素细胞都源自胚胎的神经嵴，但眼睛中的黑色素细胞则是例外，因而白变动物的眼色是正常的。  </p>
+</blockquote>
+<p>白化蝙蝠好可爱！  </p>
+<hr>
+<div class="note warning"><p style="text-align:center; color:#F0AD4E">♕DEMO/未完成作品，包含设定♕ </p></div>
+
+<h1 id="toc_0">目前目标：以卢瑞恩视角的“醉酒”场景写一个小短篇</h1>
+
+<p>看了马戏之王之后突然想尝试一下<br>
+“反派”类型的卢瑞恩<br>
+不过很有可能进不到正设</p>
+
+<p>大概就是 卢瑞恩作为一名上流社会的画家 很瞧不起这种低端的魔术把戏，认为这个不是真正的艺术。并且因为小时候目击过某次事件，对法师们有点偏见 这次他借口作画灵感到剧团观摩，其实是想方设法找出/搞出丑闻，把剧团搞垮</p>
+
+<p>描写片段包括剧团聚会时卢瑞恩给陛下灌酒然后陛下喝醉了送陛下回房间，主要是想套他的话，恩，没有别的意思。卢瑞恩选择陛下是因为他看起来很好骗，害。</p>
+
+<p>(（）)</p>
+
+<p>“这杯，敬有勇气活下去的虫子。”<br>
+卢瑞恩在格林的眼中寻找着什么，却只看到了一如既往的戏谑。他有时完全分不清对方是在演出还是在生活。或者这两者于他而言，完全纠缠不清。<br>
+他回了一个微笑，举起杯子。<br>
+“我注意到您对我们的‘白雪公主’很感兴趣。”<br>
+“…这是你们给他的称呼？”<br>
+“哦，”他看向摩挲自己袖口纹路的沃姆，“当然不。”<br>
+“你不觉得他很像一位公主吗？美丽又弱小，公主们的特质之一。”<br>
+“你们就没有想过让他变得正常一点？”<br>
+“正常？”“您又觉得什么是‘正常’呢？”<br>
+“…即便他性格内向，”他走到沃姆面前，伸出爪子，“…基本的社交行为，他甚至一点反应都没有。”<br>
+沃姆的动作停滞了一下，他的黑眼睛盯着卢瑞恩伸出的爪子。<br>
+“对一只已经羽化的雄性虫子而言，‘公主’实在不是一个褒义词吧？”<br>
+“…那您可能不知道他‘不正常’的样子，‘正常’对他而言又意味着什么。”<br>
+“我不会强迫他去做他不喜欢的事，我希望您也能如此。”<br>
+卢瑞恩把爪子收了回去。<br>
+“…我甚至从来没有听过他开口说话。”<br>
+“他的声音很好听，就是有些五音不全。”他颇为遗憾地摇着头。<br>
+卢瑞恩突然有种被冒犯的感觉，“…你们一直都是这样？他只和你说话？”<br>
+格林笑了，“你想和他聊聊？他从来没有和外人说过话。”<br>
+“还是说我必须需要一位翻译？”他看向沃姆，被谈论的对象一直把玩着爪子里白色的小能量球，似乎丝毫没有意识到自己正在被讨论。<br>
+“先生，如果你想从他身上寻找灵感，我可以告诉你关于他的一些事。”<br>
+“谢谢，我想直接和他交流。”<br>
+格林打量卢瑞恩一番，“…我可以问问他。”<br>
+于是他轻轻搭上沃姆的肩，俯下身说了些什么。<br>
+沃姆用那双黑眼睛看向自己的时候，卢瑞恩突然感到一阵畏缩。从刚刚开始，那种莫名的“被冒犯的感觉”一直占了上风，似乎是让他有些口不择言了。说起来，他为什么一定要和这种虫子正面对峙呢。他琢磨着对方的表情，想找出其中哪怕一丝不情愿的暗示。<br>
+沃姆将目光收回到他们之间的地面上。<br>
+“他同意了。”格林宣布，然后露出一个微笑，“不过我还是希望您不要太为难他。”<br>
+“…他说话了吗？”<br>
+“当然，您只是没有听见罢了。”<br>
+他轻轻拍了拍沃姆的背，这让对方的身体有些许紧张，“去吧沃姆，没事的。”<br>
+沃姆转过头望了望团长，动作有些僵硬地走到卢瑞恩面前。<br>
+“……”他低头不语，直直地盯着自己的爪子。<br>
+他带着纯白色的皮质手套，不过这并不新奇，他全身的衣物都是纯白色的。这让他在表演的过程中十分引人注目。<br>
+注意到卢瑞恩的视线，沃姆把爪子缩进了袖子里。<br>
+“你要学着和他交流，亲爱的。”格林喝完杯中的酒，转身离开。<br>
+一时间，卢瑞恩不知道这句话是对谁说的。<br>
+沃姆的视线又追随起格林离去的身影，卢瑞恩皱起眉。<br>
+“…哦对了，”格林回过头，“沃姆只喜欢喝果啤。”<br>
+卢瑞恩暗自吃惊，他确实有灌醉某只虫子来套取情报的计划，格林看似无意的“配合”反而让他有些犹豫。他是不是已经注意到了自己真实的目的？但如果是，他又为什么会默许他？<br>
+…或者，他别有用意？<br>
+“…你喜欢甜食？”卢瑞恩发问的时候，沃姆仍在盯着在远处谈笑风生的马戏团团长。他晃了一下神，转回头，似乎刚注意到卢瑞恩的存在。<br>
+他有些不耐烦了，“你和他什么关系？”<br>
+他似乎想要说话，但终究只是盯着卢瑞恩的爪子看。<br>
+卢瑞恩抬起自己的爪子，“…有什么好看的？”<br>
+“你讨厌我。”<br>
+“…什么？”<br>
+一阵沉默。<br>
+“你刚刚说话了吗？”<br>
+“你的语气很冷。”“而且你的眼神里满是厌恶。”<br>
+“……”格林说的没错，他的声音的确很好听。<br>
+“前天，你刚踏入这里的时候，我就已经看到了，厌恶的表情。”<br>
+“你一边表达着赞叹，一边拽紧自己的衣袖，和我们一点点的接触你都会皱起眉毛。你看向我们的眼神就像看着路边流浪的宠物。团长一定也注意到了，他是只聪明的虫子。”<br>
+“还有昨天……”<br>
+“…你想说什么？”<br>
+“我知道你讨厌我们，所以我很好奇，你为什么想要了解我。”<br>
+“…我只是来这里寻找灵感。”<br>
+“所以，我只是一个工具。”<br>
+“我可没有那么说。”<br>
+“……”<br>
+“…咱们先坐下吧。酒保，一瓶果啤，一瓶白酒。”<br>
+果啤的酒精浓度太低了，他估计要花费更长的时间。<br>
+“……我承认，我不太喜欢你们，因为…之前的一些事情。但是我…”<br>
+沃姆的黑眼睛紧紧盯着卢瑞恩的一举一动。<br>
+“…我对你很感兴趣。”卢瑞恩尝试着将话题引向自己擅长的方向。“你很特别。我从来没有见过通体白色的虫子。‘纯色’并不完全和外表的颜色挂钩，但是你…完全就是‘纯白色’的象征。”<br>
+“你也喜欢白色？”<br>
+“谁不喜欢白色？画作中的点睛之笔。”<br>
+“我恨白色。”<br>
+“……”卢瑞恩把两个酒杯分别倒满。<br>
+“…你是个画家，对吗？”<br>
+“我很羡慕你，可以触碰那么多颜色。”<br>
+“而我…”<br>
+“比起完成的那一刻，我更喜欢看着空白的画布。”<br>
+“对新生作品的幻想，以及可以创作的无数种可能性。”<br>
+“看着空白的画布上想象是我最放松的时刻，一旦落笔，就要受限于想象和画笔的同步了…”<br>
+沃姆的眼中映着吧台的暖色光芒。<br>
+“…你喜欢画画吗？”<br>
+“我…试着画过。</p>
+
+<p>“当你向我伸出爪子的时候，我想起了格林团长。”他又看向卢瑞恩蓝灰色的爪子，“…那是我和其他虫子的第一次接触。”<br>
+“他向我伸出了爪子，纯黑色的。”<br>
+<em>接触的一刹那，白色就如同滴入水中的溶液一般在他的爪尖晕染开。</em><br>
+<em>格林明显地退缩了，他猛地放开了紧握着的爪子。</em><br>
+<em>面前的爪子孤零零地停留在半空中，白色的虫子茫然地看看它，又看看格林。酸痛感让他缓缓收回了自己的手臂。</em><br>
+<em>格林突然又伸出爪子，这次，他的用力更加明显。</em><br>
+“但是他并没有放开我。他把我拉进了他的怀里。我很害怕，看着他黑色的衣服逐渐被染成白色…还有他的右爪。”<br>
+“我很害怕，想推开他，但是他并没有放开我。”</p>
+
+<hr>
+<div class="note danger"><p style="text-align:center; color:#D9534F"> ♕下文涉及剧透♕ </p></div>
+
+<h1 id="toc_1">以下是设定</h1>
+
+<p>改名：纯白色的魔术师/或其他</p>
+
+<p>需要起名的名词：<br>
+团长的剧团：色彩剧团？纯彩剧团？<br>
+色彩的孤儿们：纯色？色彩孤儿？纯粹？Pure？<br>
+掌握了一定色彩法术但不至于危害社会的色彩法师：色彩法师？颜色法师？；（色）法师（中性）？绘师（褒义）？<br>
+色法师们的反对者：将他们称之为“异常”，应当被送往研究所“调制”。<br>
+色彩的调和：一般色彩的传递只是叠加，调和是禁术，因为这种科技会生成“纯色”，以及新的颜色。这种科技只允许某些高层机构掌握。被称作调和师（心理医生）。<br>
+“色彩”只是一个概念，并不完全对应外表的颜色。<br>
+或者说和颜色毫无关系，只是影响到法术的内容。</p>
+
+<p>概念点：</p>
+
+<p>1.陛下是纯白色的象征，他的“法术”主要包括直接接触任何东西都会将它们变成白色（动效类似于水的渗透），这个是被动的技能，因此陛下总是用长袍和兜帽将全身包裹的严严实实，并且他讨厌炎热的感觉。（这是他对卢瑞恩说的第一句话）<br>
+这个被动技能的消除是说出陛下的名字，如果某个东西说出了他的名字，并且陛下给予了回应，这个被动技能的效果就不会再作用于那个物体，类似于被陛下“acknowledged”。<br>
+第二个法术是运用灵魂形成各种实体，以及将其注入到无生命物体中进行操控。<br>
+陛下成为“纯色”的原因是他的父母都是白色系，导致陛下在没能获取其他颜色的情况下，用灵魂法术吸走了父母的灵魂，杀死了自己的父母。这也是白色系家族禁止通婚的原因，被称作“白色诅咒”。<br>
+刚出生的孩子很有可能滥用色彩法术，所以需要尽快让他们接触不同的颜色，否则很有可能节外生枝。<br>
+白色系的人可以通过燃烧吸取的灵魂获得生命的能量，因此陛下独自在无人的公寓里长大羽化，变成了“纯色”。</p>
+
+<p>2.团长是纯彩剧团的团长，相当于孤儿院院长。他是纯红色的象征，主要法术是各种火魔法。他和其他“孤儿”们不一样，是比较会来事的类型，因此算是“孤儿”们与外界沟通的唯一桥梁。他一直在照顾着大家，使他们在这个世界上有立足之地。</p>
+
+<p>3.卢瑞恩是一个初出茅庐的画家，他很喜欢色彩剧团的演出，每场都会去看，也会根据各位色彩“孤儿”创作各种画作，他尤其喜欢陛下，画了很多和他有关的画。</p>
+
+<p>4.世界观设定。色彩的法术，将每个人比喻成一张纸的话，普通人，也就是没有法术的人，他们的纸是多彩的，有着不同的颜色；而色彩“孤儿”们的纸则只有一种颜色。颜色的产生和传递在刚出生的幼虫期进行，羽化后成型。传递是指和其他人的社交行为，每进行一次社交，纸上就会出现一部分对方的颜色。每个人刚出生的时候，在思维诞生的那一刻，色彩就会出现，遗传自父母双方各自颜色最大的两种颜色，在和父母的相处过程中就又有了不同的颜色，除非社交的两人色彩相同。<br>
+颜色越纯，意味着对应的颜色法力（也被反对者们称之为异常）越高，同时有多种颜色存在时，只取面积最大的颜色。<br>
+有法力的人在剧团成立之前是被排斥的，因为他们远离社会，能力还会引起很多麻烦。甚至有一段时间开始了抓捕收容甚至处刑行动。团长作为混的最好的颜色法师，开办了色彩剧团，其实是个收容所，将他们的能力转化为魔术的形式来为社会提供娱乐。<br>
+每个人的色彩对应着色彩理论。</p>
+
+<p>5.其他角色。辐光和虚空可以重点关注，其他的是跑龙套。<br>
+辐光是团长的妹妹，纯金黄色的象征。是一只灰乎乎的小蛾子。刚刚羽化，只是一只小蛾子，总是昏昏欲睡，能力是发光发热，类似于冬季暖手宝。<br>
+虚空是纯黑色的象征，没有固定的外形，交流困难，对辐光莫名的不喜欢，能力是变形、寄居和吞噬光。<br>
+乌恩是纯绿色的象征，能力是生草。<br>
+乔尼（？）是纯蓝色的象征，能力是水魔法（？）</p>
+
+<p>文章开头：<br>
+你会用什么来形容白色？纯真？洁净？还是冷漠？疫病？<br>
+类似这样。<br>
+是卢瑞恩在想自己作品的创作介绍。</p>
+
+<p>到后期可以有卢瑞恩教陛下画画的场景，就抓着陛下的爪子点星星什么的，或者和陛下一起研究陛下染白的能力可以搞出什么创作。</p>
+
+<p>“…这幅夜景真美。”<br>
+“不，还差个点睛之笔。”卢瑞恩抓起沃姆的爪子，顺势要把爪子上的爪套摘下来。<br>
+沃姆下意识地抽出爪子，但被对方紧紧握住。<br>
+“相信我，放轻松。”<br>
+“……”<br>
+卢瑞恩想象着运笔的感觉，小心抬起沃姆的爪尖，让它轻轻划过画布。<br>
+“你说过想要触碰这些色彩，感觉怎么样？”<br>
+极光的光幕中划过一道白色的流星，坠向地平线。</p>
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/cf86.html">白色魔术-设定+Demo</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2021年01月14日 - 12:48</p>
+ <p><span>最后更新:</span>2021年09月18日 - 13:28</p>
+ <p><span>原始链接:</span><a href="/p/cf86.html" title="白色魔术-设定+Demo">https://mebilychen.github.io/p/cf86.html</a>
+    
+ </p>
+ <p><span>许可协议:</span>除非文章内另行声明，遵守 cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script data-pjax> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E5%90%9B%E8%87%A3%E7%BB%84/" rel="tag"><i class="fa fa-tag"></i> 君臣组</a>
+              <a href="/tags/%E8%AE%BE%E5%AE%9A/" rel="tag"><i class="fa fa-tag"></i> 设定</a>
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E6%A0%BC%E6%9E%97/" rel="tag"><i class="fa fa-tag"></i> 格林</a>
+              <a href="/tags/%E5%8D%A2%E7%91%9E%E6%81%A9/" rel="tag"><i class="fa fa-tag"></i> 卢瑞恩</a>
+              <a href="/tags/%E7%99%BD%E8%89%B2%E9%AD%94%E6%9C%AF/" rel="tag"><i class="fa fa-tag"></i> @白色魔术</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/dc54.html" rel="prev" title="脱粉现场">
+      <i class="fa fa-chevron-left"></i> 脱粉现场
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/61db.html" rel="next" title="寄生虫">
+      寄生虫 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%99%BD%E5%8C%96%E4%B8%8E%E7%99%BD%E5%8F%98"><span class="nav-text">白化与白变</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#toc_0"><span class="nav-text">目前目标：以卢瑞恩视角的“醉酒”场景写一个小短篇</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#toc_1"><span class="nav-text">以下是设定</span></a></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar3.jpg">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">155</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">54</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">161</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjEwMTM3MTIxMjdAcXEuY29t" title="E-Mail → mailto:1013712127@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9tZWJpbHkxMzE0" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      猜猜这是什么鬼地方？
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9tZWJpbHljaGVuLmxvZnRlci5jb20v" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;">LOFTER</span>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/p/e3a422.html" title="p&#x2F;e3a422.html">【参考】衣|料专版</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/4eb5.html" title="p&#x2F;4eb5.html">遗书</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ce0f2.html" title="p&#x2F;ce0f2.html">Dreamily.AI专场</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/b6c1.html" title="p&#x2F;b6c1.html">关于动保和动不动就保和虐杀</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/754d1.html" title="p&#x2F;754d1.html">《致咩碳》</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/300011.html" title="p&#x2F;300011.html">【#快乐王子】HP开题Demo&记录</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/190c3.html" title="p&#x2F;190c3.html">【角色研究】关于沃姆</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/p/24b8.html" title="p&#x2F;24b8.html">【日常】虫虫和虫虫和虫虫们</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/190c3.html" title="p&#x2F;190c3.html">【角色研究】关于沃姆</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/d846.html" title="p&#x2F;d846.html">【歌单】歌曲开荒</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">1.6m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">23:53</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "站子已虔诚祈祷 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+     //'.site-meta',
+    //'.site-nav',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>

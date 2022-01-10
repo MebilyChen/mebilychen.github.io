@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="枪弹辩驳">
+<meta property="og:type" content="article">
+<meta property="og:title" content="成为逻辑大师，但害怕辩论">
+<meta property="og:url" content="https://mebilychen.github.io/p/f14a.html">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:description" content="枪弹辩驳">
+<meta property="og:locale">
+<meta property="og:image" content="https://i.loli.net/2021/08/12/aIVMHYimRhfDkWl.jpg">
+<meta property="article:published_time" content="2021-05-04T11:36:00.000Z">
+<meta property="article:modified_time" content="2021-12-14T12:54:22.782Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="积累本">
+<meta property="article:tag" content="辩论">
+<meta property="article:tag" content="逻辑">
+<meta property="article:tag" content="谬误">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/08/12/aIVMHYimRhfDkWl.jpg">
+
+<link rel="canonical" href="https://mebilychen.github.io/p/f14a.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : '中文'
+  };
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    
+      if (NexT.utils.hasMobileUA()) return;
+    
+    let time, hidden, visible, title = document.title;
+    let favicon = document.querySelector('link[rel="icon"]');
+    
+      hidden = ["盯————","*探*","?","......","*观察*"];
+      visible = ["*偏转视线*","*缩*","*强装镇定*","！","*低头*"];
+    
+    let random = t => t[Math.floor(Math.random() * t.length)];
+    const change = () => {
+      if (document.hidden) {
+        favicon.setAttribute('href', '/images/favicon-32x32-king-black.png');
+        
+          document.title = random(hidden);
+        
+        clearTimeout(time);
+      } else {
+        favicon.setAttribute('href', '/images/favicon-32x32-brand-black.png');
+        
+          document.title = random(visible);
+        
+        time = setTimeout(() => {
+          document.title = '碳素的小作坊';
+        }, 1000);
+      }
+    }
+    document.addEventListener('visibilitychange', change, false);
+  });
+</script>
+
+  <title>成为逻辑大师，但害怕辩论 | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;调谐中...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">161</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">54</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">155</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-image fa-fw"></i>画廊</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/random.html" rel="section"><i class="fa fa-question fa-fw"></i>抽</a>
+
+  </li>
+        <li class="menu-item menu-item-lang">
+
+    <a href="/en/" rel="section"><i class="fa fa-globe fa-fw"></i>->English</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-17081-597255-1305127431.cos-website.ap-hongkong.myqcloud.com' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/f14a.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          成为逻辑大师，但害怕辩论
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-05-04 19:36:00" itemprop="dateCreated datePublished" datetime="2021-05-04T19:36:00+08:00">2021-05-04</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2021-12-14 20:54:22" itemprop="dateModified" datetime="2021-12-14T20:54:22+08:00">2021-12-14 20:54:22</time>
+                </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A2%B3%E9%85%B8%E7%9A%84%E6%B1%82%E7%94%9F%E4%B9%8B%E8%B7%AF/" itemprop="url" rel="index"><span itemprop="name">碳酸的求生之路</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A2%B3%E9%85%B8%E7%9A%84%E6%B1%82%E7%94%9F%E4%B9%8B%E8%B7%AF/%E5%B0%86%E4%B8%8A%E4%B8%8B%E8%80%8C%E6%B1%82%E7%B4%A2/" itemprop="url" rel="index"><span itemprop="name">将上下而求索</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>7.5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>7 分钟</span>
+            </span>
+            <div class="post-description"><center>枪弹辩驳</div>
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%A7%AF%E7%B4%AF%E6%9C%AC/" rel="tag"><i class="fa fa-tag"></i> 积累本</a>
+              <a href="/tags/%E8%BE%A9%E8%AE%BA/" rel="tag"><i class="fa fa-tag"></i> 辩论</a>
+              <a href="/tags/%E9%80%BB%E8%BE%91/" rel="tag"><i class="fa fa-tag"></i> 逻辑</a>
+              <a href="/tags/%E8%B0%AC%E8%AF%AF/" rel="tag"><i class="fa fa-tag"></i> 谬误</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p>镇楼</p>
+<p><img data-src="https://i.loli.net/2021/08/12/aIVMHYimRhfDkWl.jpg"></p>
+<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><blockquote class="blockquote-center">
+            <i class="fa fa-quote-left"></i>
+            <p>“拥有极度抑郁和绝对理性的人是神”</p>
+
+            <i class="fa fa-quote-right"></i>
+          </blockquote>
+
+<p>理性讨论，虽然我很想，但是造成抑郁的原因有很多种，对于这个我没调研过，所以以下结论纯属基于个人经历和猜测：</p>
+<hr>
+<p>神：神，单个人类永远无法，也不应企及…具体定义太复杂了  <br>人：人  <br>极度抑郁：生活无望，抑郁的最终形态<br>绝对理性：没有欲望、没有感情<br>绝对理智：加上智商  <br>对这句话的理解：字面意思，但感觉有点抬高抑郁症的意思  <br>目的/驱动力：抑郁症没什么了不起的，某些人夸大得过分了</p>
+<hr>
+<p>首先我认为，感性和理性，这两个思考方式大类在人做决定的时候一直处在拉锯状态，最终影响决定的一方就代表着它的胜利，但不代表另一方没有参战。绝对理性和外在表现的“绝对理性”是不同的概念。<br>我直觉抑郁成因是因为对感情的极度敏感和无法控制导致的，抑郁等同于极度感性，是感性压倒理性的结果。一个绝对理性、没有感性的人不可能抑郁，因为他只会用事实说话，不会进行任何感情上的加工。  </p>
+<div class="note primary"><p style="color:#7042C1"> 不只是感情，其实理性也有参与。因为N会倾向于用理性总结归纳，忽略现实和当下，想着想着就虚无主义了，然后理性（指逻辑）再添一把火，和感性第一次达成共识：跳吧。 </p> </div>
+
+<p>例，事实“他正在骂我，言辞激烈，让我滚蛋”+自我目的“赚钱养家”=理性“我工作没做好，他对我不满意。为了保住工作，我会等他心情平复后尝试进一步沟通，如果失败，就去寻找下一份工作…”而不是感性“我工作要没了，我前途无望，该怎么和妻子孩子交待…人活着有什么意义，整天寄人篱下，拍领导马屁，我的一切努力都是白费的，寒窗苦读十二年，我只是在为了继续寄人篱下而努力活着，一个低贱的社畜，在污泥里永远抬不起头，不如重来一遍人生…”甚至“领导真tm sb，之前就看我不顺眼，正好老子不干了”<br>绝对理性的人不会抑郁，但不代表抑郁的人不会成为“绝对理性”的人。<br>类比，“共情能力低”的人，不一定真的是共情能力低的人，也有可能是共情能力高的人，见惯了情绪闹出各种的笑话，累了，怕了，懒得附和别人了，从而产生了“免疫”，外在表现出“共情能力低”。<br>同理，现实生活中大概率不存在绝对理性的人，但有一种可能，在这种可能性里他只是表现出“绝对理性”，而不是感性低。他也有可能是为了活下去，为了抗衡感情这个野兽，努力用理性的缰绳防止它的下一次越狱。这样的人，感性越强大，理性就越强大。但每次野兽挣破牢笼，却又无法阻止地陷入抑郁之中。抑郁的人，也有可能拥有相对的“绝对理性”，甚至可以利用它来走出抑郁。<br>这句话里说神的两个特性，有人可能是想指：</p>
+<ol>
+<li>不食烟火；</li>
+<li>极限洞察力。</li>
+</ol>
+<p>抑郁的人不能等同于不食烟火。神会抑郁吗？他不会，因为他没有欲望，没有感情。普通抑郁中“对任何事物都不感兴趣”的特点，并不等同于不食烟火，差的远呢。 <strong>我认为（有待讨论），抑郁症成因的根源（之一）是因为“欲望得不到满足”，根源如此，更无法证明“不食烟火”，这只是一个因为无法不食烟火而造成的“不食烟火”表象而已，除非一个人天生激素分泌出了问题，包括遗传因素，造成他无法控制地进入抑郁状态，还可以再讨论一下。</strong> 用理性来等同于洞察力，虽然感觉还差点什么，但我这里就不展开说了。</p>
+<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><ol>
+<li>这句话乍一看有点意思，属于get一下就好的句子，但要求论证是错的，只是从定义——假设该句话的目的只是给出定义，不包括情感目的——的角度来看，可行性自相矛盾。不想展开绝对理性，只说极度抑郁：极度抑郁是感性状态，绝对理性是思考方式，单独拿出感性状态中表现出的一个思考方式指代整个定义、而屏蔽其它因素进行讨论，是不妥当的；改题及偷换概念，是不妥当的，如果真的想要理性讨论该题是否正确，护法师可以省省了，你即便改题后自证成功，也不能证明原题的正确性；插一句，什么都拿抑郁症做挡箭牌，抑郁症也很“无辜”；</li>
+<li>抑郁的人可以存在相对的“绝对理性”，只是在抑郁状态没有展现出来罢了，在某种意义上两者确实可以共存，但（基本上）无法同时激活；</li>
+<li>该句话中提出的人既不存在，也不是神，在座的各位都不可能成为神，最基本的，即便有科技加持，目前的人还不具备成为神的责任意识和思想准备；</li>
+<li>想和护法师理性讨论这句话的人，可以要求以下定义：神、人、极度抑郁、绝对理性、对该句话的理解、讨论目的。</li>
+<li>抑郁症不值得骄傲，也不必自卑，何必跳脚，付出不一定都有表面上的“回报”。想用抑郁博取关注，证明什么，可以理解，但也会有换来嘲讽的可能，自己的选择，做好相应准备，但还是希望不要影响人们对抑郁症群体的认知。最后，抑郁症和智商以及能力没有 <strong>必然联系</strong> ，呢，然后，逻辑，嘿嘿。</li>
+<li><strong>【bonus】</strong> 既然要求别人不妄下定论，护法师为什么也在下定论？别人因为你a时间点的发言a1而做出反驳a2，你不可以在b时间点通过对a1的言论进行条件补充b1来反驳a2，更何况这个b1还是人家的a2…好吧，这个我是真没搞懂，不强装懂了；这句话强行将神和抑郁症联系在一起，从而让部分人达到自我gc的效果，抑郁症群体并不都会如此，大家也理解一下，护法师也省省吧。<br>没意思了，不翻了，情感已经得到满足，我归到我站子里去。</li>
+</ol>
+<h3 id="学到的东西："><a href="#学到的东西：" class="headerlink" title="学到的东西："></a>学到的东西：</h3><p>就是，理性讨论辩题的时候，要警觉对方引入的任何新概念。日常讨论的时候，要明确对方讨论的根本目的。感觉可以对辩论节目和活动加一下关注，旁观一下，学一下辩论技巧，还有辩论和逻辑这一块的培养，安排一下，争取能够不仅发现逻辑谬误，也能指出是何谬误。</p>
+<h3 id="检讨："><a href="#检讨：" class="headerlink" title="检讨："></a>检讨：</h3><p>为什么感到被冒犯呢，  </p>
+<ol>
+<li>因为抑郁并不是值得骄傲的事。理解想让抑郁症受人关心，但现在的风气太邪乎了，什么“抑郁的人很厉害”，动辄就是“我有抑郁症”，现在真的有抑郁症的人都无法真的“抑郁症”了，因为“人人都有抑郁症”。  </li>
+<li>翻网抑云是我的错，以后不敢了。   </li>
+<li>我现在没有感到自己有抑郁症，所以任何对于抑郁症的过分抬高就相当于是在贬低如我一般的普通人。  </li>
+</ol>
+<hr>
+<h3 id="吐槽："><a href="#吐槽：" class="headerlink" title="吐槽："></a>吐槽：</h3><p>那双相岂不是更厉害，一阵抑郁一阵躁狂，快去得一下双相吧，过山车很爽哦。还可以说自己小时候孤独症，更加贴近“不食烟火”的“神”呢。再有某些想要用抑郁症证明自己高智商的人，建议吹一下自己LLI吧。至少你们也分个流，不要只霍霍抑郁症啊。</p>
+<hr>
+<h3 id="最终回复："><a href="#最终回复：" class="headerlink" title="最终回复："></a>最终回复：</h3><p>极度抑郁是感性状态，绝对理性是思考方式，单独拿出感性状态中表现出的一个思考方式指代整个定义、而屏蔽其它因素进行讨论，是不妥当的。这句话强行将神和抑郁症联系在一起，从而让部分人达到自我gc的效果，抑郁症群体并不都会如此，大家也理解一下，护法师也省省吧</p>
+<hr>
+<h1 id="逻辑谬误的判断与批判"><a href="#逻辑谬误的判断与批判" class="headerlink" title="逻辑谬误的判断与批判"></a>逻辑谬误的判断与批判</h1><blockquote>
+<p>对辩论节目和活动加一下关注，学一下辩论技巧，还有辩论和逻辑这一块的培养，争取能够不仅发现逻辑谬误，也能指出是何谬误，还能进行批判和反驳。</p>
+</blockquote>
+<p>我感觉我总是找不到逻辑谬误，就是被感情、语义冲昏头脑，就。很难。尤其是偷换概念，我总是找不出来。可能是因为我对概念了解的不太深刻。  </p>
+<h2 id="文献收集"><a href="#文献收集" class="headerlink" title="文献收集"></a>文献收集</h2><p>逻辑可以是线性的，平行的，环形（悖论）的，嵌套（套娃）的。</p>
+<h3 id="CS导向逻辑"><a href="#CS导向逻辑" class="headerlink" title="CS导向逻辑"></a>CS导向逻辑</h3><p>这个是CS的，不是那种“佛系逻辑”。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9icmlsbGlhbnQub3JnLw==">brilliant.org<i class="fa fa-external-link-alt"></i></span></p>
+<iframe src="//player.bilibili.com/player.html?aid=62836376&bvid=BV11t411N7LR&cid=124697880&page=4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<h3 id="碎片知识"><a href="#碎片知识" class="headerlink" title="碎片知识"></a>碎片知识</h3><blockquote>
+<p>杠精向你发起争论的诉求，本就不是要厘清事实的真相，而是为了树立权威。</p>
+</blockquote>
+<p>或者是为了厘清她认为的事实的真相。  <br>反正我现在是不想争了。她跟我争我也不想争了，一个是我发现我可能确实没她见识多，另一个是我想自己去了解根基知识，而不是通过别人的言语加工。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC82NTQ4ODU4MQ==">15谬误<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly93ay5iYWlkdS5jb20vdmlldy8yMzVlODQ0MTExNjYxZWQ5YWQ1MWYwMWRjMjgxZTUzYTU4MDI1MWI2">24谬误<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC85NjA2NTM1MQ==">常见谬误及其批判方法<i class="fa fa-external-link-alt"></i></span><br>看到的一个还算可以的up主：<br><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUJKNDExcTc2ai8/c3BtX2lkX2Zyb209MzMzLjc4OA==">开心嘴炮<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="奇葩说"><a href="#奇葩说" class="headerlink" title="奇葩说"></a>奇葩说</h3><p><span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8zMDQwMDY2Njc=">知乎-奇葩说辩题汇总<i class="fa fa-external-link-alt"></i></span></p>
+<h4 id="“救猫救画”"><a href="#“救猫救画”" class="headerlink" title="“救猫救画”"></a>“救猫救画”</h4><p>其实是一个价值观问题。我觉得画的价值高于猫，所以我选择救画。  <br>然后我其实很不爽那个李诞说的“比画更美的是在燃烧中的画”“比微笑更美的是不再存在的微笑”。  <br>这个，咋说，虽然我挺能get到他意思的，但是，或许是我更想让这句话由我说出来吧，就感觉，他似乎比我艺术修养更高似的，让我很不爽。  <br>他的意思大概就是通过“因为救猫导致画被烧毁”这一行为，达成了另一个艺术。  <br>（相当于有人把“救猫导致画被烧毁这个场景”画进了另一幅画里）  <br>其实我不爽的主要就是在于他能说出这句话，就相当于他能算出1+1=2，而我却没算出来（因为我绝对会去救画，并且不能理解为什么要去救猫）。  <br>然后他这话一出来，显得我好像本来自诩为“喜爱艺术之人”还不如“不懂得欣赏艺术的愚钝之人”更懂得艺术一样。  <br>啊但是其实也不能这么说啊，我想救画，是因为我认为它价值更高，只能证明我的价值观里猫不如画，我更倾向于重视艺术的价值；而他们呢？且不说救猫的时候是不是真的考虑到了“被烧掉的画本身就可以成为另一种艺术，人性的艺术”，而只是单纯的觉得艺术不如猫有价值，第一反应救猫的，有多少是在抱着“这是另一种艺术”的觉悟去放弃画的，他们真的是足够理解了“这幅画的艺术价值”而意识到它不如“我救猫不救画这个行为艺术价值”高吗？  <br>对，要讨论的就是“这幅画的艺术价值”（包括各类人文研究）和“拯救猫的生命而使得这幅画被烧毁这个行为艺术（可以说体现出人性）的艺术价值”究竟谁高，这样的话辩题就转到“如何界定艺术价值（包括其他方面）”了。这就要求对《蒙娜丽莎》和艺术有足够的了解。  <br>转换一下，其实可以改成“牺牲人类对于原子力学的知识，来换取一只猫的生命”这样。  <br>我还是觉得大部分选择救猫人是不懂得艺术的价值的。因为不懂，所以他们觉得一只猫都比一幅画珍贵。因为他们只懂得救一个生命，生命会活；而不懂得救了画，救活的不是生命，而是超脱生命的东西。有些人把“救猫”引申成“人性”和另一种“价值”，哈哈，其实也是生命不如价值的暗示嘛。  <br>不好意思，我就是觉得懂艺术的人比普通人更nb。不如说，懂得知识的人比不懂得知识的人更nb。  </p>
+<h3 id="《批判性思维教程》"><a href="#《批判性思维教程》" class="headerlink" title="《批判性思维教程》"></a>《批判性思维教程》</h3><p>收拾东西时突然发现我还有这本书。</p>
+<p>卧槽笑死我了：</p>
+<p>刮胡子的人可以分成两类，一类是自己给自己刮胡子的人，一类是找人给自己刮胡子的人。一个自己给自己刮胡子的理发师定了一道规矩：“给且只给找人刮胡子的人刮胡子。”有人问，那你给自己刮胡子吗？<br>理发师听了他的提问后陷入了困境。<br>（但随后说：“你是杠精吗？”）</p>
+<p>一条鳄鱼抢了一个母亲的娃，并问道：“我会不会吃掉你的孩子？你答错了我就会吃掉他，你答对了我就把他还给你。”母亲答：“你会吃掉他。”<br>鳄鱼听了她的回答后陷入了困境。<br>（但随后吃掉了她的孩子又吐了出来。）</p>
+<p>凡是来x国的游客都要回答一个问题：“你来这里做什么？”说真话便会放行，说假话就会被绞死。一日，一个旅者说：“我是来被绞死的。”<br>卫士听了他的回答后陷入了困境。<br>（但随后说：“请吧？”）</p>
+<p>看到有人说用概念对称逻辑解悖论：<br>比如鳄鱼那个，“会不会”是心理状态，“吃掉”和“放过”是行为。心理状态和行为可以不存在矛盾。可以通过限制时间和概念来解。应该猜“你会把儿子吃掉。”这样就猜对了鳄鱼的心理状态，而使鳄鱼必须把儿子还给他。</p>
+<p>同理，游客那个，“来做什么”是计划，“做了什么”是行为。两者不同也可以不矛盾。游客答“我来被绞死”是计划，可以只验证他有没有这个计划。</p>
+<p>以上两例都是把“计划/心理状态”和“实际行为”混淆，且这两者有时间上的前后关系。</p>
+<p>还有一个说谎者的，是混淆了“真与假”和“对与错”的概念。在想这两个有什么区别？就是说一个命题，可以说它是错的？是假的？这两不一样嘛？那个作者说真假是对表述的判断，对错是对事实的判断，那我还可以反过来定义呢。假设a=a，这个是事实。我说a=b，那这是错的。我说“a=b是对的”，那这是假的？虽然能get到意思，但是我也可以说“a=b是对的”是错的、“a=b”是假（命题）啊。</p>
+<p>这个我用过诶！我也用过两个概念不对等来反驳别人。</p>
+<h3 id="滑坡谬误"><a href="#滑坡谬误" class="headerlink" title="滑坡谬误"></a>滑坡谬误</h3><p>用一连串都在夸大事实的逻辑链，导出一个不可能的结果。  </p>
+<h3 id="诉诸无知"><a href="#诉诸无知" class="headerlink" title="诉诸无知"></a>诉诸无知</h3><p>在辩论中的逻辑推理中，“我不知道”大多数情况下只能证明说话者无知，其他的什么都不能证明。<br>例：“这个没有被证明不存在/存在（因），所以它存在/不存在（不能推出这个果）”</p>
+<p>其实这也有经典非黑即白的谬误在里面：“它没有证明不存在，就是存在的”。  </p>
+<h3 id="假两难谬误"><a href="#假两难谬误" class="headerlink" title="假两难谬误"></a>假两难谬误</h3><p>二极管。以为只有限定的几个选项。  <br>不过经典的是“非黑即白”。  </p>
+<h3 id="诉诸感情"><a href="#诉诸感情" class="headerlink" title="诉诸感情"></a>诉诸感情</h3><p>就是把逻辑往感情上扯。  </p>
+<h3 id="诉诸虚伪"><a href="#诉诸虚伪" class="headerlink" title="诉诸虚伪"></a>诉诸虚伪</h3><p>也就是“What-aboutism”。<br>“谁没有用过盗版？”<br>这是一种转移话题的经典战术，通过指出对方的虚伪来偏离主题。<br>但它无法证明原话题的正误，也无法解决问题。  <br>这个的使用思路是，“既然你也有这个问题，你就没有资格来训斥别人。”通过将责任分配出去，以减少自身责任。 </p>
+<p>想了下，怎么回击这种“逻辑”。有人说这个不算是逻辑问题，因为它更像诉诸感情，这个“逻辑”从逻辑上来说是不成立的。<br>我想的是或许可以用人是在变化的来说。“虽然我曾经用过盗版，但我现在并不赞成使用盗版，因为我长大之后发现了这些产品背后都是有很多辛勤汗水”啥的。</p>
+<h3 id="含糊话和稻草人"><a href="#含糊话和稻草人" class="headerlink" title="含糊话和稻草人"></a>含糊话和稻草人</h3><blockquote>
+<p>“知乎”上的“不周山”：含糊话谬误和稻草人不一样，稻草人是直接扭曲对手的观点，缩减对手的论据，把对手放在有利于自己辩论的地步，从而达到攻击对手的目的。而含糊话是把不同语境的词放在一个语境里作为论据。我再举个例子，比如说“中国土壤孕育了儒家文化。甲公司的化污排泄污染了中国的土壤。所以甲公司污染了儒家文化。”这里“土壤”是指两个东西，一个指文化氛围，一个指实际的土壤。不能含糊在一个论据里。</p>
+</blockquote>
+<h1 id="推理小说"><a href="#推理小说" class="headerlink" title="推理小说"></a>推理小说</h1><p>啊！你叙诡！你作弊！</p>
+<h2 id="本格、变格和新变格"><a href="#本格、变格和新变格" class="headerlink" title="本格、变格和新变格"></a>本格、变格和新变格</h2><p>[Source:新浪一篇文章（不好意思给关掉了）]</p>
+<blockquote>
+<p>本格，就是推理为主线、内核，文字之间的价值均为其服务。推理解密为主体，离奇诡异为辅助的侦探小说。无论是怪诞的情节，诡异的氛围，离奇的手法和华丽而神秘的方式均是为谜题以及案件推理、案件解密服务的。淡化谋杀的血腥性，突出故事谜题和疑问。从整体来讲，本格是以推理解密，利用逻辑科学解决案件，以解开复杂的犯罪技巧和搜寻犯人为中心，推理元素是内核和主线。</p>
+</blockquote>
+<blockquote>
+<p>【夏洛克·福尔摩斯《福尔摩斯探案全集》，规规矩矩探案的典型案例，通过现实的舞台以及贴近人们生活的场景在现实中创造了许多奇妙的案件。本格也称正统推理，古典推理，这是一种来源于本源的西方文化中推理小说的原貌。用逻辑科学解决案件，以解开复杂的犯罪技巧和搜寻犯人为中心。】（也有说不是的）</p>
+</blockquote>
+<blockquote>
+<p>变格，以离奇、古怪、怪诞的事件为主导，以诡谲气氛营造与异常心理为主路线，描述的变态心理或是光怪陆离的惊悚故事。推理仅作为衬托元素服务于阴郁的主题，本质上不是完全的推理小说，只是拥有推理的展开以及推理辅助的情节，再加之阴郁、离奇、惊悚、恐怖的元素。故此对于变格，仅仅是披着推理外衣的惊悚心理小说，借助推理带有谜团性质的神秘感来衬托故事的阴暗氛围。变格是探索精神病状、异常心理为主题，并藉谜团手法来呈现惊奇感和意外性的小说（侦探小说评论家平林初之辅在论文《侦探小说文坛诸面向》言）。</p>
+</blockquote>
+<blockquote>
+<p>【江户川乱步《人间椅子》，一个制作椅子的工匠，出于对自己制作椅子的喜爱和对上流社会的向往。藏身于自己制作的椅子中，随着椅子来到了他的身份不可能到达的地方。坐在他身上的有各式各样的达官贵人，当然还有各种漂亮的女人。他靠自己的身体感受着这些女人的身体 ，这些他本不可能接触到的女人的身体。最后这竟然成为了他一种病态的嗜好。他最后迷恋上了佳子。最后不满足于躲在椅子里而是迫切的想见到她。并采取了行动寄出了表白信。但是故事以收到一封来稿说明，戛然而止。这小说描述变态心理，故事光怪陆离，猎奇口味可见一般。】</p>
+</blockquote>
+<blockquote>
+<p>新本格，脱离舞台以及场景的框架，在拥有完整逻辑结构的世界观中发生的以推理为主线之一的多线性故事。推理为主线但不仅仅有一条主线，并且故事的世界观可以架空虚构，但是必须在设定具有逻辑的基础上以现实科学的逻辑推理解决案件。</p>
+</blockquote>
+<blockquote>
+<p>【《替身》，夜见山北中学3年3班，三年之内就有可能出现已死之人回归，从4月开学以来一直持续伤害班级内的同学。如果不找到已死之人，诅咒就会一直持续，也就是一直会有人遭遇不行，女主深陷其中，于是必须找到已死之人结束诅咒打破谜题。有动漫也有小说，都是绫辻行人（超越师傅岛田庄司的男人）写的，故事舞台架空，结构设定控制在拥有死者回归上，以此为基础展开的案件推理解密。】</p>
+</blockquote>
+<blockquote>
+<p>本格是方程，变格是变态，新本格是方程中的变态。其实这就是新本格与本格的区别，本格像是经典力学或是高等数学有着各种假设和特殊性，场景极其的理想化，步骤有条不紊，程式化一般；新本格像是科幻作品有着奇怪的设定与背景内容，推理可以是现实的科学推理也可以是依据有逻辑无漏洞的设定展开的，然后解开谜题。</p>
+</blockquote>
+<blockquote>
+<p>变格则像是新本格的架空设定但又紧贴现实，人物心理扭曲，故事极度猎奇重口味，像是惊悚片披着推理的外衣在幽暗的氛围中诡异而扭曲的潜行。而且变格所表达的并不是我这个侦探多厉害，多聪明秒杀福尔摩斯什么的，而是注重表现罪犯的心理状态以及精神的情境，换句话这叫犯罪心理学。</p>
+</blockquote>
+<h2 id="我喜欢的类型"><a href="#我喜欢的类型" class="headerlink" title="我喜欢的类型"></a>我喜欢的类型</h2><p>一直认为推理小说是无解的。因为他重点在叙事。要拉着读者去破案，要有效果（如果读者自己破了案会没留多少印象）作者可能会藏线索，叙诡什么的，读者也没办法去互动，主动验证想法、所以我一直很被动啊！就根本没想着去思考。  <br>喜欢那种，脑筋急转弯式的，不要藏着掖着，要全部展露出来。但就是也不能太离谱太“作弊”。就是，要能有逻辑的。</p>
+<p>咩碳 20:08:51<br>我第一反应是看能不能推起源</p>
+<p>咩碳 20:09:29<br>起源大概有个印象出来之后 辅助着推细节</p>
+<p>咩碳 20:11:55<br>相当于大纲先有个把握 然后填细节 同时验证大纲</p>
+<p>咩碳 20:13:00<br>上来让我就看细节 我没有把握和自信 就不想去推</p>
+<p>咩碳 20:14:43<br>所以为啥会有这个动物园 什么样的世界下会有这个动物园 动物园里的人都是干啥的 之类的问题蛮重要</p>
+<p>咩碳 20:17:11<br>能不能跑出去 在这个世界怎么活命 对我来说都有点点细节问题了 就 是后面才能推</p>
+<p> 20:17:33<br>这个得倒着推</p>
+<p> 20:17:46<br>根据怎么跑</p>
+<p> 20:17:55<br>推动物园里大家都是干啥的</p>
+<p> 20:18:06<br>推动物园啥性质</p>
+<p> 20:18:11<br>推为啥会有动物园</p>
+<p>咩碳 20:18:25<br>所以我之前上来预设也是从“我以为动物园里都是受害者”这个角度出发的</p>
+<p>咩碳 20:18:43<br>然后你们是 这个才是后面推？</p>
+<p>咩碳 20:19:40<br>就我要是在游戏里 比较沉浸的话 对这个世界的认识就会自然的有个本质意义上的感受</p>
+<p>咩碳 20:20:29<br>对 就说这个后面不是说是错的了嘛</p>
+<p>咩碳 20:20:36<br>然后我就愠了</p>
+<p>咩碳 20:21:07<br>我就觉得你不说这条 我怎么推</p>
+<p>咩碳 20:22:05<br>咱们生活的世界也是一个沉浸体验</p>
+<p>咩碳 20:22:19<br>我就是自然而然用这个思路来的</p>
+<p>咩碳 20:22:35<br>先有一个感觉 然后验证</p>
+<p>咩碳 20:23:09<br>这东西我如果没有感觉 我就立不住脚 然后细枝末节我也不想去推这样</p>
+<p>咩碳 20:23:27<br>（感觉反正推出来是错的）</p>
+<p>咩碳 20:24:29<br>就要先定性 然后再细化验证</p>
+<p>咩碳 20:25:09<br>除非是死任务我会耐着性子去磕细节</p>
+<p>还有一点就是 如果我没有本质上的感受 我会觉得推这个理会很浪费时间</p>
+<p>咩碳 20:28:10<br>就 不知道要花费多少时间=很可能会浪费时间</p>
+
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/f14a.html">成为逻辑大师，但害怕辩论</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2021年05月04日 - 19:36</p>
+ <p><span>最后更新:</span>2021年12月14日 - 20:54</p>
+ <p><span>原始链接:</span><a href="/p/f14a.html" title="成为逻辑大师，但害怕辩论">https://mebilychen.github.io/p/f14a.html</a>
+    
+ </p>
+ <p><span>许可协议:</span>除非文章内另行声明，遵守 cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script data-pjax> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%A7%AF%E7%B4%AF%E6%9C%AC/" rel="tag"><i class="fa fa-tag"></i> 积累本</a>
+              <a href="/tags/%E8%BE%A9%E8%AE%BA/" rel="tag"><i class="fa fa-tag"></i> 辩论</a>
+              <a href="/tags/%E9%80%BB%E8%BE%91/" rel="tag"><i class="fa fa-tag"></i> 逻辑</a>
+              <a href="/tags/%E8%B0%AC%E8%AF%AF/" rel="tag"><i class="fa fa-tag"></i> 谬误</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/d5a0.html" rel="prev" title="【鉴】视听盛宴">
+      <i class="fa fa-chevron-left"></i> 【鉴】视听盛宴
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/48b5.html" rel="next" title="《诺瑟维尔大雪原》纪录片">
+      《诺瑟维尔大雪原》纪录片 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B5%B7%E5%9B%A0"><span class="nav-text">起因</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93%EF%BC%9A"><span class="nav-text">总结：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%A6%E5%88%B0%E7%9A%84%E4%B8%9C%E8%A5%BF%EF%BC%9A"><span class="nav-text">学到的东西：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E8%AE%A8%EF%BC%9A"><span class="nav-text">检讨：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%90%E6%A7%BD%EF%BC%9A"><span class="nav-text">吐槽：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%80%E7%BB%88%E5%9B%9E%E5%A4%8D%EF%BC%9A"><span class="nav-text">最终回复：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E8%B0%AC%E8%AF%AF%E7%9A%84%E5%88%A4%E6%96%AD%E4%B8%8E%E6%89%B9%E5%88%A4"><span class="nav-text">逻辑谬误的判断与批判</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E7%8C%AE%E6%94%B6%E9%9B%86"><span class="nav-text">文献收集</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CS%E5%AF%BC%E5%90%91%E9%80%BB%E8%BE%91"><span class="nav-text">CS导向逻辑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A2%8E%E7%89%87%E7%9F%A5%E8%AF%86"><span class="nav-text">碎片知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A5%87%E8%91%A9%E8%AF%B4"><span class="nav-text">奇葩说</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E2%80%9C%E6%95%91%E7%8C%AB%E6%95%91%E7%94%BB%E2%80%9D"><span class="nav-text">“救猫救画”</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E3%80%8A%E6%89%B9%E5%88%A4%E6%80%A7%E6%80%9D%E7%BB%B4%E6%95%99%E7%A8%8B%E3%80%8B"><span class="nav-text">《批判性思维教程》</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%BB%91%E5%9D%A1%E8%B0%AC%E8%AF%AF"><span class="nav-text">滑坡谬误</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%89%E8%AF%B8%E6%97%A0%E7%9F%A5"><span class="nav-text">诉诸无知</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%81%87%E4%B8%A4%E9%9A%BE%E8%B0%AC%E8%AF%AF"><span class="nav-text">假两难谬误</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%89%E8%AF%B8%E6%84%9F%E6%83%85"><span class="nav-text">诉诸感情</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%89%E8%AF%B8%E8%99%9A%E4%BC%AA"><span class="nav-text">诉诸虚伪</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%AB%E7%B3%8A%E8%AF%9D%E5%92%8C%E7%A8%BB%E8%8D%89%E4%BA%BA"><span class="nav-text">含糊话和稻草人</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8E%A8%E7%90%86%E5%B0%8F%E8%AF%B4"><span class="nav-text">推理小说</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E6%A0%BC%E3%80%81%E5%8F%98%E6%A0%BC%E5%92%8C%E6%96%B0%E5%8F%98%E6%A0%BC"><span class="nav-text">本格、变格和新变格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E5%96%9C%E6%AC%A2%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="nav-text">我喜欢的类型</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar3.jpg">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">155</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">54</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">161</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjEwMTM3MTIxMjdAcXEuY29t" title="E-Mail → mailto:1013712127@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9tZWJpbHkxMzE0" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      猜猜这是什么鬼地方？
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9tZWJpbHljaGVuLmxvZnRlci5jb20v" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;">LOFTER</span>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/p/e3a422.html" title="p&#x2F;e3a422.html">【参考】衣|料专版</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/4eb5.html" title="p&#x2F;4eb5.html">遗书</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ce0f2.html" title="p&#x2F;ce0f2.html">Dreamily.AI专场</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/b6c1.html" title="p&#x2F;b6c1.html">关于动保和动不动就保和虐杀</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/754d1.html" title="p&#x2F;754d1.html">《致咩碳》</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/300011.html" title="p&#x2F;300011.html">【#快乐王子】HP开题Demo&记录</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/190c3.html" title="p&#x2F;190c3.html">【角色研究】关于沃姆</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/p/24b8.html" title="p&#x2F;24b8.html">【日常】虫虫和虫虫和虫虫们</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/190c3.html" title="p&#x2F;190c3.html">【角色研究】关于沃姆</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/d846.html" title="p&#x2F;d846.html">【歌单】歌曲开荒</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">1.6m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">23:53</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "站子已虔诚祈祷 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+     //'.site-meta',
+    //'.site-nav',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>
