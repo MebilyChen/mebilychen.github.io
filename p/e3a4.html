@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="article">
+<meta property="og:title" content="【参考】绘画参考+Art Tips">
+<meta property="og:url" content="https://mebilychen.github.io/p/e3a4.html">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:locale">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/IMG_6683(20210626-153642).JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/FX%E5%8F%82%E8%80%83/IMG_8606(20211020-232641).JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/Works/%E6%96%B9%E5%9D%97%E9%AB%98%E5%85%89.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/Works/%E5%85%B3%E4%BA%8E%E9%99%9B%E4%B8%8B%E7%9A%84%E9%BB%91%E7%9C%BC%E7%9D%9B1.png">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/Works/%E7%BB%85%E5%A3%AB%E9%B8%9F%E6%80%BB%E7%BB%93.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/Works/%E5%A8%98%E7%8E%8B1%E5%AF%B9%E6%AF%941.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/Works/%E5%A8%98%E7%8E%8B1%E6%80%BB%E7%BB%93.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/09/23/fu8K9at5isv4n7P.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-5480fa42f53939509b006608adc596c7_1440w.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/Works/IMG_7800(20210922-025032).JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/Works/%E8%BF%99%E6%98%AF%E7%AB%99%E8%B5%B7%E6%9D%A5%E7%9A%84%E9%99%9B%E4%B8%8B.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/Works/IMG_7803(20210913-130207).JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/A%20quick%20guide%20on%20breaking%20stamps.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/IMG_7114.PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E4%BA%BA%E4%BD%931.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E7%BA%BF%E7%A8%BF%E5%8F%82%E8%80%83/%E7%BA%BF%E7%A8%BF%E5%8B%BE%E7%BA%BF%E6%80%BB%E7%BB%93.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/FX%E5%8F%82%E8%80%83/IMG_7683(20210902-171556).JPG">
+<meta property="og:image" content="https://i.loli.net/2021/08/19/3ncS5eP16h4XFod.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/08/19/z6ds9MJl1oLSeEK.png">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/Works/%E6%B3%A8%E6%84%8F%E7%BA%BF%E7%A8%BF%E9%A2%9C%E8%89%B2%E5%8F%98%E5%8C%96.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%9C%B0%E5%9B%BE%E5%8F%82%E8%80%83/IMG_4456.PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%9C%B0%E5%9B%BE%E5%8F%82%E8%80%83/IMG_4457.PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%BB%BA%E7%AD%91%E5%8F%82%E8%80%83/IMG_9680(20211207-005354).JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%B1%82%E7%BA%A7%E5%88%86%E5%89%B2%EF%BC%9A%E6%99%AF%E6%B7%B1%E5%85%B3%E7%B3%BB%EF%BC%8C%E7%A9%BA%E9%97%B4%E7%9A%84%E8%BF%9C%E8%BF%91%EF%BC%8C%E8%BF%91%E5%AE%9E%E8%BF%9C%E8%99%9A%EF%BC%8C%E8%BF%91%E6%B7%B1%E8%BF%9C%E6%B5%85.png">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/Works/4.9-1%E7%94%BB%E9%9D%A2%E6%8A%BD%E8%B1%A1%E5%88%86%E6%9E%90.png">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/IMG_7646.PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E8%83%8C%E6%99%AF%E5%8F%82%E8%80%83/BingWallpaper.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E8%80%B3%E9%BC%BB%E5%8F%A3%E5%8F%82%E8%80%83/IMG_8156(20210929-165952).JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E8%80%B3%E9%BC%BB%E5%8F%A3%E5%8F%82%E8%80%83/IMG_7596(20210826-101724).JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E8%80%B3%E9%BC%BB%E5%8F%A3%E5%8F%82%E8%80%83/IMG_7594.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E8%80%B3%E9%BC%BB%E5%8F%A3%E5%8F%82%E8%80%83/IMG_7597(20210826-101752).JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E8%80%B3%E9%BC%BB%E5%8F%A3%E5%8F%82%E8%80%83/IMG_7595.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E8%80%B3%E9%BC%BB%E5%8F%A3%E5%8F%82%E8%80%83/IMG_7598(20210826-102117).JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/%E4%BA%8C%E6%AC%A1%E5%85%83%E7%9A%84%E5%BD%A2%E5%92%8C%E8%89%B2%E5%BD%A9.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/%E8%BF%91%E5%86%99%E7%9C%9F%E7%9A%84%E5%BD%A2%E5%92%8C%E7%BA%BF%E6%9D%A1.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/FX%E5%8F%82%E8%80%83/IMG_7692(20210902-171922).JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%A4%B4%E5%8F%91%E5%8F%82%E8%80%83/IMG_7473(20210820-200925).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%A4%B4%E5%8F%91%E5%8F%82%E8%80%83/IMG_7478(20210820-201151).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%A4%B4%E5%8F%91%E5%8F%82%E8%80%83/IMG_7479(20210820-201216).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%A4%B4%E5%8F%91%E5%8F%82%E8%80%83/IMG_7480(20210820-201300).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%A4%B4%E5%8F%91%E5%8F%82%E8%80%83/IMG_7686(20210902-171716).JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%A4%B4%E5%8F%91%E5%8F%82%E8%80%83/IMG_7477(20210820-201114).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%A4%B4%E5%8F%91%E5%8F%82%E8%80%83/IMG_7476(20210820-201055).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%A4%B4%E5%8F%91%E5%8F%82%E8%80%83/IMG_8153(20210929-165726).JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%A4%B4%E5%8F%91%E5%8F%82%E8%80%83/IMG_7474(20210820-201002).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%A4%B4%E5%8F%91%E5%8F%82%E8%80%83/IMG_7475(20210820-201026).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/halo%E5%86%A0%EF%BC%88%E8%A7%92%EF%BC%89.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%B8%83%E6%96%99%E5%92%8C%E8%A1%A3%E6%9C%8D/%E8%AF%95%E7%A9%BF/IMG_8159(20210929-170127).JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_9632(20211206-050314).JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/%E7%9C%BC%E7%9D%9B9.30.png">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7677(20210902-171256).JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7679(20210902-171428).JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7684(20210902-171641).JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7412(20210815-034752).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7413(20210815-034858).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7414(20210815-034928).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7415(20210815-034959).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7416(20210815-035033).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7417(20210815-035053).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7418(20210815-035148).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7419(20210815-035204).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7420(20210815-035315).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7421(20210815-035410).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7422(20210815-035652).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7464(20210820-200253).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7471(20210820-200803).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7472(20210820-200837).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/%E7%9C%BC%E5%9E%8B%E5%8D%B3%E8%BD%AC%E9%9D%A2.png">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7468(20210820-200649).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7469(20210820-200714).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7470(20210820-200735).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/%E4%BB%99%E4%BE%A0%E7%BB%86%E9%95%BF%E7%9C%BC.png">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/%E7%9C%BC%E7%9D%9B%E5%8E%9A%E6%B6%821.png">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/%E7%9C%BC%E7%9D%9B%E5%8E%9A%E6%B6%822.png">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/%E7%9C%BC%E7%9D%9B%E5%8E%9A%E6%B6%823.png">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%8D%A2%E7%91%9E%E6%81%A9%E5%8F%82%E8%80%83/%E5%8D%A2%E7%91%9E%E6%81%A91.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%8D%A2%E7%91%9E%E6%81%A9%E5%8F%82%E8%80%83/%E5%8D%A2%E7%91%9E%E6%81%A92.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%8D%A2%E7%91%9E%E6%81%A9%E5%8F%82%E8%80%83/%E5%8D%A2%E7%91%9E%E6%81%A9%E8%BF%91%E8%A7%82.PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/Plants/IMG_0392(20220117-070723).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E8%99%8E%E8%80%B3%E8%8D%89%E8%8A%B1.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E8%99%8E%E8%80%B3%E8%8D%89%E8%8A%B12.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E8%99%8E%E8%80%B3%E8%8D%89%E8%8A%B13.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/Plants/%E8%99%8E%E8%80%B3%E8%8D%893.WEBP">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/IMG_7111.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/Plants/IMG_7516(20210820-204715).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/%E5%A4%A7%E5%B8%88%E7%94%BB%E4%BD%9C-%E5%9B%BD%E7%8E%8B.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/IMG_9169(20211120-022545).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/IMG_8888.PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%8A%A0%E9%A4%90.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/%E5%85%B6%E4%BB%9610.10.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/714CF86CF3CB9211CC5210915A19D978.png">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_8083.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/IMG_8139(20210929-164927).JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/IMG_8213(20210929-172647).JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E4%B8%80%E5%BC%A0%E5%9B%A2%E9%95%BF%E5%90%8C%E4%BA%BA%E5%88%86%E6%9E%90.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/%E4%BC%8A%E4%BC%8A9.30.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/7E3D9D89565731DD6616F05D9BD074D9.png">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/Works/B8121677451D282C965200F6FA3EC0CE.png">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/%E6%B0%B4%E8%8A%B1.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/BloodBorne.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/%E6%8C%87%E6%8C%A5%E5%AE%B6%E5%8F%82%E8%80%83.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/%E7%94%BB%E9%A3%8E%E5%8F%82%E8%80%831.jpg">
+<meta property="og:image" content="http://p1.music.126.net/b7PL0B-_iVrZwBfC9w-tBQ==/109951164072192167.jpg?param=130y130">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/0a7a2991cb288dad80414165bd2ac3c2a15f1c14.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/1AC0BF46-1CA2-4C29-8E6A-B997758B8A48(20181017-172.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/7B930E19-4856-4F7D-91B1-EA22B3DAB0B7(20190804-154.JPG">
+<meta property="og:image" content="https://i.loli.net/2021/04/23/yF4BmD97lbUnSOw.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/08/AVluIZhaFvdPUyw.png">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/%E5%86%99%E5%AE%9E%E9%A3%8E%E6%A0%BC%E5%8F%82%E8%80%83.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/B22EF5A6139396812646C8C61DFDED0B.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%AE%9D%E7%9F%B3/IMG_7673(20210902-171133).JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%AE%9D%E7%9F%B3/IMG_7681.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/IMG_7740.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/FX%E5%8F%82%E8%80%83/%E6%B0%B4%E7%BA%B9%E9%80%8F%E6%98%8E%E5%8F%82%E8%80%83.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/qita10.19.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%9B%A2%E9%95%BF-%E8%9D%99%E8%9D%A0%E5%8F%82%E8%80%83/10586C34-8431-4CAB-AEB0-45DB0BEE864920181017-172.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%9B%A2%E9%95%BF-%E8%9D%99%E8%9D%A0%E5%8F%82%E8%80%83/48F3A148-21D0-4367-A090-CF9D1A0D677F20181017-172.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%9B%A2%E9%95%BF-%E8%9D%99%E8%9D%A0%E5%8F%82%E8%80%83/A621418B-B503-4A69-8F3A-E74A4210200320181017-015.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/%E8%9B%87/QQ%E6%88%AA%E5%9B%BE20220110013043.png">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/IMG_0239.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/IMG_0240.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/12.18%E6%AE%BF%E4%B8%8B.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/12.7%E8%9B%87.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/IMG_9595.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/IMG_9599.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/IMG_9601.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/F106A8A9152F52B0F50624D54937BCD3.png">
+<meta property="og:image" content="https://i.loli.net/2021/11/26/1764NhdkKcLwuXZ.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/IMG_9250.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/%E7%8C%AA%E7%8C%AA%E5%B0%BE%E5%B7%B4%E5%9C%88.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/%E8%9C%A5%E8%9C%B4%E7%9F%B3%E9%BE%99%E5%AD%90%E5%8F%98%E8%89%B2%E9%BE%99.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/IMG_9061(20211116-133858).PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/gifs/742733B938F42DA4F2238696512AFBA7.gif">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/%E9%BE%99%E8%9B%8710.19.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/07/13/6ydsCPDFptfvSlJ.png">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/37122E7139CDDCB73A405E043EE3E602.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/FItqvWgcLkNUnHr.png">
+<meta property="og:image" content="https://imglf3.lf127.net/img/SFFiWnAwMStNckJUeDJSQVNOUnVTWkRVSElnaCt3N1BtQzZtMHRBM1VzZVl6SU9ldXRvVEhBPT0.jpg?imageView&thumbnail=2160x0&quality=90&interlace=1&type=jpg">
+<meta property="og:image" content="https://imglf4.lf127.net/img/SFFiWnAwMStNckJUeDJSQVNOUnVTYndNaFFPcjdMMG5RTDNkaUdPYWRuOVFLcTdvcGFtcjhRPT0.jpg?imageView&thumbnail=2160x0&quality=90&interlace=1&type=jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/127C858C-718A-4514-B02C-98DA9BC4568B(20190608-120.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/239479AF-C6CF-40BB-BBD0-B5D963845947.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/37DCEC8B-D2E5-4F4C-8264-6E587789E01F(20190608-120.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/40F598D6-AF7E-4313-9CD0-B87F4ADA95F0(20200405-124.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/4A76336A-A48F-43CB-98AB-FE720F065C2C(20200504-004.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/4AAB2A1B-007E-4666-BEDF-EA86AF8C6D92(20190608-120.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/6734F910-CAEA-490D-B57C-C814364262AC.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/68FEE8DC-C8DE-462F-A0D6-76EFD6386EC2(20190608-120.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/76E20EA6-23CC-4428-B642-900EDFF866AD(20190610-184.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/792A7085-6658-4D3D-A92A-C112856892FD(20200430-201.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/92F2976C-7BF9-4EF9-9691-AC81D47D809C(20200409-171.PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/9552E144-56C2-4DD0-9A70-2E5461A69C25(20190608-120.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/A1471CF8-B42F-49B4-AAD7-99094C618C24(20190608-120.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/BAA73E76-7C7D-49C4-93AC-CBC68A979678.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/BE0347E1-C351-4F2A-AA0A-449874FC4BDD.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/BED7BE9E-ADE1-4EFF-8BF3-7FBB54206287(20190608-120.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/C24D92B2-398D-41A0-9B6C-AEBA3F9474C1.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/C3FB5C0F-1AE5-4904-B191-EA4AE4B6D785(20200430-025.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/C66BB9A5-C026-42D2-A254-B114F48F15B4(20190608-120.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/CE9B8EB4-CF8D-4444-AE8F-1B29FA6E4DA1(20190610-184.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/D06AA0DA-C41E-41B3-9EB8-4B39252CC609.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/DBAA75D4-697B-4241-8B84-D4514AD2A27D(20190608-120.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/F49FA3C2-7730-44F4-9CF3-F4211BDC1FF5(20190608-120.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/FA3910A9-3FB8-46DE-B666-C6436B8A227C.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/FD87D55C-3C73-4F31-A8C5-5E1BB278CD46(20200430-025.JPG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/IMG_5772(20210409-195919).JPG">
+<meta property="article:published_time" content="2021-04-13T15:11:00.000Z">
+<meta property="article:modified_time" content="2022-02-05T12:05:14.804Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="积累本">
+<meta property="article:tag" content="绘">
+<meta property="article:tag" content="绘画参考">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://mebilychen-media.test.upcdn.net/image/IMG_6683(20210626-153642).JPG">
+
+<link rel="canonical" href="https://mebilychen.github.io/p/e3a4.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : '中文'
+  };
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    
+      if (NexT.utils.hasMobileUA()) return;
+    
+    let time, hidden, visible, title = document.title;
+    let favicon = document.querySelector('link[rel="icon"]');
+    
+      hidden = ["盯————","*探*","?","......","*观察*"];
+      visible = ["*偏转视线*","*缩*","*强装镇定*","！","*低头*"];
+    
+    let random = t => t[Math.floor(Math.random() * t.length)];
+    const change = () => {
+      if (document.hidden) {
+        favicon.setAttribute('href', '/images/favicon-32x32-king-black.png');
+        
+          document.title = random(hidden);
+        
+        clearTimeout(time);
+      } else {
+        favicon.setAttribute('href', '/images/favicon-32x32-brand-black.png');
+        
+          document.title = random(visible);
+        
+        time = setTimeout(() => {
+          document.title = '碳素的小作坊';
+        }, 1000);
+      }
+    }
+    document.addEventListener('visibilitychange', change, false);
+  });
+</script>
+
+  <title>【参考】绘画参考+Art Tips | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<script src="/assets/js/DPlayer.min.js"></script></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;调谐中...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">162</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">54</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">156</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-image fa-fw"></i>画廊</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/random.html" rel="section"><i class="fa fa-question fa-fw"></i>抽</a>
+
+  </li>
+        <li class="menu-item menu-item-lang">
+
+    <a href="/en/" rel="section"><i class="fa fa-globe fa-fw"></i>->English</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-17081-597255-1305127431.cos-website.ap-hongkong.myqcloud.com' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/e3a4.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【参考】绘画参考+Art Tips
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-04-13 23:11:00" itemprop="dateCreated datePublished" datetime="2021-04-13T23:11:00+08:00">2021-04-13</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2022-02-05 20:05:14" itemprop="dateModified" datetime="2022-02-05T20:05:14+08:00">Today at 8:05 PM</time>
+                </span>
+              
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%9A%8F%E5%8D%A2%E7%91%9E%E6%81%A9%E7%A0%94%E4%B9%A0%E7%BB%98%E7%94%BB/" itemprop="url" rel="index"><span itemprop="name">随卢瑞恩研习绘画</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>18k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>16 分钟</span>
+            </span>
+            <div class="post-description"><center></div>
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%A7%AF%E7%B4%AF%E6%9C%AC/" rel="tag"><i class="fa fa-tag"></i> 积累本</a>
+              <a href="/tags/%E7%BB%98/" rel="tag"><i class="fa fa-tag"></i> 绘</a>
+              <a href="/tags/%E7%BB%98%E7%94%BB%E5%8F%82%E8%80%83/" rel="tag"><i class="fa fa-tag"></i> 绘画参考</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><blockquote class="blockquote-center">
+            <i class="fa fa-quote-left"></i>
+            <p><span class="exturl" data-url="aHR0cHM6Ly9waW4uaXQvMjJ4dU9Xbg==">Pinterest<i class="fa fa-external-link-alt"></i></span></p>
+
+            <i class="fa fa-quote-right"></i>
+          </blockquote>
+
+<p><strong>小技巧：懒加载，要多次点击小标题才行，全站通用。</strong>    </p>
+<p><strong>以后图太多的话就用PS合在一张图里发。合集里面可能会有图片遮挡甚至埋没情况，有时间再调吧…图太多了</strong></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/IMG_6683(20210626-153642).JPG" alt="镇楼2"></p>
+<hr>
+<div class="note info no-icon">
+            <h4 id="关于“空洞画风”"><a href="#关于“空洞画风”" class="headerlink" title="关于“空洞画风”"></a>关于“空洞画风”</h4><p>看到群里有sb用了“空洞画风”头像，还是小骑士相关的，不承认其他神明，怒，故开始学习。其实这个也不算空洞画风，就是日常的白背景+干净线稿+平涂  <br>又check了一下。其实不是空洞画风（不是平涂），勾线也不是“空洞勾线”（手还在抖），<strong>其实主要就是白色背景+多彩的对比显得很干净利落</strong></p><ol><li>空白背景，而且要白色背景，但要保证画面不空</li><li>勾边用ink系笔，画笔边缘要干净不能有毛糙（例如用G笔）</li><li>线稿要干净圆滑，把握不好就记住开防抖动</li><li>小图保证干净整洁，不要有太多累赘的细节（缩小就看不清那种）</li><li>观察空洞得知，勾边用实黑，线宽偏粗，形不会出现锐角，衔接圆润（尖角也有小圆角）连贯（没有太多褶皱），一般不出现尖锐角度（线宽和圆角设定决定了线稿的整体圆润）。</li><li>似乎线宽是一致的，但可以有变化。可以都试试效果</li><li>平涂</li><li>不要有小骑士</li><li>在设计的时候不要被其他画风带跑（不要有线宽变化）</li></ol><p>另，注意画手（或其他复杂非几何体）的时候不要只看参考…最好自己摆一个姿势。  <br>不然会很难看（主要是不会几何空间转移）  </p>
+          </div>
+
+
+<div class="note info no-icon">
+            <h4 id="关于oil-Paint"><a href="#关于oil-Paint" class="headerlink" title="关于oil Paint"></a>关于oil Paint</h4><p>画lacrimosa的时候大概了解了一下  <br>既然这样，就大概写下吧  </p><ol><li>最好有个线稿，改个亮一点的颜色垫在下面起型（或者也有用阴影勾出边起型的）</li><li>先上明暗关系，再往里面叠颜色</li><li>笔触可以实现虚实结合（发现可以故意用拉丝（？）实现一种模糊效果）</li><li>可以用喷枪等喷一个颜色，再用油画笔打虚实颜色</li><li>垫画布材质的时候，画在纸上面，正片叠底</li><li>只留一个高光点，其他地方压暗，让观者有画面焦点。找最亮和最暗的颜色。</li></ol><p>详细的可以再去看看<a href="/p/e3a4.html#Pixel-Art-Guide-by-Ittai-Manero">马奈罗的thick paint</a></p>
+          </div>
+
+<hr>
+<p>硬笔是明显深转折，软笔是虚弱浅转折  </p>
+<div class="note info no-icon">
+            <h4 id="裸眼3D"><a href="#裸眼3D" class="headerlink" title="裸眼3D"></a>裸眼3D</h4><p>裸眼3D 加格栅 就是让图形（一般是横竖道）先遮挡住图像，然后在之后的动作过程中（是的是动图），让被遮挡的图像冲出遮挡图形（后面有时还会加个模糊）</p>
+          </div>
+
+<hr>
+<div class="note info no-icon">
+            <h4 id="转自Chicory第九艺术鉴赏"><a href="#转自Chicory第九艺术鉴赏" class="headerlink" title="转自Chicory第九艺术鉴赏"></a>转自Chicory第九艺术鉴赏</h4><p>玩游戏，学（有限色板的）上色技巧。  </p><ol><li>查看有哪些颜色</li><li>选择底色，涂满</li><li>选择次色，一般是色相相近，有不同明度和纯度的3种颜色，注意交错对比</li><li>用底色或另一种颜色作为辅助色点缀特异，不要多，一两颗树就够了</li><li>也可以选择用颜色体现层次，在同一层的物体上同一种颜色，比如电话亭就可以尝试不同的里外颜色来区分层次，不同颜色的风格都不一样</li></ol><p>或者：</p><ol><li>直接用不同颜色的笔刷纹理互相重叠，制造落英缤纷的效果和笔刷边缘纹理</li></ol>
+          </div>
+
+<div class="note info no-icon">
+            <h4 id="空气透视（自然写生）和近处打光（室内写生）"><a href="#空气透视（自然写生）和近处打光（室内写生）" class="headerlink" title="空气透视（自然写生）和近处打光（室内写生）"></a>空气透视（自然写生）和近处打光（室内写生）</h4><p>有一个矛盾不知道我tips有没有提到过，就是关于空气透视（自然写生）和近处打光（室内写生）。一般现在默认常用空气透视，无论在场景大图或者摸鱼小图里。空气透视就是把后位部分的颜色#饱和度降低#或#透明度降低（白背景）#，造成雾气效果，前景黑，后景白；但是我一直都有这个纠结，就是我默认后景应该是黑的（应该更黑），我这个思路是从近亮远暗这方面出发的，就是我默认光源在我这边，光从前往后打，后排自然就黑了。现在我知道基本上不应该默认打前光，用空气透视，但是如果两者必须共存呢？如果在一个场景图里打了前光，应该优先空气透视原则还是优先前光原则，还是叠加？为什么默认用空气透视，而且确实看起来比默认前光好看呢？</p><p>哦，还有深色（黑色）看起来比浅色（白色）紧缩（小）。然后大面积颜色容易产生凹陷感，所以要进行错觉补偿（凸起结构）</p>
+          </div>
+
+<hr>
+<div class="note info no-icon">
+            <h4 id="看一微距摄影，和slomo（延时摄影）"><a href="#看一微距摄影，和slomo（延时摄影）" class="headerlink" title="看一微距摄影，和slomo（延时摄影）"></a>看一微距摄影，和slomo（延时摄影）</h4><p>感觉可以学到很多细节。</p>
+          </div>
+
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/FX%E5%8F%82%E8%80%83/IMG_8606(20211020-232641).JPG"></p>
+<hr>
+<div class="note info no-icon">
+            <h4 id="因为PPT模板有点好看"><a href="#因为PPT模板有点好看" class="headerlink" title="因为PPT模板有点好看"></a>因为PPT模板有点好看</h4><p>就，有点好看好吧。两个点（一会儿会放在tips里）：  </p><ol><li>颜色可以在一片区域里只用一个填充形状（点）来表示，大家会自动把这一片闭锁区域都填充上这一颜色。</li><li>红蓝对比。</li></ol>
+          </div>
+
+<hr>
+<div class="note info no-icon">
+            <h4 id="说一个早就知道的小技巧吧"><a href="#说一个早就知道的小技巧吧" class="headerlink" title="说一个早就知道的小技巧吧"></a>说一个早就知道的小技巧吧</h4><ol><li>表现透明材质（比如陛下的翅膀），时可以沿遮挡物边缘把（内部的）被遮挡物的轮廓+颜色擦掉一块。  </li><li>为了体现层次，可以把前后关系用空气透视（套索选择，拉低不透明度）表现。  </li></ol><p>怎么突然怕自己死的时候会把这些都忘记呢…想给我下辈子那位留一下站子网址（  </p><p>补一个，就不单独说了，<br>3. 可以用基本形堆出图形感然后再定形，而不是直接定形（直接画出轮廓）</p>
+          </div>
+
+<hr>
+<p>致陛下的眼睛：  <br>纯色眼睛里，如果只点一个高光 就像是瞳孔（位置）了；如果都是高光，就会有无辜小可爱的效果  </p>
+<p>如果用方块（或其他形状），就不会出现“不像高光像瞳孔”的问题了。  </p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/Works/%E6%96%B9%E5%9D%97%E9%AB%98%E5%85%89.JPG" alt="方块高光"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/Works/%E5%85%B3%E4%BA%8E%E9%99%9B%E4%B8%8B%E7%9A%84%E9%BB%91%E7%9C%BC%E7%9D%9B1.png" alt="可可爱爱"></p>
+<p>还是觉得可可爱爱可爱（  </p>
+<hr>
+<div class="note info no-icon">
+            <h4 id="9-24发现的小技巧（仿水彩）"><a href="#9-24发现的小技巧（仿水彩）" class="headerlink" title="9.24发现的小技巧（仿水彩）"></a>9.24发现的小技巧（仿水彩）</h4><ol><li>对于兴趣不太大的任务（不，我是不会出卖灵魂的），可以找照片（当然是如果能找到），然后ps处理一下，看它怎么处理明暗色块和图形概括，然后导进去描轮廓（就算是积累素材了）。超快。不过缺点就是如果找不到图（组合不出概念图）就惨了。以及PS的填充-智能填充（shift+fn+F5）超好用好吧。</li><li>水彩画勾边其实不太重要（甚至可以没有，搞完之后把勾边层去掉，也是一种风格）。勾边就是强调一下明暗交界和层次。以及一些用于规定上色范围的勾边可以在后期（要高饱和度颜色）用高斯模糊模糊成高饱和的明暗交界线的样子。勾边在后期记得要改色，善用白色喷枪体现环境光效，勾边颜色和内部颜色的深浅不要差的太明显，一般在亮色区用更亮的饱和度，在深色区用更深的饱和度，具体可以直接吸对应内部的颜色。善用颜色喷枪给勾边加渐变。不过勾边的颜色不一定就要和内部颜色呼应，怎么好看怎么来。</li><li>用一个边缘饱和度较高的水彩笔刷（例如super diluted），配合涂抹可以出硬边缘+软边缘的效果。善用涂抹，比预估的多延伸出去一些都没关系。底色一定要撞色（两个颜色要揉到一起）。最后还可以用喷枪优化。</li><li>善用套索+Hue调整体现层次。因为勾边不重要，所以只能用颜色色块来区分层次和结构了。  </li><li>记得加一些bulingbuling的效果，包括：</li></ol><ul><li>盐粒（就是高光，用星空笔刷也行，要白色或浅色，可以带一些色相，善于尝试不同的图层效果）</li><li>打光（用喷枪和Overlay），可以打高亮颜色的光做呼应。也可以直接用彩色幻色（color dodge）叠一层打光，总之就是让颜色怎么丰富怎么来。</li><li>记住颜色一定要多，水彩基本上就是堆颜色。比如在橙色里可以加红色和黄色，在褐色里加紫色和蓝色甚至绿色。也可以用星系的变色笔刷，直接丢给软件，怎么好看怎么来。然后关于颜色渐变，一定要有颜色渐变，一般从上至下由浅变深。</li><li>强调，可以适当在内部颜色里加一点高光勾边做结构强调。</li><li>纹理。纹理很重要，一般也是<strong>用（不同的）纹理来一层一层叠进去颜色</strong>，效果还不错。纹理一般要比本色要深要纯（直接正片叠底），也有亮的情况。</li></ul><ol start="6"><li>码一下这次（指画《绅士鸟》）用的笔刷：勾边（Inking的G-Pen）、底色（Stonis水彩的super diluted）、涂抹（贤者手指涂抹+jitter spikes+Rough Smear+textured）、高光/盐（Stonis水彩的Salt笔+盐（滤色减淡）+常用肌理笔刷的大气颗粒（+或许也用了星空的星星笔刷？））、纹理（Painting的Nikko Rull+Textures的Wedge Tail+常用肌理笔刷的颗粒喷笔）、光效/调整/智能颜色添加（喷枪+Stonis水彩的Fresco笔+星系套装的Nebula系列）</li><li>善用色彩平衡，尤其是最后调整的时候，会耳目一新+救命恩人。还有善用液化，救命恩人x2.   </li></ol>
+          </div>
+
+<p>下面放一些图和视频：</p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/Works/%E7%BB%85%E5%A3%AB%E9%B8%9F%E6%80%BB%E7%BB%93.jpg" alt="勾线、上色、最终效果"></p>
+<p>刷新看水彩过程</p>
+<div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/media/%E6%B0%B4%E5%BD%A9%E8%BF%87%E7%A8%8B.MP4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
+<hr>
+<div class="note info no-icon">
+            <h4 id="9-22发现的小技巧"><a href="#9-22发现的小技巧" class="headerlink" title="9.22发现的小技巧"></a>9.22发现的小技巧</h4><ol><li>上二分阴影善用套索+涂抹工具（但不要用太多涂抹），所以要注意分上色图层（其实整体调整也可）；注意用颜色区分层次，注意某些没有勾边（否则会很“老”，就，感觉密密麻麻都是皱纹一样）但需要用阴影区分的结构。  </li><li>可以在勾线的时候就用纯+深+的颜色勾线（如果已经确定颜色），注意区分。另外勾线全是纯+明+高亮也不好看。</li><li>圆珠笔勾线好用但是会有毛刺（还自带白色）  </li><li>不要看一个画笔带了纹理就用，看是不是水彩（水彩很薄，不画水彩的话效果一般会很差） </li><li>风格要统一，如果上色二分就不要大面积渐变（上色用单色或者二分，如果搞砸了用锐化补救一下）  </li><li>注意看小图注意看小图注意看小图注意看小图注意看小图注意看小图注意看小图  </li><li>速途小作品善用噪点  </li><li>善用色彩平衡，尤其是最后调整的时候，会耳目一新+救命恩人  </li></ol><p>关键词库喜+1：工笔画</p>
+          </div>
+
+<p>如图，大图来看其实两张差不多（我感觉，而且其实第一张更萌），但是小图来看肯定是液化过的好看（从图形和比例上）</p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/Works/%E5%A8%98%E7%8E%8B1%E5%AF%B9%E6%AF%941.jpg" alt="娘王1对比1"></p>
+<div class="note info no-icon">
+            <h4 id="关于饱和度"><a href="#关于饱和度" class="headerlink" title="关于饱和度"></a>关于饱和度</h4><p>不要一直用同一个饱和度…..<br>否则就会出现下面的问题，两种去色方法差异太大。  </p>
+          </div>
+
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/Works/%E5%A8%98%E7%8E%8B1%E6%80%BB%E7%BB%93.jpg" alt="娘王1看看这个黑白怎么回事？"></p>
+<p><img data-src="https://i.loli.net/2021/09/23/fu8K9at5isv4n7P.jpg" alt="看看别人的色相图层和饱和度归零是什么效果"></p>
+<div class="note info no-icon">
+            <h4 id="9-22关于学习光影二分"><a href="#9-22关于学习光影二分" class="headerlink" title="9.22关于学习光影二分"></a>9.22关于学习光影二分</h4><p>补，可以用真实的照片来练光影二分+素材积累，像设计里人物/物品/场景的快速绘制，只用勾边+光影二分就可以了，色彩可以用黑色/灰度代替（就像是场景小稿或者白模）。具体风格可以参考“黄一刀漫画”。下面会贴几张他的图。  </p><p><span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8yNTkyNTcyNzM/dXRtX3NvdXJjZT13ZWNoYXRfc2Vzc2lvbg==">指路<i class="fa fa-external-link-alt"></i></span></p><p>继“可以把布料看成流水披在身上”之后，有可以把光看做布料（平面/纸）映在物体上了。</p><p>PS可以提升相关技能的滤镜有（因为做灰度还会考虑到颜色本身明暗，所以最好先去色）：  <br>素描-图章（带勾边轮廓）、素描-撕边（没有轮廓，只有色块）。素描分类的滤镜出来都是黑白。    <br>艺术效果-海报边缘（出来是轮廓+色彩，彩色图可以提取黑色）、艺术效果-木刻（同海报边缘，但是更概括一些，去色之后也很适合学二分） 。这两个出来的是彩色（原色）的。   </p>
+          </div>
+
+<p><img data-src="https://pic4.zhimg.com/80/v2-5480fa42f53939509b006608adc596c7_1440w.jpg" alt="黄一刀1"></p>
+<p>关键词：走秀（T台）、写真、衣袖  </p>
+<p>还是说要注意褶皱，感觉这个还是没有太掌握。  </p>
+<hr>
+<div class="note info no-icon">
+            <h4 id="9-22发现的很有意思的小纠结"><a href="#9-22发现的很有意思的小纠结" class="headerlink" title="9.22发现的很有意思的小纠结"></a>9.22发现的很有意思的小纠结</h4><p>就是今天突然想画娘x陛下的crossover，然后就有了下方的草稿：  <br>（note里放不了图，在note下面）<br>其实关于硫卡指尖上陛下到底是什么姿势我很纠结。一开始想到让陛下走幼王路线飞到硫卡指尖上然后无辜地看着硫卡，但是就，之前这个姿势画过了（而且如果错看成成年王的话会很不雅），然后就还有“在硫卡指尖上爬（更不雅，毕竟无论如何陛下要六足落在指尖上一点，不能错位，不能错位，幼王还行，只要姿势足够雅观就行，但是成年王，绝对不能错位，否则就会很“团长”（很不正经）。而六足一点站立的这个姿势我之前画过了（达尔文写生那张））”、“蜷缩睡在硫卡指尖上（就上图）”。幼王就是给一个陛下很无辜（根本不注意硫卡，自己干自己的事（比如捉虫、打理翅膀、睡觉、歪着脑打量硫卡之类的））+硫卡很胆小的feel（我个人真的很喜欢这种feel）；成年王就是会削弱“硫卡很胆小（毕竟是个人都会害怕会说话的虫子）”的属性，陛下被限制成了只剩一个姿势（背对镜头的站位，在旁边打省略号，相当于直接少了一个表现陛下可爱程度（不）的机会）但是会给一个两人聊天（不）的想象空间。然后就想如果真走成年王路线，还是站着比较好，面对面还可能有交流说话什么的，场景更有趣…但是实在舍不得幼王（正太+幼王绝赞好吧）。而且陛下的背对镜头真的很——让我很不爽，就，唉，不爽，想更多地表现陛下！让陛下完全展现出来！      <br>后来就觉得幼王路线确实有一点点不对劲，怎么不对劲呢？就是首先这幅图里硫卡是被惊吓的，说明是<strong>初见</strong>，其实硫卡初见就是看见幼王卖萌其实没问题，更能凸显出硫卡很胆小的性格，但是，更严重的问题是这幅图本身是<strong>初见</strong>，就，对于我和读者而言，这是两个宇宙的初见，而且幼王的设定的话其实算是里宇宙了，不是正统宇宙，所以显得“很别扭”，就感觉还没交上朋友就已经去约炮了的感觉，很不对劲。所以我觉得这一张的话，<strong>虽然我很想画幼王</strong>，还是用正统陛下来比较舒服。  <br>以上。或许下一张和娘x的陛下就可以幼王了。  <br>可是我真的很想画幼王….  <br>唉，  <br>哦。我知道了。因为我画的时候想到了“读者”，想到了要发布出去。如果是面向，“读者”，的话自然用正统宇宙比较好（不然“读者”们看不懂），但如果就是想给我自己做头像…emmmmmmmm——  <br>老子Fi爆表，老子就是要自嗨！<br>…反正也不会有双厨出现的。  </p>
+          </div>
+
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/Works/IMG_7800(20210922-025032).JPG" alt="这是幼王路线"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/Works/%E8%BF%99%E6%98%AF%E7%AB%99%E8%B5%B7%E6%9D%A5%E7%9A%84%E9%99%9B%E4%B8%8B.JPG" alt="这是成年路线"></p>
+<hr>
+<div class="note info no-icon">
+            <h4 id="9-18发现的小技巧"><a href="#9-18发现的小技巧" class="headerlink" title="9.18发现的小技巧"></a>9.18发现的小技巧</h4><p>用形起形的时候可以不管线的粗细。  <br>但是用线起形的时候线一定要细。  <br>尤其是画细节的时候，不能用粗线。  </p>
+          </div>
+
+<hr>
+<div class="note info no-icon">
+            <h4 id="Trouble我的一个大问题"><a href="#Trouble我的一个大问题" class="headerlink" title="Trouble我的一个大问题"></a>Trouble我的一个大问题</h4><p>风格，虽然大概知道什么是风格（用色习惯、光影习惯、刻画习惯、概括形的习惯…各种习惯） ，但是我不知道怎么去控制它。就，像是一套字体，我看不出来这是不是一套字体，同时我也不知道怎么把A字体调整的很像B字体。这个问题在我自己画的时候特别明显，感觉风格很不统一。  <br>想到下面那张我很喜欢的小女仆（Maiden in Abyss），它使用细线条沿着衣服的边缘画了一圈短线，是不是因为我的画相互呼应的东西太少，所以很没有层次和连贯性啊。 </p><p>以及插一嘴，可以直接用喷枪在画布上把东西刷到后面…而不用非要选取那块调透明度  </p><p>再以及不要忘了打光是可以用先盖暗色图层再擦掉的方法来打的。  </p>
+          </div>
+
+<hr>
+<div class="note info no-icon">
+            <h4 id="9-13发现的tips"><a href="#9-13发现的tips" class="headerlink" title="9.13发现的tips"></a>9.13发现的tips</h4><p>在想这个问题：为什么我画树枝的时候就喜欢画一条线来概括，但就是不好看呢？（在自然界看起来就是一条线，没有分节）或许是因为远观可以一条线（不重点刻画），近观必须画的更详细吧。  </p><p><img data-src="http://mebilychen-media.test.upcdn.net/image/Works/IMG_7803(20210913-130207).JPG"></p><p>难道一幅画里也可以不完全详细刻画？难道这种风格还会更漂亮？  </p>
+          </div>
+
+<hr>
+<div class="note info no-icon">
+            <h4 id="9-10发现的tips"><a href="#9-10发现的tips" class="headerlink" title="9.10发现的tips"></a>9.10发现的tips</h4><p>看到可以直接用选区选择部分然后调整那部分的色彩（可以用于直接画亮部和暗部）<br>以及不同的细节和完成度也可以区分视觉中心  <br>以及纹理可以最后上，防止画笔的纹理没了（除非是全局纹理画笔，不然会因为被覆盖而没了）</p>
+          </div>
+
+<hr>
+<div class="note info no-icon">
+            <h4 id="9-3发现的tips"><a href="#9-3发现的tips" class="headerlink" title="9.3发现的tips"></a>9.3发现的tips</h4><p>嗯嗯，可以先画大图，再缩小成小图。咩碳你真不用强迫自己一笔出效果啦！  <br>（除非练基础功夫）</p><p>以及我的字…写着写着老往上漂？  </p>
+          </div>
+
+
+<hr>
+<div class="note info no-icon">
+            <h4 id="9-2发现的tips"><a href="#9-2发现的tips" class="headerlink" title="9.2发现的tips"></a>9.2发现的tips</h4><ol><li>模糊笔刷也是笔刷，可以用它打型。</li><li>软硬结合。一定要软硬结合。</li></ol>
+          </div>
+
+<hr>
+<p>目前我是学的是角色设计方向，我回头要学一下插画方向。就，我画的是陛下，又不是别的什么东西…</p>
+<p>以及都说什么样的画往上堆细节就一定会画好看，但是我就是那种，一看画面不好看就失去了信心，不想再画了的那种。  </p>
+<p><span class="exturl" data-url="aHR0cDovL3d3dy5kaWNlY29sbGVjdG9yLmNvbS8=">骰子纹样<i class="fa fa-external-link-alt"></i></span></p>
+<hr>
+<h3 id="不同笔刷的效果差距"><a href="#不同笔刷的效果差距" class="headerlink" title="不同笔刷的效果差距"></a>不同笔刷的效果差距</h3><p><span class="exturl" data-url="aHR0cDovL21lYmlseWNoZW4tbWVkaWEudGVzdC51cGNkbi5uZXQvZG9jLyUyM0JSVVNIVE9CRVJfQXJ0Ym9va18yMDIxX0ZSRUVfRWRpdGlvbi5wZGY=">PDF<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="Linocut-Art-Guide-by-Abbie-Nurse"><a href="#Linocut-Art-Guide-by-Abbie-Nurse" class="headerlink" title="Linocut Art Guide by Abbie Nurse"></a>Linocut Art Guide by Abbie Nurse</h3><p>abbie的brush很棒。  </p>
+<p><span class="exturl" data-url="aHR0cDovL21lYmlseWNoZW4tbWVkaWEudGVzdC51cGNkbi5uZXQvZG9jL0xpbm9DdXQlMjBBYmJpZU51cnNlfi5wZGY=">PDF<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="像素艺术"><a href="#像素艺术" class="headerlink" title="像素艺术"></a>像素艺术</h2><p>在Siki学院记的笔记：</p>
+<p>明暗交界线是最暗的部分 竟然就这样忘记了 一忘忘十年（老血）</p>
+<p>布点要有规律：</p>
+<ul>
+<li>45度布点（一个）</li>
+<li>60度布点（两个）</li>
+<li>混合（一二一二…/一二三四三二一）</li>
+</ul>
+<p>透视近大远小，像素不用强行遵从（等距）</p>
+<p>可以用高阶透视画低阶透视（三点画二点，二点画一点，但不能反过来）（…emm要再琢磨一下）</p>
+<h3 id="Pixel-Art-Guide-by-Ittai-Manero"><a href="#Pixel-Art-Guide-by-Ittai-Manero" class="headerlink" title="Pixel Art Guide by Ittai Manero"></a>Pixel Art Guide by Ittai Manero</h3><p><span class="exturl" data-url="aHR0cDovL21lYmlseWNoZW4tbWVkaWEudGVzdC51cGNkbi5uZXQvZG9jL1RoZSUyMFBpeGVsJTIwQXJ0JTIwRXhwZXJpZW5jZSUyMFF1aWNrJTIwR3VpZGUlMjAoSXR0YWltYW5lcm8pLnBkZg==">PDF<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="Thick-Paint-Guide-by-Ittai-Manero"><a href="#Thick-Paint-Guide-by-Ittai-Manero" class="headerlink" title="Thick Paint Guide by Ittai Manero"></a>Thick Paint Guide by Ittai Manero</h3><p><span class="exturl" data-url="aHR0cDovL21lYmlseWNoZW4tbWVkaWEudGVzdC51cGNkbi5uZXQvZG9jL0hvdyUyMFRvJTIwVXNlJTIwVGhpY2slMjBQYWludCUyMC0lMjBGUkVFJTIwRWRpdGlvbiUyMChFTkdMSVNIKS5wZGY=">PDF<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="A-quick-guide-on-breaking-stamps-to-make-your-own"><a href="#A-quick-guide-on-breaking-stamps-to-make-your-own" class="headerlink" title="A quick guide on breaking stamps (to make your own)"></a>A quick guide on breaking stamps (to make your own)</h3><p><img data-src="http://mebilychen-media.test.upcdn.net/image/A%20quick%20guide%20on%20breaking%20stamps.jpg" alt="A quick guide on breaking stamps (to make your own)"></p>
+<h3 id="《平面设计看这本就够了》"><a href="#《平面设计看这本就够了》" class="headerlink" title="《平面设计看这本就够了》"></a>《平面设计看这本就够了》</h3><p><strong>非对称式均衡</strong>  <br>一种感觉上的均衡，任何人都不可能准确判断画面上的物象实际重量，这种心理意义上的重量，按照它在人们生活中的重要性及与人的关系密切程度而定。</p>
+<p><strong>关于面的大小深浅聚散的均衡分布</strong>  <br>色调的不均衡，可从调整形体大小进行补偿;形体的不均衡，也可从调整色调的深浅进行补偿。两者在不可变动的情况下还可以通过画幅边沿关系的改变，进行调整.</p>
+<p><strong>关于形体和色调的均衡在心理上的衡量</strong>  <br>在暗色背景前，明度与面积成反比、反之亦然。面积小而与背景明度反差大，色块面积大与背景反差小，两者可以取得均衡.</p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/IMG_7114.PNG"></p>
+<div class="note info no-icon"> <p style="color:#438BCA">有的时候要退后几步看你的画，就像将画面缩小，这样能看出很多放大时看不到的问题（比如明暗关系错误）。 </p> </div>
+
+<div class="note info no-icon"> <p style="color:#438BCA">注意：Experience 3D & augmented reality in Search
+When you search on Google, you can view some results in 3D and augmented reality (AR).  
+用手机在google上搜索动物或者虫虫就可以看动作动画和AR 3D模型，很方便。 </p> </div>
+
+
+<p>历历在目（Before Your Eyes）对于Art的启发：</p>
+<ul>
+<li>同一个实体，可以有无数种表达方式，（当然也包括用文字描述、用图画描述、用音乐描述、用建筑描述….就是“拟”，就是“抽象”。不过这里，）只说对于绘画而言，可以提取其中的颜色、形状，可以想象它如何流动（加上时间），如何相互影响，可以将线抽象成面，可以将红色抽象成橘色+黄色，可以将静止地抽象成流动的，以此类推，发挥你的想象力吧！把具象变成抽象！把抽象变成具象！自由！免费！  </li>
+<li>历历在目里将一个实体抽象出了很多种方式，包括，立体投影成线面、颜色的夸张、特征的提取与组合等等，并添加了动画（时间）的方式使玩家选择，这就意味着，有点像在无数种可能性中用摄像机进行摄影。有时间可以再去体验一下那一章，对我很有启发。    </li>
+<li>我的老师说的一句话我很认可，他说看东西不能想这个是什么，要感受它的颜色、它的形状…我自己的总结就是要用看画的眼光看一张照片。每次我看照片的时候，我都不会认为这是一张照片，而把它看作一幅画。很有用！画起来就简单多了。  </li>
+</ul>
+<hr>
+<h3 id="目前的学习计划"><a href="#目前的学习计划" class="headerlink" title="目前的学习计划"></a>目前的学习计划</h3><p><strong>正课已完结，下一步准备看K大。</strong>  </p>
+<p>前一部分脸部单体练习（三庭五眼、眉眼耳鼻口和头发等）没有存视频，可以自己回看再总结一下（不过他们画风是偏CG）    </p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9wYW4uYmFpZHUuY29tL3MvMTQyeTg2S2pfX3hDSVV4azFOOE1TRGc=">第一阶段(人体)总结课<i class="fa fa-external-link-alt"></i></span></p>
+<div id="dplayer1" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer1"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/media/%E6%80%BB%E7%BB%93%E8%AF%BE~1.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E4%BA%BA%E4%BD%931.JPG" alt="人体1"></p>
+<p>关于原画学习，除了跟着现在的老师多画画之外，搜集的资源网课也要多看看：</p>
+<ul>
+<li>K大Krenz的三堂课，最好能实际去听听看，实在不行就算了，看老课凑活一下，被大家传的很神的样子。</li>
+<li>日系厚涂板绘水彩油画彩铅原画插画漫画游戏场景角色似乎都有的亚子，有空多看看，真的觉得很多电子绘画思路应该发功于传统绘画技法上。只是现在传统绘画比较难布置环境而已，大家都懒了只画板绘。手上功夫多练练也没坏处。哦对了，速写要多练练，练抓型、记忆、概括。  </li>
+<li>还有一系列似乎是比较有名的大佬的课，争取这辈子能看完。</li>
+</ul>
+<p><span class="exturl" data-url="aHR0cHM6Ly9xdWlja3Bvc2VzLmNvbS8=">QuickPose速写抓型练习<i class="fa fa-external-link-alt"></i></span></p>
+<p>哦哦还有一个很魔性的网站，<span class="exturl" data-url="aHR0cHM6Ly93d3cuYXJ0YnJlZWRlci5jb20v">ARTBreeder<i class="fa fa-external-link-alt"></i></span>，可以用来做参考和（高质量的）概念草稿。<br>除此之外还有好多可以自己捏头像的那种网站，就注意一下，就不收集了（大概）。</p>
+<h4 id="原画知识点脑图"><a href="#原画知识点脑图" class="headerlink" title="原画知识点脑图"></a>原画知识点脑图</h4><p><span class="exturl" data-url="aHR0cDovL21lYmlseWNoZW4tbWVkaWEudGVzdC51cGNkbi5uZXQvZG9jLyVFNSU4RSU5RiVFNyU5NCVCQiVFOCVBMSVBNSVFNCVCOSVBMC54bWluZA==">Xmind懒得转pdf了<i class="fa fa-external-link-alt"></i></span></p>
+<p>找到一个可以在线看Xmind的网站：<span class="exturl" data-url="aHR0cHM6Ly93d3cucHJvY2Vzc29uLmNvbS9kaWFncmFtcw==">PressOn<i class="fa fa-external-link-alt"></i></span>，不过显示不了Xmind的气泡…</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cucHJvY2Vzc29uLmNvbS92aWV3L2xpbmsvNjE5YmU2MTgwNzkxMjkyZGFkNzgyZjhl">脑图链接<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cucHJvY2Vzc29uLmNvbS9lbWJlZC82MTliZTYwNWUwYjM0ZDdiMjk4MDkxMmE=">脑图链接<i class="fa fa-external-link-alt"></i></span></p>
+<iframe id="embed_dom" name="embed_dom" frameborder="0" style="display:block;width:525px; height:245px;" src="https://www.processon.com/embed/619be605e0b34d7b2980912a"></iframe>
+
+<hr>
+<p>主要是注意如何找参考，K大听说也是会强调如何找参考，所以参考很重要。</p>
+<h4 id="Field-Guide-to-Lovecraftian-Horrors"><a href="#Field-Guide-to-Lovecraftian-Horrors" class="headerlink" title="Field Guide to Lovecraftian Horrors"></a>Field Guide to Lovecraftian Horrors</h4><p>大佬画的爱手艺，可以参考一下画风：</p>
+<p><span class="exturl" data-url="aHR0cDovL21lYmlseWNoZW4tbWVkaWEudGVzdC51cGNkbi5uZXQvZG9jL0ZpZWxkX0d1aWRlX3RvX0xvdmVjcmFmdGlhbl9Ib3Jyb3JzLnBkZg==">【PDF】Field_Guide_to_Lovecraftian_Horrors<i class="fa fa-external-link-alt"></i></span></p>
+<hr>
+<div class="note info no-icon">
+            <h4 id="8-26发现的tips（填色-线稿）"><a href="#8-26发现的tips（填色-线稿）" class="headerlink" title="8.26发现的tips（填色+线稿）"></a>8.26发现的tips（填色+线稿）</h4><p>老子是傻逼。填色的时候人物上灰可以用选择空白区域然后反选。老子一直在手动涂色。<br>以及emm，是不是有某种滤镜是可以直接给色块描色相高的边的啊。  <br>然后勾线的话，目前我能总结的几点就是：</p><ol><li>外轮廓要强调，一般画内部结构较细</li><li>光照不到的地方要卡点，不过我个人认为遮挡的话不用卡点，就，连接处才有；以及转折处也可以适当加粗加重    </li><li>近粗远细，近实（边缘明显）远虚。有时线粗也是为了反映厚度（和阴影？）和区分层次。    </li><li>其实重要的是好不好看和细节</li><li>细节多了线没有粗细变化（0%<del>0.5%</del>1%为单位）和卡点都很好看</li><li>不过线能细就细，不要太粗.越细越高大上（当然越细意味着更多的细节和更高的完成度要求）</li><li>手要抖就一直抖，也是一种风格</li><li>ctrl+z</li><li>能不画曲线就不画曲线（这点是因为我目前还没有直线定型意识）</li><li>该断就断，虽然全连一个是方便填色，一个是也是一种风格  </li><li><strong>冲突</strong>：外轮廓加粗，是吧；近粗远细，是吧；啊——！就冲突了。  </li></ol>
+          </div>
+
+<p>附：好看的线稿（自己总结的，但不是我画的）：<br><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%BA%BF%E7%A8%BF%E5%8F%82%E8%80%83/%E7%BA%BF%E7%A8%BF%E5%8B%BE%E7%BA%BF%E6%80%BB%E7%BB%93.jpg" alt="勾线总结"></p>
+<p>起草稿的时候可以适当用双线。就，即便没有双线的地方也加个逐渐收进去的双线（我最近很喜欢这么画陛下袍子的纹路）</p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/FX%E5%8F%82%E8%80%83/IMG_7683(20210902-171556).JPG" alt="线稿tips1"></p>
+<hr>
+<div class="note info no-icon">
+            <h4 id="8-19发现的tips（定形-…78）"><a href="#8-19发现的tips（定形-…78）" class="headerlink" title="8.19发现的tips（定形+…78）"></a>8.19发现的tips（定形+…78）</h4><p>经过多次观察，发现自己画画，很！容！易！画！胖！怎么画胖呢，就很容易在定型的时候画胖，即便确定了一边为参照，另一边就会画胖画大，我就寻思着你即便画瘦了画长画小了也比画胖了画短了好看额；而且，很！容！易！画！歪！歪还很一致地歪向右边，就，左边很容易画扁，画残，怎么画残法呢，下面就举了一个我今天临摹练习的例子。<br>另外，今天学到内剪裁，又加深了一下立体思维，就，不要画片片，要立体，要层次（衣服好几层），要厚度，要包覆，要褶皱，要遮挡。紧身设计很容易做残，也不是不好看，就，新手尽量不要去搞紧身，练不到重要的东西。对于图形敏感度，要用线框出立体结构的轮廓，例如画长方体，不能画长方形，要画有透视关系的长方体剪影线稿。  <br>以及一些线条勾边，无论勾线还是草稿摸鱼，如果不追求完全勾线的清晰效果，该擦的就擦，擦1/4留3/4，但要注意图形完整性。其实重要的是统一性，而不是画得要多完美（比如如果线很抖，全图线都很抖也不是不可以）。    <br>以及头发、褶皱之类的，尽量在边缘以及开端结尾处画层次纹理，要有联系，不要中间毫无来由地突然多了一道这样。  <br>画头像的时候，头不要太大….  </p>
+          </div>
+
+<p><img data-src="https://i.loli.net/2021/08/19/3ncS5eP16h4XFod.jpg" alt="原图，为了对比翻转了一下"><br><img data-src="https://i.loli.net/2021/08/19/z6ds9MJl1oLSeEK.png" alt="这什么鬼？"></p>
+<p>刷新看一下抓形问题。</p>
+<div id="dplayer2" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer2"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/image/Works/%E6%B3%A8%E6%84%8F%E5%BD%A2%E5%93%AA%E9%87%8C%E4%B8%8D%E5%AF%B9.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/Works/%E6%B3%A8%E6%84%8F%E7%BA%BF%E7%A8%BF%E9%A2%9C%E8%89%B2%E5%8F%98%E5%8C%96.JPG" alt="注意线稿颜色变化"></p>
+<hr>
+<h3 id="【数码绘画】图层混合模式"><a href="#【数码绘画】图层混合模式" class="headerlink" title="【数码绘画】图层混合模式"></a>【数码绘画】图层混合模式</h3><p>其实吧很多数码绘画都来源于传统绘画，想回头多多了解了解。  </p>
+<p>normal             正常<br>dissolve           渐隐</p>
+<hr>
+<p>darken             变暗<br>Mutiply            正片叠底<br>color burn       颜色加深<br>linear burn      线性加深  </p>
+<hr>
+<p>lighten             变亮<br>screen             滤色<br>color dodge     颜色变淡<br>linear dodge/add    线性减淡  </p>
+<hr>
+<p>overlay            叠加<br>soft light          柔光<br>hard light         强光<br>vivid light         亮光<br>linear light       线性光<br>pin light           点光<br>hard mix          实色混合  </p>
+<hr>
+<p>difference       插值<br>exclusion         排除  </p>
+<hr>
+<p>hue           色调<br>saturation      饱和度  </p>
+<hr>
+<p>color           颜色<br>luminosity       亮度  </p>
+<p>好家伙我一直以为Add是叠加。  </p>
+<p>　　1. 正常(Normal)模式</p>
+<p>　　在“正常”模式下，“混合色”的显示与不透明度的设置有关。当“不透明度”为100%，也就是说完全不透明时，“结果色”的像素将完全由所用的“混合色”代替；当“不透明度”小于100%时，混合色的像素会透过所用的颜色显示出来，显示的程度取决于不透明度的设置与“基色”的颜色。如果在处理“位图”颜色模式图像或“索引颜色”颜色模式图像时，“正常”模式就改称为“阈值”模式了，不过功能是一样的。</p>
+<p>　　2. 溶解(Dissolve)模式</p>
+<p>　　在“溶解”模式中，主要是在编辑或绘制每个像素时，使其成为“结果色”。但是，根据任何像素位置的不透明度，“结果色”由“基色”或“混合色”的像素随机替换。因此，“溶解”模式最好是同Photoshop中的一些着色工具一同使用效果比较好，如“画笔”、“仿制图章”、“橡皮擦”工具等，也可以使用文字。当“混合色”没有羽化边缘，而且具有一定的透明度时，“混合色”将溶入到“基色”内。如果“混合色”没有羽化边缘，并且“不透明度”为100%，那么“溶解”模式不起任何作用。如果是用“画笔”工具或文字创建的“混合色”，同“基色”交替，就可以创建一种类似扩散抖动的效果，如果以小于或等于50％的不透明度描划一条路径，然后利用“描边路径”命令，“溶解”模式在图像边缘周围创建一种“泼溅”的效果。还可以制作模拟破损纸的边缘的效果等。如果利用“橡皮擦”工具，可以在一幅图像上方创建一个新的图层，并填充的白色作为“混合色。然后在“溶解”模式中，用“橡皮擦”工具擦除，可以创建类似于冬天上霜的玻璃中间被擦除的效果，</p>
+<p>　　3. 变暗(Darken)模式</p>
+<p>　　在“变暗”模式中，查看每个通道中的颜色信息，并选择“基色”或“混合色”中较暗的颜色作为“结果色”。比“混合色”亮的像素被替换，比“混合色”暗的像素保持不变。“变暗”模式将导致比背景颜色更淡的颜色从“结果色”中被去掉了。</p>
+<p>　　4. 正片叠底(Multiply)模式</p>
+<p>　　在“正片叠底”模式中，查看每个通道中的颜色信息，并将“基色”与“混合色”复合。“结果色”总是较暗的颜色。任何颜色与黑色复合产生黑色。任何颜色与白色复合保持不变。当用黑色或白色以外的颜色绘画时，绘画工具绘制的连续描边产生逐渐变暗的过渡色，其实“正片叠底”模式就是从“基色”中减去“混合色”的亮度值，得到最终的“结果色”。如果在“正片叠底”模式中使用较淡的颜色对图像的“结果色”是没有影响的。利用“正片叠底”模式可以形成一种光线穿透图层的幻灯片效果。其实就是将“基色”颜色与“混合色”颜色的数值相乘，然后再除以255，便得到了“结果色”的颜色值。例如，红色与黄色的“结果色”是橙色，红色与绿色的“结果色”是褐色，红色与蓝色的“结果色”是紫色等。</p>
+<p>　　5. 颜色加深(Clolor Burn)模式</p>
+<p>　　在“颜色加深”模式中，查看每个通道中的颜色信息，并通过增加对比度使基色变暗以反映混合色，如果与白色混合的话将不会产生变化，“颜色加深”模式创建的效果和“正片叠底”模式创建的效果比较类似。</p>
+<p>　　6. 线性加深(Linear Burn)模式</p>
+<p>　　在“线性加深”模式中，查看每个通道中的颜色信息，并通过减小亮度使“基色”变暗以反映混合色。如果“混合色”与“基色”上的白色混合后将不会产生变化。</p>
+<p>　　7. 变亮(Lighten)模式</p>
+<p>　　在“变亮”模式中，查看每个通道中的颜色信息，并选择“基色”或“混合色”中较亮的颜色作为“结果色”。比“混合色”暗的像素被替换，比“混合色”亮的像素保持不变。 在这种与“变暗”模式相反的模式下，较淡的颜色区域在最终的“合成色”中占主要地位。较暗区域并不出现在最终结“合成色”中。</p>
+<p>　　8. 滤色(Screen)模式</p>
+<p>　　“滤色”模式与“正片叠底”模式正好相反，它将图像的“基色”颜色与“混合色”颜色结合起来产生比两种颜色都浅的第三种颜色。其实就是并将“混合色”的互补色与“基色”复合。“结果色”总是较亮的颜色。用黑色过滤时颜色保持不变。用白色过滤将产生白色。无论在“滤色”模式下用着色工具采用一种颜色，还是对“滤色”模式指定一个层，合并的“结果色”始终是相同的合成颜色或一种更淡的颜色。此效果类似于多个摄影幻灯片在彼此之上投影一样。此“滤色”模式对于在图像中创建霓虹辉光效果是有用的。如果在层上围绕背景对象的边缘涂了白色或任何淡颜色，然后指定层“滤色”模式，通过调节层的“不透明度”设置就能获得饱满或稀薄的辉光效果。</p>
+<p>　　9. 颜色减淡(Clolor Dodge)模式</p>
+<p>　　在“颜色减淡”模式中，查看每个通道中的颜色信息，并通过减小对比度使基色变亮以反映混合色。与黑色混合则不发生变化。除了指定在这个模式的层上边缘区域更尖锐，以及在这个模式下着色的笔划之外，“颜色减淡”模式类似于“滤色”模式创建的效果。另外，不管何时定义“颜色减淡”模式混合“混合色”与“基色”像素，“基色”上的暗区域都将会消失。</p>
+<p>　　10. 线性减淡(Linear Dodge)模式</p>
+<p>　　在“线性减淡”模式中，查看每个通道中的颜色信息，并通过增加亮度使基色变亮以反映混合色。但是大家可不要与黑色混合，那样是不会发生变化的。</p>
+<p>　　11. 叠加(Overlay)模式</p>
+<p>　　“叠加”模式把图像的“基色”颜色与“混合色”颜色相混合产生一种中间色。“基色”内颜色比“混合色”颜色暗的颜色使“混合色”颜色倍增，比“混合色”颜色亮的颜色将使“混合色”颜色被遮盖，而图像内的高亮部分和阴影部分保持不变，因此对黑色或白色像素着色时“叠加”模式不起作用。“叠加”模式以一种非艺术逻辑的方式把放置或应用到一个层上的颜色同背景色进行混合，然而，却能得到有趣的效果。背景图像中的纯黑色或纯白色区域无法在“叠加”模式下显示层上的“叠加”着色或图像区域。背景区域上落在黑色和白色之间的亮度值同“叠加”材料的颜色混合在一起，产生最终的合成颜色。为了使背景图像看上去好像是同设计或文本一起拍摄的。</p>
+<p>　　12. 柔光(Soft Light)模式</p>
+<p>　　“柔光”模式会产生一种柔光照射的效果。如果“混合色”颜色比“基色颜色的像素更亮一些，那么“结果色”将更亮；如果“混合色”颜色比“基色”颜色的像素更暗一些，那么“结果色”颜色将更暗，使图像的亮度反差增大。例如，如果在背景图像上涂了50％黑色，这是一个从黑色到白色的梯度，那着色时梯度的较暗区域变得更暗，而较亮区域呈现出更亮的色调。 其实使颜色变亮或变暗，具体取决于“混合色”。此效果与发散的聚光灯照在图像上相似。 如果“混合色”比 50% 灰色亮，则图像变亮，就像被减淡了一样。如果“混合色”比 50% 灰色暗，则图像变暗，就象被加深了一样。用纯黑色或纯白色绘画会产生明显较暗或较亮的区域，但不会产生纯黑色或纯白色。</p>
+<p>　　13. 强光(Hard Light)模式</p>
+<p>　　“强光”模式将产生一种强光照射的效果。如果“混合色”颜色“基色”颜色的像素更亮一些，那么“结果色”颜色将更亮；如果“混合色”颜色比“基色”颜色的像素更暗一些，那么“结果色”将更暗。除了根据背景中的颜色而使背景色是多重的或屏蔽的之外，这种模式实质上同“柔光”模式是一样的。它的效果要比“柔光”模式更强烈一些，同“叠加”一样，这种模式也可以在背景对象的表面模拟图案或文本，例如，如果混合色比 50% 灰色亮，则图像变亮，就像过滤后的效果。这对于向图像中添加高光非常有用。如果混合色比 50%灰色暗，则图像变暗，就像复合后的效果。这对于向图像添加暗调非常有用。用纯黑色或纯白色绘画会产生纯黑色或纯白色。</p>
+<p>　　14. 亮光(Vivid Light)模式</p>
+<p>　　通过增加或减小对比度来加深或减淡颜色，具体取决于混合色。如果混合色（光源）比 50% 灰色亮，则通过减小对比度使图像变亮。如果混合色比 50% 灰色暗，则通过增加对比度使图像变暗，</p>
+<p>　　15. 线性光(Linear Light)模式</p>
+<p>　　通过减小或增加亮度来加深或减淡颜色，具体取决于混合色。如果混合色（光源）比 50% 灰色亮，则通过增加亮度使图像变亮。如果混合色比 50% 灰色暗，则通过减小亮度使图像变暗。</p>
+<p>　　16. 点光(Pin Light)模式</p>
+<p>　　“点光”模式其实就是替换颜色，其具体取决于“混合色”。如果“混合色”比 50% 灰色亮，则替换比“混合色”暗的像素，而不改变比“混合色”亮的像素。如果“混合色”比 50% 灰色暗，则替换比“混合色”亮的像素，而不改变比“混合色”暗的像素。这对于向图像添加特殊效果非常有用。</p>
+<p>　　17. 差值(Diference)模式</p>
+<p>　　在“差值”模式中，查看每个通道中的颜色信息，“差值”模式是将从图像中“基色”颜色的亮度值减去“混合色”颜色的亮度值，如果结果为负，则取正值，产生反相效果。由于黑色的亮度值为0，白色的亮度值为255，因此用黑色着色不会产生任何影响，用白色着色则产生被着色的原始像素颜色的反相。“差值”模式创建背景颜色的相反色彩，例如，在“差值”模式下，当把蓝色应用到绿色背景中时将产生一种青绿组合色。“差值”模式适用于模拟原始设计的底片，而且尤其可用来在其背景颜色从一个区域到另一区域发生变化的图像中生成突出效果。</p>
+<p>　　18. 排除(Exclusion)模式</p>
+<p>　　“排除”模式与“差值”模式相似，但是具有高对比度和低饱和度的特点。比用“差值”模式获得的颜色要柔和、更明亮一些。建议你在处理图像时，首先选择“差值”模式，若效果不够理想，可以选择“排除”模式来试试。其中与白色混合将反转“基色”值，而与黑色混合则不发生变化。其实无论是“差值”模式还是“排除”模式都能使人物或自然景色图像产生更真实或更吸引人的图像合成。</p>
+<p>　　19. 色相(Hue)模式</p>
+<p>　　“色相”模式只用“混合色”颜色的色相值进行着色，而使饱和度和亮度值保持不变。当“基色”颜色与“混合色”颜色的色相值不同时，才能使用描绘颜色进行着色。但是要注意的是“色相”模式不能用于灰度模式的图像。</p>
+<p>　　20. 饱和度(Saturation)模式</p>
+<p>　　“饱和度”模式的作用方式与“色相”模式相似，它只用“混合色”颜色的饱和度值进行着色，而使色相值和亮度值保持不变。当“基色”颜色与“混合色”颜色的饱和度值不同时，才能使用描绘颜色进行着色处理。在无饱和度的区域上（也就是灰色区域中）用“饱和度”模式是不会产生任何效果的。</p>
+<p>　　21. 颜色(Color)模式</p>
+<p>　　“颜色”模式能够使用“混合色”颜色的饱和度值和色相值同时进行着色，而使“基色”颜色的亮度值保持不变。“颜色”模式模式可以看成是“饱合度”模式和“色相”模式的综合效果。该模式能够使灰色图像的阴影或轮廓透过着色的颜色显示出来，产生某种色彩化的效果。这样可以保留图像中的灰阶，并且对于给单色图像上色和给彩色图像着色都会非常有用。</p>
+<p>　　22. 亮度(Luminosity)模式</p>
+<p>　　“亮度”模式能够使用“混合色”颜色的亮度值进行着色，而保持“基色”颜色的饱和度和色相数值不变。其实就是用“基色”中的“色相”和“饱和度”以及“混合色”的亮度创建“结果色”。此模式创建的效果是与“颜色”模式创建的效果相反。</p>
+<h1 id="布料（褶皱、装饰边缘、动态）"><a href="#布料（褶皱、装饰边缘、动态）" class="headerlink" title="布料（褶皱、装饰边缘、动态）"></a>布料（褶皱、装饰边缘、动态）</h1><p> <a href="/p/e3a42.html#%E5%B8%83%E6%96%99">转到Wave2</a></p>
+<h1 id="FX"><a href="#FX" class="headerlink" title="FX"></a>FX</h1><p> <a href="/p/e3a42.html#%E7%89%B9%E6%95%88%EF%BC%88FX%EF%BC%89%E7%9B%B8%E5%85%B3">转到Wave2</a></p>
+<h1 id="一些场景相关"><a href="#一些场景相关" class="headerlink" title="一些场景相关"></a>一些场景相关</h1><p><a href="/p/e3a42.html#%E5%9C%B0%E5%9B%BE%E5%8F%82%E8%80%83">友链一下Wave2里的地图参考</a></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%9C%B0%E5%9B%BE%E5%8F%82%E8%80%83/IMG_4456.PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%9C%B0%E5%9B%BE%E5%8F%82%E8%80%83/IMG_4457.PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%BB%BA%E7%AD%91%E5%8F%82%E8%80%83/IMG_9680(20211207-005354).JPG"></p>
+<p>层级分割可以根据景深关系，即空间的远近，近实远虚，近深远浅来分割。</p>
+<p>体现y轴层次：可以在物体底部加横线。</p>
+<p>–——<br>——————<br>    ____====</p>
+<p>↑</p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%B1%82%E7%BA%A7%E5%88%86%E5%89%B2%EF%BC%9A%E6%99%AF%E6%B7%B1%E5%85%B3%E7%B3%BB%EF%BC%8C%E7%A9%BA%E9%97%B4%E7%9A%84%E8%BF%9C%E8%BF%91%EF%BC%8C%E8%BF%91%E5%AE%9E%E8%BF%9C%E8%99%9A%EF%BC%8C%E8%BF%91%E6%B7%B1%E8%BF%9C%E6%B5%85.png" alt="层级分割"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/Works/4.9-1%E7%94%BB%E9%9D%A2%E6%8A%BD%E8%B1%A1%E5%88%86%E6%9E%90.png" alt="当时的作业"></p>
+<p>关于光影，左右上角只是多加了一层明暗对比，左上的塔尖由于是近景，画的比较暗，所以远处的天空就故意提亮形成明暗对比衬托出来，右上角也是加了一层明暗的图形对比，增加画面的节奏。  </p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/IMG_7646.PNG" alt="丁达尔"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E8%83%8C%E6%99%AF%E5%8F%82%E8%80%83/BingWallpaper.jpg" alt="蛇径"></p>
+<h4 id="透视轴测与等距"><a href="#透视轴测与等距" class="headerlink" title="透视轴测与等距"></a>透视轴测与等距</h4><p> <a href="/p/e3a42.html#%E9%80%8F%E8%A7%86%E8%BD%B4%E6%B5%8B%E4%B8%8E%E7%AD%89%E8%B7%9D">转到Wave2</a></p>
+<h3 id="猫猫狗狗参考"><a href="#猫猫狗狗参考" class="headerlink" title="猫猫狗狗参考"></a>猫猫狗狗参考</h3><p> <a href="/p/e3a42.html#%E7%8C%AB%E7%8C%AB%E7%8B%97%E7%8B%97%E5%8F%82%E8%80%83">转到Wave2</a></p>
+<h3 id="口、耳、鼻"><a href="#口、耳、鼻" class="headerlink" title="口、耳、鼻"></a>口、耳、鼻</h3><p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E8%80%B3%E9%BC%BB%E5%8F%A3%E5%8F%82%E8%80%83/IMG_8156(20210929-165952).JPG"></p>
+<p>这三个相对简单（不画写实的话，就，图形概括和风格总结相对简单，没有多少变化），就放在一起了。</p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E8%80%B3%E9%BC%BB%E5%8F%A3%E5%8F%82%E8%80%83/IMG_7596(20210826-101724).JPG" alt="注意嘴的风格"></p>
+<h4 id="口"><a href="#口" class="headerlink" title="口"></a>口</h4><p>和上图中的嘴区别，这个比较manga。  </p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E8%80%B3%E9%BC%BB%E5%8F%A3%E5%8F%82%E8%80%83/IMG_7594.JPG" alt="嘴"></p>
+<h4 id="耳"><a href="#耳" class="headerlink" title="耳"></a>耳</h4><p>耳朵变化就是物种那些了。  </p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E8%80%B3%E9%BC%BB%E5%8F%A3%E5%8F%82%E8%80%83/IMG_7597(20210826-101752).JPG" alt="耳"></p>
+<h4 id="鼻"><a href="#鼻" class="headerlink" title="鼻"></a>鼻</h4><p>写实和manga两种类型。   </p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E8%80%B3%E9%BC%BB%E5%8F%A3%E5%8F%82%E8%80%83/IMG_7595.JPG" alt="鼻"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E8%80%B3%E9%BC%BB%E5%8F%A3%E5%8F%82%E8%80%83/IMG_7598(20210826-102117).JPG" alt="鼻"></p>
+<h3 id="发型"><a href="#发型" class="headerlink" title="发型"></a>发型</h3><p>码。</p>
+<p>学到一种起发型的好方法。就是用图形（颜色）起形，然后再勾边。</p>
+<p>分大块，再分小块，目前先不要想着一笔能出效果。  </p>
+<p>下面不太算发型专精，就先放在这吧：  </p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/%E4%BA%8C%E6%AC%A1%E5%85%83%E7%9A%84%E5%BD%A2%E5%92%8C%E8%89%B2%E5%BD%A9.JPG" alt="二次元的形和色彩"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/%E8%BF%91%E5%86%99%E7%9C%9F%E7%9A%84%E5%BD%A2%E5%92%8C%E7%BA%BF%E6%9D%A1.JPG" alt="近写真的形和线条"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/FX%E5%8F%82%E8%80%83/IMG_7692(20210902-171922).JPG" alt="喜欢风格2"></p>
+<h4 id="发型种类"><a href="#发型种类" class="headerlink" title="发型种类"></a>发型种类</h4><p>分前发、侧发和后发。  </p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%A4%B4%E5%8F%91%E5%8F%82%E8%80%83/IMG_7473(20210820-200925).PNG" alt="后发"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%A4%B4%E5%8F%91%E5%8F%82%E8%80%83/IMG_7478(20210820-201151).PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%A4%B4%E5%8F%91%E5%8F%82%E8%80%83/IMG_7479(20210820-201216).PNG" alt="前发+侧发+后发"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%A4%B4%E5%8F%91%E5%8F%82%E8%80%83/IMG_7480(20210820-201300).PNG" alt="前发+侧发"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%A4%B4%E5%8F%91%E5%8F%82%E8%80%83/IMG_7686(20210902-171716).JPG"></p>
+<h4 id="发型动态"><a href="#发型动态" class="headerlink" title="发型动态"></a>发型动态</h4><p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%A4%B4%E5%8F%91%E5%8F%82%E8%80%83/IMG_7477(20210820-201114).PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%A4%B4%E5%8F%91%E5%8F%82%E8%80%83/IMG_7476(20210820-201055).PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%A4%B4%E5%8F%91%E5%8F%82%E8%80%83/IMG_8153(20210929-165726).JPG"></p>
+<h4 id="发型上色"><a href="#发型上色" class="headerlink" title="发型上色"></a>发型上色</h4><p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%A4%B4%E5%8F%91%E5%8F%82%E8%80%83/IMG_7474(20210820-201002).PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%A4%B4%E5%8F%91%E5%8F%82%E8%80%83/IMG_7475(20210820-201026).PNG"></p>
+<h4 id="Halo-头冠（角）"><a href="#Halo-头冠（角）" class="headerlink" title="Halo-头冠（角）"></a>Halo-头冠（角）</h4><p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/halo%E5%86%A0%EF%BC%88%E8%A7%92%EF%BC%89.jpg"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%B8%83%E6%96%99%E5%92%8C%E8%A1%A3%E6%9C%8D/%E8%AF%95%E7%A9%BF/IMG_8159(20210929-170127).JPG"></p>
+<h3 id="眼睛参考"><a href="#眼睛参考" class="headerlink" title="眼睛参考"></a>眼睛参考</h3><p>其实眼睛和宝石挺像的。  </p>
+<p>另外说一下图层混合模式效果。一般用亮图层做高光和亮部，其中常用的有add（线性减淡）、screen（滤色）和color dodge（颜色变淡）</p>
+<p>我总结了一下，主要分为两种眼睛：硬眼睛和软眼睛。我也看了下为啥我不喜欢某些眼睛，因为他们：</p>
+<ol>
+<li>黑色太多太重</li>
+<li>勾边黑色太粗或没有改色或没有擦除</li>
+<li>白色高光过多</li>
+<li>以及没有色彩变化</li>
+</ol>
+<p>我喜欢某些眼睛因为他们：</p>
+<ol>
+<li>黑色比例均衡，没有很离谱的勾边，有也会改颜色、擦除1/3</li>
+<li>色彩美丽，有对比反差</li>
+<li>白色高光占比适宜</li>
+<li>虚实融合适宜（虚实软硬对比，尤其是边缘）</li>
+<li>睫毛</li>
+<li>强调明暗分界线/瞳孔轮廓/底部反光（有人在分界线卡点、勾边、提饱和度）</li>
+<li>眼睛底色有渐变</li>
+</ol>
+<p>然后说一下硬眼睛和软眼睛，以及软硬结合位于两者之间。  <br>硬眼睛就是二次元平涂效果（老师不好意思，我知道你不同意这种观点，我就说一下意思意思）的，边缘很硬笔触很硬的眼睛；软眼睛就是日韩插画、水彩风格那种边缘很软的眼睛。一般软眼睛好画也容易出效果，比较抖音，下面这些图里硬眼睛比较多，我会把软眼睛标出来。  <br>也有一些特殊的眼睛，我也会标出来，这种就是独特画风的眼睛。  </p>
+<p>暂时这些。  </p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_9632(20211206-050314).JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/%E7%9C%BC%E7%9D%9B9.30.png"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7677(20210902-171256).JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7679(20210902-171428).JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7684(20210902-171641).JPG" alt="如图，眼睛小一些也无事"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7412(20210815-034752).PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7413(20210815-034858).PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7414(20210815-034928).PNG" alt="AI插画风格"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7415(20210815-034959).PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7416(20210815-035033).PNG" alt="软"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7417(20210815-035053).PNG" alt="软"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7418(20210815-035148).PNG" alt="线条勾边为主的眼睛"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7419(20210815-035204).PNG" alt="软"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7420(20210815-035315).PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7421(20210815-035410).PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7422(20210815-035652).PNG" alt="软"></p>
+<p>这张瞳孔的模糊边缘不是特别强，属于半软，柔化距离不大：</p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7464(20210820-200253).PNG" alt="半软"></p>
+<p>这个软了之后又加了硬滤镜：</p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7471(20210820-200803).PNG" alt="软+硬滤镜"></p>
+<p>这个用硬笔画软（不透明度模仿柔边）：</p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7472(20210820-200837).PNG" alt="硬笔仿软"></p>
+<p>下面是眼睛的各种形状：</p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/%E7%9C%BC%E5%9E%8B%E5%8D%B3%E8%BD%AC%E9%9D%A2.png" alt="眼型即转面"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7468(20210820-200649).PNG" alt="1"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7469(20210820-200714).PNG" alt="2"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/IMG_7470(20210820-200735).PNG" alt="3"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/%E4%BB%99%E4%BE%A0%E7%BB%86%E9%95%BF%E7%9C%BC.png" alt="仙侠的细长眼"></p>
+<p>原画的：</p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/%E7%9C%BC%E7%9D%9B%E5%8E%9A%E6%B6%821.png" alt="1"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/%E7%9C%BC%E7%9D%9B%E5%8E%9A%E6%B6%822.png" alt="2"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83/%E7%9C%BC%E7%9D%9B%E5%8E%9A%E6%B6%823.png" alt="3"></p>
+<p>注意睫毛位置。  </p>
+<h3 id="卢子参考"><a href="#卢子参考" class="headerlink" title="卢子参考"></a>卢子参考</h3><p>偷自一个Peter Mohrbacher画师的patron付费微博。</p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%8D%A2%E7%91%9E%E6%81%A9%E5%8F%82%E8%80%83/%E5%8D%A2%E7%91%9E%E6%81%A91.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%8D%A2%E7%91%9E%E6%81%A9%E5%8F%82%E8%80%83/%E5%8D%A2%E7%91%9E%E6%81%A92.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%8D%A2%E7%91%9E%E6%81%A9%E5%8F%82%E8%80%83/%E5%8D%A2%E7%91%9E%E6%81%A9%E8%BF%91%E8%A7%82.PNG" alt="近观"></p>
+<h3 id="拟鸟参考"><a href="#拟鸟参考" class="headerlink" title="拟鸟参考"></a>拟鸟参考</h3><p> <a href="/p/e3a42.html#%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83">转到Wave2</a></p>
+<h3 id="植物参考"><a href="#植物参考" class="headerlink" title="植物参考"></a>植物参考</h3><p><img data-src="http://mebilychen-media.test.upcdn.net/image/Plants/IMG_0392(20220117-070723).PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E8%99%8E%E8%80%B3%E8%8D%89%E8%8A%B1.jpg" alt="虎耳草">  </p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E8%99%8E%E8%80%B3%E8%8D%89%E8%8A%B12.jpg" alt="虎耳草2">  </p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E8%99%8E%E8%80%B3%E8%8D%89%E8%8A%B13.jpg" alt="虎耳草3">  </p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/Plants/%E8%99%8E%E8%80%B3%E8%8D%893.WEBP" alt="虎耳草4"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/IMG_7111.JPG" alt="花瓣布料">  </p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/Plants/IMG_7516(20210820-204715).PNG"></p>
+<h3 id="其他参考"><a href="#其他参考" class="headerlink" title="其他参考"></a>其他参考</h3><p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/%E5%A4%A7%E5%B8%88%E7%94%BB%E4%BD%9C-%E5%9B%BD%E7%8E%8B.JPG" alt="大师-国王"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/IMG_9169(20211120-022545).PNG" alt="可爱"></p>
+<p>来纪念一下我手机里最喜庆的图（8888号）<br><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/IMG_8888.PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%8A%A0%E9%A4%90.jpg" alt="Kokoshnik"></p>
+<p>刷新看一下看熊猫（哺乳动物）幼崽叫声卖萌。</p>
+<div id="dplayer3" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer3"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/RPReplay_Final1635063021.MP4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/%E5%85%B6%E4%BB%9610.10.jpg" alt="10.10补"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/714CF86CF3CB9211CC5210915A19D978.png"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_8083.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/IMG_8139(20210929-164927).JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/IMG_8213(20210929-172647).JPG"></p>
+<hr>
+<h4 id="某些作品分析"><a href="#某些作品分析" class="headerlink" title="某些作品分析"></a>某些作品分析</h4><p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E4%B8%80%E5%BC%A0%E5%9B%A2%E9%95%BF%E5%90%8C%E4%BA%BA%E5%88%86%E6%9E%90.jpg" alt="一张团长"></p>
+<hr>
+<h4 id="疫医"><a href="#疫医" class="headerlink" title="疫医"></a>疫医</h4><p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/%E4%BC%8A%E4%BC%8A9.30.jpg"></p>
+<h4 id="血月"><a href="#血月" class="headerlink" title="血月"></a>血月</h4><p>恐怖到模糊。<br><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/7E3D9D89565731DD6616F05D9BD074D9.png"></p>
+<hr>
+<h4 id="雷雨"><a href="#雷雨" class="headerlink" title="雷雨"></a>雷雨</h4><p>注意这不是白天，是打雷后被点亮的夜空。<br><img data-src="http://mebilychen-media.test.upcdn.net/image/Works/B8121677451D282C965200F6FA3EC0CE.png"></p>
+<p>刷新看一下看天选之子。</p>
+<div id="dplayer4" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer4"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/media/RPReplay_Final1621001443.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
+
+<h4 id="水花"><a href="#水花" class="headerlink" title="水花"></a>水花</h4><p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/%E6%B0%B4%E8%8A%B1.JPG"></p>
+<h4 id="Omensight"><a href="#Omensight" class="headerlink" title="Omensight"></a>Omensight</h4><p>注意装饰（景点）一般放在角和边缘上。  <br>小老鼠尾巴很可爱。<br><a href="/p/220d.html#Omensight">ArtBook精选看原帖</a></p>
+<p>以及注意一下君主的爪爪，和（我的）陛下设定是一样的。  </p>
+<hr>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/BloodBorne.jpg" alt="血源的这位太帅了">  </p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/%E6%8C%87%E6%8C%A5%E5%AE%B6%E5%8F%82%E8%80%83.jpg" alt="指挥家参考">  </p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/%E7%94%BB%E9%A3%8E%E5%8F%82%E8%80%831.jpg" alt="画风1"></p>
+<p><img data-src="http://p1.music.126.net/b7PL0B-_iVrZwBfC9w-tBQ==/109951164072192167.jpg?param=130y130" alt="不知为啥很有感觉"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/0a7a2991cb288dad80414165bd2ac3c2a15f1c14.jpg"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/1AC0BF46-1CA2-4C29-8E6A-B997758B8A48(20181017-172.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/7B930E19-4856-4F7D-91B1-EA22B3DAB0B7(20190804-154.JPG"></p>
+<p><img data-src="https://i.loli.net/2021/04/23/yF4BmD97lbUnSOw.png"></p>
+<p><img data-src="https://i.loli.net/2021/05/08/AVluIZhaFvdPUyw.png" alt="一种绘画形式，同一人在同一画面内画三种不同动作"></p>
+<h4 id="丢勒的写实画风"><a href="#丢勒的写实画风" class="headerlink" title="丢勒的写实画风"></a>丢勒的写实画风</h4><p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/%E5%86%99%E5%AE%9E%E9%A3%8E%E6%A0%BC%E5%8F%82%E8%80%83.JPG" alt="野兔"></p>
+<p>关于丢勒是如何准确地捕捉到兔子的图像存在一些争论:他可能是在野外看到了一只野兔,然后从一只死去的动物身上临摹了个别细节；或者是直接捉了一只野兔，然后在他的画室里把活生生地兔子拿来作画。兔子眼睛中窗框的倒影经常被认为是丢勒在他的工作室中制作这幅作品的理论证据，但这种横条纹的倒影是丢勒经常用来给他的模特的眼睛增添活力的方式。</p>
+<h4 id="宝石"><a href="#宝石" class="headerlink" title="宝石"></a>宝石</h4><p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/B22EF5A6139396812646C8C61DFDED0B.jpg"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%AE%9D%E7%9F%B3/IMG_7673(20210902-171133).JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%AE%9D%E7%9F%B3/IMG_7681.JPG"></p>
+<p>突然发现云也是可以有层次的</p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/IMG_7740.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/FX%E5%8F%82%E8%80%83/%E6%B0%B4%E7%BA%B9%E9%80%8F%E6%98%8E%E5%8F%82%E8%80%83.JPG" alt="水纹 透明 FX"></p>
+<hr>
+<p>刷新看兔兔接吻。</p>
+<div id="dplayer5" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer5"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/media/RPReplay_Final1631265919~1.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
+<hr>
+<h4 id="10-19其他"><a href="#10-19其他" class="headerlink" title="10.19其他"></a>10.19其他</h4><p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/qita10.19.jpg"></p>
+<p>卢子的方块眼也太可爱了。  </p>
+<hr>
+<h3 id="团长-蝙蝠参考"><a href="#团长-蝙蝠参考" class="headerlink" title="团长-蝙蝠参考"></a>团长-蝙蝠参考</h3><p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%9B%A2%E9%95%BF-%E8%9D%99%E8%9D%A0%E5%8F%82%E8%80%83/10586C34-8431-4CAB-AEB0-45DB0BEE864920181017-172.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%9B%A2%E9%95%BF-%E8%9D%99%E8%9D%A0%E5%8F%82%E8%80%83/48F3A148-21D0-4367-A090-CF9D1A0D677F20181017-172.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%9B%A2%E9%95%BF-%E8%9D%99%E8%9D%A0%E5%8F%82%E8%80%83/A621418B-B503-4A69-8F3A-E74A4210200320181017-015.JPG"></p>
+<hr>
+<h3 id="空洞原设参考"><a href="#空洞原设参考" class="headerlink" title="空洞原设参考"></a>空洞原设参考</h3><blockquote class="blockquote-center">
+            <i class="fa fa-quote-left"></i>
+            <p><span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL1doaXRlX1BhbGFjZQ==">Hollow Knight Wiki<i class="fa fa-external-link-alt"></i></span></p>
+
+            <i class="fa fa-quote-right"></i>
+          </blockquote>
+
+<p> <a href="/p/e3a42.html#%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83">转到Wave2</a></p>
+<hr>
+<h3 id="雪沃姆-龙参考"><a href="#雪沃姆-龙参考" class="headerlink" title="雪沃姆+龙参考"></a>雪沃姆+龙参考</h3><h4 id="蛇"><a href="#蛇" class="headerlink" title="蛇"></a>蛇</h4><p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/%E8%9B%87/QQ%E6%88%AA%E5%9B%BE20220110013043.png"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/IMG_0239.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/IMG_0240.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/12.18%E6%AE%BF%E4%B8%8B.jpg"></p>
+<p>刷新有视频。</p>
+<p>关于殿下的完美盘圈。</p>
+<div id="dplayer6" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer6"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/media/1.15/IMG_0003~2.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
+<div id="dplayer7" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer7"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/media/1.15/72F16426BE1AF45504937B297906112D.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
+<div id="dplayer8" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer8"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/media/1.15/D124806D0846CADC9ED376EA6A9574E4~2.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
+<div id="dplayer9" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer9"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/media/IMG_0004~1.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
+<div id="dplayer10" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer10"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/media/RPReplay_Final1639670125~1.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/12.7%E8%9B%87.jpg"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/IMG_9595.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/IMG_9599.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/IMG_9601.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/F106A8A9152F52B0F50624D54937BCD3.png" alt="草莓殿下3"></p>
+<p><img data-src="https://i.loli.net/2021/11/26/1764NhdkKcLwuXZ.jpg" alt="草莓殿下2"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/IMG_9250.JPG" alt="草莓殿下"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/%E7%8C%AA%E7%8C%AA%E5%B0%BE%E5%B7%B4%E5%9C%88.jpg" alt="猪鼻蛇尾巴圈之神"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/%E8%9C%A5%E8%9C%B4%E7%9F%B3%E9%BE%99%E5%AD%90%E5%8F%98%E8%89%B2%E9%BE%99.jpg" alt="蜥蜴"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/IMG_9061(20211116-133858).PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/gifs/742733B938F42DA4F2238696512AFBA7.gif" alt="舔"></p>
+<h4 id="10-19更新"><a href="#10-19更新" class="headerlink" title="10.19更新"></a>10.19更新</h4><p><span class="exturl" data-url="aHR0cDovL21lYmlseWNoZW4tbWVkaWEudGVzdC51cGNkbi5uZXQvaW1hZ2UvJUU5JTlCJUFBJUU2JUIyJTgzJUU1JUE3JTg2JTJCJUU5JUJFJTk5JUU1JThGJTgyJUU4JTgwJTgzLyVFOSVCRSU5OSVFOCU5QiU4NzEwLjE5LmpwZw==">上PDF吧，太大了<i class="fa fa-external-link-alt"></i></span></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/%E9%BE%99%E8%9B%8710.19.jpg" alt="加载不出点链接"></p>
+<hr>
+<p><img data-src="https://i.loli.net/2021/07/13/6ydsCPDFptfvSlJ.png"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/37122E7139CDDCB73A405E043EE3E602.png"></p>
+<p><img data-src="https://i.loli.net/2021/05/09/FItqvWgcLkNUnHr.png"></p>
+<p><img data-src="https://imglf3.lf127.net/img/SFFiWnAwMStNckJUeDJSQVNOUnVTWkRVSElnaCt3N1BtQzZtMHRBM1VzZVl6SU9ldXRvVEhBPT0.jpg?imageView&thumbnail=2160x0&quality=90&interlace=1&type=jpg"></p>
+<p><img data-src="https://imglf4.lf127.net/img/SFFiWnAwMStNckJUeDJSQVNOUnVTYndNaFFPcjdMMG5RTDNkaUdPYWRuOVFLcTdvcGFtcjhRPT0.jpg?imageView&thumbnail=2160x0&quality=90&interlace=1&type=jpg"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/127C858C-718A-4514-B02C-98DA9BC4568B(20190608-120.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/239479AF-C6CF-40BB-BBD0-B5D963845947.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/37DCEC8B-D2E5-4F4C-8264-6E587789E01F(20190608-120.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/40F598D6-AF7E-4313-9CD0-B87F4ADA95F0(20200405-124.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/4A76336A-A48F-43CB-98AB-FE720F065C2C(20200504-004.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/4AAB2A1B-007E-4666-BEDF-EA86AF8C6D92(20190608-120.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/6734F910-CAEA-490D-B57C-C814364262AC.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/68FEE8DC-C8DE-462F-A0D6-76EFD6386EC2(20190608-120.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/76E20EA6-23CC-4428-B642-900EDFF866AD(20190610-184.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/792A7085-6658-4D3D-A92A-C112856892FD(20200430-201.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/92F2976C-7BF9-4EF9-9691-AC81D47D809C(20200409-171.PNG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/9552E144-56C2-4DD0-9A70-2E5461A69C25(20190608-120.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/A1471CF8-B42F-49B4-AAD7-99094C618C24(20190608-120.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/BAA73E76-7C7D-49C4-93AC-CBC68A979678.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/BE0347E1-C351-4F2A-AA0A-449874FC4BDD.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/BED7BE9E-ADE1-4EFF-8BF3-7FBB54206287(20190608-120.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/C24D92B2-398D-41A0-9B6C-AEBA3F9474C1.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/C3FB5C0F-1AE5-4904-B191-EA4AE4B6D785(20200430-025.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/C66BB9A5-C026-42D2-A254-B114F48F15B4(20190608-120.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/CE9B8EB4-CF8D-4444-AE8F-1B29FA6E4DA1(20190610-184.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/D06AA0DA-C41E-41B3-9EB8-4B39252CC609.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/DBAA75D4-697B-4241-8B84-D4514AD2A27D(20190608-120.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/F49FA3C2-7730-44F4-9CF3-F4211BDC1FF5(20190608-120.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/FA3910A9-3FB8-46DE-B666-C6436B8A227C.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/FD87D55C-3C73-4F31-A8C5-5E1BB278CD46(20200430-025.JPG"></p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/IMG_5772(20210409-195919).JPG"></p>
+<p><img data-src></p>
+<p><img data-src></p>
+<p><img data-src></p>
+
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/e3a4.html">【参考】绘画参考+Art Tips</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2021年04月13日 - 23:11</p>
+ <p><span>最后更新:</span>2022年02月05日 - 20:05</p>
+ <p><span>原始链接:</span><a href="/p/e3a4.html" title="【参考】绘画参考+Art Tips">https://mebilychen.github.io/p/e3a4.html</a>
+    
+ </p>
+ <p><span>许可协议:</span>除非文章内另行声明，遵守 cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script data-pjax> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%A7%AF%E7%B4%AF%E6%9C%AC/" rel="tag"><i class="fa fa-tag"></i> 积累本</a>
+              <a href="/tags/%E7%BB%98/" rel="tag"><i class="fa fa-tag"></i> 绘</a>
+              <a href="/tags/%E7%BB%98%E7%94%BB%E5%8F%82%E8%80%83/" rel="tag"><i class="fa fa-tag"></i> 绘画参考</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/8809.html" rel="prev" title="陛下的桌宠（Shimeji）项目">
+      <i class="fa fa-chevron-left"></i> 陛下的桌宠（Shimeji）项目
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/fa16.html" rel="next" title="设计师指导手册">
+      设计师指导手册 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E2%80%9C%E7%A9%BA%E6%B4%9E%E7%94%BB%E9%A3%8E%E2%80%9D"><span class="nav-text">关于“空洞画风”</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B3%E4%BA%8Eoil-Paint"><span class="nav-text">关于oil Paint</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A3%B8%E7%9C%BC3D"><span class="nav-text">裸眼3D</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BD%AC%E8%87%AAChicory%E7%AC%AC%E4%B9%9D%E8%89%BA%E6%9C%AF%E9%89%B4%E8%B5%8F"><span class="nav-text">转自Chicory第九艺术鉴赏</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A9%BA%E6%B0%94%E9%80%8F%E8%A7%86%EF%BC%88%E8%87%AA%E7%84%B6%E5%86%99%E7%94%9F%EF%BC%89%E5%92%8C%E8%BF%91%E5%A4%84%E6%89%93%E5%85%89%EF%BC%88%E5%AE%A4%E5%86%85%E5%86%99%E7%94%9F%EF%BC%89"><span class="nav-text">空气透视（自然写生）和近处打光（室内写生）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%9C%8B%E4%B8%80%E5%BE%AE%E8%B7%9D%E6%91%84%E5%BD%B1%EF%BC%8C%E5%92%8Cslomo%EF%BC%88%E5%BB%B6%E6%97%B6%E6%91%84%E5%BD%B1%EF%BC%89"><span class="nav-text">看一微距摄影，和slomo（延时摄影）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%A0%E4%B8%BAPPT%E6%A8%A1%E6%9D%BF%E6%9C%89%E7%82%B9%E5%A5%BD%E7%9C%8B"><span class="nav-text">因为PPT模板有点好看</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E4%B8%80%E4%B8%AA%E6%97%A9%E5%B0%B1%E7%9F%A5%E9%81%93%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7%E5%90%A7"><span class="nav-text">说一个早就知道的小技巧吧</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-24%E5%8F%91%E7%8E%B0%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7%EF%BC%88%E4%BB%BF%E6%B0%B4%E5%BD%A9%EF%BC%89"><span class="nav-text">9.24发现的小技巧（仿水彩）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-22%E5%8F%91%E7%8E%B0%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7"><span class="nav-text">9.22发现的小技巧</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E9%A5%B1%E5%92%8C%E5%BA%A6"><span class="nav-text">关于饱和度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-22%E5%85%B3%E4%BA%8E%E5%AD%A6%E4%B9%A0%E5%85%89%E5%BD%B1%E4%BA%8C%E5%88%86"><span class="nav-text">9.22关于学习光影二分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-22%E5%8F%91%E7%8E%B0%E7%9A%84%E5%BE%88%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E5%B0%8F%E7%BA%A0%E7%BB%93"><span class="nav-text">9.22发现的很有意思的小纠结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-18%E5%8F%91%E7%8E%B0%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7"><span class="nav-text">9.18发现的小技巧</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Trouble%E6%88%91%E7%9A%84%E4%B8%80%E4%B8%AA%E5%A4%A7%E9%97%AE%E9%A2%98"><span class="nav-text">Trouble我的一个大问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-13%E5%8F%91%E7%8E%B0%E7%9A%84tips"><span class="nav-text">9.13发现的tips</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-10%E5%8F%91%E7%8E%B0%E7%9A%84tips"><span class="nav-text">9.10发现的tips</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-3%E5%8F%91%E7%8E%B0%E7%9A%84tips"><span class="nav-text">9.3发现的tips</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-2%E5%8F%91%E7%8E%B0%E7%9A%84tips"><span class="nav-text">9.2发现的tips</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E5%90%8C%E7%AC%94%E5%88%B7%E7%9A%84%E6%95%88%E6%9E%9C%E5%B7%AE%E8%B7%9D"><span class="nav-text">不同笔刷的效果差距</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linocut-Art-Guide-by-Abbie-Nurse"><span class="nav-text">Linocut Art Guide by Abbie Nurse</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%83%8F%E7%B4%A0%E8%89%BA%E6%9C%AF"><span class="nav-text">像素艺术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Pixel-Art-Guide-by-Ittai-Manero"><span class="nav-text">Pixel Art Guide by Ittai Manero</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Thick-Paint-Guide-by-Ittai-Manero"><span class="nav-text">Thick Paint Guide by Ittai Manero</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#A-quick-guide-on-breaking-stamps-to-make-your-own"><span class="nav-text">A quick guide on breaking stamps (to make your own)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E3%80%8A%E5%B9%B3%E9%9D%A2%E8%AE%BE%E8%AE%A1%E7%9C%8B%E8%BF%99%E6%9C%AC%E5%B0%B1%E5%A4%9F%E4%BA%86%E3%80%8B"><span class="nav-text">《平面设计看这本就够了》</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E5%89%8D%E7%9A%84%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92"><span class="nav-text">目前的学习计划</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8E%9F%E7%94%BB%E7%9F%A5%E8%AF%86%E7%82%B9%E8%84%91%E5%9B%BE"><span class="nav-text">原画知识点脑图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Field-Guide-to-Lovecraftian-Horrors"><span class="nav-text">Field Guide to Lovecraftian Horrors</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-26%E5%8F%91%E7%8E%B0%E7%9A%84tips%EF%BC%88%E5%A1%AB%E8%89%B2-%E7%BA%BF%E7%A8%BF%EF%BC%89"><span class="nav-text">8.26发现的tips（填色+线稿）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-19%E5%8F%91%E7%8E%B0%E7%9A%84tips%EF%BC%88%E5%AE%9A%E5%BD%A2-%E2%80%A678%EF%BC%89"><span class="nav-text">8.19发现的tips（定形+…78）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E3%80%90%E6%95%B0%E7%A0%81%E7%BB%98%E7%94%BB%E3%80%91%E5%9B%BE%E5%B1%82%E6%B7%B7%E5%90%88%E6%A8%A1%E5%BC%8F"><span class="nav-text">【数码绘画】图层混合模式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%83%E6%96%99%EF%BC%88%E8%A4%B6%E7%9A%B1%E3%80%81%E8%A3%85%E9%A5%B0%E8%BE%B9%E7%BC%98%E3%80%81%E5%8A%A8%E6%80%81%EF%BC%89"><span class="nav-text">布料（褶皱、装饰边缘、动态）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#FX"><span class="nav-text">FX</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E5%9C%BA%E6%99%AF%E7%9B%B8%E5%85%B3"><span class="nav-text">一些场景相关</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%8F%E8%A7%86%E8%BD%B4%E6%B5%8B%E4%B8%8E%E7%AD%89%E8%B7%9D"><span class="nav-text">透视轴测与等距</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8C%AB%E7%8C%AB%E7%8B%97%E7%8B%97%E5%8F%82%E8%80%83"><span class="nav-text">猫猫狗狗参考</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%A3%E3%80%81%E8%80%B3%E3%80%81%E9%BC%BB"><span class="nav-text">口、耳、鼻</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%A3"><span class="nav-text">口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%80%B3"><span class="nav-text">耳</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%BC%BB"><span class="nav-text">鼻</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%91%E5%9E%8B"><span class="nav-text">发型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%91%E5%9E%8B%E7%A7%8D%E7%B1%BB"><span class="nav-text">发型种类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%91%E5%9E%8B%E5%8A%A8%E6%80%81"><span class="nav-text">发型动态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%91%E5%9E%8B%E4%B8%8A%E8%89%B2"><span class="nav-text">发型上色</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Halo-%E5%A4%B4%E5%86%A0%EF%BC%88%E8%A7%92%EF%BC%89"><span class="nav-text">Halo-头冠（角）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9C%BC%E7%9D%9B%E5%8F%82%E8%80%83"><span class="nav-text">眼睛参考</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%A2%E5%AD%90%E5%8F%82%E8%80%83"><span class="nav-text">卢子参考</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%9F%E9%B8%9F%E5%8F%82%E8%80%83"><span class="nav-text">拟鸟参考</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A4%8D%E7%89%A9%E5%8F%82%E8%80%83"><span class="nav-text">植物参考</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83"><span class="nav-text">其他参考</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%90%E4%BA%9B%E4%BD%9C%E5%93%81%E5%88%86%E6%9E%90"><span class="nav-text">某些作品分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%96%AB%E5%8C%BB"><span class="nav-text">疫医</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%80%E6%9C%88"><span class="nav-text">血月</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9B%B7%E9%9B%A8"><span class="nav-text">雷雨</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B0%B4%E8%8A%B1"><span class="nav-text">水花</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Omensight"><span class="nav-text">Omensight</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%A2%E5%8B%92%E7%9A%84%E5%86%99%E5%AE%9E%E7%94%BB%E9%A3%8E"><span class="nav-text">丢勒的写实画风</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9D%E7%9F%B3"><span class="nav-text">宝石</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-19%E5%85%B6%E4%BB%96"><span class="nav-text">10.19其他</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%A2%E9%95%BF-%E8%9D%99%E8%9D%A0%E5%8F%82%E8%80%83"><span class="nav-text">团长-蝙蝠参考</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A9%BA%E6%B4%9E%E5%8E%9F%E8%AE%BE%E5%8F%82%E8%80%83"><span class="nav-text">空洞原设参考</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%AA%E6%B2%83%E5%A7%86-%E9%BE%99%E5%8F%82%E8%80%83"><span class="nav-text">雪沃姆+龙参考</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%9B%87"><span class="nav-text">蛇</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-19%E6%9B%B4%E6%96%B0"><span class="nav-text">10.19更新</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar3.jpg">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">156</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">54</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">162</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjEwMTM3MTIxMjdAcXEuY29t" title="E-Mail → mailto:1013712127@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9tZWJpbHkxMzE0" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      猜猜这是什么鬼地方？
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9tZWJpbHljaGVuLmxvZnRlci5jb20v" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;">LOFTER</span>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/p/dd8a.html" title="p&#x2F;dd8a.html">“行为艺术”</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/e3a422.html" title="p&#x2F;e3a422.html">【参考】衣|料专版</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/4eb5.html" title="p&#x2F;4eb5.html">遗书</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ce0f2.html" title="p&#x2F;ce0f2.html">Dreamily.AI专场</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/b6c1.html" title="p&#x2F;b6c1.html">关于动保和动不动就保和虐杀</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/754d1.html" title="p&#x2F;754d1.html">《致咩碳》</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/300011.html" title="p&#x2F;300011.html">【#快乐王子】HP开题Demo&记录</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/p/e3a4.html" title="p&#x2F;e3a4.html">【参考】绘画参考+Art Tips</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/248a.html" title="p&#x2F;248a.html">一个新点子，关于跑团和跑团的</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/5401.html" title="p&#x2F;5401.html">【绘集】无Tag的绘点子</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">1.7m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">25:38</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "站子已虔诚祈祷 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+     //'.site-meta',
+    //'.site-nav',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>
