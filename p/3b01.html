@@ -1114,7 +1114,17 @@ setInterval("createtime()",250);
     </footer>
   </div>
 
-  
+  <script language="JavaScript">
+var password="";
+password=prompt('Password (Birthday)','');
+if (password != '20180909')   
+{alert("。");    
+window.opener=null;
+window.location.href = "about:blank"; 
+window.close();}  // 密码不正确就关闭//-->
+</script>
+
+
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/pjax/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
@@ -1132,13 +1142,6 @@ setInterval("createtime()",250);
 <script src="/js/schemes/muse.js"></script>
 
 
-<script language="JavaScript">
-var password="";
-password=prompt('Password (Birthday)','');
-if (password != '20180909')   
-{alert("。");    
-window.opener=null; window.location.href = 'about:blank'; window.close();}  // 密码不正确就关闭//-->
-</script>
 <script src="/js/next-boot.js"></script>
 
 <script src="/js/bookmark.js"></script>
