@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="出卖了灵魂的web作业">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【网站】这些Web出卖了灵魂">
+<meta property="og:url" content="https://mebilychen.github.io/p/4c9a.html">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:description" content="出卖了灵魂的web作业">
+<meta property="og:locale">
+<meta property="article:published_time" content="2019-10-29T08:06:00.000Z">
+<meta property="article:modified_time" content="2021-08-14T06:45:15.852Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="灭绝：弃坑">
+<meta property="article:tag" content="沙雕">
+<meta property="article:tag" content="圣巢全员">
+<meta property="article:tag" content="趣味网站">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://mebilychen.github.io/p/4c9a.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : '中文'
+  };
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    
+      if (NexT.utils.hasMobileUA()) return;
+    
+    let time, hidden, visible, title = document.title;
+    let favicon = document.querySelector('link[rel="icon"]');
+    
+      hidden = ["盯————","*探*","?","......","*观察*"];
+      visible = ["*偏转视线*","*缩*","*强装镇定*","！","*低头*"];
+    
+    let random = t => t[Math.floor(Math.random() * t.length)];
+    const change = () => {
+      if (document.hidden) {
+        favicon.setAttribute('href', '/images/favicon-32x32-king-black.png');
+        
+          document.title = random(hidden);
+        
+        clearTimeout(time);
+      } else {
+        favicon.setAttribute('href', '/images/favicon-32x32-brand-black.png');
+        
+          document.title = random(visible);
+        
+        time = setTimeout(() => {
+          document.title = '碳素的小作坊';
+        }, 1000);
+      }
+    }
+    document.addEventListener('visibilitychange', change, false);
+  });
+</script>
+
+  <title>【网站】这些Web出卖了灵魂 | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;调谐中...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">163</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">52</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">159</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-image fa-fw"></i>画廊</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/random.html" rel="section"><i class="fa fa-question fa-fw"></i>抽</a>
+
+  </li>
+        <li class="menu-item menu-item-lang">
+
+    <a href="/en/" rel="section"><i class="fa fa-globe fa-fw"></i>->English</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-17081-597255-1305127431.cos-website.ap-hongkong.myqcloud.com' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/4c9a.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【网站】这些Web出卖了灵魂
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-10-29 16:06:00" itemprop="dateCreated datePublished" datetime="2019-10-29T16:06:00+08:00">2019-10-29</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2021-08-14 14:45:15" itemprop="dateModified" datetime="2021-08-14T14:45:15+08:00">2021-08-14 14:45:15</time>
+                </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A2%B3%E9%85%B8%E7%9A%84%E6%B1%82%E7%94%9F%E4%B9%8B%E8%B7%AF/" itemprop="url" rel="index"><span itemprop="name">碳酸的求生之路</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A2%B3%E9%85%B8%E7%9A%84%E6%B1%82%E7%94%9F%E4%B9%8B%E8%B7%AF/%E7%9C%9F%E7%9A%84%E6%B2%99%E9%9B%95/" itemprop="url" rel="index"><span itemprop="name">真的沙雕</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>9.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>8 分钟</span>
+            </span>
+            <div class="post-description"><center>出卖了灵魂的web作业</div>
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%81%AD%E7%BB%9D%EF%BC%9A%E5%BC%83%E5%9D%91/" rel="tag"><i class="fa fa-tag"></i> 灭绝：弃坑</a>
+              <a href="/tags/%E6%B2%99%E9%9B%95/" rel="tag"><i class="fa fa-tag"></i> 沙雕</a>
+              <a href="/tags/%E5%9C%A3%E5%B7%A2%E5%85%A8%E5%91%98/" rel="tag"><i class="fa fa-tag"></i> 圣巢全员</a>
+              <a href="/tags/%E8%B6%A3%E5%91%B3%E7%BD%91%E7%AB%99/" rel="tag"><i class="fa fa-tag"></i> 趣味网站</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p>等着站子上传的时候闲着没事想找点乐子玩，就搜了搜“Interesting Websites”。  </p>
+<p>顺便捞一下这个帖子，压榨一下它的空间价值（blink）</p>
+<p>来源：<span class="exturl" data-url="aHR0cHM6Ly93d3cuaG9uZ2tpYXQuY29tL2Jsb2cvY29vbC1pbnRlcmVzdGluZy13ZWJzaXRlcy8=">Hongkiat-blog<i class="fa fa-external-link-alt"></i></span></p>
+<hr>
+<h4 id="Gnoosic"><a href="#Gnoosic" class="headerlink" title="Gnoosic"></a><span class="exturl" data-url="aHR0cDovL3d3dy5nbm9vc2ljLmNvbS8=">Gnoosic<i class="fa fa-external-link-alt"></i></span></h4><p>Gnoosic is your go to spot for <strong>new music recommendations</strong>. It asks for three of your favourite bands, and based on your interests, spits out an artist that you might like.</p>
+<p>You then have the option to “like”, “dislike”, or mark it as something you aren’t familiar with – which further refines the results. This will be enjoyable for music enthusiasts who are looking for a musical adventure.</p>
+<h4 id="Patatap"><a href="#Patatap" class="headerlink" title="Patatap"></a><span class="exturl" data-url="aHR0cDovL3d3dy5wYXRhdGFwLmNvbS8=">Patatap<i class="fa fa-external-link-alt"></i></span></h4><p>Patatap is an interactive website that responds to the keys on your keyboard with a sound and a brief animation.</p>
+<p>Now imagine hammering in entire sentences – and you got an explosion of sounds, colors, and movement! Once you start typing in random paragraphs, it becomes almost hypnotic, in a way.</p>
+<p>A fun way to unwind and relax.</p>
+<h4 id="PostSecret"><a href="#PostSecret" class="headerlink" title="PostSecret"></a><span class="exturl" data-url="aHR0cDovL3Bvc3RzZWNyZXQuY29tLw==">PostSecret<i class="fa fa-external-link-alt"></i></span></h4><p>PostSecret is a very interesting website. Visitors are encouraged to send in anonymous postcards on which they write their secrets.</p>
+<p>There are all sorts of secrets on all kinds of postcards, and the variations make this a really interesting project. However, be warned – these secrets are very real… and very heavy.</p>
+<h4 id="River-Styx"><a href="#River-Styx" class="headerlink" title="River Styx"></a><span class="exturl" data-url="aHR0cDovL3d3dy5yaXZlcnN0eXguY29tLw==">River Styx<i class="fa fa-external-link-alt"></i></span></h4><p>An interactive website that takes you through the river Styx and the Underworld. You will meet many Greek Gods and Goddesses here, and you will also be learning a lot about their myths and legends.</p>
+<p>The website works much like how a point-and-click game would, with your cursor turning into a different icon when you hover it over relevant objects. An interesting, visual crash course to Greek mythology and philosophy!</p>
+<h4 id="NOIYS-–-Post-read-forget"><a href="#NOIYS-–-Post-read-forget" class="headerlink" title="NOIYS – Post, read, forget"></a><span class="exturl" data-url="aHR0cDovL3d3dy5ub2l5cy5jb20v">NOIYS – Post, read, forget<i class="fa fa-external-link-alt"></i></span></h4><p>NOIYS is a place to post an anonymous note to be viewed by many people, only to be deleted within 24 hours. It’s the perfect website for venting anonymously and not worry about the consequences, as it will be deleted within a day.</p>
+<p>The best part (or maybe worst) is that strangers can reply to your note, too. That way, you can have a running conversation with a complete stranger.</p>
+<h4 id="MapCrunch"><a href="#MapCrunch" class="headerlink" title="MapCrunch"></a><span class="exturl" data-url="aHR0cHM6Ly93d3cubWFwY3J1bmNoLmNvbS8=">MapCrunch<i class="fa fa-external-link-alt"></i></span></h4><p>Go on an adventure without leaving your home — because you can’t! This site plops you down in a random location on the globe, and all that’s left to do is explore.</p>
+<h4 id="Paper-Toilet"><a href="#Paper-Toilet" class="headerlink" title="Paper Toilet"></a><span class="exturl" data-url="aHR0cDovL3BhcGVydG9pbGV0LmNvbS8=">Paper Toilet<i class="fa fa-external-link-alt"></i></span></h4><p>Just because stores are sold out of toilet paper doesn’t mean you have to live without. This site features some interactive TP that you can roll up or down.</p>
+<h4 id="News-of-Future"><a href="#News-of-Future" class="headerlink" title="News of Future"></a><span class="exturl" data-url="aHR0cDovL25ld3NvZmZ1dHVyZS5jb20v">News of Future<i class="fa fa-external-link-alt"></i></span></h4><p>This site was made in 2012 to predict what headlines might look like in the future. The idea was fun enough back then, but now that we’re actually <em>in</em> the future, it’s way more interesting.</p>
+<h4 id="Scream-Into-the-Void"><a href="#Scream-Into-the-Void" class="headerlink" title="Scream Into the Void"></a><span class="exturl" data-url="aHR0cHM6Ly9zY3JlYW1pbnRvdGhldm9pZC5jb20v">Scream Into the Void<i class="fa fa-external-link-alt"></i></span></h4><p>Take your outrage about our current situation (or any problem in your life) and throw it into the void. Just type out your feels and then click the “Scream” button, which does exactly what you think it does.</p>
+<h4 id="The-Wayback-Machine"><a href="#The-Wayback-Machine" class="headerlink" title="The Wayback Machine"></a><span class="exturl" data-url="aHR0cHM6Ly9hcmNoaXZlLm9yZy93ZWIv">The Wayback Machine<i class="fa fa-external-link-alt"></i></span></h4><p>Check out how your favorite websites looked before they got all <del>sleek</del>. Type in a URL, choose a date, and the Wayback Machine will show you a screenshot of the site from that particular day in history.</p>
+<h4 id="Star-Atlas"><a href="#Star-Atlas" class="headerlink" title="Star Atlas"></a><span class="exturl" data-url="aHR0cHM6Ly9zdGFyYXRsYXMuY29tLw==">Star Atlas<i class="fa fa-external-link-alt"></i></span></h4><p>If you live in a place with light pollution, it’s probably been a sec since you’ve seen a constellation. Thankfully, Star Atlas has come through with a digital view of the night sky at your location.</p>
+<h4 id="2048"><a href="#2048" class="headerlink" title="2048"></a><span class="exturl" data-url="aHR0cHM6Ly9wbGF5MjA0OC5jby8=">2048<i class="fa fa-external-link-alt"></i></span></h4><p>This website lets you play a game called 2048, which is kinda like Tetris but with addition. Use your arrow keys to try to combine numbers until you reach 2048, or go <del>beyond</del> and try to reach 4096.</p>
+<h4 id="Zoom-Quilt"><a href="#Zoom-Quilt" class="headerlink" title="Zoom Quilt"></a><span class="exturl" data-url="aHR0cHM6Ly96b29tcXVpbHQub3JnLw==">Zoom Quilt<i class="fa fa-external-link-alt"></i></span></h4><p>If you’re looking to be hypnotized, then check out this site, which is basically a picture that infinitely zooms in to reveal new pictures.</p>
+<h4 id="Freerice"><a href="#Freerice" class="headerlink" title="Freerice"></a><span class="exturl" data-url="aHR0cHM6Ly9mcmVlcmljZS5jb20vIy9lbmdsaXNoLXZvY2FidWxhcnkvMTU1NA==">Freerice<i class="fa fa-external-link-alt"></i></span></h4><p>For every correct answer you get on this vocab quiz, “sponsors donate the cash equivalent of 10 grains of rice” to the <span class="exturl" data-url="aHR0cHM6Ly93d3cud2ZwdXNhLm9yZy9nZXQtaW52b2x2ZWQvZnJlZXJpY2Uv">United Nations World Food Programme<i class="fa fa-external-link-alt"></i></span>. It’s charitable procrastination.</p>
+<h4 id="MuscleWiki"><a href="#MuscleWiki" class="headerlink" title="MuscleWiki"></a><span class="exturl" data-url="aHR0cHM6Ly9tdXNjbGV3aWtpLm9yZy8=">MuscleWiki<i class="fa fa-external-link-alt"></i></span></h4><p>MuscleWiki provides an interactive diagram of all the muscles you aren’t moving now that you’re confined to your apartment. Just click on a muscle, and the site will suggest ways to exercise it.</p>
+<h4 id="Radiooooo"><a href="#Radiooooo" class="headerlink" title="Radiooooo"></a><span class="exturl" data-url="aHR0cDovL3JhZGlvb29vby5jb20v">Radiooooo<i class="fa fa-external-link-alt"></i></span></h4><p>Radio Garden walked so Radiooooo could run. This site adds a timeline function so you can listen to radio from not just anywhere, but any<em>when</em>. Get down to those 1910s Russian bops!</p>
+<h4 id="The-Passive-Aggressive-Password-Machine"><a href="#The-Passive-Aggressive-Password-Machine" class="headerlink" title="The Passive-Aggressive Password Machine"></a><span class="exturl" data-url="aHR0cHM6Ly90cnlwYXAuY29tLw==">The Passive-Aggressive Password Machine<i class="fa fa-external-link-alt"></i></span></h4><p>Type a password (real or fake) into this site and it’ll shade you for how much it sucks.</p>
+<h4 id="29a-ch"><a href="#29a-ch" class="headerlink" title="29a.ch"></a><span class="exturl" data-url="aHR0cHM6Ly8yOWEuY2gvc2FuZGJveC8yMDExL25lb25mbGFtZXMv">29a.ch<i class="fa fa-external-link-alt"></i></span></h4><p>This interactive site lets you color what looks to be a map of the cosmos, but I’m honestly not sure. Whatever it is, it’s mesmerizing.</p>
+<h4 id="My-Fridge-Food"><a href="#My-Fridge-Food" class="headerlink" title="My Fridge Food"></a><span class="exturl" data-url="aHR0cHM6Ly9teWZyaWRnZWZvb2QuY29tLw==">My Fridge Food<i class="fa fa-external-link-alt"></i></span></h4><p>At this point, your fridge probs has, like, three random items in it, and you’re starting to panic about meal options. Enter My Fridge Food, which inputs everything you have in your kitchen and outputs a recipe. Bless.</p>
+<h4 id="Vsauce"><a href="#Vsauce" class="headerlink" title="Vsauce"></a><span class="exturl" data-url="aHR0cDovL3d3dy52c2F1Y2UuY29tLyMv">Vsauce<i class="fa fa-external-link-alt"></i></span></h4><p>Vsauce is one of the few websites on the internet which makes learning fun and interesting. Whenever you have a little downtime and looking for ways to pass it, just head over to the website to learn interesting things and concepts such as the infinite money paradox, the game you win by losing, the napkin ring problem, and more. And if none of those things made any sense, you should definitely visit the website.</p>
+<h4 id="A-Good-Movie-To-Watch"><a href="#A-Good-Movie-To-Watch" class="headerlink" title="A Good Movie To Watch"></a><span class="exturl" data-url="aHR0cHM6Ly9hZ29vZG1vdmlldG93YXRjaC5jb20v">A Good Movie To Watch<i class="fa fa-external-link-alt"></i></span></h4><p>We all know how difficult finding a good movie to watch can be. It happens with me all the time and I always end up watching the same few movies over and over again. While you can look for the <span class="exturl" data-url="aHR0cHM6Ly9iZWVib20uY29tL2Jlc3QtbmV0ZmxpeC1tb3ZpZXMv">best Netflix movies<i class="fa fa-external-link-alt"></i></span> online, this website is a boon to people like me. They have a highly curated list of movies which you can select based on genre, mood, or just randomly. The best part about this website is that they highlight movies which for one reason or another could not appease the mass media, but are an excellent watch. I have discovered a lot more movies here than anywhere else.</p>
+<h4 id="The-Useless-Web"><a href="#The-Useless-Web" class="headerlink" title="The Useless Web"></a><span class="exturl" data-url="aHR0cHM6Ly90aGV1c2VsZXNzd2ViLmNvbS8=">The Useless Web<i class="fa fa-external-link-alt"></i></span></h4><p>Want to see what the Internet truly has to offer? Take a peek at The Useless Web to see what truly is out there.</p>
+<h4 id="Shady-URL"><a href="#Shady-URL" class="headerlink" title="Shady URL"></a><span class="exturl" data-url="aHR0cDovL3d3dy5zaGFkeXVybC5jb20v">Shady URL<i class="fa fa-external-link-alt"></i></span></h4><p>Want to play a harmless <span class="exturl" data-url="aHR0cHM6Ly9wYXJhZGUuY29tLzk4NDk3OC9rZWxzZXlwZWx6ZXIvYXByaWwtZm9vbHMtcHJhbmtz">prank<i class="fa fa-external-link-alt"></i></span> on your friends or give your co-workers a bit of a scare? If you shorten a URL on this website, it will make it look like the URL will lead to a virus or scam site!</p>
+<h4 id="Music-Theory"><a href="#Music-Theory" class="headerlink" title="Music Theory"></a><span class="exturl" data-url="aHR0cHM6Ly93d3cubXVzaWN0aGVvcnkubmV0Lw==">Music Theory<i class="fa fa-external-link-alt"></i></span></h4><p>Learn the language behind your favorite pieces of <span class="exturl" data-url="aHR0cHM6Ly9wYXJhZGUuY29tLzEyMzkzNDkvbWljaGVsbGVwYXJrZXJ0b24vbXVzaWMtcXVvdGVzLw==">music<i class="fa fa-external-link-alt"></i></span> with this fun website! They offer free lessons and exercises so you have all you need to become the next musical genius.</p>
+<h4 id="What-Should-I-Read-Next"><a href="#What-Should-I-Read-Next" class="headerlink" title="What Should I Read Next? "></a><span class="exturl" data-url="aHR0cHM6Ly93d3cud2hhdHNob3VsZGlyZWFkbmV4dC5jb20v">What Should I Read Next? <i class="fa fa-external-link-alt"></i></span></h4><p>Read all the books in your library? This website will take your preferences and give you all the book recommendations you could ever want.</p>
+<h4 id="OnRead"><a href="#OnRead" class="headerlink" title="OnRead"></a><span class="exturl" data-url="aHR0cHM6Ly93d3cub25yZWFkLmNvbS8=">OnRead<i class="fa fa-external-link-alt"></i></span></h4><p>If you need a quick and easy book to read, check out OnRead’s library of free ebooks!</p>
+<h4 id="Eyebleach"><a href="#Eyebleach" class="headerlink" title="Eyebleach"></a><span class="exturl" data-url="aHR0cHM6Ly9leWVibGVhY2gubWUv">Eyebleach<i class="fa fa-external-link-alt"></i></span></h4><p>Did you see something on the internet that was just too scary? Click on Eyebleach to be fed adorable pictures of puppies, kitties, or babies!</p>
+<h4 id="Weave-Silk"><a href="#Weave-Silk" class="headerlink" title="Weave Silk "></a><span class="exturl" data-url="aHR0cDovL3dlYXZlc2lsay5jb20v">Weave Silk <i class="fa fa-external-link-alt"></i></span></h4><p>Create beautiful mesmerizing works of art on Weave Silk. In addition to being a website, you can also download this onto your phone or tablet.</p>
+<h4 id="You-Are-Listening-To"><a href="#You-Are-Listening-To" class="headerlink" title="You Are Listening To"></a><span class="exturl" data-url="aHR0cDovL3lvdWFyZWxpc3RlbmluZy50by8=">You Are Listening To<i class="fa fa-external-link-alt"></i></span></h4><p>Love true crime and ambient music? You Are Listening To combines police scanner audio and mixes with lofi and other background music to create a one of a kind experience.</p>
+<h4 id="Da-Font"><a href="#Da-Font" class="headerlink" title="Da Font"></a><span class="exturl" data-url="aHR0cHM6Ly93d3cuZGFmb250LmNvbS8=">Da Font<i class="fa fa-external-link-alt"></i></span></h4><p>Tired of your basic Times New Roman? You can spend hours downloading new fonts from typography artists to spice up your new document!</p>
+<h4 id="Quick-Draw"><a href="#Quick-Draw" class="headerlink" title="Quick, Draw"></a><span class="exturl" data-url="aHR0cHM6Ly9xdWlja2RyYXcud2l0aGdvb2dsZS5jb20v">Quick, Draw<i class="fa fa-external-link-alt"></i></span></h4><p>Put your drawing skills to the test with Quick, Draw from Google! You’ll help a robot put their doodling skills to the test while also helping Google with machine learning research.</p>
+<h4 id="Taste-Dive"><a href="#Taste-Dive" class="headerlink" title="Taste Dive"></a><span class="exturl" data-url="aHR0cHM6Ly90YXN0ZWRpdmUuY29tLw==">Taste Dive<i class="fa fa-external-link-alt"></i></span></h4><p>Looking for new music to spice up your playlists?</p>
+<h4 id="两个关于名人死亡原因的"><a href="#两个关于名人死亡原因的" class="headerlink" title="两个关于名人死亡原因的"></a>两个关于名人死亡原因的</h4><p><span class="exturl" data-url="aHR0cHM6Ly93d3cub250aGlzZGF5LmNvbS9wZW9wbGUvY2F1c2Utb2YtZGVhdGgucGhw">OnThisDay<i class="fa fa-external-link-alt"></i></span>和<span class="exturl" data-url="aHR0cHM6Ly93d3cudGhlZmFtb3VzcGVvcGxlLmNvbS9jYXVzZS1vZi1kZWF0aC5waHA=">FamousPeople<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="interactive-infographic-website-和-interactive-data-visualization-website"><a href="#interactive-infographic-website-和-interactive-data-visualization-website" class="headerlink" title="interactive infographic website 和 interactive data visualization website"></a><span class="exturl" data-url="aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9zZWFyY2g/cT1pbnRlcmFjdGl2ZStpbmZvZ3JhcGhpYyt3ZWJzaXRlJnN4c3JmPUFMZUtrMDJoOWVLTHpwaC1uVXdwZnRUcHJTTkZyUFlGOEE6MTYyODg5MTA2NjA2MSZlaT11dWNXWWZqcUFxTHE5QVAxMTV6b0N3Jm9xPWludGVpbmZvZ3JhcGhpYyt3ZWJzaXRlJmdzX2xjcD1DZ2RuZDNNdGQybDZFQUVZQURJR0NBQVFCeEFlT2djSUFCQkhFTEFET2djSUFCQ3dBeEJET2djSUl4Q3dBaEFuT2dRSUFCQU5PZ1lJQUJBTkVCNUtCQWhCR0FCUXBGOVl5V1Jnb25ab0FuQUNlQUNBQWZvSWlBR2hFcElCQ1RJdE1pNHlMamN0TVpnQkFLQUJBY2dCQ3NBQkFRJnNjbGllbnQ9Z3dzLXdpeg==">interactive infographic website<i class="fa fa-external-link-alt"></i></span> 和 <span class="exturl" data-url="aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9zZWFyY2g/cT1pbnRlcmFjdGl2ZStkYXRhK3Zpc3VhbGl6YXRpb24rd2Vic2l0ZSZzeHNyZj1BTGVLazAwcU5pZ3kydjIwR1pNOWtaaGZOWmVIaldFbWp3OjE2Mjg4OTEwODI0MjMmZWk9eXVjV1llR1ZHWnVfMFBFUGp0LU8tQVkmb3E9aW50ZXJhY3RpdmUrdmlzdWFsK3dlYnNpdGUmZ3NfbGNwPUNnZG5kM010ZDJsNkVBRVlBVElHQ0FBUUJ4QWVNZ2dJQUJBSUVBY1FIam9IQ0FBUVJ4Q3dBem9IQ0NNUXNBTVFKMG9FQ0VFWUFGQ2wtd0ZZd29nQ1lQYXZBbWdEY0FONEFZQUJ4UktJQWFVOGtnRUpOaTB5TGpNdU1DNHhtQUVBb0FFQnlBRUp3QUVCJnNjbGllbnQ9Z3dzLXdpeg==">interactive data visualization website<i class="fa fa-external-link-alt"></i></span></h3><p>太多了，就不一一列了，来欣赏信息可视化艺术。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuY29sdW1uZml2ZW1lZGlhLmNvbS8xMDEtZmFudGFzdGljLWludGVyYWN0aXZlLWluZm9ncmFwaGljcy15b3VsbC1sb3ZlLw==">举例101<i class="fa fa-external-link-alt"></i></span></p>
+<hr>
+<div class="note warning"><p style="text-align:center; color:#F0AD4E">♕DEMO/未完成作品♕ </p></div>
+
+<div class="note danger"><p style="text-align:center; color:#D9534F"> ♕这个项目已经凉了（后来改做小程序了）♕ </p></div>
+
+<div class="note primary"><p style="color:#7042C1"> 为什么一定要出卖灵魂呢？因为如果不涉及到陛下的话我tm没有动力，以上。 </p> </div>
+
+<h1 id="toc_0">HallowUni_CharaPage</h1>
+
+<p>这个页面主要包含了在我的空洞宇宙里出现的角色们<br>
+现在在列的有：<br>
+Wyrm（The Pale King）<br>
+Radiance<br>
+Grimm-Nightmare King<br>
+Root<br>
+Unn<br>
+The Great Banyan（OC）<br>
+Pure Vessel（Vessel）<br>
+Hornet<br>
+Herrah<br>
+Monomon<br>
+Lurien<br>
+Quirrel<br>
+God of Gods-Shade Lord-Void God<br>
+Five Knights（Isma、Hegemol、Ogrim、Dryya、Ze&#39;mer）<br>
+Vespa<br>
+Wesha（OC）-Fungal Giant</p>
+
+<div class="note danger"><p style="text-align:center; color:#D9534F"> ♕下文涉及剧透♕ </p></div>
+
+<h2 id="toc_1">HallowUni_Wyrm</h2>
+
+<p>白王沃姆是我的空洞宇宙里最最重要的虫子，他虽然不是一切故事的起源，但绝对是这个舞台的主角。<br>
+<em>沃姆本来是一个神裔种族，在Cult页面中的Northerwir里会进行详细介绍。此处的沃姆专指白王。</em><br>
+白王的故事可以追溯到他刚出生的时刻。作为一窝小沃姆中最后一只破壳的沃姆，它的父母亲原本不对他的存活抱有任何希望。在其他小沃姆孵出来之后，他的父亲曾经想直接将他的卵连带着他作为其他小沃姆的食物。他的母亲出面制止了他的父亲，就在他们争执不下的时候，他出生了。<br>
+他成长得十分艰难，他的父亲从来没有给过他好脸色看，他的兄弟姐妹们也对他百般刁难。但是由于沃姆还是母系社会，只要他的母亲呵护着他，其他家族成员也不好说什么。幼时缺少父爱对他造成了很大的心理创伤，导致他总是缺少安全感和信任感，不善言辞，社交恐惧。这也影响到了他之后的治国方略——消灭一切潜在威胁。<br>
+只有在母亲的绒毛里，他才能安稳地入睡，这也是他的专属位置，否则，他就会半夜惊醒。在那个决定性的夜晚，他刚刚经历第三次蜕皮，他做了一个噩梦。梦中的他被一道刺眼的金黄色光芒包围着，数道铁链穿刺进他刚完成蜕皮，还未完全变硬的外壳中，让他动弹不得。他咆哮着，想挣脱束缚，但金黄色光芒却越发明亮，直到他整个视野都充满了光。就在痛苦之时，他听到了一个声音，古老沧桑，他向他诉说了一个悲惨的故事，一个被强行划为奴隶的种族。这个声音和他父亲的声音完全不同，虽然同样威严，但多了一份慈爱。他不懂那些奴隶所受的苦难，但他不可抗拒的被这个声音吸引了。下意识地，他想多听一些他的声音，以此来填补他缺失的父爱。他在母亲的怀中醒来，睁大眼睛回忆着梦中的声音，但发现它已经变得模糊。他幼小的头脑无法完全理解发生在自己身上的事情。那个晚上，所有的沃姆都做了同样的噩梦。<br>
+作为神裔种族，他们和梦境界并无瓜葛，也不常去拜访，他们地位位于凡人和半神之间，不像凡人那样梦境是常态，也不像真神那样不会有做梦的欲望。如果不是被迫拽入梦境里或者是自身的欲望过于强烈，他们通常一夜无梦。像这样同时做梦足以引起他们的警惕。沃姆们意识到了，他们运用法术构筑起了围墙，虽然不懂梦境界的法则，但他们有祖辈沿袭的对抗梦境力量的法术。<br>
+不过对于这只小沃姆来说，一切已经太晚了。他的噩梦没有因此消失。他想要再一次听到那个声音。<br>
+第二夜，他发现自己变小了，变成了渺小的甲虫，他原本的食物之一，而且长出了四肢。他的爪子和腿都被铁链拴着，每走一步都发出叮当的响声。他的背上十分沉重，压得他喘不过气来，他感觉自己在燃烧，腿开始发软。他的前面和后面都是和他差异无几的甲虫，和他一样深陷水深火热之中。有几只雄性蛾子站在一边，爪子里拿着带刺的鞭子，他们看着自己的眼神就像是看着没有生命的工具。<br>
+他第一次感受到了愤恨、羞耻，还有嫉妬。他意识到了自己一直是在怎样被对待着，他是怎样无知地忍受着不公的待遇。但他没有说，他装作若无其事的模样，害怕自己的父亲会因为自己的“异变”而杀死自己。<br>
+第三个晚上，他看见了“太阳”，那是一只体型巨大的金黄色蛾子，头上的三根尖角构成了她的皇冠。她的面容模糊不清，但他能感觉到自己在被她注视着，嘲笑着。</p>
+
+<h2 id="toc_2">HallowUni_Radiance</h2>
+
+<h2 id="toc_3">HallowUni_Grimm</h2>
+
+<h2 id="toc_4">HallowUni_Root</h2>
+
+<h3 id="toc_5">HallowUni_TheGreatBanyan</h3>
+
+<h2 id="toc_6">HallowUni_NightmKing</h2>
+
+<h2 id="toc_7">HallowUni_PureVessel</h2>
+
+<h2 id="toc_8">HallowUni_Hornet</h2>
+
+<h2 id="toc_9">HallowUni_Herrah</h2>
+
+<h2 id="toc_10">HallowUni_Mono</h2>
+
+<h2 id="toc_11">HallowUni_Lurien</h2>
+
+<p>A good painter he is.</p>
+
+<h2 id="toc_12">HallowUni_Quirrel</h2>
+
+<h2 id="toc_13">HallowUni_GOG</h2>
+
+<p>曾经拥有彩虹的光芒。<br>
+“光”们生来就注定成为领导者。</p>
+
+<h2 id="toc_14">HallowUni_FiveKnights</h2>
+
+<h2 id="toc_15">HallowUni_Unn</h2>
+
+<h2 id="toc_16">HallowUni_Vespa</h2>
+
+<h2 id="toc_17">HallowUni_Fugalgiant</h2>
+
+<h1 id="toc_18">HallowUni_CultPage</h1>
+
+<h2 id="toc_19">HallowUni_Hallownest</h2>
+
+<h3 id="toc_20">CityofTear</h3>
+
+<p>晴日/清日（除夕）（Rainless days、Cleandays）- On that day，even the City will stop crying and celebrate along with her people.It symbolize a well and new start of a year.</p>
+
+<p>卢瑞恩把爪子伸出叶伞外：“晴日快到了。”<br>
+“法令规定，王室成员的假期减半。”白王丝毫没有减缓脚步的意思，“我可以不休息。”</p>
+
+<p>光明节（LightFest）</p>
+
+<p>契约节（白王和白后的结婚纪念日）</p>
+
+<p>天河水</p>
+
+<h2 id="toc_21">HallowUni_Northerwir（极北之地—诺瑟威尔）</h2>
+
+<p>每一只沃姆都长得稍稍不同，但同一个家族的沃姆一般都会有相似之处。所有的沃姆都是一样的灰白或者冰蓝色系，因为这样可以方便他们在雪地里埋伏猎物。</p>
+
+<h2 id="toc_22">HallowUni_Deepnest</h2>
+
+<h2 id="toc_23">HallowUni_Mothtribe</h2>
+
+<p>太阳节</p>
+
+<h3 id="toc_24">HallowUni_DreamRealm</h3>
+
+<h3 id="toc_25">HallowUni_Pasthallownest</h3>
+
+<h2 id="toc_26">HallowUni_Hive</h2>
+
+<p>无节日（蜜蜂们没有自己的思想）</p>
+
+<h2 id="toc_27">HallowUni_Fungal</h2>
+
+<h2 id="toc_28">HallowUni_Moss</h2>
+
+<h3 id="toc_29">HallowUni_Greenchild</h3>
+
+<h2 id="toc_30">HallowUni_Mantis</h2>
+
+<h2 id="toc_31">HallowUni_GrimmTroupe</h2>
+
+<h3 id="toc_32">HallowUni_NightmareRealm</h3>
+
+<h2 id="toc_33">HallowUni_DarkAges</h2>
+
+<h1 id="toc_34">HallowUni_Timeline</h1>
+
+<p>CelestialLights<br>
+Darkages<br>
+Lightages<br>
+PastHallownest<br>
+（The War）<br>
+Hallownest<br>
+（The Plague）</p>
+
+<h1 id="toc_35">HallowUni_Materials</h1>
+
+<p>Pale Ore</p>
+
+<blockquote>
+<p>提炼自沃姆骨架，是陛下造躯壳时候的余料，可以用来制作骨钉、其它武器、建筑、工业产品和面具。<br>
+整座白宫就是由白矿石建造的<br>
+Crystal<br>
+辐光给予其信徒们的神迹，可以强化光和梦境的力量<br>
+WeaverSilk<br>
+深巢的纺织者们引以为傲的特产，可以编织成各种编织品、以及丝绸书页等。<br>
+MothFur<br>
+飞蛾部落的特产，可以用来编织披风和衣物<br>
+MothFeather<br>
+飞蛾身上的羽毛，比较稀少<br>
+Honey<br>
+蜂巢的特产，陛下最喜爱的食物之一。在作为食物的同时，似乎也蕴含着生命力，蜂巢不轻易将蜂蜜售出，对于圣巢而言十分珍贵，只有王室才能享用。除了食用之外，还可以作为建筑材料。<br>
+Metal<br>
+螳螂是最先提炼出金属的，随后也被陛下自行研发出来。用于制作工业产品、武器、建筑和机关等<br>
+Grass<br>
+随处可见的草叶，圣巢大多数居民的主食<br>
+Stone<br>
+随处可见的石头，用于建筑、长椅等</p>
+</blockquote>
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/4c9a.html">【网站】这些Web出卖了灵魂</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2019年10月29日 - 16:06</p>
+ <p><span>最后更新:</span>2021年08月14日 - 14:45</p>
+ <p><span>原始链接:</span><a href="/p/4c9a.html" title="【网站】这些Web出卖了灵魂">https://mebilychen.github.io/p/4c9a.html</a>
+    
+ </p>
+ <p><span>许可协议:</span>除非文章内另行声明，遵守 cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script data-pjax> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%81%AD%E7%BB%9D%EF%BC%9A%E5%BC%83%E5%9D%91/" rel="tag"><i class="fa fa-tag"></i> 灭绝：弃坑</a>
+              <a href="/tags/%E6%B2%99%E9%9B%95/" rel="tag"><i class="fa fa-tag"></i> 沙雕</a>
+              <a href="/tags/%E5%9C%A3%E5%B7%A2%E5%85%A8%E5%91%98/" rel="tag"><i class="fa fa-tag"></i> 圣巢全员</a>
+              <a href="/tags/%E8%B6%A3%E5%91%B3%E7%BD%91%E7%AB%99/" rel="tag"><i class="fa fa-tag"></i> 趣味网站</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/9b6c.html" rel="prev" title="古久的拟人设定（2019）">
+      <i class="fa fa-chevron-left"></i> 古久的拟人设定（2019）
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/5d88.html" rel="next" title="仿游戏书">
+      仿游戏书 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Gnoosic"><span class="nav-text">Gnoosic</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Patatap"><span class="nav-text">Patatap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PostSecret"><span class="nav-text">PostSecret</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#River-Styx"><span class="nav-text">River Styx</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NOIYS-%E2%80%93-Post-read-forget"><span class="nav-text">NOIYS – Post, read, forget</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MapCrunch"><span class="nav-text">MapCrunch</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Paper-Toilet"><span class="nav-text">Paper Toilet</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#News-of-Future"><span class="nav-text">News of Future</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Scream-Into-the-Void"><span class="nav-text">Scream Into the Void</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Wayback-Machine"><span class="nav-text">The Wayback Machine</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Star-Atlas"><span class="nav-text">Star Atlas</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2048"><span class="nav-text">2048</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Zoom-Quilt"><span class="nav-text">Zoom Quilt</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Freerice"><span class="nav-text">Freerice</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MuscleWiki"><span class="nav-text">MuscleWiki</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Radiooooo"><span class="nav-text">Radiooooo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Passive-Aggressive-Password-Machine"><span class="nav-text">The Passive-Aggressive Password Machine</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#29a-ch"><span class="nav-text">29a.ch</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#My-Fridge-Food"><span class="nav-text">My Fridge Food</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Vsauce"><span class="nav-text">Vsauce</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#A-Good-Movie-To-Watch"><span class="nav-text">A Good Movie To Watch</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Useless-Web"><span class="nav-text">The Useless Web</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Shady-URL"><span class="nav-text">Shady URL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Music-Theory"><span class="nav-text">Music Theory</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#What-Should-I-Read-Next"><span class="nav-text">What Should I Read Next? </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#OnRead"><span class="nav-text">OnRead</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Eyebleach"><span class="nav-text">Eyebleach</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Weave-Silk"><span class="nav-text">Weave Silk </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#You-Are-Listening-To"><span class="nav-text">You Are Listening To</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Da-Font"><span class="nav-text">Da Font</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Quick-Draw"><span class="nav-text">Quick, Draw</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Taste-Dive"><span class="nav-text">Taste Dive</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%A4%E4%B8%AA%E5%85%B3%E4%BA%8E%E5%90%8D%E4%BA%BA%E6%AD%BB%E4%BA%A1%E5%8E%9F%E5%9B%A0%E7%9A%84"><span class="nav-text">两个关于名人死亡原因的</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#interactive-infographic-website-%E5%92%8C-interactive-data-visualization-website"><span class="nav-text">interactive infographic website 和 interactive data visualization website</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#toc_0"><span class="nav-text">HallowUni_CharaPage</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_1"><span class="nav-text">HallowUni_Wyrm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_2"><span class="nav-text">HallowUni_Radiance</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_3"><span class="nav-text">HallowUni_Grimm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_4"><span class="nav-text">HallowUni_Root</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#toc_5"><span class="nav-text">HallowUni_TheGreatBanyan</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_6"><span class="nav-text">HallowUni_NightmKing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_7"><span class="nav-text">HallowUni_PureVessel</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_8"><span class="nav-text">HallowUni_Hornet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_9"><span class="nav-text">HallowUni_Herrah</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_10"><span class="nav-text">HallowUni_Mono</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_11"><span class="nav-text">HallowUni_Lurien</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_12"><span class="nav-text">HallowUni_Quirrel</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_13"><span class="nav-text">HallowUni_GOG</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_14"><span class="nav-text">HallowUni_FiveKnights</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_15"><span class="nav-text">HallowUni_Unn</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_16"><span class="nav-text">HallowUni_Vespa</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_17"><span class="nav-text">HallowUni_Fugalgiant</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#toc_18"><span class="nav-text">HallowUni_CultPage</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_19"><span class="nav-text">HallowUni_Hallownest</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#toc_20"><span class="nav-text">CityofTear</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_21"><span class="nav-text">HallowUni_Northerwir（极北之地—诺瑟威尔）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_22"><span class="nav-text">HallowUni_Deepnest</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_23"><span class="nav-text">HallowUni_Mothtribe</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#toc_24"><span class="nav-text">HallowUni_DreamRealm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#toc_25"><span class="nav-text">HallowUni_Pasthallownest</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_26"><span class="nav-text">HallowUni_Hive</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_27"><span class="nav-text">HallowUni_Fungal</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_28"><span class="nav-text">HallowUni_Moss</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#toc_29"><span class="nav-text">HallowUni_Greenchild</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_30"><span class="nav-text">HallowUni_Mantis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_31"><span class="nav-text">HallowUni_GrimmTroupe</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#toc_32"><span class="nav-text">HallowUni_NightmareRealm</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_33"><span class="nav-text">HallowUni_DarkAges</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#toc_34"><span class="nav-text">HallowUni_Timeline</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#toc_35"><span class="nav-text">HallowUni_Materials</span></a></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar3.jpg">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">159</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">52</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">163</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjEwMTM3MTIxMjdAcXEuY29t" title="E-Mail → mailto:1013712127@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9tZWJpbHkxMzE0" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      猜猜这是什么鬼地方？
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9tZWJpbHljaGVuLmxvZnRlci5jb20v" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;">LOFTER</span>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/p/d894.html" title="p&#x2F;d894.html">【参考】绘画参考-生物</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/49c3.html" title="p&#x2F;49c3.html">【参考】绘画参考-人</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/3ee.html" title="p&#x2F;3ee.html">【参考】绘画参考-人造物</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/dd8a.html" title="p&#x2F;dd8a.html">“行为艺术”</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/e3a422.html" title="p&#x2F;e3a422.html">【参考】衣|料专版</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/4eb5.html" title="p&#x2F;4eb5.html">遗书</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ce0f2.html" title="p&#x2F;ce0f2.html">Dreamily.AI专场</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/p/f446.html" title="p&#x2F;f446.html">常用命令</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/0.html" title="p&#x2F;0.html">【备忘】</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/ce0f2.html" title="p&#x2F;ce0f2.html">Dreamily.AI专场</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">2m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">31:03</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "站子已虔诚祈祷 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+     //'.site-meta',
+    //'.site-nav',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+<script language="JavaScript">
+var password="";
+password=prompt('Password (Birthday)','');
+if (password != '20180909')   
+{alert("。");    
+window.opener=null;
+window.location.href = "about:blank"; 
+window.close();}  // 密码不正确就关闭//-->
+</script>
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>

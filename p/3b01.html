@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="是针对团长的角色研究">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【角色研究】团长线-如何成为剧作家">
+<meta property="og:url" content="https://mebilychen.github.io/p/3b01.html">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:description" content="是针对团长的角色研究">
+<meta property="og:locale">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/doc/%E5%89%A7%E6%9C%ACScript/%E5%89%A7%E6%9C%AC%E5%86%99%E4%BD%9C.jpg">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/doc/%E5%89%A7%E6%9C%ACScript/IMG_9956(20211215-133454).PNG">
+<meta property="og:image" content="https://playwriting101.com/glossary/">
+<meta property="og:image" content="https://industrialscripts.com/stage-directions/">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/IMG_8945.PNG">
+<meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/IMG_8950.GIF">
+<meta property="article:published_time" content="2019-03-09T02:13:00.000Z">
+<meta property="article:modified_time" content="2022-06-19T23:36:41.020Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="设定">
+<meta property="article:tag" content="角色研究">
+<meta property="article:tag" content="格林">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://mebilychen-media.test.upcdn.net/doc/%E5%89%A7%E6%9C%ACScript/%E5%89%A7%E6%9C%AC%E5%86%99%E4%BD%9C.jpg">
+
+<link rel="canonical" href="https://mebilychen.github.io/p/3b01.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : '中文'
+  };
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    
+      if (NexT.utils.hasMobileUA()) return;
+    
+    let time, hidden, visible, title = document.title;
+    let favicon = document.querySelector('link[rel="icon"]');
+    
+      hidden = ["盯————","*探*","?","......","*观察*"];
+      visible = ["*偏转视线*","*缩*","*强装镇定*","！","*低头*"];
+    
+    let random = t => t[Math.floor(Math.random() * t.length)];
+    const change = () => {
+      if (document.hidden) {
+        favicon.setAttribute('href', '/images/favicon-32x32-king-black.png');
+        
+          document.title = random(hidden);
+        
+        clearTimeout(time);
+      } else {
+        favicon.setAttribute('href', '/images/favicon-32x32-brand-black.png');
+        
+          document.title = random(visible);
+        
+        time = setTimeout(() => {
+          document.title = '碳素的小作坊';
+        }, 1000);
+      }
+    }
+    document.addEventListener('visibilitychange', change, false);
+  });
+</script>
+
+  <title>【角色研究】团长线-如何成为剧作家 | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;调谐中...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">163</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">52</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">159</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-image fa-fw"></i>画廊</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/random.html" rel="section"><i class="fa fa-question fa-fw"></i>抽</a>
+
+  </li>
+        <li class="menu-item menu-item-lang">
+
+    <a href="/en/" rel="section"><i class="fa fa-globe fa-fw"></i>->English</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-17081-597255-1305127431.cos-website.ap-hongkong.myqcloud.com' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/3b01.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【角色研究】团长线-如何成为剧作家
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-03-09 10:13:00" itemprop="dateCreated datePublished" datetime="2019-03-09T10:13:00+08:00">2019-03-09</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2022-06-20 07:36:41" itemprop="dateModified" datetime="2022-06-20T07:36:41+08:00">2022-06-20 07:36:41</time>
+                </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">王文</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/%E8%B0%83%E8%B0%90%E6%96%87%E3%83%BB%E8%A7%92%E8%89%B2%E7%A0%94%E7%A9%B6/" itemprop="url" rel="index"><span itemprop="name">调谐文・角色研究</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>16k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>15 分钟</span>
+            </span>
+            <div class="post-description"><center>是针对团长的角色研究</div>
+          
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%BE%E5%AE%9A/" rel="tag"><i class="fa fa-tag"></i> 设定</a>
+              <a href="/tags/%E8%A7%92%E8%89%B2%E7%A0%94%E7%A9%B6/" rel="tag"><i class="fa fa-tag"></i> 角色研究</a>
+              <a href="/tags/%E6%A0%BC%E6%9E%97/" rel="tag"><i class="fa fa-tag"></i> 格林</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><blockquote>
+<p>2.19</p>
+</blockquote>
+<p>应该给团长单独来个角色研究….<br>“虽然是很重要的观众，但如此在舞台上喧宾夺主，未免有失礼节吧？”类似这样的话建议团长多说。  <br>团长的莫名（骚气十足的）谦虚也很帅气</p>
+<blockquote>
+<p>2.12</p>
+</blockquote>
+<p>团长是那种除了能从表面来推断对方痛点 还会深入对方生活（其实就是详细政审/查成分）的乐子人</p>
+<blockquote>
+<p>2.4</p>
+</blockquote>
+<p>码一下给团长的火焰系戏法和魔术之类的。 </p>
+<p>和奈亚子可能的撞车：</p>
+<blockquote>
+<p>还有一种可选的互动方式是，如果你的玩家能够适应的话，你可以站起来绕着桌子走，对着玩家的耳朵低语,抚摸他们的肩膀或者摆弄他们的头发来让他们放松。这些小小的侵扰可以发生在从1到1d4理智值检定之间的任何时候，这取决于守秘人自我感觉，否则的话它们可以被作为令人毛骨悚然的附加物来增加模组的紧张感。调查员或玩家对此反应越激烈，奈亚拉托提普就会对他们进行更多的玩弄，直到它厌倦为止。<br>被奈亚拉托提普肆意探索脑海的感觉是极其不愉快的。调查员感觉似乎有什么蜿蜒的粘稠之物滑过了自己的大脑，这让受害者体会到了深深的被侵犯和不洁感。如果被奈亚拉托提普探查大脑，那么调查员进行一次1d3/1d4+1的理智值损失检定。检定失败的话调查员会意识到奈亚拉托提普正在做什么，而成功的话他们会意识到它实际上是在将自己的意志插入调查员的大脑中，从而“直截了当地塑造和操纵他们的思维”。自此以后，角色会一直感觉伏行之混沌不知何故仍在他们的脑海中，就好像它感染了他们的大脑，并且依旧在对他们的脑海肆意妄为….</p>
+</blockquote>
+<p>摸脑子好痛，不要摸脑子</p>
+<p>看了一下魔术，总结一下。（感觉就像是杂技用神秘气氛表达了出来这样子，，，）<br>首先是火魔术。毕竟还是人类表演的所以…最好还是多看看法术吧，<span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3JlYWQvY3Y0MDU0OTAv">举个不完全是火魔法的例子<i class="fa fa-external-link-alt"></i></span>，然后<span class="exturl" data-url="aHR0cHM6Ly9tYXN0ZXJjbGFzcy5hcHAubGluay9RU0VzMEhmam5U">法术规则<i class="fa fa-external-link-alt"></i></span>，然后下面是一些魔术的总结：  </p>
+<ol>
+<li>手上燃火</li>
+<li>引燃烛烟（slowmo还挺好看）</li>
+<li>抓起火（就是抓起燃烧着的透明液体）</li>
+<li>吐火<br>其他就是各种放火烧出好看效果了。法术的话可以加上团长的塑形，指尖打火机之类的。  <br>然后是各类魔术，大概总结一下：<br>技巧：</li>
+<li>手速快准狠：突然出现的东西，变出扑克牌，飞出扑克牌，各种在牌上做文章，出千</li>
+<li>托</li>
+<li>志愿者（撩人好方法：一般是参与魔术，做小白鼠，以及做一些check。）</li>
+<li>心灵感应魔术（心理学手法？暗示？托？（茫然））</li>
+<li>凭空变物魔术（消失或出现）：这是基本戏法。包括各种玩牌，变脸，快速换衣之类的。  </li>
+<li>逃脱魔术（其实就是把自己凭空变物）</li>
+<li>锯人魔术</li>
+<li>高科技魔术（？）<br>演出：</li>
+<li>套近乎类型（撩人类型）：魔术师要走下场，近距离表演，撩人。可神秘也可亲切。</li>
+<li>大型表演类型：就类似于要编排场景、动作，更像是魔术戏剧演出，动作drama，一般有漂亮小姐姐作为助手。要神秘可以很神秘</li>
+<li>酒吧/街头表演类型：风格更滑稽、接地气一些，一般是独自完成。</li>
+</ol>
+<p>注意表演风格可以分为轻松愉快（Heart型，会说调侃笑话）—严肃神秘（Mind型，更加玄幻莫测），可以适当和观众互动，魅力++。    <br>然后，一般中大型魔术表演要有逻辑（比如叙事线和主题）  <br>看到有说转移观众视线焦点和注意力，暗示和引起观众对事实的误解（比如让自己的视线看向想让观众看向的地方，手势、语言等），用（看似）不经意行为瞒过观众（但是是那种，文字游戏，而不是直接说与事实冲突的话（是我喜欢的团长，是他）），降低观众警惕（果然魔术师心理学要好，团长心理学果然就应++，我好机智）</p>
+<blockquote>
+<p>首先，想要破解一个魔术，就得看到这个魔术中所有的细节。包括魔术师怎么挑选的观众，魔术的每一个步骤，魔术师身上每一个地方。<br>接着，你可以用逆推的方法，思考问题可能出在哪一个环节。<br>当然，完成一个魔术效果可能有许多方式，找托是最简单的一种。无论什么方法，只要能达到效果就是好方法。在你破解别人魔术的过程中，或许你就创造了另一种方法。</p>
+</blockquote>
+<p>关于魔术中的心理暗示：</p>
+<blockquote>
+<p>更巧妙的心理形式的强迫包括给一名观众这样的印象，即他可以从52种牌面和花色的扑克中任选一张，但实际上魔术师利用了某种技巧，向该观众展示的是全部是黑桃尖的扑克牌，这样就影响了他的思考和结论。然后，迫使这名观众快速地回答，同时强调，他可以自由选择。当然，实际上完全没有自由选择的余地。理查德-魏斯曼教授展示了这一点，不过结尾有所变化，这就是魔术师花大量时间反复向观众强调他们的选择有多么自由的原因。<br>魔术师隐约地暗示观众，并且试着有效地改写观众的模糊的、受压力下的记忆，使他们以为自己的选择完全是出于其本人的意志。事实表明，魔术师在心理强迫方面比心理学家做得更好，后者在实验条件下所产生的效果一般。寻找更多技巧……心理学家在实验室里运用魔术师的技巧只是刚刚起步，而且，显然他们还有更多东西要学。</p>
+</blockquote>
+<blockquote>
+<p>上面的叙述当然是不完全的（指暗示观众大象移动时房子一定会晃动）。事实上紧挨着小房子背后是一个非常牢固的装象的笼子，它比小房子小一些，当大象从弹簧门进去时，它可以用巧妙的安装使得小房基本不动。这一点是非常重要的，因为观众们对这种摇摆都有了准备，即认为摇摆是不可少的。此外，另一个有影响的因素是，大象是个体积很大的动物这一事实，人们一般具有把它的体积夸张得更 大的倾向。正是因为人们认为大的事物是不可能立刻消失的，因此观众就不会想象到这么大的一个动物仍然停留在舞台上面。<br>人倾向于对未来做出即时的预判，魔术师就是利用了这一点。  </p>
+</blockquote>
+<blockquote>
+<p>关于近景魔术中的“错误引导”：<br>一般来讲，错误引导法分为两类，一类是物理行为错引;一类是心理意识错引。在实际的应用中，这两类错觉是相互交融运用的。</p>
+</blockquote>
+<p><strong>物理行为错引</strong><br>这类错引凡是有一定魔术基础的表演者都会有所了解，简单地讲，<br>就是在视觉上通过表演者的行为/语言转移观众的注意力，也就是我们俗话说的”声东击西”，以达到“视觉错觉”的目的相应的方式方法有转换、解释、模拟、假装、托辞/借口法等。（还有虚放，就是假装转移了位置，其实没有）</p>
+<ol>
+<li>眼神接触<br>最好的方式是在表演的前期阶段.尽量多地与观众有眼神的接触与交流，谁都知道心里没鬼的人比较能直视人的眼睛，眼光躲闪是心虚的表现。聊天时看着对方，心理会相对诚实，让观众产生放松感，同时建立起对你的信任，有利于后面节目的进行。当然在任何时候都不要用眼睛看自己要做秘密动作的手或地方。</li>
+<li>动作自然<br>在表演过程中，所有的动作都应该自然放松，合情合理。例如在牌垫上表演时，手臂不要在牌垫上有交叉之类的特殊动作，双手尽可能在牌垫的范围内动作。另外，千万要避免双手快速和断续的动作。还有一点是.如果一定要做一些取藏放的动作，可以，遵照美国已故近景魔术泰斗戴.维农(Dai Vernon) 的一句箴言:‘’A largemovement covers a small movement。翻译成中文，就是说:小的动作掩盖于大的动作之中。换句话讲，就是做一个自然合理的大一些幅度的动作.在这个动作的过程中完成你真正想要做的秘密动作，因为观众的眼神是会被大一些幅度的动作所吸引的。</li>
+<li>Timing 把握<br>Timing可以翻译为‘分寸”、 “ 时机”或“火候”,但针对魔术表演来讲,还是觉得不够贴切,因为“Timing”里面还含有节奏掌控的意思，所以这里必须要合拍。</li>
+<li>表情投入<br>在表演过程中，首先要学会用自己的眼神去引领观众，比如通过对视吸引他们注意力，遮掩手中的秘密动作。与此同时，面部表情与情绪也要与所做的魔术内容相匹配，这样就会让观众在不知不觉中沉浸到你所期待的魔幻状态中。</li>
+<li>幽默语言<br>在表演过程中，有时你需要讲一些笑话来掩盖你所要进行的秘密动作。这里的关键点是在观众笑出声或鼓掌的那一-时刻，你要抓住这个空档做你的秘密动作。</li>
+<li>设立兴趣点<br>在表演流程的设计里，你要根据表演内容的需要有意识地加入相应的兴趣点”(也称为“ 关键点”)。所谓兴趣点”就是你需要观众关注的地方。在表演过程中，当你将观众的注意力合理地引导到你所要他们关注的地方时，比如说是另一方向、上衣口袋或是牌盒等”兴趣点”要配合有合理的效果出现，不能只是生硬地制造),你的另一只手的秘密动作就要在此时同时进行。</li>
+</ol>
+<p>所有以上这些物理行为错引原则都不是孤立存在的。在实际的应用中,相互的组合越多越好。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuc29odS5jb20vYS80MzUxNDI2ODNfMjYwNjE2">选牌预知暗示<i class="fa fa-external-link-alt"></i></span>的<span class="exturl" data-url="aHR0cHM6Ly93d3cucmVzZWFyY2hnYXRlLm5ldC9wdWJsaWNhdGlvbi8zNDI5MTkyOTdfSW5mbHVlbmNpbmdfY2hvaWNlc193aXRoX2NvbnZlcnNhdGlvbmFsX3ByaW1lc19Ib3dfYV9tYWdpY190cmlja191bmNvbnNjaW91c2x5X2luZmx1ZW5jZXNfY2FyZF9jaG9pY2VzL2NpdGF0aW9ucw==">研究<i class="fa fa-external-link-alt"></i></span></p>
+<blockquote>
+<p>首先，布朗请观众在脑海中想象扑克牌“鲜艳明亮的颜色”。这种描述会让人不由自主联想到红色牌（红桃、方块）而不是黑色牌（黑桃、草花）。接下来，布朗用手比划出一个方框，引导观众想象面前有一个屏幕，此时他再让观众想象扑克牌的花色，就更容易让人想到方块。之后，布朗一边让观众想象扑克牌“上下两个角落的数字”，一边用手指在空气中快速写出一个3。最后，他告诉观众：“让我们把花色填在这张牌的中间，砰、砰、砰，完成！”与此同时，他的手在空中又比划了三次。这整个过程只需要15秒。</p>
+</blockquote>
+<p><strong>心理意识错引</strong></p>
+<p>如果从心理学角度再深一层次地探讨“错觉”，我们可以这样描述人的思维特征:首先，每个人都存在着思维惯性，即强势惯性、前提惯性、语境惯性和群体惯性等。如果魔术师在设计魔术节目时，懂得有意识地加入引导观众思维惯性的元素，那就自然能让观众在自己心里产生”逻辑错觉”;其次，魔术师可利用人的大脑所存在的自我诱发机制，引导观众绕<br>过理智思维途径，直通魔术师预埋在观众大脑内的记忆点，因而达到让观众在自己心里产生“记忆错觉”。从某种意义上讲，这类错引法是相对隐蔽并不露痕迹的。了解并掌握这类错引法，对于在电视上表演近景魔术节目是有很大的帮助的。<br>从本质上讲，心理错引转移的不是人的注意力，而是人在知觉层面上不自觉地产生的信任感，也即由最初的怀疑和提防自动转换为不怀疑、不提防，认为这是自己大脑理性的正确逻辑思维的产物。因为每一个人从思维本体上讲都是完全认同自己的逻辑判断的，而不是相信外人。<br>相应的心理错引方式方法有:暗示、 演绎、混淆、期待、重复等。</p>
+<p>这就好比魔术师变扑克牌魔术，做了一个”双提”的动作，然后说:我手里有“一张牌,你签名的牌”。这不是欲盖弥彰吗，你等于告诉观众，你手里不只有一张牌。在这种情况下，比较自然的说法是:“ 这是你的签名，对吗?”这样的用词是百分之百成立的，对于观众来讲，他或她认同的是自己的签名而不是魔术师的话。在心理上，你就成功地实现了混淆式错误引导法!</p>
+<ol>
+<li>语言诱导<br>将眼前的客观事实用简洁的语言做一个描述，并在每一个事实点上都争取得到观众的首肯，这样的话，观众在心理上就会不知不觉地产生思维惯性，同时也就对表演者产生了信任感。“阴魂不散”等扑克魔术就是属于这种形态。</li>
+<li>预设目标<br>在表演过程中，给观众一个效果的期待描述。在这种状态下，观众的心理兴趣点就会关注在预期的效果上，也就是受到了暗示错引。而表演者就可以从容地进行与此无关的秘密动作。”杯穿桌子” 等魔术就是属于这种形态。</li>
+<li>强迫记忆<br>在表演过程中，表演者通过重复的语言或动作，在观众的心理中产生了一个短暂记忆。这个记忆会在一个时刻占据观众的记忆空间，而表演者就可以利用这段时间进行相应的秘密动作，当最终效果出现时，观众的记忆里只存有先前的短暂记忆，因此也就产生了‘记忆错觉”魔术表演中的“交代” 步骤是制造“记忆错觉”和进行秘密动作的最佳时刻。”杯与球术”、‘ 硬币矩阵”等魔术就是属干这种形态。</li>
+<li>自我肯定<br>在表演过程中，表演者通过语言或动作引导，使观众的逻辑思维产生概念混淆，由此而产生连带的“正确”逻辑结论，即自我肯定。“皮筋互穿”等魔术就是属于这种形态。（变大象那个也是）</li>
+<li>互动参与<br>在表演过程中，表演者通过邀请观众参与的方式，以达到观众心理的自我信任感。因为，每个人都是绝对相信自己的感官认知的。如果表演者适时地再加入一些轻微的肢体接触，在观众的心里又会多了一个“兴趣点”暗示。”海绵球” 的魔术就是属于这种形态。</li>
+<li>伪逻辑路径<br>在表演过程中，表演者通过语言或动作的逻辑演绎，制造了一个看似揭秘的假象，让观众在心里很信服并放松警惕，而表演者在这个过程里，把握住节奏，就可以从容地进行秘密动作。“撕纸巾复原” 的魔术就是属于这种形态。</li>
+</ol>
+<blockquote>
+<p>让观众感到每个环节合理，但用现实的逻辑却推理不出结果;反过来再从结果出发，用倒推法、递推法、排除法和假设法等又无法重建整个表演过程。就像是迷宫，正确走出来的只有一条道，但迷宫中是错综复杂的交叉路径。这</p>
+</blockquote>
+<p>害，直接搜了搜现成的总结：</p>
+<blockquote>
+<p>魔术是一种违反客观规律的表演。它是依据科学的原理，运用特制的道具，巧妙综合视觉传达、心理学、化学、数学、物理学、表演学等不同科学领域的高智慧的表演艺术。抓住人们好奇、求知心理的特点，制造出种种让人不可思议、变幻莫测的假象，从而达到以假乱真的艺术效果。魔术是能够产生特殊幻影的戏法。即以迅速敏捷的技巧或特殊装置把实在的动作掩盖起来，使观众感觉到物体忽有忽无，变化不测杂技的一种。用极敏捷、使人不易觉察的手法和特殊的装置将变化的真相掩盖住，而使观众感到奇幻莫测。就广义的来说：凡是呈现于视觉上不可思议的事，都可称之为魔术。而表演者下工夫去学习，然后让人们去观看这种不可思议的表演效果，就是『表演魔术』。<br>（一） 从历史角度分：中国魔术可以分为“古代魔术”和“现代魔术”；经常在一些表演当中看到某人擅长“古典戏法”，即属于中国古代魔术中的一种。<br> （二）按原理与技术分：（这种分类不是绝对的，表演时可以根据不同的需要交叉使用不同的原理与技术）<br>手法类——以手法技术为主，必须勤练才能表演。<br>器械类——以巧妙设计的机关、器械、道具来进行表演。<br>心理类——根据心理学的原理来进行魔术表演。<br>科技类——以化学、物理等自然科学知识作为依据来进行表演。<br>（三）按道具与规模分为：巨型魔术、中型魔术、小型魔术<br>（四）按照演出场地分为：舞台魔术、宴会魔术、街头魔术（也称为近景魔术）<br>（五）按照魔术的专题分：某位魔术师擅长某种道具的魔术，常把同一道具的魔术组合在一起演出，形成一个专题。专题魔术包括：硬币魔术、扑克魔术、逃脱魔术、丝巾魔术、绳索魔术、海绵球魔术等等。</p>
+</blockquote>
+<p>—-按表演形式区分—-</p>
+<p>1、近景魔术—与观众近距离接触</p>
+<p>2、沿桌表演—沿着每一桌表演，常见于餐厅</p>
+<p>3、街头表演—在街头与观众互动</p>
+<p>4、酒馆魔术—在酒馆舞台演出，配合中小型道具</p>
+<p>5、舞台魔术—需要专业舞台配置</p>
+<p>6、大型幻象魔术—常见于顶尖魔术比赛和表演</p>
+<p>—-按领域区分—-</p>
+<p>1、纸牌魔术—以扑克牌为道具，多达上万种变化</p>
+<p>2、硬币魔术—以硬币进行表演</p>
+<p>3、心灵魔术—读懂观众心理的魔术</p>
+<p>—-按派系区分—-</p>
+<p>1、道具派—主要表演道具魔术，如美国大卫</p>
+<p>2、手法派—主要表演手法类魔术，如中国刘谦</p>
+<p>3、两者综合型—难度适中，适合初学者</p>
+<hr>
+<p>国际魔术联盟给的分类（结合<span class="exturl" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzI4MjM2NTY0L2Fuc3dlci80MDAwNTUwNw==">知乎回答<i class="fa fa-external-link-alt"></i></span>）：</p>
+<ol>
+<li>General Magic 一般部门：简单理解为可以变任何魔术，但是因为需要在舞台上表演，所以属于舞台魔术范畴。 Lance Burton, Marko Karvo等人都是该部门冠军获得者</li>
+</ol>
+<p>跟字面意思差不多，就是变什么都行，鸽子，光盘，牌，电话，刀叉剑戟，锅碗瓢盆，裸体（呃，这个还真有，不过现在有规定了，不能全裸表演），基本都可以在这里表演。但是需要站在舞台上表演，属于标准的舞台魔术。Marko Karvo，Soma，李恩杰，Lance Burton等魔术大师都是这个部门的冠军，而且大多是变鸽子的夺得这个项目的冠军，可能是因为变鸽子的都比较帅吧，近些年成名的变鸽子的魔术师都长得很帅（比如说国内的帅哥魔术师刘世杰）</p>
+<ol start="2">
+<li>Manipulation 手法部门：运用绚丽手法的舞台魔术</li>
+</ol>
+<p>这个部门属于标准的舞台魔术，表现绚丽的手法，陈智玲，峰村健二，柳豪镇，韩雪熙都是这个项目的高手。但是比较坑的是，这个部门和一般部门没有很明确的界限，所以经常有选手会在两个部门游走。而且很多时候就算是专业的魔术评委有时候也会被舞台上魔术师精彩的技艺所迷惑，国内某次比赛曾颁发过一个最佳手法奖，结果获奖选手却一脸迷茫的说我这个是个特殊道具，不用手法；国外比赛也出现过因为用精湛的手法骗过了所有评委，以至于被认为使用了道具从而惨遭淘汰的悲催选手。中国选手也很擅长技巧和技术，比如第一个华人冠军陈智玲（是个大美女哦），还有第一个中国部门冠军戴滨淳都是出自这个项目的比赛。</p>
+<ol start="3">
+<li>Illusions 幻象部门：看名字大概也能猜出来，这类魔术通常比较大型，场面酷炫魔幻氛围极其浓烈（唯一缺点大概是贵）David Copperfield很多魔术都属此类</li>
+</ol>
+<p>切美女，绑美女，拿棒子捅美女，在一片尖叫声中让美女飞起来这些都属于舞台幻象部门，虽然看着不太像是魔术节目，但是真的是魔术。那些与美女助手在台上亲亲我我的表演，基本都是属于这个类型。基本来说，这个部门以塑造比较宏大的场面为目的，所以消耗人力物力也比较高，对编排表演考验也很大，是个比较烧钱的项目，同样也是最受普通观众喜欢的类型之一。比如说大卫科波菲尔，傅琰东都是个中好手。其中傅琰东的《青花瓷》是目前国内唯一个在该项目中获得奖项的节目，包括他在春晚上表演的《训鱼》等节目都是属于这个部门的。不过圈内的很多人觉得这个项目手法难度不高，所以很多幻象大师，比如Peter Marvey谁的都会去参加个一般部门镀镀金什么的，而且也有不错的成绩。</p>
+<ol start="4">
+<li>Card Magic 纸牌部门：任何用扑克牌表演的魔术都可以。获奖者比如著名的牌王Lennart Green</li>
+</ol>
+<p>近景纸牌魔术,因为种类实在太多了,以至于当做一个单独节目类型。只要是用扑克牌或类似扑克牌的表演都可以放到这个分类里。这就造成了千术（出千）魔术，心灵魔术，喜剧魔术，甚至舞台魔术也都可以混杂到这个分类里，如牌王Lennart Green，鬼才Helder Guimaraes基本都是纸牌高手，所以一般能和其他项目沾边的都会去其它部门以避开这些欺骗高手。</p>
+<ol start="5">
+<li>Micro Magic 微型部门：“近了不能看，远了看不见”。</li>
+</ol>
+<p>虽属于近景魔术，但其实它里面超过一半的魔术是那种近了不能看（会穿帮），远了看不见（细节变化，看不清）的奇特类型，但是它又兼具了舞台魔术的美感和近景魔术的神奇，所以处理得当将会创造出非常完美的表演效果。很多伟大的作品都属于这个类型，比如说: Jason Latimer的透明三杯球，台湾魔术师Eric Chien是该部门2018年冠军获得者（就那个红黑跨线变色的魔术师）。</p>
+<ol start="6">
+<li>Parlour Magic 沙龙魔术：又叫厅堂魔术，泛指在客厅餐桌就能表演的魔术，一般也被称为纯近景魔术</li>
+</ol>
+<p>沙龙魔术，又叫厅堂魔术，泛指那些能在普通客厅或者餐桌上就能进行的表演，是近些年才从迷你舞台魔术里面分离出来的一枝新的分类，我们一般称之为纯近景，虽然可能有的效果会有角度限制，但是就总体而言，是可以在观众身边进行的表演，能让神奇在离观众最近距离发生，在震撼程度上也最高。但是这种魔术通常会有离得稍远就看不了的缺陷，在魔术比赛中也非常吃亏（你想评委都看不见你表演了什么，怎么可能得高分），所以能接触的人群也非常少，直到近些年视频技术的开始成熟，才逐渐将这类魔术呈现给大众，最好的代表就是刘谦在春晚上表演的硬币穿杯子或者大多数的传统街头魔术，而刘谦也凭借此类的魔术神奇程度高，观众参与度高的特点，一举奠定了中国魔术一哥的地位。</p>
+<ol start="7">
+<li>Mentalism 心灵魔术：最像魔术的魔术类型，表演这会被认为具有魔法和超能力。表演者会运用大量的知识和经验，来“阅读”人们的心灵。最普遍的流程效果就是预测观众所想得出的行为结果，通过一些图形、数字或其他媒介反映出来。</li>
+</ol>
+<p>心灵魔术，基本来说就是表演类似读心，意念，通灵等超能力的表演类型。这个部门在舞台上创造出来的效果往往都是人类所向往的那些神奇的能力，所以也有很多无良的坏人使用着魔术的技术号称自己有超能力，气功，或者其他一些玄之又玄的东西，骗钱骗色实在也着实让魔术背上了很多骂名。像当年的张宝胜的听字，稍早的李洪志意念推铅笔，现在的王林隔空抓蛇都属于这种魔术，然而他们的水平和当今顶尖魔术师相比相差实在是太远了，甚至比不上那些靠意念弯勺子骗点儿小钱的小通灵师。近些年在英国火到不能再火的心灵魔术大师，因为在电视上成功预言了彩票号码而名噪一时，他的一段瞬间催眠表演能让人被拍一拍就睡着</p>
+<ol start="8">
+<li>Comedy 喜剧魔术</li>
+</ol>
+<p>Evgeniy Voronin就是世界著名喜剧魔术大师。基本上那些让人笑的上气不接下气，但是却没什么技术含量的魔术都会来参加这个部门，所以这个部门节目最热闹，看着最轻松，就是一般都不能得奖。有很多大师会拿着他们的喜剧节目去参见别的部门的比赛，并不是他们节目不精彩，只是报名选错了部门而已。所以魔术比赛选择正确的部门很重要。</p>
+<ol start="9">
+<li>其他魔术</li>
+</ol>
+<p>所谓其他部门是指那些根本没法在舞台上表演的类型，像是现代街头魔术，电视魔术，视频魔术等，对于这些魔术，魔术圈也是争议不断。比如现代街头魔术，或许只是美国魔术师大卫布莱恩（David Blaine）在90年代创造出来电视噱头，因为除了只是在街上表演之外，几乎所有表演内容都是源自上述几个魔术类型的，只是利用镜头本身的特点，把原来一些不能近距离表演的节目变得看上去能在近距离表演了。但是因为现在网络和传媒技术发达，这类表演制作精良传播力度大，效果神奇所以也被大家所接受。比如去年登上春晚的法籍华人YIF就是凭借其精彩的电视魔术征服了冯小刚，力压群雄最终获得在全国观众面前一展身手的机会。要说起来刘谦有年春晚神奇的与正在弹钢琴的王力宏互换位置这个魔术就属标准的电视魔术，刘谦充分利用了镜头的特点完成了这样一个不可能的效果，只可惜这个效果只能给电视机前的观众展现，现场的观众是感受不到这种神奇的（切镜头什么的）。当年还记得大家在网上对此吐槽不断，不过这种情况对于魔术师来说并不算违规，只能算是一种常用手段，所以也算不上什么槽点，只是大家并不太了解魔术的一些运行原则罢了。当然了，这个部门也是有缺陷的，就是很多魔术一旦离开视频支持，就只剩下穿帮了。现在美国的当红魔术师Criss Angel，看看他的视频魔术吧，那就是真魔法啊,做好心理准备别被吓到。</p>
+<blockquote>
+<p>1.28 </p>
+</blockquote>
+<p>近期了解到有的圈外人士认为团长是很绅士+神秘的类型。<br>突然意识到哇 真的和团长一起走了好远的路</p>
+<p>偶尔也可以回去陌生一下和团长的关系，这一点其实 @白色魔术 比较接近。  </p>
+<hr>
+<p>看到spirit farer里面的古斯塔夫，喜。<br>由此联想到部分角色可能具有的两面性，就像陛下在不熟的时候拒人千里，但是熟起来之后就很暖（不，还是蛮冷的）。<br>自己曾经说过之所以把团长设定成花花公子类型，是因为会和陛下撞性格，但其实现在看看也不完全是。（其实一定程度上也是，因为陛下和团长在陌生人模式都是冷type，组cp组不起来…其实也可以组（咩碳就是喜欢否定否定！））  <br>团长其实对于生人和熟人都差不多，只不过对熟人（喜欢的人）会暗箭少一点，或者暗中帮助。花花公子只是他达成目的的一个手段，一个可选的扮演角色。想给团长的基本性格设定成优雅绅士，毕竟不能在生人和观众面前太过“嚣张”。    <br>古斯塔夫就是（目前来看），很经典的绅士+有点傲娇但又比较外向的理科男神形象，相当于那种，好客的优雅绅士。想起之前摩尔庄园的RK，基本上也塑造成了这样的形象，神秘，但是又外向，相当于给了读者一个了解他的机会？但同时又不会把距离拉得太近。接受拥抱，但“下不为例”。    <br>陛下则是那种，神秘又内向的类型。但是由于我本人在描写的时候喜欢写心理，所以显得陛下就太不神秘了，写团长我倒是会故意加神秘感（我认错）。通俗来讲，陛下的爱是针对某几人的，但团长的“爱”是面向大众的（嗯哼）。    </p>
+<p>基本上就是黑化团长黑化之前的（乙女？）感觉：“谢谢，我很喜欢。”但是距离要拉得很远。  <br>“啊，或许我们可以…”<br>“偶尔来点甜点放纵一下自己，也未尝不可。”  </p>
+<p>又想到陛下这样子其实是在没有陌生人之前才可能会表现出来…?不知道了。  <br>我感觉是因为是在陛下面前，所以团长才表现出了这个样子。只不过后面在继续探索的时候就只考虑了团长热的一面了（意思就是面对他不熟悉的人会表现的很冷很帅，而陛下是他熟悉的人）。  <br>就类似于，因为陛下太冷了，如果团长也冷的话，房间就冻住了，所以团长对上陛下就应该热一点。  <br>不过团长冷起来也会和陛下一样冷吧（点头），就是所谓的神秘冷酷类类型。</p>
+<blockquote>
+<p>12.15</p>
+</blockquote>
+<h1 id="剧本创作："><a href="#剧本创作：" class="headerlink" title="剧本创作："></a>剧本创作：</h1><p>　1．故事梗概</p>
+<p>　　a.确定主要人物，并扼要表述矛盾冲突和主要人物之间的关系；</p>
+<p>　　（对于人物的思想，性格，环境与景物可以只做简要的描述，但这种描述是一种简练的具体的，而不能过于抽象，概括）</p>
+<p>　　b.着重于故事的走向，体现剧本的总体构思；</p>
+<p>　　c.对于某些重要细节要点出来，以便于在故事形成过程中突出表现；</p>
+<p>　　d.一般人物可省略，对于重要的对白，可用描述的方式把意思表达出来。</p>
+<p>　　2． 故事大纲：</p>
+<p>　　a.将故事发生的时代背景，社会环境，时间，地点作明确的规定；</p>
+<p>　　b.对主要人物的思想脉络，性格特征，行为动作有清晰的考虑；</p>
+<p>　　c.有一系列重要事件组成的情节要点；</p>
+<p>　　d.对全剧结构的疏密，起伏做出有节奏和有层次的统一完整的布局；</p>
+<p>　　e.确定开篇重场戏，过场戏以及高潮点，结尾方式。</p>
+<p>　　结构：</p>
+<p>　　1；从审美感受来分：</p>
+<p>　　a.戏剧式结构：注意情节起伏和戏剧冲突的设置；段落布局合情合理，注重因果关系</p>
+<p>　　b． 散文式结构：通过日常化情绪令观众感受到某种人生启迪或是情绪的感染；没有完整的故事，而是着力与生活的细节描写。</p>
+<p>　　2． 从时空安排来分：</p>
+<p>　　a.顺序式结构；</p>
+<p>　　b.倒序式结构；</p>
+<p>　　c. 时空交错式结构。</p>
+<p>　　3． 从创作观念来分：</p>
+<p>　　a. 闭锁式结构；</p>
+<p>　　b. 开放式结构。</p>
+<p>　　情节编织：</p>
+<p>　　情节贯穿线——主线，副线；</p>
+<p>　　观赏兴趣点——能引起观众情感变化的刺激点。</p>
+<p>　　其中情节线可分为：人物线；事件线；情感线。</p>
+<p>　　细节：不是凭空想象出来的，可以通过搜集素材来完成，以典型化的细节深刻地揭示出人物的个性，心理活动等等。</p>
+<p>　　矛盾冲突的设计安排：矛盾冲突的质量决定着作品的质量。可分为以下：</p>
+<p>　　1． 人与人之间的冲突；</p>
+<p>　　2． 人与环境之间的冲突；</p>
+<p>　　3． 内心冲突。</p>
+<p>　　塑造人物形象可分为以下3个层次：</p>
+<p>　　1． 人物的性格，特别是个性；</p>
+<p>　　2． 人物的心灵；</p>
+<p>　　3． 人物的命运变化。</p>
+<p>　　人物分三种类型：</p>
+<p>　　1． 共性人物：无个性特征，按人物的年龄，经济地位的一般状况加以综合和概括塑造出来的人物形象。如“丫环，媒婆”。</p>
+<p>　　2． 扁平人物（类型人物）：往往只是以某种观念的化身，如“吝啬人”“伪君子”。</p>
+<p>　　3． 圆形人物（典型人物）：性格特征鲜明且呈现出发展，变化的态势。</p>
+<p>　　处理人与事的关系：</p>
+<p>　　事件要为塑造人物形象服务，而并不是演绎事件的活道具。</p>
+<p>　　确定主要人物及其关系：</p>
+<p>　　动笔创作时，第一步总要确立一个主要人物，以便以他为中心组织人物关系。</p>
+<p>　　主要人物的关系：</p>
+<p>　　a.对立型</p>
+<p>　　b.互补性</p>
+<p>　　画面感：动感要服从人物心灵的揭示。（没有代表性的描写，该省则省，特写的则特写）</p>
+<p>　　抓细节描绘</p>
+<p>　　注意表现人物个性化的动作，往往就是动作细节；个性化的语言往往能折射出一个人的学识，品格。</p>
+<p>　　把握住人物情绪变化的关键时刻：对感情的爆发点，进行充分细微的刻画，表现。</p>
+<p>　　注意情景交融：赋予环境以感情的色彩，使之成为某种具有灵性的生命，成为反映人物内心世界的对应物。</p>
+<p>　　人物关系，人物之间的矛盾冲突，要安排得合情合理，自然妥贴，不要露出生硬的人为痕迹。</p>
+<p>　　a.合乎生活的情理；</p>
+<p>　　b. 合乎情境中的情理；</p>
+<p>　　c. 合乎人物性格走向，情感变化的情理。</p>
+<p>　　多侧面，多层次地挖掘人物内心世界。</p>
+<p>　　给行为，言语以准确独特的动机，这动机即使心理依据，即心理活动的外在表现。</p>
+<p>　　素材的搜集与提炼：素材是剧本的基础</p>
+<p>　　素材选取应本着三个原则：</p>
+<p>　　a. 有利于主题的表达；</p>
+<p>　　b. 有利于人物形象，特别是主要人物形象的塑造；</p>
+<p>　　c. 有利于情节的编织。</p>
+<p>　　剧作构思的产生：</p>
+<p>　　1． 确定写什么</p>
+<p>　　写什么？写这个人，写这件事的意义价值何在？（不能流于一般化，成为观念的演绎）</p>
+<p>　　2． 确定人与事：</p>
+<p>　　根据人物的需要来安排事件，而不能让事件左右人物；</p>
+<p>　　3． 确定主要人物，次要人物，陪称人物，及人物关系（这点最重要），人物在全剧中的地位。</p>
+<p>　　4． 时代，环境。即把人物放在一个什么时代，什么环境里来写；</p>
+<p>　　5． 选择角度，即从何处下笔，从哪个方面，哪个角度。</p>
+<p>　　6． 确定叙述方式和艺术风格（包括人称，时空安排，表现手法）这要针对剧作的具体内容和作者创作意图来确定；</p>
+<p>　　7． 确定中心情节线（在拥有了不少精采的场面和生动的细节之后，确立中心情节线。）</p>
+<p>　　8． 结构：</p>
+<p>　　确定结构的过程：</p>
+<p>　　a.根据题材的性质和作品的风格和作品的追求风格，决定总的结构方式是用戏剧式结构还是散文式结构，叙述方式是顺叙还是倒叙，还是时空交错。</p>
+<p>　　b.决定叙述线是通过某一个人物贯穿全剧还是某一件事，某一物品，甚或是一种情，一种景贯穿全剧。</p>
+<p>　　c.决定事件或情节发展中的主要情绪爆发点，感情闪光点。</p>
+<h2 id="Script-格式"><a href="#Script-格式" class="headerlink" title="Script 格式"></a>Script 格式</h2><p>  码一下格式。</p>
+<p> <span class="exturl" data-url="aHR0cHM6Ly93d3cubmZpLmVkdS93cml0aW5nLWEtcGxheS1zY3JpcHQv">剧本创作注意1<i class="fa fa-external-link-alt"></i></span></p>
+<p> <img data-src="http://mebilychen-media.test.upcdn.net/doc/%E5%89%A7%E6%9C%ACScript/%E5%89%A7%E6%9C%AC%E5%86%99%E4%BD%9C.jpg"></p>
+<p> <span class="exturl" data-url="aHR0cDovL21lYmlseWNoZW4tbWVkaWEudGVzdC51cGNkbi5uZXQvZG9jLyVFNSU4OSVBNyVFNiU5QyVBQ1NjcmlwdC9DUEZfcGxheV9mb3JtYXR0aW5nMi5wZGY=">一个PDF，<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="The-basics-of-movement-directions"><a href="#The-basics-of-movement-directions" class="headerlink" title="The basics of movement directions"></a>The basics of movement directions</h3><p>There are 9 main sections in stage:</p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/doc/%E5%89%A7%E6%9C%ACScript/IMG_9956(20211215-133454).PNG"></p>
+<p>They are often in abbreviated form. Here’s what they mean:</p>
+<ul>
+<li>C: Center stage</li>
+<li>D: Downstage</li>
+<li>U: Upstage</li>
+<li>R: Right</li>
+<li>L: Left</li>
+<li>DR: Downstage right</li>
+<li>DL: Downstage left</li>
+<li>UR: Upstage right</li>
+<li>UL: Upstage left</li>
+</ul>
+<h3 id="Uses-of-stage-directions"><a href="#Uses-of-stage-directions" class="headerlink" title="Uses of stage directions"></a>Uses of stage directions</h3><p>The stage directions are used to describe:<br><strong>a) The setting</strong><br>(It’s a bright sunny day in the castle)</p>
+<p><strong>b) How the character feels</strong><br>(ROBIN HOOD is angry) Shut up!<br>(surprised) I didn’t expect to see you here.</p>
+<p><strong>c) How the character moves</strong><br>(Enter ROBIN HOOD, armed with a sword)<br>(Enter all but BENVOLIO. Enter ROMEO)<br>(MAID MARIAN covers her face with her hands) Oh my God!<br>(They fight)<br>(Taking JULIET’s hand) Your hand is like a holy place that my hand is unworthy to visit.<br>(sits at the table at the left side of LYNDA) He was doing his best.<br>(He climbs the wall, and leaps down within it)<br>(Exit)</p>
+<p><strong>d) How the character speaks</strong><br>(Laughing) What a fool!</p>
+<h3 id="Drama-terms"><a href="#Drama-terms" class="headerlink" title="Drama terms"></a>Drama terms</h3><p><strong>Act</strong>: One of the main divisions of a play.<br><strong>Antagonist</strong>: A character, situation, feeling, idea, or thing that opposes the main character.<br><strong>Balcony</strong>: Area above the stage roof used for balcony scenes or for seating musicians or members of the audience.<br><strong>Cast</strong>: The actors and actresses in a play.<br><strong>Characters</strong>: People who take part in the story.<br><strong>Chorus</strong>: The chorus was a single person who recited a prologue.<br><strong>Dialogue</strong>: What the characters say in the play.<br><strong>Enter</strong>: Stage direction indicating the entrance onto the stage of a character or characters.<br><strong>Exit</strong>: Stage direction indicating the departure of a character from the stage.<br><strong>Monologue</strong>: A long dramatic speech by a single actor.<br><strong>Prologue</strong>: The introduction of a play.<br><strong>Protagonist</strong>: The main character.<br><strong>Scene</strong>:  The part of an act that takes place in one location.</p>
+<h2 id="名词"><a href="#名词" class="headerlink" title="名词"></a>名词</h2><p><img data-src="https://playwriting101.com/glossary/"></p>
+<h2 id="有关动作-场上指导"><a href="#有关动作-场上指导" class="headerlink" title="有关动作/场上指导"></a>有关动作/场上指导</h2><p><img data-src="https://industrialscripts.com/stage-directions/">
+  </p>
+<hr>
+<p>啊对了，可能没有明确提及过：我私设团长在列位神明中的地位很低，虽说是“儿子”，但其实更像是“容器”，（和陛下那些儿子（以及前辈）不谋而合（也可以说是一起谋了，就是团长给陛下出的主意）），他神阶其实远不如陛下的，和陛下相比就更像是神 vs. 凡人这样，所以在招惹陛下的时候会故意强调这一点。真正和陛下同级的神是团子爹（梦魇之王）。  <br>当然也可以写成高贵公子哥的Stolas这种类型，看AU。    </p>
+<blockquote>
+<p>@一下vivziepop的Stolas王子</p>
+</blockquote>
+<p>哈哈哈哈哈哈崩了崩了人设啊形象啊什么的全崩了哈哈哈哈上一集/秒还在carry全场这一集/秒就无了这种爵迹简直太可爱了（无嘲讽）<br>stolas：我好帅<br>vivziepop：好的好的这就崩这就崩</p>
+<p>心疼王子1s 以及猫头鹰受惊吓会变瘪完全没毛病</p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/IMG_8945.PNG"></p>
+<p>团长和他区别出来了：stolas王子有家人还有点在乎地位（？）所以会被说“有私情”会被说得很没脸面 但是团长就不会 他丝毫没有牵挂；以及这里虐点在虽然王子总是一副“欲望之爱”的样子（让小恶魔也如此以为）但其实他是真的爱着小恶魔（？）</p>
+<p><img data-src="http://mebilychen-media.test.upcdn.net/image/%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83/IMG_8950.GIF"></p>
+<blockquote>
+<p>playwright<br>剧作家，playboy 花花公子。这也是为什么我依旧保留我对团长剧作家的设定。</p>
+</blockquote>
+<ul>
+<li>剧作家/作家考虑过太多的可能性——他们知道的太多了。<br>“No matter how I write it, I’ll be in trouble,” you say. “Trust me, there’s no way out.”</li>
+</ul>
+<p>引入冲突：</p>
+<blockquote>
+<p>A mystery patron who prefers to remain anonymous has approached us through an agent. It seems this patron is so impressed with Amarie and Coursavir, that they’ve commissioned a work from you. Generously. With a tidy production budget. To be performed eight weeks from now. Which gives you four weeks to write it and us four weeks to rehearse. So get writing.</p>
+</blockquote>
+<p>Which leaves you in a dilemma. For all the fine words you write for actors to speak, you’re much less confident when it comes to writing the script for a romantic scene that stars you. How do you appeal to a character you don’t also control? If this were a romantic comedy, you’d know exactly what to say. But what’s the best way to get somewhere with the dour but fascinating director?</p>
+<ol>
+<li>Good old-fashioned flirting. I toss my head. “So, do you come here often?”</li>
+<li>Sincerity. Away from the glitz and glam, we’re just people. “I think you’re interesting. I’d like to know you better, and I hope you’d like to know me better, too.”</li>
+<li>Cleverness. Nichol appreciates a good line. “Let me tell you an idea for a play I have. There’s a talented young playwright who falls for the experienced, silver fox director.”</li>
+</ol>
+<blockquote>
+<p>“Don’t get the idea I’m going to put another play by Doctor Wyrm on the Odeon’s playbill next week. It’ll take time for your name to be anything but poison in this town. Myself, I’d advise you to go on the road.”<br>“On the road?”<br>“On tour. If you go north with a touring company this summer, by next winter everyone will have forgotten about this debacle. Or at least they won’t remember it so unfortunately well.”</p>
+</blockquote>
+<p>以上这段是讲剧本写烂了之后为了避风头剧团就一起去旅行了。<br>这不是旅行！这是巡回演出！Tour！  </p>
+<div class="note danger"><p style="text-align:center; color:#D9534F"> ♕部分涉及@memo的剧透♕ </p></div>
+
+<p>日常生活中灵感会乍现，然后会凭空烧出纸笔开始记录。</p>
+<p>“啊！”他突然惊叫道，惹得国王立刻警惕地抬起头。他对着空气发了会儿呆，随后一打响指，纸笔从火焰中成型，“这可真是极好的设定！”</p>
+<p>国王皱起眉看着面前的剧作家性质盎然地在纸上写起什么：“……格林，你要再这样一惊一乍的，我就甩你一脸鳞粉。”</p>
+<p>“啊，这样做可不太符合您高贵优雅的人设啊。”</p>
+<p>“格林。”</p>
+<p>“好好好我了解了，咱们继续来谈正事。”</p>
+<p>其实蛮有责任心的，虽然都在梦魇之心的控制之下，自己也只是个容纳梦魇之王的容器，整个噩梦界及团长头衔的存在有点多余，但好歹他也是一界（噩梦界）之主。不过他不像陛下那样珍惜自己的“子民”，也就是亲族，因为他们都是他坑蒙拐骗，被洗脑来的。有的是仪式中失败的虫子，有的是被拐骗来的。</p>
+<p>写作时会仔细斟酌词句</p>
+<p>逢场作戏的才能</p>
+<p>团长会习惯性地观察（观察日常生活细节（剧作用）、或者盘算）</p>
+<p>一些道理和信条他会通过剧作术语来表达</p>
+<p>对美有独到的见解，觉得陛下就很美：可以永恒、延续的就是美（死亡是永恒的）。</p>
+<p>或 易碎为美</p>
+<p>“我对美的定义有些极端，”他用优雅得夸张的动作换了个坐姿，“我的最爱只有两种，一，永恒和延续；二，瞬间和易碎。”</p>
+<p>剧作专有名词：</p>
+<p>剧本为表演服务，文笔毫无用武之地-即便如此，团长还是喜欢玩文字游戏，享乐</p>
+<p>剧作家不同于小说家，是完全隐匿的</p>
+<p>剧作家所呈现的一切都是“可信的”—在观者的角度看是可信的，而且团长也秉持着不说谎话的规矩，不过他会把事实以另一个方式表达，或者只透露冰山一角，从而达到扭曲事实骗人的目的。</p>
+<p>剧本是理想的脚本，搬上舞台后多少会大打折扣。</p>
+<p>“我虽然已经写好了最理想的剧本，不过实际的演出效果多少会因为演员而大打折扣。不过你们都很卖力地演出呢，尤其是你，我的陛下，你的表演真是出乎我意料的美妙。”</p>
+<p>所以不同于陛下，团长并不是个完美主义者</p>
+<p>戏剧三要素：</p>
+<p>人物-模特（取人）与原型（取事）：团长是个消息通，在四处旅游，知道大大小小各种事情，材料原型信手拈来</p>
+<p>地点-不要把版图规划的比自己的地图要大-没有金刚钻不要揽瓷器活（剧作术语版）。</p>
+<p>时间-剧作是为逝去的美造像，它是一种永恒的延续（心）</p>
+<p>三一律：三要素统一</p>
+<p>戏剧情景：选矛盾冲突的场景。所以团长特别喜欢搞事情，能搞就搞，还特别八卦，喜欢凑热闹。</p>
+<p>戏剧艺术的价值在于探索人类内心还有哪些情感未被开发-团长很善于操弄情感</p>
+<p>历史关注大人物大事物，戏剧关注小人物小事物</p>
+<p>历史除了人名地名之外都是假的，戏剧文学相反。</p>
+<p>艺术显得真实因为他展示了很多细节。</p>
+<p>历史是无情的，忽视了美。而文学有细节上的关注，发现美。</p>
+<p>戏剧技巧：悬念、突转、发现、对比、吃惊、误会巧合、夸张讽刺、重复突出、烘托渲染、铺垫呼应、喜写悲悲写喜、抑扬扬抑等</p>
+<p>有时技巧过分的明显是对观众的侮辱</p>
+<p>艺术是省略，是恰如其分的掩饰</p>
+<p>勾引出观众内心的感情（团长特长）</p>
+<p>剧作是不公正的，有主配角之分</p>
+<p>剧作，心灵的故乡</p>
+<p>人之所以虚构乌托邦，就是因为他们在现实中不存在</p>
+<p>成功的作品 关键在于要抓住读者的眼球 让他们一刻不停的看下去 想知道接下来会发生什么</p>
+<p>“当一个塑造充分的人物突然消失的时候，你更会觉得无法相信。”</p>
+<p>“‘这个人有丰富的过去，有独到的见解，有独行的特点……怎么可能就这么没了？怎么可能只是一个虚构的人？’”</p>
+<p>“您会这样去想吗，陛下？”</p>
+<p>Aspects：</p>
+<p>杯—欲望、享乐、生育</p>
+<p>心— 永恒、延续</p>
+
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/3b01.html">【角色研究】团长线-如何成为剧作家</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2019年03月09日 - 10:13</p>
+ <p><span>最后更新:</span>2022年06月20日 - 07:36</p>
+ <p><span>原始链接:</span><a href="/p/3b01.html" title="【角色研究】团长线-如何成为剧作家">https://mebilychen.github.io/p/3b01.html</a>
+    
+ </p>
+ <p><span>许可协议:</span>除非文章内另行声明，遵守 cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script data-pjax> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%BE%E5%AE%9A/" rel="tag"><i class="fa fa-tag"></i> 设定</a>
+              <a href="/tags/%E8%A7%92%E8%89%B2%E7%A0%94%E7%A9%B6/" rel="tag"><i class="fa fa-tag"></i> 角色研究</a>
+              <a href="/tags/%E6%A0%BC%E6%9E%97/" rel="tag"><i class="fa fa-tag"></i> 格林</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/6076.html" rel="prev" title="这个破国王老子不当了">
+      <i class="fa fa-chevron-left"></i> 这个破国王老子不当了
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/1e11.html" rel="next" title="【角色研究】陛下性格设定（2020）">
+      【角色研究】陛下性格设定（2020） <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%A7%E6%9C%AC%E5%88%9B%E4%BD%9C%EF%BC%9A"><span class="nav-text">剧本创作：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Script-%E6%A0%BC%E5%BC%8F"><span class="nav-text">Script 格式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#The-basics-of-movement-directions"><span class="nav-text">The basics of movement directions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Uses-of-stage-directions"><span class="nav-text">Uses of stage directions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Drama-terms"><span class="nav-text">Drama terms</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8D%E8%AF%8D"><span class="nav-text">名词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%89%E5%85%B3%E5%8A%A8%E4%BD%9C-%E5%9C%BA%E4%B8%8A%E6%8C%87%E5%AF%BC"><span class="nav-text">有关动作&#x2F;场上指导</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar3.jpg">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">159</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">52</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">163</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjEwMTM3MTIxMjdAcXEuY29t" title="E-Mail → mailto:1013712127@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9tZWJpbHkxMzE0" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      猜猜这是什么鬼地方？
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9tZWJpbHljaGVuLmxvZnRlci5jb20v" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;">LOFTER</span>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/p/d894.html" title="p&#x2F;d894.html">【参考】绘画参考-生物</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/49c3.html" title="p&#x2F;49c3.html">【参考】绘画参考-人</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/3ee.html" title="p&#x2F;3ee.html">【参考】绘画参考-人造物</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/dd8a.html" title="p&#x2F;dd8a.html">“行为艺术”</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/e3a422.html" title="p&#x2F;e3a422.html">【参考】衣|料专版</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/4eb5.html" title="p&#x2F;4eb5.html">遗书</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ce0f2.html" title="p&#x2F;ce0f2.html">Dreamily.AI专场</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/p/f446.html" title="p&#x2F;f446.html">常用命令</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/0.html" title="p&#x2F;0.html">【备忘】</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/ce0f2.html" title="p&#x2F;ce0f2.html">Dreamily.AI专场</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">2m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">31:03</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "站子已虔诚祈祷 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+     //'.site-meta',
+    //'.site-nav',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+<script language="JavaScript">
+var password="";
+password=prompt('Password (Birthday)','');
+if (password != '20180909')   
+{alert("。");    
+window.opener=null;
+window.location.href = "about:blank"; 
+window.close();}  // 密码不正确就关闭//-->
+</script>
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>

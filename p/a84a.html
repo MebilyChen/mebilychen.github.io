@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="一些做手书的点子，尽量连上音乐">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【合集】手书脑洞">
+<meta property="og:url" content="https://mebilychen.github.io/p/a84a.html">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:description" content="一些做手书的点子，尽量连上音乐">
+<meta property="og:locale">
+<meta property="og:image" content="https://imglf5.lf127.net/img/SFFiWnAwMStNckEycUZiMW0xcUROK2lQQURISmlRZHBJUllGdWx0WEttYldQbzRJcUIzNHdRPT0.jpg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg%7Cwatermark&type=2&text=wqkg56Kz57SgIC8gbWViaWx5Y2hlbi5sb2Z0ZXIuY29t&font=bXN5aA==&gravity=southwest&dissolve=30&fontsize=680&dx=32&dy=36&stripmeta=0">
+<meta property="og:image" content="https://i.loli.net/2021/04/19/1h98WVE4tzLsPB5.jpg">
+<meta property="article:published_time" content="2019-04-09T02:08:00.000Z">
+<meta property="article:modified_time" content="2022-03-24T05:17:32.174Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="父子组">
+<meta property="article:tag" content="冰火组&#x2F;GrimmPale">
+<meta property="article:tag" content="君臣组">
+<meta property="article:tag" content="白王">
+<meta property="article:tag" content="卢瑞恩">
+<meta property="article:tag" content="曲">
+<meta property="article:tag" content="纯音乐">
+<meta property="article:tag" content="圣巢">
+<meta property="article:tag" content="黑魂3">
+<meta property="article:tag" content="猫厂">
+<meta property="article:tag" content="手书">
+<meta property="article:tag" content="日系音游">
+<meta property="article:tag" content="V家">
+<meta property="article:tag" content="狩猎组&#x2F;猎组">
+<meta property="article:tag" content="日月组&#x2F;光组">
+<meta property="article:tag" content="欧美歌曲">
+<meta property="article:tag" content="游戏音乐">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://imglf5.lf127.net/img/SFFiWnAwMStNckEycUZiMW0xcUROK2lQQURISmlRZHBJUllGdWx0WEttYldQbzRJcUIzNHdRPT0.jpg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg%7Cwatermark&type=2&text=wqkg56Kz57SgIC8gbWViaWx5Y2hlbi5sb2Z0ZXIuY29t&font=bXN5aA==&gravity=southwest&dissolve=30&fontsize=680&dx=32&dy=36&stripmeta=0">
+
+<link rel="canonical" href="https://mebilychen.github.io/p/a84a.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : '中文'
+  };
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    
+      if (NexT.utils.hasMobileUA()) return;
+    
+    let time, hidden, visible, title = document.title;
+    let favicon = document.querySelector('link[rel="icon"]');
+    
+      hidden = ["盯————","*探*","?","......","*观察*"];
+      visible = ["*偏转视线*","*缩*","*强装镇定*","！","*低头*"];
+    
+    let random = t => t[Math.floor(Math.random() * t.length)];
+    const change = () => {
+      if (document.hidden) {
+        favicon.setAttribute('href', '/images/favicon-32x32-king-black.png');
+        
+          document.title = random(hidden);
+        
+        clearTimeout(time);
+      } else {
+        favicon.setAttribute('href', '/images/favicon-32x32-brand-black.png');
+        
+          document.title = random(visible);
+        
+        time = setTimeout(() => {
+          document.title = '碳素的小作坊';
+        }, 1000);
+      }
+    }
+    document.addEventListener('visibilitychange', change, false);
+  });
+</script>
+
+  <title>【合集】手书脑洞 | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;调谐中...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">163</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">52</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">159</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-image fa-fw"></i>画廊</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/random.html" rel="section"><i class="fa fa-question fa-fw"></i>抽</a>
+
+  </li>
+        <li class="menu-item menu-item-lang">
+
+    <a href="/en/" rel="section"><i class="fa fa-globe fa-fw"></i>->English</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-17081-597255-1305127431.cos-website.ap-hongkong.myqcloud.com' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/a84a.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【合集】手书脑洞
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-04-09 10:08:00" itemprop="dateCreated datePublished" datetime="2019-04-09T10:08:00+08:00">2019-04-09</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2022-03-24 13:17:32" itemprop="dateModified" datetime="2022-03-24T13:17:32+08:00">2022-03-24 13:17:32</time>
+                </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">王文</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/Songfic-%C2%B7-%E6%89%8B%E4%B9%A6/" itemprop="url" rel="index"><span itemprop="name">Songfic · 手书</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>15k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>14 分钟</span>
+            </span>
+            <div class="post-description"><center>一些做手书的点子，尽量连上音乐</div>
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%88%B6%E5%AD%90%E7%BB%84/" rel="tag"><i class="fa fa-tag"></i> 父子组</a>
+              <a href="/tags/%E5%86%B0%E7%81%AB%E7%BB%84-GrimmPale/" rel="tag"><i class="fa fa-tag"></i> 冰火组/GrimmPale</a>
+              <a href="/tags/%E5%90%9B%E8%87%A3%E7%BB%84/" rel="tag"><i class="fa fa-tag"></i> 君臣组</a>
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E5%8D%A2%E7%91%9E%E6%81%A9/" rel="tag"><i class="fa fa-tag"></i> 卢瑞恩</a>
+              <a href="/tags/%E6%9B%B2/" rel="tag"><i class="fa fa-tag"></i> 曲</a>
+              <a href="/tags/%E7%BA%AF%E9%9F%B3%E4%B9%90/" rel="tag"><i class="fa fa-tag"></i> 纯音乐</a>
+              <a href="/tags/%E5%9C%A3%E5%B7%A2/" rel="tag"><i class="fa fa-tag"></i> 圣巢</a>
+              <a href="/tags/%E9%BB%91%E9%AD%823/" rel="tag"><i class="fa fa-tag"></i> 黑魂3</a>
+              <a href="/tags/%E7%8C%AB%E5%8E%82/" rel="tag"><i class="fa fa-tag"></i> 猫厂</a>
+              <a href="/tags/%E6%89%8B%E4%B9%A6/" rel="tag"><i class="fa fa-tag"></i> 手书</a>
+              <a href="/tags/%E6%97%A5%E7%B3%BB%E9%9F%B3%E6%B8%B8/" rel="tag"><i class="fa fa-tag"></i> 日系音游</a>
+              <a href="/tags/V%E5%AE%B6/" rel="tag"><i class="fa fa-tag"></i> V家</a>
+              <a href="/tags/%E7%8B%A9%E7%8C%8E%E7%BB%84-%E7%8C%8E%E7%BB%84/" rel="tag"><i class="fa fa-tag"></i> 狩猎组/猎组</a>
+              <a href="/tags/%E6%97%A5%E6%9C%88%E7%BB%84-%E5%85%89%E7%BB%84/" rel="tag"><i class="fa fa-tag"></i> 日月组/光组</a>
+              <a href="/tags/%E6%AC%A7%E7%BE%8E%E6%AD%8C%E6%9B%B2/" rel="tag"><i class="fa fa-tag"></i> 欧美歌曲</a>
+              <a href="/tags/%E6%B8%B8%E6%88%8F%E9%9F%B3%E4%B9%90/" rel="tag"><i class="fa fa-tag"></i> 游戏音乐</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><div class="note warning"><p style="text-align:center; color:#F0AD4E">♕DEMO/未完成作品♕ </p></div>
+
+<div class="note warning"><p style="text-align:center; color:#F0AD4E"> ♕施工中♕ </p></div>
+
+<hr>
+<h1 id="总歌单："><a href="#总歌单：" class="headerlink" title="总歌单："></a>总歌单：</h1><p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-aqMEduko" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="2747685982" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
+
+<div class="aplayer no-destroy" data-id="6644269117" data-server="netease" data-type="song">
+</div>
+
+<div class="note primary"><p style="color:#7042C1"> 大部分是在老娘系列时yy过的，带了过来换了个本命 </p> </div>
+
+<p>从网易云那边当下来的介绍：  <br>自用<br>（目前萌上了卢瑞恩，于是将他推举为圣巢代表（好的一方））<br>妈耶 不记下来真的 会忘（老血）</p>
+<p>因为不会作画<br>所以只能囤着<br>（其实我萌的cp是白王x圣巢谁敢信？）</p>
+<p>现在大体有想法的有：</p>
+<p>Blind Justice —— “本来两光是一家” 主陛下x辐光 副各种陛下的cp 比如白后啊小卢子啊前辈啊团长啊什么的</p>
+<p>自伤无色 ——<br>“A tale of a King and his child —”<br>就是讲陛下是怎么被大家（不只是在空洞世界里 还有三次元）diss到绝望的（一口老血）<br>陛下x圣巢 陛下x容器（们）<br>“and a story of a King and his children”</p>
+<p>游园地 ——<br>陛下x圣巢、容器们—》陛下x前辈<br>（陛下最后为了阻止光光自杀了）（然鹅并没有什么用）</p>
+<p>Karma —— 第一段辐光，第二段陛下，互攻。大写歌词是辐光的part。暗线陛下x圣巢（*演出方式为双人对唱（骂），最后高潮为一人一句歌词：陛下：“你能不能不要再折磨圣巢了？！（潜台词：我心好痛）”光光：“啊？谁教我疯了捏？”陛下：“…你把咱们两个都搞凉了！！”光光：“但是我及时溜掉了呀～（潜台词：没有伤我一根毛啊～）”（因为在梦境界里））</p>
+<p>病名为爱 —— “瘟疫”的源头及本质是爱（？？好有道理？！）</p>
+<p>Restless—— 陛下给圣巢（或者前辈）的分手信（x）</p>
+<p>阳炎 —— 陛下x前辈（前辈救陛下////）</p>
+<p>My Prayer——小卢瑞恩给还未遇见的某虫写的情书（当时还不知道真命就是陛下于是他向陛下祈祷然后后来aww）陛下：我保佑我自己？</p>
+<p>格里格——就是陛下弹钢琴，团长拉小提琴而已，现场版全凭yy</p>
+<p>Discord——（辐光带着）泽若带着圣巢diss陛下（委屈）</p>
+<p>Qliphoth——草 太适合团长了这曲子这前奏这管风琴.(但是这是陛下中心于是我必须要想办法加陛下进去哼唧)</p>
+<p>安心委员会——陛下革命失败</p>
+<p>孩子气战争——（草，画面感好强）陛下（哥哥方）和辐光（妹妹方）吵架，众 神 围 观（团长友情出演讲解员）</p>
+<p>Saving Light——陛下纵身跃下深渊净化虚空,卢瑞恩爆哭：(</p>
+<p>没用的娃——au，陛下决定和前辈互换，总说他不行，然而前辈觉得“我可以”。辐光：冷漠</p>
+<p>Nameless King——当陛下（和沃姆）成为了黑魂boss</p>
+<hr>
+<h2 id="1、Nameless-King"><a href="#1、Nameless-King" class="headerlink" title="1、Nameless King"></a><p>1、Nameless King<br></p></h2>  <p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-FWfPgcTF" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="1344959806" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
+
+
+<p>Starring：陛下（王形态）、陛下（沃姆形态）、黑魂玩家（不）<br><br>剧情：<br><br>其实并不算手书啦，更像是Boss设计。其实了解这个boss之前，我不知道这boss真的是一人一坐骑……太巧了，或者说，音乐编的很到位？<br><br>因为听见了很稳重的长音和很轻快的短音交织在一起，就觉得应该是一个可畏的庞然大物配一个身手敏捷的剑士，再加上Nameless King这个名字…诶这不就是我陛下——（被打死）<br><br>于是Boss设计如下：<br><br>遭遇Boss战，地点在雪山。黑魂玩家在白茫茫一片的雪地上前进，突然看见远处一个孤零零的王座上坐着一个陛下，（或者是，陛下拄着剑低头立在风中）一动不动。<br><br>然后黑魂玩家以为是装饰（啊呸，反正总是要面对的），就好奇想上去摸摸，结果还没走近就触发了Boss战。<br><br>只见陛下拔出佩剑，亮出翅膀，嗖的一下上了天。远处本该是背景的一座“山峰”由慢渐快地沉入地平线下，然后BGM起！——<br><br>底端浮现出一行血条（Wyrm，The Pale King），此时黑魂玩家一脸蒙蔽，因为看不见Boss在哪里，随后视角突然一阵震动，低头一看，一个塌陷正逐渐形成，立刻闪到一边。然后我们的好大沃姆就随着一声低沉的吼叫冲出地面。<br><br>战场开始下雪，大沃姆没能吞掉敌人，在空中划了一个弧线重新钻回雪地。这时还没等黑魂玩家喘口气，我们的陛下在空中翅膀一抖，一个俯冲用剑向玩家刺去（大沃姆强调巨型和缓慢，陛下强调娇小和敏捷），玩家<del>YOU DIED</del>又一次闪过攻击，准备以守为攻观察情况，发现大沃姆只有一个攻击方式，就是时不时从雪地里冲出来吞/撞玩家，而陛下则是快准狠地用娴熟的剑术和法术从空中和陆上进攻，于是玩家<del>YOU DIED</del>准备把在自己总是在战场内派处乱舞的陛下搞掉。<br><br>玩家在死了几十次后终于拼过了陛下，陛下的面具碎了一地，落出空空如也的内部。随后玩家悲愤的发现boss的血条只减少了十分之一。风雪逐渐大了起来，陛下的碎片在无形力量的支配下又一次拼装组合成了陛下，冲着玩家就是一个背刺，把玩家气得<del>YOU DIED</del>一剑反手砍在了还没来得及完全钻到雪地里去的大沃姆身上——效果拔群！<br><br>是的所以大沃姆才是陛下本体。玩家于是各种躲避陛下和大沃姆的攻击，瞄准大沃姆跃出雪地的机会砍它的身体——在这期间还需要躲开陛下的追击<del>YOU DIED</del><br><br>Boss血条只剩三分之一，照理说应该变形态了（。）暴风雪中，玩家视线变得更加模糊，行动也更困难了（但是陛下不怕），大沃姆停止了吞噬攻击，从雪地里蹿出来，半截身子露出地面，缩（不）在陛下身后（不）放范围攻击（冰冻），陛下则护在本体周围，守为主，攻为辅，警惕地应对着玩家的种种突破防线的尝试。<br><br>咳，反正最后玩家都是<del>YOU DIED</del>要赢的，一旦沃姆挂了，陛下也就跟着挂了。嗯，就这。<br><br>啊对了，打赢后玩家获得了半个国王之魂（滑稽）</p><p></p>
+<h2 id="2、Saving-Light"><a href="#2、Saving-Light" class="headerlink" title="2、Saving Light"></a><p>2、Saving Light<br></p></h2><p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-pBcAXRlA" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="461864791" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>  
+
+<p>Starring：陛下、卢瑞恩<br><br>剧情：基本上就是意识流，设定在瘟疫结束后，深渊的虚空开始反噬圣巢，于是陛下牺牲了自己跳下深渊<em>wink</em><br><br>这里陛下对卢瑞恩的感情就是对圣巢的感情<br><br>卢瑞恩其实是圣巢民众的代表<br><br>也就是说这首其实是“陛下x圣巢x陛下”</p><p></p>
+<p>Monstercat 030 - Finale<br>
+Gareth Emery / STANDERWICK / HALIENE</p>
+
+<p>I&#39;m here<br>
+我在这<br>
+Where endless meets the end<br>
+在这无尽道路的尽头<br>
+Do you see me<br>
+你看到我了吗<br>
+I&#39;m hidden here again<br>
+我又一次隐匿在这里<br>
+Your whispers found its way<br>
+你的悄声细语来到我身边<br>
+Calling me to stay<br>
+呼唤我 让我留在这里（stay here）</p>
+
+<p><em>从第一句开始，陛下缓步逐渐走向深渊的的边缘</em></p>
+
+<p>I&#39;m standing at the edge<br>
+我站在悬崖之巅<br>
+But something always brings me back<br>
+却总被无形的力量拽回（想要后退）<br>
+All the voices in my head<br>
+我脑海里的那些声音（圣巢信徒们的声音）<br>
+Reminding me of what I have<br>
+提醒着我拥有的一切<br>
+If I fall tonight<br>
+如果我今晚坠入深渊<br>
+You can bring me back to life<br>
+你能让我起死回生（信徒们将传颂陛下的事迹）<br>
+If I fall tonight<br>
+如果我今晚坠入深渊<br>
+You can be my saving light<br>
+你能成为拯救我的一束光芒（圣巢的留存是陛下的信仰）</p>
+
+<p><em>陛下跃下悬崖</em></p>
+
+<p>You can be my saving light<br>
+你能成为拯救我的那束光芒<br>
+You can be my saving light<br>
+你能成为拯救我的那束光芒<br>
+You can be my saving light<br>
+你能成为拯救我的那束光芒</p>
+
+<p>——卢瑞恩视角——</p>
+
+<p>You&#39;re here<br>
+你在这（在圣巢民众的信仰里）<br>
+Like lightning in my veins<br>
+犹如我血管中的一道闪电（为虫子们注入了生的力量）<br>
+Now they see me<br>
+现在他们看到了我（世界看到了不再受奴役的圣巢）<br>
+And I&#39;ll never be the same<br>
+而我也不再是从前的我（不再盲从短视）<br>
+Your whispers found its way<br>
+你的悄声细语来到我身边（陛下的声音）<br>
+Calling me to stay<br>
+呼唤我 让我留在这里（stay awake）<br>
+（让圣巢保持自由和独立）<br>
+You can be my saving light<br>
+你能成为拯救我的那束光芒<br>
+I&#39;m standing at the edge<br>
+我站在悬崖之巅<br>
+But something always brings me back<br>
+却总被无形的力量拽回<br>
+All the voices in my head<br>
+我脑海里的那些声音<br>
+Reminding me of what I have<br>
+提醒着我拥有的一切<br>
+If I fall tonight<br>
+如果我今晚坠入深渊<br>
+You can bring me back to life<br>
+你能让我起死回生（指陛下为圣巢做出的榜样力量）<br>
+If I fall tonight<br>
+如果我今晚坠入深渊<br>
+You can be my saving light<br>
+你能成为拯救我的那束光芒<br>
+You can be my saving light<br>
+你能成为拯救我的那束光芒<br>
+You can be my saving light<br>
+你能成为拯救我的那束光芒<br>
+You can be my saving light<br>
+你能成为拯救我的那束光芒<br>
+You can be my saving light</p>
+
+<h2 id="3、My-Prayer"><a href="#3、My-Prayer" class="headerlink" title="3、My Prayer"></a><p>3、My Prayer<br></p></h2><div class="note info"> <p style="color:#438BCA">这个单独出了一个，可以在博客里搜搜 </p> </div>
+
+<p> <a href="/p/3fe6.html">传送门</a></p>
+<h2 id="4、马克西姆的格里格钢琴变奏曲"><a href="#4、马克西姆的格里格钢琴变奏曲" class="headerlink" title="4、马克西姆的格里格钢琴变奏曲"></a><p>4、马克西姆的格里格钢琴变奏曲<br></p></h2><p>（？）<br></p>
+  <p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-RhjQXTUh" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="1696331" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>  
+
+<div class="note info"> <p style="color:#438BCA">版权了 </p> </div>
+
+<div class="note info no-icon"> <p style="color:#438BCA">但是YT没有 </p> </div>
+
+<p>现场怀旧版（虽然很傻，但是值得）：  </p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HA9u00OFVoo?start=286" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+啊，怀念童年啊，马克西姆童年男神。啊，跑题了，最后就说一句，出埃及记真的很壮观，慕了，这就去撺掇陛下。
+
+<p>单曲：</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SA1DUVzqYGw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Starring：陛下、团长<br><br>剧情：害，pwp？陛下弹钢琴，团长拉小提琴，就这。代入一下现场演奏版就好，文字功底太差形容不出来，尤其是接近结尾那段高潮！（开始犯花痴）啊啊啊小提琴和钢琴请在一起<br><br>这歌其实适合yy一切cp<br><br>另外白后很适合管风琴啊，一个教堂辣么大的那种！</p><p></p>
+<h2 id="5、Discord"><a href="#5、Discord" class="headerlink" title="5、Discord"></a><p>5、Discord<br></p></h2>  <p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-xbIiGbLw" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="409931768" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>  
+
+<p>Starring：泽若、陛下（配角）<br><br>剧情：这个手书分表里的，表就是（辐光带着）泽若带着全圣巢指责陛下，全手书表面就是普通的AO3咒骂陛下的那一套。里就是曲子中间抒情（？）那段，开始放陛下和白后在花园里、和卢瑞恩在高塔上、和小前辈在训练场里，主要思想就是陛下其实是十分无奈委屈的。哦，这个主要表现手法是字幕，用字幕的动效踩点，用颜色代表辐光对泽若和圣巢的掌控越来越深。</p><p></p>
+<h2 id="6、Lemon"><a href="#6、Lemon" class="headerlink" title="6、Lemon"></a><p>6、Lemon<br></p></h2>   <p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-XyIZkoMo" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="536622304" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>  
+
+<p>Starring：卢瑞恩、陛下（配角）<br><br>剧情：曾经一度被我认为是我那篇memo的主题曲。</p><p></p>
+<h2 id="7、小偷和警备员"><a href="#7、小偷和警备员" class="headerlink" title="7、小偷和警备员"></a><p>7、小偷和警备员<br></p></h2>   <p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-axVcdvVB" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="33856844" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div> 
+
+<p>Starring：卢瑞恩、陛下（配角）<br><br>剧情：可以作为我一篇现代au新坑的主题曲</p><p></p>
+<div class="note primary"><p style="color:#7042C1"> 对，就是Re。当时估计还没有正式命名 </p> </div>
+
+<h2 id="8、Hero"><a href="#8、Hero" class="headerlink" title="8、Hero"></a><p>8、Hero<br></p></h2>   <p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-pYDCLyPs" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="28636040" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div> 
+
+<p>Starring：卢瑞恩、陛下、前辈<br><br>剧情：这个不太好说（挠头），有点意识流。可以出同人图</p><p></p>
+<h2 id="9、Gospel-of-Dismay"><a href="#9、Gospel-of-Dismay" class="headerlink" title="9、Gospel of Dismay"></a><p>9、Gospel of Dismay<br></p></h2>   <p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-MCqsUsND" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="513511109" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div> 
+
+<p>Starring：影子们、陛下<br><br>剧情：给了shade和陛下，大家应该能get到怎么发展吧。</p><p></p>
+<div class="note primary"><p style="color:#7042C1">哈哈哈影子们在陛下周围跳起了disco </p> </div>
+
+<h2 id="10、Chaos-Magnvm"><a href="#10、Chaos-Magnvm" class="headerlink" title="10、Chaos Magnvm"></a><p>10、Chaos Magnvm<br></p></h2>   <p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-VeiPXgJH" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="1354461118" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div> 
+
+<p>Starring：陛下、辐光<br><br>剧情：这首其实是张同人图😂</p><p></p>
+  <div class="note info"> <p style="color:#438BCA">11被删了</p> </div>
+
+<h2 id="12、Granblaze"><a href="#12、Granblaze" class="headerlink" title="12、Granblaze"></a><p>12、Granblaze<br></p></h2>   <p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-gtEjvpPi" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="405377393" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div> 
+
+<p>Starring：全员？<br><br>剧情：意识流，暂时描述不出来</p><p></p>
+  <div class="note info"> <p style="color:#438BCA">13被删了</p> </div>
+
+<h2 id="14、Dainsleif～the-Golden-Curse～"><a href="#14、Dainsleif～the-Golden-Curse～" class="headerlink" title="14、Dáinsleif～the Golden Curse～"></a><p>14、Dáinsleif～the Golden Curse～<br></p></h2>   <p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-jVbnGZHu" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="36102427" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div> 
+
+<p>Starring：陛下、卢瑞恩<br><br>剧情：意识流，暂时描述不出来x3</p><p></p>
+<h2 id="15、辣椒素"><a href="#15、辣椒素" class="headerlink" title="15、辣椒素"></a><p>15、辣椒素<br></p></h2>   <p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-LZbnOdTk" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="32857333" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div> 
+
+<p>Starring：陛下<br><br>剧情：意识流，暂时描述不出来x4，总之这是一只黑王</p><p></p>
+<h2 id="16、Snobbism"><a href="#16、Snobbism" class="headerlink" title="16、Snobbism"></a><p>16、Snobbism<br></p></h2>   <p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-iAkUJHbP" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="548648145" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div> 
+
+<p>Starring：陛下、辐光<br><br>剧情：<del>代入陛下和辐光互相嘲讽，能想来吧</del>感觉这句说的应该是くたばろうぜ，不知道啥情况，可能是记错了。这个更像是陛下一个人碎碎念？)</p><p></p>
+<h2 id="17、くたばろうぜ"><a href="#17、くたばろうぜ" class="headerlink" title="17、くたばろうぜ"></a>17、くたばろうぜ</h2> <p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-kVLUEzBZ" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="548650156" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div> 
+
+<p>Starring：陛下、辐光<br><br>剧情：代入陛下和辐光 <del>互相嘲讽</del> 一起养老，这回真能想来了吧</p><p></p>
+<h2 id="18、幸福安心委员会"><a href="#18、幸福安心委员会" class="headerlink" title="18、幸福安心委员会"></a><p>18、幸福安心委员会<br></p></h2>   <p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-mBweqyxq" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="26219539" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div> 
+
+<p>Starring：陛下、辐光<br><br>剧情：陛下革命失败，嗯，应该够大家yy了（懒得打字）</p><p></p>
+   <div class="note info"> <p style="color:#438BCA">19被删了 </p> </div>
+
+<h2 id="20、没用的小孩"><a href="#20、没用的小孩" class="headerlink" title="20、没用的小孩"></a><p>20、没用的小孩<br></p></h2>   <p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-GHbGwzYb" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="29185036" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div> 
+
+<p>Starring：陛下、前辈<br><br>剧情：这个应该挺明显的吧（还是懒）</p><p></p>
+<h2 id="21、孩子气战争"><a href="#21、孩子气战争" class="headerlink" title="21、孩子气战争"></a><p>21、孩子气战争<br></p></h2>   <p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-oaHdPznu" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="28096450" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div> 
+
+<p>Starring：陛下、辐光、众神围观<br><br>（最新的世界观里也可以是团长x辐光）<br><br>剧情：辐光和陛下吵架，前情提要是团长说的哈哈哈（团长拿起录像机）</p><p></p>
+<h2 id="22、ECHO"><a href="#22、ECHO" class="headerlink" title="22、ECHO"></a><p>22、ECHO<br></p></h2>   <p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-XARgJhYH" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="30830853" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div> 
+
+ <div class="note info"> <p style="color:#438BCA">版权了 </p> </div>
+
+<p>Starring：陛下<br><br>剧情：这个，就是陛下在普通的网抑云</p><p></p>
+<h2 id="23、The-world-is-black"><a href="#23、The-world-is-black" class="headerlink" title="23、The world is black"></a><p>23、The world is black<br></p></h2>  <div class="note info"> <p style="color:#438BCA"><del>站子里有单独的</del>我傻了，并没有 </p> </div>
+  
+  <p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-KelUHvNN" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="18085941" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div> 
+
+<p>Starring：陛下<br><br>剧情：应该也是陛下在普通的网抑云吧…?有点忘了，是看见aph出过手书，就爱上了</p><p></p>
+<h2 id="24、conflict（lapix-remix）"><a href="#24、conflict（lapix-remix）" class="headerlink" title="24、conflict（lapix remix）"></a><p>24、conflict（lapix remix）<br></p></h2>   <p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-bfnxOvXt" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="535028930" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div> 
+
+<p>Starring：陛下、辐光<br><br>剧情：这个，意识流x5，说不清（挠头）</p><p></p>
+<div class="note primary"><p style="color:#7042C1"> 用这曲yy过弹丸v3的手书，吉学家要素和全员群像，电音风和弹丸很配，可能换本命的时候顺便带过来了。还是conflict原曲的（相对）稳重（中二）风格更适合陛下这种中世纪的优雅皇帝（捂脸）</p> </div>
+
+<p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-oOnnYyPd" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="41658405" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div> 
+
+
+<h2 id="25、amphisbaena"><a href="#25、amphisbaena" class="headerlink" title="25、amphisbaena"></a><p>25、amphisbaena<br></p></h2>   <p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-ZOJmcsgM" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="441835249" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div> 
+
+<p>Starring：陛下、辐光<br><br>剧情：意识流x6，还是说不清（挠头）</p><p></p>
+<h2 id="26、disappeared-despair"><a href="#26、disappeared-despair" class="headerlink" title="26、disappeared despair"></a><p>26、disappeared despair<br></p></h2>   <p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-vTbbdVWw" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="441835247" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div> 
+
+<p>Starring：陛下、辐光<br><br>剧情：意识流x7，这个更说不清了（抢地）</p><p></p>
+<h2 id="27、Thundergun-Apashe-Remix"><a href="#27、Thundergun-Apashe-Remix" class="headerlink" title="27、Thundergun(Apashe Remix)"></a><p>27、Thundergun(Apashe Remix)<br></p></h2>   <p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-mZiujmRA" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="2116768" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#cdcdcd"></div> 
+
+<p>Starring：陛下、虚空<br><br>剧情：黑与白的战争，混乱与秩序的舞曲，请</p><p></p>
+<h2 id="28、阴暗面"><a href="#28、阴暗面" class="headerlink" title="28、阴暗面"></a>28、阴暗面</h2>   <p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-qyVhyPXU" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="461519629" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#cdcdcd"></div> 
+
+<p>手书预定：陛下独白，给滚滚推锅。很有感觉，感觉可以深挖。原作AU，陛下费尽力气，“坏事”做尽，但还是无果，于是想走了。（或者走之前正面去怼了滚滚…emm似乎看见过类似的文，害）</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy55b3V0dWJlLmNvbS93YXRjaD92PXdhSUJic1ZvVGtBJmZlYXR1cmU9c2hhcmU=">YT Music跟我走<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="29、快乐水"><a href="#29、快乐水" class="headerlink" title="29、快乐水"></a>29、快乐水</h2>   <p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-HtmuomTQ" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="440208197" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#cdcdcd"></div> 
+
+<p>挺明显的，陛下主角，有空再码字。啊另外怎么老和某些手书歌单撞车啊好抑郁，嘤了，唉，好希望自己会作曲啊，安排上安排上。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy55b3V0dWJlLmNvbS93YXRjaD92PW1GeHE3TWI5NmIw">YT Music跟我走<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="30、我是大反派"><a href="#30、我是大反派" class="headerlink" title="30、我是大反派"></a>30、我是大反派</h2>   <p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-ZsVWkcsf" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="493046558" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#cdcdcd"></div> 
+
+<p>伴奏版（哇！是连号！吉利！）：</p>
+
+    <div id="aplayer-IpfRzuyH" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="493046559" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#cdcdcd"></div> 
+
+<p>咋说，很沙雕，是团长（他爹）在带着幼王犯贱。本来下决心不划水了，结果还是因为幼王太可爱了而开启了站子。</p>
+<p>大概描述一下：</p>
+<p>其实是@memo的衍生, 哈！哈！哈! 喜剧和悲剧只有一线之隔（虫虫眨眼*）</p>
+<p>小 <del>学徒</del> 反派幼王和“大反派”团长（他爹），辐滚滚是那个superhero。</p>
+<p>对，这里的幼王就是那种，看见匍匐在地的老虎会大喊着“大——猫——猫”然后蹒跚学步颠过去呼噜毛的那种幼王。  </p>
+<p>以下团长均为团子爹（即梦魇之王），团子才是团长  </p>
+<div class="note info"> <p style="color:#438BCA">注意因为两虫性格不同，将团长代入或者将坏梦王代入体验是不一样的，可以都尝试一下 </p> </div>
+
+<hr>
+<p> <strong>开头：</strong>  </p>
+<p> <em>幼王跳起来和团长击掌！</em></p>
+<p> <em>幼王跳起来和团长击掌！</em></p>
+<p>团长： <em>清嗓子</em> “听好了，”</p>
+<p>团长：“我们做反派的最佳讲究的是敬业，先来好好敬仰一下你的祖师爷们”   </p>
+<p><em>一本正经地教幼王做大反派，还给幼王看 <del>自己写的拖成长毯的卷轴</del> 前几任团子的画像长廊</em>  </p>
+<p>团长： <em>拿着一块蜂蜜</em> “是不是想当大反派啦？” 幼王： <em>摇尾巴疯狂点头</em>  <br>团长（指着远处的辐光（老姐））： “你看，那就是咱要打败的superhero！”</p>
+<p>幼王：OvO？</p>
+<p>团长（拉着幼王躲在石头后）： 咱要趁其不备，悄无声息，偷偷溜到她的背后去——  <br>幼王： <em>蹭上了辐光姐姐的毛绒裙</em>    <br>团长：  (눈_눈) “不，不要碰那个。”  <br>辐光： o_o? <em>转头</em>   <br>辐光：  <em>一脚踢开</em>  “格林你又哪捡的流浪猫？”</p>
+<p> <em>团长在教训幼王，幼王耷拉着小脑袋</em></p>
+<p> 没有虫：<br> 没有任何虫：<br> 幼王：<em>摇摆起舞</em>  <br> 团长：(w ΩДΩ)?w </p>
+<hr>
+<p> <strong>中间部分：</strong></p>
+<p>团长（低头叉腰冷笑）：“哈！哈！哈！”   </p>
+<p>团长：“哈哈哈哈哈！哈哈哈哈哈——”  <br>幼王：<em>某个傻傻的小动作</em><br>团长：∑(ΩДΩ)</p>
+<p>团长：“哈哈哈哈哈！哈哈哈！哈！哈——”  <br>幼王：<em>某个傻傻的小动作x2</em><br>团长：∑(ΩДΩ)</p>
+<p>团长：“哈哈哈哈哈！哈哈哈哈哈——”  <br>幼王：<em>某个傻傻的小动作x3</em><br>团长：∑(ΩДΩ)</p>
+<p>幼王：（((ง =w=)ง  <br>团长：<em>拽回</em> (눈_눈) ╮(ง owo)ง )）</p>
+<p>团长：“上啊！上啊！干她！”<br>幼王：<em>摔跤</em><br>团长：∑(ΩДΩ)</p>
+<p>团长：“上啊！上啊！干她！”<br>幼王：<em>摔跤x2</em><br>团长：∑(ΩДΩ)</p>
+<p>团长：“上啊！上——”<br>幼王：<em>摔跤x3</em><br>团长：∑(ΩДΩ)</p>
+<p>团长：“不要给我啊给她！”(╬￣皿￣)<br>幼王： (ｉДｉ。) <d style="font-size:5px;">“阿巴阿巴阿巴”</d>  <em>委屈地抱着怀里的蛋糕炸弹</em>  <br>团长： <em>facepalm</em> “…咱还是换一招试试吧。”</p>
+<hr>
+<p> <strong>香蕉皮那段：</strong></p>
+<p>团长：“瞧好了，看我是怎么搞的！” <br>团长： <em>指着地上的香蕉皮得意大笑</em>  “哈！哈！哈！”<br>幼王（张开伪装成面具的血盆大口）： <em>塞进嘴里</em>  <br>团长： ∑∑∑(ΩДΩ)<br>团长： w(ΩДΩ)w “你他妈为什么——在干什么！”  <br>幼王（咀嚼）： =w=<br>团长： <em>facepalm</em> “…咱还是换一招试试吧。”</p>
+<hr>
+<p>剩下的部分就是幼王在随他导师研习BOSS学(ง =v=)ง<br>包括：</p>
+<ol>
+<li>《如何搞死 <del>大英雄</del> 辐光》 ： <em>一起玩空洞骑士</em></li>
+<li>《如何成为暴君》： <em>一起读君主论</em></li>
+<li>《如何迫害王子和公主》： <em>一起哭莎士比亚</em></li>
+<li>《如何让玩家摔手柄》： <em>一起敲代码</em></li>
+<li>《如何洗白》： <em>一起（给辐光）洗衣服</em>  <em>并玩起了水</em>  <em>团长怕水</em>  <em>团长被追着泼</em></li>
+<li>…</li>
+</ol>
+<p>  <br>团长：“这瓜娃子教不会啊！！！”  w(ΩДΩ)w<br>幼王：<em>摇摆起舞</em><br>团长：“…团子过来教他跳舞” </p>
+<p>幼王/团子（戴着墨镜，MJ）： <em>爪指苍穹</em> “天下——第一！” </p>
+<p>团长： <em>facepalm</em></p>
+<p>那团长最后是不是可以对陛下说一句：“我是你爸爸”？（虫虫歪头）</p>
+<p>血盆大口参考图：<br><img data-src="https://imglf5.lf127.net/img/SFFiWnAwMStNckEycUZiMW0xcUROK2lQQURISmlRZHBJUllGdWx0WEttYldQbzRJcUIzNHdRPT0.jpg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg%7Cwatermark&type=2&text=wqkg56Kz57SgIC8gbWViaWx5Y2hlbi5sb2Z0ZXIuY29t&font=bXN5aA==&gravity=southwest&dissolve=30&fontsize=680&dx=32&dy=36&stripmeta=0" width="200px"></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy55b3V0dWJlLmNvbS93YXRjaD92PUxyMUZzTTFFaE1JJmZlYXR1cmU9c2hhcmU=">YT Music跟我走<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="《we-are-no-1》伪手书（发布版）"><a href="#《we-are-no-1》伪手书（发布版）" class="headerlink" title="《we are no.1》伪手书（发布版）"></a>《we are no.1》伪手书（发布版）</h3><p>是remix版的曲</p>
+<p>小 学徒 反派幼王和 “大反派” 团长（的爹），辐滚滚是那个 superhero。</p>
+<p>对，这里的幼王就是那种，看见匍匐在地的老虎会大喊着 “大 —— 猫 —— 猫” 然后蹒跚学步颠过去呼噜毛的那种幼王。<br>虽然越看越觉得有点狗。</p>
+<p>注意因为两虫性格不同，将团长代入或者将坏梦王代入体验是不一样的，可以都尝试一下</p>
+<p>以下“团长”可以为团子爹（即梦魇之王），这样的话团长就是“团子”</p>
+<p>###开头：  </p>
+<p>幼王跳起来和团长击掌！</p>
+<p>幼王跳起来和团长击掌！</p>
+<p>团长： 清嗓子 “听好了，”</p>
+<p>团长：“我们做反派的最佳讲究的是敬业，先来好好敬仰一下你的祖师爷们”  <br>前几任团子的画像长廊</p>
+<p>团长： 拿着一块蜂蜜 “是不是想当大反派啦？” 幼王： 疯狂点头  </p>
+<p>团长（指着远处的辐光（老姐））： “你看，那就是咱要打败的 superhero！”</p>
+<p>幼王：摇尾OvO？</p>
+<p>团长（拉着幼王躲在石头后）： “咱要趁其不备，悄无声息，偷偷溜到她的背后去 —— ” </p>
+<p>幼王： 蹭上了辐光姐姐的毛绒裙    </p>
+<p>团长： (눈_눈) “不，不要碰那个。”  </p>
+<p>辐光： o_o? 转头  </p>
+<p>辐光：  一脚踢开 “格林你又哪捡的流浪猫？”</p>
+<p>团长在教训幼王，幼王耷拉着小脑袋</p>
+<p>没有虫：</p>
+<p>没有任何虫：</p>
+<p>幼王：摇摆起舞  </p>
+<p>团长：(w ΩДΩ)?w</p>
+<p>###中间部分：</p>
+<p>团长（低头叉腰冷笑）：“哈！哈！哈！”  </p>
+<p>团长：“哈哈哈哈哈！哈哈哈哈哈 ——”  </p>
+<p>幼王：某个傻傻的小动作</p>
+<p>团长：∑(ΩДΩ)</p>
+<p>团长：“哈哈哈哈哈！哈哈哈！哈！哈 ——”  </p>
+<p>幼王：某个傻傻的小动作 x2</p>
+<p>团长：∑(ΩДΩ)</p>
+<p>团长：“哈哈哈哈哈！哈哈哈哈哈 ——”  </p>
+<p>幼王：某个傻傻的小动作 x3</p>
+<p>团长：∑(ΩДΩ)</p>
+<p>幼王：（((ง =w=)ง  </p>
+<p>团长：拽回 (눈_눈) ╮(ง owo)ง )）</p>
+<p>团长：“上啊！上啊！干她！”</p>
+<p>幼王：摔跤</p>
+<p>团长：∑(ΩДΩ)</p>
+<p>团长：“上啊！上啊！干她！”</p>
+<p>幼王：摔跤 x2</p>
+<p>团长：∑(ΩДΩ)</p>
+<p>团长：“上啊！上 ——”</p>
+<p>幼王：摔跤 x3</p>
+<p>团长：∑(ΩДΩ)</p>
+<p>团长：“不要给我啊给她！”(╬￣皿￣)</p>
+<p>幼王： (ｉДｉ。) “阿巴阿巴阿巴”  委屈地抱着怀里的蛋糕炸弹  </p>
+<p>团长： facepalm “… 咱还是换一招试试吧。”</p>
+<p>###香蕉皮那段：</p>
+<p>团长：“瞧好了，看我是怎么搞的！” </p>
+<p>团长： 指着地上的香蕉皮得意大笑 “哈！哈！哈！”</p>
+<p>幼王（张开伪装成面具的血盆大口）： 塞进嘴里  </p>
+<p>团长： ∑∑∑(ΩДΩ)</p>
+<p>团长： w (ΩДΩ) w “你为什么 —— 在干什么！”  </p>
+<p>幼王（咀嚼）： =w=</p>
+<p>团长： facepalm “… 咱还是换一招试试吧。”</p>
+<p>剩下的部分就是幼王在随他导师研习 BOSS 学 (ง =v=)ง</p>
+<p>包括：</p>
+<p>《如何搞死 大英雄 辐光》 ： 一起玩空洞骑士</p>
+<p>《如何成为暴君》： 一起读君主论</p>
+<p>《如何迫害王子和公主》： 一起哭莎士比亚</p>
+<p>《如何让玩家摔手柄》： 一起敲代码</p>
+<p>《如何洗白》： 一起（给辐光）洗衣服  并玩起了水  团长怕水  团长被追着泼</p>
+<p>…</p>
+<p> </p>
+<p>团长：“这瓜娃子教不会啊！！！” w (ΩДΩ) w</p>
+<p>幼王：摇摆起舞</p>
+<p>团长：“… 团子过来教他跳舞”</p>
+<p>幼王 / 团子（戴着墨镜，MJ）： 爪指苍穹 “天下 —— 第一！”</p>
+<p>团长： facepalm</p>
+<h2 id="31、Suzy"><a href="#31、Suzy" class="headerlink" title="31、Suzy"></a>31、Suzy</h2><p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-tjFChmEt" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="1460792413" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#cdcdcd"></div> 
+
+<p>Jazz万岁！陛下躁起来！…啊没事那您接着忙哈哈哈…</p>
+<p>然后陛下就坐在王位上无奈地撑着头眼睁睁看着整个大厅跳起舞哈哈哈</p>
+<p>团长： <em>牵起白后/卢瑞恩的爪爪</em></p>
+<p>陛下： * <em>triggered</em> *</p>
+<p>团长： <em>犯贱地向陛下抛去挑衅的眼神</em></p>
+<p>陛下： <em>任凭家臣给自己满上酒</em>  <em>一饮而尽</em>  <em>攥紧酒杯</em>  <em>死亡凝视</em></p>
+<p>团长： <em>满脸享受地贱贱的微笑</em></p>
+<p>陛下： <em>招呼家臣</em> “拿着我的酒杯。”</p>
+<p>然而陛下并不会跳舞哈哈哈哈——  </p>
+<p>呜好痛!</p>
+<h2 id="32、Beatophone"><a href="#32、Beatophone" class="headerlink" title="32、Beatophone"></a>32、Beatophone</h2><p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-IWGbeUdr" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="4010491" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#cdcdcd"></div> 
+
+<p>王图预定：团长和陛下在大镜子面前系领带，团长戴着耳机一脸法国绅士的惬意样子，陛下用眼角（这个有点难，毕竟没有瞳孔）瞅团长。注意身高差。注意身高差。注意身高差。</p>
+<h2 id="33、Dramophone"><a href="#33、Dramophone" class="headerlink" title="33、Dramophone"></a>33、Dramophone</h2><p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-qfGkUpMe" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="4010479" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#cdcdcd"></div> 
+
+<p>王图预定：姐妹图，团长和陛下在咖啡厅，陛下看手机（可以戴耳机）发消息/腾讯会议的时候团长撑着脸陶醉般看着陛下。</p>
+<h2 id="34、八足噩梦"><a href="#34、八足噩梦" class="headerlink" title="34、八足噩梦"></a>34、八足噩梦</h2><p style="text-align:center;"> &#x1F3BC; </p> 
+
+
+    <div id="aplayer-rjbpTUjx" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="1433799572" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#cdcdcd"></div> 
+
+<p><img data-src="https://i.loli.net/2021/04/19/1h98WVE4tzLsPB5.jpg"></p>
+<p>其实一开始空耳成“never never go away-ke up”</p>
+<p>讲真，这个 很 适 合 给 陛 下 （ 甚 至 是 整 个 空 洞 ） 做 手 书 。<br>没有手书也要出图。<br>陛下可以用爪爪摸上：</p>
+<ol>
+<li>镜子的裂痕</li>
+<li>虚空色的蛛网</li>
+<li>瘟疫色的蛛网</li>
+<li>不同颜色的蛛网（社交苦手）</li>
+<li>锁链</li>
+<li>泪城的花纹</li>
+<li>……</li>
+</ol>
+<p>也可以是针对赫拉那次…嗯。陛下就PTSD了。<br>哈哈哈哈我们逛完太湖回来了  <br>赫拉x陛下这件事情，真的是很好的开车材料啊！我记得AO3上只有两篇还是一篇，也给我树立了基本的…emm…开始现想组名中…呃，属性应该算是自称为野兽的凡人x自称为神的国王，呃，渎神组？什么鬼…呃，开头字母组合是hp的话，那就哈利波特组吧哈哈哈哈…呃，蜘蛛，蜘蛛和…蝴蝶？啊！（虫虫拍脑门），猎人和猎物！就叫她们狩猎组好了！…但是听上去像是两个都是猎人…emm…管他的直接叫猎组吧！好烦！不会起名字！（虫虫撒手）猎组cp观！（虫虫发怒）  <br> <del>可以给新人司机练车用</del><br> 不敢太过露骨 <del>也不会写</del> 就抛几个句子和关键词：  </p>
+<ol>
+<li>eeem，来点音乐…走起！  </li>
+<li>陛下和白后一起睡觉（这个真的只是在亲亲抱抱睡觉觉！）的时候会做噩梦（…团长，团长你）</li>
+<li>赫拉总是想调戏+嘲讽陛下，陛下总是强调这只是一次交易，并让赫拉赶紧搞完赶紧滚蛋（intj逐渐变成infj）</li>
+<li>赫拉十分自然地坐到床上，陛下一直站在安全距离之外</li>
+<li>赫拉脱衣服（并没有衣服）并让陛下脱衣服的时候陛下 <del>畏缩</del> 犹豫了</li>
+<li>赫拉嘲讽并震惊于陛下竟然从来没有和白后上过床</li>
+<li>陛下反击说只有妓女才不会在这种情况下脸红</li>
+<li>赫拉说我就是妓女，怎样~</li>
+<li>陛下 <del>实在受不了太过香艳的场景</del> 表示他需要 <del>躲</del> 到更衣室（或这个房间里的其他小房间）里整理一下</li>
+<li>房间没有开灯，陛下 <del>缩</del> 在角落里借着自己的光看见勾起美好回忆的小物件并开始怀念并思考为何走到了今天这一步（md，怎么和夫妻吵架一样）</li>
+<li>赫拉（突然）打开房门走进来（并吓得陛下一哆嗦立刻站起身）， <del>抱怨陛下怎么花这么久时间</del> 嘲讽陛下都一只羽化的虫子了还躲躲藏藏的</li>
+<li>赫拉看见惊慌失措的陛下突然起了歹心（？）</li>
+<li>赫拉把门关上并上锁，陛下 <del>心悸地</del> 看着外界的光逐渐缩回门后</li>
+<li>我也不知道为啥赫拉的眼睛会在黑暗中发光</li>
+<li>赫拉表示果然蜘蛛更喜欢在黑暗中狩猎并扑了过来</li>
+<li>陛下被扑倒的时候下意识横出一把匕首自卫</li>
+<li>赫拉还抵着刀刃压上去，笑着问难道你反悔了吗</li>
+<li>陛下狠狠地盯着赫拉，（但___，）最后还是妥协了</li>
+<li>然后就可以开始搞了，至于为什么赫拉玩心这么重，有很多很多解释，可以自行yy。对于“搞”的过程，这里只提供一些关键词：</li>
+<li>赫拉会吐丝，至于怎么用，哈哈</li>
+<li>赫拉会用毒牙咬陛下，至于会有什么效果，哈哈</li>
+<li>在整个过程中，赫拉一直在对陛下造成严重的心理伤害，至于怎么造成的，哈哈</li>
+<li>艹，我都有点难受了</li>
+<li>虽然但是，陛下并没有被艹哭，他没有（滑稽）</li>
+<li>小房间被她们搞的一团糟，陛下一直在被压着打</li>
+<li>卢瑞恩（并不知道私会的事情）发现到见面时间了却等不到陛下于是问家臣怎么回事，家臣超懂事的跑去敲门没回应，在房门外听不见声音于是偷偷从门缝往里看，发现床上没有虫子，还以为陛下被绑架了</li>
+<li>陛下差点被赫拉吃掉</li>
+<li>…啧啧，结局真美好，啧啧（强行完结）</li>
+</ol>
+<h2 id="35、-Lone-Digger"><a href="#35、-Lone-Digger" class="headerlink" title="35、 Lone Digger"></a>35、 Lone Digger</h2>
+    <div id="aplayer-GOUgjymY" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="004ZdTcC2UemmD" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#cdcdcd"></div> 
+
+<p>手书预定：<del>团长，不，团长跳得太多了，不如让陛下上…陛下拒绝了，那团长还是你上吧。那陛下您能出演一下超帅的西服猎犬吗，什么您是猫，那好吧，那暂时给您拟个暹罗猫。</del>这个可以，血色婚礼+原MV的vibe…哇，陛下好帅呜呜呜啊啊啊帅死了（虫虫摔手机）啊啊啊坐在王座上一脸冷漠甚至嘲讽地看着宴会大开杀戒什么的…不行了，我不行了，然后还不忘品酒啊啊啊啊！</p>
+<h3 id="Lone-Digger-设定的两个走向："><a href="#Lone-Digger-设定的两个走向：" class="headerlink" title="Lone Digger 设定的两个走向："></a>Lone Digger 设定的两个走向：</h3><p>两条线设定相似的地方，包括：</p>
+<ol>
+<li>白王线的陛下一开始并没有直接入场，用团长引入；黑王线用某只怀揣梦想的贵族虫子引入，前奏结束节奏起来的时候陛下就会入场，之后随着唱词宣布舞会开始。</li>
+<li>陛下入场之后会一直坐在王位上 <del>装十三</del> ，他几乎所有的动作都是基于坐姿、胳膊靠着扶手这些，除了白王线里陛下会起身敬酒，给团长暗号。</li>
+<li>王座是位于舞池上方的，有台阶，相当于陛下可以俯视全场。</li>
+<li>会有几个家臣守在王座旁边给陛下斟酒和递酒杯。</li>
+<li>1:37白王线陛下拖着长袍入场，坐在王座上。很气派。之后舞会还是正常进行。</li>
+<li>2:06可以给个气氛不对劲的暗示。白王线给个陛下和团长的眼神互动，卫兵们的反应等等；黑王线陛下可以先是无聊地撑着头，随后突然想到开心的事情。</li>
+<li>2:31开始变味。白王线陛下起身敬酒；黑王线陛下闲得用爪尖打起拍子，开始有虫子感到不适。由于这个过渡时间比较长，需要很多细节，多角度等辅助。尤其是在升调那段，是个慢镜头。</li>
+<li>3:00动乱开始。白王线团长其实并没有等陛下暗号，在这之前一拍就已经动手了，下一拍才是陛下将酒一饮而尽（并皱眉）；黑王线陛下轻轻把空杯放下，一脸专注看戏的表情。</li>
+<li>3:33收尾部分，白王线，屠杀结束后团长会舔着爪尖或者刀尖上被害者们的血，用饥渴的眼神看着陛下。陛下会站在台阶上，回团长一个无法琢磨的眼神，然后离开；黑王线，陛下会无趣地松开爪子让酒杯碎在地上，拉一个陛下嫌弃地跨过狼藉离开的远镜头。</li>
+</ol>
+<h4 id="黑王线："><a href="#黑王线：" class="headerlink" title="黑王线："></a>黑王线：</h4><p>陛下召集高官显贵和大臣们到舞厅里烽火戏诸侯，说是黑王是因为这里的陛下喜欢看到理智的大臣们变得十分狂野，把这个当作娱乐和消遣。lone digger是指只有陛下在真正享受着这一切（舞曲）。<br>可以：</p>
+<ol>
+<li>在高潮那段之后收回他赐予虫子们的理性，然后喝着小酒听着舞曲看着舞厅里大臣自相残杀（甚至还会抛下去一些食物什么的）。<strong>基本是想选这条的。</strong></li>
+<li>在高潮那段之后下令互相攻击或者宣布只有一只虫子能活着出去或者拿出金银财宝导致大臣们互相争抢。和方案1的区别就是虫子们是在有理智的情况下做出不理智的行为。</li>
+</ol>
+<p>这里的陛下是全程惬意微笑并品酒的。<br>要开车的话，舞厅里的虫子们都是司机。<br>黑王线里连给陛下斟酒的家臣都会被波及到，虽然他们本可以逃过一劫（没有被收回理智）。<br>歌词也可以是陛下调戏某只虫子的时候说的，这条线里陛下的性格其实可以类比成当了圣巢国王的团长（虽然他确实是个国王），对，就像魂穿。</p>
+<h4 id="白王线："><a href="#白王线：" class="headerlink" title="白王线："></a>白王线：</h4><p>陛下邀请对手们来聚餐跳舞，然后雇团长杀了全舞厅的虫子们，有暗号。团长是伴着音乐一边起舞一边杀人，lone digger就是指无人（连陛下都没有）在欣赏团长跳舞。<br> <strong>比较想写这条线。</strong><br>这里的陛下就是全程冷漠，想赶快结束这一切，只是和团长有一些眼神交流。<br>团长是很诱的那种攻，拿到武器之前是优雅的小步舞，之后跳的是类似钢管舞那种。团长在陛下入席之后一直在勾引暗示陛下，是这条线的司机。<br>团长入场时是一个炒热气氛的角色，自来熟，会和周围的虫子们喝酒聊天跳舞，小姐们会被他逗笑，妇人们会被他吸引去目光，先生们会和他谈笑风生，相当于是舞会中心，曲子前三分之一是团长真的在跳舞。<br>前几句歌词是团长对周围人说的，rap起来之后团长开始跳舞。<br>团长在陛下敬酒的时候怀里搂着一位女士（相亲相爱），同时也是第一位被杀者。</p>
+<p>都有两条线了，为何不来直接个平行世界体的手书？镜头在两个世界来回切换的那种，正好还可以互相补充很多空白。  <br>…对，我最近刚补完瑞克和莫蒂。<br>U R gonna come undone（男声）是黑王线的陛下说的，它的前几句和后几句歌词（女声）是白王线的团长说的。</p>
+<p>可以考虑一下把suzy的白后和卢瑞恩那条“世界线”也加进来，凑个三位一体。  </p>
+<h2 id="36、-Overwhelmed"><a href="#36、-Overwhelmed" class="headerlink" title="36、 Overwhelmed"></a>36、 Overwhelmed</h2><iframe width="560" height="315" src="https://www.youtube.com/embed/kGn13Apz8Tg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p><span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy55b3V0dWJlLmNvbS93YXRjaD92PVYyckUzY1M5STdvJmZlYXR1cmU9c2hhcmU=">YT Music跟我走<i class="fa fa-external-link-alt"></i></span></p>
+<p>这个故事讲的是在现代都市AU中和“父皇”分居不久后的前辈因为晚上做了噩梦“穿越回了圣巢时代梦见陛下消失了”而感到百爪挠心于是大半夜去敲了父上的门。</p>
+<p>今天没时间写了，先堆一些关键点：</p>
+<ol>
+<li>现实的前辈是生活在现代都市的成年前辈</li>
+<li>梦中的前辈是因为陛下消失而变成孤儿的幼年前辈，连白后都不认识他</li>
+<li>梦中的时间反复跳跃（摩登楼上的大屏幕以及中世纪卫兵和宫殿）</li>
+<li>梦中有辐光和瘟疫以及封印失败要素：眼泪是橙色的之类的</li>
+<li>最后的感谢观看是穿着睡袍的一脸睡意朦胧的陛下安慰着扑进父上怀里的穿着风衣的前辈</li>
+<li>如何强调“anxiety”（梦中：看什么都像陛下的影子（指叉子形状）一个场景中衬托出陛下到来却不是陛下，等；梦醒：转着的电风扇、闪烁的电子钟、将动不动的分针等）</li>
+</ol>
+<p>梦境的部分可以通过暗示骗人说是和辐光封印相关：是前辈被封印时脑内挣扎的情景。卡点“this mind isn’t mine who am i to judge”。  <br>但其实是现代都市的故事。  <br>梦境与现实的分割线在第一次抒情高潮（梦境里冲突最剧烈的部分），电视第二次响起那里。前辈就是惊醒后坐在床边想着“i should be fine but its all too much，i should be fine but im not”<br>最后的结尾由于突然又抒情高潮了一下，不适合做逐渐收尾的长结尾，这段高潮就继续前面的anxiety，最后就用最后那一句歌词作结：前辈（慌忙）摘下衣帽架上的帽子/风衣快步离开。</p>
+<h2 id="37、-Little-Love"><a href="#37、-Little-Love" class="headerlink" title="37、 Little Love"></a>37、 Little Love</h2><p> 转自虫与虫与虫。  </p>
+
+    <div id="aplayer-VjGDEkzp" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="002THeEc22ZcDs" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>  
+
+<p>这首是白后的调调。  <br>想着是第一段是白后对陛下，伟大和渺小是指神性方面的，一连串little是真的little（）；第二段是陛下对白后的（心里话），伟大和渺小是指体型（感情）上的。</p>
+<h2 id="38、僕の言葉ではない-これは僕達の言葉"><a href="#38、僕の言葉ではない-これは僕達の言葉" class="headerlink" title="38、僕の言葉ではない これは僕達の言葉"></a>38、僕の言葉ではない これは僕達の言葉</h2>
+    <div id="aplayer-XLgqcpsg" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="494642929" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
+
+<p>这首适合失忆的陛下。<br>“I’ve found a new way to live.”/“I want a new way to live.”</p>
+<h2 id="39、Darkside"><a href="#39、Darkside" class="headerlink" title="39、Darkside"></a>39、Darkside</h2>
+    <div id="aplayer-HMdxLomY" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="003sMjOR0803tg" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#cdcdcd"></div> 
+
+<p><span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy55b3V0dWJlLmNvbS93YXRjaD92PW9fNXBIVXZ0ZGM0JmZlYXR1cmU9c2hhcmU=">YT Music 跟我走<i class="fa fa-external-link-alt"></i></span></p>
+<p>呜呜呜王学家不能做欺负陛下的手书呜呜呜  </p>
+<p>主要手法是几段相对连续的事件片段互相穿插展示 + 小段片段转场和踩点。  <br>前辈几个点…  </p>
+<ol>
+<li>没有救小骑士（PTSD）</li>
+<li>训练场从（不忍下手而）被打（注意对手（除了野兽）并没想把小前辈搞死（至少在确定小前辈是容器之后没有的（陛下会帮小前辈控制局面（远程（指法术））））），转变为虐杀（前辈是真想让对方死）</li>
+<li>小时候很拘束很害怕喜欢靠着墙找安全感，后来长大后负责保护陛下的时候，靠着墙守在门边，各种凶恶（？）地盯着房间里的陛下（苦痛之路？没听说过，有这事？）</li>
+<li>Darkside一定意义上是指前辈虚空的side（虚空吃光）  </li>
+<li>虽说重点是在献祭之前，但可以联动辐光</li>
+</ol>
+<p>想的是一开始入场（就是第一次说唱之前那段超平静转黑化的那段）给前辈和小骑士那段的景，有陛下（相对温柔地）检视（摸脸///）小前辈的画面，然后陛下转身离开示意小前辈跟上，小前辈没有立刻跟上去，然后说唱开始前那个转场调下焦或者用什么其他的手法暗示小前辈没有救小骑士而是留他等死。（emm其实可以说这一幕对小前辈冲击很大，然后心理有点…emm开始扭曲/当然也可以是性本恶，故意不去管小骑士的（这就需要单独强调下））  </p>
+<p>（第一次说唱第一个鼓之前可以简单砸个歌名，就在深渊事件暗示之后说唱第一个音开始，以鼓作结开始正文）主要主题就是小前辈一直在追求陛下的关爱和注意结果得不到然后他就病娇了（？？？）<br>（王学家私心是让前辈的发泄欲转化成欺负陛下而不是消灭陛下谢谢，没有陛下就没有王学家）  </p>
+<p>校园霸凌对应着训练场这里，小前辈就是觉得大家总是（往死里）打他（啊这）等于不喜欢他（picked on him in the class），再加上之前入场那段记忆老是让他做噩梦（团长你）（He would wake up with anxiety attacks），就，出现了一丢丢心理问题。  <br>wore his silence like a mask 踩点（silence 和 mask）    <br>Now he’s making up for all the violence in his past（幻想自己当时（应该）把小骑士（们）推下了悬崖 emm 好吧我这里可能理解有点问题，其实是…弥补过错？像是把陛下的过错也承担了意思？就有点解释为什么他这么逆来顺受是因为他在赎罪？？但是也有人是我这么翻的，我不会了，这make up到底咋理解啊这）  <br>Took it from his father who never bothered to ask / What his son had on his mind 踩点(1.陛下把容器们推下悬崖很冷漠 2.他father觉得他没有mind)  </p>
+<p>然后就是响（午餐）铃（有两次音效，一次在小前辈打架那会儿，一次在大前辈打架（？）那里。顺便一提背景有时的钟表声是训练严格计划紧迫的压迫感（啊这））午餐铃和训练场训练结束/开始有关（小前辈被打得半死不活然后陛下站起身示意训练结束（不要打孩子呜呜呜）），被欺负其实就是小前辈日常三点一线（起床（吃饭）、被打、睡觉）（当然也会有随行和守卫任务之类的）</p>
+<p>可以在monster in his head暗示辐光和前辈，也可以说就是虚空（或者两者都暗示一下（？））。<br>当然长大之后就不被打了(Ain’t nobody ever gon’ fuck with him again / Feeling all alone, it was him against them)，这里可以是前辈从之前被打转变成虐杀对手，从虐杀野兽过渡到虐杀圣巢的战士（指对方已经死了或者投降了但前辈还是把他给和谐了（然后一脸血腥地抬头看着陛下，这样））(Sick of getting beat up / He listened, what they（虚空） said / Told him do some very bad things)结合when the time comes that he count to ten，这里可以说是前辈在记忆对手的招式/风格以及熟悉节奏（不好意思，boss打多了），也可以不踩点，在打架的时候暗示一下就行，不过为了耍帅可以强调他用这个数数来…呃，闪避顺便玩弄敌人？可以踩点。陛下从制止对手转变为制止前辈（Decided when the lunch bell rings（这个ring其实可以说是开打的ring，也可以是结束的ring，二选一） / That he’ll sing）（开打的ring：前辈在开打前决定要超杀对手（emm其实不咋能体现出来哈，两次都是结束的ring比较好？）；结束的ring：前辈可能无视陛下命令继续碾压对手，但很可惜到这一步陛下已经不敢销毁容器了（ddl）） </p>
+<p>然后经常重复的靠着墙的..不知道术语咋表示，就会重复的那段歌词（这个一般给小片段）就是说小前辈刚来的时候很害怕陌生的宫殿（然而陛下没有安慰他，，，）然后到靠着墙守着门保护里面的陛下，但会突然偏过头（自行加形容词）盯着陛下（这段比较短，放在音乐转场用，可以暗示…嗯，守卫其实才是最值得警惕的那个角色，就，养着一个核弹（？）的感觉，引狼入室啥的）  <br>然后这段不是一般都空灵-》燃吗，可以给小前辈/前辈独自站在黑暗里（？）的特写啥的然后随着转场逐渐中二（？）</p>
+<p>然后就可以给门外透出的光在陛下脸上逐渐缩成细缝然后消失这样（陛下在这过程中才转过头注意到前辈不对劲这样（这段其实取自天津卷那个点子///）），以及 has got a dark side / That you don’t wanna meet at all（指前辈的虚空那面），这里可以发散强调前辈的虚空属性（其实是克光的啊陛下！您，您格局真大） （虚空也可以体现在训练场里） </p>
+<p>You can’t run, you can’t hide基本上就是在欺负陛下了呜呜呜，可以写是最后的训练，就和陛下战斗，可以…呃，现场就开始光天化日地拉拉扯扯（？）（就打着打着陛下发现怎么变成摔跤运动了）或者在打架的时候穿插别的时间线的暗示。（休想，王学家可以接受陛下被压着，但不会接受陛下被压着打，毕竟谁会狠心动手抽小小只的陛下啊是什么魔鬼）  <br>（yy了一下…翅膀是可以试着去剪的…就前辈发现陛下会飞起来打他或者闪避之后陛下一展翅膀他就真的冲上去砍他翅膀了我去，陛下都惊了还好夫人不在场否则圣巢完蛋了呀。（）不过当然前辈也剪失败了，只是陛下没想到前辈会剪他翅膀（这么…当真，以及陛下其实还是对前辈有感情的好吧，都不自觉手下留情的好吧），反正不要打脸不要打肚子反正不要打他身上就行呜呜呜，要打的话也打不到不到打不到（对这种物理+心理的同时伤害心疼死了））  </p>
+<p>（艹，刚刚yy的时候突然前辈一拳打过去给我难受的，前辈你不要打他求求了，艹，不要欺负陛下啊可恶！）</p>
+<p>Trivia：不太应景所以没放进去，其实还有一个点踩上了：The kid has got a dark side / Best believe it, push too far you’ll see 和 The kid has got a dark side / Best believe it’s the last trick up his sleeve, 这两句都可以说是前辈的虚空法术啥的，把前辈逼急了他就不再伪装成陛下的光之子了（前辈很珍惜（自豪）自己这个身份），会爆衣（？）然后放虚空触手  <br>而且其实有时候有点像夫人在劝陛下换个计划的感觉。或者团长在刺激陛下的感觉（卢子对前辈这事是真的一无所知，不然也得炸（指站在陛下那边的炸））  </p>
+<p>我深夜emo放弃了5h的肝ddl时间就写了个这。</p>
+<h2 id="Try-this"><a href="#Try-this" class="headerlink" title="Try this"></a>Try this</h2><p>忘了曲名了，总是就是YY到了团长表演火焰魔术+大变活人的魔术，主题是怪盗盗窃珍宝馆。  <br>一开始作为小格林躺在珍宝防弹玻璃展柜里~</p>
+<hr>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>御茶会议:)</p>
+<p>其实家主这个头衔给陛下蛮好的，感觉可以开启一个新AU。<br>但其实夫人才是真正的家主！（不）  <br>什么大英吉祥物  <br>大概就是..主角肯定是陛下，这个没跑了，然后孩子可以只说是前辈的不同阶段拉<br>卢子作为<del>女仆长</del>管家大人那自然也是家族一员拉。  <br>以上，歌我是不想听了，一听就犯恶心（真）  <br>就是因为听不了歌所以思路打不开（哭泣）  </p>
+<p>惩罚游戏:)</p>
+<p>大概就是小骑士滚出 就是陛下和辐光在坐着摇椅老人下棋。  <br>:)</p>
+
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/a84a.html">【合集】手书脑洞</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2019年04月09日 - 10:08</p>
+ <p><span>最后更新:</span>2022年03月24日 - 13:17</p>
+ <p><span>原始链接:</span><a href="/p/a84a.html" title="【合集】手书脑洞">https://mebilychen.github.io/p/a84a.html</a>
+    
+ </p>
+ <p><span>许可协议:</span>除非文章内另行声明，遵守 cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script data-pjax> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%88%B6%E5%AD%90%E7%BB%84/" rel="tag"><i class="fa fa-tag"></i> 父子组</a>
+              <a href="/tags/%E5%86%B0%E7%81%AB%E7%BB%84-GrimmPale/" rel="tag"><i class="fa fa-tag"></i> 冰火组/GrimmPale</a>
+              <a href="/tags/%E5%90%9B%E8%87%A3%E7%BB%84/" rel="tag"><i class="fa fa-tag"></i> 君臣组</a>
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E5%8D%A2%E7%91%9E%E6%81%A9/" rel="tag"><i class="fa fa-tag"></i> 卢瑞恩</a>
+              <a href="/tags/%E6%9B%B2/" rel="tag"><i class="fa fa-tag"></i> 曲</a>
+              <a href="/tags/%E7%BA%AF%E9%9F%B3%E4%B9%90/" rel="tag"><i class="fa fa-tag"></i> 纯音乐</a>
+              <a href="/tags/%E5%9C%A3%E5%B7%A2/" rel="tag"><i class="fa fa-tag"></i> 圣巢</a>
+              <a href="/tags/%E9%BB%91%E9%AD%823/" rel="tag"><i class="fa fa-tag"></i> 黑魂3</a>
+              <a href="/tags/%E7%8C%AB%E5%8E%82/" rel="tag"><i class="fa fa-tag"></i> 猫厂</a>
+              <a href="/tags/%E6%89%8B%E4%B9%A6/" rel="tag"><i class="fa fa-tag"></i> 手书</a>
+              <a href="/tags/%E6%97%A5%E7%B3%BB%E9%9F%B3%E6%B8%B8/" rel="tag"><i class="fa fa-tag"></i> 日系音游</a>
+              <a href="/tags/V%E5%AE%B6/" rel="tag"><i class="fa fa-tag"></i> V家</a>
+              <a href="/tags/%E7%8B%A9%E7%8C%8E%E7%BB%84-%E7%8C%8E%E7%BB%84/" rel="tag"><i class="fa fa-tag"></i> 狩猎组/猎组</a>
+              <a href="/tags/%E6%97%A5%E6%9C%88%E7%BB%84-%E5%85%89%E7%BB%84/" rel="tag"><i class="fa fa-tag"></i> 日月组/光组</a>
+              <a href="/tags/%E6%AC%A7%E7%BE%8E%E6%AD%8C%E6%9B%B2/" rel="tag"><i class="fa fa-tag"></i> 欧美歌曲</a>
+              <a href="/tags/%E6%B8%B8%E6%88%8F%E9%9F%B3%E4%B9%90/" rel="tag"><i class="fa fa-tag"></i> 游戏音乐</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/86d4.html" rel="prev" title="沃姆饲养手册（后妈版）">
+      <i class="fa fa-chevron-left"></i> 沃姆饲养手册（后妈版）
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/a56d.html" rel="next" title="Revive">
+      Revive <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E6%AD%8C%E5%8D%95%EF%BC%9A"><span class="nav-text">总歌单：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81Nameless-King"><span class="nav-text">1、Nameless King</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81Saving-Light"><span class="nav-text">2、Saving Light</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81My-Prayer"><span class="nav-text">3、My Prayer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E9%A9%AC%E5%85%8B%E8%A5%BF%E5%A7%86%E7%9A%84%E6%A0%BC%E9%87%8C%E6%A0%BC%E9%92%A2%E7%90%B4%E5%8F%98%E5%A5%8F%E6%9B%B2"><span class="nav-text">4、马克西姆的格里格钢琴变奏曲</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81Discord"><span class="nav-text">5、Discord</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6%E3%80%81Lemon"><span class="nav-text">6、Lemon</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7%E3%80%81%E5%B0%8F%E5%81%B7%E5%92%8C%E8%AD%A6%E5%A4%87%E5%91%98"><span class="nav-text">7、小偷和警备员</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8%E3%80%81Hero"><span class="nav-text">8、Hero</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9%E3%80%81Gospel-of-Dismay"><span class="nav-text">9、Gospel of Dismay</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10%E3%80%81Chaos-Magnvm"><span class="nav-text">10、Chaos Magnvm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12%E3%80%81Granblaze"><span class="nav-text">12、Granblaze</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14%E3%80%81Dainsleif%EF%BD%9Ethe-Golden-Curse%EF%BD%9E"><span class="nav-text">14、Dáinsleif～the Golden Curse～</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15%E3%80%81%E8%BE%A3%E6%A4%92%E7%B4%A0"><span class="nav-text">15、辣椒素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16%E3%80%81Snobbism"><span class="nav-text">16、Snobbism</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17%E3%80%81%E3%81%8F%E3%81%9F%E3%81%B0%E3%82%8D%E3%81%86%E3%81%9C"><span class="nav-text">17、くたばろうぜ</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#18%E3%80%81%E5%B9%B8%E7%A6%8F%E5%AE%89%E5%BF%83%E5%A7%94%E5%91%98%E4%BC%9A"><span class="nav-text">18、幸福安心委员会</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20%E3%80%81%E6%B2%A1%E7%94%A8%E7%9A%84%E5%B0%8F%E5%AD%A9"><span class="nav-text">20、没用的小孩</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#21%E3%80%81%E5%AD%A9%E5%AD%90%E6%B0%94%E6%88%98%E4%BA%89"><span class="nav-text">21、孩子气战争</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22%E3%80%81ECHO"><span class="nav-text">22、ECHO</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#23%E3%80%81The-world-is-black"><span class="nav-text">23、The world is black</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#24%E3%80%81conflict%EF%BC%88lapix-remix%EF%BC%89"><span class="nav-text">24、conflict（lapix remix）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#25%E3%80%81amphisbaena"><span class="nav-text">25、amphisbaena</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#26%E3%80%81disappeared-despair"><span class="nav-text">26、disappeared despair</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#27%E3%80%81Thundergun-Apashe-Remix"><span class="nav-text">27、Thundergun(Apashe Remix)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#28%E3%80%81%E9%98%B4%E6%9A%97%E9%9D%A2"><span class="nav-text">28、阴暗面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#29%E3%80%81%E5%BF%AB%E4%B9%90%E6%B0%B4"><span class="nav-text">29、快乐水</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#30%E3%80%81%E6%88%91%E6%98%AF%E5%A4%A7%E5%8F%8D%E6%B4%BE"><span class="nav-text">30、我是大反派</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E3%80%8Awe-are-no-1%E3%80%8B%E4%BC%AA%E6%89%8B%E4%B9%A6%EF%BC%88%E5%8F%91%E5%B8%83%E7%89%88%EF%BC%89"><span class="nav-text">《we are no.1》伪手书（发布版）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#31%E3%80%81Suzy"><span class="nav-text">31、Suzy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#32%E3%80%81Beatophone"><span class="nav-text">32、Beatophone</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#33%E3%80%81Dramophone"><span class="nav-text">33、Dramophone</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#34%E3%80%81%E5%85%AB%E8%B6%B3%E5%99%A9%E6%A2%A6"><span class="nav-text">34、八足噩梦</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#35%E3%80%81-Lone-Digger"><span class="nav-text">35、 Lone Digger</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Lone-Digger-%E8%AE%BE%E5%AE%9A%E7%9A%84%E4%B8%A4%E4%B8%AA%E8%B5%B0%E5%90%91%EF%BC%9A"><span class="nav-text">Lone Digger 设定的两个走向：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%BB%91%E7%8E%8B%E7%BA%BF%EF%BC%9A"><span class="nav-text">黑王线：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%99%BD%E7%8E%8B%E7%BA%BF%EF%BC%9A"><span class="nav-text">白王线：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#36%E3%80%81-Overwhelmed"><span class="nav-text">36、 Overwhelmed</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#37%E3%80%81-Little-Love"><span class="nav-text">37、 Little Love</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#38%E3%80%81%E5%83%95%E3%81%AE%E8%A8%80%E8%91%89%E3%81%A7%E3%81%AF%E3%81%AA%E3%81%84-%E3%81%93%E3%82%8C%E3%81%AF%E5%83%95%E9%81%94%E3%81%AE%E8%A8%80%E8%91%89"><span class="nav-text">38、僕の言葉ではない これは僕達の言葉</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#39%E3%80%81Darkside"><span class="nav-text">39、Darkside</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Try-this"><span class="nav-text">Try this</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-text">其他</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar3.jpg">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">159</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">52</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">163</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjEwMTM3MTIxMjdAcXEuY29t" title="E-Mail → mailto:1013712127@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9tZWJpbHkxMzE0" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      猜猜这是什么鬼地方？
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9tZWJpbHljaGVuLmxvZnRlci5jb20v" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;">LOFTER</span>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/p/d894.html" title="p&#x2F;d894.html">【参考】绘画参考-生物</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/49c3.html" title="p&#x2F;49c3.html">【参考】绘画参考-人</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/3ee.html" title="p&#x2F;3ee.html">【参考】绘画参考-人造物</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/dd8a.html" title="p&#x2F;dd8a.html">“行为艺术”</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/e3a422.html" title="p&#x2F;e3a422.html">【参考】衣|料专版</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/4eb5.html" title="p&#x2F;4eb5.html">遗书</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ce0f2.html" title="p&#x2F;ce0f2.html">Dreamily.AI专场</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/p/f446.html" title="p&#x2F;f446.html">常用命令</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/0.html" title="p&#x2F;0.html">【备忘】</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/ce0f2.html" title="p&#x2F;ce0f2.html">Dreamily.AI专场</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">2m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">31:03</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "站子已虔诚祈祷 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+     //'.site-meta',
+    //'.site-nav',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+<script language="JavaScript">
+var password="";
+password=prompt('Password (Birthday)','');
+if (password != '20180909')   
+{alert("。");    
+window.opener=null;
+window.location.href = "about:blank"; 
+window.close();}  // 密码不正确就关闭//-->
+</script>
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>

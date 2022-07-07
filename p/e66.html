@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="♕本文为设定，可能会上锁♕    ♕施工中♕    ♕易开车，但不一定会开，哈♕   第一次描写带尾巴的陛下👀 ⚠️这篇文里白王……不是王🙈 ⚠️呃…伪e级？ 冬沃姆">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Caged(笼)-设定">
+<meta property="og:url" content="https://mebilychen.github.io/p/e66.html">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:description" content="♕本文为设定，可能会上锁♕    ♕施工中♕    ♕易开车，但不一定会开，哈♕   第一次描写带尾巴的陛下👀 ⚠️这篇文里白王……不是王🙈 ⚠️呃…伪e级？ 冬沃姆">
+<meta property="og:locale">
+<meta property="og:image" content="https://i.loli.net/2021/04/19/IbfiPrSVOJWhqZF.jpg">
+<meta property="article:published_time" content="2020-10-11T06:19:00.000Z">
+<meta property="article:modified_time" content="2022-01-25T12:59:18.913Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="君臣组">
+<meta property="article:tag" content="设定">
+<meta property="article:tag" content="白王">
+<meta property="article:tag" content="辐光">
+<meta property="article:tag" content="卢瑞恩">
+<meta property="article:tag" content="@笼">
+<meta property="article:tag" content="无危：填坑中">
+<meta property="article:tag" content="幼王">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/04/19/IbfiPrSVOJWhqZF.jpg">
+
+<link rel="canonical" href="https://mebilychen.github.io/p/e66.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : '中文'
+  };
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    
+      if (NexT.utils.hasMobileUA()) return;
+    
+    let time, hidden, visible, title = document.title;
+    let favicon = document.querySelector('link[rel="icon"]');
+    
+      hidden = ["盯————","*探*","?","......","*观察*"];
+      visible = ["*偏转视线*","*缩*","*强装镇定*","！","*低头*"];
+    
+    let random = t => t[Math.floor(Math.random() * t.length)];
+    const change = () => {
+      if (document.hidden) {
+        favicon.setAttribute('href', '/images/favicon-32x32-king-black.png');
+        
+          document.title = random(hidden);
+        
+        clearTimeout(time);
+      } else {
+        favicon.setAttribute('href', '/images/favicon-32x32-brand-black.png');
+        
+          document.title = random(visible);
+        
+        time = setTimeout(() => {
+          document.title = '碳素的小作坊';
+        }, 1000);
+      }
+    }
+    document.addEventListener('visibilitychange', change, false);
+  });
+</script>
+
+  <title>Caged(笼)-设定 | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;调谐中...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">163</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">52</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">159</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-image fa-fw"></i>画廊</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/random.html" rel="section"><i class="fa fa-question fa-fw"></i>抽</a>
+
+  </li>
+        <li class="menu-item menu-item-lang">
+
+    <a href="/en/" rel="section"><i class="fa fa-globe fa-fw"></i>->English</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-17081-597255-1305127431.cos-website.ap-hongkong.myqcloud.com' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/e66.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Caged(笼)-设定
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-10-11 14:19:00" itemprop="dateCreated datePublished" datetime="2020-10-11T14:19:00+08:00">2020-10-11</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2022-01-25 20:59:18" itemprop="dateModified" datetime="2022-01-25T20:59:18+08:00">2022-01-25 20:59:18</time>
+                </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">王文</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/%E7%8E%8B%E6%96%87-%E7%AC%BC/" itemprop="url" rel="index"><span itemprop="name">王文@笼</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+          
+          <div class="post-tags">
+              <a href="/tags/%E5%90%9B%E8%87%A3%E7%BB%84/" rel="tag"><i class="fa fa-tag"></i> 君臣组</a>
+              <a href="/tags/%E8%AE%BE%E5%AE%9A/" rel="tag"><i class="fa fa-tag"></i> 设定</a>
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E8%BE%90%E5%85%89/" rel="tag"><i class="fa fa-tag"></i> 辐光</a>
+              <a href="/tags/%E5%8D%A2%E7%91%9E%E6%81%A9/" rel="tag"><i class="fa fa-tag"></i> 卢瑞恩</a>
+              <a href="/tags/%E7%AC%BC/" rel="tag"><i class="fa fa-tag"></i> @笼</a>
+              <a href="/tags/%E6%97%A0%E5%8D%B1%EF%BC%9A%E5%A1%AB%E5%9D%91%E4%B8%AD/" rel="tag"><i class="fa fa-tag"></i> 无危：填坑中</a>
+              <a href="/tags/%E5%B9%BC%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 幼王</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><div class="note danger"><p style="text-align:center ; color:#D9534F"> ♕本文为设定，可能会上锁♕ </p></div>
+
+<div class="note warning"><p style="text-align:center; color:#F0AD4E"> ♕施工中♕ </p></div>
+
+<div class="note danger"><p style="text-align:center ; color:#D9534F"> ♕易开车，但不一定会开，哈♕ </p></div>
+
+<p><em>第一次描写带尾巴的陛下👀</em><br>
+<em>⚠️这篇文里白王……不是王🙈</em><br>
+<em>⚠️呃…伪e级？</em><br>
+<em>冬沃姆</em><br>
+
+</p><p>  <span id="more"></span></p>
+<p> 补，辐光会在陛下翅膀上（脖子？）挂铃铛，一个是一跑就会响，一个是会压得陛下飞不起来。</p>
+  <div class="note primary"><p style="color:#7042C1"> 现在都叫“雪沃姆”了（滑稽） </p> </div>
+
+<p><em>本来是团长抢亲标准结局，但是突然觉得太枯燥乏味了于是</em></p><p></p>
+<div class="note danger"><p style="text-align:center; color:#D9534F"> ♕下文涉及剧透♕ </p></div>
+
+<p>咳咳，注意一下，这篇文主题是：自由与安全</p>
+
+<p>//剧情大改：辐光成为统治者后日渐强大（无上的太阳神），于是有了收集神明的癖好（对，猎神），她听说极北之地诺瑟维尔有冬神沃姆，于是（闲着没事）去讨伐，然后发现了还很年幼的陛下…和他的族人。嗯辐光就留了陛下一只虫，因为其他的都太大了带不回去（）</p>
+
+<p>辐光的论调是白王如此年幼，即便她不来，也很容易就会被其他猎神者盯上，而她出手将他囚禁在笼子里是救了他<br>
+“我在保护你，不受外面污浊世界的侵扰”<br>
+陛下处于略微摇摆不定的状态，但最后为了卢瑞恩决定还是选择自由，和他一起去看五彩斑斓的世界。<br>
+“既然这样，我会为了体验美好而选择拥抱这个不完美的世界”<br>
+**“全篇白王和卢瑞恩无对话”挑战。**</p>
+
+<p>陛下和卢瑞恩一路向北途中救下了被辐光抓住的小格林，于是后来团长出手帮了他们两次（一次在沙漠陛下要被热死了（其实只是夏眠），一次在诺瑟维尔卢瑞恩要被冻死了（这是真的会死））</p>
+
+<p>至于结局emmm卢瑞恩是不可能和陛下生活在北极的…而陛下又不能轻易抛下神位不管…呃，至少不能让神位空着。<br>
+两个解决方案：<br>
+1、暂时抛下不管，但最终还是会回去的（比如和卢瑞恩生完娃之后再回去）<br>
+2、转交神位给其他神<br>
+3、直接抛弃神位完全不管了</p>
+
+<p>金灿灿的穹顶，金灿灿的纹样。<br>
+映入眼帘的一切全部都是金色、金色、金色。<br>
+他感到眼睛被刺得难受，便将头别了过去。<br>
+辐光哼着小调，画符一般在纸上写着什么，他看不懂。他盯着环住自己身体的蛾子毛须发呆。<br>
+他知道自己处境不妙，但他的思绪只能进行到这里。神的本能让他想去反抗，想让这房间只剩下一位神明，想让这宫殿的颜色褪成纯白色。<br>
+但是当他想抓住这思绪的尾巴时，却发觉头脑中空空的，被雾笼罩一般，看不清晰。<br>
+他只能顺从地等待着，不发出任何声音，连呼吸声都弱不可闻。<br>
+辐光突然一声长叹，把笔随手扔在桌子上。他下意识地紧张起来。<br>
+他被举起，放在桌沿边。他就势默默坐下，两腿伸出桌边垂着，从袍子中露出的半截尾巴在桌面上自然地圈出了一个弧度。他将与生俱来的长袍捋平，像个娃娃一般乖巧。失去了尊严和自由，举手投足却依旧保持着神的优雅高贵，这让另一位神忍俊不禁。<br>
+“你还记得你刚来这里的时候吗？”辐光微笑道。<br>
+他只是茫然地看着对方，她的声音很清晰，但是那些词句是那么陌生。单词组合起来，又被打乱。<br>
+辐光爱怜地抚上他的脸：“你和其他的宠物不一样。看到你的那一瞬间，我就知道，只有你才配的上我。”<br>
+他迷茫地望着面前的大蛾子。他只有支离破碎的记忆，似乎在很久很久以前，他还是一位自由的神，一只年幼的沃姆。</p>
+
+<p><em>“我可带不走像它们那么大的虫子…不过，这只——”<br>
+金色的长矛划破了他的柔软外壳。族人和他自己的白色血液一层层泼在他的身体上，将他的绒毛黏在了一起。他听见母亲震耳欲聋的嘶吼声，让他快跑。于是他尖叫着钻入雪地中，想要躲避烈日的炙烤，但第二根长矛将他的裸露在外的另半截身子死死钉在了地面上。像一只蠕虫一样，他徒劳地扭动着身体，体表的温度已经上升到了无法忍受的程度。他哀号着。捕猎者像鸟儿取食一般将他拽出地表，他本能地蜷缩身体去咬敌人的爪子，一转头却被满目的金光刺得睁不开眼睛。就是在这一刻他意识到，再坚硬的寒冰，也是无法匹敌太阳的。</em></p>
+
+<p>他颤抖起来，将爪子叠在膝盖上，握紧。</p>
+
+<p><em>他被锁在地底的巨型牢笼里，七天，没有水，没有食物。只有远处传来的，断断续续的滴水声。他沙哑地吼叫，用头撞向笼门。乏了，他就将身体蜷起，努力忽视因饥饿而阵痛的胃部。他开始觉得他被遗忘了，以至于听到脚步声的时候，他瞬间的反应竟然是喜悦。他在那个牢笼里待了十七年，对他来说，不算长。他有逃出生天的机会——沃姆们都会选择放弃的那次羽化，那时，他就可以逃离这个巨笼，回到熟悉的冰天雪地，回到凉爽舒适的家。</em></p>
+
+<p>他没有想到她为他准备了第二个笼子。小巧精致，点缀着闪烁的金粉，雕刻着精美的花纹。一个鸟笼。他羽化后刚刚展开的翅膀还没来得及享受清风 抚摸的感觉，就再也没有这个机会了。<br>
+“让我看看你的翅膀。”<br>
+他驯服地低下头，将自己的翅膀展开。太阳神轻轻拨弄了几下，似乎很满意它们的状态：“很好。”<br>
+他之所以可以保住自己的翅膀，完全是因为它们的美丽，和脆弱。辐光喜欢向宾客们炫耀这三对翅膀，说它们是多么值得欣赏。她甚至还会许诺某些近臣，将其中一片赠予他们——不过至今仍未兑现。<br>
+辐光斜倚回王座上，目不转睛地欣赏着面前的宠物。片刻，想起什么似的，她又伸出手将他抱回了腿上。蛾子的绒毛掠过他的外骨骼，让他感到一阵瘙痒。<br>
+她环住他的力度突然加重了些，逐渐向下探去。他知道这意味着什么。他象征性地挣了一下，果不其然，引起了对方挑逗的兴趣。<br>
+他轻喘一口气，抬眼望向他的笼子，精致又令他恐惧的囚笼。他不想再被关在那里了，不想再浑浑噩噩地以昏睡度日了。哪怕只有一瞬间，至少，他想要知道自己还活着。<br>
+他缩起身体，将双腿紧紧并拢。他不知道自己是否在期待着被这样对待，但在辐光看来，他无疑是在欲拒还迎。虽然同为神明，但他的力量已经被削弱太多。如果辐光想，她甚至可以直接入侵他的思想。辐光暂时还没有这个打算，她不喜欢完全驯化的宠物。他的双腿被轻而易举地分开，以一个羞耻的姿势躺在辐光怀里，他的尾巴因为找不到握点而无意识地蜷起圈。他用爪子抓住几撮毛发，将脸深埋在她的绒毛中，这样他就不知道正在发生的事情了。对面墙壁上悬挂的钟嗒嗒地响着，像水滴一滴一滴地滴在地面上。像往常一样，他只能闭上眼忍受着——<br>
+等辐光终于玩够了，精疲力尽的他被塞回了笼子。五六秒之后，针头从他脖颈和身体的连接处刺入，一股暖流逐渐扩散至全身，他脑海中混乱的思绪也逐渐消散不见。朦胧中，他只能听见断断续续的说话声、纸张的翻动声、以及钟表的嘀嗒声。</p>
+
+<p>（之后在旅途中陛下痛苦的时候就会尝试用针状物扎自己）</p>
+
+<p>他从未想过自己可能会以不同的方式度过余年。<br>
+来拜访辐光的宾客们无一例外地都会称赞几句他的美丽。那种病态的、破碎的、被肆意蹂躏的美。娇小的身躯瑟缩在不比他大上多少的笼子里，黑色的眼睛里满是忧郁，偶尔透出一丝恐惧。笼中的空间狭小闭塞，只允许他蜷缩和勉强站立。当他看见辐光领着宾客，微笑着指向自己的时候，他就会如当初所学那样，轻轻地将翅膀绽开。这时，他的蝉翼会先撞在笼子的栏杆上，再卡住，很痛。辐光在忙的时候，他就会被完全地无视。当然，这无视包括不提供食物和水。<br>
+负责打扫这房间的仆从换了一批又一批，从蛾子家臣变成了平民，变成蹦跳着的蘑菇，变成沉默不语的苔藓生物，现在变成了甲虫。<br>
+驯兽师拖拽着一长列的甲虫，它们每只之间都连接着叮当作响的镣铐。还在擦拭地板的苔藓族居民望着眼前的光景，不由得停下工作打量起来。<br>
+驯兽师一副自豪的表情，向前一步想向他的女王介绍他的训练成果，却被一旁的士兵拦下。<br>
+“我都要了。”辐光头也不抬，笔也没停。她的语气淡然又稀松平常。<br>
+驯兽师先是一惊，随后立刻跪地道谢。辐光抬眼一望——眼前这只虫并不是蛾子。<br>
+她没让他站起来，只是冲着卫兵点了点头。卫兵得令后，直接将一个金属制小箱子丢在了他面前。突然传来的箱子落地的“哐当”声让一直不敢抬头的驯兽师颤抖了一下。<br>
+辐光摆了摆手（？），驯兽师便在连声道谢之时被拉走了。<br>
+她又重新投入了工作，许久没再说话。<br>
+甲虫们不知自己的命运该如何发展，有的原地打量着周围的环境；有的瑟瑟发抖，低头不敢说话；有的只是静静地站着，没有任何动作。那苔藓生物逐渐丧失好奇心，便又继续擦她的地了。<br>
+笼中的小小神明在睡梦中将身体蜷缩起来，尾巴顺势从笼子边缘缩回了身体旁边，这个动作让金属制的笼子微微晃了几下，吱吱呀呀地叫了起来。<br>
+很少几只甲虫注意到了这个笼子，只有一只盯着这个笼子出神。</p>
+
+<p>既然这样，他想着，握紧卢瑞恩颤抖着的爪子，他要选择享受这个世界，并同时忍受它的一切。</p>
+
+<p>“走吧，走得远远的，越远越好！”米拉紧紧握住沃姆的双爪，“在山的那边，有一个世外桃源。我妈妈去过，她告诉过我，那里有数不尽的果子和花蜜，有温暖的毛绒小窝…”<br>
+沃姆歪起了头，他不需要温暖的毛绒小窝，他喜欢寒冷。温暖只会让他感觉昏昏欲睡。<br>
+或许卢瑞恩会喜欢那里？<br>
+“这个世界不配拥有你。”米拉噙着眼泪轻轻地说，“还是请你回到你的乌托邦吧。”</p>
+
+<p>他靠近了卢瑞恩，伸出双手。<br>
+爪子抬起，他轻抚上对方的脸，随即闭上眼睛，将头也移近了些——他让垂下的长袖遮住了他们接吻的瞬间。</p>
+
+<p>他可以看到他眼底的喜悦。<br>
+那种由内而生的幸福，就像是孩子终于挤进母亲的怀抱，心满意足地闭起眼睛一般。<br>
+沃姆松开牵着卢瑞恩的爪子，向前快走了几步，却又停下来回头望着他。<br>
+卢瑞恩在寒风中瑟瑟发抖，他已经直不起身子了。<br>
+沃姆很明显地迟疑了一下，又走回来重新抱住快要冻僵的可怜甲虫。<br>
+可惜他并没有普通虫子所具有的温暖，卢瑞恩只感觉自己被另一层冰包裹住了一样。他摇着头，艰难地向后退了一步。<br>
+沃姆愣住了，他望着在寒风中缩成一团的卢瑞恩，又转过头看着前方的茫茫雪原。<br>
+他看到了接近地平线的那边，隐约露出了几根高大的柱子。那是冬神殿的断壁残垣，他可以用他的神力将它重建。他自由了。冬神的回归将会为这几十年的三季轮回画上句号。<br>
+他又走到卢瑞恩身边，想再次牵起他的爪子。<br>
+卢瑞恩已经无法作出回应了，他突然觉得自己的身体又开始变得暖和起来。</p>
+
+<p>终于，他倒下了。走在前面的沃姆被连带着一扯，向后踉跄一步。<br>
+沃姆回过头，眨眨眼睛，附身去推卢瑞恩。对方没有反应。<br>
+他又试着将他扶起来，奈何他已经冻成了冰雕，实在过于沉重。<br>
+于是沃姆跪坐在雪原中，在大雪纷飞中呆呆地看着甲虫趴在雪地里一动不动。<br>
+“…卢…卢瑞恩…”<br>
+他试着用学来的语言发出声音去引起对方的注意，依旧没有获得对方的回应。<br>
+“卢瑞恩？”<br>
+“他已经休克了。”<br>
+沃姆猛地抬起头，警惕地摆出攻击的架势。<br>
+格林眼中的火焰似乎也被这寒冷的天气所压制，他将披风裹紧了些：“他会被冻死。”<br>
+他蹲下身子，无视了沃姆凌厉的眼神：“你想救他么？”</p>
+
+<p>“你带不走他，沃姆。你们注定不能在一起。”</p>
+
+<hr>
+<p>在lof截止到删除为止（2020-12-4至2021-4-19），6赞1评论3收藏<br>截图如下：<br><img data-src="https://i.loli.net/2021/04/19/IbfiPrSVOJWhqZF.jpg" alt="IMG_6003_20210419-201136_.PNG"></p>
+
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/e66.html">Caged(笼)-设定</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2020年10月11日 - 14:19</p>
+ <p><span>最后更新:</span>2022年01月25日 - 20:59</p>
+ <p><span>原始链接:</span><a href="/p/e66.html" title="Caged(笼)-设定">https://mebilychen.github.io/p/e66.html</a>
+    
+ </p>
+ <p><span>许可协议:</span>除非文章内另行声明，遵守 cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script data-pjax> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E5%90%9B%E8%87%A3%E7%BB%84/" rel="tag"><i class="fa fa-tag"></i> 君臣组</a>
+              <a href="/tags/%E8%AE%BE%E5%AE%9A/" rel="tag"><i class="fa fa-tag"></i> 设定</a>
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E8%BE%90%E5%85%89/" rel="tag"><i class="fa fa-tag"></i> 辐光</a>
+              <a href="/tags/%E5%8D%A2%E7%91%9E%E6%81%A9/" rel="tag"><i class="fa fa-tag"></i> 卢瑞恩</a>
+              <a href="/tags/%E7%AC%BC/" rel="tag"><i class="fa fa-tag"></i> @笼</a>
+              <a href="/tags/%E6%97%A0%E5%8D%B1%EF%BC%9A%E5%A1%AB%E5%9D%91%E4%B8%AD/" rel="tag"><i class="fa fa-tag"></i> 无危：填坑中</a>
+              <a href="/tags/%E5%B9%BC%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 幼王</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/47c2.html" rel="prev" title="白咖啡-设定">
+      <i class="fa fa-chevron-left"></i> 白咖啡-设定
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/bcdb.html" rel="next" title="沃姆饲养手册">
+      沃姆饲养手册 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar3.jpg">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">159</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">52</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">163</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjEwMTM3MTIxMjdAcXEuY29t" title="E-Mail → mailto:1013712127@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9tZWJpbHkxMzE0" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      猜猜这是什么鬼地方？
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9tZWJpbHljaGVuLmxvZnRlci5jb20v" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;">LOFTER</span>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/p/d894.html" title="p&#x2F;d894.html">【参考】绘画参考-生物</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/49c3.html" title="p&#x2F;49c3.html">【参考】绘画参考-人</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/3ee.html" title="p&#x2F;3ee.html">【参考】绘画参考-人造物</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/dd8a.html" title="p&#x2F;dd8a.html">“行为艺术”</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/e3a422.html" title="p&#x2F;e3a422.html">【参考】衣|料专版</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/4eb5.html" title="p&#x2F;4eb5.html">遗书</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ce0f2.html" title="p&#x2F;ce0f2.html">Dreamily.AI专场</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/p/f446.html" title="p&#x2F;f446.html">常用命令</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/0.html" title="p&#x2F;0.html">【备忘】</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/ce0f2.html" title="p&#x2F;ce0f2.html">Dreamily.AI专场</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">2m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">31:03</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "站子已虔诚祈祷 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+     //'.site-meta',
+    //'.site-nav',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+<script language="JavaScript">
+var password="";
+password=prompt('Password (Birthday)','');
+if (password != '20180909')   
+{alert("。");    
+window.opener=null;
+window.location.href = "about:blank"; 
+window.close();}  // 密码不正确就关闭//-->
+</script>
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>
