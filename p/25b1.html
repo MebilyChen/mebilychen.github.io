@@ -141,7 +141,37 @@
   </style>
 </noscript>
 
-<script src="/assets/js/DPlayer.min.js"></script></head>
+<style type="text/css">
+.spoiler {
+  display: inline-flex;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}</style><script src="/assets/js/DPlayer.min.js"></script></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
   
@@ -445,7 +475,7 @@
 
 <p>万物皆可白，我超想画白色的苹果，白色的蝙蝠这一系列的</p>
 <p>视频需刷新：  </p>
-<div id="dplayer148" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer148"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/media/%E7%94%9F%E4%BA%A7%E7%BA%BF~1.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+<div id="dplayer147" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer147"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://mebilychen-media.test.upcdn.net/media/%E7%94%9F%E4%BA%A7%E7%BA%BF~1.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 
 
 <p><img data-src="http://5b0988e595225.cdn.sohucs.com/images/20181219/90bbab81482a4429b0c25f2758389b7e.jpeg"></p>

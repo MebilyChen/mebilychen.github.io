@@ -134,7 +134,37 @@
   </style>
 </noscript>
 
-</head>
+<style type="text/css">
+.spoiler {
+  display: inline-flex;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}</style></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
   
@@ -1697,8 +1727,8 @@
           
           <div class="post-tags">
               <a href="/tags/%E7%A7%AF%E7%B4%AF%E6%9C%AC/" rel="tag"><i class="fa fa-tag"></i> 积累本</a>
-              <a href="/tags/%E5%90%90%E6%A7%BD/" rel="tag"><i class="fa fa-tag"></i> 吐槽</a>
               <a href="/tags/%E8%99%90/" rel="tag"><i class="fa fa-tag"></i> 虐</a>
+              <a href="/tags/%E5%90%90%E6%A7%BD/" rel="tag"><i class="fa fa-tag"></i> 吐槽</a>
               <a href="/tags/%E8%99%AB%E4%B8%8E%E8%99%AB%E4%B8%8E%E8%99%AB/" rel="tag"><i class="fa fa-tag"></i> 虫与虫与虫</a>
               <a href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag"><i class="fa fa-tag"></i> 日常</a>
           </div>

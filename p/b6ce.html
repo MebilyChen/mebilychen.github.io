@@ -145,7 +145,37 @@
   </style>
 </noscript>
 
-</head>
+<style type="text/css">
+.spoiler {
+  display: inline-flex;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}</style></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
   
@@ -441,7 +471,7 @@
 <p><img data-src="https://i.loli.net/2021/08/23/mBb98cFiT5wvG72.jpg"></p>
 <p>随心情改的主题曲：  </p>
 
-    <div id="aplayer-rIQWPfCX" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="1344439577" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#cdcdcd"></div> 
+    <div id="aplayer-FHmITVkx" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="1344439577" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#cdcdcd"></div> 
 
 <hr>
 <p>6.9</p>
