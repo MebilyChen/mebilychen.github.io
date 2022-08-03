@@ -82,7 +82,7 @@
 <meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/Works/%E8%8D%89%E7%A8%BF%E4%BB%AC/%E9%99%9B%E4%B8%8B%E6%8B%9F%E4%BA%BA%E8%BF%9C%E5%8F%A4%E8%8D%891.JPG">
 <meta property="og:image" content="http://mebilychen-media.test.upcdn.net/image/Works/%E8%8D%89%E7%A8%BF%E4%BB%AC/%E9%99%9B%E4%B8%8B%E6%8B%9F%E4%BA%BA%E8%BF%9C%E5%8F%A4%E8%8D%892%E4%BE%A7%E8%84%B8%EF%BC%88%E5%A4%B1%E8%B4%A5%EF%BC%89.JPG">
 <meta property="article:published_time" content="2021-03-09T12:07:00.000Z">
-<meta property="article:modified_time" content="2022-08-03T11:19:41.106Z">
+<meta property="article:modified_time" content="2022-08-03T11:31:02.771Z">
 <meta property="article:author" content="碳素 | mebilyc">
 <meta property="article:tag" content="白王">
 <meta property="article:tag" content="辐光">
@@ -448,7 +448,7 @@ p.spoiler {
                     <i class="far fa-calendar-check" style="color:#ff0000"></i>
                   </span>
                   <span class="post-meta-item-text">更新于</span>
-                  <time title="修改时间：2022-08-03 19:19:41" itemprop="dateModified" datetime="2022-08-03T19:19:41+08:00">Today at 7:19 PM</time>
+                  <time title="修改时间：2022-08-03 19:31:02" itemprop="dateModified" datetime="2022-08-03T19:31:02+08:00">Today at 7:31 PM</time>
                 </span>
               
             <span class="post-meta-item">
@@ -632,11 +632,13 @@ p.spoiler {
 <li><p>礼貌度3~4：以招待客人的管家身份，80%的要求都会答应，把你当做某地领主/城主</p>
 </li>
 <li><p>礼貌度4~5：以招待客人的管家身份，所有要求都会答应，把你当做某国君主</p>
-<h2 id="暂时搁置的问题"><a href="#暂时搁置的问题" class="headerlink" title="暂时搁置的问题"></a>暂时搁置的问题</h2></li>
-<li><p>怎么让骰娘引用用户的话进行回复。</p>
-<p>类似这样：</p>
-<p><img data-src="http://mebilychen-media.test.upcdn.net/InstantPicGo/1652531356-998104-7ef52e1b54b3e7ce.png"></p>
 </li>
+</ol>
+<h2 id="暂时搁置的问题"><a href="#暂时搁置的问题" class="headerlink" title="暂时搁置的问题"></a>暂时搁置的问题</h2><ol>
+<li>怎么让骰娘引用用户的话进行回复。</li>
+</ol>
+<p>  类似这样：<br><img data-src="http://mebilychen-media.test.upcdn.net/InstantPicGo/1652531356-998104-7ef52e1b54b3e7ce.png"></p>
+<ol start="2">
 <li><p>酷Q挂了好多功能用不了：<del>撤回</del>(因为卢骰不是群主)、<del>MsgID</del>等，现在怀疑很多错误是因为目录不一致（见第4、5条）所以读取不了。</p>
 </li>
 <li><p>注：所谓的 #basicFunction 根本用不了</p>
@@ -646,7 +648,7 @@ p.spoiler {
 <li><p><code>【运行目录】\data\image\ </code>的对应目录是：<code>DICEMirai\mirai-dice-release-noextra-master\jre\bin\data\image</code>;<code>【应用目录】\data </code>的对应目录是：<code>DICEMirai\mirai-dice-release-noextra-master\data\MiraiNative\data\club.myepk.customReply</code>;但是<code>[CQ:image,file=test.jpg]</code>对应的目录是<code>DICEMirai\mirai-dice-release-noextra-master\data\image\test.jpg</code>；之后以<code>DICEMirai\mirai-dice-release-noextra-master\data\image</code>为准，即手动将【运行目录】/【应用目录】换为<code>DICEMirai\mirai-dice-release-noextra-master\data\image</code>或<code>[CQ:image,file=test.jpg]</code>.很傻逼的事情是，【制图】这个命令会把制好的图放进【运行目录】对应的image文件夹下，而不是CQ码引用（所谓的[框架根目录]）的文件夹下，<strong>而且</strong>一个傻逼点缀是tm制图出来的文件名是tm乱码根本引用不了。所以【制图】命令只能以【运行目录】为准，或者说无法制图后直接调用。</p>
 </li>
 </ol>
-<p> <strong>【解决方案：同步图片文件夹<code>【文件-复制【运行目录】\data\image\EPK自定义回复&gt;=&lt;C:\Users\chenz\Desktop\DICEMirai\mirai-dice-release-noextra-master\data\image\EPK自定义回复】</code>或者全同步：<code>【文件-复制【运行目录】\data&gt;=&lt;C:\Users\chenz\Desktop\DICEMirai\mirai-dice-release-noextra-master\data】</code>】这个能解决【语音】【图片】等命令失败问题，需要在使用时同时调用【同步铃心文件夹】</strong></p>
+<p> <strong>【解决方案：同步图片文件夹<code>【文件-复制【运行目录】\data\image\EPK自定义回复&gt;=&lt;C:\Users\chenz\Desktop\DICEMirai\mirai-dice-release-noextra-master\data\image\EPK自定义回复】</code>或者全同步：<code>【文件-复制【运行目录】\data&gt;=&lt;C:\Users\chenz\Desktop\DICEMirai\mirai-dice-release-noextra-master\data】</code>】这个能解决【语音】【图片】等命令失败问题，需要在使用时同时调用【重发同步铃心文件夹】</strong></p>
 <ol start="6">
 <li>怎么让卢骰检测自己话里的关键词？就比如说在报大失败的时候会检测一下骰点人的好感度然后对应出不同的回复…或者有另一个方法实现？</li>
 </ol>
@@ -1460,7 +1462,7 @@ cutest couple ever </p> </div>
  <p><span>本文标题:</span><a href="/p/248a.html">X个新点子，关于跑团和跑团的</a></p>
  <p><span>文章作者:</span>碳素 @mebilyc</p>
  <p><span>发布时间:</span>2021年03月09日 - 20:07</p>
- <p><span>最后更新:</span>2022年08月03日 - 19:19</p>
+ <p><span>最后更新:</span>2022年08月03日 - 19:31</p>
  <p><span>原始链接:</span><a href="/p/248a.html" title="X个新点子，关于跑团和跑团的">https://mebilychen.github.io/p/248a.html</a>
     
  </p>
