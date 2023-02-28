@@ -46,18 +46,29 @@
     var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="想成为诺瑟维尔冬神殿的六出镜">
-<meta property="og:type" content="website">
-<meta property="og:title" content="碳素的小作坊">
-<meta property="og:url" content="https://mebilychen.github.io/archives/2018/11/">
+  <meta name="description" content="RT，是硬读系列之《我与地坛》的读后感（产出）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【硬读文章】我与地坛">
+<meta property="og:url" content="https://mebilychen.github.io/p/ab228.html">
 <meta property="og:site_name" content="碳素的小作坊">
-<meta property="og:description" content="想成为诺瑟维尔冬神殿的六出镜">
-<meta property="og:locale" content="zh_CN">
+<meta property="og:description" content="RT，是硬读系列之《我与地坛》的读后感（产出）">
+<meta property="og:locale">
+<meta property="article:published_time" content="2023-02-28T06:22:00.000Z">
+<meta property="article:modified_time" content="2023-02-28T07:22:48.853Z">
 <meta property="article:author" content="碳素 | mebilyc">
-<meta property="article:tag" content="王学是世界上最高深的学问">
+<meta property="article:tag" content="白王">
+<meta property="article:tag" content="考据">
+<meta property="article:tag" content="积累本">
+<meta property="article:tag" content="写作">
+<meta property="article:tag" content="卢瑞恩">
+<meta property="article:tag" content="白后">
+<meta property="article:tag" content="鉴">
+<meta property="article:tag" content="AU点子">
+<meta property="article:tag" content="书">
+<meta property="article:tag" content="文学">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://mebilychen.github.io/archives/2018/11/">
+<link rel="canonical" href="https://mebilychen.github.io/p/ab228.html">
 
 
 <script id="page-configurations">
@@ -65,8 +76,8 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
-    lang   : 'zh-CN'
+    isPost : true,
+    lang   : '中文'
   };
 </script>
 <script>
@@ -103,7 +114,7 @@
   });
 </script>
 
-  <title>归档 | 碳素的小作坊</title>
+  <title>【硬读文章】我与地坛 | 碳素的小作坊</title>
   
 
 
@@ -333,145 +344,400 @@ p.spoiler {
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-17081-597255-1305127431.cos-website.ap-hongkong.myqcloud.com' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
   
   
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        
-        <span class="collection-header">同步率0.8...看，陛下他笑了笑了! 目前共计 168 篇日志。 和陛下击个掌！...被无视了</span>
-      </div>
 
-      
-    <div class="collection-year">
-      <span class="collection-header">2018</span>
-    </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/ab228.html">
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2018-11-24T21:28:00+08:00"
-              content="2018-11-24">
-          11-24
-        </time>
-      </div>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【硬读文章】我与地坛
+        </h1>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/p/53a9.html" itemprop="url">
-            <span itemprop="name">子嗣</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-
-    </div>
-  </div>
+        <div class="post-meta">
 
   
-  
-  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
 
-  
+              <time title="创建时间：2023-02-28 14:22:00 / 修改时间：15:22:48" itemprop="dateCreated datePublished" datetime="2023-02-28T14:22:00+08:00">2023-02-28</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A1%AC%E8%AF%BB%E7%B3%BB%E5%88%97/" itemprop="url" rel="index"><span itemprop="name">硬读系列</span></a>
+                </span>
+            </span>
 
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+            <div class="post-description"><center>RT，是硬读系列之《我与地坛》的读后感（产出）</div>
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E8%80%83%E6%8D%AE/" rel="tag"><i class="fa fa-tag"></i> 考据</a>
+              <a href="/tags/%E7%A7%AF%E7%B4%AF%E6%9C%AC/" rel="tag"><i class="fa fa-tag"></i> 积累本</a>
+              <a href="/tags/%E5%86%99%E4%BD%9C/" rel="tag"><i class="fa fa-tag"></i> 写作</a>
+              <a href="/tags/%E5%8D%A2%E7%91%9E%E6%81%A9/" rel="tag"><i class="fa fa-tag"></i> 卢瑞恩</a>
+              <a href="/tags/%E7%99%BD%E5%90%8E/" rel="tag"><i class="fa fa-tag"></i> 白后</a>
+              <a href="/tags/%E9%89%B4/" rel="tag"><i class="fa fa-tag"></i> 鉴</a>
+              <a href="/tags/AU%E7%82%B9%E5%AD%90/" rel="tag"><i class="fa fa-tag"></i> AU点子</a>
+              <a href="/tags/%E4%B9%A6/" rel="tag"><i class="fa fa-tag"></i> 书</a>
+              <a href="/tags/%E6%96%87%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> 文学</a>
+          </div>
 
-            <div id="calendar">
-              <div class="container archive-calendar">
-    <div class="card">
-        <div id="post-calendar" class="card-content"></div>
-    </div>
-</div>
-<style type="text/css">
-    #post-calendar {
-        width: 100%;
-        height: 225px;
-        margin-top: 20px;
-        border-radius: 12px;
-        background-color: rgb(255, 255, 255,0.5);
-    }
-</style>
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/cungudafa/cdn/js/echarts.min.js"></script>
-<script type="text/javascript">
-    let myChart = echarts.init(document.getElementById('post-calendar'));
+        </div>
+      </header>
 
     
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-    let option = {
-        tooltip: {
-            padding: 10,
-            backgroundColor: '#555',
-            borderColor: '#777',
-            borderWidth: 1,
-            formatter: function (obj) {
-                var value = obj.value;
-                return '<div style="font-size: 14px;">' + value[0] + '：' + value[1] + '</div>';
-            }
-        },
-        visualMap: {
-            show: true,
-            showLabel: true,
-            categories: [0, 1, 2, 3, 4,5,6,7,8,9,10],
-            calculable: true,
-            inRange: {
-                symbol: 'rect',
-                color: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127','#123b1a','#262626','#616161','#828282','#adadad','#e8e8e8']
-            },
-            itemWidth: 12,
-            itemHeight: 12,
-            orient: 'horizontal',
-            left: 'center',
-            bottom: 0
-        },
-        calendar: [{
-            left: 'center',
-            range: ["2022-02-28", "2023-02-28"],
-            cellSize: [10, 10],
-            splitLine: {
-                show: false
-            },
-            itemStyle: {
-                width: '1.88679%',
-                height: '15px',
-                color: '#EEEEEE',
-                borderColor: '#FFF',
-                borderWidth: 2
-            },
-            yearLabel: {
-                show: false
-            },
-            monthLabel: {
-                nameMap: 'cn',
-                fontWeight: 'lighter',
-                fontSize: 12
-            },
-            dayLabel: {
-                show: true,
-                formatter: '{start}  1st',
-                fontWeight: 'lighter',
-                nameMap: ['日',' ',' ','三',' ',' ','六',],
-                fontSize: 12
-            }
-        }],
-        series: [{
-            type: 'heatmap',
-            coordinateSystem: 'calendar',
-            calendarIndex: 0,
-            data: [["2022-02-28", 0], ["2022-03-01", 0], ["2022-03-02", 0], ["2022-03-03", 0], ["2022-03-04", 0], ["2022-03-05", 0], ["2022-03-06", 0], ["2022-03-07", 0], ["2022-03-08", 0], ["2022-03-09", 0], ["2022-03-10", 0], ["2022-03-11", 0], ["2022-03-12", 0], ["2022-03-13", 0], ["2022-03-14", 0], ["2022-03-15", 0], ["2022-03-16", 0], ["2022-03-17", 0], ["2022-03-18", 0], ["2022-03-19", 0], ["2022-03-20", 0], ["2022-03-21", 0], ["2022-03-22", 0], ["2022-03-23", 0], ["2022-03-24", 0], ["2022-03-25", 0], ["2022-03-26", 0], ["2022-03-27", 3], ["2022-03-28", 0], ["2022-03-29", 0], ["2022-03-30", 0], ["2022-03-31", 0], ["2022-04-01", 0], ["2022-04-02", 0], ["2022-04-03", 0], ["2022-04-04", 0], ["2022-04-05", 0], ["2022-04-06", 0], ["2022-04-07", 0], ["2022-04-08", 0], ["2022-04-09", 0], ["2022-04-10", 0], ["2022-04-11", 0], ["2022-04-12", 0], ["2022-04-13", 0], ["2022-04-14", 0], ["2022-04-15", 0], ["2022-04-16", 0], ["2022-04-17", 0], ["2022-04-18", 0], ["2022-04-19", 0], ["2022-04-20", 0], ["2022-04-21", 0], ["2022-04-22", 0], ["2022-04-23", 0], ["2022-04-24", 0], ["2022-04-25", 0], ["2022-04-26", 0], ["2022-04-27", 0], ["2022-04-28", 0], ["2022-04-29", 0], ["2022-04-30", 0], ["2022-05-01", 0], ["2022-05-02", 0], ["2022-05-03", 0], ["2022-05-04", 0], ["2022-05-05", 0], ["2022-05-06", 0], ["2022-05-07", 0], ["2022-05-08", 0], ["2022-05-09", 0], ["2022-05-10", 0], ["2022-05-11", 0], ["2022-05-12", 0], ["2022-05-13", 0], ["2022-05-14", 0], ["2022-05-15", 0], ["2022-05-16", 0], ["2022-05-17", 0], ["2022-05-18", 0], ["2022-05-19", 0], ["2022-05-20", 0], ["2022-05-21", 0], ["2022-05-22", 0], ["2022-05-23", 0], ["2022-05-24", 0], ["2022-05-25", 0], ["2022-05-26", 0], ["2022-05-27", 0], ["2022-05-28", 0], ["2022-05-29", 0], ["2022-05-30", 0], ["2022-05-31", 0], ["2022-06-01", 0], ["2022-06-02", 0], ["2022-06-03", 0], ["2022-06-04", 0], ["2022-06-05", 0], ["2022-06-06", 0], ["2022-06-07", 0], ["2022-06-08", 0], ["2022-06-09", 0], ["2022-06-10", 0], ["2022-06-11", 0], ["2022-06-12", 0], ["2022-06-13", 0], ["2022-06-14", 0], ["2022-06-15", 0], ["2022-06-16", 0], ["2022-06-17", 0], ["2022-06-18", 0], ["2022-06-19", 0], ["2022-06-20", 0], ["2022-06-21", 0], ["2022-06-22", 0], ["2022-06-23", 0], ["2022-06-24", 0], ["2022-06-25", 0], ["2022-06-26", 0], ["2022-06-27", 0], ["2022-06-28", 0], ["2022-06-29", 0], ["2022-06-30", 0], ["2022-07-01", 0], ["2022-07-02", 0], ["2022-07-03", 0], ["2022-07-04", 0], ["2022-07-05", 0], ["2022-07-06", 0], ["2022-07-07", 0], ["2022-07-08", 0], ["2022-07-09", 0], ["2022-07-10", 0], ["2022-07-11", 0], ["2022-07-12", 1], ["2022-07-13", 0], ["2022-07-14", 0], ["2022-07-15", 0], ["2022-07-16", 0], ["2022-07-17", 0], ["2022-07-18", 0], ["2022-07-19", 0], ["2022-07-20", 0], ["2022-07-21", 0], ["2022-07-22", 0], ["2022-07-23", 0], ["2022-07-24", 0], ["2022-07-25", 0], ["2022-07-26", 0], ["2022-07-27", 0], ["2022-07-28", 0], ["2022-07-29", 0], ["2022-07-30", 0], ["2022-07-31", 0], ["2022-08-01", 0], ["2022-08-02", 0], ["2022-08-03", 0], ["2022-08-04", 0], ["2022-08-05", 0], ["2022-08-06", 0], ["2022-08-07", 0], ["2022-08-08", 0], ["2022-08-09", 0], ["2022-08-10", 0], ["2022-08-11", 0], ["2022-08-12", 0], ["2022-08-13", 0], ["2022-08-14", 0], ["2022-08-15", 0], ["2022-08-16", 0], ["2022-08-17", 0], ["2022-08-18", 0], ["2022-08-19", 0], ["2022-08-20", 0], ["2022-08-21", 0], ["2022-08-22", 0], ["2022-08-23", 0], ["2022-08-24", 0], ["2022-08-25", 0], ["2022-08-26", 0], ["2022-08-27", 0], ["2022-08-28", 0], ["2022-08-29", 0], ["2022-08-30", 0], ["2022-08-31", 0], ["2022-09-01", 0], ["2022-09-02", 0], ["2022-09-03", 0], ["2022-09-04", 0], ["2022-09-05", 0], ["2022-09-06", 0], ["2022-09-07", 0], ["2022-09-08", 0], ["2022-09-09", 0], ["2022-09-10", 0], ["2022-09-11", 0], ["2022-09-12", 0], ["2022-09-13", 0], ["2022-09-14", 0], ["2022-09-15", 0], ["2022-09-16", 0], ["2022-09-17", 0], ["2022-09-18", 0], ["2022-09-19", 0], ["2022-09-20", 0], ["2022-09-21", 0], ["2022-09-22", 0], ["2022-09-23", 0], ["2022-09-24", 0], ["2022-09-25", 0], ["2022-09-26", 0], ["2022-09-27", 0], ["2022-09-28", 0], ["2022-09-29", 0], ["2022-09-30", 0], ["2022-10-01", 0], ["2022-10-02", 0], ["2022-10-03", 0], ["2022-10-04", 0], ["2022-10-05", 0], ["2022-10-06", 0], ["2022-10-07", 0], ["2022-10-08", 0], ["2022-10-09", 0], ["2022-10-10", 0], ["2022-10-11", 0], ["2022-10-12", 0], ["2022-10-13", 0], ["2022-10-14", 0], ["2022-10-15", 0], ["2022-10-16", 0], ["2022-10-17", 0], ["2022-10-18", 0], ["2022-10-19", 0], ["2022-10-20", 0], ["2022-10-21", 0], ["2022-10-22", 0], ["2022-10-23", 0], ["2022-10-24", 0], ["2022-10-25", 0], ["2022-10-26", 0], ["2022-10-27", 0], ["2022-10-28", 0], ["2022-10-29", 0], ["2022-10-30", 0], ["2022-10-31", 0], ["2022-11-01", 0], ["2022-11-02", 0], ["2022-11-03", 0], ["2022-11-04", 0], ["2022-11-05", 0], ["2022-11-06", 0], ["2022-11-07", 0], ["2022-11-08", 0], ["2022-11-09", 0], ["2022-11-10", 0], ["2022-11-11", 0], ["2022-11-12", 0], ["2022-11-13", 0], ["2022-11-14", 0], ["2022-11-15", 0], ["2022-11-16", 1], ["2022-11-17", 0], ["2022-11-18", 0], ["2022-11-19", 0], ["2022-11-20", 0], ["2022-11-21", 0], ["2022-11-22", 0], ["2022-11-23", 0], ["2022-11-24", 0], ["2022-11-25", 0], ["2022-11-26", 0], ["2022-11-27", 0], ["2022-11-28", 0], ["2022-11-29", 0], ["2022-11-30", 0], ["2022-12-01", 0], ["2022-12-02", 0], ["2022-12-03", 0], ["2022-12-04", 0], ["2022-12-05", 0], ["2022-12-06", 0], ["2022-12-07", 0], ["2022-12-08", 0], ["2022-12-09", 0], ["2022-12-10", 0], ["2022-12-11", 0], ["2022-12-12", 1], ["2022-12-13", 0], ["2022-12-14", 0], ["2022-12-15", 0], ["2022-12-16", 0], ["2022-12-17", 1], ["2022-12-18", 0], ["2022-12-19", 1], ["2022-12-20", 0], ["2022-12-21", 0], ["2022-12-22", 0], ["2022-12-23", 0], ["2022-12-24", 0], ["2022-12-25", 0], ["2022-12-26", 0], ["2022-12-27", 0], ["2022-12-28", 0], ["2022-12-29", 0], ["2022-12-30", 0], ["2022-12-31", 0], ["2023-01-01", 0], ["2023-01-02", 0], ["2023-01-03", 0], ["2023-01-04", 0], ["2023-01-05", 0], ["2023-01-06", 0], ["2023-01-07", 0], ["2023-01-08", 0], ["2023-01-09", 0], ["2023-01-10", 0], ["2023-01-11", 0], ["2023-01-12", 0], ["2023-01-13", 0], ["2023-01-14", 0], ["2023-01-15", 0], ["2023-01-16", 0], ["2023-01-17", 0], ["2023-01-18", 0], ["2023-01-19", 0], ["2023-01-20", 0], ["2023-01-21", 0], ["2023-01-22", 0], ["2023-01-23", 0], ["2023-01-24", 0], ["2023-01-25", 0], ["2023-01-26", 0], ["2023-01-27", 0], ["2023-01-28", 0], ["2023-01-29", 0], ["2023-01-30", 0], ["2023-01-31", 0], ["2023-02-01", 0], ["2023-02-02", 0], ["2023-02-03", 0], ["2023-02-04", 0], ["2023-02-05", 0], ["2023-02-06", 0], ["2023-02-07", 1], ["2023-02-08", 0], ["2023-02-09", 0], ["2023-02-10", 0], ["2023-02-11", 0], ["2023-02-12", 0], ["2023-02-13", 0], ["2023-02-14", 0], ["2023-02-15", 0], ["2023-02-16", 0], ["2023-02-17", 0], ["2023-02-18", 0], ["2023-02-19", 0], ["2023-02-20", 0], ["2023-02-21", 1], ["2023-02-22", 0], ["2023-02-23", 0], ["2023-02-24", 0], ["2023-02-25", 0], ["2023-02-26", 0], ["2023-02-27", 0], ["2023-02-28", 1]]
-        }]
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p>这是《硬读》系列的第一篇，所以在这里介绍下这个系列。</p>
+<blockquote>
+<p>在中文小说看用词和汉语写作 在英文小说看点子和描写思路</p>
+</blockquote>
+<p>想搞这个系列的原因是觉得自己不能不看文字介质的艺术作品。<br>但是我真的看不下去小说，大概就是觉得我不想被其他人干扰探索进程（详见写作技巧贴）<br>所以我准备慢慢来。</p>
+<p>使用的工具是微信读书。感觉还挺方便的。</p>
+<p>这一篇其实不算是读后感，或者说这篇的读后感形式是将阅读经历新鲜转化成的“圣巢AU文”。<br>要是真的有文章能让我脱离圣巢专门写关于这篇文章（小说）本身的读后感，也不是不可以。</p>
+<hr>
+<p>看了一点的《我与地坛》，目前大概算是读完了（后面就不感兴趣了（大概））<br>就想到<br>呈接羽化失败的点子，因此陛下没能成为圣巢君主——没能建立起圣巢的可能性。然后我也想再复兴一下原作考据向（写太多非原作向了）。</p>
+<blockquote>
+<p>或许这样的“圣巢”还是一片蛮荒之地，被蛾子（辐光）所统治吧。</p>
+</blockquote>
+<p>一开始想的是以陛下为第一人称来写，毕竟作者也是第一人称的口吻，<br>但后来忽然又觉得可以从阿卢的角度来写。这是因为当时脑到了陛下和阿卢会是什么关系，以及陛下如果如此剖析自己的话，会不会又变成小受（？）毕竟原作者还是感情充沛的——太过充沛了。</p>
+<blockquote>
+<p>看到他的时候，这只似乎早已被丢弃的、小得像玩偶一样的虫子静静躺在<span class="hint--info hint--rounded hint--top" data-hint="是的当时还是
+类人世界观" ontouchstart>轮椅</span>上，毫无生气。那些白色光滑的几丁质如同热熔的泥塑被随意的揉捏、拼补在一起，高于184摄氏度的重度烧伤。</p>
+</blockquote>
+<p>其实不是烧伤而是羽化失败。</p>
+<p>然后是陛下和夫人的关系：</p>
+<blockquote>
+<blockquote>
+<p>被命运击昏了头，一心以为自己是世上最不幸的一个，不知道儿子的不幸在母亲那儿总是要加倍的。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>莫非她来此世上只是为了替儿子担忧，却不该分享我的一点点快乐？</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>来找我又不想让我发觉，只要见我还好好地在这园子里，她就悄悄转身回去，我看见过几次她的背影。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>她没看见我时我已经看见她了，待我看见她也看见我了我就不去看她，过一会儿我再抬头看她就又看见她缓缓离去的背影。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>我单是无法知道有多少回她没有找到我。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>有一回我坐在矮树丛中，树丛很密，我看见她没有找到我；她一个人在园子里走，走过我的身旁，走过我经常待的一些地方，步履茫然又急迫。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>我不知道她已经找了多久还要找多久，我不知道为什么我决意不喊她——但这绝不是小时候的捉迷藏，这也许是出于长大了的男孩子的倔强或羞涩？但这倔强只留给我痛悔，丝毫也没有骄傲。我真想告诫所有长大了的男孩子，千万不要跟母亲来这套倔强，羞涩就更不必，我已经懂了可我已经来不及了。 </p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>我放下书，想，这么大一座园子，要在其中找到她的儿子，母亲走过了多少焦灼的路。多年来我头一次意识到，这园中不单是处处都有过我的车辙，有过我的车辙的地方也都有过母亲的脚印。 </p>
+</blockquote>
+</blockquote>
+<p>夫人在这个AU里会觉得是自己没能保护好成蛹的陛下（这里没有成茧），造成了他的羽化失败。<br>顺便一提羽化失败的设定，我想说这也是影响了陛下的思想（思考能力（也就是痴呆，当然这个就仅限于阿卢做主角））的，毕竟直接导致他无法称王，但是又觉得隐喻不太好。毁容是肯定要毁的，但是应该也仅限于此，光还是有的，思想也是有的，只不过，呃，不能移动之类的？就需要再考虑一下。<br>然后陛下外形应该是毁容，无翅（本来有但是因为只是一团未成形的累赘，被夫人修剪掉了），有勉强能抓握的手但是足部是基本没了的，角却意外地完好（要不要用从夫人指缝间流下成型的这个设定再说）<br>然后夫人会带着陛下<del>“藏在”</del>隐居在现在的王后花园，照顾陛下，期待着他有一天能好起来。</p>
+<p>陛下和流浪者/阿卢的关系：</p>
+<blockquote>
+<blockquote>
+<p>不过他们比我守时。我什么时间都可能来，他们则一定是在暮色初临的时候。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>我相信他们一定对我有印象，但是我们没有说过话，我们互相都没有想要接近的表示。十五年中，他们或许注意到一个小伙子进入了中年，我则看着一对令人羡慕的中年情侣不觉中成了两个老人。 </p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>日子久了，我感到我们都有结识的愿望，但似乎都不知如何开口，于是互相注视一下终又都移开目光擦身而过；这样的次数一多，便更不知如何开口了</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>没有特点的日子，我们互相点了一下头，他说：“你好。”我说：“你好。”他说：“回去啦？”我说：“是，你呢？”他说：“我也该回去了。”我们都放慢脚步（其实我是放慢车速），想再多说几句，但仍然是不知从何说起，这样我们就都走过了对方，又都扭转身子面向对方。他说：“那就再见吧。”我说：“好，再见。”便互相笑笑各走各的路了</p>
+</blockquote>
+</blockquote>
+<p>但是阿卢我想设定的是（毕竟还是被奴役的（野兽）甲虫）不小心踩空掉到了“井”里：</p>
+<blockquote>
+<p>这一切都开始于一个<span class="hint--info hint--rounded hint--top" data-hint="1是失足的阿卢
+2是羽化失败的陛下" ontouchstart>错误</span>。</p>
+</blockquote>
+<p>所以他会和陛下有更深厚的关系而不只是点头之交。</p>
+<h1 id="摘抄"><a href="#摘抄" class="headerlink" title="摘抄"></a>摘抄</h1><p>◆ 《我与地坛》史铁生</p>
+<p>Se描写：</p>
+<blockquote>
+<blockquote>
+<p>它一面剥蚀了古殿檐头浮夸的琉璃，淡褪了门壁上炫耀的朱红，坍圮了一段段高墙又散落了玉砌雕栏，祭坛四周的老柏树愈见苍幽，到处的野草荒藤也都茂盛得自在坦荡。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>园墙在金晃晃的空气中斜切下一溜阴凉</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>满园中播散着熨帖而微苦的味道……味道不能写只能闻，要你身临其境去闻才能明了。味道甚至是难于记忆的，只有你又闻到它你才能记起它的全部情感和意蕴。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>一长一短两个身影恰似钟表的两支指针</p>
+</blockquote>
+</blockquote>
+<p>Si句子（经历与经验）：</p>
+<blockquote>
+<blockquote>
+<p>第一年他在春节环城赛上跑了第十五名，他看见前十名的照片都挂在了长安街的新闻橱窗里，于是有了信心。第二年他跑了第四名，可是新闻橱窗里只挂了前三名的照片，他没灰心。第三年他跑了第七名，橱窗里挂前六名的照片，他有点儿怨自己。第四年他跑了第三名，橱窗里却只挂了第一名的照片。第五年他跑了第一名——他几乎绝望了，橱窗里只有一幅环城赛群众场面的照片。那些年我们俩常一起在这园子里待到天黑，开怀痛骂，骂完沉默着回家，分手时再互相叮嘱：先别去死，再试着活一活看。现在他已经不跑了，年岁太大了，跑不了那么快了。最后一次参加环城赛，他以三十八岁之龄又得了第一名并破了纪录，有一位专业队的教练对他说：“我要是十年前发现你就好了。”他苦笑一下什么也没说，只在傍晚又来这园中找到我，把这事平静地向我叙说一遍。</p>
+</blockquote>
+</blockquote>
+<p>N系句子：</p>
+<blockquote>
+<blockquote>
+<p>十五年中，这古园的形体被不能理解它的人肆意雕琢，幸好有些东西是任谁也不能改变它的。</p>
+</blockquote>
+</blockquote>
+<p>我想到大沃姆，是的。</p>
+<blockquote>
+<blockquote>
+<p>被命运击昏了头，一心以为自己是世上最不幸的一个，不知道儿子的不幸在母亲那儿总是要加倍的。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>莫非她来此世上只是为了替儿子担忧，却不该分享我的一点点快乐？</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>来找我又不想让我发觉，只要见我还好好地在这园子里，她就悄悄转身回去，我看见过几次她的背影。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>她没看见我时我已经看见她了，待我看见她也看见我了我就不去看她，过一会儿我再抬头看她就又看见她缓缓离去的背影。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>我单是无法知道有多少回她没有找到我。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>有一回我坐在矮树丛中，树丛很密，我看见她没有找到我；她一个人在园子里走，走过我的身旁，走过我经常待的一些地方，步履茫然又急迫。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>我不知道她已经找了多久还要找多久，我不知道为什么我决意不喊她——但这绝不是小时候的捉迷藏，这也许是出于长大了的男孩子的倔强或羞涩？但这倔强只留给我痛悔，丝毫也没有骄傲。我真想告诫所有长大了的男孩子，千万不要跟母亲来这套倔强，羞涩就更不必，我已经懂了可我已经来不及了。 </p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>我放下书，想，这么大一座园子，要在其中找到她的儿子，母亲走过了多少焦灼的路。多年来我头一次意识到，这园中不单是处处都有过我的车辙，有过我的车辙的地方也都有过母亲的脚印。 </p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>不过他们比我守时。我什么时间都可能来，他们则一定是在暮色初临的时候。</p>
+</blockquote>
+</blockquote>
+<p>我没有工作，但他们却能很好的融入社会…</p>
+<blockquote>
+<blockquote>
+<p>我相信他们一定对我有印象，但是我们没有说过话，我们互相都没有想要接近的表示。十五年中，他们或许注意到一个小伙子进入了中年，我则看着一对令人羡慕的中年情侣不觉中成了两个老人。 </p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>日子久了，我感到我们都有结识的愿望，但似乎都不知如何开口，于是互相注视一下终又都移开目光擦身而过；这样的次数一多，便更不知如何开口了</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>没有特点的日子，我们互相点了一下头，他说：“你好。”我说：“你好。”他说：“回去啦？”我说：“是，你呢？”他说：“我也该回去了。”我们都放慢脚步（其实我是放慢车速），想再多说几句，但仍然是不知从何说起，这样我们就都走过了对方，又都扭转身子面向对方。他说：“那就再见吧。”我说：“好，再见。”便互相笑笑各走各的路了。</p>
+</blockquote>
+</blockquote>
 
-    };
+    </div>
 
-    myChart.setOption(option);
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/ab228.html">【硬读文章】我与地坛</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2023年02月28日 - 14:22</p>
+ <p><span>最后更新:</span>2023年02月28日 - 15:22</p>
+ <p><span>原始链接:</span><a href="/p/ab228.html" title="【硬读文章】我与地坛">https://mebilychen.github.io/p/ab228.html</a>
+    
+ </p>
+ <p><span>许可协议:</span>除非文章内另行声明，遵守 cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script data-pjax> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
 </script>
-            </div>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E8%80%83%E6%8D%AE/" rel="tag"><i class="fa fa-tag"></i> 考据</a>
+              <a href="/tags/%E7%A7%AF%E7%B4%AF%E6%9C%AC/" rel="tag"><i class="fa fa-tag"></i> 积累本</a>
+              <a href="/tags/%E5%86%99%E4%BD%9C/" rel="tag"><i class="fa fa-tag"></i> 写作</a>
+              <a href="/tags/%E5%8D%A2%E7%91%9E%E6%81%A9/" rel="tag"><i class="fa fa-tag"></i> 卢瑞恩</a>
+              <a href="/tags/%E7%99%BD%E5%90%8E/" rel="tag"><i class="fa fa-tag"></i> 白后</a>
+              <a href="/tags/%E9%89%B4/" rel="tag"><i class="fa fa-tag"></i> 鉴</a>
+              <a href="/tags/AU%E7%82%B9%E5%AD%90/" rel="tag"><i class="fa fa-tag"></i> AU点子</a>
+              <a href="/tags/%E4%B9%A6/" rel="tag"><i class="fa fa-tag"></i> 书</a>
+              <a href="/tags/%E6%96%87%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> 文学</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/p/1547.html" rel="next" title="【AI拼贴画】一些灵感和其他见证历史">
+      【AI拼贴画】一些灵感和其他见证历史 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
 
 
           </div>
@@ -527,6 +793,7 @@ p.spoiler {
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%91%98%E6%8A%84"><span class="nav-text">摘抄</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
