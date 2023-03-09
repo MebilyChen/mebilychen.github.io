@@ -66,7 +66,7 @@
 <meta property="og:image" content="http://cdn.mebilychen.top/image/Works/%E7%A1%AB%E5%8D%A1.png">
 <meta property="og:image" content="http://cdn.mebilychen.top/image/Works/%E5%A5%88%E6%96%AF%EF%BC%88%E6%97%A0%E5%8C%85%EF%BC%89.png">
 <meta property="article:published_time" content="2021-03-09T07:19:00.000Z">
-<meta property="article:modified_time" content="2023-01-29T09:46:15.721Z">
+<meta property="article:modified_time" content="2023-03-09T14:42:37.162Z">
 <meta property="article:author" content="碳素 | mebilyc">
 <meta property="article:tag" content="白王">
 <meta property="article:tag" content="设定">
@@ -426,8 +426,9 @@ p.spoiler {
                     <i class="far fa-calendar-check" style="color:#ff0000"></i>
                   </span>
                   <span class="post-meta-item-text">更新于</span>
-                  <time title="修改时间：2023-01-29 17:46:15" itemprop="dateModified" datetime="2023-01-29T17:46:15+08:00">2023-01-29 17:46:15</time>
+                  <time title="修改时间：2023-03-09 22:42:37" itemprop="dateModified" datetime="2023-03-09T22:42:37+08:00">Today at 10:42 PM</time>
                 </span>
+              
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -448,14 +449,14 @@ p.spoiler {
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>22k</span>
+              <span>23k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>20 分钟</span>
+              <span>21 分钟</span>
             </span>
             <div class="post-description"><center>和RPGMaker等</div>
           
@@ -490,6 +491,21 @@ p.spoiler {
 <p><img data-src="http://cdn.mebilychen.top/image/Works/Unity/%E5%9F%B9%E5%85%BB%E7%9A%BF%E4%B9%8B%E5%89%8D%E8%BE%88%E8%8C%A7%E2%80%9D%EF%BC%9F%E2%80%9C.png"></p>
 <p><img data-src="http://cdn.mebilychen.top/image/game/QQ%E6%88%AA%E5%9B%BE20220315123054.png"></p>
 <p><img data-src="http://cdn.mebilychen.top/image/Works/Unity/QQ%E6%88%AA%E5%9B%BE20220326180259.png"></p>
+<h2 id="出一些设定备忘"><a href="#出一些设定备忘" class="headerlink" title="出一些设定备忘"></a>出一些设定备忘</h2><p>23.3.9忽然又看到这个项目，出一些设定备忘</p>
+<p>其实可以改动的只有两个方面：</p>
+<ul>
+<li>新的表情</li>
+<li>新的演奏音乐</li>
+</ul>
+<p>其中新的表情没啥好改的了，已经加的差不多了（而且要改的话会<strong>超级复杂</strong>，因为涉及到加入图片、调整图片动画、调整参数，要改一堆相关Script（尤其是<code>角色Emo.cs</code>），<del>而且我也差不多忘了怎么加了</del>）</p>
+<p>新的演奏音乐的话，就是在musicList的物体中的list拖入一个新的音乐（音乐文件要提前放进music文件夹），在Script的文件夹下，打开musicControl改变range数值：</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c#">musicCode = Random.Range(<span class="hljs-number">0</span>, <span class="hljs-number">5</span>); <br></code></pre></td></tr></table></figure>
+
+<p>然后如果需要演出效果的话可以在Script - Emotion的文件夹里找到对应的<code>角色Emo.cs</code>加入代码函数、编辑相关参数（比如下例是让夫人在15秒的时候开始浮现出话筒图标（开始独唱））：</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs c#"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">concert</span>()</span>&#123;<br>  concertTime=FindObjectOfType&lt;emotionCenter&gt;().concertTime;<span class="hljs-comment">//获取演奏时间</span><br>  FindObjectOfType&lt;moveLady&gt;().SendMessage(<span class="hljs-string">&quot;stop&quot;</span>, <span class="hljs-number">1</span>);<span class="hljs-comment">//让夫人停止移动（不然会容易触发各种bug）</span><br>  <span class="hljs-keyword">if</span> (FindObjectOfType&lt;emotionCenter&gt;().musicCode==<span class="hljs-number">1</span>)&#123;<span class="hljs-comment">//如果是序号为1的这首歌</span><br>      Invoke(<span class="hljs-string">&quot;emoStarter_sing&quot;</span>,<span class="hljs-number">15f</span>);<span class="hljs-comment">//音乐演奏的15秒时开始“歌唱”，</span><br>      Invoke(<span class="hljs-string">&quot;emoEnder&quot;</span>,concertTime<span class="hljs-number">-15f</span>);<span class="hljs-comment">//音乐演奏结束时取消所有动作</span><br>      &#125;<br>  ladyEmo[<span class="hljs-number">83</span>].SetActive(<span class="hljs-literal">true</span>);<span class="hljs-comment">//“竖琴”对应的图标（夫人的默认动作）</span><br>  InvokeMoveFlag=<span class="hljs-number">1</span>;<br>      &#125;<br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">emoStarter_sing</span>()</span>&#123;ladyEmo[<span class="hljs-number">84</span>].SetActive(<span class="hljs-literal">true</span>);&#125;<span class="hljs-comment">//“歌唱”对应的图标</span><br><br></code></pre></td></tr></table></figure>
+
+
+
 <h1 id="和RPGMaker"><a href="#和RPGMaker" class="headerlink" title="和RPGMaker"></a>和RPGMaker</h1><p>其实想转成Gal，然后就又想转成游戏书了….懒。  </p>
 <h2 id="一些搜集来的技巧"><a href="#一些搜集来的技巧" class="headerlink" title="一些搜集来的技巧"></a>一些搜集来的技巧</h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cucGlhbnNoZW4uY29tL2FydGljbGUvNjczMzQ2ODE1Lw==">导入横版素材（或其他视角）<i class="fa fa-external-link-alt"></i></span></p>
 <h2 id="x-12’00’’00’’’"><a href="#x-12’00’’00’’’" class="headerlink" title="x 12’00’’00’’’"></a>x 12’00’’00’’’</h2><p> <a href="/p/9527.html#%E9%99%9B%E4%B8%8B-x-12min">无tag脑洞↗</a></p>
@@ -558,19 +574,19 @@ p.spoiler {
 <h1 id="16年的橙光AVG"><a href="#16年的橙光AVG" class="headerlink" title="16年的橙光AVG"></a>16年的橙光AVG</h1><center>🎼</center>
 
 
-    <div id="aplayer-PWPydvyD" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="6941238001" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#cdcdcd"></div>
+    <div id="aplayer-JEsNIzgu" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="6941238001" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#cdcdcd"></div>
 
 
-    <div id="aplayer-GuNvISWm" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="000i6gvU30aNpB" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#cdcdcd"></div>
+    <div id="aplayer-TnMWMkKv" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="000i6gvU30aNpB" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#cdcdcd"></div>
 
 <center>🎼</center>
 
 <p>刷新</p>
 
-        <div id="aplayer-nQxNGkLV" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
+        <div id="aplayer-ZQOElXrx" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
 			  <script>
 				  var options = {"narrow":false,"autoplay":false,"showlrc":0,"mode":"random","music":[{"title":"Ch1MaingameAlt","author":"Corpse Party","url":"http://cdn.mebilychen.top/media/Music/Chapter1%20MainBGM%20PSP-AnotherVer%20PSP%E7%89%88_%E5%B0%B8%E4%BD%93%E6%B4%BE%E5%AF%B9%20%E8%A1%80%E8%89%B2%E7%AC%BC%E7%BD%A9%20Chapter1%20MainBGM%20%20-Unknown%20Album-Unknown%20Artist.mp3","pic":"","lrc":""},{"title":"Maingame-live","author":"Corpse Party","url":"http://cdn.mebilychen.top/media/Music/(38)%20%5B%E6%BB%A8%E6%9C%AC%E9%BA%BB%E5%A4%AE%5D%20Chapter%20Mainbgm%20Br%20-live%20Ver-%20-%20%E6%BB%A8%E6%9C%AC%E9%BA%BB%E5%A4%AE.wav","pic":"","lrc":""},{"title":"Ch1Maingame","author":"Corpse Party","url":"http://cdn.mebilychen.top/media/Music/Chapter1%20MainBGM%20PSPver_%E5%B0%B8%E4%BD%93%E6%B4%BE%E5%AF%B9%20%E8%A1%80%E8%89%B2%E7%AC%BC%E7%BD%A9%20Chapter1%20MainBGM%20%20-Unknown%20Album-Unknown%20Artist.mp3","pic":"","lrc":""},{"title":"The Verse of Prayer","author":"中村芽衣子","url":"http://cdn.mebilychen.top/media/Music/%E7%A5%88%E3%82%8A%E3%81%AE%E8%A9%A9%20-the%20verse%20of%20prayer-%20%20-universe-%E4%B8%AD%E6%9D%91%E8%8A%BD%E8%A1%A3%E5%AD%90.mp3","pic":"","lrc":""},{"title":"ChigaUSora（不一样的天空）","author":"Unknown","url":"http://cdn.mebilychen.top/media/Music/%E9%81%95%E3%81%86%E7%A9%BA%20%20-Unknown%20Album-Unknown%20Artist.mp3","pic":"","lrc":""},{"title":"雪原のKaLuMa - Snow Storm","author":"今井麻美","url":"http://cdn.mebilychen.top/media/Music/%E9%9B%AA%E5%8E%9F%E3%81%AE%E3%82%AB%E3%83%AB%E3%83%9E(%EF%BD%9ESnow%20Storm%EF%BD%9E)%20%20-Aroma%20of%20happiness-%E4%BB%8A%E4%BA%95%E9%BA%BB%E7%BE%8E.mp3","pic":"","lrc":""}]};
-				  options.element = document.getElementById("aplayer-nQxNGkLV");
+				  options.element = document.getElementById("aplayer-ZQOElXrx");
 				  var ap = new APlayer(options);
 			    window.aplayers || (window.aplayers = []);
 				  window.aplayers.push(ap);
@@ -729,7 +745,7 @@ p.spoiler {
  <p><span>本文标题:</span><a href="/p/ba1a.html">【独游梦】陛下游戏，Unity2d</a></p>
  <p><span>文章作者:</span>碳素 @mebilyc</p>
  <p><span>发布时间:</span>2021年03月09日 - 15:19</p>
- <p><span>最后更新:</span>2023年01月29日 - 17:46</p>
+ <p><span>最后更新:</span>2023年03月09日 - 22:42</p>
  <p><span>原始链接:</span><a href="/p/ba1a.html" title="【独游梦】陛下游戏，Unity2d">https://mebilychen.github.io/p/ba1a.html</a>
     
  </p>
@@ -846,7 +862,7 @@ p.spoiler {
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Unity2d"><span class="nav-text">Unity2d</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0s"><span class="nav-text">观察日记s</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%92%8CRPGMaker"><span class="nav-text">和RPGMaker</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E6%90%9C%E9%9B%86%E6%9D%A5%E7%9A%84%E6%8A%80%E5%B7%A7"><span class="nav-text">一些搜集来的技巧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#x-12%E2%80%9900%E2%80%99%E2%80%9900%E2%80%99%E2%80%99%E2%80%99"><span class="nav-text">x 12’00’’00’’’</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#15%E5%B9%B4%E7%9A%84RPGMaker"><span class="nav-text">15年的RPGMaker</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#16%E5%B9%B4%E7%9A%84%E6%A9%99%E5%85%89AVG"><span class="nav-text">16年的橙光AVG</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%9C%E7%BD%97%E5%88%B0%E7%9A%84%E8%AE%BE%E5%AE%9A"><span class="nav-text">搜罗到的设定</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AD%A3%E6%96%87"><span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7%E7%B1%BB%EF%BC%9A"><span class="nav-text">属性类：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E5%AD%A6%E4%B9%A0%EF%BC%9A"><span class="nav-text">可学习：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E5%8F%AF%E5%AD%A6%E4%B9%A0%EF%BC%9A"><span class="nav-text">不可学习：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lore%EF%BC%9A"><span class="nav-text">Lore：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%8A%9F%E8%83%BD%E7%B1%BB%EF%BC%9A"><span class="nav-text">基本功能类：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%95%E6%9C%AF%E5%BD%A2%E5%BC%8F%EF%BC%9A"><span class="nav-text">法术形式：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%99%84%E5%8A%A0%E6%95%88%E6%9E%9C%E7%B1%BB%EF%BC%9A"><span class="nav-text">附加效果类：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E5%8F%AF%E5%AD%A6%E4%B9%A0%EF%BC%9A-1"><span class="nav-text">不可学习：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lore%EF%BC%9A-1"><span class="nav-text">Lore：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E9%9D%9E%E6%B3%95%E6%9C%AF%E5%8A%A0%E6%88%90%EF%BC%9A"><span class="nav-text">其他非法术加成：</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Unity2d"><span class="nav-text">Unity2d</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%82%E5%AF%9F%E6%97%A5%E8%AE%B0s"><span class="nav-text">观察日记s</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BA%E4%B8%80%E4%BA%9B%E8%AE%BE%E5%AE%9A%E5%A4%87%E5%BF%98"><span class="nav-text">出一些设定备忘</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%92%8CRPGMaker"><span class="nav-text">和RPGMaker</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E6%90%9C%E9%9B%86%E6%9D%A5%E7%9A%84%E6%8A%80%E5%B7%A7"><span class="nav-text">一些搜集来的技巧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#x-12%E2%80%9900%E2%80%99%E2%80%9900%E2%80%99%E2%80%99%E2%80%99"><span class="nav-text">x 12’00’’00’’’</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#15%E5%B9%B4%E7%9A%84RPGMaker"><span class="nav-text">15年的RPGMaker</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#16%E5%B9%B4%E7%9A%84%E6%A9%99%E5%85%89AVG"><span class="nav-text">16年的橙光AVG</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%9C%E7%BD%97%E5%88%B0%E7%9A%84%E8%AE%BE%E5%AE%9A"><span class="nav-text">搜罗到的设定</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AD%A3%E6%96%87"><span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7%E7%B1%BB%EF%BC%9A"><span class="nav-text">属性类：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E5%AD%A6%E4%B9%A0%EF%BC%9A"><span class="nav-text">可学习：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E5%8F%AF%E5%AD%A6%E4%B9%A0%EF%BC%9A"><span class="nav-text">不可学习：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lore%EF%BC%9A"><span class="nav-text">Lore：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%8A%9F%E8%83%BD%E7%B1%BB%EF%BC%9A"><span class="nav-text">基本功能类：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%95%E6%9C%AF%E5%BD%A2%E5%BC%8F%EF%BC%9A"><span class="nav-text">法术形式：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%99%84%E5%8A%A0%E6%95%88%E6%9E%9C%E7%B1%BB%EF%BC%9A"><span class="nav-text">附加效果类：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E5%8F%AF%E5%AD%A6%E4%B9%A0%EF%BC%9A-1"><span class="nav-text">不可学习：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lore%EF%BC%9A-1"><span class="nav-text">Lore：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E9%9D%9E%E6%B3%95%E6%9C%AF%E5%8A%A0%E6%88%90%EF%BC%9A"><span class="nav-text">其他非法术加成：</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -939,13 +955,13 @@ p.spoiler {
       </div>
       <ul class="links-of-updated-posts-list">
           <li class="links-of-updated-posts-item">
+          <a href="/p/ba1a.html" title="p&#x2F;ba1a.html">【独游梦】陛下游戏，Unity2d</a>
+        </li>
+          <li class="links-of-updated-posts-item">
           <a href="/p/754d.html" title="p&#x2F;754d.html">关于我的“竞争模式”</a>
         </li>
           <li class="links-of-updated-posts-item">
           <a href="/p/7641.html" title="p&#x2F;7641.html">讨论下帅气的单词和句子们</a>
-        </li>
-          <li class="links-of-updated-posts-item">
-          <a href="/p/786b.html" title="p&#x2F;786b.html">如何写好爽文/忧伤文学/被窝文学</a>
         </li>
       </ul>
     </div>
@@ -1012,7 +1028,7 @@ p.spoiler {
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">42:05</span>
+    <span title="站点阅读时长">42:06</span>
 </div>
 
 
