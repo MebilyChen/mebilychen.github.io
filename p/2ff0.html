@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="article">
+<meta property="og:title" content="【参考】普通昆虫&#x2F;行为学笔记+Art">
+<meta property="og:url" content="https://mebilychen.github.io/p/2ff0.html">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:locale">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E6%AF%9B%E7%90%83%E8%99%AB%E8%99%AB6.24.jpg">
+<meta property="og:image" content="https://cdn.mebilychen.top/image/zaizai/sino%40Mindhack.png">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/QQ%E6%88%AA%E5%9B%BE20221207194324.png">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/bee%2B%E5%86%AC%E8%99%AB%E5%A4%8F%E8%8D%89.png">
+<meta property="og:image" content="https://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_4853(20230201-182401).JPEG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_3850(20221014-202105).JPEG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E8%9E%B3%E8%9E%825.221.png">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E8%9E%B3%E8%9E%825.222.jpg">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E7%BB%BF%E5%8F%B6%E8%9B%BE.PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/7.31%E8%9D%B6%E8%9D%B6.jpg">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E9%AA%B7%E9%AB%85%E8%9B%BE.JPEG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_2980(20220714-073813).PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/6.19%E7%9A%84%E8%99%AB%E8%99%AB%E5%90%88%E9%9B%861.png">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E9%92%A2%E9%93%81%E8%99%AB%E8%99%AB.png">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E8%9B%BE%E5%AD%90426%E8%A1%A5%E4%B8%80%E4%B8%8B.PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E8%99%AB%E8%99%AB7.14.png">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_3960(20221027-114314).PNG">
+<meta property="og:image" content="https://i.loli.net/2021/05/17/6ctge3HLQATxBMK.jpg">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_4676.PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_3140(20220726-181258).PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E9%9B%8C%E5%85%89%E8%90%A4.png">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E9%BC%A0%E5%A6%87%E7%BB%93%E6%9E%84.jpg">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_9930(20211214-212849).PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E5%90%84%E7%A7%8D%E8%99%AB.jpg">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_8892(20211102-113559).PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E8%9E%B3%E8%9E%82%E5%92%8C%E5%85%B6%E4%BB%96.jpg">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E8%9E%82%E5%90%83%E8%9E%82.png">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E8%9C%98%E8%9B%9B.jpg">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_4016.GIF">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E8%9B%BE%E5%AD%90.jpg">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E6%AF%9B%E8%99%AB%E5%92%8C%E8%9B%B9.jpg">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_0388(20220113-092639).PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_4497(20221206-210443).PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E8%9C%9C%E8%9C%82.jpg">
+<meta property="og:image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fnimg.ws.126.net%2F%3Furl%3Dhttp%253A%252F%252Fdingyue.ws.126.net%252F2021%252F0617%252F8d47deadj00quu9zf0016c000hs00dwc.jpg%26thumbnail%3D650x2147483647%26quality%3D80%26type%3Djpg&refer=http%3A%2F%2Fnimg.ws.126.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1637828684&t=dd6de838ca744c6dad90b6e1e4014e12">
+<meta property="og:image" content="https://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E8%99%AB%E8%99%AB-%E8%93%9D%E8%83%B8%E6%9C%A8%E8%9C%82.png">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_8805(20211029-135052).PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E8%B6%B3%E5%92%8C%E9%A2%9A2.jpg">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E8%B6%B3%E5%92%8C%E9%A2%9A.1psb.jpg">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E8%85%BF%E3%80%81%E7%88%AA%E5%AD%90%E3%80%81%E8%99%AB.jpg">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E8%99%AB%E8%A1%A510.10.jpg">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E8%99%AB%E8%99%AB%E9%80%A0%E5%9E%8B.jpg">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/2.19%E7%BE%BD%E5%8C%96%E5%92%8C%E8%9B%B9.jpg">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/2.19treehopper.jpg">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_7635(20210830-163901).PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_7636(20210830-163922).PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_7637(20210830-163957).PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_7638(20210830-164013).PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_7639(20210830-164028).PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_7640(20210830-164106).PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_7641(20210830-164139).PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_7643(20210830-164319).PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E7%9A%87%E5%B0%BE%E7%8B%AD%E8%9D%B6%E6%AF%9B%E8%99%AB.JPG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_7988(20210926-045812).PNG">
+<meta property="og:image" content="https://i.loli.net/2021/07/10/g4s62MjXicFvHPl.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/07/10/zKQ2eBWcTsaVLJG.jpg">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_3456(20220907-123634).JPEG">
+<meta property="article:published_time" content="2021-04-03T11:05:00.000Z">
+<meta property="article:modified_time" content="2023-04-10T01:41:41.852Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="设定">
+<meta property="article:tag" content="白王">
+<meta property="article:tag" content="角色研究">
+<meta property="article:tag" content="积累本">
+<meta property="article:tag" content="绘">
+<meta property="article:tag" content="绘画参考">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E6%AF%9B%E7%90%83%E8%99%AB%E8%99%AB6.24.jpg">
+
+<link rel="canonical" href="https://mebilychen.github.io/p/2ff0.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : '中文'
+  };
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    
+      if (NexT.utils.hasMobileUA()) return;
+    
+    let time, hidden, visible, title = document.title;
+    let favicon = document.querySelector('link[rel="icon"]');
+    
+      hidden = ["盯————","*探*","?","......","*观察*"];
+      visible = ["*偏转视线*","*缩*","*强装镇定*","！","*低头*"];
+    
+    let random = t => t[Math.floor(Math.random() * t.length)];
+    const change = () => {
+      if (document.hidden) {
+        favicon.setAttribute('href', '/images/favicon-32x32-king-black.png');
+        
+          document.title = random(hidden);
+        
+        clearTimeout(time);
+      } else {
+        favicon.setAttribute('href', '/images/favicon-32x32-brand-black.png');
+        
+          document.title = random(visible);
+        
+        time = setTimeout(() => {
+          document.title = '碳素的小作坊';
+        }, 1000);
+      }
+    }
+    document.addEventListener('visibilitychange', change, false);
+  });
+</script>
+
+  <title>【参考】普通昆虫/行为学笔记+Art | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<style type="text/css">
+.spoiler {
+  display: inline-flex;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}</style><script src="/assets/js/DPlayer.min.js"></script></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;调谐中...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">175</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">168</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-image fa-fw"></i>画廊</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/random.html" rel="section"><i class="fa fa-question fa-fw"></i>抽</a>
+
+  </li>
+        <li class="menu-item menu-item-lang">
+
+    <a href="/en/" rel="section"><i class="fa fa-globe fa-fw"></i>->English</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-17081-597255-1305127431.cos-website.ap-hongkong.myqcloud.com' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/2ff0.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【参考】普通昆虫/行为学笔记+Art
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-04-03 19:05:00" itemprop="dateCreated datePublished" datetime="2021-04-03T19:05:00+08:00">2021-04-03</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2023-04-10 09:41:41" itemprop="dateModified" datetime="2023-04-10T09:41:41+08:00">2023-04-10 09:41:41</time>
+                </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%90%8C%E4%BA%BA%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">同人研究笔记</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>6.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>6 分钟</span>
+            </span>
+            <div class="post-description"><center></div>
+          
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%BE%E5%AE%9A/" rel="tag"><i class="fa fa-tag"></i> 设定</a>
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E8%A7%92%E8%89%B2%E7%A0%94%E7%A9%B6/" rel="tag"><i class="fa fa-tag"></i> 角色研究</a>
+              <a href="/tags/%E7%A7%AF%E7%B4%AF%E6%9C%AC/" rel="tag"><i class="fa fa-tag"></i> 积累本</a>
+              <a href="/tags/%E7%BB%98/" rel="tag"><i class="fa fa-tag"></i> 绘</a>
+              <a href="/tags/%E7%BB%98%E7%94%BB%E5%8F%82%E8%80%83/" rel="tag"><i class="fa fa-tag"></i> 绘画参考</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>2021.10.25 虫虫绘画参考搬家啦！  </p>
+<p>突然发现很尴尬的一点圣巢那团不是甲虫是鼠妇<br>大家都说是pillbug<br>鼠妇<br>没翅膀<br>真nm尴尬搞了半天卢子的物种都错了<br>圣巢卫兵有翅膀那些应该是甲虫 其他不会飞的是潮虫<br>甲:装甲</p>
+<p>好讨厌啊我云盘库的文件夹名字是“虫子参考”<br>明明是虫虫参考</p>
+<p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E6%AF%9B%E7%90%83%E8%99%AB%E8%99%AB6.24.jpg" alt="萌虻镇楼"></p>
+<h1 id="虫虫眼睛"><a href="#虫虫眼睛" class="headerlink" title="虫虫眼睛"></a>虫虫眼睛</h1><p><img data-src="https://cdn.mebilychen.top/image/zaizai/sino%40Mindhack.png" alt="sino@Mindhack"></p>
+<h1 id="蚂蚁"><a href="#蚂蚁" class="headerlink" title="蚂蚁"></a>蚂蚁</h1><h2 id="奴役蚂蚁"><a href="#奴役蚂蚁" class="headerlink" title="奴役蚂蚁"></a>奴役蚂蚁</h2><p>几个点：<br>第一就是女王蚁将自己的翅膀褪去（咬下）才能真正成为女王（有时候是雄蚁为了求爱而任兵蚁把自己翅膀扯下来）<br><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/QQ%E6%88%AA%E5%9B%BE20221207194324.png"></p>
+<p>第二就是蚂蚁的奴役行为：</p>
+<ol>
+<li>奴役行为广泛存在于蚂蚁社会（毕竟是社会性昆虫）</li>
+<li>奴役成为可能是因为它们利用了蚂蚁可被洗脑的理智：信息素。信息素识别在蚂蚁看来比种族还重要（他们不知道种族这一概念）。</li>
+<li>但只有几种专精奴役的蚂蚁，它们为了专精这种能力甚至都不会基本的蚂蚁生存能力，包括如何分工：用食（是的它们只能靠奴隶嘴对嘴喂它们不然会饿死，我没记错的话是因为他们的下颚是专精偷家偷宝宝的而咀嚼不了食物）、建筑、采集、照顾婴儿等等。而且他们很擅长信息素攻击，用信息素迷惑对方造成混乱，但相应的，他们在种族内也失去了一定的社交能力（无法协作）</li>
+<li>专精奴役的蚂蚁的女王也是采用奴役路线：她需要一路深入巢穴，将原女王击败并将其覆盖上（一边咬一边舔）自己的信息素，这样其他蚂蚁就会将其当做自己的女王。特别是当巢穴里有很多女王存在（同时共治）时，她就需要将她们一一击败。这么做（杀死女王）会引来兵蚁杀她，而且她也有可能会被原女王击败。而且如果她将进攻对象选在了太靠近她种族其他女王的领地附近，她就会被绞杀（专精奴役的蚂蚁不允许在一定范围内还有其他专精奴役的蚂蚁）。但其实这种我其实感觉并不是很生气，这还是需要很强能力的。我气的是下面这种：</li>
+<li>掠夺其他蚁巢的宝宝，还特意不会造成很大伤害，就是为了下一次能继续掠夺宝宝（虽然聪明但还是恶毒）。然后他们会将宝宝带回去抹上自己的信息素，给他们洗脑。就让我想到那些傻逼男的（和女的），把陛下偷回家就是为了艹他，还会逼着他说自己就是喜欢被艹（害 这些人要被我骂烂了）（好吧虽然入侵的一方也会有大量伤亡但这种恶毒的钻空子的利用漏洞的（利用漏洞本身虽然是确实很聪明但是你利用漏洞侵害了别人的利益就很恶心就很不社会）行为本身就很恶心——你就不能不做吗。就是那种考试作弊，还不是考试作弊，是考试偷别人试卷，真得是既霍霍别人心情还浪费别人时间精力。那些还赞成这种做法说社达的我下次就出一个游戏让你存档被其他玩家偷）以及下面这种：</li>
+<li>进攻某一族群毫无还手之力的女王（小鬼出圈种族入侵）你装备齐全把傻乎乎胖胖女王gg，篡夺皇位并由于力量悬殊让这种族群没有喘息余地最终造成该种蚂蚁灭绝（没有女王产卵了）然后你也灭绝了（因为你都不会自己照顾自己把自己饿死了）（哈哈哈活该但你因为自己的无知还顺带造成一个无辜种族灭绝真的是很让人生气，上帝看了都大呼卧槽老子的档被我创造的傻逼毁了，我怕不是最大傻逼）</li>
+</ol>
+<h1 id="虫虫x真菌"><a href="#虫虫x真菌" class="headerlink" title="虫虫x真菌"></a>虫虫x真菌</h1><p>被真菌感染的僵尸昆虫，一半的身体都被吃空,但仍然活着。雄性会表现出雌性行为，以此来吸引其他雄性，通过性行为传播真菌</p>
+<h1 id="运动动画参考"><a href="#运动动画参考" class="headerlink" title="运动动画参考"></a>运动动画参考</h1><p>知道有这种东西就行了。  </p>
+<p>刷新看14年一只蝴蝶和Mothra。</p>
+<div id="dplayer44" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer44"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://cdn.mebilychen.top/media/7.2/%E4%B8%80%E5%8F%AA%E8%9D%B4%E8%9D%B62014.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
+<div id="dplayer45" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer45"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/DCFE6AB703665D50BCBD7EC9AF3805FC.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
+<hr>
+<p>有需要的家人也可以看看，是淘宝上12块买来的，虫虫太穷了只能给您(们)省12块钱。  </p>
+<p><span class="exturl" data-url="aHR0cDovL2Nkbi5tZWJpbHljaGVuLnRvcC9kb2MvJUU2JTk4JTg2JUU4JTk5JUFCJUU4JUExJThDJUU0JUI4JUJBJUU1JUFEJUE2LnBkZg==">昆虫行为学<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cDovL2Nkbi5tZWJpbHljaGVuLnRvcC9kb2MvJUU2JTk5JUFFJUU5JTgwJTlBJUU2JTk4JTg2JUU4JTk5JUFCJUU1JUFEJUE2LnBkZg==">普通昆虫学<i class="fa fa-external-link-alt"></i></span></p>
+<p>本来是想分享在lof上，但是吧，呵呵，给我捂嘴了，就只能放在这里啦。  <br>哦哦，这里面并没有提到蛛蛛，因为蛛蛛不是昆虫（虫虫落泪），对于赫拉和小姐姐可以单独查一下相关的信息。</p>
+<h1 id="冬虫夏草"><a href="#冬虫夏草" class="headerlink" title="冬虫夏草"></a>冬虫夏草</h1><p>Entomophthora muscae<br>蝇虫霉</p>
+<p>Cordyceps<br>冬虫夏草</p>
+<p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/bee%2B%E5%86%AC%E8%99%AB%E5%A4%8F%E8%8D%89.png"></p>
+<p>角蝉：可模拟真菌感染昆虫形态</p>
+<h1 id="蛛蛛"><a href="#蛛蛛" class="headerlink" title="蛛蛛"></a>蛛蛛</h1><p>一些国外网站：<br><span class="exturl" data-url="aHR0cHM6Ly93d3cuc3BpZGVyc3dvcmxkcy5jb20v">Spider’s Worlds<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly93d3cudGhvdWdodGNvLmNvbS9wZWFjb2NrLXNwaWRlci00NzY5MzQz">Thought Co.-孔雀蛛<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9zcGlkZXJpZGVudGlmaWNhdGlvbnMuY29tLw==">Spider Identifications<i class="fa fa-external-link-alt"></i></span></p>
+<p>或者在国内搜搜</p>
+<blockquote>
+<p>“节肢动物门分若干个纲,除了昆虫纲的,其他都不是昆虫,常见的如蜘蛛、蜱螨、蜈蚣、马陆、蚰蜒、鼠妇、蝎子、虾、蟹等等。”</p>
+</blockquote>
+<h1 id="螳螂"><a href="#螳螂" class="headerlink" title="螳螂"></a>螳螂</h1><p><img data-src="https://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_4853(20230201-182401).JPEG" alt="好帅！"></p>
+<p>玻璃螳和面包鸟（？）<br><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_3850(20221014-202105).JPEG"></p>
+<p>关注一下，宽翅黎明螳 和 丽斧螳 和 薄翅螳 和 南海透翅螳 和 羽角锥头螳 和 越南小丝螳。  <br><span class="exturl" data-url="aHR0cDovL2Nkbi5tZWJpbHljaGVuLnRvcC9kb2MvJUU0JUI4JUFEJUU1JTlCJUJEJUU4JTlFJUIzJUU4JTlFJTgyXzEzMzIwMjYxLnBkZg==">螳螂图鉴<i class="fa fa-external-link-alt"></i></span>  </p>
+<p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E8%9E%B3%E8%9E%825.221.png"><br><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E8%9E%B3%E8%9E%825.222.jpg"></p>
+<h1 id="蝴蝶-蛾子-蜻蜓"><a href="#蝴蝶-蛾子-蜻蜓" class="headerlink" title="蝴蝶/蛾子/蜻蜓"></a>蝴蝶/蛾子/蜻蜓</h1><video src="http://cdn.mebilychen.top/media/12.2/%E8%9B%BE%E8%9B%BE%E5%B0%96%E5%8F%AB.mp4" preload="metadata" controls playsinline poster>Sorry, your browser does not support the video tag.</video>
+
+<p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E7%BB%BF%E5%8F%B6%E8%9B%BE.PNG" alt="绿叶蛾"></p>
+<p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/7.31%E8%9D%B6%E8%9D%B6.jpg"></p>
+<p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E9%AA%B7%E9%AB%85%E8%9B%BE.JPEG"></p>
+<p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_2980(20220714-073813).PNG" alt="注意外形"></p>
+<p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/6.19%E7%9A%84%E8%99%AB%E8%99%AB%E5%90%88%E9%9B%861.png" alt="混进了脸型，但无妨我还会再粘贴一次"></p>
+<p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E9%92%A2%E9%93%81%E8%99%AB%E8%99%AB.png"></p>
+<p>码。</p>
+<p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E8%9B%BE%E5%AD%90426%E8%A1%A5%E4%B8%80%E4%B8%8B.PNG"></p>
+<h1 id="蝉"><a href="#蝉" class="headerlink" title="蝉"></a>蝉</h1><p>码。</p>
+<h1 id="角蝉"><a href="#角蝉" class="headerlink" title="角蝉"></a>角蝉</h1><p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E8%99%AB%E8%99%AB7.14.png"></p>
+<h1 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h1><p>目前是空的，啊不过翅膀那里可以好好研究一下。本来想起来这两本是因为想看看虫虫怎么吃食的来着。<br>都说捕食者的眼睛长在前面，猎物的眼睛长在两边，那么陛下要放前面还是放两边。  <br>主要放两边的话，头部和口部会像龙那样发展，放前面的话就会更像昆虫那样，头会稍微扁一些，但是整体还是偏圆的（因为王冠的角是围了一圈的…不过也可以探索下扁一些的），嘴的话就会像蚂蚁的颚那样。 <br>目前还是很纠结，因为感觉两种都好可爱，都想要。最近的画风倒是一直把wyrm翻译成龙，或许可以试试翻译成虫？龙配树或者虫配树都是绝配啊（各种意义上）。<br>不过无论是虫是龙，陛下的翅膀一定是虫翅，有六足。</p>
+<p>白后：我捡回家一个虫卵没想到孵出一只幼龙。<br>白后闺蜜：它吃什么？  <br>白后：头发。<br>白后闺蜜：得了吧，哪有吃树的龙。  <br>白后：不信你看。（举起）  <br>幼王：（张牙舞爪）  <br>白后闺蜜：（尖叫）<br>幼王：（尖叫）  <br>白后：（慌忙抱紧幼王）你吓到他了，碧池！</p>
+<h2 id="气管-amp-氧气和体型"><a href="#气管-amp-氧气和体型" class="headerlink" title="气管 &amp; 氧气和体型"></a>气管 &amp; 氧气和体型</h2><p>在昆虫的身体两侧，我们可以找到一些小点，这些小点就是昆虫的气门，空气就是从这里进入到昆虫的体内。与这些气门相连接的是昆虫体内的气管，气管的末端直接连接组织和细胞，所以昆虫的体内就是一个庞杂的网络世界。空气通过气门进入到昆虫体内之后，会通过气管直接供给给各个组织器官。这种独特的呼吸系统使得昆虫对于空气中的氧气含量产生了一种特殊的依赖。因为如果昆虫的体型越大，那么输送氧气的器官就越长，而最终能够到达组织器官的氧气就越少。</p>
+<p>由于这种特性的限制，昆虫的体型与空气中的含氧量是息息相关的。如果空气中的含氧量较低，那么体型过大的昆虫就无法保证所有的组织器官都能够得到充足的氧气，所以器官就会坏死衰竭。我们都知道，在历史上曾经出现过翼展能够达到0.75米的巨脉蜻蜓，而这些巨大的蜻蜓所生活的时代就是距今3亿年左右的石炭纪。而人类通过古气候研究发现，石炭纪大气中的氧气含量大约为35%，远高于现在的21%，所以很多巨型昆虫都出现在那个时期，而后随着大气中氧气含量的降低，昆虫的体型也随之缩小，不过这对于昆虫而言却未必是一件坏事，因为小体型更加灵活，更能够适应环境的变化，这就是昆虫能够成为地球上最成功的生物的第二个因素。</p>
+<h2 id="昆虫行为学"><a href="#昆虫行为学" class="headerlink" title="昆虫行为学"></a>昆虫行为学</h2><p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_3960(20221027-114314).PNG"></p>
+<img data-src="https://i.loli.net/2021/05/17/6ctge3HLQATxBMK.jpg" width="200px">
+
+<p>昆虫死之前…会试着繁衍后代…(如果怀孕了的话)</p>
+<h3 id="性角色逆转"><a href="#性角色逆转" class="headerlink" title="性角色逆转"></a>性角色逆转</h3><p>嘿嘿嘿，嘿嘿嘿嘿，嘿嘿——呜！陛下我错了我不该yy您的——呜！</p>
+<p>就是在某种强迫性场景下（全部都为公虫），其中会有一只转为母。  </p>
+<h3 id="假死（Apparent-Death）"><a href="#假死（Apparent-Death）" class="headerlink" title="假死（Apparent Death）"></a>假死（Apparent Death）</h3><p>受惊假死可真是太可爱了。  </p>
+<h3 id="保护色和伪装"><a href="#保护色和伪装" class="headerlink" title="保护色和伪装"></a>保护色和伪装</h3><p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_4676.PNG" alt="保护色"></p>
+<h3 id="“摇摆步”"><a href="#“摇摆步”" class="headerlink" title="“摇摆步”"></a>“摇摆步”</h3><p>螂的拟风摇摆步。  </p>
+<h3 id="翅的功用"><a href="#翅的功用" class="headerlink" title="翅的功用"></a>翅的功用</h3><p>理论上，双翅的昆虫需要使其中一对翅失去飞行能力，另1对翅才能充分发挥其飞行效能。不然会因为连锁拉伸而使拉力抵消。<br>事实上，昆虫飞行时前、后翅的作用有3种情况。第1类是两对翅均用于飞行且不相关联，如蜻蜓目、部分蜉蝣目、等翅目、脉翅目等低等有翅亚纲的昆虫，这些昆虫除蜻蜓外飞行能力都比较差。<br>第2类是前翅或后翅特化，而只有前翅或后翅用于飞行，如直翅类、鞘翅目、双翅目昆虫等，这些昆虫大都具有较强的飞行能力，尤以双翅目昆虫为最。<br>第3类昆虫是两翅都用于飞行，但以1对翅为主，前、后翅以一定的结构相连锁，如大部分同翅目、半翅目、鳞翅目、膜翅目昆虫等。显然，大多数昆虫以1对翅或在机能上连合成1对的两对翅用作飞行，Rohdendorf (1943)称这种现象为双翅化(dipterization)， 管致和(1959) 曾从功能形态学角度加以详述。</p>
+<h2 id="普通昆虫学"><a href="#普通昆虫学" class="headerlink" title="普通昆虫学"></a>普通昆虫学</h2><h3 id="蜕皮再生"><a href="#蜕皮再生" class="headerlink" title="蜕皮再生"></a>蜕皮再生</h3><p>果然，我就依稀记得有这个功能！  <br>就是蜕皮之后可以把断腿再长出来。  </p>
+<h1 id="虫虫绘画参考（其实上面的也算啦）"><a href="#虫虫绘画参考（其实上面的也算啦）" class="headerlink" title="虫虫绘画参考（其实上面的也算啦）"></a>虫虫绘画参考（其实上面的也算啦）</h1><p><span class="exturl" data-url="aHR0cDovL3d3dy5pbnNlY3RzLnNpdGUv">昆虫图鉴网站<i class="fa fa-external-link-alt"></i></span>  <br>吐槽：这个网站太搞了，又有那么严重的侵权后果，又没有多少原创内容，真的是。  </p>
+<p><span class="exturl" data-url="aHR0cDovL2Nkbi5tZWJpbHljaGVuLnRvcC9kb2MvJUU2JTk4JTg2JUU4JTk5JUFCJUU1JTlCJUJFJUU5JTg5JUI0JUU3JTlGJUEyJUU5JTg3JThGJUU2JThGJTkyJUU1JTlCJUJFLnBkZg==">超高校级的昆虫图鉴PDF<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="虫子参考"><a href="#虫子参考" class="headerlink" title="虫子参考"></a>虫子参考</h2><hr>
+<p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_3140(20220726-181258).PNG"></p>
+<p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E9%9B%8C%E5%85%89%E8%90%A4.png"></p>
+<p>刷新，不要问我为什么会有鳗鱼。  </p>
+<div id="dplayer46" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer46"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://cdn.mebilychen.top/media/%E8%99%AB%E8%99%AB/%E9%B3%97%E9%B1%BC%E6%B8%B8%E5%8A%A8_Trim.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
+<p>刷新，可以作为双腿（四腿）站立的参考。  </p>
+<div id="dplayer47" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer47"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/RPReplay_Final1635056078.MP4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
+<h3 id="鼠妇（和其他能团的）"><a href="#鼠妇（和其他能团的）" class="headerlink" title="鼠妇（和其他能团的）"></a>鼠妇（和其他能团的）</h3><p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E9%BC%A0%E5%A6%87%E7%BB%93%E6%9E%84.jpg" alt="鼠妇"></p>
+<h3 id="蜈蚣"><a href="#蜈蚣" class="headerlink" title="蜈蚣"></a>蜈蚣</h3><p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_9930(20211214-212849).PNG" alt="Mama Centipede"></p>
+<h3 id="未分类虫"><a href="#未分类虫" class="headerlink" title="未分类虫"></a>未分类虫</h3><p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E5%90%84%E7%A7%8D%E8%99%AB.jpg" alt="各种虫10.22"></p>
+<p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_8892(20211102-113559).PNG" alt="各种虫10.22"></p>
+<h3 id="螳螂-1"><a href="#螳螂-1" class="headerlink" title="螳螂"></a>螳螂</h3><p>还有各种虫子站在螳螂身上的图（包括小螳螂），就不贴了。</p>
+<p>下面除了螳螂还有其他混进去的虫虫。忍不住爪。  </p>
+<p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E8%9E%B3%E8%9E%82%E5%92%8C%E5%85%B6%E4%BB%96.jpg"></p>
+<p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E8%9E%82%E5%90%83%E8%9E%82.png" alt="二螂相遇，必有一攻"></p>
+<hr>
+<h3 id="蜘蛛"><a href="#蜘蛛" class="headerlink" title="蜘蛛"></a>蜘蛛</h3><p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E8%9C%98%E8%9B%9B.jpg"></p>
+<p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_4016.GIF"></p>
+<p>刷新看蛛蛛凝视和蛛蛛拥抱：    </p>
+<div id="dplayer48" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer48"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://cdn.mebilychen.top/media/IMG_1087~1.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
+<div id="dplayer49" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer49"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://cdn.mebilychen.top/media/RPReplay_Final1620583991_Trim.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
+<p>刷新？是超可爱的埋地蛛，前四只爪爪刨地扬灰！还会抖抖！  </p>
+<div id="dplayer50" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer50"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://cdn.mebilychen.top/media/%E8%99%AB%E8%99%AB/%E5%9F%8B%E5%9C%B0%E8%9B%9B.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
+<p>刷新，陷阱蛛。  </p>
+<div id="dplayer51" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer51"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://cdn.mebilychen.top/media/%E8%99%AB%E8%99%AB/%E9%99%B7%E9%98%B1%E8%9C%98%E8%9B%9B_Trim.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
+
+
+<h3 id="蛾子"><a href="#蛾子" class="headerlink" title="蛾子"></a>蛾子</h3><p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E8%9B%BE%E5%AD%90.jpg"></p>
+<h3 id="毛虫-amp-蛹"><a href="#毛虫-amp-蛹" class="headerlink" title="毛虫 &amp; 蛹"></a>毛虫 &amp; 蛹</h3><p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E6%AF%9B%E8%99%AB%E5%92%8C%E8%9B%B9.jpg"></p>
+<h3 id="蝴蝶"><a href="#蝴蝶" class="headerlink" title="蝴蝶"></a>蝴蝶</h3><p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_0388(20220113-092639).PNG"></p>
+<h3 id="蜜蜂"><a href="#蜜蜂" class="headerlink" title="蜜蜂"></a>蜜蜂</h3><p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_4497(20221206-210443).PNG"><br><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E8%9C%9C%E8%9C%82.jpg"></p>
+<p><img data-src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fnimg.ws.126.net%2F%3Furl%3Dhttp%253A%252F%252Fdingyue.ws.126.net%252F2021%252F0617%252F8d47deadj00quu9zf0016c000hs00dwc.jpg%26thumbnail%3D650x2147483647%26quality%3D80%26type%3Djpg&refer=http%3A%2F%2Fnimg.ws.126.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1637828684&t=dd6de838ca744c6dad90b6e1e4014e12"></p>
+<p><img data-src="https://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E8%99%AB%E8%99%AB-%E8%93%9D%E8%83%B8%E6%9C%A8%E8%9C%82.png" alt="蓝胸木蜂"></p>
+<h3 id="爪-腿-颚-虫"><a href="#爪-腿-颚-虫" class="headerlink" title="爪 - 腿 - 颚 - 虫"></a>爪 - 腿 - 颚 - 虫</h3><p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_8805(20211029-135052).PNG"></p>
+<p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E8%B6%B3%E5%92%8C%E9%A2%9A2.jpg" alt="10.25补"></p>
+<p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E8%B6%B3%E5%92%8C%E9%A2%9A.1psb.jpg" alt="10.22补"></p>
+<p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E8%85%BF%E3%80%81%E7%88%AA%E5%AD%90%E3%80%81%E8%99%AB.jpg" alt="10.19补"></p>
+<hr>
+<p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E8%99%AB%E8%A1%A510.10.jpg" alt="10.10补"></p>
+<h3 id="Darksider（-沃姆参考）"><a href="#Darksider（-沃姆参考）" class="headerlink" title="Darksider（+沃姆参考）"></a>Darksider（+沃姆参考）</h3><p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E8%99%AB%E8%99%AB%E9%80%A0%E5%9E%8B.jpg"></p>
+<h3 id="羽化和蛹相关"><a href="#羽化和蛹相关" class="headerlink" title="羽化和蛹相关"></a>羽化和蛹相关</h3><p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/2.19%E7%BE%BD%E5%8C%96%E5%92%8C%E8%9B%B9.jpg"></p>
+<h3 id="角蝉treehopper（和蝴蝶翅膀）"><a href="#角蝉treehopper（和蝴蝶翅膀）" class="headerlink" title="角蝉treehopper（和蝴蝶翅膀）"></a>角蝉treehopper（和蝴蝶翅膀）</h3><p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/2.19treehopper.jpg"></p>
+<h3 id="荧光蠕虫"><a href="#荧光蠕虫" class="headerlink" title="荧光蠕虫"></a>荧光蠕虫</h3><p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_7635(20210830-163901).PNG" alt="荧光蠕虫1"></p>
+<p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_7636(20210830-163922).PNG" alt="荧光蠕虫2"></p>
+<p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_7637(20210830-163957).PNG" alt="荧光蠕虫3"></p>
+<p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_7638(20210830-164013).PNG" alt="荧光蠕虫4"></p>
+<p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_7639(20210830-164028).PNG" alt="荧光蠕虫5"></p>
+<p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_7640(20210830-164106).PNG" alt="荧光蠕虫6"></p>
+<p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_7641(20210830-164139).PNG" alt="荧光蠕虫7"></p>
+<p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_7643(20210830-164319).PNG" alt="荧光蠕虫8"></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZX_j7shf3y8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/%E7%9A%87%E5%B0%BE%E7%8B%AD%E8%9D%B6%E6%AF%9B%E8%99%AB.JPG" alt="皇尾狭蝶幼虫"></p>
+<p><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_7988(20210926-045812).PNG" alt="呃，还挺漂亮的？真菌蜂"></p>
+<hr>
+<p><img data-src="https://i.loli.net/2021/07/10/g4s62MjXicFvHPl.jpg" alt="翅膀"></p>
+<p><img data-src="https://i.loli.net/2021/07/10/zKQ2eBWcTsaVLJG.jpg" alt="破掉的翅膀"></p>
+<p><a href="/p/d5a0.html#Mantis%EF%BC%88Life-Story%EF%BC%89">螳螂</a></p>
+<h3 id="虫子视频"><a href="#虫子视频" class="headerlink" title="虫子视频"></a>虫子视频</h3><p><strong>Insects in flight | 11 incredible species in SLOW MOTION：</strong></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xbOzYMKROs8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p><strong>10 Beautiful Insects You can Keep as Pets：</strong></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RSxH0Oj4JCY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p><strong>Insect Flight | Capturing Takeoff &amp; Flying at 3,200 FPS：</strong></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Cnn9CfsYJqc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p><strong>7 Spectacular Moths in Slow Motion!：</strong></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JQL25_hoQ1k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>艹，蛾子太萌了。还有熊蜂，太萌了。</p>
+<p><strong>21 Most Incredible Moth Species：</strong></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YaI1zE3AOXo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>陛下骂我了，害。  <br>（吸气）<br>\陛下最！可！爱！/</p>
+<p>刷新看蝶蝶<del>灌肠（呕）</del>,（咳咳）重点不是行为，是美丽。</p>
+<div id="dplayer52" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer52"),"theme":"#CDCDCD","loop":true,"video":{"url":"http://cdn.mebilychen.top/media/%E8%99%AB%E8%99%AB/53c48e8af0a3725e2e7dae7b2fd5e989.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+
+
+<h3 id="关于陛下的翅膀纹理"><a href="#关于陛下的翅膀纹理" class="headerlink" title="关于陛下的翅膀纹理"></a>关于陛下的翅膀纹理</h3><p> <a href="/p/e3a42.html#%E5%85%B3%E4%BA%8E%E9%99%9B%E4%B8%8B%E7%9A%84%E7%BF%85%E8%86%80%E7%BA%B9%E7%90%86">转到Wave2</a></p>
+<h3 id="（可怕的）蚂蚁拟人"><a href="#（可怕的）蚂蚁拟人" class="headerlink" title="（可怕的）蚂蚁拟人"></a>（可怕的）蚂蚁拟人</h3><p>在想蚂蚁的“尾巴”但是陛下是龙啊！<br><img data-src="http://cdn.mebilychen.top/image/%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83/IMG_3456(20220907-123634).JPEG"><br>可取之处：</p>
+<ol>
+<li>脚爪</li>
+<li>手爪</li>
+<li>触角</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/2ff0.html">【参考】普通昆虫/行为学笔记+Art</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2021年04月03日 - 19:05</p>
+ <p><span>最后更新:</span>2023年04月10日 - 09:41</p>
+ <p><span>原始链接:</span><a href="/p/2ff0.html" title="【参考】普通昆虫/行为学笔记+Art">https://mebilychen.github.io/p/2ff0.html</a>
+    
+ </p>
+ <p><span>许可协议:</span>除非文章内另行声明，遵守 cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script data-pjax> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%BE%E5%AE%9A/" rel="tag"><i class="fa fa-tag"></i> 设定</a>
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E8%A7%92%E8%89%B2%E7%A0%94%E7%A9%B6/" rel="tag"><i class="fa fa-tag"></i> 角色研究</a>
+              <a href="/tags/%E7%A7%AF%E7%B4%AF%E6%9C%AC/" rel="tag"><i class="fa fa-tag"></i> 积累本</a>
+              <a href="/tags/%E7%BB%98/" rel="tag"><i class="fa fa-tag"></i> 绘</a>
+              <a href="/tags/%E7%BB%98%E7%94%BB%E5%8F%82%E8%80%83/" rel="tag"><i class="fa fa-tag"></i> 绘画参考</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/754d.html" rel="prev" title="关于我的“竞争模式”">
+      <i class="fa fa-chevron-left"></i> 关于我的“竞争模式”
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/4315.html" rel="next" title="【鉴|阅】书架+名句积累+鉴赏">
+      【鉴|阅】书架+名句积累+鉴赏 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%99%AB%E8%99%AB%E7%9C%BC%E7%9D%9B"><span class="nav-text">虫虫眼睛</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%9A%82%E8%9A%81"><span class="nav-text">蚂蚁</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A5%B4%E5%BD%B9%E8%9A%82%E8%9A%81"><span class="nav-text">奴役蚂蚁</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%99%AB%E8%99%ABx%E7%9C%9F%E8%8F%8C"><span class="nav-text">虫虫x真菌</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%90%E5%8A%A8%E5%8A%A8%E7%94%BB%E5%8F%82%E8%80%83"><span class="nav-text">运动动画参考</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%AC%E8%99%AB%E5%A4%8F%E8%8D%89"><span class="nav-text">冬虫夏草</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%9B%9B%E8%9B%9B"><span class="nav-text">蛛蛛</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%9E%B3%E8%9E%82"><span class="nav-text">螳螂</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%9D%B4%E8%9D%B6-%E8%9B%BE%E5%AD%90-%E8%9C%BB%E8%9C%93"><span class="nav-text">蝴蝶&#x2F;蛾子&#x2F;蜻蜓</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%9D%89"><span class="nav-text">蝉</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%92%E8%9D%89"><span class="nav-text">角蝉</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%94%E8%AE%B0"><span class="nav-text">笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B0%94%E7%AE%A1-amp-%E6%B0%A7%E6%B0%94%E5%92%8C%E4%BD%93%E5%9E%8B"><span class="nav-text">气管 &amp; 氧气和体型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%98%86%E8%99%AB%E8%A1%8C%E4%B8%BA%E5%AD%A6"><span class="nav-text">昆虫行为学</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%A7%E8%A7%92%E8%89%B2%E9%80%86%E8%BD%AC"><span class="nav-text">性角色逆转</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%81%87%E6%AD%BB%EF%BC%88Apparent-Death%EF%BC%89"><span class="nav-text">假死（Apparent Death）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%9D%E6%8A%A4%E8%89%B2%E5%92%8C%E4%BC%AA%E8%A3%85"><span class="nav-text">保护色和伪装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%80%9C%E6%91%87%E6%91%86%E6%AD%A5%E2%80%9D"><span class="nav-text">“摇摆步”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BF%85%E7%9A%84%E5%8A%9F%E7%94%A8"><span class="nav-text">翅的功用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%99%AE%E9%80%9A%E6%98%86%E8%99%AB%E5%AD%A6"><span class="nav-text">普通昆虫学</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%9C%95%E7%9A%AE%E5%86%8D%E7%94%9F"><span class="nav-text">蜕皮再生</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%99%AB%E8%99%AB%E7%BB%98%E7%94%BB%E5%8F%82%E8%80%83%EF%BC%88%E5%85%B6%E5%AE%9E%E4%B8%8A%E9%9D%A2%E7%9A%84%E4%B9%9F%E7%AE%97%E5%95%A6%EF%BC%89"><span class="nav-text">虫虫绘画参考（其实上面的也算啦）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%99%AB%E5%AD%90%E5%8F%82%E8%80%83"><span class="nav-text">虫子参考</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%BC%A0%E5%A6%87%EF%BC%88%E5%92%8C%E5%85%B6%E4%BB%96%E8%83%BD%E5%9B%A2%E7%9A%84%EF%BC%89"><span class="nav-text">鼠妇（和其他能团的）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%9C%88%E8%9A%A3"><span class="nav-text">蜈蚣</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%AA%E5%88%86%E7%B1%BB%E8%99%AB"><span class="nav-text">未分类虫</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%9E%B3%E8%9E%82-1"><span class="nav-text">螳螂</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%9C%98%E8%9B%9B"><span class="nav-text">蜘蛛</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%9B%BE%E5%AD%90"><span class="nav-text">蛾子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%9B%E8%99%AB-amp-%E8%9B%B9"><span class="nav-text">毛虫 &amp; 蛹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%9D%B4%E8%9D%B6"><span class="nav-text">蝴蝶</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%9C%9C%E8%9C%82"><span class="nav-text">蜜蜂</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%88%AA-%E8%85%BF-%E9%A2%9A-%E8%99%AB"><span class="nav-text">爪 - 腿 - 颚 - 虫</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Darksider%EF%BC%88-%E6%B2%83%E5%A7%86%E5%8F%82%E8%80%83%EF%BC%89"><span class="nav-text">Darksider（+沃姆参考）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BE%BD%E5%8C%96%E5%92%8C%E8%9B%B9%E7%9B%B8%E5%85%B3"><span class="nav-text">羽化和蛹相关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%92%E8%9D%89treehopper%EF%BC%88%E5%92%8C%E8%9D%B4%E8%9D%B6%E7%BF%85%E8%86%80%EF%BC%89"><span class="nav-text">角蝉treehopper（和蝴蝶翅膀）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8D%A7%E5%85%89%E8%A0%95%E8%99%AB"><span class="nav-text">荧光蠕虫</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%99%AB%E5%AD%90%E8%A7%86%E9%A2%91"><span class="nav-text">虫子视频</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E9%99%9B%E4%B8%8B%E7%9A%84%E7%BF%85%E8%86%80%E7%BA%B9%E7%90%86"><span class="nav-text">关于陛下的翅膀纹理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%88%E5%8F%AF%E6%80%95%E7%9A%84%EF%BC%89%E8%9A%82%E8%9A%81%E6%8B%9F%E4%BA%BA"><span class="nav-text">（可怕的）蚂蚁拟人</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar3.jpg">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">168</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">175</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjEwMTM3MTIxMjdAcXEuY29t" title="E-Mail → mailto:1013712127@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9tZWJpbHkxMzE0" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      猜猜这是什么鬼地方？
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9tZWJpbHljaGVuLmxvZnRlci5jb20v" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;">LOFTER</span>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ab228.html" title="p&#x2F;ab228.html">【硬读文章】我与地坛</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/1547.html" title="p&#x2F;1547.html">【AI拼贴画】一些灵感和其他见证历史</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/9527b.html" title="p&#x2F;9527b.html">【脑洞合集】无Tag的小脑洞们，Encore</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/a6ba.html" title="p&#x2F;a6ba.html">白宫+高塔地图</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ysyg0.html" title="p&#x2F;ysyg0.html">（起稿）守望者@Memo</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ee39.html" title="p&#x2F;ee39.html">王国边境@Memo</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/2eed1.html" title="p&#x2F;2eed1.html">王学与OC（及一些OC设定）</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/p/ce0f2.html" title="p&#x2F;ce0f2.html">AI（角色）写作专场</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/4eb5.html" title="p&#x2F;4eb5.html">遗书</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/9527b.html" title="p&#x2F;9527b.html">【脑洞合集】无Tag的小脑洞们，Encore</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">3m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">45:35</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "站子已虔诚祈祷 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+     //'.site-meta',
+    //'.site-nav',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+<script language="JavaScript">
+var password="";
+password=prompt('Password (Birthday)','');
+if (password != '20180909')   
+{alert("。");    
+window.opener=null;
+window.location.href = "about:blank"; 
+window.close();}  // 密码不正确就关闭//-->
+</script>
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>

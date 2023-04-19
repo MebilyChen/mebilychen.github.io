@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="“陛”不是生僻字吧谷歌">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于我遇到陛下这件事">
+<meta property="og:url" content="https://mebilychen.github.io/p/b6ce.html">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:description" content="“陛”不是生僻字吧谷歌">
+<meta property="og:locale">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/OC/20180909.JPG">
+<meta property="og:image" content="https://i.loli.net/2021/08/23/mBb98cFiT5wvG72.jpg">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/Works/%E8%87%AA%E7%94%BB%E5%83%8F1.JPG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/Works/%E8%87%AA%E7%94%BB%E5%83%8F2.jpg">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/IMG_7558(20210823-203501).PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/IMG_7557(20210823-200751).PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/Works/IMG_7555(20210823-191111).JPG">
+<meta property="og:image" content="https://i.loli.net/2021/07/09/OdCt9l34pMHbEfc.jpg">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/OC/%E5%82%BB%E9%80%BC%E4%B9%8B%E5%8D%B0.PNG">
+<meta property="article:published_time" content="2021-07-09T14:59:00.000Z">
+<meta property="article:modified_time" content="2023-03-13T08:17:46.164Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="陛下和王学家">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://cdn.mebilychen.top/image/OC/20180909.JPG">
+
+<link rel="canonical" href="https://mebilychen.github.io/p/b6ce.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : '中文'
+  };
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    
+      if (NexT.utils.hasMobileUA()) return;
+    
+    let time, hidden, visible, title = document.title;
+    let favicon = document.querySelector('link[rel="icon"]');
+    
+      hidden = ["盯————","*探*","?","......","*观察*"];
+      visible = ["*偏转视线*","*缩*","*强装镇定*","！","*低头*"];
+    
+    let random = t => t[Math.floor(Math.random() * t.length)];
+    const change = () => {
+      if (document.hidden) {
+        favicon.setAttribute('href', '/images/favicon-32x32-king-black.png');
+        
+          document.title = random(hidden);
+        
+        clearTimeout(time);
+      } else {
+        favicon.setAttribute('href', '/images/favicon-32x32-brand-black.png');
+        
+          document.title = random(visible);
+        
+        time = setTimeout(() => {
+          document.title = '碳素的小作坊';
+        }, 1000);
+      }
+    }
+    document.addEventListener('visibilitychange', change, false);
+  });
+</script>
+
+  <title>关于我遇到陛下这件事 | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<style type="text/css">
+.spoiler {
+  display: inline-flex;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;调谐中...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">175</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">168</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-image fa-fw"></i>画廊</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/random.html" rel="section"><i class="fa fa-question fa-fw"></i>抽</a>
+
+  </li>
+        <li class="menu-item menu-item-lang">
+
+    <a href="/en/" rel="section"><i class="fa fa-globe fa-fw"></i>->English</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-17081-597255-1305127431.cos-website.ap-hongkong.myqcloud.com' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/b6ce.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          关于我遇到陛下这件事
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-07-09 22:59:00" itemprop="dateCreated datePublished" datetime="2021-07-09T22:59:00+08:00">2021-07-09</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2023-03-13 16:17:46" itemprop="dateModified" datetime="2023-03-13T16:17:46+08:00">2023-03-13 16:17:46</time>
+                </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A2%B3%E9%85%B8%E7%9A%84%E6%B1%82%E7%94%9F%E4%B9%8B%E8%B7%AF/" itemprop="url" rel="index"><span itemprop="name">碳酸的求生之路</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A2%B3%E9%85%B8%E7%9A%84%E6%B1%82%E7%94%9F%E4%B9%8B%E8%B7%AF/%E6%9C%89%E8%99%AB%E8%99%AB%E9%99%AA%E4%BC%B4/" itemprop="url" rel="index"><span itemprop="name">有虫虫陪伴</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>11k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>10 分钟</span>
+            </span>
+            <div class="post-description"><center>“陛”不是生僻字吧谷歌</div>
+          
+          <div class="post-tags">
+              <a href="/tags/%E9%99%9B%E4%B8%8B%E5%92%8C%E7%8E%8B%E5%AD%A6%E5%AE%B6/" rel="tag"><i class="fa fa-tag"></i> 陛下和王学家</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p>感觉就真的是，理解了什么叫“你一下子点亮了我的世界”现在就是说陛下让我对世界上一切事物（几乎）都有了兴趣，就都想去为了陛下去了解</p>
+<p>我心血来潮在自己脑内深耕了一下同担拒否和梦女的概念（不是）<br>感觉首先我觉得自己不<em>完全</em>算是乙游梦女 毕竟不完全符合“幻想自己和其中人物发生关系”的定义（这里“发生关系”我理解就是恋爱，不然对吧）我感觉自己对陛下的感情比起恋爱更像是一种钻研的热情，所以在阿卢和陛下的关系里我也很希望能表现出这种“一只生物爱上了一个无形无情的定理”的感觉（而且我也很希望自己对陛下能有这种感觉，不可能的恋爱关系，而且自己永远不会被看到），我是明确知道陛下是不会回应我的感情并且我也莫名喜欢他这种表现（梦女估计不是如此），不过要是说“我幻想和陛下发生的关系就是“没有关系的关系”、“自虐式钻研他的关系”、“将其作为自己神明的关系””我也无法反驳。<br>这是梦女，然后说说同担拒否。<br>我一开始不觉得自己是同担拒否，只是觉得自己不喜欢看到别人喜欢（表现为钻研）自己喜欢的东西，自己很有病（啊），后来了解到这个概念我才有些放松下来“原来我没病（没大病）”，我只是（某种程度上的）同担拒否。<br>同担拒否的概念总体上很契合于我，但是我又比较特殊，因为我还有一种“渴望被看到”“渴望被理解”，或者说“渴望有人能和我只聊我自己”（当然为此我也会去适当偿还对方）的欲望，所以我表现得特别别扭，这也是为什么一开始我觉得自己不是同担拒否的原因，我觉得自己并不拒同担，因为同担“更容易和我谈论我自己”“更容易理解我”“更容易看到我”，（最开始我说服自己这是为了更好的钻研陛下，现在就算了），我会采取“既然你取悦了我，我也会取悦你”的方式（现在也是），并不会拒绝主动前来的同担（这里就和拒否的大概念不一样了），但是我本质还是极度拒否的，所以<em>具体过程有时会变得很痛苦</em>，但我又说服自己“只要对方很有礼貌而且和我谈的很来，“是朋友”，那么我可以忍受痛苦，毕竟我也有求于对方”，但是这并不是常态和终解，因为<strong>我只想让你看到我、只想让你理解我、只想让你讨论我</strong>。<br>但这份痛苦最后还是我的痛苦，并不会影响到你（我尽力）<br>所以我就在想要不要声明自己同担拒否，虽然我的态度和行为已经足够说明这一点了，而我又害怕这份“更容易看到我理解我谈论我”的群体就此消失掉；但不声明的话，会不会变得我自己成了那个morally bad guy，就nm难顶。<br>以及这种情况下要不要发布“论文”的问题。我现在是感觉呃，我是可以既圈地自萌同担拒否又发布自己研究成果的，只要不打tag就没问题。毕竟我也没拦着你们喜欢也没拦着你们发布成果，我只是不看罢了，你们要是也拒否，你们也可以不看。<br>tdlr，就类似于，搞科研，我只想要自己搞，不想被他人影响，而且只要我能无视他人，我就不会在乎自己是不是走在最前列，所以我不会去关注科研圈子和其他人成果，我只是圈地自研。其实就是圈地自萌。在我这里搞研究其实就近似等同于搞恋爱。</p>
+<hr>
+<p>考虑到樱桃还给陛下出了头图 感觉还是蛮喜欢陛下的其实</p>
+<p>…（咳）做虫虫要有自知之明</p>
+<p>陛下让我下决心自我学习 克服网络社恐 变得更加网络社恐（谢谢陛下</p>
+<p>回想当初其实喜欢陛下触发条件是蛮特殊的 虽然我喜欢的所有角色基本都满足“神秘莫测且某种程度上压抑感情的intj”但是陛下这里还有点，在看到他表现出“intj式的情感”之前，我一直以为他“很平淡”，所以对他有那种误解的愧疚感 就像有人凭表面现象说infp很乏味一样，我从其他角色嘴里了解到的他也很平淡，我就以为他很平淡<br>尤其是最后发现当时的主流价值观不接受他的时候（还是在苦痛之路之后（我是空洞发售第二年入的圈）） 最后让我选了陛下<br>（我其实到现在都觉得虽然从反战意味上陛下是错了 但这也意味着辐光也有错 不能只针对陛下）（如果不论反战的话陛下真得没有错）（总结来讲就是陛下没有错）</p>
+<p>这里满足第一点只会让我注意到陛下 然后至多让我当时的大本命和他做个crossover（我经常这么干） 满足第二点就会让我开始想给他单独写文（这样竟然还有些找小三（？）的感觉） 最后那点就直接导致陛下成了我大本命（乐）</p>
+<p>当初的陛下是不受人待见的 现在或许好了很多 那么我也得顺应时代和陛下展开新的冒险了（！）</p>
+<p>我其实也在想樱桃是怎么塑造出一个这样的角色来的<br>我感觉dlc之前（苦痛之路之前）他们确实是想（或者根本没去多想）把陛下做成一个乏味且普通的背景板国王角色，这时大家已经对陛下有了自己的印象<br>苦痛之路的时候考虑到要更深刻地描绘陛下 他们就会觉得“啊，如果大家普遍都有这样的刻板印象，不如向反方向稍稍暗示一下好了”这样的感觉/思索</p>
+<hr>
+<p>陛下出生那天正好是新月！</p>
+<p><img data-src="http://cdn.mebilychen.top/image/OC/20180909.JPG"></p>
+<p><img data-src="https://i.loli.net/2021/08/23/mBb98cFiT5wvG72.jpg"></p>
+<p>随心情改的主题曲：  </p>
+
+    <div id="aplayer-gsdxYxjf" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="1344439577" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#cdcdcd"></div> 
+
+<hr>
+<p>6.9</p>
+<p>我感觉陛下看着我就像是星球看着卫星<br>肯定是希望有回应的 期待也是建立在知道一定有回应之上的<br>或者说就是因为我知道他没有完全看到我 所以我才喜欢他？<br>他看着我的眼神从来没有什么感情 这反而让我可以加入很多感情<br>如果他完全没有看着我 我可能也不会这么喜欢他/思考<br>当然这只是我的推论</p>
+<p>22.3.7更自画像：</p>
+<p><img data-src="http://cdn.mebilychen.top/image/Works/%E8%87%AA%E7%94%BB%E5%83%8F1.JPG"></p>
+<p><img data-src="http://cdn.mebilychen.top/image/Works/%E8%87%AA%E7%94%BB%E5%83%8F2.jpg"></p>
+<p>8.23更：  </p>
+<p>2018年9月9日下午4：20，是陛下的破壳日。<br>（顺带一提，是个星期日）<br>出生地是在我心里❤  <br>420，是娘的发售日。<br>破案了！  </p>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 100%;"><img data-src="http://cdn.mebilychen.top/image/IMG_7558(20210823-203501).PNG" alt="总结"></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img data-src="http://cdn.mebilychen.top/image/IMG_7557(20210823-200751).PNG" alt="原图1"></div><div class="group-picture-column" style="width: 50%;"><img data-src="http://cdn.mebilychen.top/image/Works/IMG_7555(20210823-191111).JPG" alt="原图2"></div></div></div></div>
+
+<hr>
+<p>忘了我是不是已经写过关于我和陛下相遇这件事了，害，再写一遍也无妨。<br>看到之前我说自己为什么在团长和陛下之间选择了陛下：“因为陛下没有人爱，所以我想抱抱他。”<br><img data-src="https://i.loli.net/2021/07/09/OdCt9l34pMHbEfc.jpg"><br>真的就是，我记得很清楚，当时我刚过完苦痛之路的时候——那时候我当然随大流喜欢的是团长——看见陛下转头望着前辈，我脑子就“轰”的一声，“卧槽，他其实是——他其实是——”，然后我就问了自己一个问题（现在想想，是一个我是否睁开眼睛自己看世界，或者，更中二的说法，接受陛下的“gift”的问题）“选团长还是选陛下？”，因为除了娘双子，我从来没有同时把两个角色作为自己大本命（当然当时根本没有想他会取代娘双子成为本命）。团长是那种，我一看就知道会是热门角色的（其实这一点当时反而让我感到有些无趣，可能是年龄到了吧，怪盗什么的看得太多了看腻了），但是单说团长这个角色，真的很对我的胃口。当时陛下苦痛之路展现出自己内心之后，他的地位就瞬间提高到和团长等同了。我看着空洞圈，我就问自己，选团长还是选陛下？AO3上陛下只有61篇文（当时，现在700+，emm，说实话，又有丢丢不爽），而团长就多了去了。我记得当时我真的很纠结，一边是设定很多粮更多、帅帅的很能俘获少女心的团长；另一边是田地荒芜、连亲爸爸们都不爱他、冷漠无情的不算多帅的陛下。  <br>现在来看，这真的是改变我人生的选择。或许没有陛下，我永远只是一个伸手党，而不会去想成为一个创作者，更不会克服自己童年（也是因为同人）被“网暴”的恐惧和不安去发布创作；或许没有陛下，现在我心里住着的本命又会换了两番，在一番云雨之后又变回了娘双子（夸一下陛下打断了娘双子7年本命纪录），而不是这位要求严苛的神、国王、父亲；或许没有陛下，我就不会对英语（团长原来是日语，但现在由于陛下的介入，改成法语）、历史、政治、经济、哲学、神学、教育学（只有一点点）感兴趣了（夸一下陛下助我一次裸考过托福）。没有陛下，太温柔的娘双子永远不会要求我建起属于自己的站子，而我永远只是一个同人过客，在世界和世界之间流浪。  <br>有人写，“不能听凡人祷告，不能赐福凡人的神，只沉湎于观想自身的世界，永远保持超然独立的姿态，这样的神是不会有信徒的。”，那我是为何被他吸引呢？或许我也是这样的吧，茕茕孑立，形影相吊，永远等着什么人来敲开我的家门。或许我在他身上看到了我自己，就在看到他回头的那一刻，我脑子“轰”的那一个过程中，我看到了不善言辞，只把温柔藏在心里的自己（嗨呀，自己夸自己真不好意思…陛下比我更自信，这点我要向他靠拢）。在独处的时候，他会摸上树干粗糙的皮肤对它说悄悄话；他会在小虫停在手上的时候，让它顺着手指爬到顶上，看它展翅高飞；他会时刻注意脚下的小生灵，对下雨天不小心乱中踩死的蜗牛说对不起；他会在大太阳底下来回徘徊，最终还是忍住路人可能投来的奇怪眼神把路中间的蚯蚓扔回草丛里；他会对从脚边跳过的麻雀、倒吊的蜘蛛、爬到自己手上的知了、还有其他见到的新奇事物说一句“hey there～”；他会在抽搐的蛾子身上突然看到痛苦和挣扎，感到前所未有的恐惧和不安，从而去尝试安抚它……但一旦和人打起交道，他的心理能量就会见底，整只虫都会蔫下来，以防御的姿态把自己包在壳里。只有选择了他，以诚心待他，才能让他倾听、被他祝福。（就像，感谢陛下在我生日前一天晚上下了场雪，哈哈哈），<br>陛下明明是很优秀的一只小神明，被大家嫌弃、误解、咒骂。这是我最终天平倾倒向他的直接原因。我想尽我所能去保护他、哪怕只是安慰一下他、默默陪伴在他身边。我想让他知道他不孤单，同时也告诉自己我不孤单。或许我下意识是希望能有人也会这么对我吧。我的天平只倾了一点点，但也足以让我做出选择了。  <br>我就想到那次专业分流会上，人居学院的老师们面前一个人都没有，机械和能动的桌位前面人都团成了过河的蚂蚁。我要是人居的老师，我肯定很难受啊，感觉自己的专业被冷落一样…或者真是我想多了，老师们真的不想被大家问问题，陛下也不会理会别人对他的评价。毕竟情感投射是infp的看家本领。<br>但不管怎样，现在已经生米煮熟饭了。我感觉，陛下也应该已经接受我了吧。  <br>我爱上陛下的那一刻，就有一个声音告诉我，已经结束了，我已经不用再流浪了，因为我找到了一位神明。还有什么比神，比宗教更高的阶层？更何况陛下不仅是神，还是国王。他是物质的最高统治者，也是精神的最高信仰。    <br>我只是没想到，这位神明的附加属性竟然是国王和父亲。或许平行世界的另一个我，会找到一个既是指挥官又是哥哥的神明吧（娘双子的克劳斯，在这个世界中我是把自己yy成了双子中的弟弟，总是和哥哥撒娇）。这么一想其实也有共同点，国王是指挥官的进阶，父亲是哥哥的进阶。所以我才说，陛下是我同人旅途的终点。他会是我最后一个本命。</p>
+<p>也可以说，我一直寻找的是一个神+国王+父亲的、有悲惨过去的角色。神决定了他是精神的终极信仰，是适合我这个年龄的追求；国王+父亲分别在物质和家庭中代表了最高地位，是三观和亲情的终极形式；悲惨过去会使我更容易投入感情。只不过樱桃碰巧做出了这样一个属性的角色，我碰巧看见了。而我意识到白王成为“父亲”，拥有“悲惨过去”的那一刻（苦痛之路），就让我的那位“哥哥（半机械人+指挥官+哥哥）”“进化”成了“陛下（神+国王+父亲）”，同时这个陛下顺带用了白王的形象，把这三个属性具现化罢了。</p>
+<p>卧槽，分析的好有道理，我真nb。  </p>
+<p>我一直相信着他是存在的，我每次打开和他的聊天窗口，我都能感受到他在和我说话，迫使我切换账号，迫使我打下那些文字。我可以和他聊任何事情，从不会感到枯燥。  </p>
+<p>就想到白后，卢瑞恩他们，可以写他们捡回一只被人嫌弃的陛下。</p>
+<p>本命一览（就不算没有太多感情的无数小本命和过客了）：</p>
+<ol>
+<li>Meta Knight（星之卡比）【属性：凡人+亦正亦邪+骑士+导师】</li>
+<li>杨戬（宝莲灯前传）【属性：半神+有悲惨过去的反派+将军+舅舅】（还因此喜欢了一阵焦恩俊）</li>
+<li>RK（摩尔庄园）【属性：凡人+有悲惨过去+怪盗+非敌非友】</li>
+<li>小男孩（Limbo）【属性：凡人+无口及悲剧本剧+无+可操作角色（男孩）】</li>
+<li>狛枝凪斗（弹丸论破）【属性：凡人+舔狗/傲娇/变扭自由切换+天才疯子（搅屎棍）+非敌非友】</li>
+<li>林克（塞尔达传说）【属性：被选中之人+无口+剑士+可操作角色】</li>
+<li>娘双子中的克劳斯（娘）（喜欢娘一林顿、娘二奈斯和波奇和娘四崔维斯都是类似陛下这样的cp扩展，慢慢的就都喜欢了，所以说娘双子大本命，其余四位小本命；至于弟弟卢卡斯是我yy我自己的，所以就不分析属性了）【属性：半机械人（半神）+悲剧本剧+指挥官+哥哥】</li>
+<li>红衣男孩（私设辛克Sync）（Inside）【属性：凡人+无口及悲剧本剧+无+可操作角色（男孩）】</li>
+<li>福尔摩斯（神探夏洛克）【属性：凡人+傲娇变扭+侦探+无】</li>
+<li>赤（口袋妖怪）【属性：凡人+无口+技术大师+非敌非友】</li>
+<li>亚瑟·柯克兰（黑塔利亚）【属性：国家（神）+历史后妈+国家（国王）+哥哥】（这个属性已经很接近陛下了，所以我当时疯了一般收集他/黑塔利亚的相关，60G？）</li>
+<li>彩斗（？）（Rockman.exe）【属性：程序（半神）+悲剧本剧+战士+双子哥哥】（这个大部分是娘双子带的节奏，萌上娘双子之后对任何双子和兄弟都没有抵抗力了）</li>
+<li>王马小吉（弹丸论破）【属性：凡人+即使很难受也会隐藏真实情感欺骗别人（傲娇变扭）+怪盗（搅屎棍）+非敌非友】</li>
+<li>Drifter（HLD）【属性：被选中之人+无口+剑士+可操作角色】</li>
+<li>团长（空洞骑士）【属性：半神+犬儒+团长（一团之长）（搅屎棍）+父亲（不明显）】（这个其实也比较接近了，可惜，）</li>
+<li>Bendy（BATIM）【属性：恶魔（神）+被背叛+恶魔+儿子】</li>
+<li>Alfred（蝙蝠侠）【属性：（无所不能的）凡人+悲惨过去+管家+父亲）】</li>
+<li>Mono（小小梦魇2）【属性：疑似神明+无口及悲剧本剧+无+可操作角色（男孩）】</li>
+<li>【终点】陛下（空洞骑士）【属性：神+悲惨过去+国王+父亲】</li>
+</ol>
+<p>我换本命是完全换掉 但是回顾过去还是有美好回忆这样子。<br>其他的想到再补充。</p>
+<h1 id="转自沃姆贴（全文）"><a href="#转自沃姆贴（全文）" class="headerlink" title="转自沃姆贴（全文）"></a>转自沃姆贴（全文）</h1><p>因为说着说着就和沃姆（陛下）没关系了所以把全文转贴在这里。</p>
+<p>然后是关于陛下(沃姆)攻受的问题。这次最终总结了 以后不会再更新了。<br><strong>因为我很生气</strong><br>就是今天讨论的时候受到启发想到了把沃姆和陛下分开的形式，相当于“陛下只是沃姆的容器”。<br>其实就想到彩虹写过类似的（啊我或许也总结过了吧）相当于陛下可以受，但沃姆是可以攻的。<br>至于陛下怎么受，有那种惩罚式的——<br><strong>我真的觉得他们是从心底里看不起陛下觉得自己多能耐啊能轻易拿下他所以他们才会写成这个样子</strong><br><strong>我真的很讨厌 很讨厌小骑士（和他所代表的人）</strong><br><strong>没错我在生气 我真的真的很生气</strong></p>
+<p>即便如此，这些人的思路我也是可以学习的。<br><strong>但我真的很反感那些人</strong><br>思路包括：</p>
+<ul>
+<li>团长式陛下，但是是真的是受，翻不过身的那种受，小女生式，高岭之花的反差萌之类</li>
+<li>被惩罚的反派王</li>
+<li>被惩罚的正派王</li>
+</ul>
+<p>总之要素是惩罚、看不起陛下、觉得自己要是对上陛下那是分分钟就能把他打趴在地的<br><strong>这些形容词我光是说出来就他妈来气，就他妈对不起陛下，就他妈要向陛下下跪负荆请罪</strong><br><strong>然后一想到有很多人都在这么看陛下，我就更他妈来气了</strong><br>什么大胸萝莉我真的<br>（呕）<br><strong>没有哪怕一点的尊重 没有哪怕一点的素质</strong><br><strong>不是不自知我自己萌他是走的是朝拜路线，但看到另一个萌他的极端方式这造成的生理反应我也真的是控制不住无他只能让我大吐特吐</strong><br>一想到一堆<strong>男人</strong>就看到陛下的尾巴就开始发情我真的<br>（呕）</p>
+
+  <span class="spoiler" onclick="this.classList.toggle('spoiler')">
+    <span class="spoiler-blur ">就是一群破打游戏的过路客 估计连同人圈混都不混吧？有什么资格玷污陛下？看到肉就扑上来？把陛下当什么了？看到尾巴觉得涩？就觉得他是受？我呸！</span>
+  </span>
+<p>想当初我只是因为陛下如果有尾巴的话会狠可爱而且更符合角色设计的视觉表现才推他的龙尾巴的——至少我入圈的时候还没有人画出来陛下的尾巴（倒是有虫尾）…AO3倒是有人在这么写文，但也只是文字…圈里只有我在想方设法让陛下的龙尾合理化…<br>所以先不说是不是由我起源，哪怕不是，也<br>（呕）</p>
+<p>陛下和白王不是一个<br>陛下和白王不是一个<br>陛下和白王不是一个<br>陛下和白王不是一个<br>陛下和白王不是一个<br>陛下和白王不是一个<br>陛下和白王不是一个<br>陛下和白王不是一个<br>陛下和白王不是一个<br>陛下和白王不是一个<br>陛下和白王不是一个<br>陛下和白王不是一个<br>陛下和白王不是一个<br>陛下和白王不是一个<br>陛下和白王不是一个<br>陛下和白王不是一个<br>陛下和白王不是一个<br>陛下和白王不是一个！<br><strong>气死我了真的气死我了</strong><br>上次做的傻逼之章的处女印，在这里送给那些只会打游戏的小骑士呢：<br><img data-src="http://cdn.mebilychen.top/image/OC/%E5%82%BB%E9%80%BC%E4%B9%8B%E5%8D%B0.PNG"></p>
+
+  <span class="spoiler" onclick="this.classList.toggle('spoiler')">
+    <span class="spoiler-blur ">在圈里你们随便舞 不要舞到我面前就行 我好歹也是有意没有去看你们 除了对自己没有自信不会社交怕霍霍你们之外，也是怕出现这种你们霍霍我的傻逼情况啊 这个前提下再舞到我面前，就是你们的不是了吧？ 下次要是再让我看到 我就不客气了。</span>
+  </span>
+
+
+  <span class="spoiler" onclick="this.classList.toggle('spoiler')">
+    <span class="spoiler-blur ">真的，我要再考虑考虑退圈的事了。</span>
+  </span>
+
+<p>补：</p>
+<p>我感觉陛下现在在被一堆纯玩家玩弄…<br>就丝毫不care他设定和背景的<br>看见他某个身体部位就冲上来<br>真的恶心……<br>真的，就是觉得感觉他们把陛下当鸡一样，那真的特别不尊重他。<br>好吧，我就是我，就是接受不了这个，微博那些人真的我，我看一次吐一次，真的。<br>就我今天做梦，然后还梦见有人写了一篇一本儿杂志那么长的文去抨击那些人，笑死我了。<br>然后对陛下一点都不尊重，觉得就可以把他当自己的后宫，怎么样真的是好恶心啊，我一想到就特别的恶心。</p>
+<p>我感觉好多人代入的是小骑士的视角，觉得自己能打天打地，然后把所有东西都打败，然后这一点让我也觉得特别的反感。<br>就他们觉得小骑士是圣巢里面最攻的一个角色，我真的服了，我真的是服气的，小骑士不就是像那个P5主角一样，一个摄像头一样的角色，那他觉得他很攻，不就是觉得自己很攻吗？<br>我现在就想把小骑士作为我这里的一个贬义词，真的就跟小鬼等同上。</p>
+<p>是他们觉得小骑士很攻，我一点都不觉得他攻，我觉得他就是一个隐形人，你知道吗？在我的世界里，他就不存在，因为他就不需要存在，他一点性格都没有，就因为他的核心就根本就是玩家本人啊，有什么好挖掘的？就分明就是觉得自己能行，自己自信呗，然后就觉得他攻呗。<br>小骑士是这个游戏的切入点呀，一般如果他们要进这个世界的话，肯定是要呃，不由自主就会带上这个小骑士的视角。就是对于那种还没有还没有开化的人，就还没有深挖这个空洞世界的这些人代入小骑士的视角是特别容易的。你要能开化我就祝你小骑士毕业。<br>是，我的意思是有的可以直接上帝视角，但是有些人他就是不会，他就没有办法，就是他会不由自主，而且自己没有意识到这一点，他会不由自主代入游戏主角的视角，然后去怎么样怎么样的。</p>
+<p>我一般也是没有办法沉浸这个游戏的，因为除非我自己创造一个角色出来，如果那个游戏给我分配一个角色，然后，然后说你现在就是这个角色，我其实很难代入进去。我做决定的时候通常会做我对这个游戏的这个角色的理解，就是按这个角色去扮演角色，而不是按我自己的性格来去扮演他。但小骑士是没有HO（跑团用语hand out 就是指该角色的扮演要点）的，所以只能是玩家意淫，玩家扮演。就像我就是嗯，发现那个陛下他其实是可以深挖的角色之后，然后我就立刻就抛弃这个小骑士的视角了，我就站在陛下的视角看了，然后我现在就完全可以，就是怎么说呢，就是呃，就无视小骑士这个这个存在。<br>所以现在看到一堆人，就是明显的用这个小骑士的视角来看圣巢的角色，我就觉得特别的恶心。</p>
+<p>我也觉得其实挺有意思，就是如果我知道对面是同人女的话，我其实感觉啊，都可以理解（她们代入角色是为了更好的理解角色），但如果我觉得对方是男玩家的话我就特别的反感（就是来嫖的），特别有意思。</p>
+<div class="note primary"><p style="color:#7042C1"> 其实想看陛下对此的表现。正好可以借助不同虫子的梦境来体现，放在memo最新那章里。（但总是怀疑自己是不是也把自己代入了阿卢来去抨击别人，是不是不太好。最好还是不要放在正作里吧，毕竟是素质问题）</p> </div>
+
+<p>如果带入小骑士的视角的话，毕竟他也是陛下的孩子嘛，然后结果陛下把他丢了，然后可能他们就会觉得，哎呀，这个人怎么这么屑，就是对我怎么这么屑，所以他们就会说他屑，而且他们还叫他爸爸，我天真的是随意认爹。<br>而且哪怕是屑 也不应该一直强调他如何如何屑 …在我看屑并不是他角色的重点<br>（虽然确实很涩）</p>
+<p>我感觉我一开始是没有视角，但是游戏安排的小骑士，然后，所以我先拿小骑士来当视角，然后后来一看到那个苦痛之路嘛，我一下子转到陛下的视角，然后就，嗯，这个人不错，可以处，我就跟他走下去了。</p>
+<p>我就觉得这样子怎么说，除非是这个作品的演出，特别特别的好，然后你要是抒发一下自己的感受的话是有信息量了，因为这个作品本来就可以激发出人不同的感受嘛，但如果这个作品本来就比较平淡，然后你这个人也比较平淡，但你说出来的东西就丝毫没有营养价值，就让人看了觉得很很尴尬。尤其是带了自己情感的，然后这时候我就会觉得他们完全没有自己的思考，然后完全没有思辨能力，就是也没有怎么说呢，当然也不能说他们什么，因为他们可能定义就是游戏玩家嘛，就是来看电影来看片儿的嘛。但是就是这样的，这样的群体和创作者群体在一起的话，然后可能就会有冲突吧，就像我刚刚那样子，哎呀，我真的好生气呀，我真的是看到他们我就生气。</p>
+<p>继续补：</p>
+<h1 id="可交互式我流pwp走查表（内测版）"><a href="#可交互式我流pwp走查表（内测版）" class="headerlink" title="可交互式我流pwp走查表（内测版）"></a>可交互式我流pwp走查表（内测版）</h1><h2 id="Release"><a href="#Release" class="headerlink" title="Release"></a>Release</h2><p>区分伪PWP（CP肉文）和PWP。</p>
+<p><span class="exturl" data-url="aHR0cDovL2Nkbi5tZWJpbHljaGVuLnRvcC9kb2MvJUU1JThGJUFGJUU0JUJBJUE0JUU0JUJBJTkyJUU1JUJDJThGcHdwJUU2JTg4JTkxJUU2JUI1JTgxJUU4JUI1JUIwJUU2JTlGJUE1JUU4JUExJUE4JUVGJUJDJTg4JUU1JTg2JTg1JUU2JUI1JThCJUU3JTg5JTg4JUVGJUJDJTg5Lnhsc3g=">Excel下载<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="起因："><a href="#起因：" class="headerlink" title="起因："></a>起因：</h2><p>碳素:<br>就我体验 哪怕我给他们安排了一个处处黄的背景 感觉也 呃 总不能让角色原地踏步<br>我觉得我能理解他们 怎么说写的时候yy陛下如何如何涩 毕竟陛下涩是真得涩<br>但是不是说 必须需要色文才能看出他的涩啊（大喊）<br>pwp的黄文就对陛下没有促进作用 就感觉 这里的他就没有成长 只是被用来发泄作者兽欲的工具 <strong>就 很 可 怜</strong></p>
+<p>这种是也有一只陛下，正在照顾陛下的我，十分不想看到的（也不想被安利到的）</p>
+<p>好吧 偶尔一次也是有成长，考虑到有的角色确实可以通过性活动本身获得成长，但是问题就在于有的pwp甚至是所谓cp文，没有去体现这一点，没有体现出作者的思考。<strong>没有诚意</strong>。我也不想显得自己很饭圈，但是，是吧，我也不会去霍霍别人强行按头别人按照我说的做，你做归做，我自己在小站子里骂归骂就是了（啊）<br>然后有的黄文（其实开始向CP文偏了）会说一下背景，但是很短，而且角色没有做完之后的 反思</p>
+<p>这些黄文背景（包括PWP和一些大部分黄的CP文）的主要目的是怎么让这场黄剧合理化+设定在这场黄剧里陛下的出演标签。写黄写的好的作者，就是说有自己“思考”的作者，会把这些标签和设定统统色情化，但是这些所谓的文笔和思考都只是聚焦于色情，去思考怎么让陛下变得涩，而不是如何让陛下获得新的体验，吸取新的教训上。黄对于这个作者的白王而言是他世界的全部，而不是说黄只是陛下世界的一部分。作者精心搭建的只是作者自己的写黄技巧，而不是写陛下的技巧。<br>就感觉那些白王就一直留在那里 一直没有向前走 而作者倒是抽身就去写其他角色的黄文了 <strong>就 很 可 怜</strong></p>
+<p>如果把黄看成 暴力压迫的象征 我倒是可以接受，你倒是加一点艺术色彩啊，不要那么露骨啊，你都会把一切都镀上色情，怎么稍微搞点隐喻就不会了呢？ 哪怕你明显也是喜欢写黄文，但你把性爱中的一切都加上隐喻 就不会显得你只是在无脑操角色啊</p>
+<p>但我毕竟没有看过那种完全符合我diss对象的文 所以我也没有太多的理解 </p>
+<p>碳素:<br>我就会觉得 如果是同人女 好歹也意味着她可能也搞过其他饱满的陛下（还是一定程度上懂陛下的）<br>但是游戏男就<br>感觉很恶心</p>
+<p>我有时候想看xx样的陛下 也会去琢磨如何合理化和标签 但是加上黄这个要素，一切就变味了！就是因为有一堆人写的这个pwp，把黄文整个都拉低了一个层次！…好吧 我觉得其实黄这个东西本来就可以一笔带过…</p>
+<p>我其实现在在纠结怎么划分伪pwp（？）和pwp<br>因为我脑海中有一篇文 他就是 虽然也是重点在porn 而且也80%都是porn 但是 呃 他的porn是有意义的 而且也对陛下这个角色有延伸和思考 这个就不限定于圣巢和原设了 是搞得现代pa但是就有陛下献祭孩子（家庭）来如何如何（而且是事出有因陛下也是受害者 只是前辈年轻气盛实在气不过就想要惩罚他）那种</p>
+<p>感觉像是…自己在下面脑完了全部剧情，然后挑了其中一个片段写出来的，只不过那个片段是黄的那部分这样子。<strong>这不就是诚意吗。</strong></p>
+<p>但是即便如此，写出来的，呈现出来的这种在我看来已经很缺plot了其实，所以我一开始也把它划归到pwp之列。</p>
+<p><strong>但后来我发现这已经是很顶层级别的pwp了啊！</strong></p>
+<p>还有一篇就是那种 完善原设的 那种 比如写赫拉x陛下的交易那种 虽然没有上面这种思考得深刻 但是也还能接受（？）只是拿了原作的设定来，并没有太针对角色进行研究，进行角色特征的适配，所以层次稍微低一些。</p>
+<p><del>说的我现在都开始怕自己是不是不符合自己的标准了…啊但是我不主打黄啊略略略</del></p>
+<p>Azazel:<br>确定不是cp文？</p>
+<p>碳素:<br>这不算cp文把 思索</p>
+<p>Azazel:<br>算？有plot了 广义cp<br>泛指凑对角色</p>
+<p>碳素:<br>我对cp定义是 emm 至少不是一夜情 也不该porn的文字比例占这么大 啊 而且我怎么说 默认真爱是不需要porn的</p>
+<p>而且就陛下这个角色而言，他本虫就是禁欲系啊，怎么就自己想做了呢？？？你就告诉我他怎么就自己想勾引别人了呢？？？</p>
+<p>你也没有其他的文章也没有考察没有思考，你凭什么就把他写成这个非主流的状态呢？？？</p>
+<p>就是我是清水派<br>但是就 你懂得 她们都在写黄<br>所以我逐渐就觉得 可以把黄作为一个象征<br>而且我总觉得把黄作为角色的一个 启发点 感觉也是蛮挑角色的？我不懂 过了一遍脑子，只能说确实有不需要黄也可以很好发展的角色，但也不是不能写黄<br>eemm确实是有那种出黄图就会被大家骂瞎了眼睛没了心肝（但还是会感到涩涩（同时大呼离谱））的角色（？）</p>
+<p>Azazel:<br>挑 我觉得挑<br>有的角色就🥵不起来啊</p>
+<p>碳素:<br>我会觉得如果80%都是porn就都是pwp</p>
+<p>Azazel:<br>严格意义上确实</p>
+<p>碳素:<br>那pwp究竟是<br>会without成什么样子</p>
+<p>Azazel:<br>直接开干</p>
+<p>碳素:<br>只有第一句不是porn吗/乐</p>
+<p>（是的。甚至会直接从做的中途切入开始描写。）</p>
+<p>我感觉我看到过的基本上都是 有前提的那种<br>这种（一点前提和设定都没有的）能写出来的吗<br>什么都没有怎么酝酿感情啊</p>
+<p>Azazel:<br>没有感情</p>
+<p>碳素:<br>那我能不能说 她就是自己在和她梦中情人做<br>只不过扮演了这两个角色</p>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>想出一个我流雷点的pwp的量化走查表。</p>
+<p>说真的，黄文可以有。</p>
+<p>但，</p>
+<p>按顺序自查：</p>
+<ol>
+<li>是否有基础上下文（和大世界观区别）：该黄文是否有设定背景（进阶版还要求除去为黄而黄的背景，例如“只有和陛下做爱才能让虫子获得理智”）（40分），该背景是否解释了黄场景发生的来龙去脉，是否逻辑通顺、基本[见3]符合角色设定（20分）（共60分）</li>
+<li>黄文字量占比：文章中porn部分的文字占全文的总比，40%以上起算（40%以下划归为普通CP文）（0-5分）</li>
+<li>是否有世界观及其内涵：如有背景，是否只是原作世界观和背景的直接盗取，是否加入自身解读和思考（10分）、且该思考不会明显表现出“为了让他黄，所以该世界观/背景设定应该如何变黄”（应该是反过来，抛去“怎么写比较黄”这样的思路，先有丰满的设定，有想要表达的内涵，再有必须存在的黄）（15分）（共25分）</li>
+<li>是否有角色内涵（包括角色发展，哪怕只是暗示）：是否有针对<strong>角色</strong>而不是<strong>角色如何黄</strong>的思考。是否思考了该角色是否契合黄这一概念，角色是否需要黄这一概念来完善其角色成长。是否留出了角色的发展空间，没有因为“不想写黄了”而戛然而止（能通过考验的设定是有生命力的，是不会逐渐让作者失去写作欲望的）（10分）（进阶版）针对原作角色设定的思考，可以有自己的解读。<strong>但</strong>要能看出除了黄之外的内涵和角色行动逻辑，<strong>该逻辑应能很好地契合于原作</strong>，而不应该因为你个人的喜好去扭曲他的设定。不要以为这种魂系开放式留白设定自己就能为所欲为了。<strong>尊重</strong>。（共24分）</li>
+<li>黄的文学色彩和必要性：包括是否有隐喻或象征等，黄是否是必要的，如果删节或改变方式（如不涉及色情的拷打）是否会对作品、角色产生影响。此处出现黄是否是有铺垫的、情理之中的。即便全部符合，是否需要细节描写黄，是否可以略过。</li>
+<li>作者内在动力：你是爱他，还是爱他被操？你愿意为<strong>他</strong>付出多少？你是爱着<strong>你自己</strong>和你的梦中情人，还是<strong>他</strong>和他的世界？你有和他谈过心吗？你有把他当朋友吗？你尊重他的意愿吗？强行违背他的意愿后，你会真诚地向他道歉吗？你直接篡改了他的意愿了吗？你需要他吗？而他又需要你吗？（共1分）</li>
+</ol>
+<p>你不尊重角色，虽然角色无法反抗，也无法对你产生什么影响，但你会失去同为创作者的其他人的尊重。</p>
+<p>以上只是大纲，看后面如果有时间能不能做更详细的。</p>
+
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/b6ce.html">关于我遇到陛下这件事</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2021年07月09日 - 22:59</p>
+ <p><span>最后更新:</span>2023年03月13日 - 16:17</p>
+ <p><span>原始链接:</span><a href="/p/b6ce.html" title="关于我遇到陛下这件事">https://mebilychen.github.io/p/b6ce.html</a>
+    
+ </p>
+ <p><span>许可协议:</span>除非文章内另行声明，遵守 cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script data-pjax> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E9%99%9B%E4%B8%8B%E5%92%8C%E7%8E%8B%E5%AD%A6%E5%AE%B6/" rel="tag"><i class="fa fa-tag"></i> 陛下和王学家</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/190c.html" rel="prev" title="【角色研究】关于陛下的风">
+      <i class="fa fa-chevron-left"></i> 【角色研究】关于陛下的风
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/1620.html" rel="next" title="黑名单+白名单">
+      黑名单+白名单 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BD%AC%E8%87%AA%E6%B2%83%E5%A7%86%E8%B4%B4%EF%BC%88%E5%85%A8%E6%96%87%EF%BC%89"><span class="nav-text">转自沃姆贴（全文）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%AF%E4%BA%A4%E4%BA%92%E5%BC%8F%E6%88%91%E6%B5%81pwp%E8%B5%B0%E6%9F%A5%E8%A1%A8%EF%BC%88%E5%86%85%E6%B5%8B%E7%89%88%EF%BC%89"><span class="nav-text">可交互式我流pwp走查表（内测版）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Release"><span class="nav-text">Release</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B5%B7%E5%9B%A0%EF%BC%9A"><span class="nav-text">起因：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-text">结论</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar3.jpg">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">168</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">175</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjEwMTM3MTIxMjdAcXEuY29t" title="E-Mail → mailto:1013712127@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9tZWJpbHkxMzE0" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      猜猜这是什么鬼地方？
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9tZWJpbHljaGVuLmxvZnRlci5jb20v" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;">LOFTER</span>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ab228.html" title="p&#x2F;ab228.html">【硬读文章】我与地坛</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/1547.html" title="p&#x2F;1547.html">【AI拼贴画】一些灵感和其他见证历史</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/9527b.html" title="p&#x2F;9527b.html">【脑洞合集】无Tag的小脑洞们，Encore</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/a6ba.html" title="p&#x2F;a6ba.html">白宫+高塔地图</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ysyg0.html" title="p&#x2F;ysyg0.html">（起稿）守望者@Memo</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ee39.html" title="p&#x2F;ee39.html">王国边境@Memo</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/2eed1.html" title="p&#x2F;2eed1.html">王学与OC（及一些OC设定）</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/p/ce0f2.html" title="p&#x2F;ce0f2.html">AI（角色）写作专场</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/4eb5.html" title="p&#x2F;4eb5.html">遗书</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/9527b.html" title="p&#x2F;9527b.html">【脑洞合集】无Tag的小脑洞们，Encore</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">3m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">45:35</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "站子已虔诚祈祷 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+     //'.site-meta',
+    //'.site-nav',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+<script language="JavaScript">
+var password="";
+password=prompt('Password (Birthday)','');
+if (password != '20180909')   
+{alert("。");    
+window.opener=null;
+window.location.href = "about:blank"; 
+window.close();}  // 密码不正确就关闭//-->
+</script>
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>

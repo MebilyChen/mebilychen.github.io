@@ -1,0 +1,5160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="♕连载中，这些章节已完结♕    这是截到“医院”那章为止的所有章节，最优化的版本请移步LOFTER，这里的大合集有的章节可能不是最新的...不过当初说要通篇优化重写的诺言我也不想抛下，重写旧作也是很不错的练习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="大合集@Memo">
+<meta property="og:url" content="https://mebilychen.github.io/p/33cb.html">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:description" content="♕连载中，这些章节已完结♕    这是截到“医院”那章为止的所有章节，最优化的版本请移步LOFTER，这里的大合集有的章节可能不是最新的...不过当初说要通篇优化重写的诺言我也不想抛下，重写旧作也是很不错的练习">
+<meta property="og:locale">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E6%94%B9%E6%96%87/IMG_7559.PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E6%94%B9%E6%96%87/IMG_7560.PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E6%94%B9%E6%96%87/IMG_7561.PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E6%94%B9%E6%96%87/IMG_7562.PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E6%94%B9%E6%96%87/IMG_7563.PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E6%94%B9%E6%96%87/IMG_7564.PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E6%94%B9%E6%96%87/IMG_7565.PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E6%94%B9%E6%96%87/IMG_7566.PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E6%94%B9%E6%96%87/IMG_7567.PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E6%94%B9%E6%96%87/IMG_7568.PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E6%94%B9%E6%96%87/IMG_7569.PNG">
+<meta property="article:published_time" content="2018-12-14T08:26:00.000Z">
+<meta property="article:modified_time" content="2023-01-29T08:57:17.091Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="君臣组">
+<meta property="article:tag" content="白王">
+<meta property="article:tag" content="考据">
+<meta property="article:tag" content="完结">
+<meta property="article:tag" content="@memo">
+<meta property="article:tag" content="@(伪)原作">
+<meta property="article:tag" content="卢瑞恩">
+<meta property="article:tag" content="BE">
+<meta property="article:tag" content="虐">
+<meta property="article:tag" content="圣巢全员">
+<meta property="article:tag" content="无危：填坑中">
+<meta property="article:tag" content="连载">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://cdn.mebilychen.top/image/%E6%94%B9%E6%96%87/IMG_7559.PNG">
+
+<link rel="canonical" href="https://mebilychen.github.io/p/33cb.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : '中文'
+  };
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    
+      if (NexT.utils.hasMobileUA()) return;
+    
+    let time, hidden, visible, title = document.title;
+    let favicon = document.querySelector('link[rel="icon"]');
+    
+      hidden = ["盯————","*探*","?","......","*观察*"];
+      visible = ["*偏转视线*","*缩*","*强装镇定*","！","*低头*"];
+    
+    let random = t => t[Math.floor(Math.random() * t.length)];
+    const change = () => {
+      if (document.hidden) {
+        favicon.setAttribute('href', '/images/favicon-32x32-king-black.png');
+        
+          document.title = random(hidden);
+        
+        clearTimeout(time);
+      } else {
+        favicon.setAttribute('href', '/images/favicon-32x32-brand-black.png');
+        
+          document.title = random(visible);
+        
+        time = setTimeout(() => {
+          document.title = '碳素的小作坊';
+        }, 1000);
+      }
+    }
+    document.addEventListener('visibilitychange', change, false);
+  });
+</script>
+
+  <title>大合集@Memo | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<style type="text/css">
+.spoiler {
+  display: inline-flex;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;调谐中...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">175</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">168</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-image fa-fw"></i>画廊</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/random.html" rel="section"><i class="fa fa-question fa-fw"></i>抽</a>
+
+  </li>
+        <li class="menu-item menu-item-lang">
+
+    <a href="/en/" rel="section"><i class="fa fa-globe fa-fw"></i>->English</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-17081-597255-1305127431.cos-website.ap-hongkong.myqcloud.com' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/33cb.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          大合集@Memo
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-12-14 16:26:00" itemprop="dateCreated datePublished" datetime="2018-12-14T16:26:00+08:00">2018-12-14</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2023-01-29 16:57:17" itemprop="dateModified" datetime="2023-01-29T16:57:17+08:00">2023-01-29 16:57:17</time>
+                </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">王文</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/%E7%8E%8B%E6%96%87-memo/" itemprop="url" rel="index"><span itemprop="name">王文@memo</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>123k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1:52</span>
+            </span>
+          
+          <div class="post-tags">
+              <a href="/tags/%E5%90%9B%E8%87%A3%E7%BB%84/" rel="tag"><i class="fa fa-tag"></i> 君臣组</a>
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E8%80%83%E6%8D%AE/" rel="tag"><i class="fa fa-tag"></i> 考据</a>
+              <a href="/tags/%E5%AE%8C%E7%BB%93/" rel="tag"><i class="fa fa-tag"></i> 完结</a>
+              <a href="/tags/memo/" rel="tag"><i class="fa fa-tag"></i> @memo</a>
+              <a href="/tags/%E4%BC%AA-%E5%8E%9F%E4%BD%9C/" rel="tag"><i class="fa fa-tag"></i> @(伪)原作</a>
+              <a href="/tags/%E5%8D%A2%E7%91%9E%E6%81%A9/" rel="tag"><i class="fa fa-tag"></i> 卢瑞恩</a>
+              <a href="/tags/BE/" rel="tag"><i class="fa fa-tag"></i> BE</a>
+              <a href="/tags/%E8%99%90/" rel="tag"><i class="fa fa-tag"></i> 虐</a>
+              <a href="/tags/%E5%9C%A3%E5%B7%A2%E5%85%A8%E5%91%98/" rel="tag"><i class="fa fa-tag"></i> 圣巢全员</a>
+              <a href="/tags/%E6%97%A0%E5%8D%B1%EF%BC%9A%E5%A1%AB%E5%9D%91%E4%B8%AD/" rel="tag"><i class="fa fa-tag"></i> 无危：填坑中</a>
+              <a href="/tags/%E8%BF%9E%E8%BD%BD/" rel="tag"><i class="fa fa-tag"></i> 连载</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><div class="note done"><p style="text-align:center; color:#1A9D73"> ♕连载中，这些章节已完结♕ </p></div>
+
+<div class="note info"> <p style="color:#438BCA">这是截到“医院”那章为止的所有章节，最优化的版本请移步LOFTER，这里的大合集有的章节可能不是最新的...不过当初说要通篇优化重写的诺言我也不想抛下，重写旧作也是很不错的练习 </p> </div>
+
+<span id="more"></span>
+
+<p>回首吐槽：</p>
+<p>“希望我今晚能再次梦见卢瑞恩和陛下讨论共产主义”——咩碳2022</p>
+<div class="note info no-icon">
+            <h4 id="2020-10-26-28吐槽"><a href="#2020-10-26-28吐槽" class="headerlink" title="2020.10.26-28吐槽"></a>2020.10.26-28吐槽</h4><p>一罐上的小破文撕碎计划</p>
+          </div>
+
+
+<p><img data-src="http://cdn.mebilychen.top/image/%E6%94%B9%E6%96%87/IMG_7559.PNG" alt="1"><br><img data-src="http://cdn.mebilychen.top/image/%E6%94%B9%E6%96%87/IMG_7560.PNG" alt="2"><br><img data-src="http://cdn.mebilychen.top/image/%E6%94%B9%E6%96%87/IMG_7561.PNG" alt="3"><br><img data-src="http://cdn.mebilychen.top/image/%E6%94%B9%E6%96%87/IMG_7562.PNG" alt="4"><br><img data-src="http://cdn.mebilychen.top/image/%E6%94%B9%E6%96%87/IMG_7563.PNG" alt="5"><br><img data-src="http://cdn.mebilychen.top/image/%E6%94%B9%E6%96%87/IMG_7564.PNG" alt="6"><br><img data-src="http://cdn.mebilychen.top/image/%E6%94%B9%E6%96%87/IMG_7565.PNG" alt="7"><br><img data-src="http://cdn.mebilychen.top/image/%E6%94%B9%E6%96%87/IMG_7566.PNG" alt="8"><br><img data-src="http://cdn.mebilychen.top/image/%E6%94%B9%E6%96%87/IMG_7567.PNG" alt="9"><br><img data-src="http://cdn.mebilychen.top/image/%E6%94%B9%E6%96%87/IMG_7568.PNG" alt="10"><br><img data-src="http://cdn.mebilychen.top/image/%E6%94%B9%E6%96%87/IMG_7569.PNG" alt="11"></p>
+<div class="note primary"><p style="color:#7042C1"> 祝3年前的我生日快乐！ </p> </div>
+
+<h2 id="toc_1">～1～</h2>
+
+<p>他第一次遇见光，是在危险地带的边缘。<br>
+再往里走一点，便是螳螂的领地。<br>
+它是一只普通的，不会飞的甲虫，刚刚从一群螳螂的爪下逃出来——那些可怕的生物要把它生吃活剥。拖着一只受伤的腿，在漆黑的隧道里，它艰难地扶着石壁无目的地走着。<br>
+作为这个地下世界食物链的底端生物，它能捕食的无非只是比它更小的虫子和蘑菇了。<br>
+小虫子也有自己的生存之道，它们大多数都有着坚硬的壳，让它无处下口，它能做的只有把它们狠狠地摔在地上解气。<br>
+而那些蘑菇，也越来越难吃到了——它们竟然长了腿。<br>
+这对于它们甲虫来说，简直是噩梦。<br>
+再加上不知从哪里迁徙过来的古怪长脖子虫也发现了地下蘑菇的美味，甚至对吃它们也一副跃跃欲试的样子。<br>
+饥饿成为了它们的生活常态。<br>
+那些螳螂似乎瞅准了这一点，故意用鲜美的蘑菇引它们上钩。<br>
+它们虽然生活水平原始，但是基本的权衡利弊还是会的。<br>
+它们看见过那些螳螂和蛾子们有来往，一个个金属制的笼子里装的都是当作奴隶的甲虫。<br>
+它们不知道那些甲虫最后去了哪里，但是它们从来没有回来过。<br>
+但是最近，螳螂们开始主动出击了。<br>
+它们的甲壳在金属的利刃面前根本不值一提，螳螂们三下五除二就能把它们大卸八块。<br>
+它的父母就是这样成了刀下鬼。<br>
+而它的兄弟姐妹们面临着更为惨痛的现实：被吃，或是被奴役。<br>
+只有它死里逃生，只是被砍伤了一条腿。<br>
+这要感谢它的兄弟姐妹们。那些螳螂本要向着它追过来，但是随后他们发现了它们父母为孩子们准备的藏身之处。趁着螳螂们惊叹于甲虫的生育能力的时候，它快速地藏到了一个石缝里。<br>
+它听见了父母的尖叫——它不知道甲虫竟然能发出这样刺耳的叫声。<br>
+螳螂也发出了一些声音，不同于它父母和兄弟姐妹们毫无意义的惨叫，它们似乎在用这些声音交流。它想不明白，因为还是原始部落的它们连一个完整的语言体系都还没有创造。<br>
+螳螂们大快朵颐，甚至还把几只甲虫当作玩具玩弄了一番。<br>
+他看见一只螳螂把它们这几天辛苦囤积的蘑菇一股脑倒进了一个袋子里。<br>
+其中一个掉了出来，滚到了它的爪边。<br>
+它下意识飞快的把它揣进怀里。<br>
+那螳螂似乎并没有发现有漏网之鱼，他似乎更专注于另一件事情。<br>
+他们带来的笼子装不下这么多甲虫。<br>
+在他们似乎在商议该怎么办的时候，它离开了。<br>
+它并不想知道解决办法是什么，也不敢去想。<br>
+似乎有一只螳螂看见了他，但又瞥过头重新加入了讨论。<br>
+它活不长。<br>
+带着一只小小的蘑菇，受了伤，无法逃走，还处于幼年期的它也根本没有反抗的力量，它不可能在这个弱肉强食的地下世界存活。<br>
+它倒在了地上。<br>
+它感觉不到自己的腿了。<br>
+它眼前仍是一片黑暗。<br>
+寂静的隧道里突然响起了急促的脚步声。<br>
+是捕食者吗？<br>
+黑暗中，它只听见一声属于甲虫的惊叫，随后是一连串他听不懂的言语。<br>
+然后，它看见了光。<br>
+先是黯淡的微光，只照亮了前方的转角。<br>
+随后，那光芒越来越亮，最终充满了整个隧道。<br>
+是光蝇灯笼吗？<br>
+螳螂们有时会拿着从蛾子那里交换来的光蝇灯笼。<br>
+它失血过多，感觉意识越来越混沌。<br>
+它喜欢光蝇发出来的光。很柔软，很亲切。<br>
+这让它想起它刚从壳里爬出来的时候，它的母亲会用最软的草给它铺窝，以防它还未硬化的身体受伤。<br>
+它想起自己曾经还和父母、和兄弟姐妹们一起外出觅食，追逐小虫子。<br>
+它想起……<br>
+一个陌生，却很温柔的声音打断了它的思绪。<br>
+它努力抬起头，却又被光眩得睁不开眼睛。<br>
+那个声音又说了些什么，随后它感到那光芒弱了下去，使它得以睁开眼睛。<br>
+它见证了一个奇迹。<br>
+那是一只虫子，披着薄而透明的纯白蝉衣——它能隐约看见他的黑色肢体。<br>
+他的头上有着成环状排列的七根尖刺，那也许是他的角？<br>
+不过这些都不重要。<br>
+他竟然发着光。虽然那光微弱了一点——显然是他刻意压制住了光的亮度——但是……天啊，他竟然发着光。<br>
+他不同于光蝇。光蝇的光远不及他的光明亮。<br>
+而且…很温柔。<br>
+它喜欢他。喜欢他的光——<br>
+他又说了一句它听不懂的话。<br>
+——也喜欢他的声音。<br>
+不如说它喜欢光的一切。<br>
+它痴痴地望着这只会发光的虫子，享受着这照耀着它的光，似乎忘了自己大限将至。<br>
+光似乎有些迟疑，又试探着说了一句话。<br>
+也许他在向自己示好。<br>
+它想。<br>
+它也必须向他示好。<br>
+它不想让他离开。<br>
+它按照族里的习惯发出了一声象征着友好的叫声。<br>
+光似乎恍然大悟一般，又自言自语了一句话，随后又开口道：<br>
+“受伤？”<br>
+这回它听懂了。这是他们族内询问是否需要帮助的叫声。<br>
+它回答，是的。<br>
+光又向前走了几步，他的长袍轻轻扫过它的爪子。<br>
+它下意识看向那里，看见了对方已经有些破损的袍角。<br>
+他俯下身，用爪子轻轻地按住了它的伤口。<br>
+它因为疼痛颤抖了一下，但随后它感到一股暖流徘徊在它的伤口附近，尖锐的刺痛感也慢慢变成钝痛。<br>
+几秒钟过后，疼痛消失了。<br>
+他站起身，发出了代表着安慰的叫声。<br>
+它尝试着活动了一下那条受伤的腿，它又能动了。<br>
+它兴奋地叫了一声，随后又望向它的光。<br>
+他微微点了一下头，转过了身，似是要离开。<br>
+它突然惊慌起来。<br>
+他要走了，它的光要离开了。<br>
+它又焦急地叫了一声。<br>
+它伸出爪子想要拉住对方的衣角，但又怕扯坏了这薄薄的发着光的衣服，它的爪子硬生生僵在了半空中。<br>
+听见它的叫声，光转过了身望向它。<br>
+它必须做些什么。它只记得族里如果需要请求一只虫留下来——做自己的配偶——就需要主动向对方献上自己的食物。<br>
+幼小的它还不知道配偶的概念，但他知道成为配偶意味着永远在一起。<br>
+它身上只剩下这唯一的一个小蘑菇。<br>
+但它还是把蘑菇递向了它的光。<br>
+它听见周围似乎传来轻微的甲虫独有的笑声，这才发现自己原来被几十只同类围在中央。<br>
+光明显的愣了一下，光芒忽闪忽闪的。<br>
+它更加慌张了，他不同意吗？他一定要离开它吗？<br>
+它爬起来，小心地不去踩到他的袍子，将蘑菇又递近了一些。<br>
+一只甲虫凑过来，在光的耳边说了些什么。可以感受到那只甲虫在努力压抑着笑意。<br>
+它有些不太高兴，为什么他可以和它的光那么亲近？<br>
+它又把蘑菇递近了些。<br>
+光的眼神中又一次流露出恍然的神情。<br>
+他轻轻叹了口气，伸出爪子摸了摸它的头。<br>
+…他没有接过蘑菇。他拒绝了自己的请求？<br>
+它努力地想让对方接受自己的蘑菇，几乎就要把蘑菇贴到他脸上了。<br>
+周围的笑声越来越大。它不明白这有什么好笑的，它明明都快难受得要哭出声了。<br>
+最终，似是妥协了一般——其实更多的是为了防止它把蘑菇塞进自己嘴里——光把蘑菇接了过来。<br>
+它高兴地叫了一声。现在他不会离开自己了。<br>
+光的眼神显得很无奈，却还是一如既往地柔和：<br>
+“名字？”<br>
+他在问自己的代号。<br>
+它的家族成员众多，它是最早出生的那个，自然被叫做老大。<br>
+听到这个回答，光疑惑的偏了偏头。<br>
+他不认同这个代号？<br>
+光踌躇了一下，似是在思考什么。<br>
+随后，他用它听不懂的语言，说出了那个将伴随自己一生的音节：<br>
+“…<em>卢瑞恩</em>？”</p>
+
+<p>TBC</p>
+
+<p>————片场花絮————</p>
+
+<p>它上下搜索了好一阵，都没有找到一个可以被称作“嘴”的部位。<br>
+或许光的进食方式和普通虫子不一样？<br>
+它一边想着，一边准确地把蘑菇从上面扔进了光的面具里。</p>
+
+<p>…三分好球！</p>
+
+<h2 id="toc_2">～2～</h2>
+
+<p>它做梦都不会想到，自己有一天能陪在光的身边。<br>
+它总是向往着光蝇灯笼，但那些可怖的螳螂总是让它望而却步。<br>
+它紧紧跟在光的后面，一旦有其他甲虫妄想凑上来把它挤到队伍后面，它就会毫不客气地发出低吼——虽然幼年期甲虫的吼叫声并没有威慑力——并把对方挤到一边。<br>
+其他甲虫也不计较，不去跟它争抢这个有利位置。<br>
+不过每当这时，总会有几声轻笑从后方传来。<br>
+它不管这些笑声，只要光在自己身边就可以了。<br>
+它紧紧盯着光的身影看，生怕他突然消失。<br>
+光其实个头并不是很大，算上他古怪的角，他的身高比起成年甲虫也只是高了半个头。<br>
+它能看出来光其实刚出生没多久。<br>
+因为他与生俱来的袍子是那么单薄透明，透过它，它甚至能看到他的三对边缘仍有一些卷皱的透明翅膀——他将来还能飞！——他的外壳还没有完全硬化，而他的爪子也不似成年虫子那样坚硬锋利。<br>
+不知走了多久——它其实很希望这段路程能无限延伸下去——光突然停下了。<br>
+它差一点就踩到了光的袍子，还好它及时收住了脚步，不然它不会原谅自己的。<br>
+它看到这里有着更多的甲虫，一看到光的到来，它们都站起身聚集了过来。其中不乏有和它年龄相仿的甲虫。<br>
+原来它不是第一个吗？它有些抑郁。<br>
+光用它听不懂的语言说了些什么。<br>
+每当这个时候，它就会格外懊恼。<br>
+是因为自己太笨了所以听不懂光在说什么吗？为什么其它甲虫都一副听懂了的样子？<br>
+它并不想让光被别的甲虫抢走。<br>
+但是光显然不想因为自己一只虫而解释他自己的话。<br>
+它向着其他甲虫们说了些什么，而它们有的面面相觑，有的面带踌躇。<br>
+光露出了无奈的眼神。<br>
+他转过身，看向一处宽旷的场地。<br>
+他迟疑了一下，但还是走了过去。<br>
+它想跟在光的后面，但是被另一只甲虫拦下了。<br>
+它发出了不满的叫声，但是对方似乎没听到一样，双眼直视着光的背影。<br>
+接着，它此生第二次见证了奇迹。<br>
+光突然发出了比平时还要亮上好几倍的光芒，把整个洞穴照得如同白昼一般。<br>
+它被这亮光刺得睁不开眼睛，等光芒再一次回归平常的时候，它的眼前赫然多出了一座巨大的白色建筑。<br>
+光站在这幢建筑前，低着头不停地喘气，似乎很累的样子。<br>
+它推开拦住它的爪子，跑上前想去看看光怎么了。<br>
+但还没等它跑出几步远，其他的甲虫突然欢呼着冲上前，把它挤得晕头转向。<br>
+几只甲虫凑到光的身边，小心地扶着他到一旁休息，而其他的甲虫则径直冲入了那幢建筑里。<br>
+它好不容易重新找回了方向，赶忙跑到了光的身边。<br>
+光似乎耗尽了气力一般低着头靠着洞壁，身上的光芒黯淡了许多。<br>
+它感到胸口一阵莫名的闷痛。<br>
+它凑过去，默默地坐在光的身旁。<br>
+另外几只甲虫跟光说了些什么，光也勉强打起精神回了一些话，他们最后用古怪的眼神瞅了一眼它便也离开了。<br>
+最后这里只剩下他们两只虫。<br>
+光一直低着头不说话，似乎在闭目养神。<br>
+它不想打扰到光，便也没有发出任何声响，只是一直盯着他看。<br>
+也不知过了多久，久到它都有些困意了，突然听见光那温柔的声音说了一句：<br>
+“卢瑞恩？“<br>
+最后的语调是上扬的，是一个问句。<br>
+这个单词，它也记得是在光问了他的代号后，光说出来的。<br>
+也许…它在对自己的存在表示疑问？<br>
+它这么分析到。<br>
+它不知该如何回答，因为它们族群的词汇量实在匮乏。<br>
+它望着光，光也望着它。<br>
+良久，光嘀咕了一句它完全听不懂的复杂长句子，站起身来走向建筑。<br>
+它也连忙站了起来，跟着光走进了建筑物内。<br>
+白色。<br>
+白色充斥着它的视野，也许是因为这是光建造的建筑，而光是白色的。<br>
+这个广阔的空间已经聚集了很多甲虫。看起来他们是在搭建属于自己的小窝。<br>
+不时有甲虫从外面抱进来白色的草叶和枝条铺窝，也算和白色的地面及墙壁比较相搭。<br>
+虽然作为一只幼虫，它还不能完全理解这个世界，它还是惊叹于光能凭空变出来这么大的东西的能力。<br>
+光是万能的。<br>
+它得出了一个结论。<br>
+突然，它感到一只爪子拍了它一下。<br>
+它抬起头，是一只老甲虫。<br>
+他指了指某个方向，轻轻推了它一把。<br>
+它看向他指的那个方向。<br>
+很多和它年龄相仿的幼虫聚集在一起，其中还有零星几只成年虫，有更多的虫聚了过去，大多数都是幼虫。光站在他们的前方，等待着他们聚齐。<br>
+它意识到自己落后了，连忙跑了过去。<br>
+它想挤到前面，但这些和它一样的小虫子们可不会谦让着它。<br>
+光看见没有更多的虫聚过来，便开始用甲虫原始部落的语言说：<br>
+“学。”<br>
+光要教它学习了！<br>
+这样它就能知道光在说些什么了！<br>
+它从来没有这样喜欢学习过。<br>
+光真是一个优秀的老师。<br>
+他认真、耐心，同时又要求严格。<br>
+小虫子们的第一节课，便是它们自己的名字。<br>
+这回它百分之百的理解了，“卢瑞恩”是它的名字。是光为他取的名字！<br>
+但随后它发现，所有甲虫的名字都是光起的，它的这份喜悦也就显得没有那么独特了。<br>
+光的记忆力也是无虫能敌。它能准确地分辨出每一只虫，并无误地说出他们的名字。<br>
+它开始学写字。<br>
+当它写出自己的名字的时候，它第一个念头就是拿去给光看。<br>
+它环顾四周，想要寻找光的身影。<br>
+它赫然发现光竟然在一笔一画地手把手带着某只反应迟钝的小甲虫写字。<br>
+它皱起眉头，低头看看自己写的字，又抬头看看光认真教字的身影，毅然决然地在自己的石板上画了好几道杂乱无章的曲线，直到再也看不出自己的名字为止。<br>
+等到光走到它身边的时候，看见几乎涂满整个石板的白色线条，有些哭笑不得。<br>
+“不要着急，慢慢来。”<br>
+光用安慰的语气说道。<br>
+于是它如愿以偿地获得了光手把手教自己写字的优待。<br>
+光教它写字的时候，他们靠的很近，它能感觉到光身上长袍的柔软，也能清楚地感受到他的每一次呼吸。而且，当他向它解释怎么运笔的时候，那温柔的声音就在它耳边响起，这让它感到十分满足。<br>
+自从它发现光总会对犯错的小甲虫给予更多的关照之后，它便再也不肯表现出自己其实都已经会了。但随后又为了获得他的夸奖而展示出一点自己的学习成果。<br>
+“你进步很大哦，卢瑞恩。”<br>
+光每次都会这么鼓励它。<br>
+于是它记住了自己的名字。</p>
+
+<p>TBC</p>
+
+<h2 id="toc_3">～3～</h2>
+
+<p>在白宫的这段时间里，卢瑞恩学会了很多，包括他们所说的语言、包括光——现在他知道应该称他为王了——他传奇般的故事。<br>
+王是古神的转世。<br>
+所以他有着神一般的力量，所以他可以被称为王。<br>
+但卢瑞恩内心深处，还是希望王永远只是他的光——如果他以王的身份，他一介草民根本没有机会和他“长厢厮守”。<br>
+是的，他爱他，早在他第一次见到他的时候，他就爱上了他。<br>
+有些小虫子早已听说过他的“求偶”事迹，不如说这件事已经在整个白宫内传开了。以至于课堂上不时传出轻微的笑声。<br>
+但是卢瑞恩丝毫没有退缩——不论他的身份怎么改变，他对他的感情依旧如故。<br>
+他知道自己配不上他，他也所求不多，自己只要能默默守护他就已心满意足了。<br>
+回到正题，虽说他现在差不多已经能理解周围的成虫在说些什么，但它的口语表达还有待提高。这并非它故意装出来的，而是他有一些口吃。<br>
+当他每次开口说话的时候，他总会不由自主地想起螳螂交谈的样子。继而又想起他的父母和兄弟姐妹，最后脑海中回响着的总是刺耳的尖叫。<br>
+不过算是得益于此——卢瑞恩私下认为——白王在知晓此事之后，还专门给他做了“心理辅导”。<br>
+只要能听到白王的声音，感到白王在自己旁边，自己就不会害怕了，卢瑞恩如是想。<br>
+每隔上一段时间，就会有外派的巡逻队伍带回来很多甲虫，他们情况不一，有的受了伤，有的还保留着野兽的习性，有的则是主动归顺，拖家带口的随着巡逻队过来。<br>
+而面对要求不一的虫子们，白王从来没有说过一个不字。<br>
+然而没过多久，问题就出现了。<br>
+即便庞大如白宫，它的空间也是有限的。<br>
+白王决定开疆拓土。<br>
+向哪里进军是个重要的问题。<br>
+于是卢瑞恩就不能经常看见白王了。<br>
+每当他问起代白王授课的老虫子的时候，他总是会说“陛下忙于政务”。<br>
+政务是什么意思，小卢瑞恩不是很能理解，不过既然能让陛下如此上心，应该是特别重要的事情吧。<br>
+前一段时间，他注意到隔三差五就会有巡逻队的虫子拿着几张图纸走进白王的办公室。<br>
+他打听到那是被陛下称为“地图”的东西，上面记录的是周围的通道和重要地点。<br>
+真是个好东西，卢瑞恩想，这样大家就不会迷路了。<br>
+白王似乎在发明创造这方面特别擅长。<br>
+像是那些“盾牌”啊，“长椅”啊，甚至供小虫子们玩耍的小玩具，通通都是白王的作品。<br>
+还有“骨钉”。卢瑞恩最喜欢骨钉了。甲虫们可以用它来击退那些胆敢入侵他们领地的野兽。<br>
+或许等他长大了，也可以拥有自己的骨钉，去抵御螳螂。<br>
+这个想法总是让卢瑞恩充满斗志。<br>
+于是他也像其他小虫子一样，期待着长大了。<br>
+下课的时候，他喜欢漫步在白宫长长的走廊上，因为当他闭上眼睛的时候，就好像能感觉到白王在自己身边一样，他能闻到那种属于白王的独一无二的气味，有点像植物的清香，但又不完全是属于自然的气味。他管这种气味叫“神明”的味道。<br>
+有一只成年甲虫端着什么东西急匆匆地从卢瑞恩身边走过，但没走几步，他又停了下来，转身看了看卢瑞恩。<br>
+“哎小家伙！”<br>
+卢瑞恩转过头望向他。<br>
+“对，就是你。”<br>
+他一边说着一边走了过来。<br>
+卢瑞恩有些心慌，但他强行让自己站在原地不动。<br>
+“你把这个送到国王的政务室去，是给陛下的水。”<br>
+卢瑞恩有些诧异地看了看对方，又看了看水杯。<br>
+让他去送水？送给陛下？那他不就可以…见到陛下了吗…？<br>
+“不会耽误你太长时间的，反正你也没事干不是吗？”<br>
+“哦…哦…”<br>
+卢瑞恩有些呆滞地点点头，接过了水杯，还没有完全从思绪中缓过来。<br>
+“快点送过去啊。”说完，他转身欲走，又想了想，回过头接着说，“对了，陛下问起我的话，你就说我生病了，好吧？”<br>
+卢瑞恩机械地点了点头。<br>
+那只虫子满意地离开了。<br>
+许久，卢瑞恩才反应过来刚刚发生了什么事情。<br>
+生病了？但是他看起来很健康啊…？<br>
+卢瑞恩思索了一会儿，最后还是决定放弃寻找答案。<br>
+他回忆着着自己第一节课白王给他们讲白宫宫内主要房间及路线的内容，沿着长廊向前…向左…再…啊，那里就是了。<br>
+卢瑞恩有点小自豪，那可是第一堂课的知识，而现在他已经上过十几节课了。<br>
+带着这股自豪劲儿，他接近了石质的双开门。<br>
+门没有关紧，留下的缝隙正好够他钻进去。<br>
+他举起爪子，一阵紧张感袭来，他突然不敢敲门了。<br>
+他紧张地站在门外，爪子凭空悬着，有点进退不得。<br>
+视野的一角出现了两个巡逻的士兵。<br>
+卢瑞恩不想让事情变得更尴尬，鼓起勇气敲了三下门。<br>
+“进来吧，门没关。”<br>
+陛下温柔的声音传了出来，卢瑞恩有些走神，他好久没听见陛下的声音了。<br>
+他闪身挤进了房间。<br>
+白王正坐在石椅上，低头看着一摞图纸。<br>
+那些图纸，卢瑞恩注意到，有的画得和其他的差不多，只有细微差别，而有的则是完全不同。<br>
+白王一会儿看看那些图纸，一会儿又在压在他面前的一张纸上画着些什么。<br>
+也许陛下在做汇总的工作？那可真是辛苦，卢瑞恩想。<br>
+他站了一会儿，微微挪了挪脚步，感觉自己是时候该出声了。<br>
+“陛…陛下…”卢瑞恩说得有些磕巴。<br>
+“嗯？”白王听见最近没怎么听过的陌生的声音，从一堆图纸中抬起头。<br>
+卢瑞恩看见白王疑惑的眼神，感觉更紧张了。<br>
+在受过教育之后，他越发感觉到自己和白王之间的差距。<br>
+他再也不能像从前那样毫无顾忌地黏在白王身边了。<br>
+“我…我是来…来送水的…我…”<br>
+白王看了卢瑞恩几秒钟。<br>
+“啊…卢瑞恩啊，抱歉，我没有立刻认出你来。”<br>
+“没…没事——“<br>
+话音刚落，卢瑞恩感觉这个回答有点不对劲，连忙补充：<br>
+“——陛下…工作…政务繁忙…也…不必…浪费您宝贵的时间…去记住我们的名字…”<br>
+白王愣了愣，突然轻轻地笑出了声。<br>
+天呐。<br>
+陛下笑了…陛下他…<br>
+卢瑞恩感觉自己也被陛下的心情所影响，紧张的情绪一下子消失的无影无踪。<br>
+他直直地望着白王，他身上的光芒十分柔和，像是微波荡漾一般浮动着。<br>
+“我要是记不住信徒的名字，那我还做什么神明呢？”<br>
+是啊…陛下…他是神…<br>
+卢瑞恩脑中一直回响着这句话。<br>
+他是神，而我只是一只普通的虫子。<br>
+这个认识让卢瑞恩的轻松感觉又重新变回了紧张。<br>
+“你是来送水的？格雷戈呢？”<br>
+格雷戈？……哦。<br>
+“他…他生病了……陛下。”<br>
+白王皱了皱眉。<br>
+“生病了？怎么回事？”<br>
+“我…我也不知道…”他想起那只甲虫生龙活虎的样子，实在是想不通他得了什么病。<br>
+白王叹了口气，“好吧，我会去看看他的，把水放在那边的桌子上吧，谢谢你了小家伙。”<br>
+“好…好的…呃…我是说，遵命，陛下。”<br>
+白王看着卢瑞恩，又笑了一声，继续低下头看起了图纸。<br>
+卢瑞恩有些艰难地挪动脚步，他感觉自己的脚上绑了石头。<br>
+他把水杯放在了那张桌子上，又忍不住偷偷去看白王。<br>
+他看着白王认真思索的模样，不由得有些出神。<br>
+还好一阵凉意袭来，他打了个哆嗦，及时发现了自己的失态。<br>
+微风同样也拂动了白王的衣袖，如纱一般的袍子很轻易地就飘了起来。<br>
+卢瑞恩突然想到了一个问题。<br>
+“…陛下…”<br>
+“嗯？”<br>
+白王抬起头。<br>
+卢瑞恩有些紧张地抿了抿嘴。<br>
+“…陛下…觉得冷吗？”<br>
+白王愣住了，似乎从来没有考虑过这个问题一般。<br>
+卢瑞恩赶紧补充道：“因为我发现陛下似乎穿的很单薄…”<br>
+白王身上的光芒忽明忽暗，这是他困惑时的表现。<br>
+年轻的王还没有太多的能力来控制自己的情绪。<br>
+“我…我不是有意打断您的思路的…”看白王很久没有回答，卢瑞恩有些慌了。<br>
+“……你…是第一个问我这个问题的虫子。”<br>
+白王最终这么说到。<br>
+卢瑞恩稍稍垂下视线，不敢直视王的眼睛。<br>
+“…首先，这个不是我的衣服——”<br>
+白王抬起爪子，看向自己的袖口，他示意性的晃了晃胳膊。宽大的袖口随着他的动作微微摆动着。<br>
+“——这是我与生俱来的…呃…身体的一部分…就像…外壳。”<br>
+卢瑞恩把讶异的惊叹咽回肚子里，继续等着白王说完。<br>
+“其次……冷…虽然是能感到的——“<br>
+卢瑞恩抬起头，这是他没有意料到的答案。<br>
+他以为作为神的转世…不，作为一个神，白王应该不会被物理法则束缚才对。<br>
+“——但是，我不能覆盖住我的光。而且…”<br>
+白王皱了皱眉，似是在绞尽脑汁地想着下一句话。<br>
+“它们会变厚的。”<br>
+卢瑞恩眨了眨眼睛。<br>
+“所以，不用为我担心。”<br>
+白王友好地微笑了一下，随后又反应过来对方并不能看到，有些尴尬地低下头继续研究地图。<br>
+卢瑞恩不敢再打扰白王，悄悄退了出去，又想起来自己一直都忘了行礼，又不敢再进去，只好对着门缝鞠了一躬。<br>
+他紧张的情绪通通变成了喜悦，现在他又可以跟小伙伴们炫耀了，因为他现在是为数不多的——他所认为的——曾听过陛下笑声的虫子了。</p>
+
+<p>TBC</p>
+
+<p>————片场花絮————</p>
+
+<p>让他去送水？送给陛下？那他不就可以…出本子了吗？<br>
+🤪</p>
+
+<h2 id="toc_4">～4～</h2>
+
+<p>白王其实不喜欢别的虫子去触碰他的身体。<br>
+卢瑞恩其实很早就发现了。<br>
+不过即便不是这样，他也不会去故意碰他。<br>
+因为他觉得这么做会把他洁白的袍子弄脏。<br>
+而相反的，其他虫子对此不以为然——或许是根本没有意识到？<br>
+但其实只要再仔细留意一点，就会发现每次白王被碰到的时候，无论对方有意或是无意，他的光芒都会轻微地闪烁一下。<br>
+他们只是没有用心——他们不是真的喜欢他，卢瑞恩想。<br>
+而他卢瑞恩不一样。<br>
+他会留心陛下的每一个动作，记住他的光芒所传达出的每一个信号。<br>
+就像现在，他趴在栏杆边上，注视着白王给成年虫子们进行动员演讲。<br>
+陛下身上的光芒比平日里要耀眼的多。<br>
+那代表陛下现在肯定心情愉悦。<br>
+卢瑞恩撑着脑袋，全神贯注地听着白王富有感染力的声音。<br>
+“王后殿下，您想啥呢？”伴随着几声嗤笑，卢瑞恩感觉自己被不轻不重地拍了一下。<br>
+卢瑞恩的思绪被打断了，他皱着眉回过头：“…要你管。”<br>
+他的几个玩伴通常都会这样打趣他，他也不会因此生气，相反，他还有一点……满足？<br>
+“我听说陛下要带着巡逻队出征了！”<br>
+“我早就知道了。”卢瑞恩翻了个白眼。<br>
+“那你知道陛下要去哪里吗？”<br>
+“我当然——”卢瑞恩不假思索地回答，但细细一想，他还真不知道。<br>
+“——那你知道吗？”他有些不爽，反问道。<br>
+那只小虫子狡黠地笑了：“我当然知道喽！陛下可是专门告诉我了！”<br>
+“什…你说谎！陛下那么忙，才不会——”<br>
+卢瑞恩条件反射般地否认着对方的话，直到他发现其他虫子都看着他笑。<br>
+“…你…你们…哼！”意识到自己被耍了，卢瑞恩气得转身就走。<br>
+“哎哎哎！别走嘛！我是真的知道陛下要去哪里的！你不想知道吗？”<br>
+卢瑞恩站住了，把头撇向一边生着闷气，却没再有离开的意思。<br>
+小虫子们又重新围到他身边。<br>
+“我听到几个士兵聊天说，陛下准备去咱们头顶上方的…一个叫做真菌荒地的地方！那里有好多好多长腿的蘑菇！”<br>
+“真菌荒地？”<br>
+卢瑞恩的注意力被吸引了过来，暂时忘掉了自己还在生着气。<br>
+“嗯嗯，我听说陛下准备把真菌荒地划归到咱们的领地中，这样就可以有更多的虫子住进来了！”<br>
+卢瑞恩低着头思索着。<br>
+“那…那那些蘑菇怎么办？”<br>
+“蘑菇？”小虫子有些讶异地看着他，“吃了呗，蘑菇多好吃啊。”<br>
+“咱们的王后殿下又开始为国事操心啦！”<br>
+“我哪有！”<br>
+卢瑞恩生气地回了一句，又突然想起来之前他们的所作所为，这回干脆头也不回地走了。<br>
+“哎！您还没给我们赏钱呢！”<br>
+卢瑞恩依稀听见这句话，然后是一阵哄笑声。<br>
+晚上，卢瑞恩听着周围起伏不断的鼾声，怎么都睡不着觉。<br>
+也不是因为他睡觉睡得浅容易被吵醒，而是明天，白王就要率领部队出征了。<br>
+他翻了个身，闭上眼睛，却始终被美梦神拒之门外——如果真的有美梦神的话。<br>
+陛下作战的时候，会不会也很帅气呢……<br>
+卢瑞恩想着。<br>
+不不不，陛下会很优雅的作战。嗯，又优雅又帅气。<br>
+他想象着白王挥舞着骨钉，衣袂翻飞的模样。<br>
+…等等……那他的袍子怎么办…？<br>
+卢瑞恩猛地睁开眼。<br>
+陛下说过那是他身体的一部分的…平时的时候虽然能显出陛下的高贵身份……但是在战斗中那怎么看都像是累赘啊！<br>
+他开始担心起来。<br>
+陛下会不会被绊倒，然后……<br>
+卢瑞恩不敢再想下去了。<br>
+还有他的翅膀，也不知道现在能不能使用了……<br>
+卢瑞恩又翻了个身。<br>
+他直勾勾地盯着帐篷顶看了几分钟。<br>
+最后，他干脆一个翻身坐了起来。<br>
+这应该是陛下第一次上战场吧……<br>
+卢瑞恩感觉心里沉甸甸的，怎么都放松不下来。<br>
+他悄悄地从草毯里爬出来，蹑手蹑脚地走过那些睡得四仰八叉的小虫子们。<br>
+他撩起草帘，最后回望了一眼，便走了出去。<br>
+夜晚的白宫比他想象中的要凉。<br>
+他打了个冷颤，却没有停下脚步。<br>
+他知道宫殿里有一个通往外面的小洞，是他和玩伴们一起发现的，只能够让一只小虫子进出。<br>
+爬出洞外，他找到了盆地中一个不易被察觉到的小角落，随后便一直趴在里面望着宫殿的大门。<br>
+他等了好久好久，但很神奇的是，他丝毫没有感到疲惫。<br>
+一直等到大门缓缓打开，白王带领着队伍走出宫殿，卢瑞恩才挪动了一下，稍微活动了快要僵直的身子。那真的是一支庞大的队伍，卢瑞恩看见佩戴着盾牌骨钉的虫子们一排接一排地向外走着，时不时还会出现拿着长矛的飞虫——那些极幸运的，生来被赐予了翅膀的甲虫们。<br>
+卢瑞恩颇有耐心地等到大门又缓缓关闭，最后一排虫子也消失在转角的时候才探出身来，以岩石为隐蔽悄悄跟在了行进队伍的后面。<br>
+最开始的时候，跟踪的紧张感让他时刻保持着警惕，但随后他发现士兵们一直在谈笑风生，并不会把多余的注意力放在周围，于是他便也大胆地靠近了些。<br>
+最后一排的年轻士兵似乎聊得很开心，从哪家的女孩子更漂亮一点聊到了自己未来的孩子——虽然现在还不存在。<br>
+卢瑞恩有一句没一句地听着。<br>
+“你觉得陛下真的会打架吗？”<br>
+卢瑞恩立刻支起耳朵。<br>
+“他的骨钉技术无可挑剔…不如说让人眼花缭乱——但是谁知道在实战中表现会怎么样呢。”<br>
+“要是连陛下都打不赢敌人，那咱不就等死了吗？”<br>
+陛下才不会输呢！<br>
+卢瑞恩在心里喊着。<br>
+“哎，不过听先遣队的说那些蘑菇也算是像咱们一样，是有感情的呢。”<br>
+“噫，我可不想吃到哭得一把鼻涕一把泪的蘑菇。”<br>
+“别再说了，好恶心啊！”<br>
+卢瑞恩想到了它的父母和兄弟姐妹。<br>
+那些蘑菇也会为自己家人的死去而伤心吗？<br>
+突然，他听到远处传来一阵翅膀振动的声音。<br>
+他连忙闪到后面的一块岩石后面。<br>
+“喂，你们聊什么呢！认真点，快要走到荒地里了！”<br>
+卢瑞恩躲在石头后面，屏住了呼吸。<br>
+一直等到再也听不到任何声响的时候，他才敢探出身子。<br>
+队伍已然不见半点踪影。<br>
+卢瑞恩倒也不慌张，只要向前走总是会走到的。<br>
+…但事实证明他错了。<br>
+偌大的队伍跟消失了一样，无论卢瑞恩怎么找都找不到。<br>
+他有些累了，靠着石壁坐了下来。<br>
+他听到某处传来了一个若有若无的声音。<br>
+他顺着声音找过去，看见石壁上有一个开口。<br>
+这是个两头贯通的小洞穴，声音正是从那头传来的。<br>
+卢瑞恩俯身钻了进去，手脚并用地向前爬行着。<br>
+快接近出口处的时候，他停了下来，前面出奇的安静，再也听不到任何声响。<br>
+卢瑞恩看见有几块小碎石从他眼前掉下去。<br>
+他挪的更靠外了些，努力向上望去。<br>
+白王出现在了位于他右侧的一面断壁的边缘。<br>
+他的袍子不再拖在地上，而是化成了许多白色的光球浮在他周围，只有比较靠上的部分还保留着些许原来的样子。<br>
+他展开背后的纯白透明的翅膀——可以看出它已经完全硬化了——跳了下来。<br>
+这是卢瑞恩第一次看见帝王之翼显露在外的样子。<br>
+那三对翅膀和白王的袍子一样包裹着淡淡的白光。它们薄如蝉翼，上面还布满了华丽精致的纹路。<br>
+艺术品。<br>
+卢瑞恩趴在小洞穴的靠外一侧，就好似在欣赏一件活着的艺术品一般，他的视线一直追随着白王。<br>
+白王不经意地往旁边一瞥，感觉看见了什么东西趴在附近的洞穴里。<br>
+他们视线相撞的一刹那，卢瑞恩得以从眼神中感受到白王难得一见的情感变化：从一开始的坚定，变成惊讶，到愤怒，最后化为慌张。<br>
+白王似乎意识到自己无法及时减速停留在半空中，他便加速俯冲了下去，而卢瑞恩的注意力只集中在那三对优雅地，交错扇动着的翅膀上，他还没来得及思考更多。<br>
+像是为什么陛下会突然变得如此慌张。<br>
+直到卢瑞恩听到了白王渐行渐远的喊叫：<br>
+“有虫子在上面！不要引爆——“<br>
+但他的喊声被爆炸声所淹没。<br>
+卢瑞恩惊叫一声，只感觉自己的身子都飘了起来。<br>
+在一片热浪中，它隐约能听到不属于虫族的含混的尖叫声。随后就感觉自己的身体越来越沉重，失重感越来越强烈。<br>
+他满脑子都想着一句话：<br>
+蘑菇会尖叫。<br>
+“陛下…！”<br>
+某只甲虫似乎这样喊了一声，他不是很确定。<br>
+热气催得他不得不闭上了眼睛，他闻到一股刺鼻的气味，他开始感到有点恶心了。<br>
+右肩一阵刺痛，好像是撞上了坚硬的石壁。<br>
+突然，他又撞上了什么东西，但不似石头那般坚硬，失重感顿时减轻了许多。<br>
+“屏住呼吸！”<br>
+是白王的声音。<br>
+他无法思考，下意识服从了命令。<br>
+一片混沌中，它只能听到耳边呼呼的风声，和仍在继续的、微弱的爆炸声。<br>
+没过多久，在他还没有感到窒息的时候，他感到周围的温度恢复了正常。<br>
+“安全了。”<br>
+白王的声音又一次传了过来，夹杂着些许喘气声。<br>
+他试探着呼吸了一口空气。<br>
+是正常的味道。<br>
+他睁开了眼睛。<br>
+有那么一瞬间，他在白王怀里看到了白王的担忧的眼神，但下一秒就凌厉了起来。<br>
+卢瑞恩缩了缩身子，做好了心理准备。<br>
+陛下很生气，他看得出来。因为每次陛下生气的时候，他身上的光都会变得异常强烈，刺眼的那种。<br>
+虽然仍旧是愤怒的神情，白王还是尽可能轻地把卢瑞恩放到地上。<br>
+卢瑞恩想站起来行礼，却没有力气。<br>
+白王深吸一口气。<br>
+“我不是警告过你们，不要随便离开盆地吗？！”<br>
+白王严厉的声音让卢瑞恩猛地一颤。<br>
+“…陛…陛下…我…”<br>
+“你知不知道你会死在这场爆炸里？就因为你那该死的好奇心……咳咳——”<br>
+白王突然咳嗽起来。<br>
+“陛下？！”<br>
+白王半跪在地上咳嗽着，用一只爪子撑着地。<br>
+卢瑞恩看到白王的袍子上有一大块已经烧出了几个窟窿。<br>
+足以令他窒息的愧疚感如山一般压向他，他望着白王弯腰咳嗽的身影，突然觉得自己要是没有被白王看到该多好。<br>
+他眼前的景象逐渐模糊起来。<br>
+“…陛下…我…对不—”<br>
+“陛下！您没事吧！？”<br>
+几只装备着盔甲盾牌的成年甲虫焦急地跑了过来，打断了卢瑞恩的话。<br>
+“咳咳……我…咳…没事…”<br>
+白王的声音沙哑又不连续。<br>
+“陛下，您需要立刻休息！”<br>
+白王仍在抑制不住地咳嗽，他艰难地把头转向卢瑞恩。<br>
+“查尔斯…你把…把他带回盆地…”<br>
+被叫做查尔斯的甲虫似乎才注意到卢瑞恩的存在。<br>
+“遵命。但是陛下——”<br>
+“我清楚自己的状况…咳咳…我不会…轻易倒下的…”<br>
+白王站起身，他的咳嗽已经好了一些，但还是会时不时地发作。<br>
+查尔斯担忧地看了看白王，最后还是走向了泪眼朦胧的卢瑞恩。<br>
+“你是怎么回事？这里是小孩子玩的地方吗！”<br>
+“对不起…对不起…”<br>
+卢瑞恩带着哭腔不断地重复着同样的句子。<br>
+“别哭了！还不赶紧向陛下谢恩？”<br>
+“不必了，战斗还没结束…咳咳…赶紧把他带回去…结束之后再处置他…”<br>
+“…是，陛下。”<br>
+查尔斯把还在小声喃喃着“对不起”的卢瑞恩一把扛在肩上。<br>
+卢瑞恩逐渐朦胧的意识里回响着白王的一声叹息。</p>
+
+<p>TBC</p>
+
+<h2 id="toc_5">～5～</h2>
+
+<p>卢瑞恩右肩缠着绷带，老老实实地坐在高了一截的椅子上——他的脚都挨不着地。<br>
+“你为什么要偷偷离开盆地？”<br>
+坐在他对面的一只老虫子——他们的老师，用尽可能温柔的语调问出了这个问题。<br>
+“我…我想去找陛下…”<br>
+卢瑞恩踌躇着说出了实话。<br>
+“去找陛下？为什么？”<br>
+“我…我怕他出事…”<br>
+“陛下会出什么事？”老虫子觉得有点好笑。<br>
+“…我不知道…万一他出事了…”<br>
+“你也做不了什么，对吧？”<br>
+卢瑞恩沉默了一阵，小声说：“我…我可以叫其他虫子来帮忙…”<br>
+老虫子叹口气：“你绝对会比陛下先被打倒在地，相信我。”<br>
+卢瑞恩不说话了。<br>
+“而且我听说，你这次还间接伤到了陛下？”<br>
+卢瑞恩又感觉到了那种闷痛，一种他说不上来的感觉。<br>
+他感觉眼泪又开始向外涌。<br>
+见卢瑞恩不再说话，老虫子调整了一下姿势，又换了个问题。<br>
+“和我说说你为什么怕陛下出事吧。“<br>
+卢瑞恩低着头快速地向他瞟了一眼，又垂下去。他的眼神飘忽不定，看上去十分纠结。<br>
+“我不会告诉其他虫子的，我发誓。”<br>
+虽然知道这已经是一个公开的秘密了，但为了引卢瑞恩开口，他只得这么说。<br>
+卢瑞恩深深地吸了口气。<br>
+“我喜欢陛下，我爱他。”<br>
+卢瑞恩含着眼泪，故作坚强地说。<br>
+老虫子叹了口气，意料之中的回答。<br>
+“傻孩子，你还太小，不知道“喜欢”和“爱”的区别——”<br>
+“我知道！我当然知道！你们都只是喜欢他，但我是爱他的！”<br>
+“你知不知道，爱是需要付出代价的…”<br>
+“我愿意！只要为了陛下，我什么都可以给他！”<br>
+老虫子摇了摇头：“孩子，你先别急，告诉我，你是怎么遇到陛下的？”<br>
+“……是陛下救了我，在我快死掉的时候…”<br>
+卢瑞恩的声音小了下去。<br>
+“那你的父母…？”<br>
+卢瑞恩没有说话，只是低着头摆弄着爪子。<br>
+“…我知道了…孩子…你的确对陛下有着不一样的感情…也可以称之为爱…”<br>
+卢瑞恩抬起头。<br>
+“但这不是你想象中的爱。”<br>
+卢瑞恩刚要反驳，老虫子伸出爪子示意他听他说完。<br>
+“你想要在他身边，你想让他照顾你，为了获取这些，你会尽力去讨好他——”<br>
+“那不叫“讨好”！”<br>
+“听我说完，孩子。”<br>
+卢瑞恩忿忿不平地低下头。<br>
+“你还处于幼年期，这个阶段的小虫子都会由父母来照顾，他们会相当依赖于父母的关爱和帮助，他们之间的爱，叫做亲情。”<br>
+卢瑞恩不自在地挪了挪身子。<br>
+“而你，小家伙，你把陛下当作了你的父亲。你想方设法地想从陛下那里获得关怀，其实对于幼虫来说，这是再正常不过的事了，这是所有生物的本能，本能让我们得以在这个世界里生存下去。所以也难怪你那时会做出那样的举动，不必为此感到羞愧，卢瑞恩。”<br>
+“你是想说…我对陛下产生了感情…只是因为我想活下去？”<br>
+老虫子点了点头：“恐怕是的，我的孩子。”<br>
+卢瑞恩突然感觉一股凉意袭遍全身。<br>
+“不…不可能！如果我只是想活下去的话，早在陛下治好我的腿的时候，我就可以离开了…！”<br>
+“你觉得，用你的本能来判断，只凭你自己，可以在地下生存下去吗？”<br>
+“我…我…不是的！我爱他！我真的爱着他！”<br>
+卢瑞恩挣扎着想要否定，但始终无法摆脱这种想法。<br>
+他只是想通过呆在陛下身边来保证自己的安全？<br>
+他努力回想着自己为陛下做过的每一件事，想找出一个例子反驳这个荒谬可怕的论断。<br>
+但是他想得越多，越能感觉到老虫子说的是对的。<br>
+“…不可能…不是的…”<br>
+老虫子又叹了口气：“所以说你还太小了，卢瑞恩。事实就是这样，你太小了，即便你真的爱着陛下，也无法称之为爱情。爱情是双向的，有收获，也有付出。”<br>
+“…我太小了…”卢瑞恩机械地重复着这句话。<br>
+老虫子看向他的眼神里充满着同情，他伸出爪子想要抚上卢瑞恩的头。<br>
+突然，好似找到希望一般，卢瑞恩抬起头：“那如果我长大了，是不是就可以爱他了？”<br>
+老虫子愣住了，他的爪子僵在身旁。<br>
+“因为等我长大了以后，我就有能力保护陛下了…？”<br>
+老虫子诧异的眼神让卢瑞恩的声音拐了个弯，变成了一个疑问句。<br>
+“等你长大了以后，你就会找到你的另一半，然后你们会拥有许多孩子，获得一个幸福美满的家庭，”老虫子顿了顿，“当然，你的另一半会是一位漂亮温柔的姑娘。”<br>
+“不！我不要！陛下比任何虫子都要漂亮！都要温柔！”<br>
+“但他不是姑娘。”老虫子无奈地说。<br>
+“为什么我非要爱上一个姑娘？”<br>
+“因为这样你们才能繁衍后——咳，才能拥有一个家庭。”<br>
+“为什么我非要拥有家庭？”<br>
+“因为这样才能证明你来过这个世界，孩子。除非你能获得什么极大的功勋，不然你会需要将你一生所得传授给你的子辈，你的子辈们会铭记并传颂你的故事。”<br>
+卢瑞恩皱起眉，他有些理解不了。<br>
+“而且，这其实不是最重要的，最重要的一点，你不能迎娶一位国王，孩子，更不能迎娶一位神。”<br>
+这似乎说到了卢瑞恩的痛处，他移开了目光。<br>
+“你只是一只普通的虫子，再普通不过了，像你这样的虫子挤满了整座白宫。你不能，也不可能和神谈恋爱。”<br>
+“…陛下…不会爱我吗…？”<br>
+他嗫嚅着问。<br>
+老虫子似乎很纠结这个问题，他沉默了很久。<br>
+“陛下爱的是所有的虫子，正是因为他的博爱，他才能成为我们的王。”<br>
+可是卢瑞恩不喜欢这样。<br>
+哪怕只多一点点就好，比起其他虫子，多给予他一点点爱。<br>
+他希望自己在白王眼中是与众不同的。<br>
+这难道也是那个为了生存下去的本能所致吗？<br>
+“陛下爱着所有虫子，保护着所有虫子。他不需要任何虫子去保护他。”<br>
+“不是这样的！”卢瑞恩脱口而出，而后又因为觉得顶撞了老师而缩了缩身子。<br>
+这是他下意识的反应，他根本没有经过任何思考。<br>
+老虫子没有生气，呵呵笑了几声：“我哪里错了？”<br>
+“…陛下他…他…”卢瑞恩做了个吞咽的动作，“…他有时候也需要保护…”<br>
+但是这句话他自己也不是特别相信。<br>
+白王是一个百分之百的施恩者，他是神，神保护着信徒，无论发生什么都不会反过来。<br>
+“哦？”对方似乎看出了卢瑞恩的不确定，“那你说说看？”<br>
+“…陛下他…他…”卢瑞恩想到了白王刚建起白宫后靠着墙休息的身影，“他是会觉得累的！只是…只是你们一点都不关心他！所以你们才不知道！”<br>
+卢瑞恩感觉越说越有底气。<br>
+“小家伙，神是不会觉得累的。”<br>
+“会的！他会的！”<br>
+“神力是无穷无尽，取之不竭的。”<br>
+“但是他会累——”卢瑞恩睁大眼睛，突然想到了什么“——你们根本就不会管陛下会不会累，对不对？”<br>
+“你在说什么——”<br>
+“你们也是顺从于本能，想要活下去，才来到陛下身边的，但是你们根本就对他没有感情！”<br>
+“我们效忠于陛下——”<br>
+“你们只想要榨干他的力量！”<br>
+“卢瑞恩！”老虫子一拍桌子怒喝道，“你知不知道自己在说些什么？！”<br>
+“我当然知道自己在说什么！我在说一个事实！一个你们努力去掩盖的事实！当陛下付出了所有，真的倒下的时候，你们只会冷眼旁观而不会去为他做任何事情！”<br>
+“够了！到那边去面壁思过！好好想一想你刚刚的话意味着什么！没有我的命令不许动一下！”<br>
+“不！我要去见陛下！我要——”<br>
+门被推开的声音打断了卢瑞恩的话。<br>
+他们同时向门口望去。<br>
+白王神色冷峻地注视着两只虫子。<br>
+“陛下…”老虫子深深地躬下腰，声音放得很轻，但看得出来他仍气得发抖。<br>
+“…陛…陛下…”卢瑞恩慌忙跳到地面上行礼。一看见白王，他之前的那股蛮劲也全都烟消云散。<br>
+陛下救了自己两次，而且这次还冒着生命危险。<br>
+…不过神是不会死的吧…？<br>
+白王冲着这位老教师点了点头：“我听见房间里传出来争吵声——”他转向卢瑞恩，“怎么回事？”<br>
+“陛…陛下…我…他们——”<br>
+“陛下，卢瑞恩尚且年幼，懵懂无知，童言无忌这个道理我还是知道的，但是他太过意气用事，这恐怕对他将来的成长不利。”<br>
+“…我…我只是说了个事实…”<br>
+“是不是事实，不是由你来判断的。”白王严厉地说道。<br>
+“我……”他低着头看着白色地板上自己的倒影。<br>
+“我让你来这里，不是为了让你争辩对错，而是想让你认清楚自己的角色。”白王的声音依旧冰冷严肃，“你的生命是属于你自己的，不是我的，更不是其他虫子的。你好好想一想，如果你死在那场爆炸里，我会损失什么？别的虫子会损失什么？而你会损失什么？”<br>
+然而卢瑞恩并没有听进去，因为他突然想到，那场爆炸中，自己在看到陛下咳嗽的时候，是不是也曾想过“宁可让自己去死”…？<br>
+这样的话，老虫子的话就说不通了。<br>
+他不是为了生存才去接近陛下，至少不仅仅是。<br>
+也许这只是愧疚所致，但如果时间能倒流的话…<br>
+他发誓他绝对会把自己隐藏的很好。</p>
+
+<p>TBC</p>
+
+<p>（note：</p>
+
+<blockquote>
+<p>他只是想通过呆在陛下身边来保证自己的安全？<br>
+他努力回想着自己为陛下做过的每一件事，想找出一个例子反驳这个荒谬可怕的论断。<br>
+但是他想得越多，越能感觉到老虫子说的是对的。</p>
+</blockquote>
+
+<p>我能说我他喵这就是我当时的真实写照吗？我都快被自己说服了我他喵🤪）</p>
+
+<p>—————</p>
+
+<h2 id="toc_6">～6～</h2>
+
+<p>从白宫一路向上，穿过真菌荒地，再走过一片石窟洞穴的通道向下，便到了一片宽广无比的空地。<br>
+这就是白王打算建立新城市的地方。<br>
+这里是一个自然的奇迹。<br>
+虽然是在洞窟内，但小雨淅淅沥沥地下着，整个空间都是雾蒙蒙的一片，特别有情调。<br>
+虽然缠绵的小雨的确惹人喜爱，但是也带来一个问题：积水。<br>
+显而易见，谁都不想在一个水下城市里生活。<br>
+于是白王专门划分出一片区域，设计了一个排水系统，并命名为“皇家水道”，用来排出多余的雨水。<br>
+另外，在街道的设计上，也采用了便于将雨水进行引导收集的凹槽形状。<br>
+白王是一个天生的设计师、教育家、策略家、领导者。<br>
+在大胜蘑菇——或者是蘑菇族？——之后，在白王的领导下，一切都有条不紊的进行着。<br>
+“圣巢”。<br>
+这是白王给这个王国取的名字。<br>
+他说这是“最后而唯一的文明，一个永恒的国度”。<br>
+卢瑞恩自然是不会去质疑他的王的。<br>
+如果一个国王，同时身兼这么多任务但却都处理得井然有序，完美无缺，他怎么可能会失败？<br>
+现在，圣巢的居民不仅仅只有甲虫了。<br>
+卢瑞恩曾经看见过那些迁徙过来的长脖子虫、毛虫、蠕虫…各种各样的虫子。<br>
+圣巢会对所有寻求帮助的虫子们敞开怀抱。<br>
+就在城市蓝图绘制完毕，开始着手建造的这一年，卢瑞恩成年了。<br>
+但是他的成年礼并没有像其他小虫子那样值得纪念，他们都有父母来为他们举办聚会，或者为他们精心设计一个历练的任务。<br>
+卢瑞恩也没有打算告诉任何虫子。<br>
+…好吧，除了陛下。<br>
+不论怎样，卢瑞恩还是一样渴望长大。<br>
+白王疲惫时靠在墙上休息的身影总是在他的脑海里挥之不去。<br>
+成年，就意味着可以参军了。<br>
+而参军，就意味着可以保护陛下了。<br>
+他之前其实尝试着去参军。那时候白王会亲自进行面试，从而筛选出优秀的虫子进入军队。<br>
+当时，白王看着卢瑞恩小小的个子，努力把申请表举得高过了头顶，却依旧无法放在他面前的桌面上时，他只是无奈地笑笑，轻轻拍了拍卢瑞恩的头，便招呼一边的卫兵走过来把小卢瑞恩带走了。<br>
+不过这次，当他再一次走进那个房间的时候，坐在座椅上的却是一张陌生的面孔。<br>
+“陛下已经把筛选士兵的权利托付给我了，他还有其他事情要处理。”被问起的时候，那只虫子——面试官这样说。<br>
+卢瑞恩有些许失落，不过他立刻又重新打起精神来。<br>
+“我的名字是卢瑞恩…我——”<br>
+“你现在几岁了？”<br>
+面试官头也不抬的在记录表上写着什么。<br>
+“…呃…我…”卢瑞恩的节奏一下子就被打乱了，他记在脑子里花了很大功夫准备的长篇大论一下子消失的无影无踪。<br>
+“说话呀？后面还有虫子等着呢。”<br>
+“我…今年成年——”<br>
+“刚成年？”面试官用羽毛笔挑了一个勾，“视力没问题吧？”<br>
+“没…其实我想——”<br>
+“挥得动骨钉吗？”<br>
+“呃…可以…不过——”<br>
+“那你之后去新兵队报道。”面试官把刚刚写字的这页纸撕了下来，递给了卢瑞恩。<br>
+“…啊？”<br>
+“啊什么啊？拿着啊？”<br>
+卢瑞恩被这一套行云流水般的操作搞得迷迷瞪瞪的。<br>
+这…这就结束了？<br>
+他勉强挤出一个友好的微笑，说了声谢谢，急忙接过了那张纸。<br>
+走出房间，他才低头看了看那张决定着他今后命运的纸片。<br>
+上面盖了一个圣巢的印章，之后的批示是“通过”。<br>
+卢瑞恩本应该感到十分兴奋，但也许是因为这个资格获得得太简单的原因，他现在怎么也高兴不起来——至少不像他想象中那样高兴。<br>
+除此之外，那上面还写着他应该去报道的地点。<br>
+他小心翼翼的把纸折起来放好，开始寻找那个房间。<br>
+他是第一个到达目的地的虫子，其他的虫子陆续赶到的时候，不停地抱怨着白宫错综复杂的通道。<br>
+但是虫子们嗡嗡的埋怨声被一阵逐渐逼近的沉重脚步声打断了。<br>
+卢瑞恩开始感到地面在震动。<br>
+“朋友们！”随着前门石门轰的一声被推开，虫子们的视线立刻都集中过去，一个厚重的声音传了过来，“我是大家的头头赫格莫，以后大家就要跟着我混啦！”<br>
+一只超大型的甲虫出现在门口——他不得不弯下身子才能勉强挤进房间。<br>
+一片沉默。<br>
+赫格莫歪了歪头：“你们怎么都一副苦大仇深的表情？我刚参军入伍的时候那可是相当激动的啊？”<br>
+沉默。<br>
+“唉算了，大家收拾收拾做好出征的准备吧，陛下需要一批士兵跟着他去探索新发现的地区。因为几乎没有危险，所以新兵队伍就可以。这是大家第一次进行任务，要多注意看看那些老兵是怎么做的，回来之后我还会和你们进行进一步的培训。”<br>
+赫格莫扫视了一下全场。<br>
+“就这样，解散吧，我们两个小时后在宫殿大门口集合。”<br>
+他点了点头，转身准备离开。<br>
+“…队长…呃…赫格莫队长！”卢瑞恩努力从涌向房间后门的虫群中挤了过去。<br>
+赫格莫回过头：“怎么了小个子？”<br>
+“呃…我只是想问问…怎…怎么能成为像您一样优秀的战士…我…”卢瑞恩低下了头，“…我想加入陛下的亲卫队。”<br>
+赫格莫愣了愣，随后大笑起来：“陛下没有亲卫队，他的光就可以吓退绝大部份的野兽，有他的庇佑，士兵们根本不用担心自己会有生命危险。”他叉起腰，“我亲眼所见。”<br>
+“呃…可是…总得有虫子去保护他吧……以防万一？”<br>
+“陛下还没有这类的打算，他似乎正忙着建设新的城市…”赫格莫皱眉，“…其实高层的事情我也不是很清楚，我不算资历很高的虫子…”他挤挤眼睛，俯下身小声说，“…我还没成年呢！”<br>
+“嗯…？！”<br>
+看到赫格莫打了个“噤声”的手势，卢瑞恩压抑住了自己讶异的惊叹声。<br>
+“那…那陛下他…”<br>
+“他知道，什么事情能瞒得过神的眼睛？”赫格莫直起身子，“陛下说我身材魁梧，只要服从命令，善用武器，年龄不是问题。”<br>
+卢瑞恩有些呆滞地点了点头。<br>
+他从来不像那些生来就被天赋所祝福的虫子，他什么都没有。<br>
+除了自己这条命。<br>
+“最好不要让大家知道这件事，”赫格莫表情严肃起来，“以前就出现过因为不服从我的管理而造成混乱的情况…讲真，有些成年甲虫反而表现会像小孩子一样。”<br>
+不过说实话，在知道赫格莫比自己小的时候，卢瑞恩有那么一瞬间真的觉得有一点别扭。<br>
+告别了赫格莫之后，卢瑞恩就要去收拾行李了。<br>
+他的东西本来就不多，只需要简单打理一下就好。<br>
+在走向大门的时候，他突然听见从一个角落里传来了啜泣声。<br>
+时间还很充裕，他望了望大门，那里还一只虫子都没有。<br>
+他走向那个转角。<br>
+是一只红色的小蜣螂，正缩成一团抽泣着，看样子还没有成年。<br>
+卢瑞恩看着他哭泣的样子，突然有些心疼。<br>
+“…你没事吧？”<br>
+“我看着像没事的样子吗？…”他带着哭腔反问道。<br>
+卢瑞恩蹲了下来。<br>
+“你的父母呢？”<br>
+“…他们…他们不让我参军…”他的声音因为哭泣而颤抖着，“他们说我们一族的使命就是清理垃圾…我们靠垃圾为生…但是…但是我真的很想为陛下战斗…我想出去看看这个世界，而不是一直和垃圾堆呆在一起…”<br>
+卢瑞恩沉默着，他不知道该怎么安慰他。有志者事竟成？<br>
+“…就连…就连那些士兵也这么说…他们说陛下不会喜欢我在他身边呆着的，因为我身上总是有一股臭味…”<br>
+“陛下是不会因为这个而排斥你的，我保证。”<br>
+小蜣螂抬起头：“你又不是陛下，怎么知道他会怎么想？”<br>
+“如果他不喜欢你的气味，他又怎么会允许你们进入白宫？”<br>
+小蜣螂含着泪水不说话了。<br>
+卢瑞恩抚上他的头——他已经到了可以这么做的年纪了…虽然还有些不适应。<br>
+“…我叫卢瑞恩…孩子，你叫什么名字？”<br>
+“…这很重要吗？我们只是最低等的虫子，不会被记住的。”<br>
+“…我会的。还有陛下也会的。”<br>
+小蜣螂苦笑了一声：“陛下…我根本就没见过陛下…”<br>
+“他不仅仅是我们的国王，他还是神。只要你诚心信奉他，他就会记住你的名字。”<br>
+卢瑞恩想起那天陛下对他所说的话。<br>
+“…不可能…即便是神也…他真的这么厉害吗？”<br>
+卢瑞恩笑了：“他记住了所有甲虫的名字，肯定也能记住你的。”<br>
+小蜣螂抬起头眨了眨眼睛，里面还泛着点点泪光。<br>
+“…好，我相信你。”<br>
+“不，你要相信的是陛下。”卢瑞恩故意用力揉了揉小蜣螂的小脑袋，不出意外地听到了对方带着笑意的抱怨。<br>
+“…我会…我会努力的…我想亲眼见一见陛下…哪怕一眼就好…听说他很漂亮。”<br>
+“…漂亮可不是用来形容国王的…”卢瑞恩看着他，就好像看着原来的自己，突然有些恍惚，“…高贵优雅比较贴切一些。”<br>
+“你见过陛下吗？”<br>
+“…当然。”<br>
+“那……”小蜣螂一个翻身爬了起来，“那他长得什么样子？”<br>
+“我觉得最好由你亲眼看到才比较真实，陛下…他的英姿是形容不出来的。”<br>
+“话是这么说…不过…我怕我的父母…不会同意我参军。”<br>
+“我会请陛下劝劝你的父母的……”卢瑞恩不假思索地说，但突然又开始后悔自己的冲动。<br>
+陛下现在还会像原来那样耐心地听他诉说吗？<br>
+小蜣螂兴奋地跳了起来：“你会吗？听起来你和陛下很熟诶！”<br>
+“呃…我也不是…”<br>
+“我每天都在偷偷练习战斗技巧！我会更加努力的！如果真的有陛下的支持，我还可以光明正大的练习！”<br>
+“我……”<br>
+“太感谢你…不，太感谢您了！军官大人！”<br>
+小蜣螂深深鞠了一躬。<br>
+“别这样，其实我不是…”<br>
+“我要回去练骨钉技巧了！再见喽军官大人！”<br>
+还没等卢瑞恩解释完，小家伙就连蹦带跳的跑开了。<br>
+卢瑞恩无奈又有些忍俊不禁地望着他离开的方向。<br>
+跑了几步，他又想起什么似的转过身，大声喊道：“我的名字是奥格瑞姆！奥—格—瑞—姆—！不要忘记和陛下说呀！”<br>
+他用力地挥了挥爪子。<br>
+卢瑞恩点了点头——但估计对方并不会看见。<br>
+这时，已经陆续有好多士兵聚集过来了，他们诧异地望着蹦跳着跑远的奥格瑞姆。<br>
+不多时，赫格莫也到了，他穿着一身厚重的盔甲，拿着一把看上去一击就能致命的战锤。<br>
+他看见卢瑞恩的时候，友好地向他使了个眼色。<br>
+卢瑞恩笑了笑以回礼。<br>
+在赫格莫的安排下，他们迅速地进行了整队，来迎接白王的到来。<br>
+远远看见白王的时候，卢瑞恩感觉自己的心猛地停了一拍。<br>
+他更漂——呸，更优雅了。<br>
+他差不多也到了成年期——袍子确实变得更厚重了些。<br>
+就像赫格莫说的那样，他没有亲卫队——他是自己走过来的，一路上看见他的虫子无一不俯身下跪。<br>
+他走到新兵队伍前的时候，随着赫格莫一声令下，士兵们齐刷刷地屈膝跪地。<br>
+白王点了点头：“起来吧。我们这次的任务不会很危险，但是也不要私自做不被允许的事情。有什么情况一定要报告给我或者赫格莫。明白了吗？”<br>
+“是！”士兵们异口同声地喊道。<br>
+白王转向了赫格莫：“那就准备出发吧。”<br>
+赫格莫鞠了一躬，走向看守大门的守卫。<br>
+趁着这个机会，卢瑞恩走到白王面前行了个礼：“陛下，我…有一事相求。”<br>
+白王转过头，沉默了半晌。<br>
+“…卢瑞恩？”<br>
+卢瑞恩抬起头，又低下去：“是…正是在下。”<br>
+白王笑了：“你长大了。”<br>
+“呃…是…是…在下…”卢瑞恩结结巴巴地不知该如何回应。白王那声轻笑就似把卢瑞恩的魂魄给勾住一般。<br>
+“不过下次记住要喊报告，这是军队里的规矩。”<br>
+“是，陛下…”<br>
+“说说你的请求吧。”<br>
+卢瑞恩有些紧张地开口道：“……我听一只小蜣螂…他的名字是奥格瑞姆…他说，他的父母不允许他参军，因为他们想让他继续继承家业，做一个清道夫…但是他真的很努力地想要加入军队…我想…您能不能…”<br>
+“哦？不过蜣螂一族是无神论者，我可能…不好插手这件事…”<br>
+白王面露难色，眼神有点犹豫。<br>
+“…不过我可以以国王的身份去劝说他们，至于他们最终的决定…我也不能强求。”<br>
+“…这…这就足够了！感谢您在百忙之中——”<br>
+“我其实没有你们想象的那么忙。”白王笑着摇了摇头，他的声音混杂在大门缓缓打开的巨大声响里。<br>
+从白宫向上行军，虽然一路上行程很长，还时不时有野兽跳出来张牙舞爪，但是只消白王怒视般的一瞥，那些野兽也便嘶吼着退开了。<br>
+“只要有陛下在的出征都是很安全的。很多时候，比起我们护送他，更像他在护送我们。”赫格莫悄悄俯在卢瑞恩耳边说。<br>
+在离目的地不远的时候，卢瑞恩就已经感觉到一阵清凉了。<br>
+卢瑞恩虽然早就听说过这个“会下雨的洞窟”，但当他亲眼看见的时候，仍然还是禁不住为这个奇迹所感叹。<br>
+现在城市的雏形已经大致建立了起来，白王带领着队伍穿梭在各式各样的建筑之间，毛毛细雨飘散如烟，非但不会感到不适，反而有一种神清气爽的舒服。<br>
+在白王简单地分配工作后，赫格莫便带着一大部分士兵去督察——或是帮忙——建设工程了。<br>
+而在工人们建立新城市的同时，白王则继续率领着士兵们探索这片广阔的空间。<br>
+他们走了足足有一两天的时间，才终于走到了这片区域的另一个边缘。<br>
+在那里，他们看见了骨架。<br>
+许许多多的骨架。<br>
+数不清的骨架。<br>
+大多数都是甲虫的。<br>
+相比于自然地形，这里更像是一个坟墓。<br>
+大部分骨架已经被风吹得只剩下了极少的一部分，只能依稀可以分辨出它是个骨架。<br>
+白王停下了脚步。<br>
+他伫立在那里，站了好久，不知道在看什么。<br>
+卢瑞恩则是完全被这片可怕的墓地吓出了一身冷汗。<br>
+也许这里曾经发生了什么可怕的事情？他不知道，也不想知道。<br>
+白王又偏过头看了看他自己身后的队伍，队伍不大，但也有五十多只虫子了。<br>
+他的光芒暗了下去，又亮了起来。<br>
+他转回头，迈开了脚步。<br>
+士兵们不知道到底是什么情况，但还是急忙跟了上去，队伍继续向前行进着。<br>
+在靠近边缘的石壁处，有一个与众不同的、巨大无比的骨架，一看就不是甲虫。<br>
+这个骨架的状况也好不到哪去，磨损的十分严重，残留下来的部分的形状甚至到了骇人的地步。<br>
+不过隐约可以看到它的身后有一个洞口。<br>
+卢瑞恩和其他士兵们费了很大的力气，才把那具巨大的骨架移开了一条可以通过的缝。<br>
+洞穴里面一片漆黑，白王的光照着前方的路。<br>
+这不是一个很深的洞穴，只走了一会儿便到头了。<br>
+有什么东西反射着光芒，孤零零地躺在一个角落里。<br>
+白王走上前，蹲下身。<br>
+是虫卵。<br>
+“…鹿角虫。”白王抚着光滑的卵壳轻声说。<br>
+他向旁边望去，一共有五颗，它们静静地躺在那里，等待着出生的机会。<br>
+白王决定把它们带回去。<br>
+这些卵在甲虫们看来已经很巨大了，差不多有他们的一半高，而且也很重，至少需要两只成年甲虫一起才能搬起来。<br>
+而他们需要一路把它们搬回白宫。<br>
+“鹿角虫跋涉能力极强，能举起比自己重百倍的重物。”白王对面带疑惑——更多的是不情愿——的士兵们解释道，“有他们的帮助，我们可以更快的修建工程。”<br>
+白王下令让一小队士兵——包括卢瑞恩——跟随他把卵搬回去，其余的虫子留下继续进行探索。<br>
+“把平整的，可以搭建建筑的土地圈出来，”白王一边看着士兵们把卵小心地分开转移到箱子里，一边对负责探索的士兵队长吩咐道，“……另外，如果需要移开那些骨架…最好能把它们埋在一个地方……这样不会占用太多空间。”<br>
+“遵命，陛下。”<br>
+沿着原路返回，又是四五天左右的脚程。<br>
+白王一直走在队伍的最前面，带领着整支队伍。<br>
+即便有士兵掉队了，只要不经过转角，白王发出的光可以达到直线视程的最远端。<br>
+尤其是在经过伸手不见五指的洞穴的时候，白王的光毫无疑问便成了他们的引路旗帜，他也会时不时的停下，来确认士兵们是否都跟了上来。<br>
+当然，白王也不会残忍到让士兵们一直抬着沉重的箱子，他会让士兵们轮番工作，或者在到达安全区域的时候原地休息。<br>
+在远远看到白宫的亮光的时候，所有虫子都松了口气。<br>
+白王领着他们走进了一个小房间，指挥着士兵们小心翼翼地把装着卵的箱子放在地面上。<br>
+随后，他撩起袖子，开始搭建草窝。<br>
+士兵们目瞪口呆地看了一会儿：“…陛下，还是由助产妇来……”<br>
+“她们没这个能力。”白王抱起一颗虫卵，放到草窝里，里面铺的是最柔软的草叶和棉絮。“这些卵已经被遗忘太久了，想要进行普通的孵化已经不可能了。”<br>
+“那……”<br>
+“我亲自来。”白王又把一颗卵放进了草窝里。<br>
+“可是陛下……”<br>
+“怎么？”白王停下了手中的动作，转而盯着那个士兵看…眼神有点危险。<br>
+“…没…！没事！辛苦陛下了…！”<br>
+白王轻哼了一声，继续忙着手里的工作。<br>
+一个月后，小鹿角虫们出生了，三雌两雄。<br>
+其中有一只雌性的小虫一出生外骨骼就脆弱不堪。<br>
+也许是因为她很不幸的被母亲放置于洞穴的靠外一侧，长期的风寒导致了卵的畸形。<br>
+白王用神力为这只可怜的小家伙制作了一个外壳。<br>
+但无论大家怎么努力，这只雌性鹿角幼虫终于还是不堪病痛的折磨，早早地就夭折了。<br>
+不过其余的四只在助产妇的照料下，算是生活得有滋有味。<br>
+他们早早的就知道了自己是怎么出生的，也因此愿意用劳动来报答圣巢给予他们的恩惠。<br>
+“国王车站”是第一个竣工的车站，自然用了白王的名号来命名。<br>
+当两个联通于在建城市和白宫之间的鹿角虫车站终于建成的时候，白王亲自给四只年轻的小鹿角虫们戴上了座垫。<br>
+他们身型还比较小，载不动太多东西，最多只能载一只虫子和一些建材。<br>
+不过他们跑起来的速度真的是无与伦比。<br>
+整个建筑工程因为有了他们的帮忙，至少提前完成了一年的时间。<br>
+白王专门叮嘱工人们在修建建筑时，要尽可能多的用大大的落地窗来装饰。<br>
+事实证明白王的审美能力也是很高的。<br>
+即便身处建筑物中，也能透过窗户感受到这怡情养性的绵绵细雨所带来的享受。<br>
+工程完成后不多时，白王就下令让虫子们搬到新的城市里去住了。<br>
+白宫也从此变得空落落的——也许这正是白王希望的？<br>
+卢瑞恩听说，白王准备把白宫作为自己的宫殿。<br>
+当然，白宫本来就应该是他的宫殿。<br>
+于是白宫里修建了新的房间——王座室。<br>
+这不过是白王弹指一挥间的功夫就完成的工程。<br>
+不过白王还是在王座的设计上下了很大功夫的。<br>
+话说回来，既然有了一座新城市，大家便建议白王给它取一个名字。<br>
+“或许，雨露之城（City of Dews）会是一个合适的名字？”一个士兵望着窗外淅淅沥沥的小雨提议道。<br>
+“不。”白王站在落地窗前，抚着玻璃。<br>
+不知怎的，他的语气里透露出些许忧伤：<br>
+“我要叫她‘泪水之城’。”<br>
+“而且，从今以后，她就是圣巢的首都了。”<br>
+他抬起头望向朦胧一片的“天空”，许久没再说话。</p>
+
+<p>TBC</p>
+
+<p>———片场花絮———</p>
+
+<p>那天，听说有很多甲虫因为偷看白王孵蛋而被丢进了监狱。<br>
+而老司机卢瑞恩就比较熟练了👍</p>
+
+<p>（note：其实这章本来是最短的，但是加着改着就变成最长的了（一口老血））</p>
+
+<h2 id="toc_7">～7～</h2>
+
+<div class="note primary"><p style="color:#7042C1"> 笑死了，我这四年就记得我曾经写过“走错路了”、“共产主义”，还有“大队人马挺进雾谷然后p事没干就原路返回”，以及“战斗苦手”，笑死我了，一生的污点（x）</p> </div>
+
+<p>雾谷对于卢瑞恩来说一直都是一个神秘的地方。<br>
+他一直只是从老兵那里听说过这个“将来可以被开发成旅游胜地”的地区。<br>
+这次是白王最后一次进行雾谷的探索，他需要走到雾谷最深处来确认这里没有能威胁到圣巢的异族或者野兽。<br>
+卢瑞恩有些好奇地打量着四周。<br>
+这里被一片粉色的薄雾笼罩，就像仙境一般。<br>
+在某些角落里，还能看到一些透明的卵——可以当做炸弹用，一位老兵说。<br>
+似乎白王在与蘑菇的战斗中就用上了这些“炸弹”。<br>
+虽然卢瑞恩完全无法把这些美丽的卵和炸弹联系起来，不过他也不想去亲身验证这件事情。<br>
+大部队的行进速度明显放缓了许多，因为大部分新兵也像卢瑞恩那样惊叹于眼前的景象。<br>
+老兵们则不以为然，显然，他们来这里好几次了。<br>
+卢瑞恩眼前飘过一个透明的、长着短小触手的可爱生物。<br>
+他下意识地伸出爪子去摸。<br>
+“别碰它！很疼的！”<br>
+啪的一声，他伸出去的爪子被身后一个老兵打了回去。<br>
+卢瑞恩幽怨地揉着被打疼的爪子，心里抱怨着对方的不知轻重。<br>
+不过当他看见一只虫躲闪不及碰到了那个生物，在一阵闪光后接着便发出了一声惨叫的时候，他的眼神变成了感激。<br>
+越往雾谷深处走，那些浮在半空中的小生物就越来越多。<br>
+卢瑞恩不得不弯腰侧身去躲避它们。<br>
+一个传令官扑扇着翅膀飞过来，他一边灵活地穿梭在那些生物之间，一边大声宣告着前方传来的指示。<br>
+“所有虫子！举起你们的盾牌！我们要进入水母的领地了！记住！不要和它们发生冲突！不要和它们发生冲突！………”<br>
+所以陛下称这些生物为水母…？<br>
+卢瑞恩听从指挥举起了盾牌，轻轻挡开了一只飘向他的小水母。<br>
+小水母受力向另一个方向飘去，它们看起来似乎没有思考能力。<br>
+随着传令官的呼喊渐渐远去，卢瑞恩看见前方隐隐约约漂浮着一个更大的东西。<br>
+他们之间的距离越来越近，卢瑞恩不由得屏住了呼吸。<br>
+拨开一片挡路的草丛，卢瑞恩被眼前的景象深深震撼了。<br>
+无数的透明水母漂浮在半空中，有大有小，大的高出了他两个头，小的还不到他的一半高。它们时不时吐出一串气泡，向上窜去。<br>
+简直就如自己小时候听到的童话故事里的场景一般。<br>
+这绝对会是拍婚纱照的一个绝佳地点。卢瑞恩想着。<br>
+……随后他又被自己脑补的场景羞红了脸。<br>
+“嘿，卢瑞恩大哥，发生了什么？”奥格瑞姆笑嘻嘻地凑到他面前。<br>
+卢瑞恩被吓了一跳：“没…没什么…”<br>
+“…还说没什么，是不是看上了哪家的漂亮姑娘？”<br>
+“…你小小年纪，不要胡思乱想…”<br>
+“我已经成年了！而且只比你小一天而已！”<br>
+虽然卢瑞恩很高兴看到奥格瑞姆成功加入了军队，但让他意想不到的是这个看上去稚嫩无比的爱哭鬼当时竟然只差一天就成年了。<br>
+唉，被父母宠坏的小孩，如果一直呆在父母身边，只怕会一直表现得像个小孩吧…不过好歹最后他的父母还是放手了。<br>
+当时奥格瑞姆专门跑到他跟前兴高采烈地说着白王是怎样的优雅，他的光芒是怎样的明亮。在那之后，蜣螂部族开了信奉神明的先例。<br>
+“他真的知道我的名字！”奥格瑞姆兴奋地说，“我从来没有见过他，但他说出了我的名字！”<br>
+卢瑞恩狠不下心去提醒他说是他让自己告诉白王这个名字的。<br>
+虽然奥格瑞姆在之后的训练里没少哭鼻子，但他依旧坚持不懈地练习着，即便是哭着也会把当天的训练任务做完。<br>
+其实每次卢瑞恩看着他一边抹眼泪一边绕着训练场一圈又一圈的跑着的时候，他感到的是由衷的钦佩。<br>
+不过他的体味依旧是他最脆弱的弱点，一旦触及他就会至少抑郁一天，还会神经质地不停洗澡。<br>
+一开始大家会觉得好玩而去逗弄他，但当他们发现水费是由大家共同承担的时候，便再也没有人敢提起这件事了。<br>
+不仅是奥格瑞姆，这次他们又结识了一位新的、特殊的伙伴。<br>
+她自称为泽默，有着十分美丽的白色长发，来自非常非常非常遥远的地方，是一个旅者。<br>
+因为在旅程上很有可能会遇到野兽，所以她掌握了一些自卫的基本技巧，只不过缺少系统性的学习。<br>
+她特别喜欢讲故事，那些她在旅途中碰到的奇闻轶事，而且有很多故事可以讲。<br>
+有虫子开玩笑说，她的故事讲一年都讲不完。<br>
+而事实上，她的故事总量或许真的可以用“年”这个单位来度量。<br>
+她的口音和说话方式很奇怪，让卢瑞恩想起了泪水之城中的音乐神童玛丽莎。她有的时候也会出演歌剧，用的也是这种高贵典雅的风格。<br>
+“吾毕生都在索寻吾爱…却总憾而无果…”一旦问起关于她的事情，她就会以这句话作为开头，仰天长叹。她的故事有的时候会变得很悲怆，甚至会让士兵们开始抱头痛哭。<br>
+不过士兵们都喜欢听故事，休息的时间长了，或者行程多了，大家会凑在她的身旁听她讲故事，一边走一边抹眼泪，有时还会让传令官惊得停下来询问怎么变成了送葬队伍。<br>
+但泽默本人其实并不是一只很健谈的虫子。甚至有时会让虫子们感觉有一些疏远感。<br>
+不过她的故事让她在部队里也小有名气，有的时候其他队伍的士兵也会专门跑过来听她讲故事。<br>
+卢瑞恩最喜欢的故事，就是那篇关于一个女骑士和国王之间的爱情故事。也许他在听的时候代入了自己吧。<br>
+不过也有一些骇人听闻的故事，就像现在她讲的这个：<br>
+在遥远的异国他乡，有一位国王。他是一位特别尽职尽责的国王，为了他的王国，即便赴汤蹈火也在所不辞。<br>
+不仅如此，他晓勇善战，这片土地几乎都是他打下来的江山，他管辖之下的国民，没有一个不称赞他的能力。<br>
+他的王国曾一度成为那片区域最繁华的国度。<br>
+但是好景不长，他周边的邻国觊觎他国家的财富，联合起来想要瓜分他的领土。<br>
+他再怎么挣扎，也无力抵抗六国的兵力。<br>
+这时，一位神秘的吟游诗人觐见了这位国王，向他提供了一个选项。<br>
+“用一个东西来和我达成协议，我会助您让您的国家挺过这次危机。”<br>
+提供的东西越珍贵，他所给予的帮助也会越有力。<br>
+绝望的国王没有其他选择，他无法忍受看着自己的国民身陷水深火热之中。<br>
+他说，他愿意用自己的一切来换取王国的安定。<br>
+吟游诗人同意了。<br>
+两天后，战争突然中止了。<br>
+原因是那六个国家的国王，同时死在了睡梦中，听说连他们的尸体都化为了灰烬。<br>
+有传言说，这位国王的统治是神授，那六国的国王触怒了神威。<br>
+就在王国上下举国欢庆的时候，吟游诗人来索取属于他的东西了。<br>
+但是国王——<br>
+泽默的故事到这里就被迫中止了，因为前方的传令官又传来了一道命令：侦查完毕，准备撤回泪水之城，所有部队整好队伍，原地待命。<br>
+虫子们不得不返回他们之前的位置。<br>
+看样子白王并没有在雾谷发现可以威胁到圣巢的敌人。<br>
+队伍原地休息的时候，卢瑞恩拿出了一袋菌菇饼干和伙伴们一起享用。<br>
+听前线的士兵们说，白王发现了一只十分有灵性的小水母。<br>
+“又可爱又有灵性，一看见陛下就冲到他的怀里撒娇，怎么也不肯离开。”<br>
+“陛下给它取了一个名字，叫莫诺蒙。”<br>
+队伍的休息时间一直到白王从他们面前经过，随后他们就要准备跟在前线部队的后面返程了。<br>
+这时，他才真正看见了传闻中那只可爱的小水母。<br>
+真的好可爱！<br>
+这是卢瑞恩看见“莫诺蒙”的第一反应。<br>
+它——现在应该称之为她了，正缩在白王的怀里睡觉，一根裸露在外的触手还紧紧地缠住了白王的手臂。<br>
+她现在就是胖乎乎圆滚滚软绵绵的一小团，让卢瑞恩忍不住想戳一戳。<br>
+“先在白宫给她找一个房间。”卢瑞恩听到白王对一个随从说，“…然后，多派几队虫子到雾谷去，看看能不能在那里为她建一座房子——她可能更适应那里的环境。”<br>
+“遵命，陛下。”<br>
+莫诺蒙在白王怀里翻了个身，发出了一阵意味不明的咕噜咕噜的声音。<br>
+白王低下头默默地看了看她，他的眼神中，有许多情感混杂在一起。<br>
+“莫诺蒙？”<br>
+“咕噜咕噜…”莫诺蒙吐出了一串泡泡，随后又好奇地伸出触手去戳。<br>
+“砰”的一声，泡泡破开了，莫诺蒙反而被吓了一跳，把自己整个埋进了白王怀里，触手缩成一团。<br>
+白王被逗笑了，他伸出爪子轻轻摸了摸莫诺蒙透明的小脑袋。<br>
+莫诺蒙又把头探了出来，望了望白王，又望了望四周。<br>
+最后，她把视线停在了卢瑞恩身上——准确的说，是他爪子里拿着的菌菇饼干上。<br>
+卢瑞恩瞬间有种不详的预感。<br>
+一切都发生在一眨眼之间，只见莫诺蒙弹射起步，迅捷如猛兽出洞一般，身后只留下一串泡泡。<br>
+反作用力把白王推得一个趔趄，他惊得愣在当场。<br>
+下一个瞬间，莫诺蒙已经用触手紧紧包住了卢瑞恩拿着饼干的右爪，张开嘴咬了下去。<br>
+这是一个很神奇的体验，近距离看着一只爪子被吞进水母透明的身体里。<br>
+卢瑞恩着了魔一般，只是呆愣着透过那层淡绿色的皮肤看着一只黑色的爪子，以及逐渐散成粉末的饼干。<br>
+“卢瑞恩！卢瑞恩快把你的爪子拔出来！”<br>
+赫格莫着急地跑过来，一把把锤子扔在一边，开始使劲想把这只倔强的小水母和卢瑞恩可怜的右爪分开。<br>
+卢瑞恩这才反应过来这是自己的爪子，惨叫了一声便疯狂地想把她从爪子上甩下来。<br>
+“卢瑞恩！”奥格瑞姆也慌忙跑了过来，伸出爪子去抓那只小水母。<br>
+不过还没等奥格瑞姆碰到莫诺蒙的身体，莫诺蒙突然打了个喷嚏——吐出了一串透明泡泡——逃也似的立刻松开了卢瑞恩的爪子，还连带着把赫格莫摔了一跤。<br>
+于是奥格瑞姆的爪子悬在半空，进也不是，退也不是。<br>
+“我…我有那么难闻吗？”他看着自己的爪子欲哭无泪地说，看样子受到了严重的心理伤害。<br>
+卢瑞恩实在静不下心去安慰奥格瑞姆，他仍在拼命想把那些黏液从爪子上甩下来，但似乎毫无进展。<br>
+而赫格莫那边情况也不怎么好，小水母似乎很生气赫格莫一直抓着她不放，她一声不吭地开始放电。<br>
+可怜了赫格莫全身穿着金属盔甲，这下他可以放三天公伤假期了。<br>
+发完威的莫诺蒙神气地抖了抖身子，故意把电光弄得噼啪作响，又重新飘回了还没来得及跟上事态发展节奏做出反应的白王怀里。<br>
+那天是赫格莫被黑的最惨的一次，被比他小了近十倍的某只幼年水母电到抬着走——以他的体格，十只甲虫才成功把他抬回了泪水之城。<br>
+奥格瑞姆把自己关在家里关了整整三天，谁敲门都不肯开。听说他家的水费在那个月翻了两番。<br>
+而卢瑞恩则是彻底改观了对水母的印象。<br>
+她一点都不可爱！<br>
+回到家的卢瑞恩一遍又一遍地洗着沾满水母分泌物的爪子，恨恨地想。</p>
+
+<p>TBC<br>
+—————</p>
+
+<p>全场最佳：莫诺蒙（四杀）</p>
+
+<p>.............片场花絮...........</p>
+
+<p>“陛下，莫诺蒙想去洞穴探险，”卢瑞恩有些无奈地指了指紧紧缠在自己脑袋上的某只小水母，“…一个很黑的洞穴。”<br>
+白王预感到了什么。<br>
+“您能不能———”<br>
+“想都别想。去找一个灯笼去，我不想当你们的电灯泡。”<br>
+白王紧绷着脸，看起来没有任何商量的余地。<br>
+“可是光蝇灯笼调不了亮度，还要拿在手里，一点都不方便…”卢瑞恩委屈地说。<br>
+白王的脸色更难看了。<br>
+“一个不行，找两个。不方便，就别拿。我不想再讨论这个话题了，卢瑞恩，我不是可调节便携式虫型自走灯泡，我是你们的国王。再见，祝你们好运。”<br>
+白王不带停顿地说完这段话，转过身，残忍地无视了身后咕噜咕噜冒泡的莫诺蒙和苦苦哀求的卢瑞恩。</p>
+
+<p>.....................................</p>
+
+<p>—————</p>
+
+<h2 id="toc_8">～8～</h2>
+
+<p><em>（notice：这章里面有一截（略长）是段低级嘴炮(;´༎ຶД༎ຶ)目的其实就是想表示一下卢瑞恩他很有想法…然后埋伏笔(;´༎ຶД༎ຶ）如果实在看不下去的朋友们可以选择跳过…（虽然我真的很努力很努力的想把它写好了哭哭）另外之后的几章里有需要也会出现嘴炮(;´༎ຶД༎ຶ））</em></p>
+
+<p>卢瑞恩发现自己并不适合战斗。<br>
+也许自己的小身板并不是一个合适的理由——因为甲虫的身材几乎都是一样的。<br>
+但他真切地感受到，他不适合作战。<br>
+从与苔藓一族的战争开始到现在的两个月内，有好几次，如果不是因为赫格莫或者奥格瑞姆，他可能就英勇殉国了。<br>
+不过，神还是为他打开了一扇窗的。<br>
+他喜爱看书，兵书史书各种书，只要是可以让他获得新知识的，他都会去读，去看，去学。<br>
+因此，他越来越觉得，相比于战斗，他更喜欢研究兵法。<br>
+其实他这么喜欢看书，还有几个特殊的原因。<br>
+休战时期，每次他到读书室，或者图书馆去看书的时候，很大的几率，他都能遇到白王。<br>
+圣巢的书籍绝大部分都是由白王亲笔撰写，每次卢瑞恩翻开书页、或者取下被精心保存的石板的时候，他都能闻到那股“神明”的气味。<br>
+卢瑞恩十分享受这种感觉，他会轻轻抚摸着白王的笔迹——陛下确实也可以称得上一位书法家——从字里行间感受着白王写下这些字句时的想法。<br>
+每当他和白王的“情感”产生共鸣的时候，是他最幸福的时刻。<br>
+白王通常会把一些重要的精髓知识刻在石板上——它们可比那些脆弱的纸张耐久多了。但是就便利和可行性而言，一般的书籍还是纸质的还是比较合适。<br>
+每次白王在的时候，他都会坐在单独的一个座位上，离一般的读者比较远，他有时会编写书籍，时而也会阅读书籍。<br>
+于是读书室尽头的那一张座椅成为了卢瑞恩的“专座”——他想离他越近越好。<br>
+一开始，卢瑞恩会时不时地瞅一瞅白王，看着对方认真思索的样子出神。<br>
+之后，当他开始读起第一行句子的时候，他就会逐渐沉浸在文字的世界里，浑然不觉时间的流逝。<br>
+被管理员打断并“赶走”成了他的一个标准结局。<br>
+走之前，他总是会下意识地望向白王的方向，然后发现对方不知何时已经离开了。<br>
+不过有一次——有这么一次就够了——当卢瑞恩还徜徉在知识的海洋中时，他突然感觉那股属于白王的气味变得更浓厚了些。<br>
+然后，他从眼角的余光中看到，白王的长袖抚上了自己旁边的桌面。<br>
+真的是太近了。<br>
+他突然意识到白王就站在自己身后，用一只爪子撑着桌面…或许在和他看着同一行文字？<br>
+于是拜他所赐，卢瑞恩的大脑一直处于放空状态，这几页书他完全没有读进去。<br>
+“感觉怎么样？”沉默了许久，白王突然用气声轻轻地问。<br>
+因为阅读室内是不允许大声说话的。<br>
+卢瑞恩猛地一颤：“呃！？…很…很好…陛下…我能从陛下的书里学到很多…”<br>
+“我发现你经常会来这里读书，你很喜欢阅读吗？”白王俯下身，似乎想要看看卢瑞恩在读什么书。<br>
+“…那…那是因为我发现…我不擅长战斗…”白王的声音近在咫尺，他突然回忆起了自己小时候还黏在白王身边的日子。<br>
+白王悄声笑了：“…你要知道，能发现自己的劣势，有时就是最大的优势。”<br>
+他轻轻拉出卢瑞恩旁边的一把椅子——没有发出一丝声响，坐在了他旁边。<br>
+卢瑞恩恨不得把自己整个埋进书里面，他感到自己就像初恋的小女生那样…小鹿乱撞。<br>
+“正好你也差不多快看完了，说说你对这本书的看法吧，卢瑞恩。”白王侧坐着面向卢瑞恩。<br>
+卢瑞恩只想求白王不要再用气声和他说话了，他承受不住这么…这么…让他会产生奇异感觉的声音。<br>
+“…陛下…我恐怕…”<br>
+“难道我还会吃了你不成？”<br>
+“不不不…我只是…”<br>
+“你可以把这个当作学术讨论，卢瑞恩。我相信你已经具备足够的知识了。”<br>
+卢瑞恩心虚地转过头望向白王，绞尽脑汁地想着要怎样为这场<em>学术讨论</em>开头。<br>
+“陛下…”卢瑞恩组织了一下语言，“虽然我没有参加当时对蘑菇一族的战争…不过我看您在这本书里写到…蘑菇一族之所以那么脆弱…是因为它们没有一个有能力去统领它们的领导者…它们没有一个共同的目标。”<br>
+“没错，我之所以这么写是因为，当我率领部队进攻其中一个部落的时候，其它的部落竟然还协助我们进攻。“白王用爪子轻轻扣打着桌面，”它们的神并不具备领导它们的能力，由于缺少一个领导者，它们的秩序乱成一团，种族之间四分五裂，只想着争取自己的利益。而且，由于没有共同的努力方向，它们不可能继续发展，它们唯一能做的就只是固步自封，闭关锁国。它们无法去开拓视野，无法认识到自己的落后，从根本上缺乏竞争意识。以至于当外族入侵的时候，它们毫无还手之力。”<br>
+“但是…我有一个疑问…”卢瑞恩有些忐忑。<br>
+“你说吧，我不会降罪于你的。”白王似乎看出了他的顾虑。<br>
+“…您说对于一个王国来说，一位君主是必需的…”卢瑞恩顿了顿，“但是当所有的权利都集中在一只虫子身上的时候，当王国的前途只取决于他的决定的时候…岂不是也很危险吗？”<br>
+“那你觉得，怎样安排比较好呢？”白王笑着问道。<br>
+“我想…也许可以适当地进行权利的分散。也许财政可以由一只虫子来管理，军队由另一只虫子来管理…这样就可以使最终的决定成为大家讨论的结果了，而且也不会使国王过于操劳。于此，每个部落也可以以选出代表的方式，来参与讨论王国的相关事宜。”<br>
+“分权虽然是一个解决方法，但是你有没有想过，一旦君主失去了对下属的控制，他们很可能会反客为主，鸠占鹊巢？”<br>
+“对于这一点，我想，有两种解决方向…一种是…可以给他们财富，爵位，土地…甚至一个家庭。让他们满足于现状的同时，也可以创造出牵制他们的条件…”卢瑞恩沉吟着，“…让他们意识到，比起想方设法坐上王座，现在的生活会更舒适一些。”<br>
+“这确实是一个可行的方案，那你的另一个想法呢？”<br>
+“我的另一种想法…还只是一个雏形…陛下。说实话，我没有对它进行更深层次的思考。”<br>
+“嗯哼？”<br>
+“…那就是，建设一个没有国王的王国。”卢瑞恩深吸一口气，说道。<br>
+“在这个王国里，虫子们互相帮助，合作成长，不需要统治者，也就不存在权利的争夺。”<br>
+“…很好的想法，卢瑞恩。但是虫子们的欲求是无穷无尽的…这也是生存的本能。你有注意到那些有弹性的蘑菇吗？只有向它们施加压力，它们才会收缩，一旦放手，它们立刻又会恢复原状。对于虫子们来说，也是一样的。这是一种与生俱来的惰性，不想被外力所改变，除非可以一直使它保持在那个状态。这也是为什么我要求你们接受教育的原因，你们需要一种长期的熏陶，并由法律来保证。我需要让你们意识到怎样取舍才是真正的受益，而不是只是目光短浅地只盯着眼前的利益。本能驱使着你们在进行决定的时候只为自己的最大利益考虑，却不是为了集体。单只弱小的虫子无法战胜强大的对手。你们唯一的出路就是团结。”<br>
+卢瑞恩认真地听着，一直皱着眉没有说话。<br>
+“你表现的很好，卢瑞恩。看得出来，你真的很用功。”<br>
+白王轻轻地拍了拍卢瑞恩的肩。<br>
+不过卢瑞恩还沉浸在思索中，并没有注意到白王的赞赏和这个举动。<br>
+“陛下…”他开口道，“我最后…还想问您一个问题…”<br>
+“嗯？”白王虽然已经站起了身，但还是回过头示意卢瑞恩说下去。<br>
+“您真的…把所有…有思想的蘑菇都消灭了吗？”<br>
+白王皱起眉：“…如果有这个必要，我会去做的。不过，在只剩下最后几个部族的时候，它们主动请降于我，希望我能接纳它们，帮助它们建设它们的文明…”<br>
+“…那您同意了吗？”<br>
+“…我本意不是想要将它们赶尽杀绝…只是觉得它们的数量之多已经构成了对圣巢的威胁。既然它们已经恳求成为圣巢的一份子…那也算是我的人民了。”他把座椅又轻轻地推了回去。<br>
+“只要发誓忠于圣巢，圣巢会对所有的有求之虫…以及其他生物敞开大门……另外…我希望你能继续努力，卢瑞恩。你很有潜力。”<br>
+说完这些，还没等卢瑞恩反应过来他话里的意思，白王便已经走远了。<br>
+卢瑞恩独自缓了一会儿，突然意识到刚刚他似乎实现了一个他期盼已久的愿望，他一下子把书蒙在脑袋上，来遮盖自己开始烧得滚烫的脸。<br>
+又过去了一个月，这已经是白王第三次进攻苍绿之径了。<br>
+这一次，有点意外的，卢瑞恩被指派为了白王所率领的，先遣队的队长。<br>
+唯一可惜的是他需要暂时和奥格瑞姆以及赫格莫说再见了。<br>
+与苔藓一族的战斗时间远远超出了他们的预期时间。<br>
+苔藓族也算是一个文明较为发达的部落了，他们有着比起蘑菇一族更完善的防御体系，也许这就是原因之一吧。<br>
+但是即便如此，圣巢逐渐强大的兵力怎么能是他们一个小部落可以抵抗的？<br>
+他们最终还是将那些幸存的苔藓族人逼到了一个巨大的湖边。<br>
+这里有一座有些古老的神庙，似乎还祭祀着一个神明。<br>
+几个伤痕累累的苔藓战士站在了那些瑟瑟发抖的族人前面，其中有负伤的雄性，也有护着小孩的雌性。战士们的爪子紧紧握着长矛，眼神里满是拼死一搏的决绝。<br>
+“放下武器，不然你们一个都活不了。”<br>
+白王用苔藓族语命令着。<br>
+对方没有答话，摆出了攻击的姿势。<br>
+白王看了看那几个支撑不了多久的战士：“准备进攻。”<br>
+话音刚落，白王身后的士兵们便齐刷刷地把骨钉尖对准了前方，向前迈去。<br>
+“…<em>来自圣巢的苍白之王啊</em>…”<br>
+白王抬起爪子，挡在一个在头阵刚要冲上前的士兵面前，所有的士兵们立刻停下了动作。<br>
+…似乎是从湖里传出来的声音。<br>
+“…<em>我现在认可你的力量，没有必要再赶尽杀绝了…</em>”<br>
+白王继续等待着。<br>
+那个声音叹了口气：<br>
+“…<em>说出你的条件吧，圣巢的国王</em>…”<br>
+“臣服于我。”<br>
+“你休想！”一个苔藓战士大喊着。<br>
+白王转过头，用危险的眼神看着他。<br>
+而对方也没有退缩，无畏地直视着白王。<br>
+”…<em>你已经拥有了那么多的领土，都快要到达地面之上了，你</em>…”<br>
+“我只想确保圣巢的安全。”<br>
+白王在转过头前最后狠狠地瞪了那个战士一眼。<br>
+“<em>…唉…我很同情你的遭遇…我早有耳闻。但是你不能以此为借口屠杀我的族民…更不能在这个神圣之地洒上我族民的鲜血…</em>”<br>
+“我曾向他们许诺了安全的庇护，他们拒绝了。”<br>
+“谁会相信一只爪子上沾满我们族人鲜血的野兽的话！”一个雌性苔藓族人带着哭腔吼道。<br>
+她怀里的幼儿被喊叫声吓到，嚎啕大哭起来。<br>
+“没事的小宝贝，你有听到吗，古神乌恩的声音，乌恩大神会保护我们的…嘘…嘘…别哭了亲爱的，妈妈也在这里…”但是她自己的眼泪止不住地流下来。<br>
+一直站在白王身后没有出声的卢瑞恩感觉到嗓子有点发干。<br>
+他看向白王，他身上的光比起刚刚黯淡了许多。<br>
+陛下……<br>
+“…我只想确保圣巢的安全。”<br>
+沉默许久——期间只能听到幼儿的哭喊声和阵阵啜泣声——白王开口重复道，但声音轻了许多。<br>
+“<em>…战争只会产生灾难、痛苦、和仇恨…你这么做使得圣巢更岌岌可危了…</em>”<br>
+“如果有这个必要…”白王顿了顿，“即便需要杀光所有有可能会威胁圣巢的生物，我也在所不辞。”<br>
+“恶魔！你是个白色的恶魔！”一个雌性的苔藓族小孩用稚嫩的声音喊道。<br>
+白王却没有反应。<br>
+不，是有的。卢瑞恩注意到他身上的光突然又黯淡了一些。<br>
+那些苔藓族人衣衫褴褛，浑身都是战争遗留下来的伤疤和血迹，但他们的眼神却如刀子一般，锋利无比。<br>
+如果不是白王挡在自己面前，卢瑞恩恐怕早就落荒而逃了。<br>
+但是陛下他也…<br>
+卢瑞恩知道这样下去，白王也支撑不了多久——他本来就不像他看上去的那样坚强。<br>
+他抿了抿发干的嘴唇，向前迈了一步。<br>
+“…陛下，我愿意…留在这里帮助他们重建家园…如果他们同意不会侵犯圣巢的话。”<br>
+白王转过头看向他。<br>
+“…不，”白王沉默了一会儿说，“你留在这里会被他们当成奴隶对待的。”<br>
+他回过头。<br>
+“…还有一个办法…那就是把你的神力给我…或者封印起来，这样我也同意不再侵犯你们的领地。”<br>
+“你…！”<br>
+<em>“…我同意…”</em><br>
+“乌恩大神…？！”<br>
+<em>”…我自知我的力量已远远不敌于你，圣巢的国王…如果你能保证不会再踏入绿荫之子的领地一步，我同意你的条件…”</em><br>
+白王直直地盯着微波荡漾的湖面。<br>
+“…我保证。不过我需要一条在我庇护之下的道路，通向我的首都。在这条道路之外…都是你们的领地。同样，你们不能对踏在这条道路上的任何虫子施以任何形式的威胁…除非他们先侵犯了你们。”<br>
+湖中心突然形成了一个漩涡，随着一声巨大的“哗啦”声，水花四溅，乌恩现出了她庞大的身形。<br>
+<em>“…成交…”</em><br>
+她低下头注视着白王。<br>
+<em>“…不过我还是要警告你，不要做得太过火。我这么轻易的答应你并不仅仅是因为考虑到我的孩子们的未来…还有一部分是你的原因…对于你所经历过的一切，我感到——”</em><br>
+“如果你没有别的要求，现在就开始吧。”白王没来由的不耐烦起来，他一直很有耐心的。<br>
+乌恩神叹了口气，闭上了眼睛。<br>
+整个空间突然充满了绿色的“梦徽”——他不知道该怎么形容这个梦幻般的东西——卢瑞恩只感到一阵裹挟着草叶味道的清风扑面而来。<br>
+随后，绿色的光芒渐渐收缩，凝结成了一颗种子的形状。<br>
+<em>“…这就是我的力量之源了，圣巢的国王，拿去吧，然后不要再踏入我的领地半步…”</em><br>
+白王一声不吭地伸出爪子接住了浮在半空中的那枚种子。<br>
+他捏着种子观察了一会儿，随后握在了爪子里，转过身：“撤军，回泪水之城。”<br>
+士兵们听令开始后撤，卢瑞恩转过了身，又有些不太放心地回头望向白王。<br>
+白王跟着士兵们向前迈了几步，却又停下来：“…不要忘记你的承诺，乌恩。对于我的信徒，我可以感受得到他们是否受到了胁迫。“他不带任何感情地说，“一旦我意识到你们依旧还对圣巢存有威胁，我会毫不犹豫地挥师灭族…到那时，你可没有东西来跟我交换了。”<br>
+乌恩神只是默默地听着白王说完这番话，看着白王又迈开脚步走远，随后，她便重新沉入了湖里。<br>
+回程，白王带领着部队穿过残垣断壁，这里到处都是战争留下的伤痕。<br>
+不过就如陛下所说，他只是想确保圣巢的安全。<br>
+而他的确在发动战争之前向苔藓部族的几位长老们承诺，只要归顺圣巢，就可以给他们资助丰富的物资。<br>
+是那些长老们先冒犯了陛下，扬言说要夷平泪水之城…是因为他们顽固不化才……<br>
+但每当卢瑞恩看到在某个角落或者某块石砖下露出的尸体——尤其是小孩子的尸体——他都会感到深深的愧疚。<br>
+行至中途，他们在之前搭建起来的临时据点里作了短暂的休息。<br>
+就在这个时候，他听到一边的草丛中突然传来沙沙的声音。<br>
+卢瑞恩立刻警觉起来：“谁在那里？！”<br>
+没有再传来任何声音。<br>
+“说不定只是一只小野兽。”<br>
+一个士兵一边把沉重的盾牌和骨钉放下一边说。<br>
+卢瑞恩觉得事情不会这么简单。<br>
+“…陛下在哪里？”<br>
+“陛下？…他刚刚去队伍的后方视察了。”<br>
+卢瑞恩握紧骨钉，刚要转身，只听身后传来一声惊叫。<br>
+“尤伯罗斯！”卢瑞恩听见一个士兵喊道。<br>
+意料之中的偷袭，不过目标预测错了。<br>
+卢瑞恩连忙转身冲向混乱的源头。<br>
+“…松口！你这只…没教养的小野兽…！”<br>
+等到卢瑞恩挤过去的时候，袭击者已经被制服了。<br>
+…也不完全是，她嘴里还死死咬着那个士兵的爪子。<br>
+看见卢瑞恩过来之后，她咬得更用力了。<br>
+“啊——！疼疼疼——你给我——松口！”<br>
+士兵猛地用骨钉把敲在了“小野兽”的头上，她吃痛地叫了一声，他这才得以把爪子抽了出来。<br>
+他恼怒地举起骨钉，作势要砍下去。<br>
+卢瑞恩急忙赶到他身边，恰到时候的制止了这个士兵的冲动行为。<br>
+“你等一等，我有话要问她。”<br>
+士兵皱起眉头，似乎想要抗议，但还是一声不吭地退后了一步。<br>
+卢瑞恩走到“小野兽”面前，对方已经被五花大绑，动弹不得。<br>
+“…我还以为你会去攻击陛下。”<br>
+她哼了一声：“我又不会傻到白白牺牲自己的性命。”<br>
+“…你会说圣巢的语言？”<br>
+“小野兽”不说话，只是愤恨地盯着卢瑞恩。<br>
+卢瑞恩挥手示意其他士兵退开，只留下自己和那个受害的士兵——他还在愤恨不平的揉着手腕。<br>
+“…你几岁了？”<br>
+“这很重要吗？”<br>
+“…你如果不打算再活着的话，这确实不重要。”<br>
+至少没有成年，卢瑞恩想。她的声线有些稚嫩。<br>
+“你在这里等了多久？”<br>
+“……你怎么知道我等在这里？”<br>
+“这是陛下回程的必经之路，而这座临时建筑又是军队的休息地点，想要偷袭，再合适不过了。”<br>
+“小野兽”眼神里浮现出一丝惊惧，但她又很快地瞥过头去。<br>
+“…嘁…不长，三天左右。我本来以为你们回不来的。”<br>
+“…你为什么要攻击他？”卢瑞恩望了望那个士兵。<br>
+“…他杀了我朋友，弗兰。”<br>
+她的声音突然低了下去。<br>
+“我知道你想问什么。我目睹过那只虫子的力量，就跟巫术一般，瞬间就能把一座建筑给毁掉。我不可能有机会杀掉他的…我连碰都碰不到他。而我的父母…杀死他们的那个士兵被炸弹炸飞的石块砸死了，我没来得及亲手为他们报仇。”<br>
+“…而他…”她抬起头望向那个士兵，眼神带刀。<br>
+“…我觉得我有把握杀掉他。”<br>
+“你这个——！”<br>
+“够了，”卢瑞恩挡在他们之间，转头对那个士兵说，“我们不能杀她。”<br>
+“不杀她？留着等她来杀我们吗？”<br>
+“如果杀了她，就是违背了和乌恩的约定，陛下的努力就功亏一篑了。”<br>
+“这只小野兽差点把我的爪子咬下来！是她先攻击的！”<br>
+“她的父母因为我们发动的战争而死，想报仇也是情有可原的吧？而且，要说约定的话，我们现在还站在乌恩的领地上！”<br>
+士兵被噎的说不出话：“……你…您到底是向着哪边的？！”<br>
+“我不是向着他们，只是你冷静下来好好想想，是你的爪子重要，还是陛下的王国重要。”卢瑞恩停顿了一下，“这有可能是某些部落的阴谋。”<br>
+“…那您想怎么处置她？”<br>
+卢瑞恩蹲下来直视着“小野兽”锐利的目光。<br>
+“…你知道怎么走回你的部族吗？”<br>
+“我没有部族可回了，”她恨恨地说，“族人都被你们杀光了。”<br>
+卢瑞恩垂下眼睛思考了一会儿。<br>
+“…那你应该知道乌恩之湖的位置吧？听说那里建起了庇护所，你可以——”<br>
+“可以躲在里面吗？不，我不会像只蜗牛一样缩在壳里的！”<br>
+那个士兵“唰”的一声抽出骨钉：“太不知天高地厚了！你这是在威胁圣巢吗？！”<br>
+“说得没错！我发誓我会把杀了我爸妈，杀了我朋友，杀了我兄弟姐妹爷爷奶奶老师同学——”她猛地喘了一口气，“——杀了我族人的所有虫子统统杀光！”<br>
+她发泄般地怒吼着，带着一丝哭腔。<br>
+“行了，队长大人，她已经对圣巢造成威胁了，您还准备留着她吗？”<br>
+卢瑞恩默默地看着已经开始抽噎的“小野兽”。<br>
+“你退下吧。”<br>
+“队长大人？！”<br>
+“…或者，你也许更希望把陛下叫过来？”<br>
+卢瑞恩面无表情地望着那个士兵。<br>
+那个士兵愣了愣，有些分不清这是个命令还是个威胁。<br>
+“…去呀？”<br>
+“…是…是！”士兵在转过身离开前最后瞪了一眼“小野兽”。<br>
+卢瑞恩把目光重新收回到她身上。<br>
+“听着，只要你还活着，你的部族就会有希望。”他开口道。<br>
+“你说你是你的部族最后一个生还者，那也就表示你的生命不再是你自己的了，而是整个部族的。你要为整个部族的命运负责。”<br>
+“小野兽”不停地抽泣着，没有答话。<br>
+“…你叫什么名字？”<br>
+“…我已经…不配再用…我父母给我起的…名字了。”<br>
+“…陛下可以——”<br>
+“怎么？…要让…弑亲仇人…来给我取个新名字？…然后…快快乐乐地…一起生活？”<br>
+“……陛下不是你想象中的那样——”<br>
+“从今以后，”她努力忍住了泪水，眼神充满了坚毅，“我的名字会是德莱娅…我将自己决定我要走的道路。”<br>
+“既然这样，我也不能强迫你接受什么了…”卢瑞恩从腰间拿出了随身佩带的防身匕首，“不过我还是想提醒你，不要被情感冲昏了头脑，德莱娅，我知道你恨陛下，恨我们圣巢所有的虫子，我也不能奢求你能理解陛下的苦衷…但是这是为你着想…即便你能成功报仇，之后呢？”<br>
+卢瑞恩说着，用匕首划断了绑住德莱娅的绳索。<br>
+德莱娅活动了一下四肢，缓缓站了起来。<br>
+“…我要留下来。”<br>
+卢瑞恩原本转身想去迎上白王，听到这句话不由得吃惊地又转回身子。<br>
+“…我只是有点感兴趣…为什么你们那么崇拜那只虫子。”她的脸上依旧挂着泪痕，“你…不像是一个只会服从命令的木偶…你是真心忠诚于他的吗？还是受制于他？”<br>
+卢瑞恩笑了笑：“我也没有能受制于他的东西。”<br>
+…除了这份感情。<br>
+“卢瑞恩，怎么回事？”<br>
+白王有些焦急地快步走了过来，看了看德莱娅，最后看向了卢瑞恩。<br>
+“陛下。”卢瑞恩简单地行了个礼，“…她是战争遗孤，似乎，希望成为圣巢的一员。”<br>
+白王把视线重新移到德莱娅身上。<br>
+“我没了亲人，又没地方可去。”她无所谓似的耸耸肩。<br>
+但卢瑞恩知道，白王也能听出来，她的声音在“亲人”这个词上颤了一下。<br>
+“…你要是不相信我，现在就杀了我好了。指不定哪一天我会威胁到你的王国。”<br>
+“…圣巢只会对向她宣誓忠心的虫子敞开大门。”白王看着德莱娅说，“不过即便你不属于我庇护下人民中的一员，我也不会杀你…”白王直直地盯着德莱娅的眼睛，德莱娅一开始能勇敢地瞪回去，但随后视线却开始逐渐下移。<br>
+白王又盯了她一会儿：“卢瑞恩。”<br>
+“…在。”<br>
+“你相信她吗？”他转而看向卢瑞恩。<br>
+卢瑞恩有些没有预料到：“……我——”<br>
+“小心点回答，你的错误判断会招致…灾难。”<br>
+“…我…”卢瑞恩似是在出神一般地望着他的君主，“……我相信您。”<br>
+他随即又望向了德莱娅。<br>
+白王明显地愣了一下。<br>
+德莱娅也有些疑惑不解，不过当她看到卢瑞恩望向自己的坚定眼神时，她恍然大悟，旋即轻笑一声：<br>
+“放心，在找到答案之前，我不会动他的…也不会让其它虫子动他的。”<br>
+“…你们…？”<br>
+白王满脸疑惑地望着面前这两只打哑谜的虫子。</p>
+
+<p>TBC.<br>
+—————</p>
+
+<p>1.1.当时同处在读书室的虫子们都敢怒不敢言，他们对“难得找到一个清净地儿却被强行塞了一个钟头的狗粮”这种反虫族待遇表示强烈愤慨。什么？不，哪怕是敬爱的国王陛下也不行。</p>
+
+<p>1.2.我知道这段低级嘴炮让很多朋友都不想直视(;´༎ຶД༎ຶ）<br>
+但其实我真的有在里面埋了伏笔的（大概）(;´༎ຶД༎ຶ)</p>
+
+<p>2.这篇文或许可以有个副标题：“与白富美相处的365天”🎃<br>
+白富美（疯狂明示）</p>
+
+<p>3.第二篇泪水之城(;´༎ຶД༎ຶ`)我他喵写了一天</p>
+
+<p>—————</p>
+
+<h2 id="toc_9">～9～</h2>
+
+<p>泪水之城中靠近真菌荒地的那头居住着一位年轻的骨钉匠人。<br>
+他的父亲曾跟着白王学习骨钉的锻造技巧，而传闻说他从小就接受了家族专业的技术培养。<br>
+听说，他的夙愿便是锻造出至极完美的骨钉。<br>
+卢瑞恩没有怎么去过那里，当他意识到骨钉跟自己无缘的时候，他便一心钻到了各种书籍中去了。<br>
+白王确实很看好他的能力，最近几年，他都会有意无意地给他比较重要的职位——大部分都需要陪在白王身边。<br>
+他曾经跟随白王登门拜访过那位匠人，带着圣巢最新发掘出的神秘矿石，希望那位匠人能以皇家御用铸造师的身份为他锻造骨钉。<br>
+但匠人婉拒了国王，他说，自己的技术还无法打造出适合国王的骨钉。<br>
+“以我现在的能力，为您锻造至极的骨钉是可遇而不可求的概率事件。”他跪下，敬畏地把那块纯白的苍白矿石呈还给了白王。<br>
+“世界上没有至极的东西。”白王笑了笑说，“’完美‘只是一个相对的概念。”<br>
+匠人低着头没有回话，仍在捧着那块矿石。<br>
+“我会保证矿石的供应链，让你能…通过足够的数量来成就你的‘概率’。”<br>
+“不过我最近就需要一把改进过的骨钉，”白王站起身，轻轻抽出自己的骨钉，放到一边的桌面上，“三天后我会派人来取，相信时间应该足够了吧？”<br>
+“…是，陛下。能为您服务是我的荣幸。”匠人把矿石放在身前，尊敬地对白王叩首谢恩。<br>
+白王俯视着毕恭毕敬的骨钉匠人，突然有一瞬间的恍神。<br>
+“…起身吧，有什么要求就让我的卫兵捎信到白宫。”<br>
+说完这句话，白王便转身走向了大门。<br>
+看样子白王并不是无端造访骨钉匠人的，一周之后，他便宣布他要带领先遣队再次进军真菌荒地。<br>
+至此，卢瑞恩便知道了他们此行的目的必然和那些甲虫的老对手有关。<br>
+只不过他不太明白为何白王一定要佩戴一根最好的骨钉。<br>
+再次见到奥格瑞姆的时候，他明显感觉到对方又成熟了许多。<br>
+“任何杀不死我的敌人都会助我变得更加强大。”他自豪地拍着胸脯说。<br>
+他被任命为这次出征的两位统领将军之一，有传言称他将来甚至还有希望被任命为国王的贴身侍卫——如果白王有这个需要的话。<br>
+而卢瑞恩，很荣幸的成为了圣巢第一任军师——其实说实话，卢瑞恩本人不是很认同白王的决定，因为他并不觉得在军事谋略上自己能和他平起平坐。<br>
+在越过螳螂领地的边界线的时候，卢瑞恩不由自主地停住了脚步。<br>
+就是在这里，他遇到了陛下——遇到了光。<br>
+他嘱咐一个下级军官暂时替他注意周边情况，军官面带疑虑地走到了军队前排，卢瑞恩看着对方走远，他并没有解释原因的心情。<br>
+他向着他原来的家的方向走去。<br>
+只有当初他藏身的那几块岩石还保留着原来的样子——他的家现在已经完全被划归到了螳螂的领地中了。<br>
+卢瑞恩心情复杂地望着已经看不出原来样子的家。<br>
+“…我回来了。”<br>
+他不知道这算不算幸运，他父母和兄弟姐妹们殒命时，他还比较懵懂，不太理解死亡意味着什么。<br>
+只有在庆祝节日或者家庭聚会的时候，他才能强烈感受到无亲无故的孤独感。<br>
+他想到了德莱娅，还未成年便已经历过生离死别。<br>
+或许正因如此，她比同龄的虫子们更为老成一些。<br>
+他不知道为什么陛下选择庇佑的是身处底端的甲虫一族，无论原因是什么，他都感到很幸运。<br>
+如果他没有遇到白王，如果他逃跑的时候选择了其它的岔路，如果他死在了被白王发现之前，他都不会有现在的生活。<br>
+如果不是陛下…<br>
+无数的概率事件成就了现在的他。<br>
+他突然想起自己曾问过白王，作为一位神，他是否拥有预知未来的能力。<br>
+当时的白王转过头笑了笑，说他现在的神力只能够允许他窥视命运的冰山一角。<br>
+“我能看到圣巢的未来，泪水之城高楼林立，车站人来人往…”他突然停住了，没有再描述下去，“…不过也许我并不能完全相信我所看到的，毕竟命运变数无常。”他说这句话的时候，光芒有些许黯淡。<br>
+不管怎样，卢瑞恩又站在了他命运的起点，望着他可以被称为“前生”的已逝家园。<br>
+“…吾亦体会过这孤独之感。”泽默的声音从他身后幽幽传来，将他暗暗惊了一下。<br>
+“……”卢瑞恩转过头望了望她，又回过头来，不知该说什么好。<br>
+于是两只虫子一前一后地站着，一同望着这片现在已经画上螳螂族标记的石穴。<br>
+虫子生来都是形影单只，他们花费一生的时间来逃避孤独。<br>
+泽默似乎把这句话作为了自己的座右铭。<br>
+…泽默便是那第二位统领将军，她挥舞着一把与其身型相当的巨大骨钉，但她的速度却不知为何丝毫没有受此影响。也许是因为她在旅途中已经获得了足够的练习——在白王庇护之外的世界确实危机四伏——只需些许的提点，她很快就掌握了战斗的高级技巧。体型的优势使她也成为了战场上的一员猛将。<br>
+虽说她话里话外都透露出自己特别迫切地需要一位伴侣，但她看起来并没有在这方面表现的特别主动。<br>
+“……呃…我觉得咱们是时候——”卢瑞恩有些忐忑地开口，回过头却发现对方不知何时已经离开了。<br>
+卢瑞恩有些无奈地左右望望，在转过身前最后看了一眼家。<br>
+时隔二十多年后再次与螳螂对峙，卢瑞恩内心五味杂陈，不由得感叹起物是人非。<br>
+当时还未开化的甲虫们，再归来时已经团结成了一支纪律严明的军队。<br>
+但卢瑞恩知道习惯于称霸地下世界的螳螂是不会轻易归顺圣巢的。<br>
+最坏的情况，可能就是屠村——螳螂们的数量远远劣于他们的队伍，这样的战争根本称不上战争。<br>
+螳螂的三位战斗姐妹——她们远扬在外的绰号——拿着长矛在村落的大门前静候着白王和他的先遣队。见到白王，她们只是点了一下头以示尊敬。<br>
+“首领正在大厅等你。”为首的大姐用平静、甚至有一丝冷酷的声音说着。<br>
+讲话时，她们居高临下地俯视着白王和甲虫们——不过她们事实上并无恶意，这只是先天身高的差距原因。<br>
+简单的交涉之后，白王让大部队驻守在村庄附近，自己带着军师和两位将军和螳螂们走向他们的“议事大厅”。<br>
+一路上，有不少螳螂村民聚拢在大道两旁看着他们，又是窃窃私语，又是指指点点。<br>
+他们的眼神里满是傲慢和不羁——和卢瑞恩深深刻在记忆中的那些螳螂一样。<br>
+一小群原本在一旁追逐打闹的小螳螂们也纷纷停下来好奇地盯着他们看。<br>
+卢瑞恩才得以看清他们争抢的源头——某只可怜甲虫的腿。<br>
+他有些机械地收回视线，同时努力不去注意那些螳螂一直保养在最佳状态的可怖镰爪。<br>
+螳螂的大厅并不似白宫那样宽敞整洁，除去地面上那些细思恐极的污渍，卢瑞恩甚至还能闻到一股淡淡的…血腥味？<br>
+战斗姐妹们说的“首领”斜倚在一个高高的座位上，它的下方还排列着三个矮了一些的座位。<br>
+“…你就是那只会发光的虫子？…”他突然又想起来什么似的，又笑道，“…哦，相信你和那些飞蝇应该…没有特殊关系吧？”<br>
+围在大厅边缘的螳螂们开始窃笑。<br>
+卢瑞恩开始担心他们这次会不会无功而返。<br>
+这场谈判确实，进行得就如预想那样不顺利。<br>
+“亲爱的国王，你这是把我们往死里逼啊，”首领摊着爪子笑道，“照你这么来，我们就都要饿肚子了！”<br>
+白王无视了周围传来的附和声：“我知道你们是肉食者，但是整个地下有那么多猎物，完全可以满足你们的需要。”<br>
+“可是，”首领象征性地砸砸嘴，锐利的目光紧紧锁定在卢瑞恩身上，“甲虫多好吃啊。”<br>
+卢瑞恩感到自己的爪子在颤抖。<br>
+没事的，防身用的匕首就在他的右爪边。<br>
+他把爪子握紧又松开。<br>
+随后他便瞄到奥格瑞姆动了一下，于是迅速伸出左爪握住了对方的胳膊。<br>
+“…如果你们不想接受条件的话，那就只有武力这一条路可走了。”白王毫不掩饰话语中的威胁。<br>
+那只雄性螳螂——首领只是嗤笑了一声：“我们部落向来都是以武力解决问题，”他笑着说，“我敢打赌，要是你最好的战士在村子里随便找一个村民来比武，都会被打得落花流水。”<br>
+他指向自己背后的墙：“看见了吗？这些都是胆敢来侵犯我们的野兽们的残骸。”说着，他又细细打量着白王，“…我相信你会是一个绝佳的收藏——尤其是你那对翅膀。”<br>
+“大胆——”奥格瑞姆刚开口呵斥，就被白王制止了。<br>
+“我不喜欢战争。”白王开口道，“…而且你应该也知道战争会怎样结束，我的先遣队是你们总人口的十倍，更不要提还驻扎在我国都的大部队了。”<br>
+首领扶着座椅把手，向前倾了倾身子：“我们即便全军覆没，也不会屈从于蛮力的。这是我们的底线。”<br>
+“…听起来你们在决定统领者上有独特的规矩。”<br>
+站在一边的螳螂三姐妹突然把身子挺得更直了些。<br>
+“我们确实有。”他用爪子撑起脑袋，“想要坐第一把交椅，除非你能把我们击败。”<br>
+白王定了定神：“…你们？”<br>
+首领向三姐妹偏了偏头，示意她们走上前接受挑战。<br>
+三姐妹中年纪最大的那只螳螂走到白王面前，很遗憾，白王的身型只勉强够得着她的腿。<br>
+但还没有等她站稳脚跟，首领又突然说道：“不是你，是你们。”<br>
+三姐妹同时回头看向她们的首领。<br>
+“爸爸，这不公平！”<br>
+突然，从大厅一侧围观的螳螂中传来一声清亮的呼喊。<br>
+循声望去，一只黄色的小螳螂从虫群中挤了出来。<br>
+“你太小了，还不明白称臣意味着什么，而且——”<br>
+“——我已经成年了——”<br>
+首领那不耐烦的声音还没完全落地，又再次被这只雌性小螳螂打断了。<br>
+“而且！——”为了盖过她的声音，首领提高了音调，“——而且按照族里的规矩，想要当首领，就要用力量来证明自己的实力，挑战者需要把所有的领导者击败，直到他成功或者死亡之前都不允许休息，这是规矩，”首领故意低头望向矮了他们一截、穿着华贵的白王，“徒有其表的弱者是不会被认可的。”<br>
+“可是您对其他的族人的要求就只是和一位姐姐战斗就可以了啊？！即便如此也没有螳螂能成功！三位姐姐一起上的话——”她有些愤慨地抗议着。<br>
+“莉莉！小孩子不懂这些就不要插嘴！难道我要像对待族人那样对待野兽吗？”<br>
+“你说谁是野兽？！”“我不是小孩子！你为什么总是把我看成小孩子？！”<br>
+奥格瑞姆的怒吼声和莉莉的喊叫声同时在空旷的大厅里响起来。<br>
+本来已经有了一些嗡嗡议论声的大厅此刻顿时聒噪一片。<br>
+“吵死了！你们都给我退下！”首领猛地站了起来。<br>
+螳螂们安静了些，莉莉还站在大厅正中央怒视着她的父亲。<br>
+“还有你！到底想不想打？想的话赶紧走过来！”<br>
+首领习以为常地直接无视了没有听从他命令的螳螂们，俯下头烦躁地看着白王。<br>
+“陛下是你能呼来喝去的吗？！”奥格瑞姆不顾卢瑞恩越攥越紧的爪子，一下子从中挣脱出来，“陛下！这些野蛮之徒不配得到圣巢的仁慈！”<br>
+眼看着他就要抽出骨钉，卢瑞恩有些焦急地想用眼神向泽默求助，却发现对方一直盯着大厅中央看，丝毫没有注意到这边的情况……不过她倒是显得十分沉着冷静。<br>
+卢瑞恩不由得在心里吐槽了几句。<br>
+“不要轻举妄动，你这样正中了他们下怀！陛下还不是他们的国王，入乡随俗，等到陛下战胜了她们，他们就无话可说了！”卢瑞恩用不大不小的声音喝住了奥格瑞姆。<br>
+趁对方还没有组织好语言反驳他，他又上前一步：“陛下，您有把握——”<br>
+“我有。你把泽默和奥格瑞姆带到一边。”<br>
+白王头也不回地打断了卢瑞恩的问题，他唰地一下抽出了骨钉。<br>
+“不，陛下，我是想问——”卢瑞恩有些焦急。<br>
+“比起担心我被埋伏，不如先去想想你们怎么脱身。而且，我有信心击败所有的首领，卢瑞恩。以后不要再质疑你的国王。”白王转过头看了欲言又止的卢瑞恩一眼，随后便迈开脚步，走过还愣在原地的螳螂大姐，站到了大厅中心，莉莉的身边。<br>
+卢瑞恩眨了几下眼睛，反应了一下才想起来自己接下来该做什么。<br>
+“陛下只身前往太危险了！这更可能是他们的陷阱！”奥格瑞姆才缓过神来，赶到卢瑞恩身边说。<br>
+“…事已至此，我们必须相信陛下。”卢瑞恩按下奥格瑞姆已经举起骨钉的爪子，示意他走到一边。奥格瑞姆难以置信地看着卢瑞恩，但还是听从了他的指挥。<br>
+“泽默！”他回过身去找泽默，却发现对方不知何时已经站到了他们对面一侧。<br>
+“……”卢瑞恩皱了会儿眉。<br>
+总感觉今天的泽默…冷静得有些异常。<br>
+白王那边，他和还在气头上的莉莉说了一两句话，说的什么卢瑞恩也听不清，不过看结果是成功平复了她的心情，她最后瞪了一眼她的父亲就退到了一边。<br>
+螳螂首领嘀咕了几句似乎很愤慨的话，便又坐回到椅子上。<br>
+白王把骨钉尖朝下举到身侧，它的尖端划在地面上，发出一阵刮擦声。<br>
+三姐妹站到了各自的位置，呈三角状包围了白王。<br>
+“开始吧。”<br>
+首领一摆手，大厅中央突然依序落下了一圈金属围栏，发出一阵咣当的响声，把他们围在了中间。<br>
+白王后撤一步，他的袍子幻化成了战斗时的样子，那些白色的光球悠悠地浮在半空。他的神力已经强大到凝成了实体，甚至还在时不时地向下滴落。<br>
+说实话，卢瑞恩站着的位置不是最佳的观战地点，螳螂们一听有战斗可看，立刻兴奋地围上前去。现在他的周围都是螳螂的高大身躯，要不是奥格瑞姆还陪在他身边，他的注意力就会一直集中在那些离他不足几厘米的、锋利的螳螂“大刀”上了。<br>
+战场中，三姐妹对白王微微欠身行了个礼，便同时向后跳了一步，举起了长矛。<br>
+以一战多，重在防御，寻伺破绽，逐个击破。<br>
+卢瑞恩并不怀疑白王的骨钉技术，在战场上他甚至还有单枪战一军的纪录。<br>
+只是他实在是不信任那个螳螂首领。<br>
+他看向那只不可一世的虫子，却发现对方正十分专注地观察着战局。<br>
+“……”<br>
+螳螂姐妹们一开始还在轮流试探着白王，似乎在决定各自的应对策略，随后便开始以捉摸不定的战斗模式展开了连珠炮般的攻击。她们会一齐攻击，再同时闪开；也会有一只跳出来与白王单打独斗一番，另外再闪出来一只进行夹击……总之把卢瑞恩看得是眼花缭乱。<br>
+直到三姐妹的一次同时进攻一下子把用骨钉防御着的白王牢牢固定在她们的长矛下的时候，卢瑞恩用余光突然看到原本端坐在座位上的首领站了起来，稳了一下身形便展开翅膀跳下高座，俯冲进了战场。<br>
+他还没来的及喊出声让陛下小心——其实白王也听不到他的声音——就见首领以惊人的速度冲向了还在被三姐妹压制的白王。<br>
+三姐妹相互使了个眼色，恰到时候地闪出了一条路。<br>
+白王一看见她们散开，立刻意识到情况有异，转过身便摆出了防御的剑式。卢瑞恩都没反应过来发生了什么，全速冲向白王的首领已经举起镰爪，猛地向前劈了下去。<br>
+骨钉和装配有锋利金属的镰爪相撞，发出了骇人的声响。白王被首领顶着向后滑退了三丈远，最后咣的一声抵在了铁栏上——正好在卢瑞恩所处位置的前方。<br>
+“陛下！”在围观螳螂们的一片热烈叫好声中，卢瑞恩和奥格瑞姆的惊叫声并不能听得很清楚。卢瑞恩不顾奥格瑞姆的拉扯，硬是挤到了围栏近前，途中被那些“大刀”划碰出了好几道口子。<br>
+“陛下…”他不敢太大声说话，因为这样会分散白王的注意力，只能用爪子紧握住围栏，想看看他是否受了很严重的伤。<br>
+白王的伤势不算严重，只是几道刮擦的伤口。<br>
+…只不过白王的骨钉上赫然出现了几道裂纹。<br>
+“…看来我低估了你们的实力。”他听到白王微微的喘息声。经过了战斗姐妹的轮番进攻，他的体力显然已消耗了不少。<br>
+首领挑衅似地眯起眼睛：“现在想求饶已经太晚了。”他猛然施力，把镰爪压得更紧了些。<br>
+白王用骨钉挡得有些吃力，现在他的骨钉已经快抵上他自己了。他本就不是像赫格莫和泽默那样的“力量型”战士，他的作战风格偏向轻巧迅捷地快速刺杀，像现在这样被压制着的局面是最为危险的。<br>
+“我本以为我只用骨钉就能解决这场战斗。”白王虽然处于弱势的一方，但他的语调却丝毫感觉不出慌张。<br>
+首领一边继续加大力度，一边嘲讽道：“怎么？你还能像我们一样能飞檐走壁？”<br>
+白王轻笑了一声——这笑声几乎耳不可闻。<br>
+“我不需要。”<br>
+话音刚落，卢瑞恩只看见面前的白色身影突然伴随着一阵光芒消失得无影无踪，取而代之的是因为抗力突然不见而猝不及防撞过来的螳螂首领。<br>
+好在他在彻底撞上围栏前及时反应了过来，他伸出爪子抓住了围栏来缓冲这股冲击力。卢瑞恩下意识地向后退去，却又因为身后密集的螳螂群而无路可退。<br>
+又是“咣啷”的一声巨响，看来他确实是用上了不小的力气来压制白王。<br>
+“……”有那么几秒钟，卢瑞恩和螳螂首领相对无言，首领的表情越来越阴沉，而卢瑞恩心里越来越发怵。<br>
+“…等我用镰爪割下他的头，”首领一边撑起身体，一边咬着牙低声说道，“我要举办一场宴会，”他盯着卢瑞恩的眼神越发凶狠，“…到时候你就是第一道菜。”<br>
+卢瑞恩瞬间感觉有些腿软，这不怪他，甲虫们对于捕食者的侵略性目光有着先天的畏惧心理，更别提还有着童年阴影的卢瑞恩了。<br>
+首领似乎比较满意卢瑞恩的应激反应，他没再多说什么，立刻就反过身去寻找白王了——后者此时正扇动着帝王之翼与动作明显迟钝很多的螳螂姐妹们周旋。<br>
+接下来的战斗，卢瑞恩有好长一段时间无法集中注意力，因为他满脑子都是白王负伤累累，以及自己被大卸八块的场景。<br>
+不过当他终于缓过神的时候，他正好看见，白王一只爪子握着骨钉向一边闪躲着首领和三姐妹的攻击，同时用另一只爪子挥出了一个弧线。在这个瞬间，跟随在他周围的光球变化成了数十根尖刺，浮动了几下便朝着他的敌人们直射过去。<br>
+这是白王的法术之一，不过比之前卢瑞恩在讨伐苔藓的战争中看见的要猛烈许多。<br>
+陛下的法术随着信徒的增多而在快速增强，这样的话…应该…应该没问题。<br>
+卢瑞恩一直悬着的心终于放下来了一小截。<br>
+果然配合上法术之后，白王就更难被追踪到了。<br>
+但是施展法术是最容易使他疲劳的。<br>
+三姐妹中看起来年龄最小的螳螂体力似乎已经快到极限了，她刺出长矛的时候被白王抢先了一步——他向右闪开了攻击，一转手腕，用骨钉剑背向着她的爪子打过去。<br>
+对手完全没有反应过来，结结实实地挨了这一下，爪子一松，长矛从半空中落了下来。<br>
+她吃痛地叫出了声，身体再也支撑不住，半跪到了地上。<br>
+白王伸出左爪接住了长矛柄，同时用骨钉斜指向她。<br>
+附近的另外一只螳螂见状立刻中断了自己的原有计划，转过头冲向白王后方，却差点正好撞上他——左臂顺势向后一划——猛地指向她脖颈的长矛。<br>
+白王的动作一气呵成，衣袂翻飞之间，三只虫子僵持在当场。<br>
+白王喘着气，目光在两只螳螂之间来回移动，举着武器的两只手臂都在颤抖，但只是威吓似的指着她们，没有了再进一步的动作。<br>
+“你们两个！愣着干什么？！战斗还没有结束！”首领冲着白王的方向吼道，他再一次举起镰爪冲向白王。<br>
+白王深吸了一口气，迅速把手里的长矛掷到一边，在对方能砍到自己之前就又瞬移到了战场的另一端。<br>
+没有了生命威胁，之前一直站着紧绷着神经的那只螳螂差点就直接瘫倒在地上。<br>
+首领在两个姊妹跟前稳住脚步，俯下身低声和她们说了什么。<br>
+她们点了点头，挣扎着站了起来，相互搀扶着从一个刚刚在围栏上打开的开口处走出了战场。<br>
+首领转向白王的方向，恢复了战斗的状态：“二妹！你跟我过来！咱们不能再分开了！”<br>
+在战场另一侧的白王扶着围栏不停地喘着气，他的体力可能已经快不足以允许他再使用法术了。<br>
+“二妹”此刻还贴伏在上方的围栏上，听到她大哥的声音，便向着他的方向飞跃过去。<br>
+白王怎么可能让他们有机会汇合，他猛地推了一把围栏，借力展开虫翼从侧面向她俯冲而去。<br>
+首领意识到白王的意图，咒骂一声便动身去拦截对方。<br>
+白王伸出左爪摸向地面。<br>
+卢瑞恩记得这个动作，这是他的另一个法术。通过把法力注入介质中来使其固存其中，以备他用。<br>
+骨钉和钢爪又一次相撞，这次的白王没有恋战，也没有减速，他把骨钉一斜，让镰爪滑向后方，化解了首领的攻击，随后一转身子继续向前冲去。首领一击落空，再想追上对方时，脚下和前方的地面中突然浮现出一片白光。<br>
+瞬间，十几根巨大的尖刺从光芒中刺了出来。<br>
+面对这么密集的尖刺攻击，首领不得不向后退去来避免自己被戳得千疮百孔。<br>
+而此刻白王已经冲到了刚落到地面上的螳螂二妹面前，对方慌忙下意识地横过长矛来抵挡白王的攻击。<br>
+白王猛地用左爪按住长矛柄，一下子便把她撞到了围栏上。围观的螳螂们见状纷纷向后退去，她还想挣扎，白王右爪握着的骨钉瞬间刺入了她头旁边的围栏缝隙中。<br>
+“…你出局了。”<br>
+白王悬停在半空，看着她的眼睛说道。<br>
+“二妹！”<br>
+听见首领略带惊慌的叫喊，白王又从围栏间抽出骨钉，向另一个方向闪去。<br>
+被吓的不轻的螳螂二妹一下子跪坐在地上。<br>
+“二妹你先下去休息，剩下的交给我吧！”首领冲到她的旁边，视线还一直跟随着白王。<br>
+接下来就是决战的时刻了。<br>
+首领一次又一次地向白王直线冲去发起进攻，白王没有正面与他交战，只是不停地闪躲着。<br>
+而每次他向前一步，白王就后退一步，刻意在与他保持着距离，使他不能一击便伤到白王。<br>
+“…你怕了吗？“<br>
+白王不答，只是继续着自己的动作。<br>
+等到首领终于意识到白王在计划什么的时候，他也已经被累得气喘吁吁了。<br>
+他停下了动作，两位领袖互相凝视着对方。<br>
+白王明显已经体力不支，虽然现在螳螂首领也和他的状况差不多了，但硬碰硬依然是不可取的。<br>
+看来…非法术不可了。<br>
+白王退到了围栏处，左爪紧握住了铁栏，似乎只能凭此支撑住身体了。<br>
+卢瑞恩可以看到，他的身体已经接近黯淡无光了。<br>
+他举起骨钉向着首领的方向一指，首领的身旁现出了一圈细细的白光。<br>
+不管这是什么东西，站在它的覆盖范围内肯定是不明智的选择。就在首领刚刚闪到光圈的范围之外之时，随着一阵奇异的声响和闪光，光圈里突然引发了剧烈的爆炸。<br>
+不过还没等首领稳住阵脚休息，周围又出现了几个光圈，他又不得不再一次闪躲开。<br>
+光圈恰到好处的封锁住了他的其它退路——他在有意将他引向这边。<br>
+眼看着自己距离白王越来越近，但对方依旧在原地稳立不动，首领干脆直接向他发起了攻击。白王松开左爪，用法术幻化出了一把纯白色的剑，摆出了迎击的架势。<br>
+当对方猛地砍向他的时候，他只是简单地用剑一挡，似乎并没有想着要击退他。首领的镰爪死死地勾住了这把剑向后拉去，想让白王失去平衡。<br>
+但白王直接放开了这把剑——它化为了白色的光点四散开来——反而向战场中心的方向跃了一步。他踉跄了一下，差点摔倒在地上。<br>
+首领见状，立刻转过身想要抓住这个机会终结这场战斗。<br>
+但突然之间一道白光闪过，他背后突然受了一记重击，双膝一软跪在了地上。<br>
+他刚想挣扎着站起来，一抬头却对上了骨钉锐利的钉尖。<br>
+白王喘着气低头俯视着首领。他身形有些不稳，但还是艰难地举着骨钉指着他说道：<br>
+“…我赢了。”<br>
+他没有向他刺出致命一击，只是维持了这个动作十秒钟。<br>
+…三…二…一。<br>
+随后他便突然脱力一般向前倒去，幸亏他及时用骨钉撑住了地面。<br>
+“陛下！”卢瑞恩当即就想冲上去，却只能抓着围栏干着急。<br>
+首领同样也喘着粗气，他犹疑地望着疲惫不堪的白王，不知道在想些什么。<br>
+围栏震动了一下，卢瑞恩连忙松开爪子向后退了一步。它吱吱呀呀地又升了上去，在鸦雀无声的大厅里显得格外刺耳。<br>
+没有一只虫子做出任何动作。<br>
+三秒钟的寂静之后，首领摇摇晃晃地站起身，一边踉跄着后退，一边用略有些嘶哑的嗓音大声喊道：<br>
+“战士们，击退这些侵略者！我们螳螂族永不为奴！”<br>
+他的呐喊声似乎极具穿透力，因为不只是大厅里的螳螂，连聚集在门外的螳螂也都冲了进来，猛地摆出攻击姿态，团团围住了他们，其中不乏小孩和年老的螳螂。<br>
+卢瑞恩已经没时间感叹螳螂们全民皆兵的好作风，他立刻冲上去，挡在了白王前面，同时右爪一把抽出匕首横在面前。奥格瑞姆和泽默则背朝着白王，把他保护在了中间，背水一战般举起各自的武器。<br>
+白王已经被刚刚的战斗耗尽了体力，他只能用骨钉勉强支撑着身体，不停地喘着气，连句话都说不出来了。<br>
+“爸爸！你不能像这样说话不算数！”<br>
+莉莉又一次大喊道。<br>
+“你到底站在哪边的？莉莉？！”首领怒吼着。<br>
+“我……”莉莉被噎得说不出话。<br>
+战斗姐妹们互相搀扶着走到了他的身后，看样子她们恢复得还算可以。<br>
+…这样下去不是办法。<br>
+卢瑞恩向前迈了一步，他似乎听见身后的白王无力地轻声喊了一声他的名字。<br>
+“我听说你们螳螂一族崇尚骑士精神。”卢瑞恩拼命忍住内心的恐惧，挡在白王面前大声喊道。<br>
+“但是你们做到了吗？”他听到自己掷地有声的声音回响在大厅的时候，突然又开始感到有些胆怯。<br>
+…但是他不能退缩，白王就在他的身后。<br>
+“我们的君主遵守了你们的规则，进行了在你们看来所谓“公平”的竞争，这就不是侵略！侵略是什么？我们既没有伤害你们一兵一卒，也没有在你们的村庄里烧杀抢掠，先不说四对一的战斗到底公不公平，陛下达成了你们要求的条件，他凭自己的力量同时战胜了你们所有的首领！”<br>
+“而如果他想，他完全可以下令把整个螳螂村夷为平地！但是他没有这么做，因为他也深知战争会生灵涂炭。”<br>
+“他只要求你们的忠诚，只需要你们立下永不侵犯圣巢的誓言，别无他求。他不会奴役你们，也不会逼迫你们做有悖于你们信条的事。”<br>
+“即便这样，你们还要否定陛下的力量，否定他的统治吗？！”<br>
+一大段的喊话之后，卢瑞恩感到嗓子有些发干。<br>
+能说的话都说完了，现在只能听天由命了。<br>
+沉默。<br>
+沉默。<br>
+螳螂们开始面面相觑。<br>
+“爸爸！”莉莉有些焦急地望向她的父亲。<br>
+首领的脸上浮现出了少有的凝重表情。<br>
+趁现在这个机会！<br>
+“圣巢的国王击败了你，螳螂的<em>原</em>首领。现在他才是这里名正言顺的君主。”卢瑞恩死死地盯着已经开始坐立不安的螳螂“原”首领，一字一句地说。<br>
+白王此刻已经恢复得差不多了，但他没有走到卢瑞恩前面，只是在后面默默地等待着。<br>
+“原”首领沉默了半响，抬头望见螳螂们都在无措地看着自己，长叹一口气：“你们都散了吧。”卢瑞恩和两位将军一直等到螳螂们退到“安全地带”才敢放松下来。<br>
+“原”首领褪下钢爪，迈开脚步，带着自己的三个姊妹走向白王。<br>
+卢瑞恩向旁边让了一小步。他们走到白王面前，单膝跪了下去：“我认输。这首领之位——”<br>
+“你可以保留你在螳螂村的地位。“白王望着屈膝跪地的螳螂首领——不，领主们——说道，”我不属于螳螂一族，也无心管理异族的事务。”<br>
+“我会给你们提供庇护和帮助，并保证不插手你们内部的决定。作为一方领主，你们可以分享圣巢的荣耀，分担圣巢的忧虑。”<br>
+“相应的，你们要向我发誓，向圣巢发誓，不会以任何形式做背叛圣巢的事，永远效忠于圣巢。”<br>
+白王说完，静静等待着答复。<br>
+“…我代表整个螳螂村及其统领们向…您起誓，赌上螳螂先祖及战士们的荣誉，我们会听从您的号召，任何时候都绝不会威胁到圣巢及其人民。”领主低着头，但声音却十分浑厚。<br>
+白王点点头：“…起来吧。”<br>
+领主们站起身，又依螳螂的礼节向着白王和卢瑞恩行了个礼。<br>
+“我们需要在村庄里停留三日再返回圣巢。”白王收起骨钉立在他们面前，“还请你们下去安排一下吧。”<br>
+奥格瑞姆说他十分喜欢螳螂村，有那么多新奇古怪的玩意儿——虽然卢瑞恩依稀还记得某只虫子曾斩钉截铁地说要和螳螂们势不两立。<br>
+在白王确立了自己在螳螂中的威信之后，螳螂们的态度明显发生了一百八十度大转变。<br>
+现在他们只要远远地望到白王一行，就会对他行螳螂式鞠躬礼。<br>
+这三天内，他们一直都居住在一位名望很高的螳螂长老家里——他家里挂着的“纪念品”仅次于领主。<br>
+而对于领主的食言表现，白王表示其实他很能理解：“他的压力也很大。毕竟是祖辈传下来的基业，他也不能轻易拱手相让。”<br>
+说完，他望向卢瑞恩：“…你这次留给我的印象很深，卢瑞恩。”<br>
+卢瑞恩不得不借口“外出呼吸乡村的新鲜空气”来掩饰他又一次脸红的事实。<br>
+螳螂族的烈性子给卢瑞恩留下了不可磨灭的印象，他每次在村子里时都和做贼似的溜着边走。<br>
+他们很可能会因为一件小事就大打出手，非要用武力分一个上下高低，还极有可能会卷入其它螳螂，最终演变成一场大混战。<br>
+虽说如此，他们的一致对外是有目共睹的。<br>
+另外，卢瑞恩每次出门时总是觉得那些螳螂看他的眼神就像是…盯着一顿行走的美味佳肴。<br>
+“妈妈！我要吃好吃的！”一只小螳螂拉着妈妈的手，用奶声奶气的稚嫩声音，指着他兴奋地喊道。<br>
+“大甲虫，肥又厚，剁一剁，进肚中！”一群嬉笑着跑过去的小螳螂开心地哼着童谣。<br>
+…看来他们需要好好改一下他们的教科书和烹调书籍——如果他们有的话。<br>
+于是最终，他干脆就郁闷地窝在房间里不怎么出来了。<br>
+终于，白王在螳螂村为期三天的“实地考察”过去了，卢瑞恩在螳螂村的“苦修”捱到了头。<br>
+他们正准备告别螳螂长老的时候，白王突然回过头问道：<br>
+“…泽默呢？”<br>
+卢瑞恩这才发现他们的队伍中少了一员大将。<br>
+虽说她的存在感很低，但是作为军师竟然弄丢了手下的将领，未免有点说不过去。<br>
+“…我…我去找一找，她不会擅自离队的。”<br>
+“…让奥格瑞姆和你一起去，我先去通知军队准备回城。”<br>
+“好叻！”奥格瑞姆对于又能出发去“探险”显得十分兴奋。<br>
+卢瑞恩刚想推拒，白王已经转过头结束了对话。<br>
+“…是，陛下。”他朝着白王远去的背影鞠了一躬。<br>
+卢瑞恩让奥格瑞姆走在前面，帮他挡住了那些螳螂的灼热眼光——他拒绝接受额外的训练。<br>
+他们几乎找遍了整个螳螂村——还好村庄不是很大——终于在一个破旧的房屋里找到了她…们？<br>
+泽默身上负了伤，来源不明，已经被仔细包扎过了。<br>
+奥格瑞姆闯进门的时候，泽默还差点一刀让他的脑袋和身子分家。<br>
+“…好险。”泽默一边淡淡地说着，一边收起了自己硕大无比的“凶器”。<br>
+奥格瑞姆本应该激愤地表示些什么的，但他显然已经被吓傻在当场说不出话了。<br>
+卢瑞恩无语地摇摇头，把注意力转移到房间里另一只虫子身上。<br>
+“…莉莉？你是领主的女儿莉莉吧？你怎么在这里？”<br>
+“…他们想以我当威胁逼迫我爸爸去围剿你们…趁你们还没有离开村庄的时候。”莉莉皱着眉头，眼睛看向一边的地面。<br>
+“…虽说他们是为了螳螂好…但他们真是太没有原则了！”她有些愤怒地说。<br>
+“还好…”莉莉的声音突然小了很多，“还好默…泽默救了我。”莉莉望向泽默，同时紧张地搓起爪子，“…这几天一直都是她在保护我…”<br>
+“真…真的很感谢你…”她低下头，声音不知为何越来越小。<br>
+泽默没有回应，只是默默地注视着她。<br>
+卢瑞恩总感觉泽默这副表情在哪里见过…在白王和螳螂决斗的时候？记不清了。<br>
+不过她的眼神里的确浮现着她少有的温柔。<br>
+那天，他们得以在下午与白王重新汇合，大部队已准备就绪，只差白王一句命令了。<br>
+领主们带着螳螂村大部分村民来送别白王的军队。有的小螳螂没见过这么大的阵势，有些害怕地揪住父母的衣袖。<br>
+“小螳螂还是蛮可爱的嘛，”奥格瑞姆举起水袋喝了口水，“长大了怎么就变得这么凶残？”<br>
+“再见啦默默（Merly）！有空常来玩啊！”那头，莉莉大喊着，使劲挥起爪子。<br>
+“默——”奥格瑞姆刚喝进嘴里的水差点没喷出来。白王和卢瑞恩很有默契地同时转过头复杂地望向泽默。<br>
+“…吾会谨记诺言的。”<br>
+泽默回望着莉莉，她的白色长发和长须随着一阵微风飘动起来…嗯，很有分别的感觉。<br>
+最后，卢瑞恩还是没能忽略掉他们转身离开那一瞬间，莉莉开始哭泣流泪的身影。</p>
+
+<p>TBC.<br>
+—————</p>
+
+<p>woc<br>
+这章好长，真的好长（喷血）因为我现在是写完一章后，才上传它的前一章<br>
+所以…我自己也好捉急啊（喷血）<br>
+［2.9更新］<br>
+～～～</p>
+
+<p>都是写着写着突然sd起来的脑洞：</p>
+
+<p>你以为你挨的是谁的打？<br>
+是天神的打！<br>
+（？）</p>
+
+<p>白王明显已经体力不支，虽然现在螳螂首领也和他的状况差不多了，但硬碰硬依然是不可取的。<br>
+看来…非法术不可了。<br>
+…但是自己的法力也所剩无几…<br>
+白王皱起眉。<br>
+事已至此，只有一个办法了…！<br>
+“卢瑞恩！”白王大喊道，“快过来给我补个魔！”<br>
+远在那头的卢瑞恩一愣。<br>
+“…！？！？！？等等陛下您这是想搞什么神仙操作啊陛下嗯？？？”<br>
+（被砍还是被*，您自己选吧😈）<br>
+～～～</p>
+
+<p>嘴炮太难写了（暴风哭泣）<br>
+但是卢瑞恩不嘴炮一下怎么能引起陛下的注意呢😈</p>
+
+<p>我真的真的很想立个flag<br>
+这辈子再也不写打斗了🙃</p>
+
+<p>泽默和莉莉的故事大家可以自行脑补(｡･ω･｡)ﾉ<br>
+因为卢瑞恩并没有千里眼顺风耳所以正文里就不写啦(｡･ω･｡)（？）</p>
+
+<p>螳螂！——螳螂真的激萌好吗(;´༎ຶД༎ຶ`)超可爱！它们会盯住一个地方开始左右摇摆！它们会装作若无其事却时不时瞟过来这样舔爪子！它们会挺直身子假装自己很高大的样子来恐吓对方！它们会歪着脑袋好奇的盯着对方看！它们会像在“woc。woc？wtm！…wtm？”这样的用刀刀试探对方！<br>
+…反正我已经在淘宝上买了一只中华大刀螳准备让它当主子了 剩下的大家看着办吧🌚<br>
+…不过活吃果蝇确实好疼啊（喷血）</p>
+
+<p>脑洞：</p>
+
+<p>啊！野生的 白王 跳出来了！<br>
+就决定是你了！卢瑞恩！<br>
+野生的 白王 使用了［普通的微笑］！<br>
+卢瑞恩 被 野生的 白王 拐跑了！<br>
+玩家：？？？</p>
+
+<p>啊！野生的 白王 跳出来了！<br>
+就决定是你了！格林！<br>
+格林 使用了［Witch的尖叫］！<br>
+野生的 白王 被震慑住了！<br>
+格林 拎着 野生的 白王 瞬移回老家了！<br>
+玩家：？？？？？这tm——</p>
+
+<p>啊！野生的 白王 跳出来了！<br>
+就决定是你了！辐光！<br>
+辐光 不知为何 兴奋 了起来！<br>
+野生的 白王 使用了［纯粹容器］！<br>
+效果拔群！<br>
+辐光 的 ［樱桃爸爸表示最终BOSS怎么能让你打过］ 特性 使其承受住了致命一击！<br>
+辐光 无视了 ［/playername］ 的指令，并和 野生的 白王 有爱地玩起了 ［你追我，我追你，追上你我就嘿嘿嘿］ 的游戏！<br>
+！…远方依稀传来了令人误会的声音！<br>
+玩家：？？？？？？？？？？？<br>
+这游戏tm出的什么新型bug？</p>
+
+<p><del>（神仙打架 花式play）</del></p>
+
+<p>（3.2更新）<br>
+先给大家道个歉 我还没有死🙈<br>
+我下一章还没写完 而且 感觉好尬啊(;´༎ຶД༎ຶ`)我自己都不太好意思看了嘤，可能会有错别字什么的…（但是写的时候很带劲就很迷）<br>
+但是我真的尽力了……！本来想写得稍微那么有文采一点，结果炸了，各位就看一个大纲文好了嘤<br>
+下一章没写完 意味着下一次更新 就遥遥遥遥无期了🤯<br>
+（woc这次开学炸的我简直了没开过这么忙的学喵的）<br>
+—————</p>
+
+<h2 id="toc_10">～10～</h2>
+
+<p><em>（notice：我管他面具上是不是开了个口子，管他面具能不能“嘭”地拔下来，反正我就写有嘴了！这写不了嘴都不能大口喝蜜大口吃肉，怎么当国王？嗯？怎么给他灌——咳咳剧透了(￣X￣;)…反正总是闷在连个开口都没有的面具里会把陛下憋死的好吗？！(￣ ^ ￣)ゞ）</em></p>
+
+<p>（7.6更新）<br>
+我…我对不起大家（已经不知道说怎么才算是诚恳的道歉了）<br>
+感谢两位小伙伴，我真的本来只是想进lofter改一下合集封面（结果发现手机端改不了），看见两位小伙伴的评论，让我重拾信心的同时，瞬间很愧疚、很愧疚很愧疚！<br>
+所以我决定再努把力！为了还在等的同好们和我深爱着的陛下！<br>
+现在的情况是，我已经把陛下的设定改了一些了，所以可能和前面的章节有些出入。（我这阵子一直在写陛下的文哦！只不过没胆量发上来而已🌚）<br>
+我之所以一直不更文，真的是因为我觉得啊呀我怎么写得这么渣，这能看吗？<br>
+然后看着大佬文采飞扬的文，我到最后都不敢点开lofter了（该打该打）<br>
+（所以两位小伙伴的评论一直没回复真的很抱歉！本来想着当即回复的！但是想想觉得应该用行动来表示诚意！）<br>
+陛下的文最困难的一个是把握陛下的设定，另一个就是词汇。因为陛下他总不能一张口就是“卧槽尼玛”吧对不对。<br>
+然而我呢，语文垫底_(:з」∠)_<br>
+高级词汇，不会用_(:з」∠)_<br>
+所以就很难写文啊啊啊啊( ;´༎ຶД༎ຶ)<br>
+还有就是，思想！陛下要有独到的见解和观点，洞察一切的眼光，不然谁服气他当国王啊对不对。<br>
+然而我呢，马原84_(:з」∠)_<br>
+科学原理，不晓得_(:з」∠)_<br>
+（虽然看过了君主论感觉好了点🌚）<br>
+所以我笔下的白王就不可抑制得很low啊有没有(;´༎ຶД༎ຶ)<br>
+更要命的是，为了迎合陛下的设定，我还必须请他故作深沉🌚<br>
+所以大家都能想象到酸爽的过家家场景对吧🌝<br>
+这就是我不敢（没错，是不敢更文）的原因们，请大家海涵(;´༎ຶД༎ຶ`)</p>
+
+<p>这一章有雷点！(;´༎ຶД༎ຶ)<br>
+我不会写骑士册封！(;´༎ຶД༎ຶ)<br>
+只能写教师评价（不！）！(;´༎ຶД༎ຶ)</p>
+
+<p>————我是充满愧疚的分割线————</p>
+
+<p>作为圣巢首都的泪水之城，如今已经成长为了王国最繁荣的中心，在历经了一长段时间的扩张后，白王似乎终于决定要休息一下，好好整理一下内务了。<br>
+除了像泽默、赫格莫、奥格瑞姆这样的大将，其它一些在战场上立过显赫功劳的，统统被封为了贵族。他们的儿女一出生便能享受到较为上乘的教育。<br>
+奇怪的是，卢瑞恩并没有被授予任何功勋——也许是因为他并没有在战场上实际出力的缘故？<br>
+“这说明陛下信任你，他相信即便没有这些虚假的东西，你也会为圣巢奉献一切！”<br>
+虽说这样确实有点道理，但是从那些颇有些耀武扬威的新晋贵族的嘴里说出来，怎么听都感觉变了味。<br>
+白王下令在泪水之城里修建了很多高耸的建筑，作为圣巢贵族们的专属别墅。<br>
+卢瑞恩曾有幸“参观”过一位朋友的宅邸——与其说是拜访，还真不如说去参观。<br>
+金碧辉煌的大厅，装饰繁复的花纹，墙面上还贴着贵族朋友自己的肖像。贵族们都偏好紫色、金色的服饰，他们不被允许用大面积的白色，因为白色是王室的象征。<br>
+那些宣誓绝对忠诚于白王的贵族，则获准穿戴上纯白的头饰和外衣，成为了皇室家臣，获得了进入白宫的特权。<br>
+说到勤奋可怜的家臣们，就不得不提圣巢的好奇宝宝——莫诺蒙了。<br>
+在那次雾谷的不快遭遇之后，卢瑞恩就没怎么见过她了。<br>
+不过关于她在白宫的“丰功伟绩”，他几乎每天都有耳闻。<br>
+她过于充沛的精力和旺盛的好奇心，总是能给白宫众人带来意想不到的欢乐…和麻烦。<br>
+有时候，只是一眨眼的功夫，她就消失在她的卫士眼前，再发现她的时候，大部分都是在十分…尴尬的地方。<br>
+比如，白王正准备就寝的时候，猛然发现她正缩在自己的被单里打着呼噜。<br>
+自此，白王的寝室便落了锁。<br>
+比如，在白王上朝的时候，兴致盎然的小水母几乎和每位朝臣来了次亲密接触。<br>
+三番五次之后，大臣们便开始商议要不要披着防水羽衣上朝。<br>
+比如，她所过之处通常都一片狼藉，伴随着阵阵清脆痛心的碎裂和碰撞声。<br>
+后来，跟在她旁边的就不只有负责保卫她的卫兵了，还要加上数个跟在她后面打扫战场的家臣。<br>
+不仅如此，当她发脾气的时候，连白王都要让她三分。<br>
+即便强大如白王，还是免不了会被愤怒的小水母电上几次，却又无可奈何。<br>
+正当大家感叹着没有做好防电措施的时候，雾谷那边传来了消息——他们终于自由了。<br>
+听说当她从白宫搬回雾谷的时候，白宫里的卫兵和家臣们差点举办了一场庆祝会。<br>
+莫诺蒙成长的很快，学得更快。<br>
+她用了一年的时间发育成了成年水母——比白王和卢瑞恩叠起来还要高。<br>
+更可怕的是，她只用了一天的时间就记住、并且学会了迄今为止所有的，圣巢的书籍所记载的知识。<br>
+在知晓了莫诺蒙的这个“特异功能”后，白王还专门到雾谷陪她呆了整整一周。<br>
+大概陛下是想把他所拥有的知识都传授给莫诺蒙吧，卢瑞恩想。<br>
+啊，他当然没有嫉妒。<br>
+等到白王再回到白宫的时候，他便宣布要把莫诺蒙的住所改建成圣巢最大的档案馆，并且由莫诺蒙负责进行圣巢的教育和研究工作。<br>
+不过这已经是两年前的事情了。<br>
+没有了战争的纷扰，现在的卢瑞恩在家里过着平静自在的生活。<br>
+白王虽然已经不再过来了——卢瑞恩相信圣巢的国王还有更重要的事要做，但从白宫发给他的补助从来没有断过。<br>
+虽然这些吉欧——一种从岩石中采集出来的化石，被白王用作了圣巢官方的货币——足以让他不愁吃穿，他还是趁着闲余时间写写画画、读读书籍、搞搞学术来保证他大脑不会长草。<br>
+所以对于享受闲适生活的卢瑞恩来说，这件事情来的十分突然。<br>
+在收到请柬的时候，他还在收拾被自己弄得一团糟的厨房。他把爪子反复洗了三遍，又擦了两遍，才敢接过那封一尘不染的皇家信件。<br>
+“…陛下…陛下要成婚了……？”<br>
+卢瑞恩看着这封印有圣巢标志的请柬，它上面也泛着淡淡的白光。<br>
+“我们也不是很清楚，可能陛下早就看上哪家的小姐了吧，只不过他不想让我们知道而已。”<br>
+卢瑞恩默默地看着流动着的光芒，突然感觉心里空落落的。<br>
+…唉，你在期待什么啊。卢瑞恩默默苦笑着。<br>
+“…我知道了，辛苦你四处派发请柬。”<br>
+“…其实也不是很多啦，陛下似乎是有选择性的邀请虫子呢。”负责邮递的虫一边递给卢瑞恩签收单和羽毛笔一边说，“您是唯一一只被陛下邀请的…呃…不是上等阶层的虫子。恭喜您啊。”<br>
+卢瑞恩愣了愣，只是点了点头，不知道该如何回答。他接过笔，有些发飘地签上了自己的名字。<br>
+…可是陛下为什么要让我参加婚礼…？<br>
+他……<br>
+卢瑞恩再回过神说谢谢的时候，抬头却发现对方不知何时已经走了。<br>
+两周后的泪水之城，已经换上了她最为华美的服饰。<br>
+车站里挤满了前来一窥泪城美貌的虫子们。鹿角虫们都快跑断了腿，也不见那乌压压的一片有任何减少。<br>
+而这场庄严的婚礼其实颇为冷清，就像邮递员说的那样，只有少数有威望的虫子才有资格参加，是在泪城下方的白宫举行的。<br>
+在婚礼结束后，白王才会带着一行人乘坐电梯，去往泪水之城出席万众瞩目的游行庆典，这才是四处云集而来的虫子们的舞台。<br>
+此刻的电梯正在被卫兵们把守着，防止普通的好奇民众挤到电梯里。<br>
+卢瑞恩已经很久没有下到白宫了。<br>
+他从来没有见过像这样明亮的白宫，整个洞穴被它照得通亮。<br>
+“您的请柬，谢谢。”<br>
+一个穿着华丽的家臣躬下腰向他伸出爪子——虽然在看到他身上缺了贵族象征的时候犹豫了一下。<br>
+卢瑞恩礼貌地递过请柬。<br>
+家臣仔细检查了请柬——用了几乎能看上十遍的时间——随后便恭敬地领着卢瑞恩走进了白宫。<br>
+在布置好座位的王座室里，卢瑞恩才亲眼看见了已经成年的莫诺蒙。<br>
+此时的她身着神圣的玄色礼服，轻盈优雅地浮在半空中——不但完全褪掉了小时候的那种调皮捣蛋的性格，还一改之前一小团的身型，她发着荧光的修长身躯吸引了不少贵族的目光。<br>
+…好高。卢瑞恩仰视着她，脖子阵阵发酸。<br>
+这个强烈的反差让他一时间无法适应——卢瑞恩还是不敢过于靠近她，的确不只是因为体型差距的原因。<br>
+看见卢瑞恩时，她向他微微颔首致意：“您好，卢瑞恩先生，陛下经常跟我提起您。”<br>
+“呃…我——”<br>
+“我为我幼时的无礼行为向您道歉，希望您能原谅我当时的无知。”<br>
+“啊，我并没有——”<br>
+莫诺蒙没有等他说完，就径直转过头望向了王座。<br>
+“呃……”<br>
+然而不论卢瑞恩怎么尴尬，她都没有再转过头看他一眼。<br>
+…看来她任性的性格还一如从前。<br>
+除了莫诺蒙，另外相当吸引雄性眼球的当属那只全身翠绿、面容姣好的…呃…虫子？植物？<br>
+她叫伊斯玛，是准王后的侍女兼护卫，此次也担任了伴娘的角色。<br>
+而白王的“伴郎”…也算有些出乎意料吧，是穿着一身白色礼服的奥格瑞姆，此时还在和伊斯玛聊着什么。两只虫子似乎很合得来的样子，伊斯玛时不时地还会掩着嘴轻笑起来。每当这时，奥格瑞姆也会颇为紧张地挠挠头，憨憨地笑几声。<br>
+…嗯，她笑起来真的很好看，也难怪奥格瑞姆会作此反应。<br>
+他们似乎在根小姐刚到达宫殿的时候就开始一起合作，着手准备婚礼了。而现在他们则在婚礼开始前一起负责会场布置最后的检查工作，对仆从们一番吩咐后，伊斯玛便又匆匆走出去了，留下奥格瑞姆在原地等待。<br>
+望见卢瑞恩，他眨了眨眼睛，指了指自己，又做了个“没问题”的手势。<br>
+卢瑞恩友好地笑笑以示肯定。<br>
+他们的王后似乎颇有背景，单从伊斯玛的礼节风度便可见一斑。<br>
+卢瑞恩以为莫诺蒙会作为神甫主持这场婚礼——她估计是在场唯一有资格的虫——啊不，水母了。<br>
+白王庄严地走进了王座室，奥格瑞姆立即迎上前鞠躬，大家都起身对他行礼的时候，莫诺蒙虽然也礼节性地站了起来，却依然没有走上前去主持婚礼的意思。<br>
+捧着娇嫩白花——被视为纯洁爱情的象征、披着纯白婚纱的根在伊斯玛的牵引下走到白王的面前。<br>
+…是啊，神是不需要所谓“神甫”和“主教”来代他行使权力的。<br>
+根小姐也是像白王一样，散发着美丽的白光，卢瑞恩都可以看到她枝条中光芒的脉动，她虽然身材高大，却依然婀娜多姿。<br>
+王座前，白王注视着根水灵灵的蓝眼睛：“以神之名，以王之形，我在此立誓：我愿娶她为妻，与她在神圣的婚约中共同生活，无论疾病或健康、贫穷或富裕，我都愿意爱她、安慰她、尊敬她、保护她，并愿意在有生之年永远对她忠诚。”<br>
+卢瑞恩必须承认，这位根小姐的眼眸是他见过的最美丽动人的了。<br>
+不同于虫族单调的黑眼睛，植物一族的成员看起来都会有一双美丽的眼睛，总是水汪汪的，让他们不由自主地会产生保护欲。<br>
+也许这也是陛下爱上她的原因之一？<br>
+白王停顿了一下。<br>
+“那么，即将拥有乌恩神力的根小姐，你是否愿意嫁我为夫，与我在神圣的婚约中共同生活，无论是疾病或健康、贫穷或富裕，你都愿意爱我、安慰我、尊敬我、保护我，并愿意在有生之年永远对我忠诚？”<br>
+根的每一根枝条都流动着白色的光芒。<br>
+她深情地望着白王，卢瑞恩可以看出来，她是真心爱着他的。<br>
+“我愿意，我的陛下。”<br>
+白王点点头，轻轻牵起根的枝条，转过头面对着台下众人：<br>
+“…在场的见证者们，有没有要对这场婚姻提出异议的？”<br>
+自然没有虫子胆敢尝试拆散这对天作之合。<br>
+…等等…乌恩神力？<br>
+卢瑞恩的疑问下一秒就被解答了。<br>
+只见立在一旁的家臣小步走到白王身边，低着头双爪奉上了一个白色的布垫，上面端正地放着一枚镶有翠绿“宝石”的纯白戒指。白王侧身把它取下，温柔地给根戴上。<br>
+…这“宝石”…怎么看都像是那枚“种子”。<br>
+根…啊不，现在应该称呼她为白后了。白后身为另一个国度的王族，自然也受神力恩典，但怎么也不及本就是神的白王。陛下做此决定，想必也是希望表示自己对白后的信任，与她共享王权…吧。<br>
+白后把枝条轻轻搭在白王的爪子上，幸福地微笑着。<br>
+白王的目光对上她湛蓝的大眼睛，微微点了点头。<br>
+随后，白王牵着白后的枝条，从容地从一旁的侧门离开了，宾客们也纷纷走出了王座室的大门，向已经准备万全的宴会厅走去。<br>
+“嘿卢瑞恩！有没有觉得我刚刚特别帅气！”<br>
+“…啊？”卢瑞恩疑惑地望着奥格瑞姆，担心他是不是又受了什么刺激。<br>
+“别‘啊’呀！刚刚我和伊斯玛站在旁边的时候，我那几个举动是不是显得很有绅士风度？”<br>
+说实话，卢瑞恩的注意力一直都集中在新婚夫妇上，根本就没在意站在一旁的他们。<br>
+“…当、当然——”<br>
+“我就知道！”奥格瑞姆打断他，“瞧好吧！”<br>
+说完，他就消失在了门外，一路上引起了被挤到一边的宾客们的一阵抱怨。<br>
+瞧…？<br>
+卢瑞恩满脸问号地跟在最后几个贵族后面走了出去。</p>
+
+<p>“各位，首先感谢你们来参加我的婚礼。”<br>
+白王站在大厅最前方的平台上，举着酒杯。<br>
+“首先，我宣布圣巢骑士团成立，这里将聚集着有能力，有担当，遵守骑士精神的虫子，不分出身，不分种族。”<br>
+白王看向立于长桌旁的虫子们：<br>
+“赫格莫。”<br>
+“在！”<br>
+“泽默。”<br>
+泽默挺直身子，微微鞠了一躬。<br>
+“奥格瑞姆。”<br>
+“诶？！还有我吗？”奥格瑞姆激动得举着爪子指向自己，“…谢…谢谢您！”<br>
+白王向他们点了点头，抽出骨钉拄在身前：“走上来接受我的册封。”<br>
+他们依次走到他的面前，单膝跪地，低下了头。<br>
+“你们要向我发誓，向圣巢发誓，永远不会辜负你们的职责，永远不会玷污你们的称号——”白王走到位于最右边的赫格莫面前，举起骨钉，用它的背部触碰了一下他的左肩，“——赫格莫，你拥有无法匹敌的力量，作为圣巢心脏的守卫者，你的强大将永远守卫着圣巢。”<br>
+“…泽默，你总是最沉默寡言的战士，如魅影一般穿梭敌群，以一胜百。神秘莫测…将会是你胜出一筹的王牌。”<br>
+泽默颤了一下，似乎想说什么，但最终没有说出口。<br>
+轮到奥格瑞姆的时候，他还在激动得发抖，白王不得不稍稍用力才能把骨钉稳放在他的肩上，“…奥格瑞姆，你的忠诚为我所见，为圣巢所鉴。你每一次的挺身而出，都将为圣巢带来荣耀。”<br>
+“我…我一定会将您的教诲谨记于心的，陛下！”奥格瑞姆声音有些发抖。<br>
+他又把骨钉重新收至身前，迈步走回了之前的位置：“…随我说出你们的誓言。”<br>
+“我发誓善待弱者，我誓勇敢对抗强暴，我发誓抗击一切邪恶，我发誓为手无寸铁的虫子战斗，我发誓帮助任何向我寻求公正的虫子，我发誓真诚地对待我的朋友，我发誓保护圣巢庇护下的人民，我发誓永远忠于这片土地上唯一的神，和他永恒的王国，圣巢。苍白之光必将引领我们战胜一切黑暗。”<br>
+白王点头，三位骑士们站起来挺直了身子，随着白后的示意，走到了她的身边。<br>
+“在这个大喜之日，我还要宣布一件关乎圣巢未来的大事。”<br>
+白王扫视了全场，最后将视线定格在卢瑞恩身上。<br>
+卢瑞恩不由得紧张地坐直了身子。<br>
+“…上前来，卢瑞恩。”<br>
+白王温柔的嗓音回响在大厅内。<br>
+卢瑞恩回过神的时候，自己已经在众贵族的注视下走向了白王。<br>
+“跪下来。”虽然是命令，但是白王的声音依旧很温柔。<br>
+卢瑞恩其实不用白王的命令，在对方神圣的光辉下，他本能地就想跪在他的脚下了。<br>
+“卢瑞恩，我作为圣巢无上的神，以及唯一的国王，在这里授予你——首相的权利。”白王庄严肃穆的声音响彻整个大厅。<br>
+卢瑞恩惊得猛地抬起头，却对上了站在白王身旁的根——白后的眼睛，那里面充满着母性的慈爱与关怀。<br>
+她伸展枝条，示意卢瑞恩继续低下头去。<br>
+卢瑞恩惴惴不安地照做了。<br>
+“从此以后，你将作为一人之下，万人之上的国王之手，陪伴在我身边为圣巢奉献你的一切。”<br>
+他低下头望向卢瑞恩：“…你愿意吗？”<br>
+大厅里一片寂静，卢瑞恩只能听见自己断断续续的呼吸声。<br>
+“我——”他一开口，声音突然颤抖起来。<br>
+该死，卢瑞恩，你怎么这么没出息！<br>
+他暗自责骂着自己。<br>
+“我愿…我愿意！我发誓我将以死捍卫圣巢！”<br>
+到最后，他几乎喊了出来。<br>
+不，即便我死了，我也会守护着圣巢的。当然，卢瑞恩没有把这句不着边际的话说出口。<br>
+白王重新抽出了自己的骨钉，将骨钉搭在了卢瑞恩的肩上。他的动作很轻，轻到卢瑞恩只感觉像是一根丝线落在左肩上<br>
+“…卢瑞恩…你虽不为骑士，但拥有骑士之魂。”<br>
+他轻轻地说着。<br>
+卢瑞恩没敢抬头，但他能想象出白王此刻的表情。<br>
+“…我…”<br>
+“无需多言。”白王示意他站起身来，随后看向台下：<br>
+“接下来，请大家尽情享受盛宴吧。”<br>
+轻柔的音乐响起，贵族们纷纷落座。虽然菜品的式样好生熟悉，但是在白宫里和国王一起用餐，恐怕只有这一次机会了。<br>
+说不定会得到他的祝福呢？<br>
+而卢瑞恩则忐忑地坐在白王左边，还在消化着刚刚发生的一切——他已经很久没有这么近距离地和他坐在一起了。<br>
+他盯着餐盘里的甜点发呆——上面浇着的蜂蜜应该是和蜂巢的交易中购置的，亮丽的金黄色泽看着就很有食欲，但是他耳边一直传来国王陛下文雅的交谈声，让他怎么都静不下心来。<br>
+“怎么？不合口味吗？我还蛮喜欢蜂蜜的。”<br>
+那个声音突然放大了许多倍，让他感觉其它喧闹的声音瞬间都消失了。<br>
+“不不不，我只是…只是不太饿…”他真想扇自己一耳光。<br>
+“不用拘谨，首相。时间还长，你需要习惯在宫廷里用餐。”<br>
+他的意思怕不是“习惯陪他一起吃饭——顺带一起看书，一起散步，一起指点江山…”。<br>
+卢瑞恩想着想着，脸扑地就红了——对能和白王在一起这件事，他总是变得像个小女孩一样。<br>
+这时，救星终于到了。一位贵族领着一只穿着华丽的蝴蝶走到台下。<br>
+“请允许我最优秀的歌姬为国王陛下和王后陛下献上一曲，代表我们圣巢人民对您们的新婚祝福。”<br>
+他和歌姬都深深地鞠了一躬。<br>
+白王转头看了看坐在一边的王后，她笑着点点头。<br>
+“请吧。”<br>
+会场安静下来，歌姬走到了会场中央——但没有离白王和白后很远的位置——随后便一展歌喉。<br>
+她的声音很动听，再混着大厅墙壁的回声，就好似处在仙境一般。卢瑞恩紧张的心情不由得放松了许多。<br>
+一曲唱罢，她向着国王、王后和卢瑞恩都鞠了一躬，等她再转过身向贵族们鞠躬的时候，热烈的掌声才后知后觉地席卷全场。<br>
+她转回身，等候王室的指示。<br>
+白王朝她点点头，示意她走上前来。<br>
+“我注意到你唱的是我的功绩。听上去像是莫诺蒙的文笔。”<br>
+“能被允许歌颂您的伟大是我无上的荣耀，陛下。”歌姬把爪子收至腹前，又深深地鞠了一躬。<br>
+“这是我们请莫诺蒙老师写的颂词，希望您能喜欢。”似乎是演出领班的贵族也行了礼。<br>
+白王点点头，“圣巢也感谢你们的付出。玛丽莎，演出很不错。”<br>
+玛丽莎愣了一下，差点下意识地抬起头，慌乱中竟忘了道谢。<br>
+“她还是个新人，第一次为王室表演，有点怯场，还望陛下海涵！”贵族领班连忙为国王和王后敬酒，来掩饰玛丽莎刚刚的失神。<br>
+白王轻笑一声，象征性地拿起酒杯：“我反而觉得她一点都不怯场。我不喜欢酒的苦味，就不再喝了。”他转向玛丽莎：“你很有才华，希望你能继续为王室表演。”<br>
+“谢…谢谢陛下…”<br>
+有了白王这句话，看来玛丽莎之后就可以衣食无忧了。</p>
+
+<p>宴会之后便是舞会。<br>
+卢瑞恩实在不认为自己有舞蹈的天赋，便找了个角落喝花茶。远处，白王牵着白后的枝条走到了舞池中央。白王显得很局促的样子，他想必也不太专长舞蹈。<br>
+白后轻柔地迈开了步子。和白王相比，她有些太过高大，但她故意将动作幅度压制到很小，让白王可以跟上她的舞步。<br>
+卢瑞恩的身高和白王差不多一样，平视的话差不多正好能看着对方的眼睛…<br>
+啊，自己又在瞎想了。<br>
+“首相大人！您怎么一个人在这里喝闷茶呀？”奥格瑞姆活力四射的声音炸响在耳边，他的茶猛地洒出了一些。<br>
+“你别这样突然出声吓人好不好？”伊斯玛责怪道。<br>
+“你们…你们有什么事吗？”卢瑞恩平复了一下心情。他们怎么不去跳舞？感觉像是很般配的舞伴。<br>
+奥格瑞姆突然紧张了起来：“这个嘛，我们像请你和我们一起去找一趟陛下…”<br>
+“…啊？”<br>
+“伊斯玛和我有事情想和陛下商量…然后伊斯玛她…”他努力朝伊斯玛使眼色。<br>
+“卢瑞恩大人，您…您能不能陪我们一起去呀…我…我可能会怯场…”伊斯玛有些羞怯地请求着。<br>
+“…这…这又不是表演——”<br>
+“……哎呀好兄弟你就陪我去嘛！”奥格瑞姆突然像小动物一样腻在卢瑞恩胳膊上，把卢瑞恩搞得身上一阵发麻。最终，他还是被近似拖着拖到了士兵的训练场。<br>
+“…可是陛下不在这里啊？他还在大厅——”<br>
+“陛下每天都会到训练场监督视察的，今天肯定也不例外！”<br>
+好吧。<br>
+“……小矮子？”一个略微熟悉的声音传了过来。<br>
+“……德莱娅？”<br>
+不远处拿着骨钉的德莱娅已经出落成一个大姑娘了——比他高好多。<br>
+该死，他怕不是拉低了圣巢的平均身高。<br>
+“你们认识？”奥格瑞姆惊讶道。<br>
+“嗯，算是老相识了…虽然一直没再见过面。”卢瑞恩有些顾忌提到那场战争，他看向德莱娅，“我那时可比你高。”<br>
+“你不再是了，小矮子。”<br>
+“我叫卢瑞恩。”<br>
+“名字不重要。…听说你当了首相？”<br>
+“本人不才——”<br>
+“收起你那套吧。”德莱娅没好气地哼了一声，“看起来那家伙还没有我想象中那么笨。”<br>
+卢瑞恩笑笑：“陛下的智慧岂是我等所能比拟的。”<br>
+德莱娅甩了甩手腕：“啊好烦，整天都是这些陈词滥调，你们政治宣传做得好足啊。”<br>
+“那是因为陛下真的很厉害啊！他仅凭一己之力就能庇护整个圣巢！”这回是传来的是赫格莫沉甸甸的声音，随着他的脚步，金属盔甲发出铿锵的撞击声，地面似乎都在微微颤抖。<br>
+德莱娅翻了个白眼：“又来了，饶了我吧。”<br>
+“而且陛下人格魅力也很足啊！”奥格瑞姆插嘴道。<br>
+“我要去训练了。不要分散我注意力。”<br>
+“你要是觉得不太好集中注意力，可以给招式起个名字，这样你大喊招式名的时候注意力就自然而然地集中了！”<br>
+奥格瑞姆忍不住向德莱娅提出建议。<br>
+德莱娅黑着脸：“…太傻气了，我才不要。”<br>
+“这可是我的独家秘诀，轻易不告诉别人的！你竟然还不稀罕？”<br>
+“难怪你每次在战场上的时候都跟疯了似的大喊大叫。”赫格莫叹息着摇摇头。<br>
+德莱娅听闻，脸上鄙夷的神情更加强烈了。<br>
+“喂！咱们还是不是一伙的？”<br>
+伊斯玛偷偷捂住嘴笑起来。<br>
+“看来整个圣巢也就你们国王的技术还算到家。”德莱娅挥了几下骨钉，“我还是听他的吧。”<br>
+“陛下他…他亲自教你剑术？！”<br>
+奥格瑞姆惊的下巴差点掉下来。<br>
+“…怎么了？”德莱娅一副无所谓的样子，但卢瑞恩还是能听出来她语气中的好奇。<br>
+“怎么了？！还问怎么了？！你知不知道陛下他——”<br>
+“知——道——他是神，是尊贵的国王——”德莱娅不耐烦的拖着长音。<br>
+“傻瓜！如果陛下愿意腾出时间教你骨钉，说明他很看好你啊！”<br>
+“……这我当然知道！他还问过我想不想当骑士。”德莱娅转过头，“…我说我还没准备好。”<br>
+“啥——”<br>
+“我知道要成为他的骑士要先成为圣巢的居民才行…但是我还没有准备好立下誓言。”<br>
+“你还是没有接受他吗？”卢瑞恩有些小心翼翼地问着，生怕触及到不好的回忆。<br>
+“…他值不值得活下去，我会自己评判。”德莱娅嘀咕着，低头望着自己的骨钉。<br>
+“德莱娅，准备好再练一场了吗？”恰到时候的，白王走了过来，看来舞会也散场了。<br>
+“陛下。”众人立刻单膝跪地，向他们的国王行礼。<br>
+德莱娅慢了半拍，她皱了皱眉，最后还是有些不情愿地行了个礼。<br>
+“…卢瑞恩？你怎么在这里？就职仪式的最后本人却不在现场，有些不太合适吧？”<br>
+“呃，抱歉陛下…我——”<br>
+“是、是我把首相大人硬拉过来的！”奥格瑞姆挺身而出，“…就是我有点忘了这也是我们的就职典礼了…”他不好意思地挠挠头。<br>
+看见他们都聚在这里，白王似乎有些疑惑：“…你们都在啊。”<br>
+“我和伊斯玛有一事相求，听说您会在这里视察士兵们受训，所以就赶过来了…”奥格瑞姆略为紧张地说道。<br>
+白王犹疑着点点头，又把目光投向赫格莫。<br>
+“…而圣巢骑士团的好兄弟永远都一起行动！”赫格莫举起爪子咧着嘴笑道。<br>
+“我正巧遇到他们——”卢瑞恩没等白王发问，自觉地解释道——但被奥格瑞姆打断了。<br>
+“我觉着首相大人在的话，可能您同意的几率会大一点——”<br>
+“奥格瑞姆…！”伊斯玛悄声喊道。<br>
+卢瑞恩皱眉望向奥格瑞姆。<br>
+哦…原来是这样的啊。<br>
+他看向奥格瑞姆的眼神冷了几分，让对方不禁打了个哆嗦。<br>
+白王轻笑了一声：“看来你威望很高啊，首相。”<br>
+卢瑞恩连忙向白王低下头：“呃，不是，我……”<br>
+“说出你们的请求吧。”<br>
+“陛下！伊斯玛她…她很有能力的！我觉得…她…她也是有资格成为一名骑士，跟随您一起战斗的…！”奥格瑞姆紧张地请求着白王。<br>
+“奥格瑞姆！”伊斯玛迅速戳了一下奥格瑞姆，轻声责怪道，“你这样说不太合适吧？有没有资格是陛下说了算的…！”<br>
+白王凝视着奥格瑞姆。<br>
+“…我…我知道像这样直接请求您不太合适…但…但是——”奥格瑞姆在白王的注视下慌了神，语无伦次地解释着。<br>
+白王沉吟片刻，转向伊斯玛，抽出了骨钉：“…让我看看你的实力。”<br>
+“诶？”伊斯玛还在责备着奥格瑞姆的僭越之语，白王突然的要求让她毫无准备，“…现…现在…在这里吗，陛下？”<br>
+卢瑞恩已经很有默契地把其他虫子引到一边，为两位腾出战场了。<br>
+“伊斯玛加油吖！”奥格瑞姆挥着爪子高声喊着。<br>
+“两分钟，挡住我的攻击。”白王说着，猛地向她刺了一剑。<br>
+“…陛下，那小女子就失礼了…！”伊斯玛猛地展开了一个绿色的防御屏障。<br>
+白王的眼神中迅速划过一丝若有所思的神情，随后又保持着攻势，重新凌厉起来。<br>
+“德莱娅，不要只看着骨钉，注意看我的步型。”<br>
+卢瑞恩感到身旁的德莱娅微微震了一下，估计是被突然出声的提醒惊到了。她的眼神十分专注，一步不差地跟随着白王的动作。<br>
+“攻击力道太弱了。”两分钟后，白王突然收住了招式。<br>
+“呃，陛下，其实她——”奥格瑞姆忍不住想要为伊斯玛辩解。<br>
+“但是你的防御技巧很高超，而且有治疗师的天赋。”白王收起了骨钉，“可以看出来你对法术颇有研究。”<br>
+“…嗯…是的陛下…我之前专门做过这方面的研究，也用这个能力治疗过伤患…”<br>
+“…很好，那你有资格成为见习骑士了，同时担任圣巢的医师。在此期间，我会继续教你怎么去运用灵魂法术。”<br>
+“好耶！”，伊斯玛还没来得及谢恩，奥格瑞姆便欢呼一声，跑到伊斯玛面前，“这样咱们可以一起去探索外面的世界了！我要带你去看圣巢所——有的名胜风景区——”<br>
+奥格瑞姆兴奋地对伊斯玛比划着，还好卢瑞恩咳嗽了一声，好心地将他拉回了现实。<br>
+他愣了一下，才想起来真正说话算数的虫子还在这里，于是有些尴尬地抓抓头：<br>
+“…我们…我们可以帮您守卫地面之上的领地！…可不可以啊，陛下？“他看向白王的眼神充满着希望。<br>
+白王被看得有些冒冷汗：“…不，驻扎在十字路和地面之上的队伍已经由泽若负责管理了——”<br>
+“那…那真菌荒地和螳螂村——”<br>
+“泽默。”<br>
+“苍绿之径…？”<br>
+“…我已经答应乌恩不再踏进她的领地。”<br>
+“雾谷也很漂亮——”奥格瑞姆的声音近乎哀求了。<br>
+“莫诺蒙和她的水母们相安无事。”<br>
+“那——”<br>
+“泪水之城由赫格莫守卫，而白宫……我认为有我在就够了。不过或许你可以考虑一下白宫盆地的其他区域。”<br>
+“或者下水道，有虫子报告说那里最近生了好多讨人嫌的恶心蛆虫。”赫格莫插话道，还故意朝奥格瑞姆挤了挤眼。<br>
+奥格瑞姆恶狠狠地瞪了赫格莫一眼，又把祈求的目光投向白王：“…可是盆地附近并没有什么东西——”<br>
+“你难道把出征任务当成度蜜月了吗？”德莱娅突然插嘴道。<br>
+“什…！我…我才没有！出征这么重要的事…怎么能当成旅游度假那样…！”<br>
+“可是你分明脸红了啊？”赫格莫适时地补了个刀。<br>
+“…我哪有…！我才没有呢！…啊！伊斯玛你别光偷笑了赶紧来帮帮忙啊！”<br>
+“可是…咳…你的脸真的很红…”伊斯玛努力镇定住情绪，无辜地眨着眼睛说。<br>
+“哇啊！你怎么这样——”<br>
+“快说！你是不是喜欢她？是不是是不是？”赫格莫笑得有些邪恶。<br>
+伊斯玛立刻低下头略带羞涩地捂住了脸。<br>
+“我…我我我——哎呀各位大哥大姐您们就饶了我吧呜呜呜——”<br>
+看着闹成一团的德莱娅和三个骑士，卢瑞恩无奈地笑笑，走到一直一言不发的白王近旁：“…说起来，泽默在真菌荒地做什么呢？…”<br>
+“她自告奋勇请示做圣巢附属领域的总管将军，负责各地外交、邻域探索及领土扩张，今天已经出发去代我视察螳螂部族了。”<br>
+“…果然还是很神秘啊。”<br>
+不过卢瑞恩脑海中不知为何突然闪过莉莉的身影。<br>
+“……”<br>
+他偏过头望了望白王，对方正双爪拄着骨钉看向远方。<br>
+“…感情是个很可怕的东西。”<br>
+白王突然轻声说道。<br>
+“因为它，我们拥有一切，也是因为它，我们失去一切。”<br>
+卢瑞恩眨了眨眼睛，面前的白王有一种说不上来的孤寂感，而耳边依旧传来的是骑士们的阵阵打闹声。</p>
+
+<p>第二天，是泪水之城正式宣布国庆的日子。<br>
+市民们都聚集在道路的两侧，争着想挤到前排来看一眼他们圣巢尊贵的君主，和他们的新王后。当然，其中也不乏外来的虫子——他们是来看他是不是真的会发光的。<br>
+一出电梯，卫兵们立刻围上来，不让虫子们冲进皇家队伍。在他们的保护下，白王和白后需要带领着皇室家臣和贵族们以类似游行的方式周游城市大半圈，最后走到宣布国家大事和庆典的大露台上。卢瑞恩跟在白王的侧后方，他还是不太习惯成为众人的焦点。<br>
+“…真漂亮。我喜欢小雨淅沥的感觉。”白后一出电梯就感叹道。<br>
+
+</p><p>TBC.<br>
+—————</p>
+
+<p>大佬：我家白王攻遍整个圣巢。<br>
+我：我…我家白王人设是正（luó）太（lì）！<br>
+大佬：我家白王敢挑别人下巴。<br>
+我：我家白王敢撒娇！！<br>
+陛下：我不敢！！！（怒）</p>
+
+<p>最后那段走错路的剧情<br>
+（其实可以不加的）<br>
+  
+  <div class="note info no-icon"> <p style="color:#438BCA">我是傻逼，对不起，噩梦，谁会加这段啊 </p> </div>
+  
+</p><p>是今年春节我和我妈去三星堆看大祭祀表演的时候<br><br>最后祭祀领着国王王后从一个小岔路出去了<br><br>我们以为表演结束了 刚要走 只见祭祀又领着队伍，伴着锣鼓喧天和电吉他的强劲节奏，威风凛凛、一步一拄杖地走回来了！<br><br>我妈：这怕不是领错路了<br><br>我：hhhhhhhhhh<br><br>（其实人家是绕着神树走了一圈祈了个福）</p><p></p>
+<p>一路上，庄严神圣的管弦乐一直随着队伍前进着，伴随着道路两边虫子们的呐喊和欢呼声。队伍拐进了一个小巷，他注意到白王有那么一瞬间的迟疑。他华丽地转了一个弯，又原路返回了小巷入口。<br><br>“…陛下，出了什么事吗？”卢瑞恩不安地凑到白王耳边低声问。<br><br>“…走错路了。”白王依旧镇定地注视着前方。<br><br>身旁的白后略微低下头掩饰起笑意。<br><br>“……啊。”</p><p></p>
+<p>喵的我好伤心啊<br>
+原来这就是本命被制作组抛弃的感觉吗<br>
+突然有一种站错队伍的体验<br>
+丝绸之歌的标题上都没有陛下的标志了啊可恶！<br>
+等它出来后大家肯定就又去关注那边的人物了吧<br>
+…可能还会有另一只国王陛下😂<br>
+…哎…总之感觉文完结遥遥无期了(￣◇￣;)<br>
+（2.15更新）</p>
+
+<p>这章文风有点古怪，不只是因为情绪问题…还因为这章真的只有这么点内容_(:з」∠)_</p>
+
+<p>嚯嚯嚯后天就答辩了我还在这里苟文章哈哈哈（疯了）<br>
+（3.4更新）</p>
+
+<p>emm也许是我太别扭了但是我真的觉得自己写得好烂（无论从客观上还是从主观上）……唉好纠结好痛苦，各位还请原谅我的烂文笔吧……<br>
+（3.10更新）</p>
+
+<p>各位，强烈推荐大家去看看《君主论》🌚陛下洗白必备。<br>
+不，陛下本来就是白的（各种方面），不用洗。<br>
+（3.22更新）<br>
+—————</p>
+
+<h2 id="toc_11">～11～</h2>
+
+<p>（我突然想起来，上一章的婚礼忘了邀请各位领主🌚那…忘了就忘了吧🌝领主们：？？？）<br>
+这章一直在卡着，因为我总觉得填补的空白太少了<br>
+但是我转念一想<br>
+我短了又怎么样！我意识流了又怎么样！🌝<br>
+（7.18更新）<br>
+好吧我又陷入了想跳过这章写下一章却又不能直接跳跃的死胡同里<br>
+（7.21更新）<br>
+啊我废话好多<br>
+（7.22更新）<br>
+这章里提到的一些神神叨叨的东西<br>
+参考文献如下：<br>
+Cultist Simulator（这个已经融入主设定里辽 陛下绝对是冬灯不服来战（不请别打我））<br>
+Hello Charlotte（出乎意料地契合主题（？））<br>
+American Gods<br>
+…再加上一丢丢北欧神话<br>
+（7.25更新）<br>
+我知道大家其实并不喜欢看这种没有剧情的文章(￣◇￣;)<br>
+但是可能我文风就像这样吧有点像在不停琢磨莫须有的设定一样(:з」∠)_<br>
+想开新坑…（小声bb）<br>
+（7.29更新）<br>
+我错了，这章又超万了👀<br>
+（8.1更新）</p>
+
+<p>—————</p>
+
+<p>什么是神？<br>
+神是万物的创造者。<br>
+“那只是过去，现在，是万物创造了神。”<br>
+诞生于混沌之中，象征着某种共同的恐惧与渴望。<br>
+“我？自然是被敬畏着的那类神。”<br>
+他望向这边。<br>
+“我即是死神。”</p>
+
+<p>(（）)</p>
+
+<p>“——陛下！！”<br>
+卢瑞恩猛地翻身坐起，大口喘息着，冷汗布满了他的额头，午夜的寒风吹过，让他打了一个冷颤。<br>
+刚刚…是梦吗？<br>
+寒凉充斥着整个房间，他控制不住地浑身哆嗦，不由自主搓着胳膊，刺骨的寒冷似是渗透进他的外壳一般。<br>
+他的爪子碰到了落在身旁的书——他想起自己看着看着就睡着了，连灯都忘了盖上。<br>
+灯笼里只剩了一只光蝇。那只仍在苟延残喘的光蝇锲而不舍地撞着灯罩，光芒微弱。<br>
+该换一盏灯了。卢瑞恩望着灯笼底层黑乎乎的一片发呆。<br>
+如果他看得足够仔细，就会发现玻璃上结的一层薄霜——某种力量似乎确实光临过这间屋子。<br>
+宫殿里听不见泪城的钟声，取而代之的是它本身的光芒。<br>
+当整座宫殿辉煌如白昼一般时，也就很难继续入睡了。<br>
+现在还未拂晓，卢瑞恩呆坐在床上，反复重播着刚刚的梦境，直到它逐渐变得模糊，变得毫无逻辑可循。<br>
+他重新躺回床上，床铺发出一声不轻不重的闷响，他盯着天花板的眼神依旧茫然无措。<br>
+他就这样感受着着四周逐渐明亮起来，听着寂静的走廊里传来的脚步声由远及近。<br>
+该起床了，卢瑞恩转头望着挂在墙边的白袍想。</p>
+
+<p>(（）)</p>
+
+<p>“啊，卢瑞恩。”白王抬起头向他致意，又转过头看向一旁石板上钉着的几张图纸，“这是我的设计师们自行设计的新交通工具，他们叫它电车，因为它的主要动力是光蝇发出的电力。我觉得想法不错，你的意见呢？”<br>
+光蝇？<br>
+那些光蝇是被活活冻死的。他清楚的记得，它们当天早上还生龙活虎，丝毫没有衰老的迹象。<br>
+“…卢瑞恩？”<br>
+还有那晚异常寒冷的温度，那场梦——<br>
+“卢瑞恩。”<br>
+他的思绪立刻被拉回现在，面前是眼神略带严肃的国王。<br>
+“啊…陛下，我很抱歉…刚刚的失神，我可能…昨晚没睡好…”他又赶在白王开口前又急忙补充道，“应该是因为我刚来这里，还不太习惯，今晚状况就可以改善的，不劳您费心了。”<br>
+白王直视着他的眼睛，似乎想从中读出一些卢瑞恩自己都不太了解的讯息。<br>
+最终，他叹了口气：“做噩梦了？”<br>
+“算…算是吧…”<br>
+他转头看向电车的图纸：“我计划明天去一趟地面。”<br>
+“…陛下您是想…”<br>
+“飞蛾不好武力，但也不能因此轻视他们。我们可能要以理服人。”<br>
+他站起身把图纸揭下来，卷起：“他们有穿梭于梦境的力量，甚至可以控制梦境。”图纸递向了卢瑞恩，“他们是梦境领域的专家。”<br>
+卢瑞恩迟疑着接过图纸卷：“可是陛下——”<br>
+“这个你拿回去看一看，有可以改进的地方就和工程师们进一步交流。主要的构造和原理我已经检查过了，没有大问题。”<br>
+“好的陛下，不过——”<br>
+“梦境虽然虚幻但仍会影响到现世，力量虽小但也不可忽视。处理不好也会有麻烦的。”<br>
+“…我了解了，陛下。”<br>
+有哪里不对劲，但他却怎么也说不上来。紧紧握住图纸，他当下决定还是先不要多想为好。</p>
+
+<p>(（）)</p>
+
+<p>德特茅斯不大，正如其名，它毫不起眼，是个再普通不过的小小村庄。它如今的兴盛完全是沾了圣巢的光。自从圣巢的大门向地面敞开之后，数不清的旅人都纷纷涌进了这个小村子，硬生生将它撑成了一个半大的小镇。只凭着旅游业，这里居民们便都赚得盆满钵满。<br>
+现任的镇长盛情迎接了圣巢的君主，备了一桌好酒好菜。可惜他还是不太了解白王的口味，这位国王只是为了表示友好而动了一下刀叉和酒杯，便再也没碰过任何东西。<br>
+在德特茅斯住宿的那夜，白王单独住在一所房子里。那所房子是专门为他设计的，纯白无暇，干净整洁，有至少五个仆从，分配有专门的清洁工打扫卫生，显然他们深知他的洁癖——他们能注意这点倒是出乎卢瑞恩意料之外。<br>
+这次谈判本来带的士兵就不多，都是白王的近卫兵，大家将就一晚也就都住下了，卢瑞恩倒是因为首相的身份还享受了包间的特权——其它卫兵可都是四人间。在当地的酒馆里，圣巢是最喜闻乐见的话题。<br>
+作为一个社会来说，圣巢有些特殊。她的子民不仅仅只是甲虫一个族群，还接纳了其它种族的虫子。很难想象一些本属不同族群、甚至有的还有前仇旧恨的虫子们是怎么和平生活在一起的。<br>
+飞蛾，这个内向安静的种族原是这片区域的主宰，和大多数种群一样，她们喜欢默默地聚集在自己的地盘中，人不犯我，我不犯人。至于如此不好斗争的飞蛾凭借什么独霸一时，对于卢瑞恩和其它虫子来说还是个谜。他只知道，远在任何文明建立之前，有一个被称为黑暗时代的时期，那时整个世界填满了黑暗——这是他在白王所著的书里读到的。年代久远，白王当时并不在场，那是谁驱散了黑暗呢？<br>
+飞蛾们有一个承袭已久的传统，就是每一代都要选出一位先知。先知有点类似于“神的使者”，她会为她们的神明传达意愿。<br>
+而圣巢的苍白之王，作为唯一的神明，无上的光芒，不同于其他国家的国王，他既是神，又是王。集合了神权与王权，他的权利和地位是压倒性的。当一位神明亲临世间，执掌朝政时，还需要所谓的先知做什么？<br>
+卢瑞恩平躺在床上，不住地想着“神”这个字眼。<br>
+“他”说，是虫子们共同的情感汇聚成就了一位神。因为无知，所以惧怕自然。为了祈求心灵的安宁，于是将这种无法控制的力量人格化，期盼着自己的祈愿能传达给神明，希求有一种途径能让自己触碰到这无法触及的禁域。有了信仰，就有了神明。<br>
+<em>不过，还有一种神。从诞生之初便有着强大的力量。他凌驾于万物之上，可以凭空创造出新的生命。</em><br>
+创造者随心所欲地创造着这个世界，他头脑中想到什么，世界便有了什么。凭借着如此强大的力量，他日夜不休地构建这个宇宙。<br>
+作为名副其实的众神之神，他在创造出低等生物之后，也决定了高等生物、甚至是神的存在。<br>
+但是当这个宇宙接近饱和的时候，他却仍在不停地幻想，不停地创造。他想停下自己如洪水般的杂乱思想，却无法如愿。直到最后，他被自己创造的混乱吞噬，化为了虚无。他曾经所有的光芒都消失殆尽，他被染成了黑色。<br>
+<em>然而在内心深处，他是多么向往光明啊。</em><br>
+然后，他发现自己在凝视着“深渊”。<br>
+<em>你好啊，小虫子</em><br>
+他想开口，却感觉自己的嘴长在了一起，就像从来没有过一样。<br>
+<em>你一定有很多的问题，不过现在不是问问题的场合，你要做的只有理解我要说的话</em><br>
+卢瑞恩着了魔似的盯着眼前的黑暗。<br>
+<em>来自深渊的虚空没有声音，我只是他的代言者而已。相信我吧，至少我可比你更了解虚空</em><br>
+<em>以后的演出，你会扮演一个重要角色，虽然不是主角</em><br>
+<em>她很快也会找上你了吧，如果他不做点什么的话</em><br>
+<em>不过放轻松，她现在还很理性，只不过有那么一点…恼怒</em><br>
+<em>听听我给你的忠告吧。你或许觉得自己离他很近，但他其实离你很远。在你做任何事之前，永远记住，他不可被任何凡尘玷污，他是神</em></p>
+
+<p>他是神，所以不会有情感的回应。<br>
+他是神，所以不会为任何虫子驻足。<br>
+他是神，虫子们只不过是他的玩具。<br>
+他是神，立在世界的顶端，所以永远是孤独的。</p>
+
+<p>一座皑皑雪山，他站在山脚下，是千万草芥中的一颗。他们恭敬地匍伏着，似冰雕一般一动不动。<br>
+而他——神立在耸入云霄的雪顶上（不知为何，他的视野并没有因为距离而模糊不清），背对着他们，望着山另一端的世界。<br>
+但是他回头了——<br>
+<em>不，他没有</em><br>
+他没有回头。</p>
+
+<p>(（）)</p>
+
+<p>又是一场噩梦。卢瑞恩虽然已经记不太清梦的具体内容，但那种“这一定是噩梦”的感觉还残留在他心里。<br>
+不过这回，没有那种深入骨髓的寒冷了。<br>
+透过窗户，他望向白王居住的那个房子，突然感到前所未有的凄凉。他觉得自己很空虚，很无助。也许是因为入夜后他的心理防线会变得异常脆弱的原因吧。<br>
+地面上的日出很美，那些亮丽色彩的混合就像一件艺术品。他从来没有想过自己有朝一日能够亲眼目睹太阳。<br>
+在地下，白王是唯一的光。<br>
+但是太阳的光很刺眼，让他想避开它，让他想躲回到地底下。</p>
+
+<p>行程的终点是眼前那座山峰，灰蒙蒙的，看上去没有什么特别。<br>
+山脚下，蛾子们的迎接很冷淡，也很僵硬，尤其是看见随行的甲虫们的时候。她们应早已听说过圣巢建立的事了。被指派作为地面外交官，小有作为的年轻骑士泽若站在迎接队伍的边缘位置，他的盔甲和挺拔的身姿和周围看似温顺的蛾子有些格格不入。他估计是唯一一个对于他们的到来由衷感到高兴的虫子了。<br>
+不过，卢瑞恩发现，在郁郁寡欢的蛾子之中，有一只雄性蛾子的眼神出奇的犀利。<br>
+“欢迎，来自圣巢的苍白之王。”一只老蛾子，拿着装饰有网纹的法杖走上前说到，“有失远迎，还望您见谅。”圣巢的语言，看来泽若的工作做得不错。<br>
+白王轻轻点了一下头，并没有说话。<br>
+“请随我来。”她苍老的声音并没有显示出任何情感，岁月的冲刷已经将它们清洗得干干净净。<br>
+队伍一开始移动，泽若立刻抽身快步走到圣巢的队伍边，难掩其兴奋的心情。<br>
+简直就像终于等到父母来接他的幼稚园小孩一样。卢瑞恩忍住笑意。<br>
+走在前方的白王突然停顿脚步望着山壁的一角，片刻后才继续跟上领路的蛾子。<br>
+卢瑞恩顺着他的方向看过去，远处是什么东西闪着璀璨的粉色光芒，他几乎都看不清楚。<br>
+不过越往深处走，这些粉色的晶状物便布得越密，直到他们看见蛾族村庄的立牌，上面装饰的依旧是梦网的纹章。两旁立着的是小一号的蛾石像。<br>
+队伍没有作任何停留，而是径直穿过村庄，走向了飞蛾外型的神堂。<br>
+可以看出，飞蛾村庄的制造业还处于初级阶段，仍然在使用着最基础的生产方式，形状不太规则的石质用具堆在房屋旁边，屋顶垂下来的仍是一个个形状各异的捕梦网。看来她们真的很喜欢梦境。<br>
+飞蛾村民们看到圣巢的队伍倒是不以为然，继续干着手里的工作。只是有几只蛾子在看到全副武装的甲虫们的时候窃窃私语起来。<br>
+是了，在圣巢建立之前，蛾子一直把他们当成野兽来着。<br>
+就在这个时候，他看到了一只不是蛾子的虫子——一只甲虫。他头顶一个大大的石盘，里面装的都是之前他们看到过的那种粉色晶体。卢瑞恩不觉皱起眉来，视线向下移去，那条脚链十分扎眼。<br>
+随行的甲虫们纷纷骚动不安起来。卢瑞恩勉强沉住气，望向白王。白王显然也注意到了，他的视线随着甲虫蹒跚的步伐缓缓移动。<br>
+“请您不要见怪，那是一只我们买下来驯养的野兽，村庄里还有很多类似的奴隶。”队伍中唯一的那只雄性蛾子轻巧地说，“它们和您圣巢高尚的甲虫们不一样。”<br>
+明明就是一个种族。卢瑞恩恨恨地想。<br>
+但是蛾子的语气中并没有嘲弄——他早已习以为常。<br>
+那只甲虫对上了他们的视线，它停住脚步，眼神中满是茫然和无措。不过那里面没有哀伤，也没有祈求。白王看着它，似乎想说什么，但最终还是移开了视线。从某处传来一声呵斥，甲虫的反应很激烈，受惊动物一般颤了一下，晶体随着它的颤抖上下跳动，发出“唰啦”的声响。<br>
+卢瑞恩希望白王能做点什么，不过那也应该在谈判之后了。</p>
+
+<p>(（）)</p>
+
+<p>关于一百年之前的那场战争，卢瑞恩只在白王的书籍中读到过。<br>
+“为了自由而战。”这是白王——也是那场战争的获胜方——对它下的定义。<br>
+那是场神与神之间的斗争，同时也卷入了成千上万“前圣巢”的无辜民众——当然，这不是出于白王意愿的。<br>
+“她死了？你什么意思？神是不会死的！”<br>
+白王话还没有说完，质疑的声音便传了过来。<br>
+“马科斯！”像是她母亲的飞蛾拉住他的爪子。<br>
+“她死了，我以生命为证。”他的眼神依旧看着面容沧桑的先知。<br>
+“你的生命？你的生命怎么能和她相提并论！”<br>
+“我也是神。就是我亲手将她杀死的。”<br>
+“你…！”<br>
+“<em>你</em>应该知道的吧，百年前的那场战争。”白王不再理会马科斯，望着蛾族的先知。<br>
+她回望着白王：“…这是事实。但你又是怎么活下来的？”<br>
+“我放弃了我先前的躯体。我有能力进行转世。”<br>
+先知沉默了，似是在思考什么。<br>
+“如果光芒神真的被他杀死了，我们应该让他伏法——唔！”马科斯的声音又一次打破寂静，这次他母亲狠狠地掐了他一下。“妈你做什么？！”<br>
+“跟我过来！别打扰先知做决定！”不顾他的激烈反抗，他母亲将他生拉硬拽着拖出了神堂。<br>
+白王耐心等待着喊叫声和骚动渐渐平息才继续开口。<br>
+“现在事情已成定局，即便你们能杀死我又有何用？”<br>
+白王丝毫不为所动，不过卢瑞恩还是站得离白王近了些。<br>
+“多为你们自己想想，选一条最好的道路。”<br>
+白王的声音回响在神堂中，空灵的声音让他的“神的气息”更加浓厚了。<br>
+“我早该想到的…从那个时候开始，我就感受不到她了。”终于，先知低头叹了口气。“我以为她只是累了，乏了，毕竟那场战争她也付出了全力。没想到……”<br>
+她的声音淡下去，她闭上眼睛。“我们…一直在向谁祈祷？”先知喃喃道。<br>
+“忘记她。如果你们归顺圣巢，我不会亏待你们。圣巢有你们需要的一切，比如，先进的科技。”白王环视四周，“…或者你们更愿意止步不前？”<br>
+先知抬起头：“我们…我需要好好想一想。先请您们在村庄稍作停留吧。”<br>
+两旁的蛾子听命走向他们，先知又开口道：“圣巢来的苍白之王，请您留步，我还有要事相商。”<br>
+白王点头，转向泽若：“就由你负责其他人的安全。”<br>
+“好的陛下！”泽若愉快地接下任务。<br>
+卢瑞恩望着白王随着一只蛾子走向神堂的一个内门。<br>
+“您想必就是首相卢瑞恩了！”泽若突然跳进卢瑞恩视线里，卢瑞恩有点被吓到，慌忙把焦点调整到对方身上。“…抱歉，我是不是有些太激动了？”他后退一步，礼貌地行了个礼。“我是泽若！陛下派我先到这里做好接应准备，您有什么问题都可以问我！”<br>
+“啊，我…我暂时没有问题——”<br>
+“那您有什么想探索的地方吗？”<br>
+“呃——”<br>
+“没有关系！那您的水晶山峰一日游就由我来安排吧！”<br>
+而卢瑞恩其实更想和其他甲虫一起窝在旅店里。</p>
+
+<p>“唉，马科斯其实是个好小伙，他只是有点烈性子，总是直来直去的…和其他蛾子显得不太一样。”泽若领着卢瑞恩走向山峰另一侧，他甩了甩爪子，“其实私下里我们还是很好的朋友的，瞧着吧，他会为今天发生的不愉快道歉的！…虽然估计是在一星期之后。”嗯，最后一句显得有些多余。<br>
+卢瑞恩其实并没有太多的想法，白王受到言语威胁是稀松平常的事了，现在即便是在圣巢里也不乏这样的无知虫子。<br>
+泽若停在村庄外几公里的一个小石屋旁，敲了敲门，三下，又两下。<br>
+门开了，一颗毛茸茸的粉色脑袋探了出来，她先是把卢瑞恩从头到脚打量了一番，之后才发现站在一边的泽若：“……泽若？你——”<br>
+“来见见娜莉，钦定的继位先知——”<br>
+“不是的！别听他瞎说！”娜莉红起脸，“我…我还没修行到那个境界…”<br>
+“而这位是我们圣巢尊敬的首相卢瑞恩大人。我还要去和士兵们叙叙旧，之后他就交由你来照顾了！”<br>
+“哦…啥？！——咳咳，您好首相大人——你不知道我在修行吗泽若？！”<br>
+“这也是一种修行啊。”泽若认真地回答。<br>
+卢瑞恩忍不住小声插话道：“…如果你不方便，我可以——”<br>
+“没有没有，我很方便的，您先进来吧！”娜莉说着，礼貌地让出了位置，随后又挡住泽若，“没说你。”<br>
+泽若耸耸肩，做了个“只要你同意照顾他就行”的无所谓表情。她狠狠瞪了一眼泽若，转身反手把门关上。<br>
+“抱歉让您见笑了，我们在修行的时候理论上是不能被打扰的。”娜莉示意卢瑞恩坐在石椅上，自己坐到对面。她搓着爪子，不好意思地微笑着。<br>
+“啊没有的事，我才是应该道歉的，打扰你修行…”<br>
+“没事没事…”<br>
+然后话题就终结了。<br>
+蛾子紧张地望着墙角的石瓶，而甲虫也紧张地盯着面前的地板。<br>
+“……其实我也听说你们来这里了，”娜莉出声道，“马科斯他哭着跑到我这里，说着光芒神真的不在了，不会回来了之类的话……其实不能怪他，我们从小就听着光芒神的故事长大的，所有蛾子都对她有着特殊的感情…刚得知她不在了…就免不了会很伤心。”她讲着讲着，逐渐就放松下来。<br>
+“马科斯比任何蛾子都要喜欢光芒神，他很敬佩她慈爱的胸怀，也很向往她的力量。他曾说有朝一日她会重新醒过来，到那时他一定要亲眼见见她。”<br>
+卢瑞恩不敢妄加评论，他继续盯着地板上的花纹看。<br>
+许久，娜莉突然起身：“我带你去一个地方转转吧。”</p>
+
+<p>(（）)</p>
+
+<p>“再往上走就是水晶山峰的山顶了。”娜莉在前面举着光蝇灯笼，她的声音在寂静的山洞里回响着，“我们部族的传统是，飞蛾们的成年礼会在这里举行，在这里，我们会接受光芒神的恩典，获得飞行的能力。”<br>
+“甚至，有的飞蛾被光芒神所选中，还可以拥有穿梭于梦境与现实中的力量。”<br>
+卢瑞恩默默地跟在她后面，他可不像娜莉那般热情好客，正绞尽脑汁地想着接下来的话题。<br>
+“泽若说你是继任先知？”<br>
+“啊，那个啊…其实这现在就是一个徒有其名的位置了。以前，光芒神会自己选择出色的飞蛾进行对话，但现在我们谁都听不见她的声音了…所以我们只能实行继承制。现任的先知是我的奶奶，我母亲在我很小的时候就不在了，于是继承者的责任就落到了我身上。我需要修行梦境法术和必要的决策能力…”她的声音渐渐低下去。<br>
+“…不管她们最后怎么决定，反正我是绝对不会忘记她的。”她说着，左爪下意识地轻轻梳理着绒毛，“…在我很小很小的时候，我在夜里经常怕得睡不着觉，这时候我奶奶就会给我讲故事。她有好多好多故事，我的最爱就是一只小飞蛾的冒险旅程。她在光芒神的帮助下用光驱散了黑暗和噩梦。”她怀念般地微笑着，“我奶奶很会讲故事，她讲的故事超级引人入胜。她说那些都是光芒神在她小时候讲给她听的。光芒神会给每一只怕黑的蛾子讲故事听…”她低下头，“老人们都说她有着慈母般的的声音，足以驱散一切黑暗的耀眼光芒…我也好想亲眼看看她，听她讲故事…”<br>
+…失去了光芒吗…<br>
+卢瑞恩不禁有些同情她们，没有光的日子一定很难过吧。<br>
+“我们部族一直供奉着一把武器，是一把被称作“梦之钉”的武器，它可以砍断梦与现实的界限，不仅可以对现实造成影响，还可以对梦境产生效用。传说能挥动它的战士，便会有拯救世界的力量。”<br>
+“…诶？你们也有骨钉吗？”卢瑞恩突然转向她，他一直以为骨钉是白王的专利。<br>
+娜莉歪了歪头，触须微微摆动着：“我们不常用那种东西。只有那些争强好胜的蛾子才会诉诸武力。我们更崇尚团结一致。据说在光芒神还在回应着我们的祈愿的时候，我们的思想都是相连的。不存在不理解对方的情况，自然也不会发生争斗。大家都和平共处，互相扶持。所以才有了我们族群现在的样子。”<br>
+“据说，那时候我们的思想都交汇在无上的光芒中。”她说着，眼神中充满着向往。<br>
+卢瑞恩不以为然，虽然并没有表现出来。这和白王所崇尚的自由和平不一样。所有虫子都联结在一起，丧失个性，毫无隐私，何谈自由。只不过是高位者摆弄权术的捷径罢了。<br>
+他们快走出山洞了。远远的立着一个高大的石像，像是一只展翅飞翔的飞蛾。<br>
+能判断出它很高大，就是因为即便离得很远，卢瑞恩也能清楚地辨别出它的形状。<br>
+“那就是光芒神，繁育了我们的母亲。”<br>
+娜莉轻声说着，像是怕扰到在某地长眠的神。<br>
+峰顶，寒风凛冽地吹着，耳边几乎只能听见呼啸的风声。<br>
+正如娜莉所说，这里是一个古老的神坛。<br>
+卢瑞恩顶着风，随着娜莉吃力地向前走着，他们摸索着坚固耸立着的石像，它很合时宜的帮了他们一把。<br>
+从边缘向下看，就是无底深渊。<br>
+不，是有底的。现在，圣巢静静守候在山脚下，永不消逝。<br>
+“飞起来，是什么感觉？”卢瑞恩感受着风在耳边呼啸而过，他突然有一种张开双臂的冲动。<br>
+“你说什么？大声一点，这里风太大了！”<br>
+娜莉用爪子压着自己被风吹乱的须发，她有些睁不开眼睛。<br>
+“我说——”卢瑞恩深吸一口气，用尽全力喊道，“你们飞起来的时候——是什么感觉——”<br>
+娜莉咯咯地笑了，飞蛾的笑声如银铃一般好听。<br>
+“也不用——那么大声——啦——”她回复道。<br>
+随后，他们不约而同地笑了。<br>
+卢瑞恩转头望向娜莉，看着她随风摆动的触须。<br>
+“飞行嘛…也就那个样子，在学飞之前一直很憧憬，但会了之后也就是家常便饭啦。你想试试吗？我可以带着你飞。”<br>
+“不了不了，我重得像块石头。”<br>
+“我们的翅膀可大了，我现在只是把它收起来了而已。拉上一个你没问题的。”她顿了一下，“啊，不过我现在不能给你示范，不然一时半会儿你可见不到我了。”<br>
+他们一同望着山脚下的德特茅斯，仔细看还是可以看见点点灯火，就似星辰一般，快要入夜了。<br>
+“…你找到你的伴侣了吗？”娜莉突然问道，但她的视线还是注视着前方。<br>
+“…算是…吧。不过是个单箭头。”卢瑞恩羞涩地笑笑，“你呢？”<br>
+“…好巧，我和你一样。”<br>
+许久，他们又没再说话，只是默默地看着闪烁的灯光。<br>
+“你的白袍子真漂亮。”<br>
+突然听到耳边传来的声音，卢瑞恩偏过头，在光蝇灯笼的映衬下，娜莉身上的鳞粉反着微弱的光。“…啊？唔，这个是我们圣巢皇室的象征。”<br>
+“它好像在发光一样。”<br>
+“也许是因为白色在黑暗里比较显眼吧…”卢瑞恩挠挠头。<br>
+娜莉又看着袍子出了会儿神，最后做了个深呼吸：“咱们回去吧，黑暗里总是有危险的。最近山里又有野兽出没了，我怕我的法术还不够击退它们。”<br>
+“没事，我带了防身的匕首。”卢瑞恩下意识摸向刀柄。<br>
+“你们圣巢的虫子都会战斗吗？”<br>
+“诶？啊不是，我也只是参过军，也不是很擅长刀剑之类的…”<br>
+娜莉眨眨眼睛：“那你岂不是很容易陷入危险？”<br>
+“呃，其实我——”通常都是和陛下一起出行的。<br>
+“咱们先下山吧。”娜莉说着拉起了卢瑞恩的爪子。<br>
+卢瑞恩已经很久没有和别的虫子牵过手了，他滞了一下，强行把这种陌生的感觉压下去。<br>
+回到山脚下的住所的时已经差不多是半夜了，卢瑞恩和娜莉辞别，前脚刚迈开步子却又被对方拉住。<br>
+“你的匕首，借用一下。”<br>
+“诶？”<br>
+“你不相信我吗？”<br>
+“没…没有的事…”<br>
+这种反问真是犯规啊！尤其对方还是一个女孩子…<br>
+卢瑞恩顺从地把匕首取下来递给她。娜莉反复看了看匕首，指尖描摹着刀刃上的纹路。<br>
+许久，她说：“你明天就要走了吧？”<br>
+“按照安排，是的。陛下认为一天的时间足够他…做完他要做的事了。”<br>
+娜莉又轻抚了一下刀柄：“这个我明天还给你。”她抬起头，“晚安，首相大人。<br>
+“从这里通向村庄的路上有光，很安全。”</p>
+
+<p>(（）)</p>
+
+<p>也许飞蛾捕梦网的传说是真的，那些装饰在床头的捕梦网随风转着圈儿，装饰其上的细碎粉水晶闪着迷人的光芒。卢瑞恩一觉醒来，这一夜真的没再做噩梦。<br>
+昨晚回来的时候，泽若和那些士兵喝的酩酊大醉，人事不省地趴在长桌子呼呼大睡。<br>
+卢瑞恩不禁想扶额，酒可是真真害人不浅啊。<br>
+旅舍的大厅里，泽若还在和士兵们玩着石子棋。<br>
+看见卢瑞恩走出来，泽若立刻“蹿”到他跟前：“首相大人！您昨天玩的怎么样？”<br>
+“挺好的…倒是你，你这么年轻，可不能那样喝酒啊。”<br>
+“那不是您们来了嘛！我之前可一直滴酒不沾的！一直忍到现在！”他的语气隐隐流露出孩子气。<br>
+怎么感觉跟撒娇一样，是因为离开家乡太久了，现在见到一个圣巢人就当成家人了吗？卢瑞恩皱起眉：“好好好。下次别再这样了。”<br>
+“嘿嘿。您看这个！是飞蛾村的土特产，捕梦网哦，我给大家都准备了一份！”<br>
+卢瑞恩迟疑着接过在自己眼前晃来晃去的小饰品。或许自己的噩梦终于可以消停一阵了？<br>
+“谢…谢谢…”他猛地意识到了什么，“你自己编的？”<br>
+泽若邪气的一笑：“反正在这里闲着也是闲着——啊…对了，陛下找您有事呢……”他又沮丧起来，整只虫都蔫儿了，“您们是不是要走了？”<br>
+“…我，我去问问看…”他实在受不得这种委屈的表情，让他很容易说错误的话，做错误的决定。于是不等泽若反应过来，他便夺门而出，只留下一脸不知所以然的泽若。</p>
+
+<p>“卢瑞恩。”即便背对着他，白王还是能感觉到卢瑞恩的到来，他转过身。<br>
+“陛下。”<br>
+“这里的事情处理的差不多了，再加上维斯帕决定中立，现在圣巢的威胁只剩下深巢了。”<br>
+他走过来：“我问了你的问题。”<br>
+“…我的问题？”<br>
+“噩梦。”<br>
+“啊…”<br>
+“她说像我这样的神是有能力设下结界的。如果你需要。”<br>
+“不用了陛下，泽若送了我一个捕梦网，那个真的很管用，就不必浪费您的神力了。”<br>
+“是吗。”白王低下头，“那就好。”<br>
+“区区噩梦而已，陛下不用这么为我费心的——”<br>
+“你在那个梦里看到了什么？”<br>
+“呃…我，我…”卢瑞恩犹豫着要不要说出实话，“我看见您了，陛下…”<br>
+白王却一副早有预料的表情，他深叹一口气：“…我不知道我竟然会影响到你的梦境，卢瑞恩。我不属于梦境界，几乎对梦境的力量一无所知…”<br>
+…难道说之前的那场噩梦…<br>
+“我看见你的房间还亮着灯，进去却发现你已经休息了…然后…望着你，我突然回忆起了一些不太好的过去。”<br>
+“等我再回过神的时候，整个房间已经开始结霜了…”这个瞬间，卢瑞恩突然又感到一阵寒意，不知是不是他回想起那个晚上的原因。<br>
+“你说你做了噩梦，我就怕…我担心我的力量会一直残留在你的梦里。”<br>
+“陛下…我没事的，我已经不做噩梦了。”嗯，还是那位像往常一样爱操心的国王。<br>
+白王望着卢瑞恩的眼睛，许久才点头：“这样就好。再等她们的先知宣布我们的条约之后，我们就可以离开了。”</p>
+
+<p>神堂里挤满了蛾子。她们的男女比例失衡很严重，明显的阴盛阳衰，可能这也是她们便好安静的原因之一。<br>
+“…我们思索再三，最终达成了共识。光芒神已经很久没有回应我们的呼唤了，也许确如你所说，她已经消逝在战争中…这样的话，圣巢的苍白之王，如果你的确为神…我们愿意视你为我们新的光芒神，这里会建起你的神祠，水晶会为你提供力量，山峰便是圣巢的王冠。我们…只祈求一位能真正庇佑我们的神明。”先知说完，向白王恭敬地颔首，退到了一边。<br>
+“而我，我会给予你们圣巢的一切。”白王稳步走到高台中央，俯视着蛾子们。<br>
+“释放那些奴隶吧。我会用先进的科技顶替他们。你们会获得更高的效率——如果你们真的还需要那些水晶的话。”<br>
+“另外，你们一族中如果有想要到圣巢附近定居的话，我有一个很合适工作可以安排给你们。梦境领域同时也是虫子们死亡之后的精神归宿。你们可以帮助我管理安息之地的亡魂们，让他们能够安眠。你们归顺了圣巢，就是我的子民。无论你们想要做什么，你们都还是自由的，这一切都只有一个条件：不要与圣巢为敌。”</p>
+
+<p>“卢瑞恩！”正在卢瑞恩收拾妥当，准备和白王汇合时，一个轻柔的声音喊出了他的名字。<br>
+是娜莉，她今天打扮得很朴素，似乎出门有些匆忙。<br>
+“你的匕首。”娜莉捧着一个粉色布包递给他。<br>
+“…啊？”卢瑞恩有点发愣。他差点都把这事忘了。<br>
+“你不打开看看吗？”<br>
+匕首比原先更加光亮了，显然是仔细打磨过。不过最引人瞩目的是，匕首的柄上镶嵌着一颗大大的菱形水晶。<br>
+“这个是从水晶山峰里开采出来的水晶。我们飞蛾一族相信水晶里蕴含着巨大的魔力，它是光芒神赐予我们的恩典。我奶奶说，每当我们持着水晶祷告的时候，总是会觉得光芒神就在我们身边。”娜莉认真地解释着，“如果她还在的话…她能像国王那样转世的话，她一定会认出这个水晶，在你有危险的时候来保护你的！”<br>
+卢瑞恩望着那颗水晶，又望望娜莉天真的笑脸，突然觉得自己似乎忽略了什么重要的事：“…下次你到圣巢，大可以来找我。我…我对圣巢的风景名胜很熟悉的…对了，我可以带你去听圣巢最有名的歌姬玛丽莎的表演。她可是有着皇室授予的荣誉，还有——”<br>
+“好啦好啦，你的心意我领啦！等我修行完了之后，一定去找你！约好了哦！”<br>
+“…其实我觉得你的声音也很好听。”<br>
+“嗯？…嗯…谢，谢谢啦…”她一惊，又不知为何低下头去，声音越来越小。<br>
+“…诶对了，这两天我怎么没看见你的心上人呢？”<br>
+“这个嘛，下次你再来的时候，我就把他介绍给你！”娜莉调皮地朝他眨了眨眼睛。</p>
+
+<p>TBC</p>
+
+<p>—————</p>
+
+<p>我终于！终于把这章写完了哈哈哈哈哈哈哈！<br>
+（然而又快一点了）</p>
+
+<p><del>设定被Game Theory 翻牌子了（并不），可把我牛皮坏了∠( ᐛ 」∠)＿（滚（礼貌））</del><br>
+<del>虽然gt似乎没有决定性的证据（悲怆）</del><br>
+<del>我知道为何大家都不喜欢🌝拆CP现场🌚</del><br>
+<del>哈哈哈哈来吧采访一下团长，撩了半天以为是小鲜肉结果发现是老国王的感觉如何🤪（被拖出去打死）</del></p>
+
+<p>～另外以下是“你好夏洛特”里的<em>伪神梗</em>⬇️～<br>
+“…你说你原来的躯壳会枯萎，然后你会再次成为神！<br>
+但是不管去哪里找，我都找不到你！…”<br>
+～感觉挺适合陛下的，考虑开文（点头）～</p>
+
+<p>—————</p>
+
+<h2 id="toc_12">～12～</h2>
+
+<p><em>（有一个设定我改了，这章会涉及到_(:з」∠)_就是在开篇的时候我不是说，陛下的身体（外骨骼）是黑色的嘛，我改成白色了_(:з」∠)_）</em><br>
+<em>另外，这章好长啊我的妈_(:з」∠)_我从93%写到19%都没有写完_(:з」∠)_</em><br>
+<em>一个漏洞，我先写在前面_(:з」∠)_可能之前也出现了这个问题我没有意识到_(:з」∠)_…语言！啊啊啊全世界都会说圣巢语怎么样！！！或者卢瑞恩和陛下见多识广！他们会多国语言也可以！！！啊啊我好绝望！我要扔掉逻辑！我好累啊我只是想看甜甜的陛下啊！</em><br>
+<em>呃…我写着写着突然觉得…我可能得贴个警告…暴力…血腥？要素请注意一下哈_(:з」∠)_我这个人把握不住度……小朋友们意识到哪里不对就请不要再继续了哈_(:з」∠)_</em><br>
+<em>woc真的好长啊我的妈赶上三章的长度了我的爸</em><br>
+<em>以后的章节不会这么长了，我保证（虫虫起誓）</em></p>
+
+<p>——————</p>
+
+<p>“…我不喜欢这里。有什么东西让我感觉很压抑。”<br>
+白王环视四周，他的光芒随着他的动作留下了一串微弱的残影。<br>
+“——就像一片迷雾笼罩一般。”<br>
+卢瑞恩顺着白王的视线看过去，目光所及之处都是泛着银光的丝线。<br>
+“谈完正事就立即启程返回吧。”白王加快了脚步。<br>
+…嗯，不是个好兆头。<br>
+看来这次深巢之行注定坎坷。卢瑞恩悲催地想。白王本来想直接发动战争，因为深巢明确表态，自己绝不会服从白王的统治，字里行间充满着挑衅。不过在白后和卢瑞恩的一致反对下，他勉强同意先带上部分军队去参加一次谈判，不过如果他发现谈判破裂，就会当场开战。到时还可以“擒贼先擒王”，将他们一军，一般来讲，国王死了，国家就死了。当时卢瑞恩和白后面面相觑，白后最后无声地叹了口气，表示一切都按照白王的意思来。君主，既要像一位圣人，又不能抛下野兽的本性。既要像统领一般威武雄壮，又要像小人一般奸诈阴险。<br>
+卢瑞恩是不相信的，白王从来没有欺骗过他。<br>
+螳螂们负责守卫通往深巢的道路，即便卢瑞恩有点不想承认，不过这的确是真的：这个荣耀的部落比圣巢自己的守卫还要尽职尽责。德莱娅和泽默带领着护卫队紧随白王身后，本以为路上会少不了打斗，而这两天路途上却出奇地平静。不出意外的话，这次任务完成之后，德莱娅就可以正式加入骑士团了。<br>
+走过几个用丝捆扎起来的牌匾之后，他们看到了守候在路口的几个身影。<br>
+“您好，来自圣巢的贵客。我们已经恭候多时了。”<br>
+卢瑞恩上前几步，刚想替白王客套几句，白王却主动点头示意：“带路吧。”<br>
+卢瑞恩眨眨眼睛，没说什么。<br>
+随着他们转身将要领路，卢瑞恩突然发现在他们的衣摆下方，浸染着一些隐约的橙色污渍。<br>
+“你们这是…什么意思？”卢瑞恩皱起眉，盯着他们的下摆。<br>
+“嗯？”被问到时他向下方看去，“…啊…这些只是——”<br>
+“只是野兽的血而已。您要知道深巢不像圣巢，并不算是个安全的地方。”另一个贵族接话道。他明明回答的是卢瑞恩的问题，目光却一直停留在白王身上，似乎很享受他的光芒一样。他那种渴求着什么的眼神让卢瑞恩觉得很不舒服。他不由得偏转了视线。<br>
+远处的一角破碎的红色引起了他的注意，他正想询问，却正好看到白王从他旁边擦身而过。<br>
+他似乎没有注意到那个异常。“陛下，那边——”他指向那块岩石，但当他转过头看时，却什么也没有了。<br>
+“…怎么了？”<br>
+“…刚…刚刚有——”<br>
+“野兽在到处乱跑，不要紧的。”贵族打断他。<br>
+“那不是野兽——”卢瑞恩反驳道。<br>
+白王轻叹一声：“不用解释了，你们先带路吧。”<br>
+他们继续向前走了一段路程。不知道是不是卢瑞恩的错觉，他总觉得周围变得越来越荒凉。<br>
+深巢真的落后到这种地步吗？<br>
+白王一边走着一边时不时看着脚下，躲过一些尖锐的岩石。不过不管他怎么努力，他的袍角也已经脏乱得不成样子。这里真是洁癖和强迫症的地狱。<br>
+终于走到了一个结满蛛丝的岩房外面，这座建筑明显年久失修，看上去四处漏风。贵族们停下了脚步。看来这就是他们的谈判地了。<br>
+卢瑞恩不禁替白王捏了把汗，他偷偷看向白王，对方的光芒明显透露着不快。<br>
+贵族转身：“您看您的军队…”他的眼神飘忽不定，一会儿看看满面杀意的德莱娅，一会儿又转回来看着白王。<br>
+“我知道了。”他转过身，“你们先在外面驻军吧，等我命令。”<br>
+德莱娅和泽默领命带着部队离开了，贵族又盯着卢瑞恩看。<br>
+“这位大人是…？”<br>
+“他是我的军师。有什么问题吗。”<br>
+几个贵族们互相交换了一下眼神：“没问题，当然没问题。这位大人也要一起吗？”<br>
+“当然要。”白王面无表情的回答。<br>
+“这……”<br>
+“怎么，”白王提高声音，“你们没有备好足够的桌椅？”<br>
+“呃…当然不是——”<br>
+“我们只是——”<br>
+“我们只是为了安全起见，大人。还请您见谅。”<br>
+太可疑了，这三个贵族简直像是在临场表演一般。<br>
+“你们——”卢瑞恩刚想质疑他们，就被从石屋里走出的一个贵族打断了。<br>
+“哎呀，来自圣巢的贵客，有失远迎，有失远迎啊！快请进，请进！”<br>
+三个贵族似乎是看到救星一般连忙附和着把卢瑞恩连推带拉地“请”进了石屋。<br>
+石屋里面和外表一样简陋，一张长石桌，大约十把石椅，全都布满蛛网。屋子最里面是一个王座一样的座椅，同样破烂不堪。<br>
+卢瑞恩转头看向白王，白王正不失礼节地拒绝着贵族们“搀扶”的好意——不过他眼神里的鄙夷可瞒不住卢瑞恩。<br>
+卢瑞恩也学着白王“不失礼节”地挣脱开贵族的爪子，虽然有些失败。他想走到白王旁边，却被那个后出现的贵族挡住了去路。<br>
+“我有话和陛下说。”卢瑞恩有些气恼地对挡路的贵族说。<br>
+“当然，当然。你们都是来自圣巢的朋友，有朋自远方来，不亦乐乎？”简直是对牛弹琴。<br>
+卢瑞恩想绕开这个贵族，但另外两个贵族又凑了过来。<br>
+“陛下！”卢瑞恩喊道，白王听见他的声音看过来，那些贵族这才作罢，有说有笑地引他到桌边，距离白王好几张椅子，还隔着石桌。<br>
+卢瑞恩实在是礼貌不起来了，隔着桌子大喊：“陛下，我觉得这里——”<br>
+“实在抱歉，我们深巢因为还住着一些蜘蛛，所以这里显得很脏乱。不过您要知道，在深巢的传统观念里，房间越乱说明越重视自己的客人。”<br>
+放——卢瑞恩瞬间就想骂街，但他忍住了。<br>
+白王心不在焉地点点头。<br>
+“不是，我——”卢瑞恩真的是憋屈得不行。<br>
+“所以让您感到不适真的很抱歉。”那个贵族向他抛来一个友好的微笑。<br>
+“——啊啊啊我受够了！！”卢瑞恩恼怒地一拍桌子，登时感到手生疼。“陛下，这些虫子有问题咳咳咳——”随即这一下扬起的灰让在场所有虫子都不住掩面咳嗽起来。<br>
+“大…大人，咳咳—您看，咱有话—咳咳咳—好好说嘛—咳咳——”<br>
+“卢瑞恩，咳——我们先入乡随俗，咳咳——”<br>
+……<br>
+……<br>
+……<br>
+好不容易等尘埃落定，白王弹弹袖子和袍子，又恢复了往日的优雅姿态：“先不说你们的风俗习惯，你们之前的表现确实很可疑，我给你们一分钟解释的时间。”<br>
+贵族们不约而同的望向那个似乎是“最管事”的贵族。<br>
+“呃——”他顿了一下，“我虽然不知道之前发生了什么，但是我的这些朋友们，“他示意了其他的贵族们，“他们还是第一次到离家乡这么远的地方来迎接您。我有没有提过我们选择这里是专门为您的方便准备的？其实深巢的国土还要再往里面走上很久。您看，一路上又有野兽又有碎岩，一不小心就会命丧黄泉——”<br>
+“我不是质疑这个，”卢瑞恩尖锐地指出，“为什么你们的…行为那么可疑？好像在掩饰什么一样。”<br>
+那个贵族叹口气：“您这么想我们真的很抱歉。我们只是想让您们对深巢留一个好印象。您知道，我们因为和野兽同居而遭受了不少偏见。的确，这里有野兽，有危险，稍不住意就会丢掉性命…但是我们真的不想让我们的客人们也觉得很危险……”<br>
+他的声音渐渐小了下去。<br>
+卢瑞恩被说的无言以对，他的解释合乎情理，但是……他仔细回忆着之前的经过，总感觉有点不对劲：“……不对吧，你们之前的表现——”<br>
+“如果你们有任何非分之想，我会毫不犹豫地进军深巢。”白王严肃的声音响起，卢瑞恩抬头看过去，白王回了他一个坚定的眼神。<br>
+是啊，他在怕什么？陛下可是神啊。卢瑞恩点点头，表示理解了。<br>
+“当然，当然，这是您的权力。”那个贵族连声附和。<br>
+其他贵族们一看误会终于“解除”了，立刻笑盈盈地凑到他们跟前，随后便诚恳地邀请他们入座。<br>
+“您可以先坐下休息，我们稍后会为您奉上餐点。”一个贵族殷切地示意白王坐下。<br>
+白王“礼貌”地侧身避开了向他伸过来的爪子，迟疑着把爪子放在椅子把手上——为了不让对方再次试着推他。<br>
+“我需要见一见你们的统治者——”<br>
+“当然，当然，我们稍后会为您引荐。”<br>
+“您们长途跋涉，想必十分辛苦吧？请坐，请坐。”<br>
+“我们需要现在就——”<br>
+卢瑞恩的话还没说完，就被一把按在了椅子上。石椅子上似乎有什么线料，很软，还算有那么一点点舒服。<br>
+“现在我们的国王陛下还有要务在身，还不能见客，实在抱歉。还请您们先在这里休息一夜，明日再做打算吧？”<br>
+“不行。我的护卫队还在——”<br>
+“您放心，我们会为他们安排好去处的。餐点马上就会上桌，您还是先坐下休息吧？”<br>
+白王犹疑着和卢瑞恩交换了一下眼神。<br>
+还是不对劲。<br>
+对待异族的虫子，他们实在是热情得异常。<br>
+“你们怎么还让圣巢尊贵的国王站着？还不赶快服侍他入座？”<br>
+其中一个深巢贵族冲着一边站着的两个侍从说道。<br>
+“我不用…”白王见状下意识地抽回了扶在椅把上的爪子。<br>
+卢瑞恩注意到，随着白王的动作，有几根细丝在空中飘落下来，泛着银光。<br>
+他突然意识到了什么。<br>
+为什么他们那么想要我们坐下？<br>
+卢瑞恩想着，伸出爪子扶住椅把，想借力站起身。<br>
+但是他没有成功。<br>
+他有些慌了，扭动了几下身子，但是身体好像紧紧和椅子连在一起一般，纹丝不动。<br>
+“陛下！这是陷——”卢瑞恩话还没喊完，就感觉脑后一阵剧烈的疼痛，在黑暗充满他的视野之前，他只来得及看见白王把头转向了自己这边，眼神里仍满是疑惑不解。</p>
+
+<p>(（）)</p>
+
+<p>卢瑞恩被一阵窸窣的咔哒声惊醒了。<br>
+听上去像是尖足的小虫在岩壁上行走的声音。<br>
+卢瑞恩睁开眼睛，大脑一片空白。<br>
+…发生了什么？<br>
+脑后传来隐隐的疼痛。<br>
+他下意识地想向那里摸去，但是他怎么也动弹不得。<br>
+他皱了皱眉，奋力挣扎了几下，却徒劳无功。<br>
+他感到自己的身体被什么东西绑住了，还有一种失重感。<br>
+随着视力渐渐适应黑暗的环境，他猛然发现自己被悬空吊在了一个洞穴的顶部。<br>
+他惊叫了一声，声音回响在空空的洞穴中。<br>
+他这才想起来自己身边似乎少了什么。<br>
+“…陛下！”<br>
+他大喊道，但没有回应。<br>
+之前发生的事情潮水般涌回大脑，他强迫自己冷静下来思考。<br>
+陛下肯定是出事了。<br>
+以他的力量，如果可以当场击退那些贵族，他不可能把他扔在那里不管。<br>
+这就说明陛下还被困在这里。<br>
+那么自己就要想办法找到他，然后一起离开。<br>
+他不停地扭动身体，想要把这个蛛丝编成的茧搅得松动一些，这样他就可以用防身匕首把茧划破了。<br>
+不过，他突然感觉到有什么庞大的东西在向他靠近。<br>
+他立刻停下了动作。<br>
+一片黑暗中，六只眼睛接连张开，闪烁着骇人的光芒。<br>
+卢瑞恩只觉得自己像是一只待宰的羔羊一般，在这种侵略性的凝视下无处可逃。<br>
+他屏住了呼吸，但在意识到这并不能骗过那只怪物之后，便改变策略，开始更用力地想把茧撕破。<br>
+那只怪物并没有因此被惊扰到，它迈着八条长腿，逐渐逼近自己似乎已经唾手可得的猎物。<br>
+幸运的是，卢瑞恩的右爪终于挣脱了束缚，他努力伸向别在腰带上的匕首。匕首上的水晶闪了一下光。<br>
+这时，像是才意识到了什么似的，怪物突然嘶吼一声向他扑过来。<br>
+与此同时，卢瑞恩抓到了自己的匕首。处于自卫的本能，他拼死划向怪物的脑袋。他只感觉有粘稠的液体溅了自己一身，随后是怪物的怒吼。<br>
+被激怒的怪物伸出了锐利的长爪，猛地刺向了他。<br>
+卢瑞恩用匕首一挡——粉色的水晶闪烁了一下，怪物惊叫一声，爪子滑向了另一侧，戳断了原本固定住卢瑞恩那颗茧的几根蛛丝。<br>
+一阵天旋地转后，卢瑞恩重重地摔在了地上。茧碎裂成了好几个碎块，拜它所赐，他没有摔死。怪物的吼叫声在他脑子里扭曲成了一种不可名状的声响。他今晚肯定又要做噩梦了——如果有机会睡觉的话。<br>
+先落地的左臂火辣辣地疼痛——左臂很可能骨折了。<br>
+头顶传来一声嘶吼，左臂的疼痛感突然没那么明显了。他立刻翻身爬起，冲到最近的一块巨石后面。他刚稳住身形，就听见前方一阵重物掉落的巨大声响，地面随之一颤。那怪物嘶吼一声，长腿四处刺探着，想要找回它应得的大餐——或许以他的体型，零嘴。它的大眼睛在黑暗里闪着嗜血的光芒。卢瑞恩缩在岩石背后，大气不敢出。怪物又磨蹭了一会儿，转了几个角度，最后愤懑地长啸一声，又原路爬回了洞穴顶上。<br>
+卢瑞恩依旧一动都不敢动。那怪物能在黑暗里看见猎物。<br>
+他又在黑暗里等了好久好久，才敢慢慢探出身子。<br>
+头上没有动静。<br>
+他慢慢爬出藏身之处，贴着岩壁走向洞穴的深处。<br>
+没有动静。<br>
+他撒开腿跑了起来，一路磕磕绊绊不知跑了多久，直到他感到胸口一阵火烧。他停了下来，撑着石壁大口喘气。<br>
+他看看四周，漆黑一片。是噩梦中才有的那种漆黑。他一直睡在白宫温柔的白光里，已经快要忘记这种危险的黑暗了。他做了个吞咽的动作，举起匕首，上面的粉色水晶闪着微光。左臂的疼痛突然加剧，他死死咬着牙才没让自己哼出声来。冷汗不断地从他头上流下来。<br>
+不管怎样，他要先找到白王。</p>
+
+<p>(（）)</p>
+
+<p>“哦天呐——哦天呐。”卢瑞恩借着水晶的光，摸索着在伸手不见五指的洞穴里艰难挪动着。淡粉色的光芒反而给这个洞穴的氛围更添一层恐惧。他感到那些尖爪拨动的瘆人声音就在他的耳边，而前方的那个转角就会冷不防冲出来一只巨型野兽，然后——<br>
+他从来没有这么渴望过光。<br>
+“陛下…陛下…求求您…”他喃喃祈祷着。<br>
+为了那份光，他宁愿付出一切。<br>
+在黑暗里，他所有的感觉变得异常敏锐。<br>
+爪尖碰到的每一处凸起，他都会想象成恐怖的东西，一次比一次更加恐怖。<br>
+左臂的疼痛让他保持清醒，不然他真有可能在黑暗中因为疲惫而昏睡过去。除了左臂，他身上每一处都火烧一般疼，不过这让他更加习惯于忍受痛苦，痛感反而减轻了很多。<br>
+他开始胡思乱想。<br>
+那不像陛下日常的状态。<br>
+他开始回忆起他们踏足深巢的每一步。<br>
+平时的他迅捷、敏感，不容得任何威胁靠近自己，靠近圣巢。<br>
+到底是怎么了？为什么事情会变成这样？<br>
+他又想起来白王刚来到这里时的那句话。<br>
+这是深巢早就计划好的吗？<br>
+十几只小蜘蛛凑到他四周，晃着爪子随着他忽快忽慢地爬动，而它们的数量还在增加。它们可能在警惕着水晶的光，但这也只是一个猜测而已。任何时候它们都有可能一哄而上，把他吃得只剩骨头。<br>
+卢瑞恩时不时用匕首威胁着向四周划出，一开始那些小蜘蛛还会躲得远远的，但重复多次之后，它们就丝毫不害怕了。<br>
+卢瑞恩握紧匕首，现在他要时刻准备战斗了。<br>
+等等…远处那闪烁着的是光吗？<br>
+他立刻加快摸行的速度，爬到近前才发现只是一个透着光芒的缝隙。<br>
+幸运的是，那些蜘蛛只是远远地躲在岩石背后望着他，似乎很怕光的样子。<br>
+卢瑞恩把身子贴在缝隙旁边，努力挥动着匕首。蜘蛛们向后退缩了一步，又停下来盯着他。卢瑞恩一边警惕地看着它们的动作，一边又在四周摸索着。他摸到了一个石块似的东西——从手感判断，不像普通的石块，但他顾不得那么多了——便向使劲蜘蛛们扔过去。石块打在蜘蛛们隐蔽的岩石前面，发出一声脆响。<br>
+蜘蛛们一点反应都没有，显然并没有被他吓到。但似乎是看他准备抓住那束救命光芒不放了，便纷纷懒洋洋地迈动长腿离开了。<br>
+卢瑞恩看着最后一个黑影爬过那个转角，才如释重负地舒了口气。<br>
+“一位神，真是稀客啊。”<br>
+突然，一个听上去很年轻的声音从缝隙里传了出来，卢瑞恩转过头警惕地盯着缝隙看，随后迟疑着凑到它前面。这不是圣巢的语言，是深巢的。他在来之前和白王一起闭门学习了一个星期。准确的说，白王七个小时，他七天。<br>
+“…我的部队已经在外面驻军，即便没有我的命令，他们也会进攻深巢。你要是胆敢碰我一下…”<br>
+是陛下的声音！卢瑞恩立刻激动地想哭。他拼命调整着视角，想找到一个能看见他的角度。<br>
+先映入他眼帘的是一个巨大的石柱，随后他看见了白王——被丝线重重缠绕着，绑在那个石柱上。<br>
+怎么回事？卢瑞恩一瞬间有些发懵。为什么陛下不反抗？他是神啊？为什么——<br>
+他还是不能看完全整个房间。卢瑞恩用匕首插进缝隙，用力凿动着。<br>
+缝隙变得更大了一些，几块小碎石落了下去，发出细小的声音。<br>
+卢瑞恩看见下方的守卫听到声音，反射性抽出配剑，低头注视着那些碎石。他立刻抽回匕首，俯下身子。<br>
+“怎么了？”他听见年轻的声音问道。<br>
+“没事，首领大人…应该只是野兽吧。”<br>
+守卫的声音听上去很遥远，不是向着他的方向。卢瑞恩这才敢重新抬起头。<br>
+那个被称作首领大人的虫子衣着华丽，但是他坐着的那个石制王座却歪歪扭扭，一点都没有精雕细琢。<br>
+“区区野兽，下次就别这么大惊小怪的。”他又转向白王的方向，恢复了笑容，“我当然不敢碰你。”他继续说着，向远处招了招手。<br>
+一个贵族走了过来，捧着一个瓦罐。<br>
+卢瑞恩不能怎么看清楚罐子里的东西，只觉得那里面黑漆漆的一片。<br>
+“…这是什——！”白王正皱眉看着那个瓦罐，对方突然把爪子伸了进去，抓出来一团黑色的粘稠的流体。<br>
+他本能地向后挣扎了一下。<br>
+首领饶有兴致地看着他的慌张反应：“…看来他说得没错呢，这应该就是你的克星吧——“光”们不共戴天的仇敌？”他说着，把还在向下滴落的流质举向白王的方向。<br>
+似乎是感受到了白王的光芒，刚刚如一滩死水般的黑色物质突然蠕动起来，缓缓抽出了触须。<br>
+“这是一只古怪的虫子进献给我的。你知道我也很喜欢收集一些…很刺激的东西。”<br>
+“…”白王的表情凝重起来，“…你要干什么。”<br>
+“你知道我要的是什么。只要你把你的神位给我，我保证让你——”<br>
+“你休想。”<br>
+首领吸了口气：“…看来我需要让你了解一下你现在的处境，亲爱的国王——敬爱的神。”<br>
+他随手把蠕动着伸向白王方向的黑色物体放进了一旁的空瓶子里，随后拿着它走向了白王。<br>
+“…我的军师呢？”白王似乎并没有被恐吓住，他狠狠地盯着逐渐走近的首领。<br>
+卢瑞恩内心颤了一下。<br>
+“……啊，你是说你的那个可爱的小仆人。”<br>
+在离白王几步远的地方站定，他转头望向站在一边的守卫，声音慵懒随意。<br>
+“你们怎么处理的来着？”<br>
+“…报告大人，他现在估计…已经成了野兽的点心了。”<br>
+他笑了，回过头看着白王。<br>
+“…你们，所有人，会为此付出代价的。”<br>
+白王的声音有一丝颤抖。<br>
+“是啊，如果你还有闲心的话。”<br>
+他举起手里的小瓶子，里面的黑色物质只是将近覆盖住瓶底，他稍稍晃了晃它：“这个量，你应该能受得住吧？毕竟你是神嘛。”<br>
+白王的呼吸开始紊乱起来：“……你知道自己在做什么吗！”<br>
+“当然，我在实现我的梦想。”<br>
+“即便获得了我的力量，你也不可能成为神！”<br>
+“我们可以试一试。”<br>
+他笑吟吟地把小瓶子递给身旁的一个贵族。<br>
+贵族恭敬地接过瓶子，转身朝着白王走了过去。<br>
+他离白王越近，瓶子里的物质就越发活跃起来，它的触须不断叩击着瓶壁。<br>
+“……住手…！”白王咬着牙低沉地说道。<br>
+“如果我住手了，你会乖乖听话吗？”<br>
+“…你不如直接…杀了我!”<br>
+“那谁知道你死之后你的神力还在不在？”<br>
+“你这样做根本就没有任何意义！”<br>
+白王仍在徒劳地挣扎着。<br>
+“至少能让国王陛下明白自己现在的身份。”<br>
+那个贵族把爪子伸向了白王——<br>
+卢瑞恩没有继续看下去，他偏过头。是恐惧吗？还是愧疚？或者都有？他转过身背靠在岩壁上。他需要思考，他需要一个计划，能救出陛下的计划。<br>
+他听到了白王压抑着的痛苦声音，他紧闭双眼，恨不得立刻打破岩壁冲下去。<br>
+不，静下心来卢瑞恩，你可是军师啊，想一个实际一点的营救计划。<br>
+他现在左臂骨折，使不上力，他们的人还多，硬碰硬肯定不行。加上现在自己的处境也不妙，那些野兽——他看了看岩石那边，暂时还没有动静——离开这束光就意味着它们会再次盯上自己。下面这个房间似乎是有入口的，只有远处角落里那一个，被森严守卫着。即便能躲过野兽们的追击，他也不一定能找到那个入口，更不要提对付守卫了。在黑暗中的每一刻都像是提前透支自己的生命一样，万一他离开这里，想再度找回来避难也会是个难题，而他最不希望的就是连自己都命丧黄泉……这样陛下就真的孤立无援了。<br>
+现在怎么办？快想办法啊卢瑞恩！<br>
+如果他一开始就发现不对就好了。如果他一开始就劝说陛下把骑士们带进来就好了。如果最开始的开始——<br>
+不行不行，现在想这些还有什么意义？<br>
+不要消极对待，想想自己现在有什么优势？他们不知道他还活着，他们以为陛下孤立无援，他们以为自己占尽优势。他们会优先判断自己的行为是野兽所为，从而放松警惕——就像刚刚那样…还有…<br>
+卢瑞恩看了看匕首上的水晶。那些野兽似乎害怕这块水晶。<br>
+在这两个优势的基础上，自己的目标是什么？救出陛下。陛下的力量现在不知为何被束缚住了，这就是为什么他没有反抗。也许是因为那些丝线，也许是因为首领说的那滩诡异物质。无论如何，只要他帮助陛下摆脱那些东西，陛下就有可能——不，他一定会恢复力量，那时，凭借陛下的力量，绝对可以对付这些草芥，他们就可以杀出重围，和骑士们汇合。<br>
+再仔细想想，德莱娅和泽默也是有主见的虫子，她们不可能坐以待毙。陛下多天未归，她们一定也会向深巢施加压力……<br>
+他突然想到了那角“碎布”。<br>
+碎布……如果真的是碎布的话…的确，深巢虽然很排斥白王的统治，但是现在的圣巢已经不是当初那个襁褓中的婴儿了，他们想必不会孤注一掷地发动战争。即便他们把陛下控制住了，白后也不会放过他们。<br>
+…白后。卢瑞恩想起她不由得打了个冷颤，她其实远不止是一位贤惠的王后。白后完全有着独当一面的能力，他看得出来，她不怎么干涉朝政只是因为她爱着白王。这位公私分明的王后在陪同白王巡游的时候温柔体贴，把圣巢的虫子们当作自己的孩子一般，但一旦白王有了危险…<br>
+卢瑞恩见到过白后认真起来的样子。他<em>不敢</em>再见到第二回。她要是知道陛下被这么对待——<br>
+这一霎那他突然有点同情深巢。<br>
+一个真正的统治者不可能无视这些危险而置自己的国家于水火之中，这些鼠目寸光的虫子一定是出于私心而这么做的，他们和深巢的官方权威并无关联。也就是说，深巢真正的统治者也许根本就不是他们！<br>
+这样一切都说得通了，这些虫子伪装成贵族的样子，来了招偷梁换柱。而原本应在入口迎接他们的真正的深巢贵族们，多半也被他们喂了野兽了。真正的统治者用不了多久也会发现问题，到时必定也会协助骑士们一起对付这帮匪徒。<br>
+他突然觉得自己的底气越来越足。好像现在腹背受敌的不是自己和白王，而是这些“伪皇室成员”。<br>
+……就是这样卢瑞恩，战略分析也不是很难嘛。眼下他们还不会对陛下造成性命威胁（如果有的话他拼死也会从这个缝里挤进去），因为他们想要…陛下的神位？哈哈。而如果情况危急，他就会是陛下的最后一道屏障。<br>
+这个房间像是这帮匪徒的老巢。所有的消息都会在这里向首领汇报——这也意味着向他“汇报”。只要他能等到援兵的消息，那时他就可以想办法逃出这个“迷宫”——我还有这把匕首，他默默给自己鼓劲——带他们找到陛下。或者，听闻大部队来袭，这些胆小鬼就会自乱阵脚，那时他就有机会冲进去救出陛下。<br>
+…如果援兵没有来，而匪徒们又失去了耐心…好吧，那他可就要以身殉国了。<br>
+至少，他要倒在陛下前面。<br>
+所以眼下的对策：静观其变。<br>
+“我相信现在我们可以静下心来好好谈谈了吧？”首领的声音又传了出来。说实话，卢瑞恩觉得这个年轻声音对于一个匪徒首领来说，显得很…不搭调。他不像个山大王，而更像是一个娇生惯养的贵族子弟。<br>
+……等等…陛下怎么没有回应…！<br>
+所有的一切都是建立在陛下还活着的前提下的啊！卢瑞恩立刻又贴到了缝隙上。<br>
+即便距离很远，他还是能看到白王弯着身子，不停颤抖着。如果没有丝线拽住他，他估计会直接扑倒在地上。卢瑞恩看到几滴黑色的稠质从他洁白的面具上滑落。<br>
+这些暴徒！<br>
+卢瑞恩握紧匕首的爪子因为愤怒而颤动着。难道他只能干看着他们亵渎他的神明吗？<br>
+他感到自己的情感渐渐压过了理智。<br>
+不行，卢瑞恩，这样不行，要忍耐。他看着白王颤抖的身形，“弱不禁风”这个形容词突然从脑海中冒出，他狠狠地把它压了回去。<br>
+要是现在冲进去，自己绝对活不成。刚刚说什么来着，自己是他的最后一道防线。自己死了的话，他们很有可能在大部队赶到之前就为了泄愤而把陛下杀死。<br>
+…神会死吗？<br>
+现在不是想这个的时候！他猛地摇头。<br>
+“怎么样我亲爱的国王陛下，您是不是觉得可以再考虑考虑我刚刚的提议？”<br>
+“……不…可…能…”白王咬着牙，他的声音沙哑微弱。<br>
+首领很遗憾似地“啧”了一声，朝捧着瓦罐的贵族摆摆手。<br>
+那个贵族担忧地望着首领：“大人——”<br>
+“嗯？”<br>
+“这…全部都要吗？”<br>
+首领露出一个危险的笑容：“你觉得呢？”他说这句话的时候，看向的却是白王。<br>
+卢瑞恩呼吸变得急促起来。他们要干什么？<br>
+贵族望望瓦罐，又望望首领，最后走向了白王。<br>
+白王已经没有挣扎的力气了，他一动不动地看着贵族走近——<br>
+突然，从门口冲进来一个仆从穿着的虫子。他一进来就直接跪在了首领面前：“圣巢那边发现他们的国王一直没有回去，已经越过深巢边境与我们的士兵和野兽们发生交锋了，他们想要夺回他们的国王——”<br>
+捧着瓦罐的贵族停下脚步，转过头看着他们。<br>
+“我会把国王还给他们的，”他不耐烦地打断仆从的话，无聊地把玩着蛛丝制的绸缎，“在他把神位交给我之后。”<br>
+“…可是女王陛下派人传来口信——”<br>
+“等到我成了神，不只是深巢，整个世界都会是我的囊中之物！她赫拉算什么东西？”他猛地把绸缎摔在地上，“如果不是因为老头子那个愚蠢的决定，我怎么可能娶一只野兽！”<br>
+“说什么为了深巢的未来，必须与野兽结盟……可笑！我会重振我光辉显赫的家族，我会把那些螳螂打得落花流水！”<br>
+那个仆从伏在地上大气不敢出，等到首领的怒气渐消，房间里只剩他粗重的喘息声的时候，仆从才敢飞快地向上瞟了一眼，结结巴巴地继续说：“女…女王陛下说她已经在考虑和圣巢结成统一战线了…这件事…本来就是我们有错在先…她只是碍于您和她的情面，才勉强抵挡一阵…要…要是您还执迷不悟——”<br>
+“你说什么！”首领压低身子，声音里充满凶恶。<br>
+“不不不，呸呸呸，我是说…您是否应该重新考虑一下，女王陛下她——”<br>
+“哈！女王陛下！你们只惦记着深巢的女王陛下！你们难道忘了是谁把你们从野兽嘴里掏出来的吗？！是谁牺牲了自己的大好前程转而和野兽共处一室？！”他特意加重了“野兽”二字，似乎这样做可以把某只野兽咬成粉末。<br>
+“大人——”仆从显然被首领的怒气吓得无所适从。<br>
+“你告诉她！什么破情面！什么破国王！我不稀罕！你让她等着，等我把这个家伙——”他转头恶狠狠盯着白王，白王硬撑着抬起头，也回敬了他一个毫不屈服的眼神，“等我把这个家伙搞定了，就是她和圣巢的死期！”<br>
+仆从张张嘴，似乎还想说什么。<br>
+“还不赶紧滚！！”<br>
+于是他连滚带爬地跑出了房间。<br>
+首领怒视着仆从跑远，转回头瞪着白王：“你…我已经不想再陪你玩下去了，”他猛地起身，把周围的贵族们都吓得一哆嗦，“这是你最后的机会，神位，给还是不给？！”<br>
+白王没有答话，他的眼神里带着嘲讽。<br>
+首领当即大步走向捧着瓦罐的贵族，贵族下意识地向后退缩着，他一把把瓦罐抢了过去。<br>
+他故意把瓦罐放得离白王很近，几乎贴到了他的面具上，那里面的物质又开始蠕动起来。“你以为我没有办法拿到你的神力吗？”<br>
+“…你没有。”白王冷静地回答。<br>
+首领大笑起来，猛地把瓦罐摔在地上，瓦罐尖叫着碎裂了。<br>
+“大人——！”房间内有好几处声音不约而同地叫喊起来。<br>
+首领的脚下，黑色的物质先是无生机的蔓延开来，浸透了白色的丝线。白王的一星亮光投在了它表面，这团物质立刻反应起来，蠕动着浓缩成了一团。先是攀附于丝线上的物质逐渐聚集起来，抽出了极细的一条触须。它似乎想要攀上白王的袍子，但是没有成功。于是它掉落下来，摔了个粉碎。黑色的点状物四溅，有一些溅到了白袍上，但随即就化作黑雾消逝了。那一大摊物质则仍在蠕动着爬向白王。白王的身体离地面有一些距离，它们缓缓抬高了自己未成形的“身体”。<br>
+卢瑞恩深呼一口气，把匕首又一次插进缝隙里。匕首发出不满的嗡嗡声，被他无视了。房间里那群虫子全神贯注地看着白王，谁也没有发觉有一只甲虫正拼命试着用匕首凿开石缝。<br>
+首领笑着看着眼前的一切：“还是没改变想法吗？国王？”<br>
+白王颤抖着，死死盯住那滩物质。<br>
+那物质攀上了白王的袍子。先接触的那部分像刚才那样无声无息地消失了，但随着它附着得越来越多，白袍的那片区域开始逐渐转变成灰色。<br>
+首领饶有兴致地观察着这个变化：“…我当时要是再多向他买点就好了。”<br>
+白王开始挣扎：“…停下来…你一点都不了解神的事情，就不要自以为是！”<br>
+首领笑了一声，没有动作，一副看热闹的样子。<br>
+卢瑞恩这边已经蓄势待发了。<br>
+“…你不是高位圣灵…所以…即便你能得到我的神力，也不可能吸收它们…”他急促地喘息着，“你生来就注定成不了神！”<br>
+“大人，我们还是——”一旁的一个贵族见状急忙想劝说首领。<br>
+“闭嘴！他说过我只要成了神，就可以执掌一切——”<br>
+他的话音未落，原本缓慢蠕动的那团物质突然飞速抽出了十几条触须，紧紧缠住了白王的身体。<br>
+就在此刻，卢瑞恩用嘴咬着匕首，右爪攀住已经足够他钻过去的裂缝边缘，像一个真正的飞侠一般闪进房间，着陆在一团丝线里。没有虫子注意到他，白王的遭遇吸引了他们全部的注意力。<br>
+“唔！——”白王还没来得及发出惊叫，就被触须团团包裹起来。越来越多的触须攀上去，粘接在石柱上的丝线一根接一根地断裂，最终他和那团物质一同摔在了地板上，发出黏腻的响声。<br>
+首领很明显地退缩了，但又壮着胆子向前走了几步：“什…什么嘛…这也…不过如此……”<br>
+而其他的贵族和卫兵们不由自主地一步步向后退却着。<br>
+那团物质…在变大。<br>
+白王发出的光越来越微弱，到最后里面只剩下了一片漆黑。而那团物质——<br>
+“大…大人…它…它——”<br>
+一个贵族尖叫着跑出了房间，随后是另一个，紧接着是一个卫兵。<br>
+“你…你们怕什么——”<br>
+那物质以白王为核心，疯狂地膨胀着，无数条触须伸了出来，攀附住了房间的石壁。它的高度以及快顶到房顶了。<br>
+卢瑞恩疯狂寻找着白王，他一动不动地躺在黑色的黏液里面。<br>
+“陛下！！！”他飞奔过去。<br>
+首领也顾不得那么多了，一看形势已经明显不受控制，他先是和剩下两个卫兵一同向后退了几步，随后转身就跑向大门。<br>
+“陛下！陛下您听得见我说话吗？！陛下！！”卢瑞恩一边喊着，一边疯一般地用匕首划开那些黑色的物质，它们一被划开就又迅速愈合了。似乎是感觉到核心在被攻击，这个庞然大物猛地用触须甩向了卢瑞恩。卢瑞恩猝不及防，被撞到了房间的墙壁上，那把匕首旋转着滑到了一边。<br>
+“唔！——”卢瑞恩捂着头，他浑身都在痛，尤其是左臂。刚刚那一下好像又加重病情了。他不知道他的左臂最后会不会直接掉下来。<br>
+“陛下——！”他有些眼冒金星，整个视野都在扭曲。他扶着左臂，挣扎着站起身。<br>
+匕首上的水晶在闪光。他喘息着望着那块粉色的水晶。<br>
+水晶里蕴含着巨大的魔力，它是光芒神赐予我们的恩典…每当我们持着水晶祷告的时候，总是会觉得光芒神就在我们身边…如果她还在的话…她一定会认出这个水晶，在你有危险的时候来保护你的！<br>
+脑海中是娜莉的声音，那只飞蛾部族的小飞蛾。<br>
+光芒神…她会来救我们吗？…不，她已经死了，被陛下杀死了。<br>
+卢瑞恩呆呆地想着。<br>
+周围的石壁开始碎裂，碎石不断向下掉落着。<br>
+他突然下定决心一般，冲过去抓起那把匕首。<br>
+随后，他大吼着，紧握住匕首，紧闭双眼冲进了那团黑暗。<br>
+一开始他什么也没有感觉到，只是突然觉得石块坠落的声音显得遥远起来，时间像是凝固了一般，流动得十分缓慢。他微微睁开眼，眼前是一片黑暗。他终于屏息不住，吸入一口空气，但是流进身体的是粘稠的液体。他慌了，挣扎着想把这些东西吐出去，但更多的液体涌了进来，他感到自己逐渐被它们填满，意识逐渐远去。<br>
+他本以为能看到白王的光，但他只看到了黑暗。</p>
+
+<p>(（）)</p>
+
+<p>冷。<br>
+周围的一切都好冷。<br>
+他感到自己在漂浮着，漂浮在虚空中。<br>
+他感觉自己什么都不是，他感觉自己就是这个世界。<br>
+他试探着伸出爪子，却发现自己没有爪子。<br>
+什么都没有。他看不见自己，他什么都看不见，什么都听不见，什么都感受不到。<br>
+一片黑暗。<br>
+好冷。<br>
+好孤独。<br>
+好寂寞。<br>
+好害怕。<br>
+光。他渴望光。猛烈的光、温暖的光、温柔的光、璀璨的光。无论什么样的光他都可以接受。<br>
+只要有了光，他就可以脱离混沌。有了光，他就有了颜色。<br>
+但是为什么，无论他怎么努力，他的世界都仍是一片黑暗呢？<br>
+他本是所有颜色，任何颜色。他是这个世界。<br>
+他本不想这样，这不是他想要的。他只是想要看一看他的世界，他想要看一看他自己。<br>
+光，光。光！<br>
+那些光都在躲避他。他们本是他的一部分，他们是背叛了他的囚徒。<br>
+他要把他们全部抓回来，他要惩罚这些叛徒，他要收回他赐予他们的力量、生命、形体——光的全部都应该是属于他的！<br>
+光！！把我的光还给我！！！<br>
+……<br>
+……<br>
+这是一束陌生的光。温和纯净的白色。雪的颜色，冬的颜色。他没有见过这束光。这是一束本不该存在于世间的光。但没有关系，只要是光，他都可以接受。<br>
+…光？他见过这束光。这是一束狂野的金黄色，连他都无法驯服，这束光把他击退了，暂时。他一直在等待一个机会，让他可以重见天日。他记得那段历史，他被崇拜过，被敬畏过，被遗忘过，被唾弃过。他不在乎。他就是这个世界。他想看一看这个世界，他需要光。他想看一看自己的颜色，是不是还是鲜艳的彩色，他需要光。<br>
+他的思绪僵住了，像是齿轮中间卡住了一个异物。<br>
+一块水晶。是了，她并不在这里，这只是她的一个信物。<br>
+…还有一个，不是光的东西。<br>
+…怎么办，吞噬他吗？<br>
+……他感受不到自己了。<br>
+………不对，这不是我。<br>
+………这不是真正的我。<br>
+…………力量，在消失。<br>
+……………我需要光。<br>
+………………把光……送到深渊来………<br>
+……<br>
+……</p>
+
+<p>(（）)</p>
+
+<p>卢瑞恩在一片废墟中醒过来，他脑子里还是挤得满满的“我”、“他”、“光”这些字眼。<br>
+“呜——”他摸上自己的脑袋，不停的拍打着，想把这些词语打出自己的头脑。<br>
+他突然感到一阵反胃，转身便是一阵呕吐，喉咙火烧似的干燥，于是他又呕吐了一次。等他再次睁开眼睛，发现自己坐在一滩漆黑的液体里，自己的手上、身上，全是。<br>
+“——啊啊啊啊！！！”卢瑞恩惨叫着向后挪动身子猛地撞到了另一个物体。<br>
+他颤巍巍地转过头，又发出一声撕心裂肺的惨叫——黑的，一只白王外形的虫子，身着袍子，头顶上七根角围成的王冠…不过他是纯黑的。<br>
+他又是一阵呕吐，吐出来的全都是黑色的液体。<br>
+他发了会儿呆，任凭那液体在他身上四处流淌，随后挣扎想站起来，又无力地摔回液体里。黑色的液体溅了他一身，不过他已经不在乎了。<br>
+他看到了自己那把匕首，上面的水晶已经破碎的不成样子，暗淡无光。<br>
+“…陛下…？”他开口道，自己的声音突然有些陌生，他觉得自己已经一个世纪没有说过话了。<br>
+白王没有反应——原本是白王的那个东西没有反应。<br>
+他伸出爪子——这回他看见自己的爪子了——摸上白王的面具。<br>
+“陛下——”他哭喊着。<br>
+他没有等到援兵。他没有成为他的最后一道屏障。他什么都不是。<br>
+“求求您不要走——”他趴在他身边流泪，泪水融在黑色的液体里。<br>
+有什么东西碰到了他的身体。<br>
+他转过头，是一只黑色的爪子，布满令人作呕的黑色的黏液。<br>
+他立刻抓住那只爪子，像抓住救命稻草一般紧紧握住：“陛下！我知道您还活着！天哪请和我说一句您还活着好吗？我求求您<br>
+了！我求求您——”<br>
+那只爪子回握住他的爪子。<br>
+“——”<br>
+“您说什么，陛下？我没有听清……”卢瑞恩颤抖着把白王扶起来，靠在自己身上。白王身上的黏液受重力影响，开始向他身上流去。<br>
+“——起…”<br>
+“陛下？…没事的陛下，您现在需要休息…”<br>
+卢瑞恩看看周围，应该是之前那个房间倒塌了，不过它傍依着的岩壁还屹立不倒。有几个光蝇灯笼奇迹般毫发无伤。他尽可能轻地把白王拖出了这片黑色的泥淖，轻轻地让他平躺在地上。<br>
+他想去拿一个光蝇灯笼，却被拽住了。<br>
+白王的爪子死死地扣住了他的爪子。<br>
+他蹲下来：“陛下您放心，我不走，我只是要去拿一个灯笼，您放心，我不会离开您的。”<br>
+片刻，他感到白王的爪子渐渐松开，最后无力地落在地上。<br>
+“陛下！”他连忙又俯下身确认白王的情况。白王似乎只是睡着了，他的呼吸有些微弱。<br>
+卢瑞恩松了口气，赶忙起身去拿了灯笼，迅速返回了白王身边。<br>
+在灯笼的照耀下，卢瑞恩才发现，白王身上的黑色并不是那么密集了，它们好像在逐渐褪去。<br>
+他隐约听到远处传来叫喊声。<br>
+是那帮暴徒回来了吗？！他立刻警惕起来。<br>
+“陛下，很抱歉打扰您休息，但是我们必须要离开这里。”<br>
+他说着，返回捡起了自己的匕首，插回腰间，迟疑了一下叼住了灯笼，他背起白王。他需要努力保持平衡，才不至于摔倒。<br>
+白王并没有他想象中的那么重，实际上，他很轻，至少比他自己轻多了。<br>
+黑色的黏液顺着白王的身体、面具和袍子一滴滴落他的脸上，爪子上、背上，最后落在了地上。他想了一下，伸出脚把身后留下的痕迹都清理干净。<br>
+左肩又开始疼了。现在不是时候。他暗示自己。他感到左肩不那么疼了。<br>
+不知走了多久，他们终于找到了一个小小的洞穴，看上去可以在这里藏身一段时间。<br>
+他轻轻地把白王放下，让他倚在岩壁上。<br>
+白王身上的黏液差不多流干了，但他的颜色仍然没有恢复成往日美丽的白色，而是黯淡的灰色。光芒依旧从白王身上散发出来，只不过浑浊不堪。现在洞穴里的能照明的光，大部分都是光蝇灯笼提供的。<br>
+他已经失去了时间的概念，但是他的肚子告诉他，他们至少已经两天没有吃饭了。吃的。又一个严峻的问题。陛下喜欢吃甜食……卢瑞恩望着白王，心里想着在哪里能找到食物。<br>
+那些小蜘蛛？不，捕食关系好像反了。<br>
+一路上有没有蘑菇？…没看到过。不然他一定会收集起来的。<br>
+甜食，这里想必是没有花蜜的，也没有果实。<br>
+“啊啊啊——”卢瑞恩长叹一口气，贴着岩壁任凭自己滑到地面上。他揉了揉肿胀的眼睛。<br>
+“……卢瑞恩？”<br>
+“陛下！！！您没事吧？！”卢瑞恩立刻一个翻身爬起来，跑到白王身边。<br>
+“……”<br>
+白王没有说话，只是略显茫然地把头转向他的方向。<br>
+“陛下？”<br>
+“……卢瑞恩…？”<br>
+…陛下难道失忆了吗？<br>
+“…是…是我，陛下。您感觉还好吗？”<br>
+“……我还在发光吗？”<br>
+“……啊？…当…当然！您一直都在——”<br>
+“我看不到。”<br>
+“…啊…？”<br>
+卢瑞恩这才注意到，白王的目光根本就没有集中在自己身上，而是透过他——<br>
+“陛下……”<br>
+“……”<br>
+白王低下头，握紧了爪子。<br>
+沉默。<br>
+片刻，他又抬起头来：“…我没事，只不过是力量透支了而已，休息一会儿…就好了。”<br>
+白王挣扎着想要站起来，又无力地跌回原处。<br>
+“陛下，您好好休息，不用担心，我会保护好您的。”卢瑞恩怕白王又想勉强自己，他坐在白王旁边，握住对方的爪子。<br>
+“……抱歉，本来被庇护的应该是你。”<br>
+白王的声音因为虚弱而细不可闻。<br>
+“陛下…”<br>
+他这才感觉到，白王在微微颤抖。<br>
+“…手…有点痛——”<br>
+“啊——”卢瑞恩慌忙把爪子松开，“抱…抱歉，陛下——”<br>
+他站起身：“我…我去找些吃的…或者草药什么的——”<br>
+“……”白王没有应答，他只是把头微微偏向另一边。<br>
+……<br>
+于是卢瑞恩重新坐回了他旁边。<br>
+他需要一个话题，能让陛下心里好受一些的话题。<br>
+经历了那么多，他肯定不只是受到身体上的伤害吧。<br>
+“德莱娅她们肯定会来接应咱们的。”他开口道。<br>
+白王点头，他的动作僵硬得不自然。<br>
+“您放心，这些暴徒一个都跑不了——”<br>
+“你相信他说的吗？”<br>
+“嗯？”卢瑞恩其实已经习惯被白王打断了，“神位的事情吗？”<br>
+“…我不知道你还活着。”他突然又变了一个话题。<br>
+“呃…”卢瑞恩急忙跟上他的节奏，“我就在这里，陛下，您放心——”<br>
+“我还以为你死了。”<br>
+“陛下，我还活着。您不信…可以摸摸我的脸。”<br>
+“…我全身都在痛。”<br>
+“……”<br>
+天呐，快换一个话题呀卢瑞恩。<br>
+“呃——”<br>
+“不要把这件事告诉根。”<br>
+卢瑞恩望着白王：“…王后陛下吗？”<br>
+“…她不用知道得这么详细。她要是问起来，就说我们遭到了歹徒的伏击。”<br>
+“可是陛下——”<br>
+“我不想让她因为这件事而冲到这里把深巢给碾成灰。她总是在这种时候变得十分暴躁，”白王苦笑着说，“…而且现在变成这样也不完全是深巢的错。野兽赫拉…不完全是只野兽。”<br>
+卢瑞恩擦了擦冷汗，看来白后的力量真的是…有目共睹。<br>
+“…你是怎么躲开野兽的？”白王发问。<br>
+“我…我有我的匕首。”他看了看它出生入死的好兄弟，“娜莉…飞蛾部族的，在我的匕首上镶嵌了一块水晶。那些野兽似乎害怕这个。”<br>
+白王低头不语，在思考着什么。<br>
+卢瑞恩也默默地靠墙坐着。<br>
+沉默一直持续着。<br>
+……<br>
+…直到卢瑞恩猛地一个激灵，意识到自己刚刚差点睡过去。<br>
+他看向旁边的白王。<br>
+白王真的会累。他第无数遍下了这个结论。<br>
+他已经靠着石壁睡着了…大概。<br>
+灰色已经褪变成了白色，几乎要变回原来的纯白了。<br>
+他的光现在只是那种能勉强看到的微光，随着他的呼吸轻微闪烁着。很漂亮。陛下总是那么美丽，这种特质像是深深印刻在他身上一般，让人难以忘怀。这是一种奇异的感觉，他的外貌并不算是惊若天人，但如果要形容他的话…美丽。这种感觉卢瑞恩也解释不清楚，就是感觉…他很美，看着他的时候就忍不住心跳加速。偶尔有一丝怀疑，这种极致的美不可能出现在世间，但随后突然释然，神的美丽是与生俱来，自然得不容置疑。<br>
+卢瑞恩只是呆呆地看着他，不敢有多余的动作，他怕吵醒他。<br>
+怎么办？自己也睡一会儿吗？<br>
+但是卢瑞恩不敢睡，他怕那些野兽会找过来。<br>
+在附近找找食物吧。说不定能遇到援军。<br>
+卢瑞恩拍了拍自己的脸，勉强打起精神。左臂已经不痛了，这不是好事，这意味着他可能要永远失去它了。<br>
+他把灯笼咬在嘴里，最后回头看了一眼白王，右爪使力爬出了洞穴。<br>
+他没走几步路，就听到一阵窸窸窣窣的声音。<br>
+卢瑞恩暗暗咒骂着，缓缓抽出匕首。<br>
+水晶已经不再发光了。<br>
+——该死…<br>
+卢瑞恩向后退去——不行。他不能把陛下暴露给它们。<br>
+他僵在原地，身体抑制不住地颤抖。<br>
+一个黑影从远处的岩石后面冒出来，一只小蜘蛛。随后是两只、三只……九只。<br>
+卢瑞恩死死攥紧匕首，默默祈祷…不，他还是不准备打扰陛下休息了。<br>
+那些小蜘蛛一走一停地围了过来。<br>
+他举起匕首。<br>
+…等等，它们嘴里似乎叼着什么东西。<br>
+卢瑞恩警惕地观察着它们的一举一动。<br>
+它们爬到离卢瑞恩几步远的地方停了下来，纷纷把嘴上叼的东西吐在地上。<br>
+卢瑞恩皱着眉，仍然保持着进攻的姿势。<br>
+小蜘蛛们晃着它们的大脑袋，一只接一只地离开了。<br>
+卢瑞恩一脸茫然地看着它们爬远。<br>
+他试探着向它们留下的东西迈出几步。<br>
+灯笼的光映在它们上面。<br>
+食物！……一部分是。<br>
+他看到了小果子、蘑菇、草叶…还有各种各样、死相不一的虫子尸体。<br>
+…现在不是嫌弃食物的时候。<br>
+卢瑞恩把匕首收回腰间，把食物一股脑兜在袍子里。<br>
+等下…草叶上写着什么东西。<br>
+“原地候援”<br>
+这不像是德莱娅或者泽默的字。这字狂野粗放，笔画间没有连接。而且…这四个圣巢的文字像是现学现卖的一般。<br>
+他该相信写下这文字的虫子吗？不管是谁，他看起来像是和野兽们——好吧，不完全是野兽——是一伙的。<br>
+如果来者不善，现在他们的藏身地点已经被发现了，他们的生命就危在旦夕。他们需要尽快换一个藏身的地方。<br>
+…不管怎样，先把这些食物解决了再说。<br>
+确认四下无人，卢瑞恩捧着这堆食物返回了白王身边。<br>
+白王还在睡着，他希望他刚刚差点成型的祷告没有打扰到他。他悄悄把食物放在一边，自己走到白王身边坐下，头搁在膝盖上远远盯着那些食物。<br>
+…也不知道这些食物有没有毒…应该没有吧。如果想杀死他们，完全可以让蜘蛛们动手。陛下现在这么虚弱……不过对方也不一定清楚他们现在的状况。<br>
+神位。那个首领似乎的确是深巢的国王……原国王。他似乎和女王关系不和…不过他也没心思管别人的家务事。他只知道，那个首领伤害了陛下，这就足够给他判刑了。<br>
+这些食物里面没有陛下喜欢的花朵和花蜜。他从来没有见到他吃肉。<br>
+那些果子、草叶和蘑菇可以留给陛下。肉…卢瑞恩咬咬嘴巴…他可以试一试，说不定好吃呢。<br>
+或许他从此就转变成了一个肉食主义者，光荣的在食物链上升上一阶。<br>
+卢瑞恩苦笑着想。<br>
+现在还需要考虑的是，接下来该怎么办。他们该不该留守原地呢？<br>
+深巢的女王看起来才是正统的王室。之前她已经给首领警告过了，她说要和圣巢达成统一战线——<br>
+等下，女王是一只野兽…？虽然肯定不是真正的野兽…不过这也不好说…<br>
+…蜘蛛…为什么这里这么多蜘蛛丝…？<br>
+…刚刚为什么是蜘蛛们送来的食物？蜘蛛们其实是像他们一样的居民吗？……不对，那只六只眼睛的怪物——<br>
+啊脑子里好乱…有点犯困了……<br>
+……不行，危机还没解除……<br>
+……还不能睡……<br>
+卢瑞恩打了个哈欠。<br>
+……好困。<br>
+……<br>
+……<br>
+“—瑞恩？卢瑞恩！”<br>
+半梦半醒中，卢瑞恩似乎听见白王焦急的声音。<br>
+“…唔…啊！抱歉！我…我睡着了……！”<br>
+他猛地站起身，向四周望去，发现白王不知何时已经摸索着走到了十几步开外。<br>
+听见他的声音，白王才确定了他的位置，把身子转了回来。他似乎是松了一口气，将紧绷的身体放松。<br>
+“…没事…我…还以为你不在了。”<br>
+“陛下…”<br>
+卢瑞恩突然有一种想要冲上前抱住对方的冲动。<br>
+“…我是不会离开您的。永远不会，我发誓。”卢瑞恩压抑住难受的心情，走到白王身边，“我扶您回到那边去吧？”<br>
+“…谢谢。”这句感谢几乎轻不可闻，但对于习惯了白王原本就很轻的声音的卢瑞恩，他还是设法听到了。<br>
+“神本不应该恐惧的。”白王喃喃着，“我不太适应黑暗……我的视野中一直都充满着光，现在这样…还是第一次。我…我真的有些害怕。”<br>
+卢瑞恩小心翼翼地扶着白王重新坐下：“…陛下，刚刚有几只蜘蛛送过来了食物…”他试着转移话题。<br>
+“蜘蛛？送来食物？”<br>
+“嗯。还有一张字条，说是让我们在原地等待救援。”<br>
+白王沉吟片刻：“可能是陷阱。”<br>
+“我也觉得，但是也不好下结论…”<br>
+“……你饿了吗？”<br>
+“嗯？我没事——”他突然想到，他没事，不代表白王没事，于是他改口，“有一点。咱们先把食物解决掉再做打算吧？”<br>
+白王点头，卢瑞恩把那些食物又兜了过来。<br>
+果子、蘑菇这类的看着还勉强能吃，那些尸体甚至开始…妈呀。<br>
+卢瑞恩想知道他们睡了多久。<br>
+“…卢瑞恩？”<br>
+“我在呢，陛下。”<br>
+“你吃不惯的，给我。”<br>
+“呃——没有，我——”<br>
+“我不挑食的。”<br>
+他不知道要是白王看到那些尸体的惨状会不会动摇。<br>
+“陛下，我吃的惯的，都是些水果草叶啥的。”<br>
+白王皱起眉，无光的眼睛望向卢瑞恩的方向——虽然偏了一点：“真的吗？他们这么好心？”<br>
+“是的陛下。您吃得惯这些吗？”<br>
+白王点点头，伸出爪子摸索起来。卢瑞恩连忙塞了一个红果子到白王爪子里——好险，他差点就抓到了一旁那个“已经全身心投入新一轮物质循环”的尸体。<br>
+白王迟疑了一下，把果子捧着送到嘴边。<br>
+在宫殿里，卢瑞恩只见过白王捧着花朵吮吸花蜜的样子，他无论何时都保持着优雅端庄。卢瑞恩决定还是不趁白王失明的时候占他便宜比较好。<br>
+他默默地把能吃的果子草叶蘑菇都推到白王附近，捏起尸体还算完好的的腿和触角，把那些尸体拽到自己周围——离白王远远的。他做了个深呼吸，于是尸体的腐臭味充满了他的鼻腔。他忍不住咳嗽起来。<br>
+“卢瑞恩？”白王停下手里的动作。<br>
+“我…我没事，吃得太猛，呛着了——”他努力忍住呕吐的冲动。<br>
+“……你慢着点。”白王一副担忧的样子。<br>
+“好的……唔…谢谢陛下关心…咳咳…”<br>
+他脑海中闪过把这些都丢掉的念头，但又被饥饿感否决了。他决定速战速决，屏住呼吸，他用力拽下尸体上的一条腿，趁自己大脑还没反应过来塞进嘴里嚼一嚼咽了下去。<br>
+他的大脑愣了一下，随即强烈抗议起来。<br>
+“唔——”他捂住嘴，紧紧闭上眼睛，默默等着恶心的感觉淡去。<br>
+他感到饥饿感确实少了一些了。睁开饱含泪水的双眼，对面的白王已经吃完东西，开始清理自己的爪子和袍子了。他轻轻舔舔爪子，低下头用它们扫了扫面具上的灰和残渣，甩了甩头。之后他又抖出他的翅膀，翅膀快速颤动着，扑扇掉了上面的异物和灰尘。他的翅膀在周围散出了薄薄的一层白色磷粉，最后又小心翼翼地收拢回去。白王把袍子撩起，让它们重新把翅膀盖住。白王的动作因为失明而显得更加仔细，他扑掉袍子上的灰——其实上面干净得不得了——清理完毕，正襟危坐地坐好。<br>
+卢瑞恩看得失了神，他第一次见到白王做自己的清洁工作。白王通常都不会在有第二只虫在场的时候做这些私人的事情。<br>
+…可能是因为他失明了，所以没有意识到还有一只虫子正提着一只残缺的虫子尸体目瞪口呆地看着他吧。<br>
+说到自己，卢瑞恩又把目光恋恋不舍地转向爪上的“食物”。<br>
+他努力说服自己这是食物，然后塞到了嘴里。<br>
+他决定这辈子都要做食物链底端的虫子。哦，他好想吃大蘑菇啊——</p>
+
+<p>(（）)</p>
+
+<p>卢瑞恩缓了好一阵，他现在还是能回忆起那些蛆虫蠕动的感觉，不觉又一阵反胃。他不知道自己最后是不是还要再把这些东西吐出来，因为他的胃不是留给肉的——特别是腐肉。<br>
+白王的情况也不怎么好，他从刚刚开始就一直干呕，他捂着嘴忍耐的样子简直让卢瑞恩心碎。<br>
+卢瑞恩默默祈祷这不是食物的问题。这是他的错，他本应该先替陛下试一试毒的。<br>
+“陛下……我们…还要继续前进吗？”<br>
+“…去哪里？”白王还没缓过神，表情木然，嗓音沙哑。<br>
+“……再找一个洞穴躲一躲，等您的力量恢复的差不多了，再做打算？”<br>
+白王向后靠在墙上。<br>
+“…我的力量——”他顿住了，“我的力量需要回到白宫才能完全恢复。这里…那个东西的存在让我很不舒服。”<br>
+卢瑞恩又悄悄凑到白王身边。<br>
+“不过没有关系，我现在可以走动了。我们再去找一找出路吧。”<br>
+每次白王说“我们”的时候（不是那种在正式场合用的皇室词汇），卢瑞恩都会感到自己的头脑更清晰了一些。陛下在意他的想法，在意他的感受，把他当作一只独立的虫子，这让他多少觉得有些受宠若惊。<br>
+他们离开了这个洞穴。卢瑞恩在前面咬着灯笼，右爪牵着白王。白王的每一步都十分谨慎，有的时候卢瑞恩甚至不得不轻轻拽一下他，他才会继续往前走。卢瑞恩理解这种在黑暗中摸索的感觉，他不久前刚经历过。于是他紧紧握住白王的爪子，想为他缓解一些恐惧。<br>
+他们走的比预想的时间要长，不过幸运的是，一路上没有敌人，也没有蜘蛛。安静得瘆人。<br>
+卢瑞恩看见了一个洞穴，比之前他们呆的那个要小很多，不过也可以临时躲一躲了。他领着白王钻了进去。<br>
+“陛下，”他将灯笼放在地上，扶着白王，让他靠着岩壁坐下，“您感觉好些了吗？”<br>
+白王摸索着坐在地上：“我能感觉到力量在回归，过不了多久，我应该就可以看见你了。”<br>
+…陛下用的词是“你”，而不是“东西”——<br>
+卢瑞恩内心又小小的雀跃了一下。<br>
+他挨着白王坐下，洞穴里静得出奇。<br>
+“我的到来都是命运的安排。”身旁的白王突然主动打破了寂静。“它是一个甚至连我们神都无法解读的存在。它超脱于世界之外，书写着整个世界的故事……像一位作家。神也是受到法则的束缚的，我们刚降临世间，要学习的第一条规则就是，永远不要违抗命运。这其实很难，因为你无从得知自己是否顺从于命运。而它从来不会做出警告，走错一步棋，你就会面临灭顶之灾。不过，它似乎会通过种种方式来调控世界的运行轨道。我是被它选中的神，在我还小的时候，命运便将它的谕旨递与给我。”<br>
+他顿了顿，“它给我展示了一个场景。圣巢…不，那时还不是圣巢。虫子们正在被摧残，遭受种种不公的待遇。它让我身临其境，那是我第一次感受到…绝望和无助。我至今都忘不了这种感觉，像是…由内而外的死亡。”<br>
+“它命令我，你要战胜那个暴君，拯救这个王国。那时我便决定了，带给虫子们理性、平等和自由，这将是我的理想。”<br>
+沉默。卢瑞恩默默地陪在白王身边。<br>
+“…他们说我就像一只蝴蝶…帝王蝶，当然。”<br>
+白王喃喃道，声音轻得不像是在进行对话。<br>
+“终于摆脱了蛰伏地面的漫长岁月，羽化出了翅膀——飞行的感觉真的很美妙。”<br>
+“…陛下？”卢瑞恩感到有些跟不上白王的思路了。陛下原来…不是这个样子的吗？<br>
+“…即便是以死亡为代价……”他失明的眼睛散漫无神，视线直直地透过了卢瑞恩，“…我从来没有后悔过君临世间，从来没有。”<br>
+“我很开心，能看到圣巢一点点成长。看到虫子们渐渐地都开始追寻自己的梦想…”<br>
+说到这里，他轻轻笑了一下，“我还记得第一次给你们上课的时候，当时——你还故意把写好的字给划掉了，是不是？”<br>
+“呃…？”突然被点名，卢瑞恩有点猝不及防，“…我…好像…是吧？”卢瑞恩自己其实都记得不是很清楚了，他只记得当时自己似乎很焦急…为了什么来着？<br>
+“转瞬之间，这些小家伙竟然都开始各司其职了。”白王又把身子向后靠了些。<br>
+“当他们给我展示他们的设计成果的时候，我真的很震惊。我没有想过那样的思路…虽然还不成熟，但是很有潜力。说我一点都没有感到压力是不可能的。我也想到或许有一天，坐在王位上的会是你们中间的某只虫子，或者是你们的后代，你们后代的后代……不过这都是很久以后的事情了，不是吗？在那一瞬间，其实我感到的更多是…骄傲。”<br>
+他把头靠在墙壁上，闭上了眼睛。<br>
+卢瑞恩突然感觉心里一酸：“…陛下…”<br>
+“但是现在还时候未到，你们还需要我，圣巢还需要我。还有很多很多需要由我来做的事情。原谅我表现得像一个独裁者，像一个紧抓住王座不放的逐权之人。我现在是这里唯一的神，我有自信——我必须有自信，成为一座永不倒塌的灯塔……”<br>
+“等到一切都尘埃落定，圣巢不再需要我的时候……我也许可以做回一个神，一个不受“国王”这个名号牵绊的，自由的神。我可以——”他突然有些怅然若失，“…我可能回不去了。”这句话被压得很低，他可能并不想让卢瑞恩听见。<br>
+卢瑞恩听见了，但他没有说什么。陛下知道自己该做什么，他相信他。<br>
+“…是不是觉得我有点反常？…嗯…我有点头晕…那个东西…唔！——”<br>
+白王突然又开始干呕起来，把卢瑞恩吓了一大跳：“陛下！陛下您怎么了？！哪里不舒服吗？！”<br>
+“……他用那个渎神的…东西…不过没事，我很快就能——”<br>
+他喘息着，双眼紧闭。<br>
+“那是什么东西？是毒吗？有没有解药？他说那是您的‘克星’，您会不会——”<br>
+白王握紧了卢瑞恩的爪子，他才意识到自己提的问题有点太多了。<br>
+“不要紧张，我不会有事的。”似乎是为了证明自己，白王是毫无磕绊地把这句话说完的。“我不知道那是什么东西。只是……看见它的第一眼就不想和它有什么接触。”他想了想，“…是恐惧。我害怕那个东西。”<br>
+“…那个东西…我听他说是买来的？”卢瑞恩仔细回想着首领的话。<br>
+“…好像有这么回事。”<br>
+“那个卖家…很可疑啊。”卢瑞恩有点担心，那个卖家似乎从一开始就知道陛下会被这个东西压制…万一…他利用这一点威胁圣巢——<br>
+“我不会让他得逞的。”他听到了白王坚定的声音，“而且，圣巢还有我的王后。她不是光源神，她有能力对付这个东西。”<br>
+光。<br>
+“陛下……您被抓进…抓进去的时候，有没有听到…什么声音？”<br>
+白王低下头，随后又抬起来：“没有。我只是觉得它在榨干我的光，然后眼前逐渐变黑……一直持续到现在。”<br>
+他又皱着眉想了想：“…对了，有一段时间，我觉得…自己不存在了。我的思想好像被吞噬了一样，和另一个存在融合在了一起。”<br>
+卢瑞恩也不觉回忆起来：“我听见有声音在自言自语…刚开始我以为是我自己，后来就觉得那个声音并不是我——”<br>
+白王猛地抬头：“……你也被抓进来了？”<br>
+“…呃…准确来说，我怕您出事，就握着匕首冲进去了…我觉得水晶的力量也会对它起作用——”<br>
+“下次不要做这种傻事。”白王的语气陡然严厉起来，“不要插手神的事情。这不是你们能够控制的了的。”白王有些生气，很可能又想起了自己之前的遭遇。<br>
+“…我知错了，陛下。”卢瑞恩可怜兮兮地低着头。<br>
+他正垂头丧气地盯着地面，突然听到一声叹息，一只爪子抚上了他的头。<br>
+“……陛下？”<br>
+抬起头，他对上了白王清澈的眼睛。这回，他的视线没有穿过他，而是聚焦在了他身上。<br>
+“……陛下…陛下您…您好了！”卢瑞恩唰地站起来，语无伦次地表达着自己的喜悦心情，他其实不知道自己在说什么。<br>
+白王一直注视着他，没有回应。<br>
+“太好了陛下！只要您恢复了视力——”卢瑞恩兴高采烈，就差原地跳几下了。<br>
+“你受伤了，还流了好多血。”白王突然打断了卢瑞恩的话，他缓缓起身，爪子轻轻抚上他的伤口。<br>
+卢瑞恩愣住了，看着白王的袖子微微拂动：“…啊？…不，这些只是小伤而已，现在都已经结痂了——”<br>
+“你的左臂怎么回事。”<br>
+“嗯？”白王这一问起，他才突然感觉到左臂传来的阵阵闷痛…也许只是记忆中的闷痛？<br>
+“呃…我在和野兽搏斗的时候——”<br>
+“和野兽搏斗。”白王重复了他的句子。<br>
+“…不…不小心摔到地上——”<br>
+“摔到地上。”白王又划出了重点。<br>
+“结…结果…”卢瑞恩不知为什么越来越没有底气，“…骨折了…”<br>
+“骨折。”白王深吸了一口气。<br>
+怎么回事，他怎么感觉到陛下有点…生气？<br>
+白王把爪子搭在卢瑞恩左肩上：“忍着点。”<br>
+“嗯？——哎呦！”<br>
+卢瑞恩还没反应过来，随着白王一用力，刺耳的骨骼的摩擦声响起，他便一声哀嚎。他本能地向后面退去，白王紧抓着他没有松爪，也被带得向前一个趔趄。<br>
+“疼疼疼疼疼——”卢瑞恩也不顾形象了，他疼得简直想要撞墙。<br>
+一阵暖流突然从他的左肩流下，一直流到左爪尖。他不由得集中精神感受着这股暖流。这一瞬间他突然觉得不痛了。<br>
+他有朦胧的印象，这不是他第一次有这种体验。<br>
+等暖流消失的时候，白王松开了他的爪子：“试着活动一下。”<br>
+卢瑞恩迟疑着甩了甩胳膊，随后捂住肘关节：“——哎呦疼！”<br>
+白王皱眉：“没让你这么使劲。我现在力量有限，你回去之后还需要好好修养一阵时间。不要再出意外了。”<br>
+卢瑞恩连连点头，来掩饰自己痛到扭曲的表情。<br>
+“…陛下您呢？您的伤现在怎么样？”<br>
+白王没有回应，只是默默地看着浑身是伤的卢瑞恩。<br>
+“为什么不早点告诉我。”<br>
+“……嗯——”他现在要十分注意自己的措辞了，白王的语调有点不太和蔼。<br>
+“我…我觉得没有必要…告诉您反而还会让您担心——”<br>
+白王没有说话。<br>
+“…陛下？”<br>
+“我…觉得很难受。”白王低下头，“但是我不明白为什么。”<br>
+“……”<br>
+“我会受伤，受伤就会感到痛。疼痛这种感受，原本也是神不该有的…只是这具凡人躯体，似乎会把所有感觉传递给我。这是好事，它可以提醒我危险的存在，可以提醒我不要继续透支这具身体。在这里这么多年，我也总结了很多…”<br>
+“我只是…不明白。为什么看见你受伤，我会觉得痛呢。”他抚上自己的胸口。<br>
+卢瑞恩看着低头不语的白王，想说什么，刚张开嘴，就又咽了下去。<br>
+那个字眼，他实在是不敢向他提起。<br>
+陛下也会向白后问这个问题吗？白后会怎么回答呢？<br>
+不论她怎么回答，那都不会是卢瑞恩能给出的答案。</p>
+
+<p>(（）)</p>
+
+<p>他们又开始前进了，白王默默地走在前面，步速飞快，卢瑞恩需要小跑着才能赶上。<br>
+“陛下，陛下您慢一点，不要摔着——”<br>
+白王没有回应，只是把速度放慢了一些。<br>
+小蜘蛛们又开始出现了，它们远远地望着这对君臣，静静地立在石头上。<br>
+卢瑞恩想停下来冲它们扮个鬼脸，但他必须要跟上白王的步伐。于是他转而昂首挺胸地向前迈进，同时对它们摆出一副“没妈的孩子像根草”的同情表情。<br>
+白王突然停下了，卢瑞恩一如既往地差点撞上去。<br>
+“陛下？”<br>
+他从白王背后看过去，眼前是一个窄窄的通道，只能允许他们一前一后地进入。<br>
+白王拍拍袍子，一声不吭地就要往里爬。<br>
+“陛下！您且慢！”卢瑞恩突然惊叫起来。<br>
+白王的动作滞在原地，转回头看着卢瑞恩。<br>
+就在这个间隙，卢瑞恩迅捷地抢在白王前面蹿进了通道。<br>
+“卢瑞恩！”白王惊讶又不满的声音在他身后响起。<br>
+“没事的陛下！我帮您在前面擦擦灰！”卢瑞恩故作轻松地喊着。<br>
+“这不重要！”<br>
+“我有匕首！”<br>
+白王长叹一声，算是服了自己的军师。<br>
+卢瑞恩还是比较害怕的，十分害怕。不过他一想到白王在自己身后，他就突然觉得自己勇敢得像只魁梧的猛兽。<br>
+我能打十个！卢瑞恩无声地高喊。<br>
+“卢瑞恩。”身后的白王突然出声，吓得他差点跳起来。<br>
+好吧，还差那么一点。<br>
+“陛…陛下？”<br>
+白王没有作声，只是把爪子抬起来指着右前方的拐角。<br>
+卢瑞恩顺着光芒望过去——<br>
+那——那是——嗯——？陛下？！<br>
+卢瑞恩猛地回头看着白王，他对上了他的眼睛。<br>
+他又转回头看着转角处的“白王”。<br>
+一模一样！<br>
+“呃…陛下我不知道…呃——”<br>
+卢瑞恩话没说完就感到后背一阵凉飕飕的恐惧，他立刻向前跳出几步，离身后的那个“白王”远了一些。<br>
+现在的情况是，两个“白王”都盯着他看。<br>
+卢瑞恩贴着岩壁在两位国王之间来回切换视线。他把自己贴成了一张海报。<br>
+“天呐。”他咽了口口水，“哪位陛下能好心解释一下。”<br>
+转角的那个“白王”没有说话，依旧盯着他看。<br>
+身后的那个“白王”转而盯着转角的那个“白王”看。<br>
+“陛下——”卢瑞恩有点带上哭腔了。<br>
+终于，身后那个“白王”迈步走到瑟瑟发抖，不敢动弹的卢瑞恩身边：“不要出声，在这里不要动。”<br>
+卢瑞恩哭丧着脸点点头。他其实不知道该不该相信他。为什么会有两个白王？刚刚这个一直陪在他身边的白王是个冒牌货吗？还是在什么时候突然被调包了？这也是那帮虫子的诡计吗？真正的白王在哪里？<br>
+“白王”抖开袖子，一根骨钉在他爪中成型。<br>
+对面的“白王”突然转过身跑开了。<br>
+这边的“白王”警惕地握着骨钉，勉强挤过“海报”，慢慢走向转角。他的光芒追随着他逐渐消失在通道里。<br>
+卢瑞恩紧咬着嘴巴，定定地看着那个转角。<br>
+黑暗。死寂。<br>
+他极度不安地等待着。<br>
+终于，他看见白王的光芒又跳回了通道里，随后是毫发无伤的白王。<br>
+这回呢？他是真的陛下吗？<br>
+“没事了，我还以为是——”<br>
+他停住了，没再说下去。他招手，示意卢瑞恩过去。<br>
+卢瑞恩缩在原地没有动。<br>
+白王等了一会儿，叹口气：“是我。”<br>
+卢瑞恩反而向后缩了一下。<br>
+白王有些无奈：“军师，它只能模仿外形和动作，没有发声器官的。”<br>
+“…万一它有呢？”<br>
+白王用复杂的表情看着他：“需要我提几句你的过去吗？我们不久前还讨论过。”<br>
+卢瑞恩这才扶着墙站起来，犹疑着走向白王。<br>
+“虽然警惕心是应该有的…但是你太不信任我了，军师。”等卢瑞恩颤抖着蹭过来，白王拍拍他的肩，“我以为你很了解我。”<br>
+“呃…不…我——”<br>
+白王突然转向他，一脸杀意：“你难道真的觉得现在的我是真的吗？”<br>
+卢瑞恩心里一惊，死命盯着白王的面具看。没有线索。<br>
+“呃——”<br>
+他又着重注意了白王的光。无特点。<br>
+无特点……没有…情绪…？<br>
+糟了。<br>
+“那个——您是不是把您的光故意给——不是，我的意思是——”他不知道该怎么形容这种“无特点”的光，也不知道如何向他解释他的光所传达出的信息。卢瑞恩努力比划着，他抱着“这个白王是真的”的一丝希望，同时也快速想着若非如此的脱身方法。<br>
+白王看着他双爪并用比划的样子，突然笑了。他的光芒随之明亮起来。<br>
+于是卢瑞恩愣了一下，随即抗议道：“陛下——！我禁不起您这样吓唬的！”<br>
+“对你擅作主张的惩罚。”白王笑得更开心了。<br>
+罢了罢了，千金难买一笑。我这也值了。卢瑞恩揉揉脑袋，默默安慰着自己。<br>
+“告诉我，卢瑞恩，”白王止住笑声，望着卢瑞恩，声音十分轻柔，“我现在是什么心情？”<br>
+“啊？”<br>
+卢瑞恩愣住了，他抬起头对上了白王的眼神，一个温柔的眼神。<br>
+“啊…陛…陛下现在……想来…”<br>
+他惊恐地看着白王。<br>
+他知道这件事多久了？<br>
+或者说…他注意到自己已经多久了？<br>
+“嗯？”白王微微地挑了挑眉。<br>
+卢瑞恩感到嗓子发干，他努力地把注意力集中在白王的光芒上，一如平常他尝试揣测他的情绪时一样。<br>
+通道里有些黑，唯一的光源便是白王。<br>
+“陛下…陛下现在……很…”<br>
+他的光芒忽明忽暗，最明亮的时候也不过是平日里的三分之一，而最暗的时候，他几乎都看不清白王的面具。<br>
+而闪烁的节奏…顺应着他的呼吸。<br>
+他得出了一个结论。<br>
+……一个出乎意料的结论。<br>
+他开始怀疑他的观察出现了问题。<br>
+“卢瑞恩？”<br>
+“啊…在！……”<br>
+“说出你的答案，卢瑞恩。错了也没关系。”<br>
+“…是…恕我冒犯…陛下…您现在可能…很…很…害怕？”<br>
+他战战兢兢地看向白王的眼睛。<br>
+他的眼神却依旧很温柔。<br>
+“…还有呢？”<br>
+“还…还有…有点…欣慰？”<br>
+白王轻轻地笑了。<br>
+卢瑞恩不知所措地站在原地。<br>
+“你从哪里学的读心术？一个蜗牛萨满教你的？”<br>
+白王笑着问他。<br>
+卢瑞恩挪了挪脚，他感觉脚有些麻了。<br>
+“…不…不是的，陛下…我…我只能试着猜一猜您的感受…而其他虫子的…做不到…”<br>
+白王疑惑地偏了偏头，但仍在温柔地笑着：“为什么？”<br>
+“…因…因为…”在白王那种能看透灵魂的注视下，卢瑞恩感觉自己坚持不住了，“陛下，请您饶了我吧，我…”<br>
+“你一直在观察我，对不对？”他继续追问，“从什么时候开始的？”<br>
+卢瑞恩立刻跪在了地上：“陛下！臣知罪，臣——”<br>
+“知罪？你有何罪？”<br>
+“臣……”<br>
+“难道看别人也是一种罪过吗？”白王挺直身体。<br>
+“臣……”<br>
+“还有，你怎么突然连自称都变了？听起来和我很疏远的感觉。”<br>
+“臣…不，我…”<br>
+白王看着不知如何是好的卢瑞恩，又笑出了声。<br>
+“要记住我的每一个动作细节，想必一定是花了很长时间吧？十年？二十年？”<br>
+“…陛下……其实我——”<br>
+“我知道。”白王打断他，轻声说。<br>
+卢瑞恩把头低得更低了，他感到脸上一阵发烫。<br>
+“起来吧，卢瑞恩。我也不是想责备你什么，只是刚想起来，听说你能判断出我的情绪，所以想试一下。”<br>
+卢瑞恩缓缓站起身，松了口气，但还是垂着头，不敢抬起来。<br>
+“抬起头卢瑞恩，你这么害怕我吗？”<br>
+“我也不是——”卢瑞恩猛地抬起头。<br>
+“这样下去我们可能找不到出路。这里就像个迷宫一样。”白王快速转换了一个话题，神情逐渐严肃起来。<br>
+“军师，你觉得我们该怎么办？”<br>
+虽然对刚刚的小插曲有点后怕，但工作是更重要的。卢瑞恩在脑内快速地分析了一下目前的局势。<br>
+“…陛下，我认为，既然我们不熟悉这里，我们可以找一个向导…或是一群向导。”<br>
+白王皱起眉：“…你说那些蜘蛛。”<br>
+“是的，陛下。”卢瑞恩抬起头，“现在您的力量也恢复了大半，它们即便想要设计我们也无从下手了。而且，那些蜘蛛似乎可以沟通。”他想起蜘蛛们叼着食物爬过来，然后放下的场景。<br>
+白王思索了一会儿。<br>
+“那深巢的谈判呢？我不能给圣巢留下这么危险的一个祸根。”<br>
+“但是如果您不在了，圣巢更难以存活。”他努力不去预想未来白后统治的圣巢。白后是个好王后，不容置疑，但她爱的不是圣巢，是白王。<br>
+白王沉默着。<br>
+“我们先离开这里吧，陛下。您如果实在放心不下，回到圣巢之后，您还可以再把这件事提出来，向深巢讨要说法。或者——”<br>
+白王仍旧盯着卢瑞恩看。<br>
+“…呃…当然…不论最后陛下做什么决定…我都会全力支持您…”卢瑞恩被看得有些发毛。<br>
+“……”<br>
+“陛…陛下？”<br>
+“我在观察你。”<br>
+白王看着卢瑞恩，认真地说道。<br>
+“…啊？”<br>
+卢瑞恩一脸茫然。<br>
+白王笑了：“怎么，只允许你看我，不允许我看你吗？”<br>
+“不…不！当然不是！陛下…想看多久就看多久…！”卢瑞恩感觉脸上又开始发烫。<br>
+“…我又不是痴汉。”<br>
+“我…我不是这个意思…！”卢瑞恩连连摆手。<br>
+“我只是觉得…”白王抬起头，“…你认真起来的样子…很可靠。”<br>
+“…啊…？谢…感谢陛下赞赏…能为您服务…这…这是我至高无上的荣耀…”<br>
+卢瑞恩磕磕绊绊地说道，他感到脑子有点晕乎乎的，整只虫都不真实。<br>
+白王又笑了几声：“罢了罢了，不折磨你了。一切都听你安排，军师。”<br>
+“…是…陛下。”<br>
+白王的行为有些反常，他通常都是不苟言笑的那种性格。只不过这几天，可能经历的太多了吧。他很害怕，也知道卢瑞恩也很害怕，所以想尽量让这种压抑的氛围明快起来。<br>
+想到这里，卢瑞恩的心情突然又变得很沉重。<br>
+……<br>
+……<br>
+他们爬出了通道，灰头土脸。白王抖了抖身子，眼看就要重复之前那样的清理工序，又想起什么似的默默放下爪子。<br>
+他转过头，眼神有些尴尬：“…卢瑞恩…你之前…”<br>
+“我发誓我不会和别的虫子说的！我发誓！”卢瑞恩举起双爪。<br>
+白王一副“杀了我吧”的绝望表情：“——…唉。”他长叹一口气。<br>
+四只小蜘蛛不知从哪里聚集过来，晃着脑袋。卢瑞恩突然觉得它们很可爱。<br>
+白王走向站在前排的一只蜘蛛，低下头：“…你们知道出去的路吗？”那只小蜘蛛没有因为白王的走近而退缩，歪了歪头，随即转过身向右边爬过去，它的同伴们跟随着它。它转回头发现白王没有跟上去，晃了晃长腿。<br>
+白王和卢瑞恩交换了一个眼神，迈开脚步跟了上去。</p>
+
+<p>他们一直走到一个岔路口，周围长着许多高大的岩石。小蜘蛛们没有丝毫犹豫地拐向左边。<br>
+卢瑞恩突然感觉有视线在注视着自己，他转过头看向岩石群。<br>
+几乎是与此同时，他感觉一双爪子死死钳住了他的肩膀，把他拉向后方，他惊叫一声失去了平衡。那双爪子毫不客气地把他压在地上，反剪上他的爪子。现在从他的角度，他只能看见白王紧握住的骨钉。<br>
+“果然，想抓一只钻来钻去的爬虫，你只需守在洞口就够了。”一双脚出现他眼前，首领的声音在头上响起。“它们会把自己送到你嘴里。”<br>
+“…陛下！你不要管我——”首领狠狠地踩到了他头上，他哀嚎一声，白王颤了一下，光变得更加刺眼。“要不是你这只爬虫到处捣乱，我早就拿到神位了！你怎么从野兽的肚子里爬出来的？嗯？你怎么没死在里面？”他又踩了他一下，又踩了一下——<br>
+小蜘蛛们出现在转角，不安地来回爬动着。<br>
+“住手！”白王喊道，他猛地举起骨钉指向了首领。<br>
+首领的动作停了下来，有些难以置信地望向白王：“……你——”他又看看脚底下的卢瑞恩，“…你想救他？”<br>
+就在这时，一只小蜘蛛冲了过来，跳起来张嘴咬住了首领的腿。<br>
+首领痛得嗷嗷直叫，一脚把它踢翻在地。<br>
+“畜生！还敢反咬你家主人？！”他狠狠地踩向那只还没来得及翻过身的小蜘蛛。<br>
+“不要！”卢瑞恩不禁大喊，但是已经晚了。<br>
+他一下又一下地踩着，一边踩一边咒骂：“我让你咬！我让你咬！——”<br>
+血溅的到处都是，钳住卢瑞恩的贵族不忍地转过头。首领脚下的生灵用细小的声音尖叫着，最后渐渐不动了。他一直踩到它不成样子了才罢休。其他几只小蜘蛛向后退缩着，不住地挪动长腿。<br>
+“滚回去告诉赫拉，我不需要这个王位，更不在乎这个异端王国！我要的是神位，她给得起吗？！”他一脚踢开它的残骸——血液四溅——冲着剩下的那三只小蜘蛛怒吼。小蜘蛛张开嘴巴露出尖锐锋利的牙齿，发出嘶嘶的叫声。<br>
+他转回头冷笑着：“想救你的小仆人？好啊，你早说嘛，这样事情就好办多了。”<br>
+“呜——”那个贵族死死扭紧了卢瑞恩的双臂，他觉得自己的左臂又要骨折了。他的胃里翻江倒海，之前吃的那些腐肉果然消化不了。<br>
+“给我住手。”白王强忍住愤怒。<br>
+“老规矩，神位。”首领象征性伸出一只爪子。<br>
+“陛下，不要给他——呜！”首领一使眼色，卢瑞恩的胳膊又被向后掰去，他感觉自己要到极限了。<br>
+“我和你说得清清楚楚，你不可能成神，你怎么还是这么顽固不化！”<br>
+“别废话！把你的神力给我！否则我就杀了他！”首领疯了似的怒吼着。<br>
+白王狠狠地瞪着首领：“……好——”他闭上双眼深吸一口气，睁开，眼神冷漠淡然，“既然你这么想要，我给你。”<br>
+“陛下！不可以！”卢瑞恩努力挣扎着，他的骨骼嘎吱作响。不，他不想成为白王的包袱。他不想被用作来要挟白王的筹码。他不想让白王的敌人知道，圣巢的国王有一个弱点。<br>
+白王垂下骨钉，缓步走到首领面前，仰视着比他高一个头的首领。他伸出左爪抓住了首领的爪子，首领没有躲避。<br>
+他用复杂的表情看着白王，他自己可能也没有想到，“谈判”进行的如此顺利。<br>
+白王的身上泛起了强烈的白光，一如他施展大型法术时一般。那些白光缓缓流淌着，通过白王的爪子流到了首领身上。<br>
+渐渐地，首领的身体周围也散出了微弱的白色光芒——和他玄色的服装极为不衬。他的表情混杂着震惊，享受和狂喜。<br>
+“现在可以把他放开了吧。”<br>
+“…这不是全部吧？”首领贪婪地眯起眼睛。<br>
+“不是。你先把他放开。”<br>
+“我怎么知道你不会反悔？”<br>
+“神力一旦送出就收不回来了。”<br>
+首领盯住白王的眼睛，想在里面找出他说谎的痕迹，不过在他冰冷的眼神里，他什么都没有找到。<br>
+首领用空出来的那只爪子向贵族摆摆手。<br>
+卢瑞恩没有等贵族完全松开爪子便挣脱出来：“陛下！快停下来——”<br>
+“离远点，卢瑞恩。<em>交接</em>的过程很危险。”<br>
+“陛下！”他仍想往白王那边冲过去。<br>
+白王低下头，抬起另一只爪子，一个闪着繁复纹路的球形结界从光中展开，直接把卢瑞恩挡了回去。他摔在地上，又爬起来，扑到结界上，不停使劲敲打着：“陛下！陛下不可以！”<br>
+“没想到你这么好说话，国王陛下。”首领冷笑着说，“你看，我要是早知道这么简单就能让你同意，我也不会像那样委屈你了。”<br>
+白王不答，他右爪中的骨钉逐渐化成光点消逝无踪。他身上的光芒逐渐褪去。<br>
+“神位交出去之后，你会怎么样？死掉吗？化成灰？”首领笑着问道，带着不合时宜的好奇。<br>
+“…我本来还有所顾忌。”白王突然开口，他的声音冰冷刺骨。<br>
+“什么？”首领皱眉。<br>
+“不过看样子这个国家也不需要你了。”<br>
+“你在说什么鬼话？”首领感到气氛有一丝不对劲——也许是因为温度骤降的原因——他立刻向后挣了一下，白王的爪子死死扣住了他，他一时竟没有挣开。<br>
+卢瑞恩感到爪子接触结界的地方突然痛得刺骨，他立刻把爪子抬起来，向后退了几步，发现爪尖已经结上了薄薄一层冰。他抬头看向结界里面。<br>
+首领的表情已然由先前的得意变成了恐惧。<br>
+“你知不知道我是什么神。”白王重新抬起头，冷漠地看着首领惊慌失措的脸。<br>
+“你放开我！”<br>
+结界从里面开始结霜，随后是冰，薄冰攀上结界边缘，咔嗒作响。一整只甲虫高度的冰凌以可见的速度逐渐成型。霜越来越厚，卢瑞恩渐渐看不清楚里面了。<br>
+“连将要成为的神都不知道，你还想成神。”<br>
+“我就是想成神而已！我管你是什么神！……该死的这里怎么变得这么冷！？”<br>
+“谁告诉你神位可以转交的。”<br>
+“…你管得着吗？！”<br>
+“…我也不稀罕知道。”白王的左爪猛地一使劲。<br>
+卢瑞恩只听见结界里面一声清脆的碎裂声，和紧随而来的凄惨的尖叫声，他不由得颤了一下。<br>
+“啊啊啊啊啊啊我的手啊啊啊啊啊——”<br>
+那个贵族吓得直接坐在了地上，捂着眼睛瑟瑟发抖，嘴里念叨不停。<br>
+三只小蜘蛛凑到它们伙伴不成样子的尸体旁边戳了戳它的残骸，又抬起头望着结界里面。<br>
+“我不要了！神力你拿回去吧我不要了——”<br>
+“神力一旦送出，就收不回来了——”卢瑞恩听见白王一字一句地说，“除非信徒消失。”<br>
+“我错了！我知错了！求求您饶了我——啊啊啊啊啊啊——”<br>
+又是一声惨叫。有血喷溅在了结界上——卢瑞恩眨了一下眼睛——瞬间冰冻成了橙红色的“水晶”。<br>
+“我不知道他是谁！他只是突然出现在我那里说有东西给我看！我真的什么都不知道！啊啊啊啊啊——是他说的全都是他说的他说只要我用那个东西威胁你你就会把神位交给我！求求你放过我吧我再也不敢了！”<br>
+“……”<br>
+随后又是一声尖叫。更多的“水晶”碎裂在地面上。<br>
+卢瑞恩颇为不适地偏转目光，他面前的结界突然被撞了一下，结界上的纹路猛地闪了一下光，瞬间又恢复了原状。卢瑞恩被突然贴近的“物体”吓了一大跳，他面前首领的大半个头已经完全被冰覆盖住了，面具早就消失无踪，右眼眶是空的。刚刚的撞击在他的头留下了长长的一道裂缝，但是没有血流出来，因为那里已经完全被冻住了。这颗头现在正贴着结界，碎裂声此起彼伏。他的左臂已经不见了，肩膀处只剩下尖锐的冰凌。他用同样被冰冻住的右爪不断地拍着结界，每拍一下，他的右爪就碎裂一块，掉落在地面上，摔得粉碎。他扭曲的表情卢瑞恩一辈子都忘不了——可能之后会在噩梦里经常拜访他。<br>
+“救救我——救—求你——”他用仅剩的左眼乞求地看着卢瑞恩。“放我…放我出去——”<br>
+卢瑞恩霎那间有些心软，但是眼前这只虫子的状况——即便现在叫停也无济于事了。于是他咬紧牙关，转过了头。结界的周围已经长出了一圈冰凌，颇有威慑感。卢瑞恩一活动才发现，自己身上也附了薄薄一层白霜。<br>
+那个贵族已经昏倒当场了，小蜘蛛们挤作一团，不知是在看热闹还是在害怕。<br>
+卢瑞恩背对着结界，攥紧爪子。他突然听见一声轻笑，这笑声让他不寒而栗，他努力不去辨认这个笑声的主人。首领的尖叫又拔高了一个八度，变得断断续续，最后渐渐消失殆尽了。<br>
+卢瑞恩不由自主地喘息着，不知为何他一遍又一遍地细数那个首领的罪状。<br>
+他听见了一声清脆的碎裂声，终于为这场极刑画上了句号。<br>
+他深吸一口气，有些畏惧地转过头。<br>
+白王立在一堆碎冰块和冰凌中间，依旧保持着往日优雅的姿态，他偏头注视着一大块被冰冻起来的残骸，似乎在好奇它为什么没有像其他的部分那样碎裂。随后他抬起头望向卢瑞恩。<br>
+他的眼神寒冷得可以杀人。卢瑞恩不禁开始发抖，直觉尖叫着让他逃跑，他拼命压制住这股冲动，却仍控制不住地一步步向后退去。<br>
+结界消逝时，散开的光点和冰屑混合着洒落下来。白王迈着优雅的步伐缓缓步出白色的刑场，袍子在碎冰碴里拖动，把几块冰也连带着拖了一段距离。他带着强烈的死亡气场走向卢瑞恩，他的袍子丝毫没有染上污渍，反而在冰霜的映衬下显得更加洁白，就像一个死亡天使一般。<br>
+死神。卢瑞恩脑海里突然浮现出这个词语，他不记得自己在哪里听过。<br>
+那些小蜘蛛是首先反应过来的，它们快速地爬向了白王，在他的袍角边磨蹭，可能是想感谢他为它们的伙伴报仇雪恨。<br>
+白王的脚步顿住了，他低头看向那些蜘蛛，像是看着几个物件。<br>
+卢瑞恩一瞬间感到十分恐惧，眼前的白王似乎变了一个人格似的，光芒也变得寒冷起来，他的眼神里充斥着冷漠无情。<br>
+蜘蛛们似乎也察觉到了不对，它们不安地低下脑袋，颤抖着伏在地上。<br>
+卢瑞恩看到白王周围又开始结起白霜，死神缓缓举起他的手——<br>
+“陛——陛下！”他的呼唤因为寒冷而显得磕磕巴巴。<br>
+白王颤了一下，先是僵在原地，随后有些迟钝地抬起头。<br>
+“……卢瑞恩？”<br>
+下个瞬间，所有的冰块和白霜都开始融化。小蜘蛛们如获大释一般立刻站起来跑得远远的，从石头缝里探出脑袋。白王眼神里的寒冰好似逐渐融化一般，最后恢复了往日的温暖。<br>
+卢瑞恩仍然有些后怕：“陛下…您没事吧？”<br>
+白王眨眨眼睛：“…我…我没事…”他偏转目光，“我好久没有杀人了。”<br>
+卢瑞恩也不希望他再杀人了。他迈开似乎被冰冻住的双腿，几乎是向前趔趄着跑了几步，抓住了白王仍旧冰冷的爪子。<br>
+“陛下…我…我对不起您…我太没用了，只能给您添麻烦——”<br>
+白王看着他，没有说话。<br>
+“您以后不用管我，圣巢要紧，和丢掉性命相比，我更不想被看作您的弱点——”<br>
+“被谁？”白王突然笑着问。<br>
+“被——”卢瑞恩看向四周，一个贵族已经昏死过去，一个首领已经碎成了肉块，一群小蜘蛛瑟缩在石缝里。<br>
+“呃——”卢瑞恩一瞬间竟不知怎么回答。<br>
+白王摇摇头，把爪子搭上卢瑞恩的肩：“别管这些了，你的伤怎么样，是不是加重了？”<br>
+“我没——唔！”他猛地跪在地上捂上嘴，腐肉的反胃感觉真的是加重了。<br>
+“怎么了？”白王俯下身，语气有些焦急。<br>
+“没事——”<br>
+“你看着不像没事。”<br>
+“只是——犯恶心而已。”<br>
+“……”白王突然意识到了什么似的沉默下来，看着自己的爪子。<br>
+卢瑞恩眼角瞥见首领的尸块，冰融化之后，那些血液终于得以开始流动，在那里汇聚了一大滩。<br>
+白王的光有些黯淡。卢瑞恩突然也意识到了什么。<br>
+“…不…不是的陛下，我并没有…并没有觉得您有什么不对——”<br>
+白王的爪子有些颤抖。“…我…我只是控制不住自己…我也知道…我这样很恶心——”<br>
+“不是的，您误会了！”卢瑞恩大声辩解着，“我——我只是吃了不该吃的东西——”<br>
+白王抬起头。卢瑞恩本想着能瞒他一辈子的。<br>
+“……你吃了什么，卢瑞恩？”<br>
+又是一阵反胃，卢瑞恩只是捂着嘴拼命摇头。他另一只爪子使劲推着白王，想把他推到一边。<br>
+“是之前那些蜘蛛送过来的吃的吗？”白王看向蜘蛛们藏身的石缝，它们向后瑟缩了一下。<br>
+不是它们的错！卢瑞恩想说，但他实在是忍不住了。<br>
+白王看着他俯在地上呕吐，表情复杂。<br>
+卢瑞恩喉咙里一阵酸涩，他的眼睛噙满生理性泪水。他模糊地看见自己面前的地面上有什么乳白色的东西在蠕动，又是一阵反胃和呕吐。<br>
+他不知道自己吐了多久，他吐到自己全身乏力，差点栽在那一滩上。<br>
+他感到白王一把把自己拉了起来，他不怎么能看清他的表情。“……你是不是傻，我说我不挑食，我就是不挑食！我是个神，难道还能饿死吗？你怎么…还吃得下——”他的声音有些沙哑。<br>
+“……陛下…我只是想说…我接受您的一切，我不会背叛您的…永远不会——”<br>
+“你不用再说了。”白王颤抖着，“还能走路吗？”<br>
+卢瑞恩勉强点点头，在白王的搀扶下站起身。“陛下，您…等我一会儿，我去…清理一下——”他颤巍巍地推开白王的爪子，又差点跌倒。<br>
+白王沉默了一会儿，猛地拽住他：“不必了，这里也没有水源。你过来。”<br>
+说着，他撩起自己的袖口。他整洁的袖子泛着淡淡的白光。<br>
+“陛下！您别这样！我去找几片叶子——”卢瑞恩有点慌了，他向后退了一步。<br>
+白王不由分说地把卢瑞恩拉回自己身边，轻轻地用袖子的下摆擦拭着他的嘴角。卢瑞恩紧闭眼屏息着，像是将要承受致命一击那样紧张。他的袍子触感细腻光滑，也很柔软。虽然还残留着一丝冰凉，但它散发出的光芒让他感觉很温暖。<br>
+但是他感觉心很痛，一种深深的愧疚，因为他自觉自己玷污了他的美丽。<br>
+“好了。”他听见白王的声音，睁开眼睛。他没有去看他的袖子，他不想看见他被玷污。<br>
+小蜘蛛们不知何时凑到他们周围，亲昵地蹭着他们的腿。<br>
+白王看看这些小家伙，又看向它们可怜的同伴。<br>
+“…你们的伙伴很勇敢。”他说，蜘蛛们听懂了似的望着他。<br>
+他走过去，轻轻蹲下，伸出爪子触碰上它的尸体。白色的灵魂舞动着，渐渐把残骸全部包裹起来，蜘蛛们默默地看着。等到光芒散去，那只小蜘蛛又变得完整无缺了。蜘蛛们快活地吱吱叫了几声，一股脑拥上前，围着那只小蜘蛛打转，用大脑袋轻轻碰着它的身体。<br>
+但是它们没有等到它们意想中的回应。<br>
+它们渐渐安静下来，迟疑着用长腿戳碰它的头。<br>
+“…我没有能力起死回生。”白王轻声说，“这是我能做到的全部了。”<br>
+小蜘蛛们眨巴着眼睛，似懂非懂地望着白王。有一只小蜘蛛仍在锲而不舍地顶着那具躯壳，它已经被顶出了一小段距离。<br>
+卢瑞恩缓过劲来，走到白王身后默默地等候着。<br>
+白王站起身，蜘蛛们纷纷把头抬起来。<br>
+“…能不能请你们继续带路呢？”<br>
+那只尸体旁边的小蜘蛛蹲了下去，靠着它死去的同伴。看来它没有心情再走了。<br>
+余下的两只小蜘蛛互相交换了一下眼神，转过身示意白王和卢瑞恩跟上它们。<br>
+他们路过了那个贵族，他正靠着岩石盯着不远处那滩血迹发呆。看见白王经过，他叫了一声“妈妈呀！”又晕了过去。<br>
+卢瑞恩不知作何表情，这也是一只只被当作是仆人的可怜虫子。<br>
+他们最终还是走出了这个迷宫，直接返回了深巢的大门口。迎面飞奔过来的是德莱娅，她的脸上浮现出少有的担忧表情。<br>
+“国王你没事吧！这四天有没有受什么委屈？有的话跟我说，看我一定好好收拾他们——”<br>
+白王皱起眉：“和根在一起呆久了，怎么说话也学起她来。”<br>
+德莱娅一愣：“…我有吗？”<br>
+卢瑞恩忍住笑点点头。<br>
+“…还不是因为王后陛下总是提起你太小只了很容易受伤——”<br>
+“不要再说了德莱娅。”白王生硬地打断她的话，“泽默呢？”<br>
+“她在前面和部队驻守在一起。”<br>
+“你们进攻深巢了？”白王一边发问一边向前走。<br>
+“对啊，当时你都一天没从那个破屋子里出来了，要是你有什么三长两短，我怎么面对王后陛下啊？”<br>
+白王又一次皱眉：“…根都和你说什么了？你这么听她的话？”<br>
+“也没什么，她就是经常和我说起你刚孵出来时的事——”<br>
+卢瑞恩立刻竖起耳朵。<br>
+“停！”白王开始后悔开启这个话题。<br>
+德莱娅似乎没有在意白王的局促：“——她不停地强调你有多可爱——”<br>
+“我说了停！”<br>
+“——所以要是你就这么没了，她会杀了我的。”她耸耸肩。<br>
+“德莱娅，”白王的语气有点危险，“我建议你还是去协助泽默或者泽若镇守边疆吧。根那边我会再安排虫子做她的护卫。”<br>
+“我问过泽默啊，她极力婉拒我的提议，说她一个人应付的了。她还说了一大堆我听不懂的话……啊，我不想再听她叨叨第二遍。泽若…泽若最近怪怪的，他说他需要和蛾子们处理要务，也不想让我去添乱——当然这不是他原话…”德莱娅说得跟自己像个没人要的熊孩子一样。<br>
+“而且，我想和王后陛下待在一起。她可比你温柔多了。”德莱娅翻了个白眼。<br>
+“这你说的就不对了，德莱娅。”卢瑞恩立刻觉察到了“破绽”，“陛下是世界上最温柔体贴的。”<br>
+“嗯？你确定吗？我的王后陛下会伸出枝条柔声细语地安慰虫子们，你的国王呢？”德莱娅扬起眉毛，等待着卢瑞恩摆出证据。<br>
+“你看——”卢瑞恩抬起爪子，摆出一副“白王研究专家”的样子，正准备娓娓道来。<br>
+“卢瑞恩。”白王冰冷的声音像利刃一般穿透他的思绪。<br>
+“呃——当我什么也没说。”他吐吐舌头闭上了嘴。<br>
+“……我身边都是些什么人啊——”白王喃喃着从他们两个中间快步穿过去。<br>
+德莱娅和卢瑞恩互相换了个眼神，决定把这场“对决”搁置日后再处理。<br>
+等他们走到这场旅途的原点，站在那里等候的不只是泽默。<br>
+有一只超大的…蜘蛛？她在和泽默说着什么。她的周围零星分布着好几只小蜘蛛，它们都卧在地上，似乎在睡觉。<br>
+帮他们领路的那两只小蜘蛛从他们身后蹿出来，奔向那只大蜘蛛。<br>
+“她是深巢的王后赫拉，这两天一直在协助我们找你。”德莱娅解释说。<br>
+“嗯？”赫拉感觉到有东西在蹭着她的腿，低下头，“…你们回来了？威廉和威尔呢？”<br>
+小蜘蛛们吱吱地叫着，赫拉皱起眉，又点点头，最后是一声叹息。她转过身看向白王一行人。<br>
+“……”<br>
+“……”<br>
+两位君主相视无言。<br>
+最终赫拉打破了寂静：“…这事我们有错在先，先向你们赔个不是。”她的话里的确带着一丝歉意，“不过，”她话锋一转，“犯人已经就地正法了，咱们这就算扯平了，怎么样？”<br>
+“……我怎么知道，这不是你们故意设下的局？”<br>
+“你要是这么想，我也没有办法。你看，阴谋论，怎么夸张都可以。”<br>
+“这话不是这么讲的吧，女王陛下？明明这件事里圣巢才是最大的受害者。”卢瑞恩立刻站出来反驳。<br>
+“你们不是还好好地站在这里？我们却丢了个国王。”赫拉摇摇头，“…虽然我早就和他恩断义绝了。”<br>
+“我相信你肯定很乐意听说，死的是圣巢的国王吧。”白王冷冰冰地说。<br>
+“是。”赫拉回答的十分直爽，“你不也很希望我死吗？”<br>
+“…你不怕我现在杀了你？”<br>
+“你以为我会毫无准备地站在这里等死？”<br>
+那些蜘蛛们纷纷站起来，抖掉身上的土。它们远不止这么多，卢瑞恩有些不安地环视四周。之前领路的两只小蜘蛛缩到赫拉脚边。<br>
+他们互相瞪视对方，毫不让步。<br>
+“…陛下，私以为深巢女王近日一直协助吾等，也算将功补过，不如此事留待日后再谈。”泽默晃了晃她长长的触须。<br>
+“你还是算明事理的那个。”赫拉转头看了眼泽默说，“我早给你们留过字条，你们太多疑了，竟然不信。要不是这样，你们早就出来了。”<br>
+“你知不知道陛下他——”因为你的国王受了多少罪？！<br>
+卢瑞恩想这么质问赫拉，却被白王制止了。<br>
+“我累了，不想再谈了。赫拉，这件事就算我们扯平了，圣巢和深巢的关系回归原点，怎么样。”<br>
+“我也正有此意。”赫拉礼节性的微微低了低头，“那么，我们就此别过？”<br>
+“你们要是敢迈出深巢一步——”<br>
+“我们也没想着出去，在这里有吃有喝，挺快活。是你老神经兮兮地觉得我们想出去偷你的甲虫吃。”赫拉俯下身看着白王，她要是压下去，可以压住三个白王，“我也把话撂在这，你要是再闲着没事来打扰我们生活，我可也忍不了圣巢了。要打架？我们有的是虫子。”<br>
+白王瞪了她一眼，没在气势上输给她。<br>
+深巢的女王叉着腰目送他们离开，两只小蜘蛛甚至还胆怯地朝他们招招腿。赫拉瞟了它们一眼，它们立刻就退缩了。<br>
+回去的路上，卢瑞恩一边啃着大蘑菇，一边看着一声不吭在前面领队的白王，不住地回想着之前的那场“处刑”，以及…德莱娅的话。<br>
+陛下的过去究竟是怎么样的呢……？<br>
+他不知道自己该不该好奇，不过俗话说的好，好奇心害死虫。</p>
+
+<p>TBC</p>
+
+<p>—————</p>
+
+<p>（7.5更新）<br>
+我其实一直在纠结要不要写Nosk…感觉写上之后深巢就根本不是虫子能待的地方了🌚<br>
+深巢好危险，我选择陛下🌝<br>
+（8.16更新）<br>
+结果Nosk变成一个小插曲了🌝（小伏笔？）<br>
+（8.17更新）<br>
+白王：“我不挑食的。”<br>
+白王（卢瑞恩脑内自动翻译）：“我很好养活的。”<br>
+卢瑞恩：（捂脸娇羞）</p>
+
+<p>—————</p>
+
+<h2 id="toc_13">～13～</h2>
+
+<p><em>今天（指1月4号）终于下定决心 瞅了一眼lofter 就是为了给自己一个理由继续写下去（</em><br>
+<em>真的很感谢所有人的支持！以及如果我又突然消失了，那一定是我又抑郁到怀疑人生了(´；ω；｀)</em><br>
+<em>这一章，说实在的，是，一年多前的东西（妈耶）_(:з」∠)_我尽力改了一下我觉得尬的地方_(:з」∠)_以及设定断篇的地方_(:з」∠)_</em><br>
+<em>这章很短，原本我想直接删掉不要算了，但是因为里面有那么一丢丢丢丢的伏笔所以_(:з」∠)_</em><br>
+<em>文笔越来越烂了 我羞愧难当 但实在不愿意就此弃坑 虽然感觉激情在逐渐消退 但我会努力挺过难关的！毕竟之前也是写着写着突然有了新灵感嘛 至于文笔…各位看官就当听一个小孩讲故事吧，逻辑什么的从未存在（跪，毕竟尝试过，揽不了这瓷器活</em></p>
+
+<p><em>完美错过大团结，我服了我自己（3.16）</em><br>
+ <em>我猜各位看官已然忘记之前的章节都发生了什么🌚因为连我本人都忘了🌝</em><br>
+ <em>但是不敢翻回去看啊写得好烂好幼稚💊</em> </p>
+
+<p><em>本来之前有一堆想说的 但是攒的太多了 也不是什么值得高兴的事 就单独分开发吧 不放在这篇开头膈应大家了。吸王就要快活地吸！（雾）（3.30）</em></p>
+
+<p>(（）)</p>
+
+<p>卢瑞恩又一次听到了头顶上隐约作响的隆隆声，他有些后悔跟到这里来了。<br>
+白王和奥格瑞姆在两侧警惕地望着隧道上方。从岩壁上窸窣落下了几块碎石，白王立刻伸出爪子示意他们停止移动。<br>
+“…妈耶…”卢瑞恩听见奥格瑞姆低声嘟囔着。<br>
+白王从刚刚一进这个隧道开始就一言不发，他的光芒黯淡微弱，如果没有前方洞口探进来的光，卢瑞恩都快看不清四周了。<br>
+白王伏着身体稍作静待，片刻，似乎是确认好周围不再有动静了，才继续前行。<br>
+于是卢瑞恩在心里默默祈祷了一番，跟上前面两个满级战斗力，自己像抓着救命稻草似的将爪子里的匕首死死握紧。<br>
+迈出这个隧道洞口的一刹那，卢瑞恩才允许自己长舒一口气。眼前是刚刚搭建一半的施工现场，零星几盏遗留原地的光蝇灯笼点缀在工地之间，勉强能照亮周围的一段距离。工人们自然都已经接到通知离开王国边境了。看起来这里的空间是相当大的，灯笼光芒开始衰减的范围内依然没有映出岩壁。<br>
+有点像该发生什么事的地方。卢瑞恩打量着如同灾后废墟一般散乱的脚手架，心里有种不详的预感。在他愣神的功夫，白王和奥格瑞姆已经走出好几步远了，他立刻小跑着跟了上去。<br>
+奥格瑞姆似乎也有些放松下来，他边走边拍着盔甲上的尘土，他吸了口气，还没来得及开口说话，就被白王抬爪打断了。<br>
+“不要说话，”白王低声说，“它在我们上面。”<br>
+“啥？”很不幸地，奥格瑞姆还是没能管好自己的嘴。白王立刻停下脚步，爪子握紧佩剑剑柄。奥格瑞姆虽然不知道发生了什么事，但看到白王表现得准备作战一般的警惕，他也便顺着白王的目光看向上方。<br>
+卢瑞恩随着大流一同看向岩壁顶，光芒散尽后便是无穷的黑暗，顶上略有些高，一眼看过去并不能看到顶部。<br>
+空中并没有敌人，只有几颗碎石随着穿凿岩石的声音掉落下来。卢瑞恩感到握着匕首的爪子开始不受控制地颤抖。<br>
+又是一阵轰隆的声响，伴随着轻微的震动，碎岩和尘土纷纷扬扬地落下。卢瑞恩身旁的脚手架不断发出金属碰撞的叮当声。<br>
+白王频繁地改变防卫的角度，似乎在确定敌人方位。最终，他锁定了右侧的某个角落，开始一步步向后退去。“要来了，”白王摆出了战斗的架势，“这不是普通的敌人，你们站在我身后。”<br>
+他的语速很快，颇有几分不安，卢瑞恩默默向后退了几步。奥格瑞姆刚想抢步上前，就被国王一个眼神瞪了回去。<br>
+就在此时，上方传来一声巨响，右侧穹顶上厚重的岩壁轰然崩塌。即便有白王及时展开的白色光罩，卢瑞恩还是下意识地用胳膊半遮住脸。未待尘埃落定，一片硕大的黑影便摔落在他们面前，“啪”地发出一声黏腻的响音。<br>
+洞顶上的缺口仍在持续向下滴落着黑色黏液和块状物体，紧接着，一整条看似是巨型蠕虫的骨架从岩壁裂口滑下，摔在那片黑色的泥淖里。如果面前的不明物体称得上是生物的话，那它想必是受到冲击，肉身被撞成了好几个碎块。但不知为何，它的骨架仍完好无损。卢瑞恩睁大双眼，眼睁睁看着那些黑色粘稠的物质迅速聚集到骨架附近，附着在了白骨之上，又蠕动着粘接在一起，而他的理智却怎么都给不出一个合理的解释。<br>
+白王又往后退了一步：“大部队在哪里？”<br>
+“在后方，大约有30分钟的脚程。”<br>
+前面传来了诡异的呼啸声，像是在沙哑地尖叫。<br>
+“你们回去让他们原地待命。”<br>
+“可是陛下——”<br>
+又一声尖叫盖过了奥格瑞姆的声音，这次更像是风在哀嚎。黑色物质填充了骨架的空隙，组成了“怪物”的外壳，还在向下滴落着黏液。它缓缓抬起身体，又是一声咆哮。<br>
+现身在王国边境的怪物。<br>
+“…这…这是个什么东西……”<br>
+奥格瑞姆眼神发直，望着眼前庞大无比的身躯失神地喃喃着。以他们的视角，他只能看见这个“怪物”黝黑的身体一角。<br>
+在他身边的卢瑞恩的状况也好不到哪里去，他能做的只是努力不让自己跪倒在地。<br>
+白王面色凝重，忽然举步向前走去。<br>
+陛下！<br>
+卢瑞恩想喊出声，但却无法发出任何声音。<br>
+“怪物”低下头——由于体型巨大，它花费了好长时间才完成这个动作。卢瑞恩这才得以看全它的头部。<br>
+三双黑洞洞的眼睛看不出任何情绪，也许它正看着陛下？和这个“怪物”相比，白王小得就像一粒生命籽。<br>
+“陛下……”卢瑞恩强迫自己迈动脚步，想走到白王身边。<br>
+它的头上长着三对弯弯的角，下颚则长了一圈密而锐利的尖刺——那或许是它的牙齿。<br>
+卢瑞恩犹如在风暴中前行一般，步履蹒跚。他感到有一股无形的力量逼迫他低下头颅，命令他跪在地上。<br>
+奥格瑞姆似乎才缓过神来，因为卢瑞恩听见后面传来一阵窸窣的脚步声，没有一点规律，随后是什么东西倒地的声音。<br>
+卢瑞恩刚想回头察看，但就这一分神的功夫，他自己也差一点跪下去。<br>
+“你不属于这里。”<br>
+在这一片混乱中，卢瑞恩忽然听见了白王坚定有力的声音。<br>
+卢瑞恩的身体颤抖得像一片狂风中的树叶。<br>
+他不知道自己是怎么了，但是眼前这个巨大的“怪物”让他由衷地感到…敬畏。<br>
+他看见白王抽出了骨钉，缓缓指向了“怪物”的头。<br>
+“你不属于这里，”他重复道，“离开，否则——”<br>
+猝不及防地，“怪物”发出了一声震天动地的怒吼。<br>
+卢瑞恩应声跪在了地上，感觉眼前一阵发黑。<br>
+白王的袍子随着吼声带来的狂风剧烈地飘动着，但他依旧举着骨钉，身形丝毫不为所动。<br>
+“这片土地由我守护——”白王的声音更大了些。<br>
+回应他的又是一声怒吼。<br>
+卢瑞恩不由自主地缩起身子，两只爪子举起来抱住头。他感到呼吸困难。<br>
+“——圣巢将在我的庇佑之下——”<br>
+白王的高喊却在“怪物”的吼叫声中清晰可闻，就像是直接回响在头脑中一样，两个声音交织在了一起。<br>
+“怪物”将头低的更低了，几乎快贴上了地面。它威慑性地亮出锋利的牙齿。<br>
+卢瑞恩听到怪物不耐烦地甩出“咚咚”的拍打声，地面随之晃动着。<br>
+“——永存于世！”<br>
+白王突然向后一跃，背后的翅膀飒地展开，与此同时，那个“怪物”张开血盆大口，一下就把白王之前所站的一整片区域吞噬殆尽，只留下碎石滚落的深坑。<br>
+白王轻盈地落在了卢瑞恩身旁。<br>
+“坚持住，我会保护你们的。”他轻轻地说。<br>
+卢瑞恩颤栗着点点头，这是他唯一能做出的回应了。<br>
+怪物缓缓扬起头颅，威慑性地张开嘴，石块和金属碎片从它的牙齿间悉数掉落。<br>
+这时，卢瑞恩听见远处传来伊斯玛的一声尖叫。<br>
+“小——我的天这是什么——”<br>
+白王没有回头，只是喝令道：“你们不要靠近！让后方大部队在原地待命！”<br>
+“可是陛下——”<br>
+“快走！”<br>
+“你一个人撑不住的，我——”<br>
+“这不是你们能对付的了的东西！赶在你们走不了之前快走！这是命令！”<br>
+白王怒喝一声，便又展翅冲向前去。<br>
+卢瑞恩感觉恍恍惚惚的，像是喝醉了一般。那个在卷起的可怖身躯中穿梭的，是陛下吗？<br>
+他是那么娇小，只需一击……<br>
+“怪物”低吼着，追逐着逐渐上旋的那个光点，缓缓地直立了起来。<br>
+眼泪控制不住地顺着卢瑞恩的脸颊滑了下来——他根本就没有控制权。直到此刻，他才发觉自己是多么的无助，多么的渺小。<br>
+陛下……请您…保佑我们…<br>
+他颤巍巍地用爪子在地上画出了白王的神印，在心里祈祷着。<br>
+<em>“不要怕。”</em><br>
+“陛下？”卢瑞恩抬头向空中看去，追随着白色的光点。那光芒在空中停顿了一秒，猛烈闪烁了一瞬，回旋出一个圆弧反冲向巨兽的头部。<br>
+<em>“我会尽快让祢解脱的。”</em><br>
+“怪物”张开血盆大口。<br>
+<em>“…对不起，让祢受苦了。”</em><br>
+——卢瑞恩目睹了他被吞噬的那个瞬间。<br>
+那个瞬间，光屑洒落，世界恢复成一片死寂，黑暗统领一切。卢瑞恩愣在当场，无法活动，只有头中的闷痛感似回声般回荡着。他突然觉得周围的一切都很虚假，脚下的岩石，爪中的匕首都在软化。<br>
+欸？等一下，刚刚发生了什么？他问自己，眨眨眼睛，而时间并没有为此多停留一秒，吞下光的黑色巨兽转过头盯住了他。<br>
+卢瑞恩迷茫地看着，仍未能充分消化他所见证的一切。<br>
+陛下刚刚…是被<em>吃</em>了吗？<br>
+他呆呆地望着“怪物”向他扑来——但在半空中便突然尖啸一声，扭动着撞向了一旁的岩石，摔进了脚手架中。几根被撞飞的钢管划破了他的袍子和躯壳，他没有感觉到痛，只是呆愣着跪坐在地面上，觉得脑袋里似乎有哪里短路了。<br>
+随后，他又目睹了几束白色的光线从“怪物”黑色的身躯中射出，利剑一般迅速而准确地切割出了完美的几何纹路。<br>
+“怪物”痛苦地蜷缩起身体，疯狂地向岩壁上撞去，有好几次，它的巨尾以令人后怕的误差甩在卢瑞恩身旁。<br>
+陛下…还活着吗？<br>
+的确有些过于困难了，作为一介凡胎去理解现在所发生的事。<br>
+下一秒，随着一道白光闪过，“怪物”的身体一侧爆裂开来，断裂的灰白色的骨骼暴露在外，黑色的物质飞溅到四周。<br>
+快速冲向高空的白王迅捷地一转身，在空中收住动作，顺势将骨钉上黑色的粘液尽数甩出，他盯住难逃死期的“怪物”，眉头紧锁。<br>
+卢瑞恩一直看着白王出神，直到对方悠然落在自己面前，他才有些回过神来。<br>
+他突然觉得那股一直牵制着他的力量减弱了许多，但仍有一个嗡嗡作响的声音在他的头腔里回旋着。<br>
+他眼角的余光似乎瞥见一个黑影在远处的空中掠过，身上的磷粉让它闪着异样的光。然而这图景并没有在他脑海中多做停留。他感到头更痛了，茫然地环顾一圈，最后望向那只“怪物”。<br>
+黑色粘稠的液体沿着它的头壳缓缓向下流淌着，逐渐停滞，凝结。<br>
+然而“怪物”并没有死，它不断地吼叫着，扭动着。<br>
+这导致它全身多处的裂口都开始撕裂，逐渐在它的身下聚集了一滩黑血，那些被剥离下来的液体已变得毫无生机。<br>
+它空洞的眼眶中也溢出了黑色的液体，沿着裂痕流了下来。<br>
+“怪物”也会哭吗？卢瑞恩脑中突然浮现出一个古怪的问题。<br>
+“陛下…”奥格瑞姆的声音还在发颤。<br>
+“已经没事了。”白王疲惫的声音传过来。<br>
+“陛下…对不起…我本应该…”<br>
+白王示意他不必道歉，微微点了点头，又转过头俯视卢瑞恩。<br>
+“…卢瑞恩——”<br>
+“陛下——”赫格莫厚重的声音从远处传过来，打断了白王的话，但随后语调也变得恐慌，“这——这他*的什么东西——”<br>
+“陛下！您没事吧——呀！！！”伊斯玛跑过来的时候，“怪物正好剧烈地扭动了一下，她吓得几乎跳了起来。<br>
+“伊斯玛，你去把大部队召集过来，要快，”白王转过头看着“怪物”仍在徒劳挣扎的身躯，又低语道，“要赶在它死之前。”<br>
+“是…是！陛下！”伊斯玛颤抖着领命而去了，看样子她这辈子都不想再看见这个东西了。<br>
+“小国王，你受伤了！”德莱娅气喘吁吁地赶到白王身边。<br>
+“只是小伤，很快就能好了。”<br>
+“你不要逞强了——”<br>
+白王看了看德莱娅，她的眼神里少有的满是担忧。<br>
+“我很欣慰你这么关心我，德莱娅。不过我更希望你不要再叫我“小国王”了。”<br>
+德莱娅“啧”了一声。<br>
+白王摇摇头，俯下身把卢瑞恩和奥格瑞姆拉了起来。<br>
+“陛下…您不用这样——”奥格瑞姆有些无所适从。<br>
+“在战场上，我不仅是你们的王。”白王的视线又回到了卢瑞恩身上，他沉了口气，似是又要开口说话。<br>
+“陛下，您——”匆匆赶来的泽默看到不远处的“怪物”，猛地一顿，并且沉默了好久，“——医师说您需要立即进军，吾…吾便带着士卒前来复命。”<br>
+在她的身后，依稀可以分辨出乌压压的一大队虫子。其中有不少一看见“怪物”便一声不响地倒在了地上，情况稍微好一点的捂着嘴开始干呕。<br>
+队伍中的骚动逐渐扩散。<br>
+“士兵们！”白王观察了片刻，走向队伍，无视了“怪物”尖锐的嚎叫——也努力想忽视因此又倒下去一批虫子的事实，“今天我站在这里，以神的名义，王的身份，同时也作为你们当中的一员，向你们寻求帮助。”<br>
+顿时，骚动减轻了不少。<br>
+“仅凭我一己之力，无法彻底消灭这只怪物。”他停顿了一下，扫视全场，“我知道你们对这只怪物有着十分强烈的恐惧，但是我们必须走上前去面对它。它的存活将给圣巢带来不可想象的灾难。”<br>
+白王走到一个跪在地上还没有缓过劲的虫子旁边，捡起了被扔在地上的骨钉，把骨钉掷向了奥格瑞姆，“奥格瑞姆，把它刺进去。”<br>
+奥格瑞姆接住了骨钉，看了看白王，又看了看士兵们。他们都一齐望向他。<br>
+卢瑞恩望向那只“怪物”，它仍在锲而不舍地扭动着。圣巢的骑士攥紧了骨钉，向“怪物”走过去。<br>
+那只“怪物”感觉到了他的接近，又发出了一声怒吼，但这回奥格瑞姆并没有退缩。虽然他不比“怪物”的一颗牙齿大多少，他还是继续前进着。<br>
+他的脚步逐渐变得坚定，逐渐变得迅捷，他背对着卢瑞恩，卢瑞恩无法看见他的表情。<br>
+奥格瑞姆毫不犹豫地踩进了黑血里，他走了几步便开始小跑起来，最后，他大喝一声，在“怪物”的吼叫声中狠狠地把骨钉刺了进去。<br>
+“怪物”的反应比卢瑞恩想象中的要激烈很多。它痛苦地翻滚着，险些压到了奥格瑞姆。<br>
+他感到刚刚还在他脑中嗡嗡作响的那股力量消失殆尽了。整个战场突然安静了，只能听见大地震动的声音和“怪物”渐渐虚弱的吼叫声。<br>
+也不知是谁喊了一声“为了陛下！为了圣巢！”，所有没有倒下的士兵一齐蜂拥而上，用上了此生最大的力气，把各自的骨钉深深刺进了“怪物”的身体里。<br>
+刚开始，那“怪物”还扭动着庞大的身躯摩擦着地面，甩开了好几十只虫子。赫格莫抡起战锤，重重地砸在“怪物”的头壳上。顿时，裂痕便爬上已经凝固的黑壳，如此反复，它的挣扎逐渐变成了抽搐，最后便一动也不动了。虫子们实在是太多了，黑色的“血液”喷洒得到处都是，即便沾到了他们的身上，他们也丝毫没有在意。<br>
+不出片刻，”怪物”的身下围满了高呼着万岁的虫子们，一些年轻的战士甚至爬到了“怪物”的身上。<br>
+卢瑞恩虽然也被他们高涨的士气所振奋，但在脑海深处，总是感觉有哪里不对劲。<br>
+那股神秘强大的力量…让他想到了白王。<br>
+他感觉白王的神力，和这个力量共享着一个共同的特征，冰冷、神圣而不可抗拒。<br>
+那边的尸体突然抽搐了一下，把虫子们吓了一跳。他们突然都安静了下来，但随后发现“怪物”真的已经死透了，便又接着庆祝起来。<br>
+泽默、德莱娅和奥格瑞姆正在安慰着可怜的伊斯玛，她到现在还没有从惊惧中缓过来——也有可能是又被死相悲惨的“怪物”那千疮百孔的尸体吓到了。<br>
+白王用爪子在袍子和翅膀上空一拂，陷在那些精致纹路里的黑血便化作了黑雾飘散在了空中。<br>
+“陛下…”趁着其他虫子注意力不在他们这边，卢瑞恩开口问道，“您真的无法杀死这个……怪物吗？”<br>
+白王停下动作，看了看卢瑞恩，“是的，我杀不了它…我不能杀它。”<br>
+“在下能斗胆问您为什么吗？”<br>
+白王笑了笑：“不能。”那笑容竟略显凄凉。<br>
+“请宽恕我的——”<br>
+“话说回来，卢瑞恩……”白王的语调逐渐变轻、放缓，“…我听到你的祷告了。”<br>
+卢瑞恩愣了一下，又慌忙低下头：“…陛下…我…”<br>
+“你知道是什么让一个神变得强大吗？”<br>
+卢瑞恩知道这是一个设问句。<br>
+他们望向欢呼着的虫子们。</p>
+
+<p>TBC</p>
+
+<p>（note：创作灵感来源于小时候经常盯着看一大群小蚂蚁围攻一只肉虫子🌚）<br>
+（我哭了写得好烂好幼稚可是我真的好想写完啊哭，我现在压着一堆坑但是有这个坑在这又不想开新的🌝指不定哪天设定突然就撞车了（点头）（迫真）（因为已经和AO3撞一堆了我好焦虑啊））<br>
+—————</p>
+
+<p>emmmm连更！Surprise！</p>
+
+<h2 id="toc_14">～14～</h2>
+
+<p>(（）)</p>
+
+<p>今天的白宫有点不对劲，卢瑞恩刚一走出房间就有了这种奇怪的感觉。<br>
+这只是一种直觉，因为那些家臣和卫兵们还是像往常一样，该闲聊的闲聊，该巡逻的巡逻…而犯花痴的还是凑在一起犯花痴。<br>
+他皱起眉头，路过时故意轻咳几声，那些家臣们便立刻向他连鞠两躬，顷刻作鸟兽散了。<br>
+等到他走到王座室的时候，他好像有点明白有哪里不同了。<br>
+白王背对着大门，面向那把泛着苍白光芒的金属王座，却丝毫没有走上台阶坐下的意思。<br>
+而他身上的光芒，似乎是有好几种情感叠加在一起，复杂得让卢瑞恩根本解读不了。<br>
+也许因为白宫本身就是白王神力的一部分，他们都共享着同一种光芒吧。<br>
+“…陛下？”<br>
+“你想不想坐在那把椅子上？”<br>
+白王头也不回地问。<br>
+“我…我怎么敢…！这是篡权——”卢瑞恩差一点就跪在了地上。<br>
+“是啊，篡权。”<br>
+白王重复了一遍这个词，声音有些疲惫。<br>
+“…陛下，发生什么事了吗？”卢瑞恩试探着询问。<br>
+“……”<br>
+良久，白王转过身，他的袍子优雅地翻飞着。<br>
+“我……”他停住了，“…没事。”<br>
+卢瑞恩疑惑不解地眨眨眼睛，但也不好去追问。<br>
+白王走向了王座室的侧门：“…准备一下就开始早朝吧。”<br>
+厚重的门自动在白王面前打开——有的时候卢瑞恩真的觉得白宫就是白王的一部分。<br>
+他站在原地消化着刚刚发生的事情，想从里面找出一些蛛丝马迹，却无处可寻。<br>
+陛下能解决那些问题，他是神——是梦中那位立在顶端的神。卢瑞恩最终只得这么安慰自己。<br>
+朝臣们陆陆续续地都赶到了王座室，等到白王携白后返回的时候，卢瑞恩已经坐在了首相的座位上，五位骑士站在王座的两侧。<br>
+两位皇室成员缓缓走上台阶，坐在了各自的王座上。<br>
+早朝一如既往，问题几乎都是重复的。比如哪个村庄遭遇了野兽侵袭、哪个地方发生了自然灾害等等。<br>
+卢瑞恩突然又有些怀念和白王一起出征的日子。<br>
+他相信在圣巢之外的某个地方，一定会有更新奇的事物等着他们去发现。<br>
+但是他已经开始变老了。<br>
+是的，他明显的能感觉到自己的身体一天不如一天。现在的他只要坐的时间一长，再站起身就会感到一阵眩晕。<br>
+但是陛下是不会老的，他是神。他会永远陪伴着圣巢。多么幸运的国度啊。<br>
+“还有没有虫子想要提出议题？”卢瑞恩将羽毛笔放到了墨汁瓶里，把记录册翻到了新的一页。<br>
+许久，没有虫子再开口说话。<br>
+卢瑞恩抬起头。<br>
+眼前站在王座下面的朝臣们都低着头不说话，看来是没有问题了。<br>
+但在他的旁边，五骑士之一的伊斯玛——圣巢的首席医师——快速但轻微地抬了抬头。她不安地握起双手，又松开。于是卢瑞恩比平常又多等了一会儿。<br>
+伊斯玛可能觉察到了首相的好意，似是下了决心一般，她抬起了头。<br>
+“…陛下…”她开口道。白王转过头望向她，点头示意她说下去。<br>
+伊斯玛有些踌躇，但她还是走到了台阶下面的平台上行了礼。<br>
+“虽然这可能是一个不需要汇报的问题…但是我想了很久，我认为…我有必要让您知道这件事，”她停顿了一下，”最近，各个地方的医所——尤其是在比较偏僻的地区——都汇报说发现了一种奇怪的病症。得了这种病的人睡眠周期会越来越长，现在记录在案的最长的时间已经超过了10天。”<br>
+伊斯玛话音刚落，朝臣们便发出了一阵轻叹。<br>
+“我想…如果再这样下去…恐怕…”伊斯玛缓了口气，“…恐怕他们会醒不过来，陛下。”<br>
+白王皱了皱眉：“你是说他们连续睡了10天10夜？”<br>
+“…是的，陛下。”<br>
+“没有发现任何治疗的方法吗？”<br>
+“病人大多数都是年龄极大的虫子，我们对他们进行了全身检查，他们健康状况不一，也有已经得了其它种类的老年疾病的，也有完全健康的…所以我们判断可能是一种新型的老龄疾病…可能是大脑老化导致的生物钟紊乱…”<br>
+“你们的意思是这种病是自然现象，是无法治愈的？”<br>
+伊斯玛的声音突然有些发颤：“是的，陛下……但是…但是最近我们有了新的病例…病人…还是只幼虫。”<br>
+卢瑞恩的笔停住了。<br>
+“…说下去。”<br>
+“现在我们已经完全失去了研究方向，陛下…我们把一切可以想到的方法都试过了，没有一个有效…他们睡得越来越久…”伊斯玛紧张地看了看白王，“…所以我想，恐怕只有您的力量可以治好这个病了。”<br>
+白王低下头沉思着。<br>
+“他们没有任何相似之处？像是吃了什么相同的食物？”<br>
+“…恐怕没有，陛下…”<br>
+“现在还没有死亡的病例吧？”<br>
+“…没有…但是…就像一个家属说的那样，病人们醒不过来，跟死亡没有任何差别…”<br>
+“……有时间我会去看看的。”<br>
+“…是，陛下。”<br>
+伊斯玛又行了个礼，退回到她的位置上。<br>
+白后微微探出身子，附在白王耳边说了些什么。白王似乎颇为无奈地叹了口气：“…伊斯玛，你现在去和教师汇报一下情况，让她立刻着手研究。”<br>
+伊斯玛低下头行过礼，便神色匆匆地离开了。见朝臣们不再有什么动静，卢瑞恩摘下眼镜，轻轻合上记录本，收好羽毛笔，望向国王。白王默许地点头，和王后一齐站起身。<br>
+“退朝吧。”</p>
+
+<p>(（）)</p>
+
+<p>“陛下，就是这边了，现在我们已经采取了隔离措施，这一带已经被限制出入了。”老村长颤巍巍地解释道，他的眼神一直停留在地面上。“…您…还请您多加小心啊。”<br>
+“……我知道了。”<br>
+“…再次感谢陛下千里迢迢临幸我们这个不起眼的小村庄。”他诚恳地跪了下来，额头贴到了地面上。<br>
+白王用似乎能看透灵魂的目光，凝视着臣服在地上的虫子。<br>
+“…起来吧。”他移开视线，转身，“卢瑞恩，我们走。”<br>
+卢瑞恩多看了伏在地上，不自主打颤的老村长几眼，随后小步跟上了白王的背影。<br>
+他们沉默着走出了几十步，直到白王再次打破寂静。<br>
+“…刚刚那只虫子，我叫不出他的名字。”白王突然说道。<br>
+“啊？“<br>
+卢瑞恩被白王这句有些莫名其妙的话搞得一头雾水。<br>
+但下一秒钟，他就反应过来了。<br>
+…异教徒？<br>
+“…陛下…那…”<br>
+白王却没再说话，只是加快了脚步。<br>
+又是很长一段时间的沉默，卢瑞恩能明显感觉到脊背一阵发凉。四周零星分布的住家都将门窗紧闭，卢瑞恩甚至还能听见某处传来的微弱啜泣声。<br>
+他们终于还是到达了目的地。<br>
+这栋房子外面的墙上，用红色的涂料赫然画上了一个大大的叉，未干的涂料向下流出了好几道漆痕，触目惊心。<br>
+一个衣衫褴褛的妇人坐在门前的小板凳上，呆滞地望着天空。<br>
+白王又走近了一些，这才引起了妇人的注意。她猛地站起身，瞬间缩短了他们之间的距离，一把拉住白王的胳膊。这架势把卢瑞恩吓了一跳，以至于他下意识地探向了腰间的匕首。<br>
+“夫人——”<br>
+“陛下！陛下您一定要救救她！她才五岁啊……！”<br>
+绝望的母亲一直拉着白王的衣袖，无论卢瑞恩怎么劝说都不肯松手。<br>
+“…我知道了，你不要着急…”白王把爪子搭在了那位妇人的爪子上，“我会救她的。”<br>
+“…谢谢…太感谢您了陛下……”妇人连声重复着感谢的词句，终于松开了手，心理上突然的放松导致她有些站立不稳，如果不是卢瑞恩连忙走上前扶着，她恐怕就会瘫倒在地上了。<br>
+白王走到小屋的门前，转过头示意卢瑞恩跟上来。<br>
+这是一座再普通不过的小屋了，没有多余装饰用的花纹，一切都以实用为原则进行设计。可以看出来这座小屋的主人并不是很富裕。<br>
+卢瑞恩用力推开了小屋的门，很轻，他差点栽了个跟头，他平时推的门可都是实打实的石门。<br>
+小屋里只分了两个小房间，看起来一个是会客厅，一个是卧室。<br>
+这里的光线有些暗，不过有白王在，这都不是大问题。再次推开一个木门，这回卢瑞恩长记性了。<br>
+他们看见，在白王光芒的照耀下，一只小虫子正坐在床上望着窗外。<br>
+卢瑞恩和白王同时疑惑地眨了眨眼。<br>
+听到有虫子进来了，那只小虫子立刻把头转向了他们这边。<br>
+三只虫就这样对视良久，谁都没有说话。<br>
+“…你们…是谁啊？”终于，稚嫩的童声响了起来。<br>
+白王没有说话，于是卢瑞恩上前一步：“这位就是——”<br>
+“啊！我知道了！你就是那只会发光的虫子！”她恍然大悟。<br>
+白王皱起眉。<br>
+卢瑞恩咳嗽了一声：“小姑娘，注意一下你的言辞，现在站在你面前的可是——”<br>
+“我一直想亲眼看一看你！”小虫子跳下床，“那个大姐姐说的没错！你果然来了！”<br>
+卢瑞恩刚想教这只不知轻重的小虫子怎么去尊敬一位国王，白王突然开口了：“哪个“大姐姐”？”<br>
+“就是在我睡觉的时候在梦里陪我说话的大姐姐！”小虫子快活地把爪子背在身后，依旧沉浸在实现了自己的一个小梦想的快乐中。<br>
+“在你睡觉的时候？”<br>
+“嗯！”小虫子使劲点头，“大姐姐对我可好了，她给我讲了好多好多好玩的故事！”<br>
+她突然沮丧起来：“…但是她突然说你要来了，她就走了——”<br>
+“——但是没关系！我见到了传说中会发光的虫子！而且，她说之后还会来找我的！”她又绽开了一个笑容。<br>
+“…那个大姐姐…她长的什么样子？”<br>
+“嗯～～”小虫子皱着眉使劲回忆着，“…我只记得…她的声音很温柔…然后…和她在一起感觉很温暖……嗯…剩下的就没印象了…”<br>
+“你没有看见她的样子？”<br>
+小虫子低下头：“……没有…但是我想不起来为什么了…”<br>
+她想了想又补充道：“不过如果可以的话，我愿意一直听大姐姐讲故事！”<br>
+“她讲的什么故事？”卢瑞恩忍不住问道。<br>
+小虫子笑得有点狡黠：“不～告诉你们！大姐姐说回头她会亲自给牙签儿讲故事，所以不让我提前告诉他！”<br>
+牙签儿？<br>
+卢瑞恩可以清楚地看到照耀着房间的光突然闪烁了一下。<br>
+“安娜！我的甜心！我的宝贝！你醒了！你醒了！！！”<br>
+房门突然被撞开，卢瑞恩到嘴边的一个问题被挡了回去。<br>
+“妈妈——”安娜的声音因为被包裹在了母亲拥抱中而模糊起来。<br>
+“我一听到你的声音就跑过来了！我好害怕…我好害怕失去你…我的宝贝…！你已经睡了一个星期了你知道吗？一个星期！整整七天——”<br>
+“妈——我知道啦——”<br>
+安娜的声音闷在衣服里，听起来十分不情愿。<br>
+卢瑞恩咳嗽了一声。<br>
+安娜转了转眼珠，她只有眼珠能动了。<br>
+妇人立刻转过头，她的眼睛周围还是红红的，还挂着泪痕。<br>
+她这才想起来她的国王还在这里。<br>
+“…哦！陛下！请……请原谅我的失态！我…我实在是太…太…”<br>
+她就像是回到原始年代一般，根本无法进行正常的表达了。<br>
+她松开爪子，按下了安娜的头。<br>
+“快、快跟陛下谢恩！”<br>
+她一边说着，一边跪着把头磕到了地上。<br>
+安娜被按得有些疼，但还是和她的母亲一起给白王磕了三个响头。<br>
+“有什么要求请您尽管吩咐，我为您做什么都愿意！”<br>
+“…起来吧，我唯一的要求就是请你再教导她一遍基本的礼仪。”<br>
+安娜不服气地嘟起了嘴。<br>
+话虽如此，一直到他们离开，卢瑞恩都没有想出来“牙签儿”这个词的来源。</p>
+
+<p>(（）)</p>
+
+<p>一周之内，患病的虫子呈指数级增长。虽然一直徘徊在王国的最外围，但这种趋势实在是不容乐观。<br>
+医院。<br>
+医院是天使的驻所，是人间的地狱。<br>
+在这里，最黑暗的情感被肆意宣泄、理所应当，而一切不合常理的事情都会合乎逻辑。<br>
+“你们为什么不让他们去死？！”一位老妇人发疯似的冲着医生咆哮着，嗓音因为嘶吼而沙哑不堪。<br>
+“夫人，您冷静一下——”<br>
+“瘟疫！既然是瘟疫，为什么还让这些瘟神活着？！”<br>
+“夫人——”伊斯玛挤过围着她劝说的医生们，试着把爪子搭在她肩膀上。<br>
+“别碰我！！”她猛地挥开爪子，伊斯玛惊叫一声，她的爪子被打到一边。她捂着爪子，不知所措地看着这位愤怒的母亲。<br>
+“快去拿镇定剂！”卢瑞恩听到身旁一位医生低声喊道。<br>
+她迅速地转过头，视线对上了人群外白王冷峻的眼神。<br>
+她眯起眼睛。<br>
+卢瑞恩察觉到有些不对，她注视白王的时间有些过于长了。<br>
+“…你就是源头。”她低声说道。<br>
+白王沉在身体两侧的爪子颤动了一下，又背向身后。<br>
+“你就是源头！！”她怒吼一声突然向白王的方向扑了过来。<br>
+“陛下！”卢瑞恩立刻挡在白王面前。<br>
+白王没有反应，只是静静地看着眼前的混乱。<br>
+那位母亲没能碰到他们，就被医生们摁倒在地。她仍在挣扎着，尖叫着。<br>
+“瘟神！瘟神！”<br>
+“镇定剂！”“快！按住她的手！”<br>
+卢瑞恩表情沉重地看着那位母亲逐渐丧失知觉，他缓缓放下紧握着匕首的爪子，长舒了一口气。<br>
+“陛下…”他回过头确认白王的情况。<br>
+白王似乎在思索着什么，他许久都没有说话。<br>
+卢瑞恩发现，失去了光芒的国王看上去更接近灰色。<br>
+商议及安排过后，白王开始着手“救治”病人。<br>
+“陛下，这边还有。”一位医生神情焦急地小跑过来。<br>
+白王点头，站起身的一刹那突然差点失去平衡，卢瑞恩立刻扶住了他。<br>
+“陛下，您要是觉得太劳累了，还是先休息一阵吧。”<br>
+白王摇头，推开卢瑞恩的爪子，随着同样满面担忧的医生离开了。<br>
+“谢谢…”“谢谢您们…”<br>
+卢瑞恩走在走廊里，一路上听到的都是这些虚弱的道谢声，混杂着孩子的哭声，父母的抽噎声，医者的叹息声…还有偶尔传来的咒骂声。<br>
+患者实在是太多了，走廊里靠着墙坐着的、躺着的，几乎把通道挤得水泄不通。卢瑞恩不得不万分小心才不至于踩到某只虫子的爪子。<br>
+白王就在前方不远处，半跪在地板上，抓着一只小虫子的手腕。一位护士站在旁边，抱着一块软垫——那本是为白王准备的。<br>
+白光褪去，小虫子渐渐睁开眼睛，茫然不知所措地看着面前的光。她的母亲连忙把她抱在怀里，低声啜泣着。<br>
+“谢谢您…谢谢您…”<br>
+白王点点头，起身，身体又一次摇摇欲坠，一旁的护士连忙搀扶住他。<br>
+“陛下，”卢瑞恩加快了穿梭的步伐，“您需要休息。”<br>
+白王没有说话。他已经很久没有说话了。<br>
+“把垫子给我，你去忙吧。”卢瑞恩接过护士怀里的软垫，转过身扶住白王的手臂。白王在不易察觉地喘息着，他的眼神有一些丧失焦点。<br>
+“医生，还有多少病人？”卢瑞恩看向一旁的医生。<br>
+“……还有…很多。”他踌躇着说，“一听说陛下到这里来救治病人，大家都过来了……”<br>
+“能不能把剩下的病人安排到明天？你也看到陛下的状况，他需要休息。”<br>
+医生垂下目光，陷入了沉默。<br>
+“…能…能不能先救一下我妈妈…”卢瑞恩听到某个角落里一只衣衫褴褛的小虫子胆怯细弱的声音，“她已经好几天没有吃东西了，弟弟妹妹们也已经好几天没有吃东西了，我们实在没办法了…我把妈妈背过来，真的好累…”<br>
+他的声音像是回荡在空房间里一般响亮。<br>
+“…还有我父亲…他是我们村唯一一位医生…”<br>
+“我女儿收养了好多孤儿…她是他们唯一的希望啊…”<br>
+卢瑞恩来回扫视着逐渐骚动起来的虫子们，努力思考着回答。白王似乎要挣开他的爪子，但他抓的更紧了些。<br>
+“不，请你们谅解，国王陛下要回宫了——”<br>
+“神不会觉得累的吧？”<br>
+又是某处，一个质疑的声音传了出来。<br>
+卢瑞恩立刻转过头：“不要说这种话。”他有些被自己语气中饱含的愠怒惊到了。<br>
+“…对呀，他是神啊。神怎么会累呢？”<br>
+“神是不会累的。”<br>
+“…除非他不是——”<br>
+“你们说够了没有！”<br>
+这声怒吼在他反应过来之前就已经脱口而出，瞬间整个走廊都安静下来，卢瑞恩突然感到一阵凉意。他感到白王握紧了他的爪子，隐约听到了一阵唏嘘声，不知道是不是他的幻听。<br>
+“…又不是你得了瘟疫…”这声音很小，几乎听不见，但他还是不幸听得清清楚楚。<br>
+他们沉默了许久，小孩子的哭声断断续续。<br>
+“…医生，”他的声音有些发颤，“把剩下的病人安排到明天。”他尽量让自己的语气显得坚定，他可能没有成功。<br>
+面前的医生却始终低着头，丝毫不为所动。<br>
+“…医生？——”<br>
+医生身体一晃，突然像是被抽走所有力气一般跪倒在地：“求求您们救救我的孩子们吧！他们一直很听话很体贴的！已经七天了！再这么下去…他们活不过明天的啊！——”他突然崩溃似的抱头痛哭起来。他的哭声连带着走廊里的抽泣声，声音越来越大。<br>
+卢瑞恩只是站在原地，牵着白王的爪子，看着跪在地上大哭的医生，他恨自己什么都做不了。<br>
+“卢瑞恩。”白王的声音实在是过于轻了。<br>
+“陛下，您需要休息。圣巢不能承担失去您的风险。”卢瑞恩颤抖着说，“我们离开这里。”<br>
+“您要是走了，我现在就…撞死在墙上！”一个妇人哭喊着，把头往墙上撞去。没有虫子阻拦她，他们只是哭泣着。<br>
+“把护士叫过来…”卢瑞恩喊道，声音疲惫不堪。没有人回应。医院的其他地方也响起了阵阵哭声。<br>
+“伊斯玛呢？伊斯玛——”<br>
+“卢瑞恩，我没事的。”白王的声音又在耳边响起。<br>
+卢瑞恩回过头，看着白王颤抖着的身体。<br>
+“我没事的，”他又说，“你回去告诉根，我今晚不回宫殿了。”<br>
+“不行。”他猛地用双爪抓住白王的肩膀，他爪子里的抱枕掉落在地上，发出一声轻响。<br>
+白王没有因为他的僭越而生气，他可能已经劳累到不想深究了：“我是神，我没事的。”这句话反而像是他在说服自己一样。<br>
+“您需要休息。”卢瑞恩突然感觉眼睛干涩得厉害。<br>
+“卢瑞恩，”白王突然释然地笑了，“你不相信你的神吗？”<br>
+他的笑容很温暖，很让人安心，尤其是在现在这个时刻，现在这种场合。<br>
+卢瑞恩发现自己在哭，眼泪顺着脸颊静静地流下来，他下意识地收回爪子拭去眼泪。<br>
+面前白王模糊了的身影踉跄着转过身，卢瑞恩慌忙去抓。<br>
+一双有力的爪子从背后死死扣住了他的肩膀，医生沙哑的声音传过来：“相信我们的神吧，首相。”<br>
+你们在杀他。他想说。你们在杀死他。<br>
+他想挣开束缚，追上那逐渐远去的光，但十分默契地，走廊两旁的虫子们默默起身，挡住了他的去路，挡住了他的视线。<br>
+“愿圣巢永存于世。”一个声音喃喃着。</p>
+
+<p>(（）)</p>
+
+<p>“情况很不理想，大人。虽然大部分患者已经醒转过来，但还有一部分…很大一部分还在沉睡——”<br>
+“陛下呢？”<br>
+犹豫。<br>
+“…陛下…陛下疲劳过度——”<br>
+“他现在在哪里？”<br>
+“骑士们把陛下从医院里接回来了…现在正在卧室里休息…”<br>
+“我需要和院长谈谈。”<br>
+“…呃…首相大人…院长…院长今天早上没有醒过来…”<br>
+卢瑞恩从一大堆文件里抬起头。白王日常处理的事务比他想象中的还要多得多得多。<br>
+他一直在勉强自己，他知道。<br>
+他站起身：“…剩余病人的家属们怎么安排的？”<br>
+“…他们…很绝望，首相大人…呃…已经…已经有自杀的案例了…”<br>
+自杀？是“同归于尽”吧。<br>
+卢瑞恩低下头。但他又想起白王涣散的眼神，想起挡在他面前密不透风的“墙壁”。他握紧爪子。<br>
+“…通告全境，之后的治疗全部按照等级先后顺序安排，对圣巢有突出贡献者优先…没有特殊情况不得例外。”<br>
+“首相大人——”<br>
+“不得例外。”卢瑞恩冷冷地重复道，不带任何感情。<br>
+“…遵命，首相大人…”<br>
+“你走吧。”<br>
+石门缓缓闭合，卢瑞恩长吸一口气，坐回到座位上，把头埋到了衣袖里。他呼吸着白宫宫殿长袍特有的、如冰雪般清冽的味道。<br>
+刚刚他的确是生气了。为什么？对虫子们的惩罚？又有什么意义呢？<br>
+他继续保持着这个姿势，两分钟后又猛地起身，走向大门。<br>
+走廊中，家臣们都行色匆匆，完全失去了白宫往日的镇定。<br>
+卢瑞恩叩响卧房的门，他听见细微的挪动声，一直延续到了门口。<br>
+“…是谁？”白后清冷的声音传了出来，很轻。<br>
+“首相卢瑞恩求见。”<br>
+一阵迟疑过后，门开了。<br>
+“…卢瑞恩…”<br>
+“王后陛下，”他简单行了一礼，“陛下情况怎么样？”<br>
+白后颤了一下，抿起嘴。她闭上眼睛，尽量把声音压低：“…很不好，首相，很不好——”<br>
+她的声音到最后都有些哽咽，于是她没再多说什么，只是摇着头，把位置给卢瑞恩让了出来。<br>
+白王躺在与他的体型相去甚远的大床上，身上盖着一床薄薄的纱被——边角都被仔细地掖好了。床旁一把石椅，一边的桌子上搁置着一些起居用品。<br>
+“守卫们说，当时他还在进行治疗，周围的虫子觉得等待的时间过于长了，才发现他已经昏过去——”白后的故意压低的声音终究还是因为啜泣而尖细了起来。<br>
+“…他总是这个样子…总是逞强…他是那么弱小——”白后捂住嘴，她的啜泣声从缝隙间漏了出来，“他总想让自己成为灯塔，可是他终究也只是一根蜡烛啊——”<br>
+卢瑞恩轻轻地把爪子放在白王的身体旁边——他不喜欢被触碰。<br>
+“…是我的错。我没有坚持把陛下带回来。”<br>
+白后痛苦地摇着头：“你没有错，谁都没有错。…我想报复，真的…但我甚至都找不到一个可以怪罪的对象……”<br>
+卢瑞恩望着熟睡的白王，没有说话。<br>
+“……圣巢。”白后的声音突然间充满痛恨，让卢瑞恩打了一个冷颤，但那痛恨的语调又在一瞬间消散了，“——圣巢…他对它的爱已经胜过了对我的爱。…这是当然的，他付出了一切…甚至更多。当他从窗边俯瞰整个泪水之城的时候，他…圣巢带给他的幸福，是我给不了的…我又怎么忍心——”<br>
+“…这场瘟疫…不能只留陛下一人面对。”卢瑞恩抬起头望向白后，尽量让自己显得坚定，“我们也会尽全力研究瘟疫根源的，王后陛下。请您相信我们。”<br>
+白后只是摇头：“如果他就这样一直睡着，到第二天都没有醒过来，那我该怎么办？又有谁能救他？”<br>
+卢瑞恩答不上来，这是一个无解的问题。<br>
+事实上，直到这一刹那，他才开始感到恐惧。也许是彻夜未眠的疲劳让他忽视了事情的严重性，在白后提出这个问题的时候，他才意识到，如果他的国王真的醒不过来的话，将意味着什么。<br>
+12个小时前的那个转身，那其实是他见到他的最后一面，是他亲眼看着他走向死亡。<br>
+“不…陛下会没事的…陛下他…他的神力可以…您也看到了，他的神力可以治疗瘟疫！”卢瑞恩直直地盯着白王闪着微光的爪子，磕磕绊绊地说出了逻辑混乱不堪的理由。<br>
+白后已经勉强止住了哭声，只是偶尔抽噎一下。她沉默片刻，舒展枝条搭上了卢瑞恩的肩。<br>
+“…对不起…我…我不该让你害怕的…”<br>
+卢瑞恩本应说点什么的，但他发觉自己甚至都无法稳定自己发颤的身体。<br>
+不知为何，国王孤身立在顶峰的画面总是在他眼前挥之不去。或许神注定会是孤独的吧。<br>
+如果他不是神就好了。在这个渎神的想法又一次闯入他的脑海。卢瑞恩忍住泪水，国王的面容又一次在他眼前模糊。</p>
+
+<p>(（）)</p>
+
+<p>白王昏迷了三天三夜。<br>
+那几个晚上，卢瑞恩每从睡梦中惊醒，都会下意识地坐起，望向对面的墙壁。柔软的白色枝条攀附着玉般的苍白石砖，即使无风，叶片也在缓缓地颤动。<br>
+不过，和前几天不同的是，今天墙面上的纹路第一次出现了流转着的白光。<br>
+卢瑞恩又对着墙愣了一会儿，随后释然地躺回床上。<br>
+啊，新的一天终于到来了。<br>
+翌日，等到卢瑞恩匆匆赶到宴会厅时，五骑士都已经到了。大家似乎都兴致盎然，原因自然是庆祝一下国王醒过来的事。当然，这件事并没有弄得人尽皆知——大部分虫子甚至都不知道他们的国王晕倒在医院。简单和大家寒暄几句后，卢瑞恩坐到了王座旁的位置上。随后，朝臣们陆续赶来落座。<br>
+白王走到王座前的时候，依然是由白后搀扶着的。卢瑞恩的视线一直紧随着白王，他有点开始担心国王的身体还没有完全好转。<br>
+早宴开始，餐点陆续上桌，白王礼节性地起身祝酒，象征性地抿了一口，推给仆人，换成葡萄汁，大家跟酒，随后就开始大快朵颐了。<br>
+卢瑞恩好久没有吃过这么安心的饭菜了，他的字典里又多了一条幸福的定义。<br>
+卢瑞恩隐约听到一旁的某个朝臣小声嘟囔着什么，把爪子往手帕上抹，他也没太在意。正当他盯上一盘烤蘑菇，想把美味都据为己有的时候，白王突然站起身，皱着眉捂住嘴。他旁边的白后立刻伸出枝条温柔地扶住他颤抖的身体。<br>
+“……谁做的餐点。”<br>
+大家面面相觑，卢瑞恩没来得及放进嘴里的、叉子上的烤蘑菇啪的一下掉落在盘子里。<br>
+“把厨师叫上来。”白后对在她身边用餐的德莱娅说，<br>
+“陛…陛下，您…您找我有事吗？”片刻，一只穿着围裙的虫子跑进大厅，他的围裙上还沾着一些油渍。他恭敬地在长桌前跪下，围裙的下摆撂至前方，额头碰上。<br>
+白王把捂着嘴巴的爪子移开，卢瑞恩瞅见他爪缝间的一撮绒毛。<br>
+不会错的，那是蛾子的绒毛。娜莉的绒毛和它几乎一模一样，那些鳞粉四散飘落在桌面上。<br>
+白王的爪子不住地颤抖着，卢瑞恩从没见他这么动摇过。<br>
+“…这…这是你做的？”<br>
+“是的陛下。”那只虫子似乎完全没有意识到自己闯祸了。<br>
+“我知道你忠于我，我可以原谅你的无知，”白王的声音压抑着愤怒，“告诉我你在里面放了什么？”<br>
+“…呃…就是…蜂蜜…香草…面粉——”<br>
+“你知不知道——”刚开口时，白王的语气快而尖锐，不过随后他似乎意识到自己动怒了，他闭上眼颤抖着深吸一口气，才继续说，“——这里面有蛾子的肉？”<br>
+此言一出，语惊四座。<br>
+“什——我不知道您在说什么，陛下……我——”<br>
+“你最好说实话。”白后的语气也充满着危险的气息。<br>
+卢瑞恩的眼神在厨师、白王和白后之间打转。<br>
+“我…我发誓！国王陛下，王后陛下，我发誓我不知道您们在说什么…我…我——”<br>
+“你好好想想，还有没有虫子进过厨房？”<br>
+“我…我真想不起来啊——”<br>
+“陛下！”一个守卫突然冲了进来，“不…不好了！出人命了！有……有一只……厨房——”<br>
+“你慢慢说。”卢瑞恩也站起身。<br>
+守卫做了几个深呼吸：“厨房…有…有一只虫子…厨师打扮…把自己包的严严实实的靠着墙坐着……我们…我们还以为她在休息，一开始没有管……然后…然后——”他突然瑟缩起来。<br>
+“然后？”卢瑞恩催促着。<br>
+“然后…我们看她一直都没有动，就去碰了碰她，问她怎么了……结果…结果她直直地倒了下去！我们吓了一跳，连忙去拉她，无意中把那些布扯掉了…之后…发现…发现她是一只蛾子——”<br>
+白王已经预料到了什么似的，重重地坐回座位上，喘着粗气。<br>
+“……她…她的左胳膊…左胳膊一半已经…不见了——”<br>
+“她把自己剁成馅放进了食物里。”白王喃喃着说。<br>
+顿时，大厅里先是一片死一般的寂静，紧接着大家都反应过来，一片反胃的干呕声，好几个大臣捂着嘴冲出了房间。卢瑞恩呆滞地站在原地，抚上自己的脖子。他吃过比这还要恶心的东西，他不怕。只不过——<br>
+白后关切地询问着白王的情况，白王只是扶额摇着头，没有回答。<br>
+卢瑞恩看得出来，白王已经愤怒得快失去思考能力了。<br>
+为什么？那只蛾子为什么要这么做？活生生把自己的胳膊砍下来？再剁成馅？<br>
+他脑海中浮现出一只蛾子阴笑着做完这些工序的场景，他突然也感到一阵反胃，连忙捂住嘴。<br>
+“卢瑞恩。”白后的声音从身后传过来，他强忍住不适，平复心情，转过身。<br>
+“王后陛下。”<br>
+“你来一下，我们有要事相商。”她缓缓起身，示意卢瑞恩跟上，同时搀扶起白王，白王起身时有一些不稳。<br>
+卢瑞恩微低着头，默默跟在国王和王后身后。白后正在细声安慰着白王，柔软的枝条紧紧绕住白王的爪子。<br>
+怎么，陛下才刚恢复意识，就遇上了叛徒？卢瑞恩恨恨地握拳。<br>
+白后把白王和卢瑞恩领进一个房间内，轻轻扶白王坐下，随后坐到白王身边搂住他。卢瑞恩跟在后面，将门闭紧。<br>
+白王不住地颤抖着，卢瑞恩听见白后柔声让白王向他们解释一下现在的情况。<br>
+“…这是仪式，这一次是，上一次也是…他们想召回那个光。”白王颤抖着爪子，捂着脸痛苦地说。白后把他搂得更紧了一些。<br>
+“…仪式？”<br>
+“具体的你不用管，卢瑞恩。”白后说，“现在我们面临的问题是，圣巢出现叛徒了。”<br>
+“…蛾子们吗？”<br>
+“不一定。不一定只是蛾子。”<br>
+“你提醒奥格瑞姆和赫格莫注意一下，这期间白宫要严加防范，泪水之城也要增派兵力。”<br>
+“泽若呢？把他召回白宫，我有话问他。”白王颤抖着放下爪子，抬起头。<br>
+“了解了，我这就去办。”卢瑞恩低头快速鞠了个躬，匆匆转身离开。<br>
+“首相。”白王突然又叫住他。<br>
+“陛下。”<br>
+“…你多加小心。”他轻声说。<br>
+“…遵命，陛下。”<br>
+君臣之间再无需多言，卢瑞恩推门而出，向两边立着的卫兵点头示意。<br>
+“我为他们付出了一切，为什么他们还——”在大门关上的一霎那，卢瑞恩听见白王悲戚的声音。</p>
+
+<p>(（）)</p>
+
+<p>鹿角虫车站。<br>
+“首相大人。”泽若声音清冽，他低头向卢瑞恩鞠了一躬。<br>
+“泽若。”<br>
+数十年后重逢，泽若的确成熟了几分，再没有之前孩子气的表现。性格是会被时间改变的啊，卢瑞恩感慨着。两人相视无言。终于，卢瑞恩正想开口询问地面的近况，泽若突然露出一个诡异的微笑。<br>
+这突然的微笑让卢瑞恩瞬间感到毛骨悚然，一时间不知该作何反应。<br>
+“首相大人，请问陛下近况如何？”<br>
+“…你没事吧？”<br>
+泽若一脸茫然的表情，似乎刚刚什么也没有发生过：“我怎么了？”<br>
+你怎么笑得那么诡异？这句话卢瑞恩没有问出口，但他并没有放松警惕。<br>
+“卫兵，”卢瑞恩盯住泽若疑惑的眼睛，“搜他的身。”<br>
+泽若皱起眉，歪着脑袋：“大人…这所意为何呢？”<br>
+“没什么，近日圣巢怀疑有叛徒出入，只是以防万一罢了。”<br>
+“…这样吗。”泽若一副若有所思的神情。<br>
+“请你配合一下。”<br>
+“那是自然，毕竟是首相大人的命令。”他伸开双臂，任由卫兵搜索。<br>
+没有暗器。泽若的身上只配着那两把神剑，那是国王赠予他的，骑士身份的象征。<br>
+“现在我可以回到家乡了吗，首相大人？”<br>
+卢瑞恩总觉得哪里很奇怪，但是却抓不住端倪。<br>
+“国王陛下近日会在宫殿内召见你。考虑到你行程颠簸，特许你在城市中落脚休息几日。这是来自皇家的慰问。”<br>
+泽若鞠躬行礼：“请替我感谢陛下的亲切关怀。”<br>
+卢瑞恩向身边的两个卫兵点头示意：“你们护送泽若<br>
+到泪城去吧。”<br>
+泽若刚迈出几步，突然转回身：“你还记不记得娜莉？”<br>
+卢瑞恩眼前闪过那张天真的笑脸。<br>
+“…我只记得我似乎答应过带她参观圣巢——”<br>
+“她被逐出部落了，和马科斯一起。”<br>
+卢瑞恩睁大眼睛：“…为、为什么？”<br>
+“因为她以职务之便，帮助马科斯施展禁术…他们想要唤回光芒神。”泽若垂下眼睛，“他们来找我的时候，我还以为他们只是说着玩玩，没有当真…如果我能及时阻止他们就好了。”<br>
+“…那他们现在在哪里？”<br>
+“不知道，他们曾经和我说要去圣巢找办法。不过没有虫子再看见过他们。”泽若抬起头，一副担忧的样子：“她没有来找你吗？”<br>
+而卢瑞恩只能呆呆的站在原地，他摸上自己的腹部，感到胃里一阵阵翻江倒海。</p>
+
+<p>—————<br>
+（每次写完骂一遍自己幼稚然后再装作不幼稚的样子发布🌚）</p>
+
+<p>（3.20）<br>
+（牙签这个外号来自Chloe Casey (ChloeCasey)大大写的The Only Option，主白王白后，副白王团长（上一任团长和陛下是恋人，前任团长浪漫攻。详细设定有点多还请自行查收），另外卢瑞恩刷了个存在感，似乎也是单恋白王（笑）。有兴趣的朋友可以去AO3看一看，顺便帮忙给这位大大催个更，现在卡在团长白王线，我快要馋死了。）<br>
+（3.31）各位，我把终于把这个坑更新了…我为了给自己填坑的动力，于是暗下决心，不更新，绝不发其他的东西…所以，我最近可能要…传一堆攒着的<del>陈旧</del>玩意儿了，包括几个新坑——（你自己还好意思说，滚pia）…emm还是算了我先不给自己施压了，我尽力<br>
+不过我发誓，不更新完这篇，我不会正常开新坑的。第一篇文，一定要完结。<br>
+（毕竟某些文之间有联系）<br>
+…上次一登陆发现头像竟然已经几乎是半年前的了 好难看（一口老血）</p>
+
+<p>—————</p>
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/33cb.html">大合集@Memo</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2018年12月14日 - 16:26</p>
+ <p><span>最后更新:</span>2023年01月29日 - 16:57</p>
+ <p><span>原始链接:</span><a href="/p/33cb.html" title="大合集@Memo">https://mebilychen.github.io/p/33cb.html</a>
+    
+ </p>
+ <p><span>许可协议:</span>除非文章内另行声明，遵守 cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script data-pjax> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E5%90%9B%E8%87%A3%E7%BB%84/" rel="tag"><i class="fa fa-tag"></i> 君臣组</a>
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E8%80%83%E6%8D%AE/" rel="tag"><i class="fa fa-tag"></i> 考据</a>
+              <a href="/tags/%E5%AE%8C%E7%BB%93/" rel="tag"><i class="fa fa-tag"></i> 完结</a>
+              <a href="/tags/memo/" rel="tag"><i class="fa fa-tag"></i> @memo</a>
+              <a href="/tags/%E4%BC%AA-%E5%8E%9F%E4%BD%9C/" rel="tag"><i class="fa fa-tag"></i> @(伪)原作</a>
+              <a href="/tags/%E5%8D%A2%E7%91%9E%E6%81%A9/" rel="tag"><i class="fa fa-tag"></i> 卢瑞恩</a>
+              <a href="/tags/BE/" rel="tag"><i class="fa fa-tag"></i> BE</a>
+              <a href="/tags/%E8%99%90/" rel="tag"><i class="fa fa-tag"></i> 虐</a>
+              <a href="/tags/%E5%9C%A3%E5%B7%A2%E5%85%A8%E5%91%98/" rel="tag"><i class="fa fa-tag"></i> 圣巢全员</a>
+              <a href="/tags/%E6%97%A0%E5%8D%B1%EF%BC%9A%E5%A1%AB%E5%9D%91%E4%B8%AD/" rel="tag"><i class="fa fa-tag"></i> 无危：填坑中</a>
+              <a href="/tags/%E8%BF%9E%E8%BD%BD/" rel="tag"><i class="fa fa-tag"></i> 连载</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/491b.html" rel="prev" title="王权衍生">
+      <i class="fa fa-chevron-left"></i> 王权衍生
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/d450.html" rel="next" title="设定和删减以及番外@Memo">
+      设定和删减以及番外@Memo <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#2020-10-26-28%E5%90%90%E6%A7%BD"><span class="nav-text">2020.10.26-28吐槽</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_1"><span class="nav-text">～1～</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_2"><span class="nav-text">～2～</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_3"><span class="nav-text">～3～</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_4"><span class="nav-text">～4～</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_5"><span class="nav-text">～5～</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_6"><span class="nav-text">～6～</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_7"><span class="nav-text">～7～</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_8"><span class="nav-text">～8～</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_9"><span class="nav-text">～9～</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_10"><span class="nav-text">～10～</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_11"><span class="nav-text">～11～</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_12"><span class="nav-text">～12～</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_13"><span class="nav-text">～13～</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_14"><span class="nav-text">～14～</span></a></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar3.jpg">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">168</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">175</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjEwMTM3MTIxMjdAcXEuY29t" title="E-Mail → mailto:1013712127@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9tZWJpbHkxMzE0" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      猜猜这是什么鬼地方？
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9tZWJpbHljaGVuLmxvZnRlci5jb20v" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;">LOFTER</span>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ab228.html" title="p&#x2F;ab228.html">【硬读文章】我与地坛</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/1547.html" title="p&#x2F;1547.html">【AI拼贴画】一些灵感和其他见证历史</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/9527b.html" title="p&#x2F;9527b.html">【脑洞合集】无Tag的小脑洞们，Encore</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/a6ba.html" title="p&#x2F;a6ba.html">白宫+高塔地图</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ysyg0.html" title="p&#x2F;ysyg0.html">（起稿）守望者@Memo</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ee39.html" title="p&#x2F;ee39.html">王国边境@Memo</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/2eed1.html" title="p&#x2F;2eed1.html">王学与OC（及一些OC设定）</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/p/ce0f2.html" title="p&#x2F;ce0f2.html">AI（角色）写作专场</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/4eb5.html" title="p&#x2F;4eb5.html">遗书</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/9527b.html" title="p&#x2F;9527b.html">【脑洞合集】无Tag的小脑洞们，Encore</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">3m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">45:35</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "站子已虔诚祈祷 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+     //'.site-meta',
+    //'.site-nav',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+<script language="JavaScript">
+var password="";
+password=prompt('Password (Birthday)','');
+if (password != '20180909')   
+{alert("。");    
+window.opener=null;
+window.location.href = "about:blank"; 
+window.close();}  // 密码不正确就关闭//-->
+</script>
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>

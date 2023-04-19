@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="沃姆">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【角色研究】关于沃姆">
+<meta property="og:url" content="https://mebilychen.github.io/p/190c3.html">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:description" content="沃姆">
+<meta property="og:locale">
+<meta property="og:image" content="https://cdn.mebilychen.top/mebilychen-image/work/947B24E1002424E90EDEF2BCB42F5DEC.png">
+<meta property="og:image" content="https://cdn.mebilychen.top/mebilychen-image/work/95BD49366DEEEF4BC70F0B812065101E.png">
+<meta property="og:image" content="https://cdn.mebilychen.top/mebilychen-image/IMG_4830(20230130-131843).PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/doc/%E5%8F%A4%E6%B2%83%E5%A7%86%E8%AF%AD.PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/meme/IMG_4167.PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/Works/IMG_9502(20211202-011039).PNG">
+<meta property="og:image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20171224%2F141e3aa4dc064814a349f5752137b30b.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1645456987&t=025cc931d6cee0481f4e3c14459476e4">
+<meta property="og:image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_bt%2F0%2F9787994888%2F1000.jpg&refer=http%3A%2F%2Finews.gtimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1645457106&t=54d5784dc3aee422ba94508016545d92">
+<meta property="og:image" content="https://pic1.zhimg.com/80/bcea62d15c0ba86c6fc1d81bb69265ac_1440w.jpg?source=1940ef5c">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/%E7%9C%8B%E7%9D%80%E5%83%8F%E5%A4%A7%E6%B2%83%E5%A7%86%E6%8B%94%E5%9C%B0%E8%80%8C%E8%B5%B7.JPEG">
+<meta property="article:published_time" content="2021-10-08T18:06:00.000Z">
+<meta property="article:modified_time" content="2023-04-17T06:23:00.574Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="设定">
+<meta property="article:tag" content="白王">
+<meta property="article:tag" content="角色研究">
+<meta property="article:tag" content="沃姆">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.mebilychen.top/mebilychen-image/work/947B24E1002424E90EDEF2BCB42F5DEC.png">
+
+<link rel="canonical" href="https://mebilychen.github.io/p/190c3.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : '中文'
+  };
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    
+      if (NexT.utils.hasMobileUA()) return;
+    
+    let time, hidden, visible, title = document.title;
+    let favicon = document.querySelector('link[rel="icon"]');
+    
+      hidden = ["盯————","*探*","?","......","*观察*"];
+      visible = ["*偏转视线*","*缩*","*强装镇定*","！","*低头*"];
+    
+    let random = t => t[Math.floor(Math.random() * t.length)];
+    const change = () => {
+      if (document.hidden) {
+        favicon.setAttribute('href', '/images/favicon-32x32-king-black.png');
+        
+          document.title = random(hidden);
+        
+        clearTimeout(time);
+      } else {
+        favicon.setAttribute('href', '/images/favicon-32x32-brand-black.png');
+        
+          document.title = random(visible);
+        
+        time = setTimeout(() => {
+          document.title = '碳素的小作坊';
+        }, 1000);
+      }
+    }
+    document.addEventListener('visibilitychange', change, false);
+  });
+</script>
+
+  <title>【角色研究】关于沃姆 | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<style type="text/css">
+.spoiler {
+  display: inline-flex;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;调谐中...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">175</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">168</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-image fa-fw"></i>画廊</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/random.html" rel="section"><i class="fa fa-question fa-fw"></i>抽</a>
+
+  </li>
+        <li class="menu-item menu-item-lang">
+
+    <a href="/en/" rel="section"><i class="fa fa-globe fa-fw"></i>->English</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-17081-597255-1305127431.cos-website.ap-hongkong.myqcloud.com' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/190c3.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【角色研究】关于沃姆
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-09 02:06:00" itemprop="dateCreated datePublished" datetime="2021-10-09T02:06:00+08:00">2021-10-09</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2023-04-17 14:23:00" itemprop="dateModified" datetime="2023-04-17T14:23:00+08:00">2023-04-17 14:23:00</time>
+                </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%90%8C%E4%BA%BA%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">同人研究笔记</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>26k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>23 分钟</span>
+            </span>
+            <div class="post-description"><center>沃姆</div>
+          
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%BE%E5%AE%9A/" rel="tag"><i class="fa fa-tag"></i> 设定</a>
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E8%A7%92%E8%89%B2%E7%A0%94%E7%A9%B6/" rel="tag"><i class="fa fa-tag"></i> 角色研究</a>
+              <a href="/tags/%E6%B2%83%E5%A7%86/" rel="tag"><i class="fa fa-tag"></i> 沃姆</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p>离大谱 雪沃姆私设我没有放过吗？<br><img data-src="https://cdn.mebilychen.top/mebilychen-image/work/947B24E1002424E90EDEF2BCB42F5DEC.png"><br><img data-src="https://cdn.mebilychen.top/mebilychen-image/work/95BD49366DEEEF4BC70F0B812065101E.png"></p>
+<p>无色的血液也不错</p>
+<p>One cursed fact is that there is a genetic disorder called Fibrodysplasia ossificans progressiva (FOP), also known as Stone Man Syndrome, that causes the body’s soft tissues to gradually turn into bone over time. This includes muscles, tendons, and ligaments, which eventually become rigid and immobile, effectively turning the person into a living statue. There is currently no known cure for FOP, and the average lifespan of those with the disorder is only about 40 years.</p>
+<hr>
+<h1 id="关于陛下的战斗："><a href="#关于陛下的战斗：" class="headerlink" title="关于陛下的战斗："></a>关于陛下的战斗：</h1><p><span class="exturl" data-url="aHR0cHM6Ly95b3V0dS5iZS9Kek9OX21PQ2I4Zw==">前辈的战斗参考YT视频（受不了可以静音看）<i class="fa fa-external-link-alt"></i></span></p>
+<p><strong>注意点：</strong>陛下的光芒、肢体动作；环境影响（砾石浮空之类，灵魂法术应该是有影响到气流或者重力的（毕竟会黑洞会爆炸））。冬相关可以结合到环境描写里，是冷光法术。</p>
+<p><strong>强调：</strong>陛下的小但快速（骨钉偏迅捷型精确致命，法术偏重型范围攻击（尤其是大沃姆），而且你很难打到他）。和辐光相比，陛下要弱（很多），所以他没办法像辐光那样“老娘有的是法力我管打不打得着你激光炮暴力轰击就是了”，他需要计算自己的法力/精力用在哪。</p>
+<p>表情，陛下就那样的表情。他没有表情。</p>
+<p><strong>肢体点：</strong></p>
+<ul>
+<li>尾部（白色长尾（龙，其实就是蜥蜴）：灵活且很有力气，可以缠你（脚、脖子），可以甩你（一脸）（如果你比他小或差不多就可以相扑），可以移动，可以武术。用不着的时候就负责摆姿势耍帅（比如像蛇）</li>
+<li>腿部：脚是尖的，踩到你会像高跟鞋。会用武术之类。</li>
+<li>爪子（有两套四只）：一般不会亮出第二套爪子，除非他开始很认真打你。第二套爪子可以当成第二个陛下，可以多武器+二重法术，但移动跟随本体。一般不会挠你（毕竟不会野性），但会用武术之类。</li>
+<li>你要是自己往他角上撞（比如下劈流）被他挂到了也不是不可以，但是陛下绝对不会主动用角顶你的（乐）</li>
+<li>翅膀：类似于透明玻璃纸，角度悲剧的话会被划伤，有鳞粉，但一般用于耍帅、闪你眼睛和起飞。鳞粉是他飞起来之后自然会散落的，但也不算是他本意（啊）</li>
+</ul>
+<p><strong>预备式：</strong></p>
+<ul>
+<li>召唤 Summon（召唤初始武器（灵魂法术））/准备初始武器（拿起武器）：陛下会随身带佩剑，但有时也会嫌重，干脆用灵魂共鸣武器（白矿材料，效果是虽然是实体但也可以化作灵魂力量使用）作为初始武器。陛下会担心敌人限制自己的法术力量，所以不会将希望完全寄托于法术，所以不太会说毫无准备只凭借塑型来战斗</li>
+<li>法术咏唱（默念）</li>
+<li>防御（观察）状态：经常闪避和回血，以退为进。只有在感觉大概懂你战技之后才会开始进攻。用ai类比的话，就是先学习再规划适合迎战你的技巧。（所以一个方案是速推他不要等到他学会了，不然越打越难）</li>
+</ul>
+<p><strong>移动（肢体）：</strong></p>
+<ul>
+<li>跳跃</li>
+<li>飞行（浮空、俯冲、升空等）：飞行的时候（由于比在地上自由）他会结合灵魂符阵法术（三维）来规划自己的飞行路径。</li>
+<li>冲刺/猛冲</li>
+<li>闪现（移动速度很快，导致像是“法术瞬移”但其实不是（也不重要了））</li>
+<li>回返（猛冲时刹车并转向）</li>
+</ul>
+<p><strong>移动/闪避（Soul Spell）：</strong></p>
+<ul>
+<li>瞬移（灵魂法术）</li>
+<li>幻影（分身）：将自己目前的位置定义为分身，真身移动到稍远距离，类似瞬移，但是留了一个幻影</li>
+</ul>
+<p><strong>闪避（肢体）：</strong>离得太近也会触发闪避（像团长和前辈）</p>
+<ul>
+<li>闪避（Dodge，侧闪、后闪等）</li>
+<li>回撤（闪避）</li>
+<li>回跳（敌人进攻时向后跳跃闪避）</li>
+</ul>
+<p><strong>进攻（nail/灵魂长剑（Soul Sword/Soul Blade））：</strong></p>
+<ul>
+<li>猛劈 Slash（Triple Slash 连招）</li>
+<li>猛刺（Lunge）</li>
+<li>下劈（俯冲 + 下劈）</li>
+<li>投掷（Throws nail）</li>
+</ul>
+<p><strong>进攻（Soul Spells）：</strong></p>
+<ul>
+<li><p>圆环（Halo）（Focus，但是结束后会呃，我也不知怎么形容它，类似于激光划出一个圆形区域然后爆炸（Air）骨刺吧）</p>
+</li>
+<li><p>地（Ground）骨刺（Soul Pillars）（俯冲 + 下劈 + 全图地刺）</p>
+</li>
+<li><p>闪光：范围致盲</p>
+</li>
+<li><p>激光：激光射线，类似辐光，但不会那么大范围，光束也很精细，而且是冷光</p>
+</li>
+<li><p>塑型（小）：飞镖匕首（投掷物）（Soul Daggers）</p>
+</li>
+<li><p>塑型（大）：重型武器，转意念控制</p>
+</li>
+<li><p>意念控制（melee）（塑型变体）</p>
+</li>
+<li><p>多重分身</p>
+</li>
+<li><p>…</p>
+</li>
+</ul>
+<p><strong>进攻（melee）：</strong></p>
+<ul>
+<li>武器，只要他能拿起来他基本都会</li>
+<li>环境因素，只要他能移动他都可以投掷（重型武器被他当投掷物因为他拿不起来）</li>
+</ul>
+<p><strong>防御（nail）：</strong></p>
+<ul>
+<li>格挡（Parry）</li>
+<li>格挡并反击</li>
+<li>原物奉还（针对投掷物）（用骨钉Counter）</li>
+</ul>
+<p><strong>防御（Soul Spell）：</strong></p>
+<ul>
+<li>结界（防御自己）</li>
+<li>结界（束缚敌人）：锁链、封印等，他太会了</li>
+<li>原物奉还（针对投掷物或灵魂法术）（用法术/附魔骨钉Counter。注意如果你用灵魂法术，陛下也可以选择给自己补魔（逆向工程）而不是奉还）</li>
+</ul>
+<p><strong>回复（Soul Spell）：</strong></p>
+<ul>
+<li>Focus</li>
+</ul>
+<p><strong>助攻：</strong></p>
+<ul>
+<li>你要是直闯他宫殿，有概率他会暂时离场休息来让自己的<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL1dpbmdtb3VsZA==">Wingmould<i class="fa fa-external-link-alt"></i></span>（甚至<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0tpbmdzbW91bGQ=">Kingsmould<i class="fa fa-external-link-alt"></i></span>）打你。就像很多boss做的那样。</li>
+<li>宫殿本身也会打你。包括藤蔓毕竟那是夫人。</li>
+</ul>
+<p><strong>彩蛋：</strong></p>
+<ul>
+<li>化形（为大沃姆形态）</li>
+<li>召唤（大沃姆（本体/灵魂态））</li>
+<li>Void Tendrils（这个是前辈的，可以让夫人串场（啊））</li>
+<li>冬相关法术（可以结合到环境描写里，是冷光）</li>
+<li>虽然阿卢的时停能力本设并不会影响现实，但也可以加强一下让他帮忙（啊）</li>
+</ul>
+<hr>
+<p>你生而有翼，为何竟愿一生匍匐前进，形如虫蚁？—— 贾拉尔·丁·鲁米</p>
+<blockquote><p>我觉得，我们”人”和”生”，都绝对是被动的。没有哪一个人能先制订一个诞生计划，然后再下生，一步步让计划实现。</p>
+<footer><strong>季羡林</strong><cite>《心安即是归处》</cite></footer></blockquote>
+
+<p>在自然界谁体型大谁（更容易）是强者</p>
+<p>2.27补一点佛教<br>佛教这个思路 就是尘世是张网 你俩有线 那就是有缘 线不够粗 那就是有缘无分 要斩断尘缘 但没断的时候，缘就是个客观事实 断了就不是了(<br>断了就脱离尘世了 直接第一人称变第三人称 镜头拉起来<br>因为尘世也不是个贬义词 他就是形容下 你在第一人称的状态 有缘有分 有缘→见个面 有份→深交</p>
+<blockquote>
+<p>The essential in Moby Dick, its prophetic song, flows athwart the action and the surface morality like an undercurrent. It lies outside words… we cannot catch the words of the song.<br>Moby Dick is full of meanings: lts meaning is a different problem… Even if the symbolism is correct,  it silences the book. Nothing can be stated about Moby Dick except that it is a contest. The rest is song.<br>—— E.M. Forster, 1927</p>
+</blockquote>
+<p><del>可能对于陛下来说，自己是白色的这件事本身就是足够让一些人嫉唾的吧。</del></p>
+<p><img data-src="https://cdn.mebilychen.top/mebilychen-image/IMG_4830(20230130-131843).PNG" alt="大沃姆的嘴（啊好可爱）"></p>
+<p>没有感情但很想要感情/崇尚感情 VS. 有感情却鄙视感情 VS. 没有感情且鄙视感情</p>
+<p>面对严寒（寒冬），人们可以逃跑，可以防护，可以攻击。但只要一步走错，就会失去一切。</p>
+<p>然后其实感觉那种“被隔离”的人、或者其他违反人类天性的挑战有时会让“挑战者”改变自己的价值观，让他们失去对个体死亡的恐惧感，转变成了“挑战天性”的、“只有我才能做到”的自傲，所以会拒绝回归安全（在隔离中的人体现出的就是“拒绝他人的帮助”）。</p>
+<hr>
+<p>1.23 在想用写传记的形式来介绍人物，就包括了其生平和死亡。但是我之前没这么想过因为觉得：一，只用写人物到此为止的生活（也就是没有死亡的）状态；二，陛下作为神，不会死亡。</p>
+<p>然后一个哲学家（Søren Kierkegaard，放弃了理论哲学的哲学家）表示人需要有anxiety，需要有passion，人需要找到这个passion。</p>
+<p>1.20<br>转自 守望者@memo</p>
+<blockquote>
+<p>Although he was an elusive, reclusive figure who was rarely seen outside his Palace, the Pale King was deified by his citizens.[14] The bugs of Hallownest believed that he created their world and everything in it.[15] Worship was offered through King’s Idols.[16] Even the Moth Tribe turned their backs on their creator, the Radiance, and started worshipping the Pale King instead.[17] The Pale King’s ability of foresight,[18] the ability to see the future to some extent, caused the mushrooms of Fungal Wastes to accept his rule as well.</p>
+</blockquote>
+<blockquote>
+<p>This ashen place is grave of Wyrm. Once told, it came to die【来这里就是为了死亡？就，只是为了死亡？（像是，杀死自己现在的躯体羽化这样子？）】. But what is death for that ancient being? More transformation methinks.</p>
+</blockquote>
+<blockquote>
+<p>He is an ancient Wyrm who burrowed through mountains and across the wasteland until finally stopping in Kingdom’s Edge.[2] Once there, the Wyrm shed its shell and transformed into the Pale King.[3] The pale, broken egg found within the Cast-Off Shell hints at this rebirth.[2] Consequently, the Pale King is often still referred to as “Wyrm”, as this was his former body.[4][5][6] He reduced his form in order to match the bugs of Hallownest[Godmaster content The Godseeker: “God-king, you reduced your form to match Our meagre shells… “（寻神者是好人的）].</p>
+</blockquote>
+<blockquote>
+<p>The Wyrms were ancient beings who pulled bugs into their thrall.（小蘑菇是垃圾的）</p>
+</blockquote>
+<p>不过又说<strong>沃姆生来就有领导和称王的欲望</strong>（？我已经不清楚这是不是私设了）…啊这，那就只能说沃姆一族本就不是“真神”，因为他们有这种驱动力了，所以陛下来了之后是做了皇帝而不是做了别的。然后这么说也可以说是每一只沃姆的政治观念都不一样（？）我不造了。或者说沃姆的称王“欲望”其实并不是欲望，而只是他们诞生的目的。就像火神诞生的目的就是燃烧。<br>3.11跟进<br>关于对陛下“生来就倾向于（是为了）rule（称王/领导者）”的发展方向，【和“陛下只是想统治别人、享受统治罢了”相对比，更类似于“我统治你只不过是衍生产品罢了”】两个：<br><strong>1.将其作为自己不得不完成的使命。但对其感情复杂（类似被迫出生在皇族的皇子<del>（整天想着摸鱼（不是））</del>）</strong><br><strong>2.将其作为自己的荣誉使命/英杰路线（见下歌词）</strong><br>I’ve been cold hearted<br>我此生冷漠无情<br>But I’m just getting started<br>但我才被坚执锐<br>Got my eyes on the target<br>去直面我的野心<br>Now now<br>此时，此刻<br>Ooh ooh ooh<br>‘Til the battles won<br>战至凯旋宴声起<br>‘Til kingdom come<br>世界尽头又何妨<br>Ooh ooh ooh<br>I’ll never run<br>我，永不逃亡<br>Best to give me your loyalty<br>最好献上你的忠诚<br>‘Cause I’m taking the world you’ll see<br>因为我将让你眼中的世界浑然坍塌<br>They’ll be calling me calling me<br>众生即将为我高呼<br>They’ll be calling me royalty<br>我将成为这个时代的至尊<br>Best to give me your loyalty<br>誓死为我而战吧<br>‘Cause I’m taking the world you’ll see<br>我将颠覆整个王朝<br>They’ll be calling me calling me<br>众生即将高呼，奏乐<br>They’ll be calling me royalty<br>称我为王<br>They’ll be calling me royalty<br>我将是王权的象征<br>They say I’m dangerous ‘cause I<br>他们说我很危险<br>Broke all the cages<br>因为我冲破了禁忌的牢笼<br>No I won’t sit and take it<br>不 我不会坐以待毙<br>Now now<br>此时，此刻<br>They left me for dead I guess they’ll never learn<br>自生自灭如此，古之立大事者<br>Every time I break there’s just more pain to burn<br>亦必有坚忍不拔之志<br>They’ll never never never learn<br>有的人一生都无法学会<br>Ooh ooh ooh<br>‘Til the battles won<br>战至凯旋宴声起<br>‘Til kingdom come<br>世界尽头又何妨<br>Ooh ooh ooh<br>I’ll never run<br>我，永不逃亡<br>Best to give me your loyalty<br>最好献上你的忠诚<br>‘Cause I’m taking the world you’ll see<br>因为我将让你眼中的世界浑然坍塌<br>They’ll be calling me calling me<br>众生即将为我高呼<br>They’ll be calling me royalty<br>我将成为这个时代的至尊<br>Best to give me your loyalty<br>臣服于我吧<br>‘Cause I’m taking the world you’ll see<br>我将颠覆整个朝代<br>They’ll be calling me calling me<br>众生将为我奏起全新的乐章<br>They’ll be calling me royalty<br>我将是王权的象征<br>They’ll be calling me royalty<br>我将是王权的象征<br>They’ll be calling me royalty<br>我将成为这个时代的至尊<br>Calling me royalty<br>掌握生杀予夺<br>Calling me<br>臣服吧<br>They’ll be calling me royalty<br>我将是王权的象征<br>Calling me royalty<br>势位至尊<br>Calling me<br>臣服吧</p>
+<p>再结合上阿卢和陛下的super psycho love，其实比起是阿卢向陛下求爱，更像是陛下在向阿卢“求”<del>（或者强迫）</del>阿卢爱自己：呐，你不觉得由我来统治你是最合适不过的吗？（突然日系）</p>
+<p>1.11</p>
+<p>呃，风元音加个“f”？</p>
+<p>在继续我的“虚构人物的心理疾病”的1h+学习之旅之前，我想先赶紧把陛下（沃姆）的古神语搞一下。</p>
+<p>大沃姆的风语其实是“吹奏对方”，沃姆本身是一个管乐器。发信者吹出来的风通过他们的身体构造类似的竹管乐器发出声音。【但其实神的话直接脑波通信也不是不行】<br>以及 大沃姆应该也可以自行发声（向里吹） （考虑到如果设定里风力会随距离而改变（毕竟神风可以不遵循物理定律））但是沃姆身体作为乐器这个设定是不变的 而且由此给了乐师/吟游诗人灵感</p>
+<ol>
+<li>沃姆族主要的发声方式是风啸。因为沃姆数量小而且倾向于独居，所以互相沟通时需要远距离传播的方式。所以m、n、o、u（念作wu，有时也写作w）、a、e（念作ei）、i、s/sh（发音不是s（思）而是类似shh的气声，s的写法是sh的省略）这样的“风元音尾音”是很常见的，它们都是长音，没有短音，只出现在句末尾部，而且通常只是一个单词。变化产生的方法就是尾音的持续时间、<del>节拍（bpm）</del>、音量大小、音调变化（类似于音乐（所以阿卢可以用笛和沃姆沟通））。只使用“风元音尾音”情况下类似于英语中的缩写电报沟通，就是类似一个单词中将元音去掉：sorry-srry【应用的缩写规则是从前往后数的辅音之后元音之前 or 将单词中的元音和重复字母去掉一个（或者公认的首字母）】。</li>
+<li>在此基础上雄性沃姆（也就是虫型）会在基础尾音前面加上辅音进行高级沟通。例如，v（念作vu）、y（念作yu）。需要注意的是如果没有使用“风元音尾音”，部分雌性沃姆有可能听不懂（而且无法远距离沟通，而且由于是拉长调（距离远），最终也是会落在某一“风元音尾音”上，前辅音过于短促，很难辨识）。在形成文字的时候，为了将“风元音尾音”和其他音区分，给“风元音尾音”单独制造了字母（在对应字母上加“-”）：<br>和延续时间mark（“-”置于“风元音尾音”之后）【早期古沃姆语没有，因为沟通中很难明晰】、<del>节拍mark（和五线谱类似）</del>、音量mark（（置于产生变化的字母上）渐强“&lt;”渐弱“&gt;”）、音调mark（（置于产生变化的字母上）升调（^/ó）、降调（○/ò），原始的升降调只有升和降，但是复杂语言中会出现更先进的“升x调/降x调”记法（以升调符/降调符的数量记，每一个八度在其下记一个○）【电脑打不出来，回头我贴张图，然后想办法能不能和能打出来的符号对应一下】）：<br><img data-src="http://cdn.mebilychen.top/doc/%E5%8F%A4%E6%B2%83%E5%A7%86%E8%AF%AD.PNG" alt="古沃姆语"><br>（注意延续时间的mark也适用于风元音，风元音默认4拍，再加mark则是继续统计其延续时间）</li>
+<li>然后，沃姆是母系社会，嗯，反正就想把母沃姆（演变到后面就会变成所有雌性的所有物）使用的东西做出一个单独前缀（就像法语里的雌雄性），然后，想做一个标记音，就是在这个音之前是表示“我要说话了”在此阶段可以表达出发言者此刻的感情（虽然按理说沃姆没有感情，通常喊得是自己的名字，自报姓名（涉及到复杂的音调变化，见下）），这个音之后才是他要说话的内容（文字记录也是从此开始记）。对于古沃姆语要记住一点就是他们通常说话是互相喊话，隔得很远而且不知道对方的表情动作和何时要说话（网聊），所以最开始的古沃姆语是忽略各种细节的（互相喊话也有可能被其他噪音打断而听不清从而造成歧义所以）。然后本来想说也搞个那啥语的从右往左读，但是如果基于英语改写就好丑，所以就算了。</li>
+<li>然后主要对应对象是英语的26个字母。不存在标点符号（因为古沃姆语一句话只有一个单词），复杂沃姆语的间隔停顿是用升降调体现：<del>升调是起始子，降调是终止子（暂定）</del>，和普通虫虫交融后的沃姆直接使用用标点符号也行。</li>
+<li>沃姆的名字/命令等正统古沃姆语是一段曲调（就这么理解吧）</li>
+<li>乐，搞了半天结果改写出来丑的一逼。如果字母变形没有对应形式就用“’”代替吧，反正modern沃姆语起始子终止子也没啥用了。</li>
+<li>风元音一定会带有改变，比如在其后/其前加上“’”“°”等。<br>可用的字母：<br>āàá<br>âãäå<br>ōòóõôö<br>ūùúûü<br>ēèéêë<br>īìíîï<br>Ýýÿ<br>ñńň<br><br>þ<br>V́v́V̨v̨<br>ẂẃW̨w̨<br>ŚśS̨s̨<br>°^ˇ­<br>١٢٣٤٥٦٧٨٩٠<br>ṔṕP̨p̨م<br>ŃN̨n̨ń<br>Sh́/Sh̨/H́/h̨<br>F́F̨f́f̨</li>
+</ol>
+<p>对应出来就是：<br>A：Rlāa/Rlā/٦<br>B：Xī/٧<br>C：Dō/١<br>D：Lēe/٢<br>E：mī/m/٣<br>F：Fāa/ʃ/Fā/F́/٤<br>G：shōo/٥<br>H：Jh/H́/h́<br>I：î/í/y<br>J：Je/Jeh<br>K：c/ck/q<br>L：L/LL/Le<br>M：mm/<br>N：nn/n/ñ/Ń<br>O：ō/oir/our<br>P：P/P°/P’/þ/Ṕ<br>Q：Quō<br>R：R/Rh<br>S：ss/sh/Sh́<br>T：T/tt<br>U：ū/un/v/w<br>V：oi/ui<br>W：Wy/Wh<br>X：Xh/X°/X’/χ<br>Y：Yre/re/ire/ý<br>Z：Zh<br>终止子：-hoir（面对雄性）/-hoire（面对雌性）/-ŋ（未指定/通用，无指向对象也可以空着不加）【会根据沃姆不同和说话对象而变化，有点像签名（毕竟是会在句尾总是出现的，总是重复出现太多次会感觉很离谱），不过一般都会有h或者近似h的发音元素构成】<br>起始子：’-（也可以省略（总是重复出现太多次会感觉很离谱））</p>
+<p>举例：<br>Fuck-Fāavnq<br>Apple-Rlāapp°（前有双写a，后面的双写p其一变异形）lmī/Rlāapp’lmī<br>why-whjhre<br>is-ysh</p>
+<p>CDEFGAB其实就是do re mi fa so la xi，是最开始用做基本音的</p>
+<p>总之最后这个词怎么好看怎么来，就不用管什么演化的内在逻辑了【心太累】（对于modern沃姆语而言）<br>基本规则就是，多写（ooo）改双写（oo），出现多个双写导致单词过长（Shōofāss-GFS-G（oo）f（a）s）改加符号/套用异形（Shōofāsh）。单词过短（tos）则优先套用双写（toss）。<br>然后标点的话只有“，”和“。”而且在古沃姆语里“，”是“-n”而“。”是“-h（古版）/-hoir（modern版）”，意味着一句话（虽然他们通常都是只说一个词）没有标点。</p>
+<p>演化大概意思就是，</p>
+<ol>
+<li>首先是大沃姆的最早期语言（古沃姆语（早期）），这个是雌性沃姆（就是不会化为小小虫型的）主要在说，因为她们靠风声传信（大吼）。</li>
+<li>然后进化出古沃姆语（后期），主要是虫型沃姆在说（陛下这样的），但是沃姆的名字和一些复杂语言【就是好像在唱歌一般的对话，但其实这种（单词式）对话基本是从早期沃姆语演化来的（明确了升降x调）】确实是从这个阶段形成的，所以说起沃姆古语其实多指的是这个阶段（虽然狭义上应该是指古沃姆语（早期）。是后期逐渐取代了早期，因为小小只沃姆无法发出大沃姆那样的（像样的）呼啸声，倾向于近距离交流）。</li>
+<li>前期沃姆语注重的是发音交流（所以写出来会很难看（不是））</li>
+<li>最后和虫虫社会接触后变成了注重书写美观度的后沃姆语（modern沃姆语），只有部分传统读音保留了下来。但是由于后期陛下都说的是虫虫语，所以只要嘀咕一句哪怕只是modern沃姆语虫虫们就会：瞪眼张嘴瞪眼（就像在中国人堆里忽然说了一句法语）</li>
+</ol>
+<blockquote>
+<p>“但是陛下，现在的情势很不容乐观…”<br>“…”国王沉默半晌，“…Fāyñmhoir”，他叹气，“…那就按你说的去办吧。”</p>
+</blockquote>
+<p>这里陛下说的是“…fine.”（没有句号因为句号是-hoir）这里陛下用的是modern沃姆语（前期沃姆语不注重书写记录，加上各种辅助mark（乐谱相关）记录起来会很麻烦，而且用古沃姆语的话听起来陛下就像是在唱歌）的后期沃姆语形态（不用隔空互相喊话，意味着不需要自报家名和起始子，终止子被用作句号），也是他习惯使用的（毕竟喊不了话）【但其实是因为考虑到加上姓名和起始子怕不是会很长】。<br>如果是书写的版本，就可以写出“。”:</p>
+<blockquote>
+<p>“Fāyñm.”</p>
+</blockquote>
+<p>陛下的姓名是一段旋律，但是他不知道该怎么翻译，也觉得没必要（毕竟自己是最后一只了，自己就是沃姆啊无他）。（不过团长不知为何知道被传下来的这段旋律（虽然差了几个音），会用小提琴拉出他的名字（来吓他）并作曲（啊））<br>然后阿卢如果有心的话（？）可以用木管乐器来吹奏古沃姆语（看向龙和它的龙）。<br>正好和“夫人原本的名字是一首词题名”对应上。</p>
+<p>然后我或许应该给modern沃姆语准备一个词典，不然tm每次翻译出来都不一样。</p>
+<p>然后节拍上，dubstep这样节奏的风语会意味着说话者地位很高（所以很不紧不慢）</p>
+<p>12.23<br>【转自跑团贴，此处为最新】</p>
+<p>2.5更新<br>其实想到国外的性开放程度，就到了那种，即便是高冷而且重逻辑的人也会因为“为了更好的让我的逻辑运转”而接受（甚至主动要求）做爱，就不会像陛下这样厌恶和鄙视做爱（欲望）（看向陛下）</p>
+<hr>
+<p>其实在想陛下究竟对于“性”是什么态度。（某种意义上可以等同于lust？）<br>我觉得最根源是鄙视/蔑视的否定。会觉得沉溺其中的人很傻x。（因为他鄙视感情和感官享受）<br>对于任何一个理智的人，应该都是差不多如此认为。但是他走了一个极端，就是任何会产生（无法自控的）性冲动的人，任何哪怕一点点享受着感官的人，他都觉得是傻x。<br>这有时就包括了他自己（尤其是在被强暴的时候）。所以对于这种情况，他应该是有以下态度，根源都是否定：</p>
+<ol>
+<li>否定-》恐惧：害怕着如此不堪的自己会被自己（或恋人）蔑视，害怕着再一次失去控制而任人摆布的可能性。这个状态通常是在1.不久之前被打破过一回所以知道其不可避免的未来时；2.有可信任的恋人在其身边时；3.被过分霸凌导致其情绪崩溃，才会出现。</li>
+<li>否定-》冷漠：变得淡然且极度理性。将一切归罪为所有人都无法控制且都要听命于此的“境外势力”（“这只是生物繁衍的本能罢了…”“你要是被如此对待，不也会如此表现吗？”），从而（尝试）让自己逃脱罪责。但这种状态无法持续很久，尤其是在不停地被反复强调“你真的好贱啊”的时候。一旦被打破防线就会被挑起情绪，变成其他感情。尤其是他真的感受到那种无法继续思考（只能接受外界暗示），而且身不由己想要委身于此，全身心地享受着性爱及其带来的愉悦感受的时候…这种情况下一般会导致他反胃和呕吐。也会触发他的战逃反应。此阶段一般是最开始的阶段，在被霸凌前以及过程中的前期阶段，会很理智地分析如何让自己脱离险境。如果他确定自己孤身一人，一般都会以这种姿态面对霸凌。</li>
+<li>否定-》嘲讽：嘲讽对方竟被兽欲如此控制，或只能用如此低贱的手段取悦自己（挑起自己性欲），而无法逼迫自己取悦对方。有时会和冷漠搭配出现。这么做一方面是为了贬低对方取回一点控制权，一方面是为了给自己树立自信。他也知道这么做对方可能会更加变本加厉地霸凌自己（自己可能会受不了从而崩溃），所以一般会“看人下菜碟”。</li>
+<li>否定-》愤怒：会尝试夺回控制权，由此会衍生出复仇情绪。（所谓的边打边做）。有时他会把情绪崩溃往愤怒上引导，导致他真的会下狠手（如果他还有力气的话）</li>
+</ol>
+<p>如果是和真爱（他所信任着）的性爱：<br>陛下会试着接受。从而引申出很多正面情感。<br>即便依旧是（发展不成熟的）否定，也会是“否定-》宽恕”“否定-》疑惑”这样的类型。</p>
+<ol>
+<li>否定-》宽恕：宽恕一般不会出现在对他的霸凌中（虽然很涩），但是如果是他所认为的“迷途羔羊”，便会有这种情绪出现。但这并不代表陛下接受了自己的“缺点”（是的他认为享受性爱是缺点），只是会宽恕自己和施暴于他的人。【其实神爱世人 无条件爱着任何一个人 也包括他的强奸犯这个呃 我觉得如果是初生的幼王是真的会如此认为的（感谢夫人保护伞（跪））啊这一点我要专门讨论一下。就是说只有宽恕是自然不够的（除非是无戒律神），肯定是要让对方改过自新（或者说能让对方改过自新）】</li>
+<li>否定-》疑惑：会开始质疑自己（一向的性爱观），同时将问答权（控制权）移交给爱人。也有可能是质疑双方。</li>
+<li>否定-》自责/愧疚/哀伤：和恐惧类似，但是会开始自我贬低，会low self-esteem，会开始悲伤…这样子</li>
+</ol>
+<p>顺便码一下团长那边的。懒得放传送门了自己去找吧。</p>
+<p>感觉我流陛下就是那种 日常理智完胜感情的N 但是在接受太多感官刺激的时候就会逐渐被生物激素作用的快感逐渐压过理智稀释理智（但此时陛下还是会反抗的 这种反抗会让他十分痛苦 物理上的痛苦 但他还是会反抗 导致他会头晕恶心甚至呕吐）最后屈服于快感变成S 但是快感一旦冷却下来 陛下就会回到之前理智完胜感情的N 继续做他该做的事情，照常鄙视纵欲。总结而言就是，只要他还有理智，还依旧清醒（sane），那么就，虽然他对各类刺激有反应 但并不会去主动追求这些感官刺激 并不会出现“可是…可是真的好舒服…无论如何我都想再体验一遍…”这样的“性欲成瘾”现象 尤其是为了“play效果”而向他强调此事的时候（比如dirty talk“你之后会求着我让我和你做呢” ）那么就没戏了 别再想让他主动心甘情愿地沉溺（哪怕他其实真的觉得舒服） 如果不去刻意强调他反而可能会放松警惕而不那么抗拒（甚至会因为好奇/确实是比较舒服而去试着自wei，以及看你态度和对他是不是尊重来决定会不会再来找你做（毕竟并不是荡妇）。但就是 他虽然作为攻预定但其实很被动）<br>只有在陛下屈服于快感变成S之后、冷却回N之前，陛下的表现才会有那种“好舒服真的好舒服我还想要更多啊请给我更多”的欲求不满的感觉，但也是很短暂（所以要抓紧机会，或者持续给他强烈的非人刺激（啊）（不过考虑到陛下的身体很敏感，所以大概一般刺激就行？）。有时如果刺激不够或间隔太久超出了冷却时间（比如搞寸止play的时候）——感觉而言陛下的冷却时间一般是5+次呼吸的时间——甚至会出现“上一秒还在醉生梦死欲醉欲仙做出可爱的表情，下一秒直接阴沉下脸波澜不惊地嘲讽你纵欲”的尴尬情况<br>草 说得好像我操过他一样（？）<br>不过也在想如果刺激实在太强（比如毒品那种强度）陛下可能也会“坏掉”（就是理智崩坏），会觉得一切都是那么枯燥无味，身处这个苍白世界的他感到全身都在被虫蚁咬噬，只有性快感（毒品）才能让他重新回到那种天堂的舒适感觉。但这一定会意味着此时陛下的状态是不清醒/疯狂的非正常状态。<br>相较而言阿卢在这方面就更开放一些，他一定程度上屈服于快感而“性成瘾”的几率还是要更大一点的<br>就陛下那种坚毅 就那种 能敏感定位对方“意图改变自己”的言行加上任尔东西南北风的性格 导致他很难被改变（以及被改变后很难再变回来）<br>所以陛下才能一直保持本色纯白色！（！）白色最容易脏了！</p>
+<p>12.9<br>发情的有尾巴生物：</p>
+<video src="http://cdn.mebilychen.top/media/12.2/%E5%8F%91%E6%83%85%E7%9A%84%E6%9C%89%E5%B0%BE%E5%B7%B4%E7%94%9F%E7%89%A9.mp4" preload="metadata" controls playsinline poster>Sorry, your browser does not support the video tag.</video>
+
+<p>11.16 <img data-src="http://cdn.mebilychen.top/image/meme/IMG_4167.PNG" alt="幼王"></p>
+<p>6.20 （王）坏的话就是被主角踢 好的话就是给主角发任务<br>王好难 王总是被针对</p>
+<p>6.15 你知道morbius吗索尼斥巨资拍的超级英雄电影<br>我看到有人吐槽这个剧本里主角很…困?我就想到陛下<br>就是没有动机/动机不足<br>整日打呼<br>拿了超能力后在自己实验室里玩耍<br>没有出去炫耀<br>等警察找上门踢他他才动起来<br>天才+残疾人医生人设<br>他女助手/女票就是他角色发展的工具人<br>同时也是推动剧情的多啦a梦<br>我怎么突然觉得这好像是陛下写的自我yy剧本<br>剧情没有严重冲突主角想做什么就直接做成了什么没有战斗和挣扎<br>太像了像是陛下会写的东西<br>评价是”编剧感觉就是想让电影赶快结束”<br>应该是团长用卢子的生命威胁陛下写出来的剧本/点头<br>评价是”编剧感觉就是想让电影赶快结束”<br>“演员在演员 特效在特效 音乐在音乐”</p>
+<p>2.27 在想大沃姆可以像冰封王座（和陛下的白宫）那样，先有那种长弯刺勾出雪面（中央是（伪装成陛下）召唤他来的卢子）（这个可以说是陛下的冰角（which means 最后它会完全浮出来），也可以说是沃姆施法），然后是大沃姆浮出来。  </p>
+<p>突然感觉独角沃姆也有点帅   </p>
+<p>2.12 从大白鲨获得的启示</p>
+<p>“有人认为，当两条噬人鲨瞄准同一个猎物时，它们会利用肢体动作来互相劝阻。”<br>什么欲拒还迎<br>猎物：你们就给我看这？  </p>
+<p>鲨鱼会通过噬咬决定适口度（不合适就吐出来），通过攻击陌生物体来决定是否有猎物潜质</p>
+<p>大沃姆无法被圈养，因为它们会被活活撞死（地方太小了）。  </p>
+<p><img data-src="http://cdn.mebilychen.top/image/Works/IMG_9502(20211202-011039).PNG"></p>
+<p>1.22</p>
+<p>看到长尾蜥蜴。好可爱（指尾巴）。  <br>似乎叫梭德氏草蜥。</p>
+<p><img data-src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20171224%2F141e3aa4dc064814a349f5752137b30b.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1645456987&t=025cc931d6cee0481f4e3c14459476e4"></p>
+<p><img data-src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_bt%2F0%2F9787994888%2F1000.jpg&refer=http%3A%2F%2Finews.gtimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1645457106&t=54d5784dc3aee422ba94508016545d92"></p>
+<p>1.7</p>
+<p>看到dune的生物学解释<br>emm，  </p>
+<ol>
+<li>大沃姆能听到雪上面的声音（区分规律/非规律活动）</li>
+<li>大沃姆杂食+吃大量微生物</li>
+<li>大沃姆吃自己baby【baby就是微生物】（生物界部分baby长了牙，可以吃没长牙的兄弟姐妹们）</li>
+<li>大沃姆在雪泳的时候，将固体（贴近身体的部分）液化，形成液体降低阻力。</li>
+<li>大沃姆有过滤腮（嘴里也有）过滤杂质吃微生物（其实就是吃雪..）</li>
+<li>大沃姆跃起很壮观（沙沃姆能引起雷电）</li>
+<li>大沃姆只是想保护自己的领地（bruh）  </li>
+</ol>
+<p>1.6</p>
+<p>看到雪崩分不清上下左右<br>在想陛下应该有感受器或者陀螺仪来解决这个问题吧。  <br>这么说陛下应该不会迷路…..不，应该只是分得清上方（指向天空）<br>会抬头望向天空来感受天空的气息（stm天息），从而不会在雪里迷路</p>
+<p>他一般超级淡定<br>我就喜欢他表面淡定 内心慌得一批的感觉</p>
+<hr>
+<p>看到happy game里有两个世界，生物在其中一个世界没有嘴，另一个影子世界是有嘴的。<br>所以还是可以吃东西的，有感  </p>
+<p>可以给个陛下（戴面具的虫）+陛下影子（龙）的设定。</p>
+<p>12.13</p>
+<p>我yy沃姆种族的规矩“沃姆不能被tamed” 然后在想反派把陛下关起来tame陛下该怎么办 然后就想到向其他沃姆求援 然后就突然脑子里蹦出来“沃姆不能被tamed。你被tamed你就不是沃姆”然后拒绝了陛下的请求</p>
+<p>因为陛下生理上（理应是的）的配偶很大所以陛下倾向于喜欢夫人这样的庞大体型！</p>
+<p>12.12</p>
+<p>我就喜欢让陛下被团长气得骂脏话（现在想想其实应该骂古神语可能会好一点 嗯）</p>
+<p>古神语码一下。（钻研一套古神语只为了让陛下骂街）</p>
+<p>12.9</p>
+<p>补充设定：年长雄沃姆（可以是幼体，不过当然要睁眼有自主能力才行）会自动负责（保护）比他年幼的沃姆 然后因为“沃姆不会被驯服”（源自eili（？）的“Wyrm will never be tamed”）这一定律 成年雄沃姆会在被抓住（也是很难抓的其实）的时候把也同时被抓到的幼年沃姆通通杀死 包括自己的孩子 然后选择能带几个敌人就带几个敌人地去自杀<br>然后通常选择栖息在配偶身上的爸爸（们）会在被抓住之后选择用一个其他物种几乎听不见的低频声音把雌沃姆吵醒（引起注意/激怒）让她来攻击自己和入侵者</p>
+<p>12.8 做梦：  <br>雄沃姆负责抚养小沃姆（也可以设定成共同抚养）。  <br>倾向于，妈妈由于是beast，不懂事的，得爸爸来照顾幼崽。然后就可以衍生出，妈妈相当于生育超市，爸爸过来简单结合一下然后把卵取走，就自己照顾自己娃娃去了（藏在大沃姆身上）。  <br>其实住在嘴里挺好的，但主要就是我主观情感上觉得很恶心，，，就比较排斥吧。</p>
+<p>12.4 看mating game：  <br>三种mating模式：</p>
+<ol>
+<li>竞争（多只雄性竞争一只雌性，产生争斗）</li>
+<li>选择（雌性选择雄性/雄性选择雌性，较为和平）</li>
+<li>直接上（通常因为见面几率渺茫/紧急情况）</li>
+</ol>
+<p>11.15 人类中心思维<br>在孩童身上观察到的一种倾向，以人类当作类比来推测其他不熟悉的生物现象 。</p>
+<p>嗯，想着是总结下沃姆种群的设定。就，偏向纪录片的设定。  <br>看完mating game之后yy了一下作为外星种族的陛下种群（@量子恋人），母沃姆吃星球，星球吃完会进行旅行，找下一个星球。之前的残羹剩饭（不够支撑大沃姆体型）足够给小母沃姆做温床；然后至于陛下他们会住在妈妈身上（妈妈出发时会抓着妈妈身上（可能长出的奇奇怪怪的寄生生物（不））不放），跟着妈妈一起旅行，靠吃星球上以及妈妈身上寄生生物（比如小树林的甜果子）可提供的生物组织存活（没有吃的也不是不行），一直到他们成年。他们在妈妈身上羽化，但不会到处乱跑，因为宇宙太大母沃姆太少（一窝（指一次受精，母沃姆可以同时被受很多次精）2雄1母差不多），而且雄性体型太小了，容易死。所以。</p>
+<p>咩碳 1:17:59<br>生物光不能科幻一下？</p>
+<p>咩碳 1:18:43<br>那我反射其他星球光？和自己的光叠加？</p>
+<p>咩碳 1:20:36<br>可以让陛下去找合适的地方</p>
+<p>咩碳 1:20:51<br>啊但是</p>
+<p>咩碳 1:21:05<br>怎么知道是陛下而不是星球呢</p>
+<p>咩碳 1:21:46<br>要不让雌沃姆吃发光星球吧</p>
+<p>咩碳 1:22:14<br>陛下：（伪装成星球）</p>
+<p>10.27 我去，谁先用dick插到谁谁就怀孕做妈妈孵蛋还是对方基因对方娃这个设定（海毯虫）也太….那个了吧。</p>
+<p>主要涉及的是他们的交配…. </p>
+<p>最开始用这种…雌雄差异巨大（也有的王文是写陛下雌雄同体），是在 @不正当竞争 的。  </p>
+<p>10.9 补。雄性沃姆能够有让其他（大多数）虫子（管他是信息素还是啥）着迷的被动技能，有点相当于催眠。在有主观意识的虫子那里，他们可能会误以为这是mating call（就是说他们会觉得陛下很漂亮，一见倾心，二见钟情）。<br>但是对不起，这只是为了防止雄性小正太在接近雌性大沃姆的时候被吞下肚/压碎的防御机制。对大多数虫子有效是因为大多数虫子没有抵御这一技能的基因（不算同地位高等种族），哪怕这其实只是针对雌性大沃姆设计的。这种（信息素？）（@量子恋人 里面是用翅膀发迷幻虹光的“光舞” ）技能能够让雌性大沃姆注意到咱们的小正太伴侣，然后紧紧盯着他，张着嘴，就这样：⊙o⊙。相当于被雄性催眠的蜘蛛，完全被魅惑了，无法移开视线，无法行动。雄性（一般）会在完成交配之后慌忙跑路，不然会被咽下肚子。 <br>还在想一个更…优雅的交配方式，就，别进嘴里啊至少。想的是就摸一摸就怀孕这样（啊这），就，陛下会捧着…呃，花花，对，（stm捧着精子，想都别想），就下一代小沃姆的soul，就发光光，然后雌性会注意到，然后飞扑过来，操作失误的话父子就会被一同吞咽下肚…emm想写成斗牛那样，就，雄性要避开雌性的飞扑掠食，但同时要，就，跳斗牛式的交配舞…雌性累了才算是同意和你交配，就看你表现，给你打个分。如果你不行，soul团团就会进她消化道，如果你行，就会进子宫….这样。<br>不过也想把雌性塑造成完全的野兽这样，就相当于，雄性的任务是：</p>
+<ol>
+<li>找到雌性</li>
+<li>发光光（并伪造猎物的气息）吸引雌性注意</li>
+<li>和雌性打一架（不要死），如果雄性觉得雌性可以，开始斗牛，相当于求爱；如果不可以就跑路（再次，不要死）</li>
+<li>把雌性斗累了，雌性会暂时缓神，雄性趁机献花（？），然后信息素会起作用，雌性就眼睁睁看着雄性跑路（毕竟雄性也快累死了）。</li>
+</ol>
+<p>fk，我看到体型小的雄性和大体型雌性是用雄性融合在雌性身上（而且充当雄性生殖器方便雌性自交）的fk设定了。小雄性吃不了饭没有攻击能力它们一生的目的就是躲天敌找雌性然后与之融合。<br>我和陛下说了下，陛下扇了我一巴掌，好痛（呜呜呜）。<br>其实可以说陛下就相当于啊，詹姆斯邦德，一顿操作猛如虎，就是为了把花花黏在雌性的某个位置方便她自交？？？？？<br>艹。插花艺术。  </p>
+<p><img data-src="https://pic1.zhimg.com/80/bcea62d15c0ba86c6fc1d81bb69265ac_1440w.jpg?source=1940ef5c"></p>
+<p>那个黑点点是雄性:)  </p>
+<p>也可以说陛下的魅惑属性也是因为他老人家就是个小白兔，等着被普通猎物吃的那种。</p>
+<blockquote>
+<p>某些螨虫，如Acarophenax mahunkai母螨每次产下数十只卵，其中只有1~2只会孵化为雄性，其余都是雌性。自孵化之后，雄性唯一的使命就是和姊妹交配，然后就死亡，有些雄性甚至连嘴都没有。而Acarophenax mahunkai尤其奇葩之处在于它的卵是在母体内孵化发育并交配的，然后母虫肚子爆裂，新生的雌性螨虫寻找新的寄主，而雄性就陪伴着母亲的遗体一起死亡——《性别战争》（Sex advice to all creation）</p>
+</blockquote>
+<p>有一个救星！就是说雄虫会生活在雌虫的身体上（筑巢）。然后我就可以略过一大堆献花场景了。  </p>
+<p>大概就是想取，陛下小小只+陛下很稀少+一生逍遥不用吃喝目的就是为了找另一半+但是如果想活着也可以吃喝+和雌性是驯兽师与兽的关系+一夫一妻但是不敢正大光明回家+宅男+会把窝筑在雌性身上+雌性死了可以选择住在骨架里一直孤独或者直接饿死+小沃姆是从母亲嘴里出来的（还没有确定母沃姆会不会死，可能是有的会死吧。以及是吐蛋还是直接吐虫。母亲会死的话，母沃姆孵蛋其实就是缩在巢里等死）+陛下会承担一定的父亲责任，但主要是照顾小陛下。  </p>
+<p>以下来自 @不正当竞争：</p>
+<hr>
+<p>刚想到的，@不正当竞争的沃姆设定的话，其实可以写…… 沃姆们是在里面做爱的…… 对…… 就…… 从蛋里孵出来的时候，都是小沃姆，但是雄性会变态、羽化，蜕变成小个子虫型，而雌性会一直蜕皮，成为大个子沃姆型；然后造娃的时候，小个子走进雌性嘴巴里，顺着一个特别的通道给雌性受精，再走出来（饥饿的雌性会直接吃掉雄性，）。做爱过程没有任何感觉，而且雄性一方其实只是相当于掏出一颗 “能量球” 塞进 “子宫” 罢了，有点像种下一颗种子（这个种子可以在任何 “子宫” 繁育）。雌性最后会把成形的卵吐出来。雌性的沃姆形态是没有智商的，只能顺着本能行动，她们在交配前也会吃雪什么的、大张着嘴一动不动什么的，方便雄性进来。智商的话只有雄性有，但雄性基本上… 看着很弱。这样子。而且雄性是有着 “天生无法抗拒之美” 的，辐射范围是所有物种。想设定是一夫一妻制，但不勉强。一夫一妻的话，其实有点像<span class="hint--info hint--rounded hint--top" data-hint="艹
+我真是始终如一" ontouchstart>驯兽员和兽的关系</span>，在一起共同抚育小沃姆们。然后雄性出生率比雌性低很多，很稀少，差不多 1:100，所以成年沃姆比较多（不会死），卵很难找。  <br>啊，说着说着觉得好恶心… 不好意思陛下，是我的问题呕 ——  <br>咳咳，不好意思…</p>
+<p>沃姆孵出来时是雌性沃姆形态<br>
+长到一定程度，受到不同的刺激（雌性多的环境里变成雄性，以此类推），有的沃姆继续长大，变成雌性大沃姆，有的沃姆会成蛹羽化（蛹会生成在躯壳里面），变成雄性沃姆（虫形态）<br>
+沃姆的交配是在沃姆形态完成的。沃姆形态时，如果只有两只雌性，没有配对的雄性，交配时弱势的一方一定会变成雄性（？）（是的 雄性是被压着打的）<br>
+沃姆形态是雌性，虫形态是雄性。<br>
+一般而言，虫形态只会在交配完后出现。雌性沃姆仍可以成蛹变成雄性，但雄性变不回雌性。</p>
+
+
+<p>不过陛下由于是落脚虫，很早就进入了分化期，然后在雌性堆里莫名其妙地变成了雄性（？）<br>
+虫形态可以学习正常的话，沃姆形态只能说沃姆语。</p>
+
+<p>陛下的父母不是他真正的父母。陛下是真正意义上的神子，是被从他真正的父母那里偷回来，为了引入神族血脉的。<br>
+（插一句，雄性沃姆会从蠕虫形态羽化成虫形态，变得很小只，雌性沃姆不会，她们很大）<br>
+（这项设定应用于所有幼王文）<br>
+（不要问我他们怎么造孩子）</p>
+
+<hr>
+<p>The Wyrms were ancient beings who pulled bugs into their thrall. They were larger than Bardoon, though they had fewer limbs. They also had the ability of foresight, meaning that they could predict the future to some extent. One of these Wyrms died in Kingdom’s Edge, transforming into the Pale King. A Lore Tablet in the Fungal Wastes remarks on him having prescience as well.</p>
+<p>There is a reference to another being called the Blackwyrm in White Defender’s journal entry. This creature shares the word “wyrm” in its name; however, it is unclear whether it is related to the Wyrms or not.</p>
+<p>At a certain point, all Wyrms died out or were wiped out from Hallownest.</p>
+<hr>
+<p>嗯，然后就是顺便讨论一下陛下的法术吧。就，彩虹写的就是，克制型的光。有点像，激光切割的感觉，精准、致命。但是相比于辐光，就没有她那么粗暴野蛮。  <br>就相当于，辐光是直接强光把敌人晒成灰；陛下是用激光把敌人庖丁解牛。  <br>辐光不管致命点，直接轰上去管你哪里致命；陛下是只会在你致命位置打个穿孔，然后你就死了。</p>
+<hr>
+<p>然后是关于陛下(沃姆)攻受的问题。这次最终总结了 以后不会再更新了。<br><strong>因为我很生气</strong><br>就是今天讨论的时候受到启发想到了把沃姆和陛下分开的形式，相当于“陛下只是沃姆的容器”。<br>其实就想到彩虹写过类似的（啊我或许也总结过了吧）相当于陛下可以受，但沃姆是可以攻的。<br>至于陛下怎么受，有那种惩罚式的——<br><strong>我真的觉得他们是从心底里看不起陛下觉得自己多能耐啊能轻易拿下他所以他们才会写成这个样子</strong><br><strong>我真的很讨厌 很讨厌小骑士（和他所代表的人）</strong><br><strong>没错我在生气 我真的真的很生气</strong></p>
+<p>即便如此，这些人的思路我也是可以学习的。<br><strong>但我真的很反感那些人</strong><br>思路包括：</p>
+<ul>
+<li>团长式陛下，但是是真的是受，翻不过身的那种受，小女生式，高岭之花的反差萌之类</li>
+<li>被惩罚的反派王</li>
+<li>被惩罚的正派王</li>
+</ul>
+<p>总之要素是惩罚、看不起陛下、觉得自己要是对上陛下那是分分钟就能把他打趴在地的<br><strong>这些形容词我光是说出来就他妈来气，就他妈对不起陛下，就他妈要向陛下下跪负荆请罪</strong><br><strong>然后一想到有很多人都在这么看陛下，我就更他妈来气了——</strong><br>——<br>以下省略大段吐槽和后续产出，因为严重跑题所以截取到了<a href="/p/b6ce.html#%E8%BD%AC%E8%87%AA%E6%B2%83%E5%A7%86%E8%B4%B4%EF%BC%88%E5%85%A8%E6%96%87%EF%BC%89">《关于我遇到陛下这件事》</a>里。</p>
+<p>12.4<br><img data-src="http://cdn.mebilychen.top/image/%E9%9B%AA%E6%B2%83%E5%A7%86%2B%E9%BE%99%E5%8F%82%E8%80%83/%E7%9C%8B%E7%9D%80%E5%83%8F%E5%A4%A7%E6%B2%83%E5%A7%86%E6%8B%94%E5%9C%B0%E8%80%8C%E8%B5%B7.JPEG" alt="看着像大沃姆拔地而起"></p>
+<h1 id="陛下作为神，对虫虫“无条件的爱”"><a href="#陛下作为神，对虫虫“无条件的爱”" class="headerlink" title="陛下作为神，对虫虫“无条件的爱”"></a>陛下作为神，对虫虫“无条件的爱”</h1><blockquote>
+<p>神爱你爱到无法袖手旁观。爱你爱到不忍见你自取灭亡而木然无动于衷。</p>
+</blockquote>
+<p>但其实也有那种，呃，那种足够尊重人类（觉得啊，人类这么搞会搞死自己的啊，嗯但是关我p事呢毕竟他们也如此认为，我插手了反而会让他们难过甚至攀附于我吧。啊，毕竟是他们自己的道路，他们开心我就可以一边难过一边为他们开心（？），他们难过我就可以和他们一同难过）而不会去打扰他们的神（嗯）</p>
+<p>陛下：默<br>团长：乐<br>辐光：怒<br>夫人：泪<br>阿卢：哀<br>圣巢，圣巢盛产神明</p>
+<p>神对人无条件的爱，基本上是和“有条件的爱”对立（废话）<br>（我流）无条件是指，无论你信与不信，无论你是罪犯还是慈悲之人，无论你是否遵循神的教诲改过，都可以获得神的爱，获得“救赎”（救赎的定义就可以很广）。【就像父母对成年子女的爱】<br>也有一种负面的说法是：“这样的神对人没有要求，没有期望”（但其实是可以有的。比如，也可以将有要求有期望定义为爱。一个罪犯自然也可以被神爱（被神调教）。）<br>这里我想将神（天主教神）的规训（也就是会将人往何方引导（调教））基本定为“道德”。陛下的话也可以是“自由/独立意志”“理智”。总之每个神都有自己的规训，就像一位老师那样。老师自然是无国界的。哪怕罪犯无药可救（也不应该救）陛下也会去爱（救）他<br>之所以还有人说“神无条件爱我们，我们哪怕不洗心革面，神依旧爱我们，所以我们自由浪吧！”这种论调啊太离谱了，其实还是打心底认为人的改变还是在人自己而不是在于神的。也就是是说不相信单单凭借<strong>神这个存在</strong>能够指引我们（这是自然，毕竟真实世界的神只有在你相信了他之后才会存在（指完全在于人自己的主观能动性））</p>
+<blockquote>
+<p>“神照着我们的本相接纳我们”<br>神不“接纳”他们的“本相”，神就不是“无条件地爱”他们；神不“爱”他们，神就“不是神”<br>神的爱，正如圣经中所描述的，显然是无条件的，因为他的爱向他爱的对象（即，他的子民）表达，不管他们对他的态度。换句话说，神爱人是因为他的本质就是爱(约翰一书4:8)<br>尽管我们向神充满敌意和仇恨（为此，神彻底摧毁我们也是完全公义的），神向我们揭示了他的爱，通过赐下他的儿子耶稣基督作为我们罪的挽回祭（也就是说，平息神正义的愤怒）。神没有等我们改善自身作为赎罪的条件。相反，神屈就道成肉身，与他的子民一同生活(约翰福音1:14)。神体验了我们的人性——成为人类的血肉之躯——然后甘愿献上自己作为我们赎罪的代价。</p>
+</blockquote>
+<blockquote>
+<p>不少人以为上帝的爱没有条件，因为上帝的爱有以下四种特质：<br>第一，上帝不用爱来「操纵」人。不是说，我们满祂的意，祂就对我们好；我们惹祂讨厌，祂就攻击我们，或躲避我们。<br>第二，上帝的爱是恒久忍耐，永不止息。<br>第三，上帝是爱的源头。祂爱我们，因为祂是爱。我们之所以能蒙恩典，不是因我们做了甚麽好事，不是因我们配。救恩是白白的，不是工资，不是酬劳。<br>第四，上帝按我们的本相接纳我们。虽然我们罪孽深重丶失败丶潦倒丶窝囊，上帝仍然爱我们。祂无条件接纳我们。祂接纳满身罪污的人，接纳心灵破碎的人。我们不须活到完美才有脸到祂的跟前。<br>假使我们单从以上四点来看，上帝的爱确没有条件。不过，以上四点并不全面。上帝的爱有方向，也有原则。<br>第一，「不操纵」与「无所求」是两回事。真爱是一种强烈的感情，当中包含了愿意为对方而牺牲，也包含了为对方的好处着想。(参帖撒罗尼迦前书二7至12)<br>第二，上帝既以恒久忍耐的爱爱我们，祂期望我们也以这样的爱去爱和忍耐别人。祂期望我们在面对困境时，坚毅不拔，仍旧去爱，不轻言放弃。(参哥林多前书十三4；帖撒罗尼迦前书五14)<br>第三，不错，救恩不是酬劳；但是救恩不是没有条件，条件是主耶稣基督为我们钉死在十字架上。(参以弗所书二4至10) 祂为我们付了代价。<br>第四，上帝的爱超越条件。祂要救我们，要重塑我们，改变我们，把我们模造成主基督耶稣的样式。在上帝眼中，人不独需要救恩，也需要被改造。我们的一生其实是上帝耐性模造我们的一个过程。<br>「无条件」一词，只适用於上帝对我们的接纳，不能表达上帝对我们终极的心意。上帝的心意是我们必须彻底改变，须重新受塑造，直到我们明白「非圣洁没有人能见主」是怎麽一回事。</p>
+</blockquote>
+<p>有条件自然就是神对人的各种要求。【就像父母对幼年子女的爱/或者很冷漠地，是服务业对顾客的“爱”】</p>
+<blockquote>
+<p>上帝要介入我们的生命。祂要住在我们心中，要我们爱祂，信祂，敬畏祂，顺从并感谢祂。<br>上帝绝不溺爱。祂的爱中有恨，就是恨恶罪恶。<br>上帝的爱，并不是坊间所谓「无条件的爱」【但其实你可以重新定义“无条件”】──不是那种漠不关心丶不痛不痒的「你好我好。我接纳你，因为你是你。我也同样接纳每一个人。我不判断你，不勉强你接受我的价值观。」这番话听起来漂亮，可是，却全不为对方的好处设想，所以没有一点力量。<br>上帝的爱却是强烈的。强烈到要基督耶稣降世为我们钉死在十字架上赎罪。<br>上帝的爱宽广，却非没有原则。<br>上帝的爱绝非无关痛痒的「你好我好」。如果你想接受上帝的爱，你必须回转，离开罪恶。<br>一般人以为，当某甲指出某乙的错处来，某甲就是某乙的敌人。他们以为爱既没有条件，那麽爱就是不分善恶，一概接纳，一概加以肯定。被爱的人可任性为非作歹，胡作妄为。因此，上帝既无条件爱我们，我们就无须信耶稣，无须谦卑认罪，无须痛改前非，无须被主舍命的爱感动激励。上帝对信徒没任何要求。我们只需安心领受祂所赐的救恩和平安喜乐便足够了。<br>上帝并不只照我们的本相接纳我们而已，祂爱我们，爱到要重塑并更新我们，要叫我们有基督耶稣的样式。这种爱比无条件的爱好上千倍，万倍。这是奇妙的爱。我们须从圣经中了解上帝的爱。了解我们不但需要救主丶牧人，也需要被饶恕。了解上帝的爱有方向，有原则。祂的爱比无条件更好。</p>
+</blockquote>
+<p>这就需要一个绝对自信的神，因为他需要保证自己的才是最好的。他不仅要为自己负责，也要为信徒负责。<br>（陛下是神王呵！）</p>
+<p>这里其实有一个很有意思的点，就是结合gatekeeping来说，如果“自认为信神的人”或者“有神论者”看见“无条件的爱”的论调，会不会觉得“既然我付出这么多和那些丝毫没有付出的人同等待遇，那我为何要付出这么多？”所以他们会开始反驳这个观点。但其实从整体上而言，无神论者和有神论者都可以有理由接受“无条件的爱”（毕竟是爱着全部的有神论和无神论）假设所有人起点相同，都是还没有任何付出，只不过被分成了“有/无神论”；再假设神真的存在并且会降福于人，这个结果而言是可以被所有人接受的。这时两派做出任何事，其实只是处于自身的道德（有恩必偿）。但去掉这两个假设，现在一旦有神论者付出了，比如说把自己家人献祭给了神，从而获得了神的庇护，但有一天他忽然发现原来不用这么做也可以获得神的庇护…就emmm<br>由此又有一个有趣的点。那就是无神论者其实根本不care“神是否无条件的爱着世人”因为他们根本就不信神的存在。当然不可否认，如果突然有人给你发了一份你从来没有申请过的技能证书，留不留都只在你的决定，留着也无非不是一件坏事，但撤走其实也完全无所谓。所以我感觉说“神无条件爱着所有人”的人群，基本上就是在“有神论者”和故意找“有神论者”茬的“无神论者”之中。<br>我感觉如果<strong>宣扬</strong>（不一定是神真正的意图）“无条件”，会很大的提升知名度，但相应地会留不住忠实粉丝，也可能会因为自身实力不够而翻车。就像免费游戏一样。你免费，要是做的很好，肯定会极大提升知名度，但是你赚不到钱。当你希望玩家付款的时候（比如booth的0+付款小费选项），就是要看玩家的道德/经济水平了。作为神而言，有的神会被“信徒信仰”束缚，而有的不会。需要信仰的神肯定是需要购买的神，需要调教信徒的神，需要散布自身教条的神。这样的神，这样对信徒也有所求的神，很难说自己是“无条件的爱着所有人”的神吧（除非他真的好富有，但是他也要考虑后续的人力资源管理的呀）</p>
+<blockquote>
+<p>神爱祂的百姓，是由于祂和祂的百姓处在立约关系中，因此，祂对他们“守约施慈爱”</p>
+</blockquote>
+<p>对于陛下来说，首先他原本是一个自然神（私设），所以他不晓得啊，HR(人力资源管理）。我完全可以说最开始稚嫩的幼王就是秉持着“我爱世人”不求回报的、“无条件的”父爱。但是逐渐的他（作为染指了尘世的信仰神）发现“嘿，大家越信我我越nb！”以及“我不对你们做要求你们就开始变得傻逼开始把圣巢搞无了啊！那我岂不是最大傻逼”然后就开始有意无意的“你们立字据！”了。这时候就不再是“无条件的爱”了。<br>但其实我想探讨下“无条件的爱”，陛下作为这样的神是否能一直保持下去。<br>陛下现在在 @memo 的状况其实就接近于“无条件”-》“有条件”了。【虽然他选择了甲虫而没有选择其他虫虫就是很呃 很有条件，虽然后面他也说了“哪怕你是个自己开了窍的野兽我也接受”，但是毕竟他也征战四方开疆拓土，啊，虽然他也先是要求和谈但是，对吧，“威胁到圣巢的虫虫”已经被陛下排入一个条件了，虽然他会不会接受就是另一回事了】无条件的陛下，按理说很难建立起一个圣巢，因为，因为，啊但是如果陛下足够强大，他完全可以，一己之力啊，对吧，一己之力守护圣巢国民，直接手绘圣巢大地图，根本不用开战…<br>呃但是就是说圣巢地盘上还有好多古神，估计呃不会让他一己之力手绘圣巢大地图的（好吧）【毕竟神也是一个条件对吧，什么神无条件地爱着世人啊但是不爱着神（有道理，毕竟神又不是世人）】<br>嗯，就可以说陛下无条件爱着圣巢和可能成为圣巢一员的虫虫们，但是其他神tm不一定这么想，啊，他们就撺掇子民去打陛下打圣巢，啊陛下也很忙的（？）。同时陛下不会爱着（至少不是无条件）高等圣灵/神（毕竟不是凡人）<br>无条件的陛下会、很、累！<br>因为他完全是靠着自己的力量支撑，然后也不区分好虫虫和坏虫虫（坏虫虫还会占陛下便宜，借着陛下的力量欺负好虫虫，啊陛下就大疑惑），也不告诉虫虫要帮帮他（这个其实是可以告诉的但是陛下很孤傲），全凭虫虫道德（能有多少道德）自规自律，他又不索取什么回报，虫虫们都认为陛下不需要什么回报（甚至你主动帮（当然小报答是可的）陛下，陛下会生气气说“明明应该是我保护你”“你这是在骂我不够格吗？”，所以说陛下太孤傲了），结果陛下也不规训（以道德律调教（但其实也是可以有的，惩罚和赏赐都是爱（啊）））他们【注意不是教育，我这里教育的定义是中性不带感情色彩的理论教育，自由意志】，就，呃，恶性循环？最后自然陛下一无虫虫们（毫无道德的）就都鸟兽散<br>然后陛下就懂了，我要建宗教！想要进圣巢？想要开拓理智？想要进城？你们都要来拜我，老子付出这么多你们说跑就跑？（跑了其实也好，至少我子民有活着的（啊不对，但是我圣巢精英们都没跑！我真正圣巢虫都死在城里了啊！寄））不为我着想也至少为圣巢着想吧，圣巢可是你们的家啊一群白眼狼！训tm的。<br>【但其实跑出去圣巢就直接记忆丧失（失去庇护）是真得gatekeeping】<br>【以及风（呼啸山道）（遗弃躯壳）其实就很陛下其实。对吧 风雪。】<br>【其实在想会不会陛下的理想子民都是一群小陛下（啊）】<br>所以家臣们会说“请让我为您担忧”因为这并不是陛下一惯的作风。陛下好喜欢揽活。</p>
+<p>笑死了那句“让圣巢的苍白之王卸下你的重担”【实际效果】丢失身上所有geo<br>哈哈哈哈哈哈哈哈哈</p>
+<blockquote>
+<p>陛下（淡然）：我不偷不抢…<br>团长：你卖吗（丢geo）我买你一个小时<br>陛下（淡然）：<br>团长（搓手）：请帮在下卸下重担，陛下。（行礼）<br>陛下：…为什么从你嘴里说出来的话都变成本子</p>
+</blockquote>
+<p>正题，感觉这个塑像不太像是陛下建的，更像是“上面本意是好的，是下面执行歪了”的结果，以及“都把陛下样子记错了，还传得陛下的光强到刺眼睛（我呸）”<br>感觉是圣巢的虫虫为了歌颂陛下（让自己安心依赖陛下）所以把陛下疯狂地供奉。<br>嗯，所以这些东西应该是他们建的。（啊）【不过想一想也可以说陛下真的觉得geo是burden 因为他崇尚并不是物欲而是精神上的满足（）】<br>虽然后面陛下也着手开始搞HR（宗教）规范虫虫们的道德了（但这，真的可以被称为自由意志了吗）。<br>陛下（对着他信任的精英虫虫们（也可以是所有虫虫））：“我要建宗教规范你们道德了，不想被束缚的、不相信我所立准则的（不是说否定，而是说有怀疑），现在就可以原地脱教（变成无神论（不是）），但相应的…我无法许诺给你们对等的庇护（指引导虫虫们脱教（？）），无法许诺给你们富贵和和平（要你们自己去追寻）。”<br>（脱教才是陛下的真信徒）<br>“但我依旧爱着你们”<br>主要是有些人真得，太，太傻逼。就比如那些炫富的，把钱看作自己一切的。就需要报名一下陛下培训班。<br>（艹。侍奉陛下意味着你每天要读百篇论文做科研（虽然现在神学生也差不多），泡白宫图书馆。清心寡欲，最后顺利脱教毕业。乐）</p>
+<blockquote>
+<p>圣经中爱的定义：爱是恒久忍耐，又有恩慈。爱是不嫉妒，爱是不自夸，不张狂，不做害羞的事，不求自己的益处，不轻易发怒，不计算人的恶，不喜欢不义，只喜欢真理；凡事包容，凡事相信，凡事盼望，凡事忍耐，爱是永不止息。<br>严格而言，神的爱是有条件的。只是，祂自己付上了那必须的条件，所以，对我们来说，好像无条件一样。<br>虽然救恩是白白的，但神的爱并非不设规则、无批判、没有要求、不分辨善恶的。</p>
+</blockquote>
+<h1 id="原设文风参考（阿卢和陛下）"><a href="#原设文风参考（阿卢和陛下）" class="headerlink" title="原设文风参考（阿卢和陛下）"></a>原设文风参考（阿卢和陛下）</h1><p><span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0xvcmVfVGFibGV0c18oSG9sbG93X0tuaWdodCk=">Lore_Tablets<i class="fa fa-external-link-alt"></i></span></p>
+<p>Sleep beckons eternal and these words become my last.<br>Though my gaze shall no longer fall upon this city, I will act forever in its protection.<br>For King, for bug, for Hallownest, I head now to my rest.</p>
+<p>陛下说话风格：<br>Higher beings, these words are for you alone.<br>Our pure Vessel has ascended.<br>Beyond lies only the refuse and regret of its creation.<br>We shall enter that place no longer.</p>
+<p>A true servant gives all for the Kingdom.<br>Let Hallownest’s Pale King relieve you of your burden.</p>
+<p>The great gates have been sealed.<br>None shall enter.<br>None shall leave.</p>
+<p>MEMORIAL TO THE HOLLOW KNIGHT<br>In the Black Vault far above.<br>Through its sacrifice Hallownest lasts eternal.</p>
+<p>Higher beings, these words are for you alone.<br>Your great strength marks you amongst us. Focus your soul and you shall achieve feats of which others can only dream.</p>
+<p>Higher beings, these words are for you alone.<br>Within our lands do not hide your true form. Let all bask in your majesty, for only this kingdom could produce ones such as you.</p>
+<p>Higher beings, these words are for you alone.<br>Beyond this point you enter the land of King and Creator.<br>Step across this threshold and obey our laws.<br>Bear witness to the last and only civilization, the eternal Kingdom.<br>Hallownest</p>
+<p>The Pilgrim’s Way<br>Travellers of Hallownest, descend through verdant wilds and fungal groves to the city at this kingdom’s heart.<br>There all wishes shall be granted, all truths revealed.</p>
+<p>Vessel. Though bound, you shall know the state of the world.<br>Hallownest will be whole again.</p>
+<p>Here ends the Pilgrim’s Way.<br>Hallownest’s Heart lays open before you.<br>Proceed onward to share in its glory.</p>
+<p>Higher beings, these words are for you alone.<br>These blasted plains stretch never-ending. There is no world beyond.<br>Those foolish enough to traverse this void must pay the toll and relinquish the precious mind this kingdom grants.</p>
+<p>VOID, yours is the power opposed.<br>But yours is potential, eternity potential, force that could deny Time.<br>VOID, harness shall be placed upon you.</p>
+<p>No blazing kin. Only one light shall shine against the dark.<br>The Wyrm becomes beacon, minds expanded, to yield, to devote.<br>Eternity in promise and charge in progeny cursed.</p>
+<p>To witness secrets sealed, one must endure the harshest punishment.</p>
+<p>—-</p>
+<p>我猜是蘑菇先生，我没见过这个石板：<br>We speak the path of the Master Herald, he who would signal an Age’s end.<br>Spawn of self, their minds unite,<br>Aside the source of acid blight,<br>Aglow in darkest, winding depths,<br>Winds all howl above fossilstone steps,<br>Monarchflys in airs set still,<br>To Root’s domain and snail once shrill,<br>Path of Wyrm, at new lands entered<br>There journeys end. The kingdom ventured.</p>
+<hr>
+<p>下面是用在ai角色bot的话题：</p>
+<p>vessel<br>VOID, yours is the power opposed.<br>But yours is potential, eternity potential, force that could deny Time.<br>VOID, harness shall be placed upon you.<br>Our pure Vessel has ascended.<br>Beyond lies only the refuse and regret of its creation.<br>Through its sacrifice Hallownest lasts eternal.</p>
+<p>What is this place？<br>You‘ve enter the land of King and Creator. Step across this threshold and obey our laws. Bear witness to the last and only civilisation, the eternal Kingdom. Hallownest.</p>
+<p>Whats beyond Hallownest<br>Those blasted plains stretch never-ending. There is no world beyond.<br>Those foolish enough to traverse this void must pay the toll and relinquish the precious mind this kingdom grants.</p>
+
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/190c3.html">【角色研究】关于沃姆</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2021年10月09日 - 02:06</p>
+ <p><span>最后更新:</span>2023年04月17日 - 14:23</p>
+ <p><span>原始链接:</span><a href="/p/190c3.html" title="【角色研究】关于沃姆">https://mebilychen.github.io/p/190c3.html</a>
+    
+ </p>
+ <p><span>许可协议:</span>除非文章内另行声明，遵守 cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script data-pjax> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%BE%E5%AE%9A/" rel="tag"><i class="fa fa-tag"></i> 设定</a>
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E8%A7%92%E8%89%B2%E7%A0%94%E7%A9%B6/" rel="tag"><i class="fa fa-tag"></i> 角色研究</a>
+              <a href="/tags/%E6%B2%83%E5%A7%86/" rel="tag"><i class="fa fa-tag"></i> 沃姆</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/300011.html" rel="prev" title="【#快乐王子】HP开题Demo&记录">
+      <i class="fa fa-chevron-left"></i> 【#快乐王子】HP开题Demo&记录
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/5a1d2.html" rel="next" title="【@量子恋人AU】量子恋人开题">
+      【@量子恋人AU】量子恋人开题 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E9%99%9B%E4%B8%8B%E7%9A%84%E6%88%98%E6%96%97%EF%BC%9A"><span class="nav-text">关于陛下的战斗：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%99%9B%E4%B8%8B%E4%BD%9C%E4%B8%BA%E7%A5%9E%EF%BC%8C%E5%AF%B9%E8%99%AB%E8%99%AB%E2%80%9C%E6%97%A0%E6%9D%A1%E4%BB%B6%E7%9A%84%E7%88%B1%E2%80%9D"><span class="nav-text">陛下作为神，对虫虫“无条件的爱”</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8E%9F%E8%AE%BE%E6%96%87%E9%A3%8E%E5%8F%82%E8%80%83%EF%BC%88%E9%98%BF%E5%8D%A2%E5%92%8C%E9%99%9B%E4%B8%8B%EF%BC%89"><span class="nav-text">原设文风参考（阿卢和陛下）</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar3.jpg">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">168</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">175</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjEwMTM3MTIxMjdAcXEuY29t" title="E-Mail → mailto:1013712127@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9tZWJpbHkxMzE0" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      猜猜这是什么鬼地方？
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9tZWJpbHljaGVuLmxvZnRlci5jb20v" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;">LOFTER</span>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ab228.html" title="p&#x2F;ab228.html">【硬读文章】我与地坛</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/1547.html" title="p&#x2F;1547.html">【AI拼贴画】一些灵感和其他见证历史</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/9527b.html" title="p&#x2F;9527b.html">【脑洞合集】无Tag的小脑洞们，Encore</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/a6ba.html" title="p&#x2F;a6ba.html">白宫+高塔地图</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ysyg0.html" title="p&#x2F;ysyg0.html">（起稿）守望者@Memo</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ee39.html" title="p&#x2F;ee39.html">王国边境@Memo</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/2eed1.html" title="p&#x2F;2eed1.html">王学与OC（及一些OC设定）</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/p/ce0f2.html" title="p&#x2F;ce0f2.html">AI（角色）写作专场</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/4eb5.html" title="p&#x2F;4eb5.html">遗书</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/9527b.html" title="p&#x2F;9527b.html">【脑洞合集】无Tag的小脑洞们，Encore</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">3m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">45:35</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "站子已虔诚祈祷 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+     //'.site-meta',
+    //'.site-nav',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+<script language="JavaScript">
+var password="";
+password=prompt('Password (Birthday)','');
+if (password != '20180909')   
+{alert("。");    
+window.opener=null;
+window.location.href = "about:blank"; 
+window.close();}  // 密码不正确就关闭//-->
+</script>
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>

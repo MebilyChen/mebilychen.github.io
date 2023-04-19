@@ -1,0 +1,2412 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="article">
+<meta property="og:title" content="【鉴|阅】书架+名句积累+鉴赏">
+<meta property="og:url" content="https://mebilychen.github.io/p/4315.html">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:locale">
+<meta property="og:image" content="https://i.loli.net/2021/10/03/G4AiHPIw9Ue7uxm.png">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E5%AE%B6%E9%87%8C%E7%9A%84%E4%B9%A61.JPG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E5%AE%B6%E9%87%8C%E7%9A%84%E4%B9%A62.JPG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E5%B8%A6%E8%B5%B0%E7%9A%84%E4%B9%A6.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/22/UDTNV29SLY1z5MB.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/22/45B3jwUt8fLJ9Cy.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/22/KZaIzhH6ipMGRAt.png">
+<meta property="og:image" content="https://i.loli.net/2021/04/22/fEs1hjkBF9VgWH6.png">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/D9F481E5B0755295FFBA90CBD629F6DD.png">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E5%B7%A6%E5%8F%B3%E6%B4%BE.jpg">
+<meta property="og:image" content="http://cdn.mebilychen.top/doc/brain%20illness1.PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/doc/IMG_8895(20211102-154041).PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/Works/%E9%A5%AD%E5%9C%88%E6%96%87%E5%8C%96%E4%B8%8E%E7%A4%BE%E4%BC%9A%E5%BF%83%E7%90%86%E5%AD%A6.PNG">
+<meta property="og:image" content="https://i.loli.net/2021/04/18/gW5Z8tPBlaOLAuQ.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/04/18/7ryz1XHuT3VdhFK.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/04/18/GtBvsVhgy2oESRb.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/04/18/wBHoqzFUelmgDt4.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/04/18/pbYGrRaH4qoxQcv.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/04/18/bxetzS1MYBRn7Um.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/07/09/UyS9P8beF3HpZDW.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/08/26/fJ1EkWBpqCxzaPe.jpg">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/OC/IMG_3867.PNG">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/%E5%9C%B0%E5%9B%BE%E5%8F%82%E8%80%83/%E5%AE%AB%E6%AE%BF%E5%9C%B0%E5%9B%BE2022.3.6.png">
+<meta property="article:published_time" content="2021-03-26T09:12:00.000Z">
+<meta property="article:modified_time" content="2023-02-09T08:02:08.604Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="文">
+<meta property="article:tag" content="积累本">
+<meta property="article:tag" content="哲学">
+<meta property="article:tag" content="鉴">
+<meta property="article:tag" content="书">
+<meta property="article:tag" content="文学">
+<meta property="article:tag" content="心理学">
+<meta property="article:tag" content="法律">
+<meta property="article:tag" content="神学">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/10/03/G4AiHPIw9Ue7uxm.png">
+
+<link rel="canonical" href="https://mebilychen.github.io/p/4315.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : '中文'
+  };
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    
+      if (NexT.utils.hasMobileUA()) return;
+    
+    let time, hidden, visible, title = document.title;
+    let favicon = document.querySelector('link[rel="icon"]');
+    
+      hidden = ["盯————","*探*","?","......","*观察*"];
+      visible = ["*偏转视线*","*缩*","*强装镇定*","！","*低头*"];
+    
+    let random = t => t[Math.floor(Math.random() * t.length)];
+    const change = () => {
+      if (document.hidden) {
+        favicon.setAttribute('href', '/images/favicon-32x32-king-black.png');
+        
+          document.title = random(hidden);
+        
+        clearTimeout(time);
+      } else {
+        favicon.setAttribute('href', '/images/favicon-32x32-brand-black.png');
+        
+          document.title = random(visible);
+        
+        time = setTimeout(() => {
+          document.title = '碳素的小作坊';
+        }, 1000);
+      }
+    }
+    document.addEventListener('visibilitychange', change, false);
+  });
+</script>
+
+  <title>【鉴|阅】书架+名句积累+鉴赏 | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<style type="text/css">
+.spoiler {
+  display: inline-flex;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;调谐中...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">175</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">168</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-image fa-fw"></i>画廊</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/random.html" rel="section"><i class="fa fa-question fa-fw"></i>抽</a>
+
+  </li>
+        <li class="menu-item menu-item-lang">
+
+    <a href="/en/" rel="section"><i class="fa fa-globe fa-fw"></i>->English</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-17081-597255-1305127431.cos-website.ap-hongkong.myqcloud.com' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/4315.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【鉴|阅】书架+名句积累+鉴赏
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-26 17:12:00" itemprop="dateCreated datePublished" datetime="2021-03-26T17:12:00+08:00">2021-03-26</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2023-02-09 16:02:08" itemprop="dateModified" datetime="2023-02-09T16:02:08+08:00">2023-02-09 16:02:08</time>
+                </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A2%B3%E9%85%B8%E7%9A%84%E6%B1%82%E7%94%9F%E4%B9%8B%E8%B7%AF/" itemprop="url" rel="index"><span itemprop="name">碳酸的求生之路</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A2%B3%E9%85%B8%E7%9A%84%E6%B1%82%E7%94%9F%E4%B9%8B%E8%B7%AF/%E5%B0%86%E4%B8%8A%E4%B8%8B%E8%80%8C%E6%B1%82%E7%B4%A2/" itemprop="url" rel="index"><span itemprop="name">将上下而求索</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>84k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1:16</span>
+            </span>
+            <div class="post-description"><center></div>
+          
+          <div class="post-tags">
+              <a href="/tags/%E6%96%87/" rel="tag"><i class="fa fa-tag"></i> 文</a>
+              <a href="/tags/%E7%A7%AF%E7%B4%AF%E6%9C%AC/" rel="tag"><i class="fa fa-tag"></i> 积累本</a>
+              <a href="/tags/%E5%93%B2%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> 哲学</a>
+              <a href="/tags/%E9%89%B4/" rel="tag"><i class="fa fa-tag"></i> 鉴</a>
+              <a href="/tags/%E4%B9%A6/" rel="tag"><i class="fa fa-tag"></i> 书</a>
+              <a href="/tags/%E6%96%87%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> 文学</a>
+              <a href="/tags/%E5%BF%83%E7%90%86%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> 心理学</a>
+              <a href="/tags/%E6%B3%95%E5%BE%8B/" rel="tag"><i class="fa fa-tag"></i> 法律</a>
+              <a href="/tags/%E7%A5%9E%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> 神学</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p>素材积累：夜深人静/日常的时候注意听声音描述声音、气味、画面</p>
+<p>因为不想用豆瓣所以给这贴又升了一级，变成书单+名句+鉴赏。  </p>
+<p>在写作（甚至其他时候），如果想要培养某种意识，可以把“提醒卡片”放在旁边，以供回忆和对照。</p>
+<p>可以关注一下有的歌词翻译，怎么能翻译成各种中文的</p>
+<p>记得学一下中世纪风情文化（wink）</p>
+<hr>
+<p>我就是觉得 现在看看当年的阅读题 感觉好 好泯灭天性（？）</p>
+<p>我语文一直不好 我就是觉得自己语文不好<br>然后感觉我那时候就是觉得 按照读完的感觉走 就没有意识到有出题人的存在<br>但每次就是拿不到分<br>我也不想动真感情 因为觉得要是动了真感情结果被人评判一番感觉好难过<br>可能我下意识在压抑自己/思索<br>要是我有了孩子要不要告诉他做阅读理解题重要的不是你怎么想 不是作者怎么想 而是出题人和判卷人怎么想呢/思索</p>
+<hr>
+<h4 id="What-Should-I-Read-Next"><a href="#What-Should-I-Read-Next" class="headerlink" title="What Should I Read Next? "></a><span class="exturl" data-url="aHR0cHM6Ly93d3cud2hhdHNob3VsZGlyZWFkbmV4dC5jb20v">What Should I Read Next? <i class="fa fa-external-link-alt"></i></span></h4><p>Read all the books in your library? This website will take your preferences and give you all the book recommendations you could ever want.</p>
+<h4 id="OnRead"><a href="#OnRead" class="headerlink" title="OnRead"></a><span class="exturl" data-url="aHR0cHM6Ly93d3cub25yZWFkLmNvbS8=">OnRead<i class="fa fa-external-link-alt"></i></span></h4><p>If you need a quick and easy book to read, check out OnRead’s library of free ebooks!</p>
+<h4 id="z-lib"><a href="#z-lib" class="headerlink" title="z-lib"></a><span class="exturl" data-url="aHR0cHM6Ly96LWxpYi5vcmcv">z-lib<i class="fa fa-external-link-alt"></i></span></h4><h4 id="找书网站（英-俄）"><a href="#找书网站（英-俄）" class="headerlink" title="找书网站（英/俄）"></a><span class="exturl" data-url="aHR0cDovL2dlbi5saWIucnVzLmVjLw==">找书网站（英/俄）<i class="fa fa-external-link-alt"></i></span></h4><h4 id="找书网站（中）"><a href="#找书网站（中）" class="headerlink" title="找书网站（中）"></a><span class="exturl" data-url="aHR0cHM6Ly96aC5ib29rc2Mub3JnLw==">找书网站（中）<i class="fa fa-external-link-alt"></i></span></h4><h4 id="阅读网站（中）"><a href="#阅读网站（中）" class="headerlink" title="阅读网站（中）"></a><span class="exturl" data-url="aHR0cHM6Ly93d3cueW9kdXp3LmNvbS9ib29rLw==">阅读网站（中）<i class="fa fa-external-link-alt"></i></span></h4><h4 id="一个博客"><a href="#一个博客" class="headerlink" title="一个博客"></a><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3Byb2dyYW10aGluay8=">一个博客<i class="fa fa-external-link-alt"></i></span></h4><h1 id="镇楼：《君主论》"><a href="#镇楼：《君主论》" class="headerlink" title="镇楼：《君主论》"></a>镇楼：《君主论》</h1><p>我愿意去到哪里都带着这本书（其实是因为它小轻薄）。  <br>因为陛下，有缘看了我开窍的这本书，从此打开了新世界的大门。  </p>
+<p>想单独写一写看这本书。太帅了。  <br>WAR！！！  </p>
+<p>主要就是看完这个之后我越来越崇尚精英文化了，就觉得…嗯，对吧。  </p>
+<p>《君主论》为什么是拿破仑的枕边书？因为它使人昏昏欲睡（不）。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9iYWlqaWFoYW8uYmFpZHUuY29tL3M/aWQ9MTY5ODcwMDcwNzE3MzEyNzk5NyZ3ZnI9c3BpZGVyJmZvcj1wYw==">其他人总结的<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cucHJvY2Vzc29uLmNvbS92aWV3L2xpbmsvNjE1OWFkNDQxZTA4NTMzYTAzMDEyNGFl">王学家版（施工中）<i class="fa fa-external-link-alt"></i></span></p>
+<p><img data-src="https://i.loli.net/2021/10/03/G4AiHPIw9Ue7uxm.png" alt="君主论（王学家编辑版）.png"></p>
+<h1 id="Dictionary-of-Obscure-Sorrows"><a href="#Dictionary-of-Obscure-Sorrows" class="headerlink" title="Dictionary of Obscure Sorrows"></a>Dictionary of Obscure Sorrows</h1><p>我愿称之为“黄莲词典”。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuZGljdGlvbmFyeW9mb2JzY3VyZXNvcnJvd3MuY29tLw==">难言词典官网<i class="fa fa-external-link-alt"></i></span></p>
+<p>好的，我开始不爽了。  <br>我要自己建词典。  </p>
+<p> <a href="/p/b380.html">传送门</a></p>
+<h1 id="家里的书架"><a href="#家里的书架" class="headerlink" title="家里的书架"></a>家里的书架</h1><p><img data-src="http://cdn.mebilychen.top/image/%E5%AE%B6%E9%87%8C%E7%9A%84%E4%B9%A61.JPG" alt="1"></p>
+<p><img data-src="http://cdn.mebilychen.top/image/%E5%AE%B6%E9%87%8C%E7%9A%84%E4%B9%A62.JPG" alt="2"></p>
+<p><img data-src="http://cdn.mebilychen.top/image/%E5%B8%A6%E8%B5%B0%E7%9A%84%E4%B9%A6.png" alt="带走的书"></p>
+<p>带昆虫是因为太巧了，当时去日本还没有萌上陛下。这应该是陛下的意思，所以我带上求平安。（<em>wink</em>）  </p>
+<p>哦，我把冲突与悬念也带上了，记一笔。  </p>
+<h1 id="学校推荐的书架"><a href="#学校推荐的书架" class="headerlink" title="学校推荐的书架"></a>学校推荐的书架</h1><p><img data-src="https://i.loli.net/2021/04/22/UDTNV29SLY1z5MB.png" alt="大一"><br><img data-src="https://i.loli.net/2021/04/22/45B3jwUt8fLJ9Cy.png" alt="大二"><br><img data-src="https://i.loli.net/2021/04/22/KZaIzhH6ipMGRAt.png" alt="大三"><br><img data-src="https://i.loli.net/2021/04/22/fEs1hjkBF9VgWH6.png" alt="大四"></p>
+<h1 id="b站半佛推荐的五十本书"><a href="#b站半佛推荐的五十本书" class="headerlink" title="b站半佛推荐的五十本书"></a>b站半佛推荐的<del>五</del>十本书</h1><p>1.君主论—马基雅维利<br>2.潜规则—吴思<br>3.血酬定律—吴思<br>4.爱的博弈—约翰•戈特曼，娜恩•西尔弗<br>5.洞穴奇案—萨伯（建议先看这本书）</p>
+<p>1.贫穷的本质<br>2.黑天鹅<br>3.灰犀牛<br>4.事实<br>5.自私的基因</p>
+<h2 id="现代美学教学大纲（40课时）"><a href="#现代美学教学大纲（40课时）" class="headerlink" title="现代美学教学大纲（40课时）"></a>现代美学教学大纲（40课时）</h2><p>导师不让我选这课，偷偷扒下来个大纲自学。</p>
+<p><strong>第一章  绪论</strong>                                 （2学时）</p>
+<p>了解美学的产生与发展、美学的研究对象以及美学的任务和研究方法，认清本课程所阐述的系列问题之产生和发展概况。</p>
+<p>第一节：美学的产生、研究对象及学科任务（1学时）</p>
+<p>第二节：美学研究的方法（1学时）</p>
+<p><strong>第二章  美的存在理论</strong>                          （6学时）</p>
+<p>了解美的存在理论的一系列问题，包括美的内容与形式、美的形态问题，初步探讨审美的主客体建构问题。</p>
+<p>第一节：美的存在问题探讨（2学时）</p>
+<p>第二节：美的内容与形式（2学时）</p>
+<p>第三节：美的形态（2学时）</p>
+<p><strong>第三章  美的获得理论</strong>                          （6学时）</p>
+<p>了解美的获得之相关理论，包括美感的本质与特征、分类，美感的生理心理活动等，进一步探讨在美的获得问题上的主客体建构问题。</p>
+<p>第一节：美感的本质和特征（2学时）</p>
+<p>第二节：美感的分类（2学时）</p>
+<p>第三节：美感的生理心理活动（2学时）</p>
+<p><strong>第四章 美的评价理论</strong>                           （6学时）</p>
+<p>了解对美的评价所引起的一系列问题，包括审美标准、审美差异以及艺术的美学特征等，认清主体对美的感受而产生的审美价值取向主要是由主体的文化背景决定的。</p>
+<p>第一节：审美标准（2学时）</p>
+<p>第二节：审美差异（2学时）</p>
+<p>第三节：艺术的美学特征（2学时）</p>
+<p><strong>第五章 美的创造理论</strong>                          （10学时）</p>
+<p>了解美的创造之系列问题，包括美的创造的实质、艺术美的创造、现实美的创造、科学美的创造以及虚拟现实环境下美的创造等，认清康德的审美建构和认知建构是一致的。                 </p>
+<p>第一节：美的创造的实质（2学时）</p>
+<p>第二节：艺术美的创造（2学时）</p>
+<p>第三节：现实美的创造（2学时）</p>
+<p>第四节：科学美的创造（2学时）</p>
+<p>第五节：虚拟现实环境下美的创造（2学时）</p>
+<p><strong>第六章 美育理论</strong>                              （10学时）</p>
+<p>了解美育的一系列问题，包括审美教育思想的产生和发展、美育的任务、美育的特点、审美修养以及美育意义等，认清美育在我们建设社会主义和谐社会当中的重要性。</p>
+<p>第一节：审美教育思想的产生和发展（2学时）</p>
+<p>第二节：美育的任务（2学时）</p>
+<p>第三节：美育的特点（2学时）</p>
+<p>第四节：审美修养（2学时）</p>
+<p>第五节：美育的意义（2学时）</p>
+<h1 id="清华北大书架"><a href="#清华北大书架" class="headerlink" title="清华北大书架"></a>清华北大书架</h1><h2 id="清华"><a href="#清华" class="headerlink" title="清华"></a>清华</h2><p><img data-src="http://cdn.mebilychen.top/image/D9F481E5B0755295FFBA90CBD629F6DD.png" alt="清华"></p>
+<h2 id="北大"><a href="#北大" class="headerlink" title="北大"></a>北大</h2><p>有人提了一嘴《货币战争》</p>
+<p>推荐：<br>《周易》《诗经》《老子》《论语》《孙子兵法》《孟子》《庄子》《史记》《坛经》《古文观止》《唐诗三百首》《宋词三百首笺注》《红楼梦》《中国近三百年学术史》《鲁迅选集》《中国哲学史》《中国法律与中国社会》《理想国》《神曲》</p>
+<p>《哈姆莱特》《思想录》《社会契约论》《历史理性批判文集》《约翰·克利斯朵夫》《科学史》《共产党宣言》《资本论》《毛泽东选集》《邓小平文选》</p>
+<p>榜单：</p>
+<p>1.《营改增的大时代：政策透析与解决方案》</p>
+<p>2.《1Q84》（2）</p>
+<p>3.《家庭、私有制和国家的起源》</p>
+<p>4.《德意志意识形态》</p>
+<p>5.《自杀论》</p>
+<p>6.《1844年经济学哲学手稿》</p>
+<p>7.《心理学与生活》</p>
+<p>8.《1Q84》（1）</p>
+<p>9.《利维坦》</p>
+<p>10.《文明的冲突与世界秩序的重建》</p>
+<p>11.《挪威的森林》</p>
+<p>12.《叫魂：1768年中国妖术大恐慌》</p>
+<p>13.《白鹿原》</p>
+<p>14.《幻夜》</p>
+<p>15.《公共领域的结构转型》</p>
+<p>16.《社会研究方法教程》</p>
+<p>17.《政治学》</p>
+<p>18.《不能承受的生命之轻》</p>
+<p>19.《长恨歌》</p>
+<p>20.《三体》</p>
+<p>21.《新参者》</p>
+<p>22.《如何阅读一本书》</p>
+<p>23.《枪炮、病菌与钢铁》</p>
+<p>24.《春秋左传注》</p>
+<p>25《明朝那些事儿》</p>
+<h2 id="杀死一只知更鸟"><a href="#杀死一只知更鸟" class="headerlink" title="杀死一只知更鸟"></a>杀死一只知更鸟</h2><blockquote>
+<p>你射多少蓝鸟都没有关系，但要记住，杀死一只知更鸟就是一桩罪恶。因为知更鸟只唱歌给我们听，什么坏事也不做。</p>
+</blockquote>
+<p>不好意思抬个杠。  <br>人还真以为自己是神了是吧。<br>抬杠完毕。  <br>说的很有道理，我赞同，嗯。  </p>
+<h1 id="毛主席"><a href="#毛主席" class="headerlink" title="毛主席"></a>毛主席</h1><p>RT，也许也是因为被我爸安利得太多次了吧</p>
+<h2 id="《在延安文艺座谈会上的讲话》1942-5"><a href="#《在延安文艺座谈会上的讲话》1942-5" class="headerlink" title="《在延安文艺座谈会上的讲话》1942.5"></a>《在延安文艺座谈会上的讲话》1942.5</h2><p><span class="exturl" data-url="aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTUlOUMlQTglRTUlQkIlQjYlRTUlQUUlODklRTYlOTYlODclRTglODklQkElRTUlQkElQTclRTglQjAlODglRTQlQkMlOUElRTQlQjglOEElRTclOUElODQlRTglQUUlQjIlRTglQUYlOUQvODA3MzMwP2ZyPWFsYWRkaW4=">原文链接<i class="fa fa-external-link-alt"></i></span></p>
+<blockquote>
+<p>例如，某种作品，只为少数人所偏爱，而为多数人所不需要，甚至对多数人有害，硬要拿来上市，拿来向群众宣传，以求其个人的或狭隘集团的功利，还要责备群众的功利主义，这就不但侮辱群众，也太无自知之明了。</p>
+</blockquote>
+<blockquote>
+<p>“文艺的基本出发点是爱，是人类之爱。”爱可以是出发点，但是还有一个基本出发点。爱是观念的东西，是客观实践的产物。我们根本上不是从观念出发，而是从客观实践出发……我们恨日本帝国主义，是日本帝国主义压迫我们的结果。 <strong>世上决没有无缘无故的爱，也没有无缘无故的恨。</strong> 至于所谓“人类之爱”，自从人类分化成为阶级以后，就没有过这种统一的爱……因为它在阶级社会里是不可能实行的。真正的人类之爱是会有的，那是在全世界消灭了阶级之后……但是现在还没有。我们不能爱敌人，不能爱社会的丑恶现象，我们的目的是消灭这些东西。这是人们的常识，难道我们的文艺工作者还有不懂得的吗？</p>
+</blockquote>
+<h1 id="哲学（与政治）"><a href="#哲学（与政治）" class="headerlink" title="哲学（与政治）"></a>哲学（与政治）</h1><p><span class="exturl" data-url="aHR0cHM6Ly93d3cubW9yYWxtYWNoaW5lLm5ldC8=">Moral Machine<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="柏拉图"><a href="#柏拉图" class="headerlink" title="柏拉图"></a>柏拉图</h2><blockquote>
+<p>“如果尖锐的批评完全消失，温和的批评将会变得刺耳。如果温和的批评也不被允许，沉默将被认为居心叵测。如果沉默也不再允许，赞扬不够卖力将是一种罪行。如果只允许一种声音存在，那么，唯一存在的那个声音就是谎言。”</p>
+</blockquote>
+<h2 id="功利主义"><a href="#功利主义" class="headerlink" title="功利主义"></a>功利主义</h2><p>码。</p>
+<h2 id="自由主义-amp-极端自由主义-amp-自由至上主义"><a href="#自由主义-amp-极端自由主义-amp-自由至上主义" class="headerlink" title="自由主义 &amp; 极端自由主义 &amp; 自由至上主义"></a>自由主义 &amp; 极端自由主义 &amp; 自由至上主义</h2><p><span class="exturl" data-url="aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTglODclQUElRTclOTQlQjElRTQlQjglQkIlRTQlQjklODkvMTU4Nz9mcj1hbGFkZGlu">自由主义<i class="fa fa-external-link-alt"></i></span></p>
+<p>码。因为看到楼下###关于自杀里的“涂尔干在充分论证了自己的假设的情况下，他认为，自杀这一行为本身就是一种逃避社会现实的行为同时也是逃避个人作为社会成员应承担的责任。这种行为是不可取的。我们应该采取一切可行措施制止自杀者的自杀行为。”，觉得所谓拉人回来的政府组织只不过是想拉人回来干活罢了，虚伪。   </p>
+<blockquote>
+<p>极端自由主义者的眼里没有人民。<br>中国当代社会进程里，已经遇到的一个大坑，它是在整个社会逐步宽容、鼓励下，个人主义渐渐抬升后，与极端自私结合在一起的#极端自由主义思潮#。这种问题是导致社会内卷化的重要因素之一。尤其是文字表达能力比较强的城市小资产阶级意识的青年人，是重要的被侵蚀对象。他们(她们) 现在非常喜欢用#权力让渡#这个词汇，来定义自己个人权利正受到国家、集体意志的侵害，他们认定这是个严重的事实?我看来这只是一种话术诡辩。按照他们那意思，国家，社会都是<br>一直欠着你的，实际上国家不欠你什么。做为中国公民，每一个公民的基本权利都不是天生得来的。而是靠前人的浴血奋战，无数人以家庭、生命为代价，一起推动国家权力重塑后，给这个国家所有人争夺过来，再通过宪法赋予每一位合法公民的。所以，并不存在所谓天赋人权。根本不用照搬西方那套社会学理论，在西方国家，人权也只是表面宣扬的平等，从来不曾实现过各个层面的人人平等，也不存在所有人可以平等的、享有过同等程度的自由,这种事。可能有一一个真正统一标准下的人权认定。之所以让人在意识里感觉到每一个人都有尊严,那只是掌握话语权的阶层，帮着所有人想象出来的，不是事实。硬要说这个世界有权力让渡，也只有自上而下的有限权力出让,没有自下而上权力让渡，很多人只不过被受控的教育、媒体等机构营造出舆论氛围迷惑而已。中国的社会发展到到今天这一步，是以群体(集体)力量为主要单元，一步一步干出来，人民享有的权利和自由，是随着国家经济增长，国力变化而逐渐提高的。但很多人不遇到事，已经想不起来自己除了被赋予的个人权利，还有社会义务。近20年，中国城市化进程的加速，物质基础丰盈度的大幅增加，让城市里出生、生活、工作青年和进入城市里的生活、工作的青年人，可以自由选择的发展空间比以前多了很多。这对于一些处于社会普通阶层的人，从繁重的社会生存压力下的觉得这些是本就应该的，天然赋予的，更多的权利还处于被国<br>家、社会体制剥夺的当中。很有必要打断这些人的狗屁迷思。他们把这种视为价值观的荒谬观点，与社会现实联系起来，当然会产生图1里红框蓝线标注的文字，所传达出的意思(尤其严重的是那句”看看一直在自救的湖北人”恶劣至极)。这些人把对社会所有人的虚空性自我妄想，当成一种现实去理解，不仅仅是被迫害妄想症，而且硬要套在每一个社会成员身<br>上。以达到自己所想才是社会真理的自我印证。反正他们自己信这些人所有的出发点，都是对自己人性自私上的无限宽容。并把这种意识混入到个人世界观与价值价观里，直到被极端自由主义所俘获。然后秉承这种自由主义世界观的人，看这个国家、这个社会所承载的集体意识，没有任何顺眼的地方，都是黑暗，认为自己被压抑着，看所有人都是和自己一样悲惨，活着犹如畜生一般,人人互害，没有作为人的尊严，这么发展下去怎能不恨国?怎能不被其他势力利用?这些人到了后来,还产生出想用自己的价值观去唤醒和拯救这个国家、这个社会所有人的扭曲意识。可他们一出门，与现实产生矛盾，看见社会最基层的保安、大爷大妈、各种吃瓜群众并没有站在自己的立场，围观并数落自己，又觉得这社会没救了，这些人要么麻木，要么就是体制受害者,并被体制的“恶”，同化了，成了加害者。对这些人只剩下嫌弃和鄙视。所以，他们(她们)只能更加憎恨这个国家、社会。只有从同类人那里才能和他们共鸣，那便觉得非自己价值观的人，不是愚民就是盲流，或者是流氓，所谓人生而平等?早就咬牙切齿,屏掉了。这时的“湖北人民”这个词，只不过是这类人用来抨击社会的道具。极端自由主义者的眼里何曾有人民?不过就是一个一个被赋予各种含义人。还要以一种传播性的话术，告诉所有人，今天受害者,下一个或许就是我，我们。人民是有归属感的人群集合，是国家的承载者，这种含义肯定不符合极端自由主义者对人的理解。他们并不在乎国家，也不懂人民。他们那些嘴上对湖北人民的共情、同理心在真正的现实里一文不值。什么是人民群众中最朴素的道德情操。(图2) 武汉一群环卫工人在医院做保洁后，到酒店隔离14天。走的时候悄无声息，但他们把客房收拾的干干如初，让酒店经理感动的泪流不止。这些环卫工人从社会劳动分工和收入上说，就处在社会底层，但他们也最能体会生活的艰辛与不易，他们最朴素的品质就是不愿意因为自己给别人添麻烦，他们与酒店打扫房间卫生的员工，从普通劳动人民感情上，有真正的共情和同理心，这不仅仅是文明素质，更是人民热爱人民。</p>
+</blockquote>
+<p>（来源：微博.V闪闪）</p>
+<p>我觉得应该这么办。我们来算算账。  <br>我自从生下来之后享受的一切待遇（包括花钱得来的）：  </p>
+<ol>
+<li>医疗（5）</li>
+<li>和平、安全的环境（5）</li>
+<li>教育（5）</li>
+<li>娱乐（5）</li>
+<li>购物和日常需求（5）</li>
+<li>各类政治权利（5）</li>
+<li>国家强盛带来的便利（5）</li>
+</ol>
+<p>其中，拋去花钱得来的：</p>
+<ol>
+<li>医疗（-3）</li>
+<li>和平、安全的环境（-2）</li>
+<li>教育（-3）</li>
+<li>娱乐（-4）</li>
+<li>购物（-4.5）（提供平台）</li>
+<li>政治权利（-0.1）</li>
+<li>强盛便利（-1）</li>
+</ol>
+<p>拋去我自己个人努力/参与的成分：</p>
+<ol>
+<li>医疗（-0.02）</li>
+<li>和平安全的环境（-0.01）</li>
+<li>教育（-0.8）</li>
+<li>娱乐（-0.2）</li>
+<li>购物（-0.2）</li>
+<li>政治权利（-0.1）</li>
+</ol>
+<p>净得分，是我欠国家的。</p>
+<p>下面来谈谈父母对我的：</p>
+<ol>
+<li>养育之恩（5）</li>
+<li>投资（5）</li>
+<li>家教（5）</li>
+</ol>
+<p>其中父母的2.投资（5），是上文“花钱得来”的投资，不算父母的缴税。</p>
+<p>考虑到我现在除了奖学金、实习工资，没有赚多少钱回馈父母：<br>2. 投资（-0.1）</p>
+<p>也不用缴税：<br>0. 缴税（-0）</p>
+<p>总表就是这个样子：</p>
+<p>我欠国家的：</p>
+<ol>
+<li>医疗（1.98）</li>
+<li>和平、安全的环境（2.98）</li>
+<li>教育（1.2）</li>
+<li>娱乐（0.8）</li>
+<li>购物和日常需求（0.3）</li>
+<li>各类政治权利（4.8）</li>
+<li>国家强盛带来的便利（4）</li>
+</ol>
+<p>我欠父母的：</p>
+<ol>
+<li>养育之恩（5）</li>
+<li>投资（4.9）</li>
+<li>家教（5）</li>
+</ol>
+<p>我们生来就有原罪，是要用一生来还的。你开心了吗？  </p>
+<h3 id="言论自由"><a href="#言论自由" class="headerlink" title="言论自由"></a>言论自由</h3><p><span class="exturl" data-url="aHR0cHM6Ly9wcm9ncmFtLXRoaW5rLmJsb2dzcG90LmNvbS8yMDE0LzAyL2ZyZWVkb20tb2Ytc3BlZWNoLmh0bWw=">一个博客<i class="fa fa-external-link-alt"></i></span></p>
+<blockquote>
+<p>比如美国的立法明确规定，“诽谤罪，适用于公职人员和普通个人的标准不同。如果原告是公职人员，原告必须【证明】被告（发言者）存在【真实恶意】，诽谤的罪名才能成立。”（这就是美国法律界非常有名的“真实恶意原则”，这是最高法院审理“纽约时报诉沙利文案”确立的，该案的维基词条在“这里”）<br>　　所谓的“真实恶意”是指：发言人明知【事实陈述】是虚假的，依然发表该事实陈述。从这个定义可以看出：要【证明】“真实恶意”是非常困难滴（因为这涉及到，证明一个人的内心活动），所以美国【公职人员】在这类诉讼中很难获胜。<br>  <br>啥是“公共空间”捏？它符合如下几个特征：<br>1、不属于任何个人，不属于任何组织/机构。<br>2、任何公民都可以参与其中。<br>3、参与其中的公民可以自由地谈论公共事务。<br>举例3：<br>经常有人把“公共场合”等同于“公共空间”，这是错误滴！很多公共场合是【有主的】，并不能算公共空间。比如餐馆属于“公共场合”，但不是“公共空间”。</p>
+</blockquote>
+<blockquote>
+<p>只有在公共空间或者是【自己的】私人空间，才有言论自由。那么，在【别人的】私人空间有没有言论自由捏？这就要看那个私人空间的主人是否给你言论自由。如果空间的主人允许，你就有；反之，则没有</p>
+</blockquote>
+<blockquote>
+<p>美国的立法中，对这类言论是否违法，有一个判断原则叫“明显且即刻的危险”（由霍尔姆斯大法官1919年首次提出）。这个判断原则，通俗地说就是：某人发布的“煽动暴力/煽动仇恨”言论，如果会导致【立即】的违法行为，并且违法行为的危害很严重，该言论才会被判违法；反之，就是合法的，受言论自由保护。<br>举例1：<br>　　如果某人在美国发表言论说：“希望用暴力方式推翻美国政府”。<br>　　这句话虽然煽动暴力，但【没有】违法，依然受言论自由保护。因为这句话没有产生“即刻性的危险”。<br>举例2：<br>　　假如某个【很有影响力】的宗教领袖对其信徒说：“今天晚上去放火把某某人的房子烧了”。<br>　　这句话就会被判违法。因为发言者具有影响力（宗教领袖），而且言论包含了迫在眉睫的时间（今晚）和严重的威胁（纵火）。<br>  <br>含“挑衅字眼”（fighting word）的言论是违法的，【不受】言论自由保护。为了防止被滥用，对啥是“挑衅字眼”有严格的定义。必须【同时符合】如下三条，才算。针对普通人（private figure）的冒犯言论是违法的，不受言论自由保护；相反，针对“公众人物”（public figure）的冒犯性言论受言论自由保护。</p>
+</blockquote>
+<ol>
+<li>通过激怒别人而“煽动【即刻的】破坏和平行为”的言论；</li>
+<li>这些言论“由普通人通过【常识判断】很可能会引发【暴力】反应”；</li>
+<li>这些言论还必须是“【直接针对】听者”。<br>从上述定义再次看出，立法非常细致——细致才有可操作性，从而避免判决时，人为的随意性。</li>
+</ol>
+<h1 id="关于民粹主义的相关积累"><a href="#关于民粹主义的相关积累" class="headerlink" title="关于民粹主义的相关积累"></a>关于民粹主义的相关积累</h1><blockquote>
+<p>1、回避代议制政治的复杂性，主张直接民主；<br>2、把所偏爱的群体进行理想化，并以此作为辨视自身的依据；<br>3、缺乏核心价值观；<br>4、是对严重危机的强烈反应；<br>5、民粹主义既可能从民众中产生，又可能被精英所倡导；既可能仅仅是一种思潮，又可能形成运动，甚至具有长期的政治后果。  </p>
+</blockquote>
+<blockquote>
+<p>　　有人说，民粹主义像雾像雨又像风：有时是进步势力的工具，有时是保守势力的工具；有时是左翼力量的工具，有时是右翼力量的工具，总让人琢磨不透。当前，在一些西方发达国家出现了民粹主义与极端民族主义合流的趋势。如英国公投“脱欧”，法国极右翼政党国民阵线借欧洲难民问题发表反穆斯林移民的言论等。它们都有一个鲜明的特征：以民族主义的面目出现。正如美国学者约瑟夫·奈所说的，它们是“带有民粹主义色彩的民族主义”。</p>
+</blockquote>
+<blockquote>
+<p>　　民族主义主要包含两个方面内容：一是热爱自己的国家和民族；二是以维护本民族利益为由反对、排斥其他国家和民族。如果一个人尤其是公众人物的言行主要表现为热爱自己的国家和民族，这不仅无可非议，还会赢得本国、本民族人民的赞赏。像中国明代的抗倭英雄戚继光，“名将以身殉国家，愿拼热血卫吾华”的左权将军等，一直为中国人民所敬仰和缅怀。但是，民族主义一旦沾染上民粹主义色彩，把珍爱自己民族的情感异化成憎恨别的民族，就不仅具有排他性，有的还具有灭他性。对于这样的极端民族主义，爱因斯坦有过这样的评价：“民族主义是一种发育未全的疾病。它是人类的囊虫。”</p>
+</blockquote>
+<p> <strong>与精英主义的争辩</strong></p>
+<h2 id="《什么是民粹主义》"><a href="#《什么是民粹主义》" class="headerlink" title="《什么是民粹主义》"></a>《什么是民粹主义》</h2><p> <span class="exturl" data-url="aHR0cHM6Ly9ib29rLmRvdWJhbi5jb20vc3ViamVjdC8zNDg3OTk3Ni8=">豆瓣简介<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="世界主义、国际主义、共产主义、爱国主义、民族主义"><a href="#世界主义、国际主义、共产主义、爱国主义、民族主义" class="headerlink" title="世界主义、国际主义、共产主义、爱国主义、民族主义"></a>世界主义、国际主义、共产主义、爱国主义、民族主义</h1><p><img data-src="http://cdn.mebilychen.top/image/%E5%B7%A6%E5%8F%B3%E6%B4%BE.jpg" alt="左右派">
+  </p>
+<h2 id="世界主义"><a href="#世界主义" class="headerlink" title="世界主义"></a>世界主义</h2><p> <span class="exturl" data-url="aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTQlQjglOTYlRTclOTUlOEMlRTQlQjglQkIlRTQlQjklODkvNjUwOTM0Mw==">百度百科<i class="fa fa-external-link-alt"></i></span></p>
+<p> <span class="exturl" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzMzNDU5NTQ0">知乎提问-如何评价世界主义，牵扯到国际主义与共产主义<i class="fa fa-external-link-alt"></i></span></p>
+<p> <span class="exturl" data-url="aHR0cHM6Ly90aWViYS5iYWlkdS5jb20vcC8yNTMzNDUwMzYzP3JlZF90YWc9MDIzNjUyODcyNA==">贴吧-爱国主义与世界主义的交流<i class="fa fa-external-link-alt"></i></span></p>
+<p> <span class="exturl" data-url="aHR0cHM6Ly90aWViYS5iYWlkdS5jb20vcC8zMTM4NTM2MDcw">贴吧-谈世界主义：驳《驳国际主义者》<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="国际主义"><a href="#国际主义" class="headerlink" title="国际主义"></a>国际主义</h2><p> <span class="exturl" data-url="aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTUlOUIlQkQlRTklOTklODUlRTQlQjglQkIlRTQlQjklODkvMTc5MjEwNT9mcj1hbGFkZGlu">百度百科<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="犬儒主义"><a href="#犬儒主义" class="headerlink" title="犬儒主义"></a>犬儒主义</h1><p> <span class="exturl" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzQ4MzA3MTY0">知乎提问<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="脑-神经科学-x-心理学"><a href="#脑-神经科学-x-心理学" class="headerlink" title="脑/神经科学 x 心理学"></a>脑/神经科学 x 心理学</h1><p> 关于精神/心理疾病创作中要注意的问题详见写作技巧贴。这里（大概）只记录真实的疾病。</p>
+<h2 id="托瑞氏症"><a href="#托瑞氏症" class="headerlink" title="托瑞氏症"></a>托瑞氏症</h2><p>其成因源自於儿童期发育之大脑基底核多巴胺的高反应性，导致慢性反覆出现半不自主的动作及声语上的抽动。妥瑞氏症常见的动作型抽动(motor tic）是眨眼睛、眼睛快速转动、擤鼻子、嘴角抽动、挤眉弄眼、耸肩膀、点头、摇头、扭曲的脸部表情、身体大动作的扭动或做出淫秽的动作；发声型抽动（vocal tic)包括清喉咙、轻咳、大叫、重复自己或别人的话语，甚至不自主地说出淫秽的字语。<br>在专心做某件事情时，此类病童的抽动常会短暂消失。後天环境的因素并不会引起妥瑞氏症，但遇到压力、无聊、疲意及紧张时会加重抽动的发生频率及强度，而熟睡或专注时，抽动症状会减少或完全消失。妥瑞氏症不是故意的坏习惯，而一旦发作就很难压抑下去，当父母发现孩子有不自主动作及不自主发声时，应及时找儿童精神科或小儿神经科医<br>师就医，以得到正确的诊断与治疗，而确立诊断后，如何让患者、家人、师长和朋友了解并接受相当重要。对于抽动的出现，大人常拿放大镜去注意，而病童内心所受的委屈却常被忽略，父母应该多设想如何帮助孩子处理他们可能会经历到的不舒服或窘境。由于妥瑞氏症多发病于学龄儿童，所以小学老师是他们能否发展健全人格的关键角色。因此面对妥瑞氏症的孩子，绝对不要只处理他们的抽动问题，也应该同时关注到他们内心的压力及对症状的担心，并教导他们纾解及接纳自己，如此才不致于导致进一步问题的产生</p>
+<h2 id="Stendhal-syndrome（一见倾心症候群）"><a href="#Stendhal-syndrome（一见倾心症候群）" class="headerlink" title="Stendhal syndrome（一见倾心症候群）"></a>Stendhal syndrome（一见倾心症候群）</h2><p>Stendhal syndrome, Stendhal’s syndrome or Florence syndrome is a psychosomatic condition involving rapid heartbeat, fainting, confusion and even hallucinations, allegedly occurring when individuals become exposed to objects, artworks, or phenomena of great beauty and antiquity.</p>
+<p> <img data-src="http://cdn.mebilychen.top/doc/brain%20illness1.PNG"></p>
+<p> As you start to sleep, your frontal lobes,front part of your brain,start to get quiet, which unfortunately takes the breaks off your emotional brain,and so if this is happening you need a routine and habits to get your emotional brain back under control.</p>
+<p>If the thoughts are repetitive, they just circle, have a little journal by your bed and write them down, and then ask yourself,so what can I do about it and what can | not do about it, but the act of writing it down helps to get it out of your head. When I go to bed I say a prayer,very intentionally, specifically, I review what went well today, become serious about brain health.</p>
+<p>The bottom line is this, afterlooking at all these scans most psychiatric problemsare not mental health issues, rather they are brain health issues, and this one idea changes everything.</p>
+<p>Get your brain right andyour mind will follow, and I’m convinced thatthe end of mental illness will begin with a revolution in brain health.G is genetics, stuff like anxiety and depression run in families,but also the negative thinking, the dysfunctional thinking patterns can also be modeled in families. I often say genes arenot a death sentence. What they should be is a wake up call.</p>
+<p>Gene’s load the gun. It’s what happened to us and our behavior that pulls the trigger. So if Iknow I have anxiety in my family, then I’m gonna work evenharder to prevent it. in my patients who have ADD or ADHD. Because they have so many thoughts, while they’ re talkingthey actually get lost.</p>
+<p>Do you notice you havea short attention span, you’re easily distracted,you tend to be late, you’ re disorganized, you procrastinate, and you might say ordo things impulsively?<br>When I first read that question, I go, huh, I wonder if she has ADD.</p>
+<p>Thoughts are automatic, they just happen, and what most people don’t knowis the thoughts in your head often lie to you, theyoften terrorize you.</p>
+<p>I teach my patients how to kill the ANTs, the automatic negative thoughts.<br>You have to develop an internal anteater patrolling the streets of your mind, and there’s actually avery specific pattern that will calm down your amygdala and activate your frontal lobeSO you make better decisions. Three seconds in, so bigbreath, hold it for a second, and then take six seconds out and hold it for a second. So it’s an 11 second breath,but if you do that 10 times it’ll actually trigger a relaxation response in your brain and begin to give you some control.</p>
+<h2 id="关于恐怖-feat-Stephen-King"><a href="#关于恐怖-feat-Stephen-King" class="headerlink" title="关于恐怖 feat.Stephen King"></a>关于恐怖 feat.Stephen King</h2><p>（转自反转创新贴）<br>和脑子科学/心理学也有点关系</p>
+<p>The way Stephen King delineates three types of scary stuff.<br>The first is the “gross-out”.This is something disgusting, morbid, diseased.<br>The second is “horror”. Horror, to King, is the unnatural: a giant spider, or being grabbed in the dark when you thought you were alone.<br>The third, “terror,” is different, creepier. He says terror is coming home to find that everything that you own has been replaced with an exact copy. Terror is feeling something behind you. It’s breath on your neck. Knowing that you will be grabbed, but then turning around to find that there was never anything there in the first place.<br>Not a lot of research has been done on that feeling, the creeps. But many theories and ideas involve vagueness, ambiguity. For instance, masks, and why clowns are creepy.</p>
+<p>Related Topic：</p>
+<ol>
+<li>Cognitive dissonance. The fact that your brain is having to deal with ambiguity.</li>
+<li>Anti-social intercourse the facial disguise temporarily eliminates from social intercourse the part of the body, which reveals personal feelings and attitudes. Part of the reason even a neutral or happy mask can be creepy may have to do with ambiguity. A mask hides the true emotions and intentions of the person underneath. I don’t know if the person wearing that mask is a threat or not.</li>
+<li>Self- Awareness. </li>
+</ol>
+<p>似乎是看人提到史蒂芬金提出的三大恐怖类型<br>呃 也不是说提出<br>就是谈到<br>大脑不知道该如何处理<br>恐高症那种有说是可能因为认知失调<br>恐怖谷效应也有社交缺失 所以摸不清对方底细<br>还有提到一种“自我觉察”这样的恐怖<br>我觉得和cosmic horror挺接近的<br>emm 我能想到就有点像是发现自己在睡觉的时候有人在看着自己睡觉这样子？<br>恐怖谷还有其他一些诡异图片也是 没有直接让人觉得恐怖 而是疑惑+恐怖 一部分脑区（？）觉得恐怖 另一部分觉得不知为什么被吓<br>那个恐高症 有人说是因为人下意识想往后退 但是另一部分大脑没反应过来 不知道为什么身体有往后退的倾向 所以处理成了有一个力在向前推自己所以自己才想向后退的感觉</p>
+<h1 id="心理学"><a href="#心理学" class="headerlink" title="心理学"></a>心理学</h1><p> <span class="exturl" data-url="aHR0cHM6Ly93d3cubXNkbWFudWFscy5jbi9ob21lL21lbnRhbC1oZWFsdGgtZGlzb3JkZXJzL2FueGlldHktYW5kLXN0cmVzcy1yZWxhdGVkLWRpc29yZGVycy9hY3V0ZS1zdHJlc3MtZGlzb3JkZXI=">MSD-5<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="self-reference"><a href="#self-reference" class="headerlink" title="self - reference"></a>self - reference</h2><p> self reference psychology（就是说 例如，会把涉及到自己的巧合归功于自己身上（？））</p>
+<p>比如你和一个人正常交流，之后ta显得不开心了<br>主体人:他可能遇到什么事了<br>客体人:我惹得他不开心了<br>以及这个也有点像内外归因吧 不知道为啥要称作主体和客体</p>
+<p>要说主体是指什么事都围着我转，主观的视角，那应该是觉得“是不是我xxx”才对<br>要是按“不是我而是对方的问题”这个来解释，可能是指客观看待“有什么我无法左右的不可抗力”<br>这里说的主体可能是“排除异己，唯我独尊，不顾他人，我是主角，世界上只有我一个”之类的主动感觉？<br>客体也是，“照顾别人，将别人置于自己之上，总是在意自己对其他人的影响，为别人服务“之类，被动的？</p>
+<h2 id="个人空间侵犯-amp-社会拥挤"><a href="#个人空间侵犯-amp-社会拥挤" class="headerlink" title="个人空间侵犯 &amp; 社会拥挤"></a>个人空间侵犯 &amp; 社会拥挤</h2><p> 我在想推送算不算一种个人空间侵犯（不是指搜集个人隐私大数据推送相似 而是指推送这个行为本身）</p>
+<p>个人空间侵犯(invasions of personal space)是指一方不适当地进入另-方的个人空间。导致对方产生一定的压力，感到不舒服，并根据所受压力的大小表现出不同的反应方式，甚至产生攻击行为。<br>但是也很主观诶，让对方感到不舒服压力什么的<br>因为是因人而异的吧？</p>
+<p>如果想象成人 我感觉就是侵犯/<br>骚扰狂<br>各种我规划之外的信息推送<br>有的时候会推到不想看的东西<br>包括评论<br>弹幕<br>猜你喜欢<br>也有首页推荐</p>
+<p>就和一个人跟在后面“看不看这个啊”“你看他又有傻逼粉丝了呢”“快看快看 他好像又出新作了呢”“你看他们划这个cp你看着想不想骂啊”<br>我：我tm不想看<br>就是默认大家一开始没有情感取向 但是有了情感取向后又不出一个取消关注的机制</p>
+<p>我那谁也总是被推送折磨<br>推送傻逼-》看到傻逼-》忍不住点进去骂傻逼-》推送更多傻逼<br>她还老给我讲傻逼 我也很难过</p>
+<p><strong>暂时性社会拥挤</strong><br>拥挤是影响个体和群体心理与行为的重要环境因素。研究表明,暂时性社会拥挤情境影响个体的攻击与亲社会行为,与消极情绪和回避动机有关,且令个体认知表征表现出低解释水平、缺乏批判性、更自我中心的特征。社会拥挤情境下与心理距离相关的认知加工可能是理解上述暂时性社会拥挤效应的关键,解释水平理论为此提供了一个理论整合框架。未来研究应围绕这一理论框架进一步直接考察暂时性社会拥挤影响个体行为和情绪反应的内在认知过程,并注重结合多重研究方法,更全面地探讨与心理距离相关的个体差异、社会认同等因素在暂时性社会拥挤效应中所起的作用。</p>
+<h2 id="情感漠视"><a href="#情感漠视" class="headerlink" title="情感漠视"></a>情感漠视</h2><p> 家人们最近恶补心理学发现有一个词叫情感漠视，比冷暴力更无声且可怕，表现为从来不会主动分享自己的生活，但是你发起了话题ta也会回复，不会记住大小节日也不期待和你有什么浪漫的约会，但是如果你要求ta也会去做，不会关心你是否病了饿了但是你生气ta也会立马和你道歉，ta好像在大部分时间里确实做了男/女朋友应该做的事，但是你就是能感觉到那份若有若无的冷淡和距离感且并不会随着相处时间增加而消失，将你推入更深的绝望，然后你就会费尽心机的上ta证明自己的感情，ta回头- -句:现在这样不是挺好的吗?你就像一拳头打在了棉花上但是又说不出来到底是哪里不好，时间久了就变成你太作太情绪化你自己的需求太多你失去了自我，这种接二连三的否定就会让你真的怀疑难道真的是我自己错了吗?听一句劝快跑，ta需要的是一个对象一个生活太无聊时候的玩伴而不是你，真的真的务必区分清楚相处的时候是你自己的焦虑型在作祟还是因为对方的情感漠视，前者的话可以通过自我调节，后者的话可以先沟通如果无果果断放弃不然这样长期的压抑最后会对自己造成剧烈的创伤</p>
+<h2 id="《钝感力》"><a href="#《钝感力》" class="headerlink" title="《钝感力》"></a>《钝感力》</h2><ol>
+<li>如果我上司这个样子，我为啥要呆在这家公司…</li>
+<li>合着允许别人人品不好，我就得人品好好的。卧槽凭啥啊，好吧就凭我没本事，我懂了。我以后对不如我的人也人品不好。   </li>
+</ol>
+<p> 看完了，搜集到两角素材。<br> 没了。没啥收获，80%不认可作者的观点。心气高那里确实比较认同，因为忍受别人意味着能提升自己但是其他就emmm我为啥要为别人错误买账。就我个人所好和他人所好和社会所好的牺牲及要求平衡究竟在哪里。  <br> 就我期望的是怎么获得钝感力，而不是怎么介绍钝感力怎么怎么好。而且介绍怎么好的论据也不对啊，感觉就是跟站不起来的奴隶一样。</p>
+<blockquote>
+<p>当然，她对香水也很敏感，略有差异马上就能知道。因为嗅觉出色，她立即察觉丈夫的婚外情，闹得很大。这是该喜还是该忧呢?如果嗅觉不敏锐就平安无事了，只因鼻子太灵，大动干戈也在所难免。</p>
+</blockquote>
+<p> ？？？</p>
+<blockquote>
+<p>连孩子的父亲也未必具备这种钝感力。他们没有亲身经历分娩之痛，对哭声敏感焦躁。虽不至于像外人那样，也绝对无法像母亲那般轻松愉快地接受。因此，做父亲的夜间在不停啼哭的孩子身边根本无法人睡，最终会拿起枕头逃到别的房间。这种时候，丈夫们会以公司为挡箭牌，说:“我明天要上班，到别的房间去睡了。”其实他们缺乏在啼哭声中休息的钝感力。</p>
+</blockquote>
+<blockquote>
+<p>为了做到这一点，首先要具备钝感的肠胃。不管是什么，送上来就大吃。女方剩下的看上去不好吃的东西也要吃。她会佩服你旺盛的食欲和强健的胃，感觉到你的男子汉气概，逐渐产生信赖感。</p>
+</blockquote>
+<p>乐。</p>
+<h2 id="天生敏感"><a href="#天生敏感" class="headerlink" title="天生敏感"></a>天生敏感</h2><p><span class="exturl" data-url="aHR0cDovL2Nkbi5tZWJpbHljaGVuLnRvcC9kb2MvJUU1JUE0JUE5JUU3JTk0JTlGJUU2JTk1JThGJUU2JTg0JTlGLnBkZg==">PDF<i class="fa fa-external-link-alt"></i></span></p>
+<blockquote>
+<p>你是参谋还是勇士?<br>无论是好是坏，这个世界正日益被-种趋向于开拓眼界、扩张、竞争、好胜的攻击性文化所控制。这是因为，不同的文化彼此接触时，更具攻击性的文化自然而然会具有优势。攻击性文化起源于亚洲大草原，也就是印欧文明诞生的地方。骑马的游牧部落主要是靠抢夺其他部落的畜群，侵占别人的地盘，不断扩充自己的马匹和牛群。他们大约在七千年前进入欧洲，把抓到的俘虏变成奴隶，并进-步通过战争和贸易扩张成更大的王国或帝国。能够延续最久、过得最快乐的印欧文明，通常由两类人来统治国王和勇士。然而，攻击性的文明如果想要持续下去，必然也需要牧师、法官、参谋等。这一类人是为了制衡国王和勇士们(就像美国最高法院制衡总统及其军队一样)。他们更加深思熟虑，经常阻止勇士们的冲动行为。事实往往证明，参谋是正确的，这类人会成为受人尊敬的律师、历史学家、教师、学者以及正义维护者。他们颇有先见之明，例如，他们会关注普通民众的幸福安宁，因为平民大众是种植粮食、抚养儿童的主力，是社会的基础。他们也会反对草率发动战争，反对破坏土地。王室参谋们始终深谋远虑，竭尽所能引导社会中强大的扩张性力量远离侵略和独裁，这一点在现代社会中做得越来越成功了。那种扩张性的力量可以被引导来发明创新、探险、保护地球和弱势群体。高度敏感者往往扮演着参谋的角色。他们是作家、历史学家、哲学家、法官、艺术家、研究人员、神学家、临床医学家、教师，以及勤勤恳恳的普通民众。他们不得不阻止大多数人鲁莽冲动的行为，勇士们会嚷嚷着他们怯懦，然而他们必须学会忽略这种说法。勇敢大胆.的勇士们自有其价值，但高度敏感者也一样，他们也有自己的特点，也能为社会做出重要的贡献。</p>
+</blockquote>
+<blockquote>
+<p>-摆脱大多数人定下的规则-<br>1.父母对你的敏感性是什么态度?<br>他们希望你保持这种性格还是改掉这种性格?他们是否觉得这样不合时宜?他们觉得敏感等于害羞、胆小、缺乏男子气概，还是觉得这意味着艺术气质、拥有天赋、聪明伶俐?你的其他亲戚、老师和朋友，对敏感抱有什么样的态度?<br>2.媒体上又是什么样子?尤其是你童年时代的媒体。<br>你小时候崇拜的榜样和偶像是谁?他们看起来是否也像高度敏感者?你现在是否觉得自己永远也无法成为他们那样的人?<br>3.想一想这使你产生了怎样的态度。这对你的职业、休闲娱乐、爱情和友情产生了怎样的影响?<br>4.你所属的高度敏感者群体，在如今的媒体上是怎样的形象?想一想高度敏感者的正面形象和负面形象，哪一-面占优势?<br>5.考虑一下高度敏感者能够怎样为社会做出贡献。<br>回忆一下你亲身经历的或从书上读到的事例，比如亚伯拉罕·林肯的事迹。<br>6.想一想你自己对社会的贡献。<br>无论你正在做什么——雕刻、 抚养孩子、 研究物理、投票选举你都会深入思考、注重细节、高瞻远瞩、认真负责。</p>
+</blockquote>
+<blockquote>
+<p>-你一出生就很敏感吗<br>问问你的父母，是否还记得你是否一出生就很敏感，你刚出生后6个月是什么样子，婴儿时是什么样子。你是否曾出现高度敏感婴儿的一些典型表现，出现变化时，比如脱衣服、放进水里洗澡、吃陌生的食物、听到噪音时，你是否难以适应?你是否经常肚子痛?是否很难入睡、时时惊醒、睡眠时间很短，尤其是当你过于疲劳的时候?要知道，如果你的父母之前从来没照顾过别的婴儿，他们也许不会注意到那么一丁点大的你与别的孩子有什么区别。你也可以让他们看一下本书前面的调查表，问问他们自己或其他家人是否存在敏感特质。尤其是如果你发现父母双方都有高度敏感的亲戚，那么你的敏感特质很可能是遗传的。</p>
+</blockquote>
+<blockquote>
+<p>现在来研究一下，为什么有些人的暂停检查系统更加活跃。想象一下，-天早晨，罗布和丽贝卡去上学。丽贝卡看到的是与昨天一样的老师、教室和同学，她就跑去玩了。罗布却会注意到老师心情不好，有个孩子看起来很生气，角落里出现了-一些没见过的书包。罗布会犹犹豫豫地觉得今天最好小心-一点。于是这里又一次体现出敏感性。<br>心理学中认为这两个系统具有完全相反的目的，与上一章中提到的勇士与参谋之间的对立，是多么的相似。通过两个系统来解释敏感性，也说明存在着两种不同的高度敏感者。有些人只具有一般程度的暂停检查系统，但行为激活系统却更弱。这种类型的高度敏感者也许非常镇静、沉默，满足于简单的生活。就好像有些修道士会成为王室参谋统治整个国家。另一类高度敏感者的暂停检查系统非常强大，但同时行为激活系统也很活跃，只是相比前者较弱一一点。这类高度敏感者非常好奇也非常谨慎，既勇敢又胆小，很容易无聊也很容易激动。最佳激动状态通常只是–段很窄的范围。可以说，这类人身上同时存在着谨慎的参谋与冲动的勇士，两种相反的力量不断互相斗争。我觉得罗布就属于这种类型。而另一些孩子，在人们眼中过于安静、缺乏好奇，很容易面临被人忽视或遗忘的危险。</p>
+</blockquote>
+<h2 id="心理咨询"><a href="#心理咨询" class="headerlink" title="心理咨询"></a>心理咨询</h2><p> <span class="exturl" data-url="aHR0cDovL2Nkbi5tZWJpbHljaGVuLnRvcC9kb2MvJUU4JTlCJUE0JUU4JTlGJTg2JUU1JTg1JTg4JUU3JTk0JTlGJUU1JThFJUJCJUU3JTlDJThCJUU1JUJGJTgzJUU3JTkwJTg2JUU1JThDJUJCJUU3JTk0JTlGJTIwYnklMjAlRTclQkQlOTclRTQlQkMlQUYlRTclODklQjklQzIlQjclRTYlODglQjQlRTUlOEQlOUElRTUlQkUlQjclMjAucGRm">蛤蟆去看心理医生<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="脑子bug"><a href="#脑子bug" class="headerlink" title="脑子bug"></a>脑子bug</h2><p> <span class="exturl" data-url="aHR0cHM6Ly91cGxvYWQud2lraW1lZGlhLm9yZy93aWtpcGVkaWEvY29tbW9ucy82LzY1L0NvZ25pdGl2ZV9iaWFzX2NvZGV4X2VuLnN2Zw==">Wiki总结 可能要开vpn<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="人格障碍"><a href="#人格障碍" class="headerlink" title="人格障碍"></a>人格障碍</h1><p>人格障碍的类型包括：<br> 偏执型人格障碍；<br> 精神分裂症人格障碍；<br> 社会障碍人格障碍，包括反社会人格障碍，非社会人格障碍，精神病和社交病人格障碍；<br> 情绪不稳定的人格障碍，包括两种具体的亚型：冲动性人格障碍和边缘型人格障碍；<br> 强迫症人格障碍表现型人格障碍或酸痛的人格障碍;<br> 依赖型人格障碍，也称为被动和能量不足型人格障碍；<br> 回避人格障碍；<br> 其他特质性人格障碍包括自恋型人格障碍，被动攻击性人格障碍，环型人格障碍和抑郁型人格障碍。<br>人格障碍被认为是人格特征的病理增强。分类基本上使用描述和病因学的组合。常见的人格障碍包括反社会人格障碍，从属人格障碍，偏执型人格障碍，精神分裂症人格障碍，冲动性人格障碍，强迫症人格障碍，表演型人格障碍，回避型人格障碍，交际型人格障碍，周期性人格障碍，不适当人格障碍，被动攻击性人格障碍等。其他人不符合特定人格障碍的特征，但具有多种人格障碍的特征，并成为混合型人格障碍。</p>
+<h2 id="边缘性人格障碍"><a href="#边缘性人格障碍" class="headerlink" title="边缘性人格障碍"></a>边缘性人格障碍</h2><p> 边缘性人格障碍（Borderline personality disorder，BPD），基本特征是一种人际关系、自我形象和情感的不稳定以及显著冲动的普遍模式，起始不晚于成年早期，存在于各种背景下。</p>
+<p> <span class="exturl" data-url="aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTglQkUlQjklRTclQkMlOTglRTYlODAlQTclRTQlQkElQkElRTYlQTAlQkMlRTklOUElOUMlRTclQTIlOEQvMTc5Mzg5Mj9mcj1hbGFkZGlu">百度百科<i class="fa fa-external-link-alt"></i></span></p>
+<p> 根据最新版的《精神疾病诊断与统计手册》第5版（《DSM-5》）的定义，以下是诊断标准：<br>一种人际关系、自我形象和情感不稳定以及显著冲突的普遍心理行为模式：始于成年早期，存在于各种背景下，表现为下列5项（或更多）症状 ：</p>
+<ol>
+<li>极力避免真正的或想象出来的被遗弃（注：不包括诊断标准第5项中的自杀或自残行为） 。</li>
+<li>一种不稳定的紧张的人际关系模式，以极端理想化和极端贬低之间交替变动为特征 。</li>
+<li>身份紊乱：显著的持续而不稳定的自我形象或自我感觉。</li>
+<li>至少在2个方面有潜在的自我损伤的冲动性（例如，消费、性行为、物质滥用、鲁莽驾驶、暴食）（注：不包括诊断标准第5项中的自杀或自残行为）。</li>
+<li>反复发生自杀行为、自杀姿态或威胁或自残行为。</li>
+<li>由于显著的心境反应所致的情感不稳定（例如，亲密感突然缺失，控制感丧失引起的惶恐继续转化为愤怒） 。</li>
+<li>慢性的空虚感 。</li>
+<li>不恰当的强烈愤怒或难以控制发怒（例如，经常发脾气，持续发怒，重复性斗殴）。</li>
+<li>短暂的与应激有关的偏执观念或严重的分离症状 。</li>
+</ol>
+<div class="note primary"><p style="color:#7042C1"> 喜欢看这些临床诊断，或许有种能够产生掌控感的错觉？用理智控制感情？用可控控制不可控。 </p> </div>
+
+<p>边缘型人格障碍的基本特征是一种人际关系、自我形象和情感的不稳定以及显著冲动的普遍模式 。<br>边缘型人格障碍个体会做出疯狂的努力以避免真正的或想象出来的被遗弃。认为分离或拒绝即将来临或失去外部支持，可以导致自我形象、情感、认知和行为上的深刻改变。这些个体对环境变化非常敏感。即使当他们面对现实中的、短暂的分离或不可避免的计划变更时，也会体验到极度的遭遗弃的恐惧和不恰当的愤怒（例如，对临床工作者宣布治疗时间到了所产生的突然的绝望反应；当某个对他们很重要的人迟到哪怕几分钟或必须取消约会而表现出惊恐或大怒）。他们可能相信“遗弃”意味着他们是“坏的”。这些遗弃恐惧与无法承受独处及需要有别人在他们身边有关。他们为了免遭遗弃的疯狂努力可能包括诸如自残或自杀等冲动行为 。</p>
+<p>边缘型人格障碍个体会有一种不稳定的紧张的人际关系模式，他们可能在第一二次见面后对照料者或情侣进行理想化，要求一起多待些时间，并在关系早期分享最为亲密的细节。然而，他们可能很快就会在对他人极端理想化和极端贬低之间变换，觉得对方关心不够，给予不够，或者不能“随叫随到”。这些个体能够有同理心并关爱他人，但只有在期待他人也可以“随叫随到”来满足他们自己的需求时。这些人对他人的看法很容易出现突然的和戏剧化的变化，他人可能被交替地认为是善意支持性的或残酷惩罚性的。</p>
+<p>这种变化往往反映了边缘型人格障碍个体对照料者的幻灭感，这些照料者的关爱性质曾被理想化，个体预期会被他们拒绝或遗弃。<br>边缘型人格障碍个体可能有身份紊乱的问题，其特点为显著的、持续的、不稳定的自我形象或自我意识。自我形象会有突然、急剧的变化，其特点是目标、价值观和职业抱负的变化。他们有可能对职业、性别认同、价值和朋友类型的看法和计划出现突然的变化。这些个体可能会突然从一个提供帮助的角色变成对过去不良待遇的复仇者。尽管该障碍个体通常有基于坏的或邪恶的自我形象，他们可能有时觉得他们自己完全不存在。这些经验通常在个体感觉缺乏有意义的人际关系、关爱和支持的情况下发生。在非结构化的工作或学校环境中，这些个体可能表现得更差。</p>
+<p>边缘型人格障碍个体至少在两个方面有潜在的自我伤害的冲动。他们可能会赌博、乱花钱、暴食、滥用物质、进行不安全的性行为或鲁莽驾驶。</p>
+<p>该障碍表现出反复的自杀行为、自杀姿态或自然威胁，以及自残行为。在这些个体中，8%-10%会自杀成功；而自残行为（例如切割或烧灼）及自杀威胁和企图非常常见。反复自杀往往是这些人前来求助的原因。这些自我毁坏的行为通常由分离或拒绝的威胁，或被期待需要承担更多的责任而引发。自残可能发生在分离性体验中，并通常经由重新确认个体的感受能力或经由为个体感觉到的邪恶感进行赎罪而带来释然的感觉。</p>
+<p>边缘型人格障碍个体可能由于显著的心境反应而导致情感不稳定（例如，强烈的发作性的烦躁、易激惹或焦虑，通常持续几个小时，很少超过几天）。边缘型人格障碍个体基本的烦躁心境常被一段时间的愤怒、惊恐、绝望所打断，很少因一段时间的安适或满足而缓解。这些发作可能反映了个体对人际应激的极端反应。边缘型人格障碍个体可能受慢性的空虚感困扰。他们很容易感到厌倦，可能会不断寻找事情来做。该障碍个体常常表达不恰当的、强烈的愤怒或难以控制发怒。他们可能表现出极端的讽刺、持久的刻薄或爆粗口。当照料者或情侣被认为忽略、有所保留、不关心或遗弃他们的时候通常引发愤怒。这样的愤怒表达后随之而来的是羞耻和内疚，这使得他们感到自己是邪恶的。在极度紧张时，该障碍个体可能出现暂时性的偏执观念或分离症状（例如，人格解体），但这些症状的严重程度或持续时间通常不支持给予额外的诊断。这些发作最常见于对真实的或想象中的被遗弃的反应。症状倾向于短暂出现，持续数分钟到数小时。真实的或感受到的照料者关爱的回归，可能带来症状的缓解。</p>
+<p>边缘型人格障碍个体可能会在目标即将实现时出现自我毁坏的模式（例如，毕业即将来临时辍学；在讨论治疗进行得如何好之后出现严重退行；当关系可以明确地继续进行时将它破坏）。有些个体在应激下可以发展出精神病样症状（例如，幻觉、体像扭曲、牵连观念、临睡前的幻觉现象）。比起人际关系，该障碍个体可能对过渡性客体（例如，宠物或某种无生命的物件）感到更加安全。该障碍个体，尤其是那些与抑郁障碍或物质滥用障碍共病的个体，可能因自杀而过早死亡。自虐行为或自杀未遂可能导致该障碍个体的躯体残疾。反复失业、教育中断、分居或离婚很普遍。躯体和性虐待、忽视、敌意的冲突、早年父母丧失，在边缘型人格障碍个体的童年时期较常见。常见的共病障碍包括抑郁和双相障碍、物质使用障碍、进食障碍（特别是神经性贪食）、创伤性应激障碍以及注意缺陷/多动障碍。边缘型人格障碍也常与其他人格障碍共病。</p>
+<h3 id="过渡性客体"><a href="#过渡性客体" class="headerlink" title="过渡性客体"></a>过渡性客体</h3><p>码。</p>
+<h2 id="情绪认知障碍"><a href="#情绪认知障碍" class="headerlink" title="情绪认知障碍"></a>情绪认知障碍</h2><p><span class="exturl" data-url="aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTYlODMlODUlRTclQkIlQUElRTglQUUlQTQlRTclOUYlQTUlRTklOUElOUMlRTclQTIlOEQvNDU4ODY4NT9mcj1hbGFkZGlu">情绪认知障碍<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="认知曲解类型"><a href="#认知曲解类型" class="headerlink" title="认知曲解类型"></a>认知曲解类型</h3><blockquote>
+<p>根据研究发现，病人的认知曲解可有以下几种类型：<br>1、非黑即白的绝对性思考。患者坚持一种不现实的标准，认为自己达不到这个标准，就是失败。这种思考方式导致完美主义，害怕任何错误和缺点。一位教师因为上课讲错一句话，于是认为“现在全完了”、“我已经一文不值”。<br>2、任意推断。指缺乏事实根据，草率地下结论。如街上见一位同事匆匆走过，未打招呼，于是心里想：“我什么地方得罪他了？他生我气了？”实际上，这位同事心中有事，没有注意到他。<br>3、选择性概括。仅仅根据个别细节，不考虑其它情况，就对整个事件做出结论。如某青年向女同学提出一起去听音乐会的邀请，遭到婉言谢绝后，认定自己为女同学所讨厌，没有任何女青年再会和他交往了。这是一种“以偏概全”。<br>4、过度引申。指在一个小小失误的基础上，做出关于整个人生价值的结论。如一位母亲不慎打碎一只碗，遂认为自己“不是一个好母亲”。<br>5、过度夸大和过分缩小。指夸大自己的失误、缺陷的重要性，而贬低自己的成绩或优点。偶尔出现的一次失误，如拍照时手抖了一下，一张照片拍坏了，就觉得不得了，别人要把她看成无用的人了。当然这也是一种过度引申。而在做成一件事时，又觉得微不足道，纯属侥幸。<br>6、个人化（Personalization）。指患者主动为别人的过失或不幸承担责任。将一切不幸、事故或别人生病均归因于自己的过失，引咎自责。如一位朋友生病去世，患者责备自己忙于个人的事务，未能照顾朋友的健康状况，为此内疚不已。<br>7、选择性消极注视。指选择一个消极的细节，并且总是记住这个细节，而忽略其它方面，以致觉得整个情 境都染上了消极的色彩。如一位学生考试时答错了几道题，于是对这几道题念念不忘，甚至想到学校可能要她退学。而事实上，她考试成绩优秀。正是由于这种消极 的信息选择倾向，使病人在某种情境中只让消极信息滤过，造成了不必要的烦恼。<br>8、情绪推理。认为自己的消极情绪必然反映了事物的真实情况，如：“我觉得像一个失败的人，所以我是 一个失败的人。”“我觉得失望，所以我的问题不可能解决。”“我有内疚感，说明我一定做了什么不好的事。”这种“跟着感觉走”的情绪推理，阻碍了对事物真 实情况的了解，使人陷于认知曲解而不能自拔。<br>9、“应该”倾向。指病人常用“应该”或“必须”等词，要求自己和别人，如“我应该做这个”，“我必须做那个”。这意味着对自己坚持一种标准，如果行为未达到这种标准，就会以“不该”这样的字眼责难自己，产生内疚、悔恨。如果别人的所作所为不合自己的期 待，就会觉得失望或怨恨，认为“他不该那样”。<br>10、乱贴标签。这也是一种以偏概全的形式，以为将自己的问题贴上一个标签就可以完事。例如：“我是一个天生的失败者。”“我这样贪吃，丑恶可恨，简直像一头猪。”“我的神经天生衰弱，不堪一击。”其实，这是将对整个人的评价和人的某些行为失误混同起来了，而“人不等于人的错误”。<br>上述10种类型的认知曲解是比较多见的，此外，还可以列出一些。应该指出的是，几种类型的认知曲解可以在同一个病人身上出现。通过分析客观事实和负性自动想法的关系，常常可以将其中的逻辑错误揭示出来。如果医生采用“协同检验”的步骤促进病人对自动想法的诘难，包括采用“作业”的形式，发现和改变认知曲解是可以做到的。</p>
+</blockquote>
+<h3 id="功能失调"><a href="#功能失调" class="headerlink" title="功能失调"></a>功能失调</h3><blockquote>
+<p>（1）脆弱性，如：“一个人请求帮助是软弱的表现。”<br>（2）吸引/排斥，如：“得不到另一个人的爱，我就不会幸福。”<br>（3）完美主义，如：“一个人必须聪明、漂亮、富有、有创造性，否则很难高兴起来。”<br>（4）强制性，如常用“必须”、“应该”等言语要求自己。<br>（5）寻求赞许，如认为：“为了幸福，我需要别人赞美。”<br>（6）依赖性，如：“假如你没有人可以依靠，一定会感到悲哀。”<br>（7）自主性，如：“我的心情是由一些我无法驾驭的因素左右的。”<br>（8）认知哲学，如：“你在追求目标过程中遇到了障碍，肯定会感到厌烦。”<br>A.T.Bake把功能失调性假设进一步归成3类，即：成就（需要成功、高的操作标准）、接纳（被人喜欢、被人爱）和控制（要左右事物的发展变化，要成为强者等）。这种潜在的功能失调性假设或图式是人们评价生活事件、赋予经验事实以特殊意义，以及主宰人们处理事情方式的基础，是支配人们行为的规则。<br>潜在功能失调性假设可为日后某种严峻的生活事件所启动。假设一旦启动，便有大量“负性自动想法”产生。这些负性自动想法就是Beck情绪障碍两层次模型的表层认知，能为患者所察知，成为患者意识界的事件（相当于弗洛伊德的继发性过程）。“负性”，是指这些想法总是和不愉快的情绪有关，“自动”是因为它们突现于人们脑内，不是周密推理的产物。负性自动想法的内容可以是对目前经验的解释，也可以是对未来的消极预期，或是对过去事件的消极的解释。正是这些负性自动想法导致了情绪障碍的症状。情绪障碍发展，又使负性自动想法更加频繁和强烈，形成恶性循环。</p>
+</blockquote>
+<p>我就是有这个想法，我都是：</p>
+<ol>
+<li>预判接下来会发生什么事情  </li>
+<li>告诉自己如果事情符合我的预判，我就一定要xxx</li>
+<li>事情符合预判，我xxx  <br>整个反应过程通常发生的很快，只有1-2s左右。  </li>
+</ol>
+<h3 id="负性想法特点"><a href="#负性想法特点" class="headerlink" title="负性想法特点"></a>负性想法特点</h3><blockquote>
+<p>（1）它是自动的，不经逻辑推理突现于脑内；<br>（2）它的内容消极，常和不良情绪相联系；<br>（3）它随时间、地点而有变化，能为意识所察觉，具有认知过程的特征，为临床表现的一部分；<br>（4）它貌似真实，因为它由潜在功能失调性 假设或图式派生而来；<br>（5）它存在于意识边缘，稍纵即逝；<br>（6）它存在时间短暂，但力量很大，并且不能由自己意愿选择或排除；<br>（7）它蕴含认知曲解，而患者却信以为真，不认识它正是情绪痛苦的原因。</p>
+</blockquote>
+<h2 id="误会"><a href="#误会" class="headerlink" title="误会"></a>误会</h2><p>误会<br>误会的产生<br>￥视觉原因：不同人看到具体事物的角度(仅仅指视觉方面)不同从而产生差异导致误会的发生。<br>￥认识原因：不同的人对于同一件事情的认识角度和深度不同导致误会<br>￥经历原因：有些事情只有切身体会后才能真正了解(没吃过梨子是想象不出梨子的味道的)不同的人经历不同对一些事情的感受也不同。【知识技能等归纳到经验之中】<br>￥“亲密无间”的默契产生的原因<br>两个人或者多个人在共同生活中产生的共同习惯和默契，包括互相之间的约定。虽然没有共同生活和约定，但是有互相相类似的经历。<br>默契和“反默契”<br>默契：两个人或者多个人由于互相了解，产生互相促进的动作，使事件向两人或者多人的共同目标进行。<br>“反默契”：两个人或者多个人由于互相了解，产生互相对抗的动作使事件向各自的目标发展，一个成功另一个就失败</p>
+<p>当人们作为发出信息的一方时，可能会产生透明度错觉（the transparency illusion），即大多数人都存在一种假设，即认为彼此之间的沟通是透明的。在沟通过程中，给予信息的一方会以为自己的感觉和需求能够被另一方清晰地感知到，尽管他们并没有真的把自己的想法表达到位，这种表达不是言语性的，而是用行动、姿态甚至表情来发出。正因为他们以为自己表达得很清楚，也就不会花费时间和精力去阐释或者确认对方是否理解。但实际上，作为接收信息的一方，是被迫在非常有限的信息量中做出判断，因而往往会判断失误。透明度错觉产生的误解往往是双向的，在作为发出者没有阐释清楚自己的意思时，作为接受者也无法了解接受到的意思。这个问题在有一方认知到时可以通过沟通解决，但是若没有人认知到，或者不方便仔细询问的时候，误会就有可能产生。</p>
+<h2 id="Five-Stages-of-Dying-Grief"><a href="#Five-Stages-of-Dying-Grief" class="headerlink" title="Five Stages of Dying/Grief"></a>Five Stages of Dying/Grief</h2><ol>
+<li>Denial</li>
+<li>Anger</li>
+<li>Bargaining</li>
+<li>Depression</li>
+<li>Acceptance</li>
+</ol>
+<h2 id="感情投射效应"><a href="#感情投射效应" class="headerlink" title="感情投射效应"></a>感情投射效应</h2><p>感情投射效应即认为别人的好恶与自己相同，把他人的特性硬纳入自己既定的框框中，按照自己的思维方式加以理解。比如，自己喜欢某一事物，跟他人谈论的话题总是离不开这件事，不管别人是不是感兴趣、能不能听进去。引不起别人共鸣，就认为是别人不给面子，或不理解自己。</p>
+<p>投射效应是指将自己的特点归因到其他人身上的倾向。是指以己度人，认为自己具有某种特性，他人也一定会有与自己相同的特性，把自己的感情、意志、特性投射到他人身上并强加于人的一种认知障碍。比如，一个心地善良的人会以为别人都是善良的；一个经常算计别人的人就会觉得别人也在算计他等等。</p>
+<p>啊，突然想到因为自己的情感投射而造成自己的角色只能禁锢在自己的框框里，好不爽。两种解决方案：<br><del>1.看大家名作，分析对方视角和思路。</del><br>2.多和人交流</p>
+<p> <span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC80OTgxODMzMw==">中华八大原谅<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="达克效应"><a href="#达克效应" class="headerlink" title="达克效应"></a>达克效应</h2><p> <img data-src="http://cdn.mebilychen.top/doc/IMG_8895(20211102-154041).PNG" alt="达克效应"></p>
+<h2 id="变态心理学"><a href="#变态心理学" class="headerlink" title="变态心理学"></a>变态心理学</h2><p><span class="exturl" data-url="aHR0cHM6Ly93ZW5rdS5iYWlkdS5jb20vdmlldy9jMmQ1YmZmYzA0YTFiMDcxN2ZkNWRkMzkuaHRtbD9mcj1zZWFyY2gtMS13a19zZWFfdmlwLWluY29tZTEmZml4ZnI9TnY4RGxQZ0l6KzRlS3hITVg1ZWdiQT09">知识点总结<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly93ZW5rdS5iYWlkdS5jb20vdmlldy8yYzA2MDFlYTQ4MmZiNGRhYTQ4ZDRiMjMuaHRtbD9mcj1zZWFyY2gtMS13a19zZWFfdmlwLWluY29tZTEmZml4ZnI9ZGZYMzZmaHptdXZac3l6Y2VCaGkyUT09">常见人格障碍<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="Psychopath"><a href="#Psychopath" class="headerlink" title="Psychopath"></a>Psychopath</h3><p>码。  </p>
+<h2 id="MBTI"><a href="#MBTI" class="headerlink" title="MBTI"></a>MBTI</h2><p> <span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8xMzgwNTk2NDM=">MBTI书单<i class="fa fa-external-link-alt"></i></span></p>
+<p> <span class="exturl" data-url="aHR0cDovL2Nkbi5tZWJpbHljaGVuLnRvcC9kb2MvJUU1JUE0JUE5JUU4JUI1JTg0JUU1JUI3JUFFJUU1JUJDJTgyXzEyMjg1NDUxLnBkZg==">天资差异<i class="fa fa-external-link-alt"></i></span></p>
+<p> <span class="exturl" data-url="aHR0cDovL2Nkbi5tZWJpbHljaGVuLnRvcC9kb2MvJUU4JUFGJUI3JUU3JTkwJTg2JUU4JUE3JUEzJUU2JTg4JTkxLnBkZg==">请理解我<i class="fa fa-external-link-alt"></i></span></p>
+<p> <span class="exturl" data-url="aHR0cDovL2Nkbi5tZWJpbHljaGVuLnRvcC9kb2MvJUU1JUJGJTgzJUU3JTkwJTg2JUU3JUIxJUJCJUU1JTlFJThCLSVFOCU4RCVBMyVFNiVBMCVCQy1taW4ucGRm">心理类型-荣格<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="社会心理学"><a href="#社会心理学" class="headerlink" title="社会心理学"></a>社会心理学</h2><p><img data-src="http://cdn.mebilychen.top/image/Works/%E9%A5%AD%E5%9C%88%E6%96%87%E5%8C%96%E4%B8%8E%E7%A4%BE%E4%BC%9A%E5%BF%83%E7%90%86%E5%AD%A6.PNG" alt="x 饭圈文化"></p>
+<h1 id="设计学课程"><a href="#设计学课程" class="headerlink" title="设计学课程"></a>设计学课程</h1><ul>
+<li>Interior design research</li>
+<li>书籍装帧设计研究</li>
+</ul>
+<h2 id="书籍装帧设计研究"><a href="#书籍装帧设计研究" class="headerlink" title="书籍装帧设计研究"></a>书籍装帧设计研究</h2><p>第一章  绪论</p>
+<p>§1-1  书籍装帧设计研究的基本概念</p>
+<p>§1-2  书籍设计的发展与设计流程</p>
+<p>§1-3  书籍的形态变化</p>
+<p>第二章  书籍装帧的设计要素</p>
+<p>§2-1  书籍装帧艺术的个性</p>
+<p>§2-2  市场调查研究</p>
+<p>§2-3分析国内优秀案例，与国外的案例对比研究</p>
+<p>第三章  书籍装帧的设计要素</p>
+<p>§3-1书籍装帧设计的形式节奏与韵律，对称与均衡</p>
+<p>§3-2书籍装帧设计的形式对比与调和</p>
+<p>§3-3书籍装帧设计的形式变异与秩序，形象与空间</p>
+<p>第四章  选题设计要素</p>
+<p>§4-1根据书籍装帧设计的类型选定其一，进行整体书籍装帧设计制作</p>
+<p>§4-2根据拟定设计题目进行市场现有书籍资料的收集</p>
+<p>§4-3根据拟定设计题目进行市场调查研究，辅助完成设计构思</p>
+<p>第五章  选题设计要素</p>
+<p>§5-1根据拟定设计题目进行书籍的定位，完善设计构思</p>
+<p>§5-2根据市场调研结果完成自己题目下的市场调研报告，针对每个人做出的市场调研报告进行分析讲评</p>
+<p>§5-3对书籍装帧设计作深入分析及设计再认识</p>
+<p>完成最后设计稿，综合考虑整体性、协调性。并打印成书</p>
+<ul>
+<li>设计美学</li>
+</ul>
+<h2 id="艺术史论"><a href="#艺术史论" class="headerlink" title="艺术史论"></a>艺术史论</h2><p>设计美学绪论<br>设计美学的本体语境<br>中国设计美学的发展历程<br>西方设计美学的发展<br>设计美学的合目的性和符号性<br>设计形式语言审美性研究<br>设计的理念、情感与形式<br>设计的造型与形式美感<br>设计与设计批评  </p>
+<hr>
+<ul>
+<li>景观艺术研究</li>
+</ul>
+<h2 id="景观艺术研究"><a href="#景观艺术研究" class="headerlink" title="景观艺术研究"></a>景观艺术研究</h2><p>p各类景观及园林的概念  </p>
+<p>p景观与文化 （重点） </p>
+<p>p当代景观研究方法</p>
+<p>p城市保护宪章  </p>
+<p>p建筑保护宪章  </p>
+<p>p景观保护宪章</p>
+<p>p以城市绿廊为例  </p>
+<p>p以历史园林景观为例  </p>
+<p>p以现代园林景观为例</p>
+<hr>
+<ul>
+<li>数字环境设计研究</li>
+</ul>
+<h2 id="数字环境设计研究"><a href="#数字环境设计研究" class="headerlink" title="数字环境设计研究"></a>数字环境设计研究</h2><p>《数字景观：逻辑·结构·方法与运用》</p>
+<p>《景观设计初步》</p>
+<p>第一节 数字环境的意义：背景、进程、价值 4 时  </p>
+<p>第二节 数字环境的逻辑：系统、逻辑、过程 4 时  </p>
+<p>第三节 数字环境的结构：原理、结构、平台 4 时  </p>
+<p>第四节 数字环境的方法：数据、模拟、建造 4 时  </p>
+<p>第五节 数字环境的数据运用：数据采集、数据分析 4 时  </p>
+<p>第六节 数字环境的模拟评价：方案设计、环境模拟、绩效评价 4 时  </p>
+<p>第七节 环境景观：海绵城市理论及实践 4 时  </p>
+<p>第八节 环境室内：智能设计理论及实践 4 时  </p>
+<p>第九节 数字环境设计实践 32 时</p>
+<hr>
+<ul>
+<li>中国画基础研究</li>
+<li>浮雕语言研究</li>
+<li>短期油画研究</li>
+<li>艺术史论</li>
+</ul>
+<h2 id="艺术史论-1"><a href="#艺术史论-1" class="headerlink" title="艺术史论"></a>艺术史论</h2><p>学不到，要自学。  <br>我记得我学过概要？从神到人到神到自然到人那些。  </p>
+<p>艺术的起源</p>
+<p>中国传统艺术精神</p>
+<p>艺术家与艺术作品</p>
+<p>绘画雕塑与艺术史论</p>
+<p>书法与艺术史论</p>
+<p>视觉传达与艺术史论</p>
+<p>环境设计与艺术史论</p>
+<hr>
+<ul>
+<li>广告策划与研究</li>
+</ul>
+<p>媒体广告兴起：从过去到未来</p>
+<p>媒体广告图景：从创新到创造</p>
+<p>媒体广告策略：从营销到传播</p>
+<p>媒体广告创意：从表现到实现</p>
+<p>媒体广告效果：从整合到世界公民</p>
+<p>广告媒介选择的市场调研与分析</p>
+<p>广告策略实战型项目研究</p>
+<p>广告策略创意性表达实战型研究</p>
+<hr>
+<ul>
+<li>广告招贴艺术研究</li>
+</ul>
+<p>第一章  </p>
+<p>§1-1  广告图形创意基本理论</p>
+<p>§1-2  广告招贴传统研究</p>
+<p>第二章  </p>
+<p>§2-1  现代广告设计程序研究</p>
+<p>§2-2  广告设计构思</p>
+<p>第三章  </p>
+<p>§3-1  广告策划与设计</p>
+<p>§3-2  公益招贴设计</p>
+<p>第四章  </p>
+<p>§4-2  新媒体视觉传达广告设计</p>
+<p>§4-2  社会性、文化性、商业性广告设计</p>
+<p>设计课题设定讨论</p>
+<p>根据拟定设计题目进行市场现有资料的收集</p>
+<p>根据拟定设计题目进行市场调查研究，辅助完成设计构思</p>
+<p>根据拟定设计题目进行广告的定位，完善设计构思</p>
+<p>根据市场调研结果完成自己题目下的市场调研报告，针对每个人做出的市场调研报告进行分析讲评</p>
+<p>对广告设计作深入分析及设计再认识</p>
+<p>完成最后设计稿，综合考虑整体性、协调性。并打印成书</p>
+<hr>
+<ul>
+<li>风景园林概论与规划设计</li>
+</ul>
+<h2 id="风景园林概论与规划设计"><a href="#风景园林概论与规划设计" class="headerlink" title="风景园林概论与规划设计"></a>风景园林概论与规划设计</h2><p>第一章  风景园林学科背景</p>
+<p>§1-1  学科概况</p>
+<p>§1-2  国内外风景园林学科设置情况</p>
+<p>§1-3  国内外知名大学风景园林学科排名与办学特色</p>
+<p>第二章  风景园林概论</p>
+<p>§2-1  学科基础</p>
+<p>§2-2  学科前沿理论</p>
+<p>§2-3  学科研究动向</p>
+<p>第三章  国内风景园林优秀案例分析</p>
+<p>§3-1  国内居住区生态景观设计案例分析</p>
+<p>§3-2  国内商业区生态景观设计案例分析</p>
+<p>§3-3  棕地生态景观修复案例分析</p>
+<p>第四章  国外风景园林优秀案例分析</p>
+<p>§4-1  欧美生态景观设计案例分析</p>
+<p>§4-2  下达生态景观设计任务书</p>
+<p>第五章 生态景观设计实践一草</p>
+<p>第六章 生态景观设计实践二草</p>
+<p>第七章 生态景观设计实践三草</p>
+<p>第八章 生态景观设计实践终稿</p>
+<hr>
+<ul>
+<li>城市化与遗产保护理论与实践</li>
+<li>国乐鉴赏与审美</li>
+<li>艺术表述原理</li>
+</ul>
+<h2 id="艺术表述原理"><a href="#艺术表述原理" class="headerlink" title="艺术表述原理"></a>艺术表述原理</h2><p>第一讲.文字功底是成功艺术家必备之法宝（20学时）</p>
+<p>一.诗化国度里的语言生命力</p>
+<ol>
+<li><p>传说时代语言的穿透力</p>
+</li>
+<li><p>先秦时代语言的元典力</p>
+</li>
+<li><p>汉魏晋南北朝时代语言的恣肆力</p>
+</li>
+<li><p>隋唐时代语言的张扬力</p>
+</li>
+<li><p>宋元明清时代语言的规范力</p>
+</li>
+</ol>
+<p>二. 心中有诗的艺术家才能成为优秀的艺术家</p>
+<ol>
+<li><p>诗意地栖居理论的阐释</p>
+</li>
+<li><p>诗化生活激发人的创造力、心智力、想象力</p>
+</li>
+<li><p>诗化生活是人类生存的最美最好境界和方式</p>
+</li>
+<li><p>艺术创造最需要心灵的勃发和睿智的开启</p>
+</li>
+<li><p>认识自己才能有真正的艺术创造</p>
+</li>
+</ol>
+<p>第二讲.艺术类论文写作的思考（20学时）</p>
+<p>一. 学术论文写作的规范、模式与技巧</p>
+<ol>
+<li><p>学术论文写作的规范</p>
+</li>
+<li><p>学术论文写作的模式</p>
+</li>
+<li><p>学术论文写作的技巧</p>
+</li>
+</ol>
+<p>二. 学位论文写作的规范、模式与技巧</p>
+<ol>
+<li><p>学位论文写作的规范</p>
+</li>
+<li><p>学位论文写作的模式</p>
+</li>
+<li><p>学位论文写作的技巧</p>
+</li>
+</ol>
+<p>三.搜集材料的多元性与独特性</p>
+<ol>
+<li><p>搜集材料的多元性</p>
+</li>
+<li><p>搜集材料的独特性</p>
+</li>
+</ol>
+<p>四.观点确定的科学性、严肃性</p>
+<ol>
+<li><p>观点确定的科学性</p>
+</li>
+<li><p>观点确定的严肃性</p>
+</li>
+</ol>
+<p>五.框架结构制定的合理性、新颖性</p>
+<ol>
+<li><p>框架结构制定的合理性</p>
+</li>
+<li><p>框架结构制定的新颖性</p>
+</li>
+</ol>
+<p>六.原理表达的修辞性、技巧性</p>
+<ol>
+<li><p>原理表达的修辞性</p>
+</li>
+<li><p>原理表达的技巧性</p>
+</li>
+</ol>
+<hr>
+<h1 id="名人随笔"><a href="#名人随笔" class="headerlink" title="名人随笔"></a>名人随笔</h1><p>想看看名人们都在碎碎念什么。<br>先从树人先生开刀  </p>
+<h2 id="鲁迅"><a href="#鲁迅" class="headerlink" title="鲁迅"></a>鲁迅</h2><p><span class="exturl" data-url="aHR0cDovL3d3dy53ZW54dWUzNjAuY29tL2x1eHVuL2FyY2hpdmVzLzExNDYuaHRtbA==">且介亭（也可以看看其他的）<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="《且介亭》"><a href="#《且介亭》" class="headerlink" title="《且介亭》"></a>《且介亭》</h3><h4 id="《论“面子”》"><a href="#《论“面子”》" class="headerlink" title="《论“面子”》"></a>《论“面子”》</h4><p>嗯。面子还是根据每个人每件事的性格不同而不一样的罢。（废话）  <br>就，四大人（比较鲁迅也是四大人水平的）看小瘪三是“不要脸”，但是小瘪三的目的就是引起四大人关注，也不能说就有了“面子”，算是说任务完成了吧。  <br>“让人很没面子”的事，我上次就经历过。体检嘛，让我们一排五个人一起站着，平举手，做深蹲，我刚抽完血，胳膊夹着棉签，就先跑到一边把棉签扔了，没听到那女的的指令。跑开的时候我以为他们这一组可以先做，我随后做，但0.几秒后我看他们没有让我去下一组的意思（期间什么指示都没给我），我就意识到他们意思是让我继续做，我就站那了，我看着那女的，我刚想问她要做什么动作、做几次，她就先来劲了：  </p>
+<blockquote>
+<p>“快做啊没看大家都等你呢吗？” </p>
+</blockquote>
+<p>我向来是最讨厌别人在说我的时候加上“别人”“人家”“其他人”“你看那个谁”的词语的。  </p>
+<p>【转一下虫三贴的，模拟对话：】</p>
+<ul>
+<li>“你快做啊！别愣在那里！”  </li>
+<li>“做什么啊？你催什么催？”  </li>
+<li>“刚刚我不是说了吗？蹲五次！”  </li>
+<li>“我没有听见，你发这么大火干什么？”  </li>
+<li>“为什么别人都听见了，就你没听见？”  </li>
+<li>“我耳朵不好。”  </li>
+<li>“你耳朵不好你还有理了？”   </li>
+<li>“你歧视残障人士是吧？”  </li>
+</ul>
+<hr>
+<p>然后我出去就和我妈吐槽这件事，给我妈在电话里把那女的骂了一顿（不敢当面骂）：  </p>
+<blockquote>
+<p>“那位男医生，还有你，眼看着我胳膊夹着棉签不方便做，还接了我的体检单？”<br>“明明你才是专业人士，我怎么知道这个任务我需不需要伸直手臂？你既然接过我体检单我就只能理解为我可以做，后来出了差错还怪我？”<br>“我突发情况我本来就很尴尬了，跑开了去扔棉签，你觉得我能意识到你在说什么？”<br>“我回来的时候什么指示都不给我说，让我自己yy该怎么做是吧？”<br>“当我眼瞎吗我看不见别人都在等我？想当着大庭广众强调我自私是怎么的？怎么你时间就宝贵，我因为你的失职我耽误的时间呢？<del>我还提前扔了棉签，我感染了怎么办？</del>”<br>“把别人拉进来什么意思？你怎么知道别人也像你一样没素质？你蛔虫吗？还尝试通过激起多数人对我的反感来压我？来控制我？来谴责我？你多nb啊？”      </p>
+</blockquote>
+<p>是，这件事我确实觉得我“失了面子”。因为</p>
+<ol>
+<li>我很在乎别人的看法</li>
+<li>我很在意别人有没有意识到我在照顾他（我还是有Fe的碧池），因为我很努力的在照顾你，你却没有意识到，还在“并没有照顾到我”的场合下说我没有照顾你。总结一句，是你的双标让我很生气，就像我妈说的“素质低，没办法。”哼！</li>
+<li>同组的人可能真的有人信了她这套，从而看低我一眼，觉得我很自私。  </li>
+</ol>
+<p>我想起这件事是因为我当时吐槽的原话就是“这女的让我很没面子”而且还是“明明主要错误在她，却怪我”还“尝试让别人觉得我有错”。  </p>
+<p>不过先生的“面子”似乎是指气场（“掉价”）一类的东西（至少在开篇如此）。</p>
+<h1 id="同人鉴赏组"><a href="#同人鉴赏组" class="headerlink" title="同人鉴赏组"></a>同人鉴赏组</h1><p> 此处不宜久留，不做宣传，只做个人进度提醒用，但是相应鉴赏什么的笔记文字会留下。</p>
+<p> 之前我的鉴赏都是直接写在原件上的，但是要尊重原作者的版权，就不都放原文件出来了</p>
+<p> 对于INTJ的陛下，可以有一个这样的思路，试试：就是让陛下总是想着用逻辑脑对自己认识到的事物境况下定义，这就导致他总是想下定义，想结束某项工作，不想拖延，想陈述事实，理清逻辑和思路，做出预测，会对超乎逻辑的事物感到惊讶。也就是用句号这一类语句。狐狸在这一点上做的很淋漓尽致。</p>
+<p> 在尝试写和自己人格不同的角色之前，可以试着先描述一下角色的特征，将自己代入进去，接受他的三观，类似于用户画像和体验地图。  </p>
+<h2 id="Refuse-amp-Regret-by-ClockworkRainbow"><a href="#Refuse-amp-Regret-by-ClockworkRainbow" class="headerlink" title="Refuse &amp; Regret by ClockworkRainbow"></a>Refuse &amp; Regret by ClockworkRainbow</h2><p> 文风、行笔、剧情</p>
+<p> 主要研究（真的是）INTJ的，不会想太多的、即便理解了对方的情绪也不会有所反应的、毫无感情流露的陛下，以及作为一个 <strong>神</strong> 应该如何行为举止。<br> 彩虹的文都是很仙的王类型，他是真的，没有情感表露，而且总是一副想要“嗯，哈哈。”的蔑视感觉，就是家长看着别家的熊孩子互相抢糖果时候的感觉，不过他展现出来的是“嗯”。但是由于陛下在这篇里很凄惨的物理状况，也可能在后期对陛下的心理产生了一定影响，导致他笑不出来了，成了“嗯，cnm。”</p>
+<h2 id="A-Pale-Stranger-by-ClockworkRainbow"><a href="#A-Pale-Stranger-by-ClockworkRainbow" class="headerlink" title="A Pale Stranger by ClockworkRainbow"></a>A Pale Stranger by ClockworkRainbow</h2><p> 文风、行笔、设定、剧情</p>
+<p> 主要研究（真的是）INTJ的，不会想太多的、即便理解了对方的情绪也不会有所反应的、毫无感情流露的陛下，以及作为一个 <strong>幼神</strong> 应该如何行为举止。</p>
+<h2 id="Of-Ash-and-Flame-by-Cagnition"><a href="#Of-Ash-and-Flame-by-Cagnition" class="headerlink" title="Of Ash and Flame by Cagnition"></a>Of Ash and Flame by Cagnition</h2><p> 文风、行笔、剧情</p>
+<h2 id="The-Only-Option-by-ChloeCasey"><a href="#The-Only-Option-by-ChloeCasey" class="headerlink" title="The Only Option by ChloeCasey"></a>The Only Option by ChloeCasey</h2><p>这篇主要鉴赏..呃，设定和剧情吧。</p>
+<p>是一篇冰火组的真爱文…吧？毕竟陛下是和团长他爸爸谈得恋爱，然后爸爸为了保护陛下死掉了，然后团长本来应该继承记忆的结果因为爸爸没有走程序，是非正常死亡，就出了点小差错。<br>陛下的设定是辐光（收养）的小弟，原本和卢瑞恩（一只萤火虫）一起服务于辐光，但是后来陛下翅膀硬了，发现自己一直在被脑控，（也是为了给被辐光审判死的团长他爹复仇）就揭竿而起。团长他们一族原本是独立于辐光的，（一直想把太阳神搞死）但是由于团长他爹喜欢上了陛下，就相当于把自己（和本族）送进了辐光的手掌心（辐光：哈哈哈哈老娘权力go prrrrr），然后团长他爹本来一开始骗了陛下，是想利用他让他干啥来着，忘了，回头可以再看一遍，（是利用了陛下的重生process把孵出来的陛下做为玩具送到辐光手里引开她注意力然后找机会杀死她，或者干脆利用陛下杀死辐光）梦魇之王说出来之后陛下还崩溃了一回，因为他亲手杀死辐光就是为了给团子爹报仇，他觉得自己被骗了。团子爹本来只是想利用陛下，结果后来他假戏真做，自己冒着被脑控的风险跑回到辐光领地和陛下幽会，两只虫子就好上了。<br>作者还讽刺了一下原作的陛下，用自己的无数孩子去杀辐光，这里是梦魇王用自己无数的孩子（格林们）去杀辐光，陛下疯狂diss梦魇王这样。<br>这段我还记得brumm（是吧这个名字），当时冲团子爹吼“他就是一只沃姆，一只￥￥的沃姆，你到底看上他哪里？”，这里不是brumm嫉妒啊什么的（可能还真是），主要是相当于团子爹给辐光留了个把柄，整个团都受到了辐光威胁。  <br>团子爹被辐光审判死的很惨，似乎是死无全尸。团子目睹了爹被杀死的全过程，然后就由于没有走仪式，团子就暴走了，生灵涂炭，除了圣巢，因为圣巢被梦魇王保护起来了，团子不知道圣巢的存在，原因似乎是怕团子不小心伤害到团子珍贵的东西从而悔不当初。然后团子暴走完就失忆了，变回了温柔贤惠的团子（？），还育有一子。             <br>作者停更在团长即将回忆起陛下与他（指团长）爸爸的美好生活的前一章    <br>…我￥！&amp;@）！%</p>
+<p>感觉就是，虽然不是很有新意，但是就是很爽的感觉。设定还挺好。    <br>现在想想，感觉和美国那边的动画风格好像。从描写到剧情。  </p>
+<h2 id="To-yield-thyself-to-the-eye-of-god-by-ruthlesslistener"><a href="#To-yield-thyself-to-the-eye-of-god-by-ruthlesslistener" class="headerlink" title="To yield thyself to the eye of god by ruthlesslistener"></a>To yield thyself to the eye of god by ruthlesslistener</h2><p> 文风、行笔、设定、剧情</p>
+<p> 君臣组太甜了</p>
+<h2 id="Will-you-dance-with-me-by-Iwakitsune"><a href="#Will-you-dance-with-me-by-Iwakitsune" class="headerlink" title="Will you dance with me by Iwakitsune"></a>Will you dance with me by Iwakitsune</h2><h3 id="Ch4"><a href="#Ch4" class="headerlink" title="Ch4:"></a>Ch4:</h3><p> 文风、行笔、设定、剧情。<br> 主要研究（真的是）INTJ的，不会想太多的、即便理解了对方的情绪也不会有所反应的、毫无感情流露的陛下，以及作为一个 <strong>国王</strong> 应该如何行为举止。  <br> 狐狸的文都是很王的父亲类型，他是真的，（几乎）没有情感表露，而且总是很淡定，很优雅，很自信。  <br> 相比而言可能是因为我本身比较自卑，导致不敢让陛下自信，害，我的锅。一定改一定改。</p>
+<p> 部分摘抄：</p>
+<blockquote>
+<p>The King stood as well, motioning for the Vessel to follow him out of the room as a small group of retainers entered to start cleaning after them.</p>
+</blockquote>
+<blockquote>
+<p>…The King hadn’t said anything to them…</p>
+</blockquote>
+<blockquote>
+<p>The King made a small motion with his head, prompting them to start signing.</p>
+</blockquote>
+<p> 特征：很少说话</p>
+<blockquote>
+<p>It took a couple moments and them jogging a little closer to his side before he stopped and turned to face them fully,</p>
+</blockquote>
+<p> 本可以在此结束本段描写，但是作者继续补充了文字描写，使场景更充实。
+  </p>
+<blockquote>
+<p>the quiet skittering of the multiple legs against the white stone of the floor echoing the soft clicking of the Vessel’s claws against each other as they prepared their thoughts.</p>
+</blockquote>
+<blockquote>
+<p>He <strong>blinked</strong> , the only tell of his current state that was visible. While thoughts started churning, neither his  <strong>glow</strong> nor <strong>wings</strong> gave any hint of unease or surprise. “You are the Vessel. You have been responding to it, it is your name.”</p>
+</blockquote>
+<p>注意加粗词。  <br>陛下情感不外露到了极致，可以用“本来想加上小动作体现陛下的情感流露但转念一想将这些小动作转写成了无情感流露的情况”作为触发器来写。<br>另外这段要是我写的话，陛下不会感到疑惑，只会有些许惊讶，因为陛下可以瞬间意识到小前辈的情绪和真正意图。或许这就是我们之间塑造陛下的区别之一。这里的陛下或许更加直男一些，也就是说，对情绪不敏感导致他虽然知道对方的意图，但不知道缘由。  </p>
+<blockquote>
+<p>“Yes, it serves as a title as well.”</p>
+</blockquote>
+<blockquote>
+<p>“… you want for a more unique designation then.” It didn’t sound like a question, itmight not have been one, but the Vessel nodded nonetheless. The King’s stare remained, undisturbed.</p>
+</blockquote>
+<blockquote>
+<p>“A quaint name. Not quite meaningful by itself, and with it not the greatest connotations.” He hummed, focusing his gaze on their own, their thoughts and what could be the beginnings of disappointment unknown to him. “Have you thought of it, or is this spur of the moment <strong>.</strong> ”</p>
+</blockquote>
+<p>特征：判断、定论、句号。典型INTJ…呃，是否是IN不清楚。
+   </p>
+<blockquote>
+<p>The King stared at them plainly, dark eyes unreadable and stance so still they hadtrouble telling if he was breathing at all.</p>
+</blockquote>
+<p>特征：无热情、冷漠、无法捉摸。</p>
+<blockquote>
+<p>The King finally uttered under his breath, a flick of his tail shifting his robes. “If I were to forbid it, you would be capable of finding a loophole.”</p>
+</blockquote>
+<blockquote>
+<p>The King straightened, lifting his head in such a way his crown of horns caught the light.</p>
+</blockquote>
+<blockquote>
+<p>Hollow stood in place, stone under the <strong>black eyes</strong> of the King of Hallownest who had not only listened to their request, but granted it.</p>
+</blockquote>
+<blockquote>
+<p>…grasped <strong>the hem of his pristine, white cloak</strong> ,bowing their head again and again with energetic gratitude—and just barely keeping from clipping him with their horns.</p>
+</blockquote>
+<p>注意动作，要用上陛下的特征。另外，INTJ。</p>
+<blockquote>
+<p>The King stood a little straighter and turned to face it. </p>
+</blockquote>
+<blockquote>
+<p>“Thank you. Return to your post.”</p>
+</blockquote>
+<blockquote>
+<p>Hollow focused back on the King as he passed the parchment to another hand, watching it disappear into his sleeve.</p>
+</blockquote>
+<p>注意动作、语言，要考虑陛下的性格和心理和地位。陛下也有一些习惯动作，在狐狸这里更偏向王的习惯性动作。  <br>另外需要积累一些国王的日常行为语言、宫廷的运作模式，省得写的时候太过离谱。</p>
+<blockquote>
+<p>It seems I won’t be able to impart a lesson to you today, Hollow.” He said, <strong>pausing for a second as he worked through the words.</strong> “Important matters to attend to. You are free until called again, return to your room or its surroundings.”</p>
+</blockquote>
+<p>注意这段里加粗，我也经常使用“他顿了一下”，但是我很少解释他为什么停顿。  <br>或许我应该少说点谜语…不能以为大家都和我在同一电波上。  <br>唉。试试。</p>
+<h3 id="Ch6"><a href="#Ch6" class="headerlink" title="Ch6:"></a>Ch6:</h3><p><img data-src="https://i.loli.net/2021/04/18/gW5Z8tPBlaOLAuQ.jpg" alt="我对所有王文中陛下退场的看法"></p>
+<p><img data-src="https://i.loli.net/2021/04/18/7ryz1XHuT3VdhFK.jpg" alt="我对所有王文中陛下退场的看法"></p>
+<p>强调丰富背景故事，比如很少被其他作者提及的蜂巢的文化，写在这里就很惊艳</p>
+<p><img data-src="https://i.loli.net/2021/04/18/GtBvsVhgy2oESRb.jpg"></p>
+<p>细节叠细节，要有意识地加细节，要想“这个场景就这样结束了吗？”“这里的某个元素是不是可以再深挖？”先不去想着是否过度的问题，先要锻炼意识。</p>
+<p><img data-src="https://i.loli.net/2021/04/18/wBHoqzFUelmgDt4.jpg"></p>
+<p>比如上文中触角的存在。也许也是因为我不经常写触角吧，就是需要注意一下一个句子里的每个元素，甚至是没有描写出来的元素，都可以深挖，都可以有一套设定驱动它运转，毕竟这个世界就是这样的。</p>
+<p>作者在小说中对自己的定位很重要。</p>
+<p><img data-src="https://i.loli.net/2021/04/18/pbYGrRaH4qoxQcv.jpg"></p>
+<p><img data-src="https://i.loli.net/2021/04/18/bxetzS1MYBRn7Um.jpg" alt="Ch6总结"></p>
+<p>其中第4句，陛下intj + 以自我为中心，很有君王的气概。</p>
+<h2 id="This-little-light-of-ours-by-Valiax"><a href="#This-little-light-of-ours-by-Valiax" class="headerlink" title="This little light of ours by Valiax"></a>This little light of ours by Valiax</h2><p>  涉及到幼王的行笔、设定、剧情。  <br>  主要研究幼王。</p>
+<hr>
+<p>  <br><strong>当时给一位人翻译的最喜欢的片段：</strong><br>  <br>Hornet已经习惯了花园周围环境的声音很久了，这些声音起初让她有些没在意到远处隐隐传来的悲恸尖叫。<br>第三声尖叫后，她才猛地从恍惚中清醒过来，向回走去。<br>他们住在一间破旧的苔藓族房子里，这里为他们提供了雪中送炭般的温暖和保护，足以躲开大多数捕猎者的目光。<br>然而，当她拖着疲惫的身躯回到营地，她不得不先向后跳去以躲避一个从她头顶呼啸而过的红色火球。<br>“什——! ?”<br>现在，Hornet的脑子终于能准确地辨别出那些尖叫声和哭喊声了。她抬头望向庇护所的屋顶，对即将目睹的一切毫无心理准备。<br>“Ghost”和“Hollow”正拼命想要停止一场战争。<br>你可能会问，发生了什么?<br>很明显，“Ghost”在不久之前认为小国王看起来很孤单，没有考虑任何后果，他就拿出护符召唤了小格林来做小国王的“玩伴”。<br>然而事实是，当两位神明目光相遇的那一刻，他们脑海中闪过的只有一件事：<br>你死我活。<br>小白王落在屋顶上，六片翅膀大大地张开着，以让自己看上去更吓人。他抓着屋顶边缘，发出一声称得上是可怕的尖叫，他继续鼓起身体，使自己的身形显得更大，即使身上穿的是个小小的手工斗篷。<br>小格林也毫不示弱，它发出恼怒的叫声，从国王的头上来回掠过，同时喷出火球，想要击中对方。<br>小格林每喷出一团火焰，小国王就会嗡地飞起来躲开，落到屋顶上的另一个地方，之后继续被小格林和他的小火球追赶。<br>他被逼到墙角的时候，国王的小爪子里就会形成一道奇异的白光，几秒钟之内就会产生一个小小的魂钉，被毫无章法地掷向小格林。这只能或多或少地作为分散敌人注意力的方式，给他足够的时间让他转移到另一个位置上。<br>单是混乱的尖叫声就足以进一步激怒这位女猎人，她紧绷起神经，针紧握在手里。不幸的是，与此同时，她被注意到了。小国王立刻飞向她寻求安全感，而她不能及时做出反应。<br>她设法躲开了冲过来的小国王，却被一个小火球命中脸上的靶心。<br>这股力量把她击倒在地，大家立即都停下了动作。<br>她将一只手抬起来摸上自己的面具。<br>没有破损，没有裂痕。<br>还算不错，不过她额头上留下的灼烧感让她疼得瑟缩了一下。<br>“Hollow”马上跑过去，伸出手帮助Hornet站起来。<br>然而，因为自己就是惹了麻烦的虫子之一，他伸出的手被对方狠狠拍开。<br>“你们脑子都出什么问题了?”Hornet低声抱怨着，由于疲劳以及被格林的火焰击中，她虽然站了起来，却有些不稳。<br>“我一回来就发现你们都像一群原始的阿斯匹德虫，想要把对方撕成碎片!”<br>她愤怒的声音足以让小格林在半空中悬停下来，好好地打量Hornet几眼，随后飞快地躲到“Ghost”后面，只是把它的头搭在两个犄角之间。它脸上带着得意的小表情，摇着小尾巴。<br>“讲真，难道你们都不知道沃姆对其他的神裔本能地有领地防卫意识吗?你们真的没有意识到吗?！”<br>两个容器互相交换了一个眼神。“Hollow”将身体倾斜着，让他又高又瘦的体型显得更加有威压感，几乎就像是在对“Ghost”说“我告诉过你，但你不听!”<br>小格林只是咧开嘴扮着鬼脸，高叫一声 “咪呀!”，看上去万分骄傲。<br>于是立刻就有一根长骨钉指向了小格林。<br>“Ghost”后退一步，也抽出自己的骨钉，两个容器陷入了一次沉默的争吵：“Hollow”维护着白王，而“Ghost”维护着他抚养长大的小格林。<br>尽管她无从得知这两人是否有在用某种虚空的语言争吵，但仅仅是看着这一幕就让Hornet更加心烦意乱。</p>
+<h2 id="A-lost-light-by-elil-To-love-a-Lamprey-by-Insecuriosity"><a href="#A-lost-light-by-elil-To-love-a-Lamprey-by-Insecuriosity" class="headerlink" title="A lost light by elil/To love a Lamprey by Insecuriosity"></a>A lost light by elil/To love a Lamprey by Insecuriosity</h2><p>  涉及到沃姆的行笔、设定、虽然很大众但是很带感的剧情。  <br>  主要研究沃姆…和带感剧情。</p>
+<h2 id="Queenegg"><a href="#Queenegg" class="headerlink" title="@Queenegg"></a>@Queenegg</h2><p> <span class="exturl" data-url="aHR0cDovL2Nkbi5tZWJpbHljaGVuLnRvcC9kb2MvJUVGJUJDJTg4MjAxOS0wMS0xMSVFRiVCQyU4OSVFOSU5QyVCOCVFNiVCMCU5NCVFNyU5OSVCRCVFNyU4RSU4QiVFNSU5QyVBOCVFNyVCQSVCRiVFNiU5MiVBOSVFNiVCMSU4OS5wZGY=">queenegg的一篇什么文我忘了名字<i class="fa fa-external-link-alt"></i></span></p>
+<p> 霸气/妖艳白王在线撩汉</p>
+<h1 id="文言文-amp-古风"><a href="#文言文-amp-古风" class="headerlink" title="文言文 &amp; 古风"></a>文言文 &amp; 古风</h1><p>文言文学习和阅读安排一下</p>
+<p>玩精神检验师的时候，看到用文言文会显得很有中文中的英文（陛下文）感  <br>或者就是白话参杂着文言，像古风那样</p>
+<p>《古文观止》</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTUlOEYlQTQlRTYlOTYlODclRTglQTclODIlRTYlQUQlQTIvMTM5MzE2P2ZyPWFsYWRkaW4=">百度百科<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="犯罪"><a href="#犯罪" class="headerlink" title="犯罪"></a>犯罪</h1><p><a target="_blank" rel="noopener" href="http://cdn.mebilychen.top/doc/The%20Criminal%20Sexual%20Sadist.pdf"></a></p>
+<h1 id="法学"><a href="#法学" class="headerlink" title="法学"></a>法学</h1><p>#幸亏懂点法</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVc3NDExbTdWMj9mcm9tPXNlYXJjaCZzZWlkPTkwMTkyMDI1NjczMzI2MzczMzI=">厚大法考-共同犯罪<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTUlOEYlOTclRTUlQUUlQjMlRTglODAlODUlRTYlOUMlODklRTclQkQlQUElRTglQUUlQkEvNTMxOTYzMjY=">受害者有罪论<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="猥亵"><a href="#猥亵" class="headerlink" title="猥亵"></a>猥亵</h3><blockquote>
+<p>该行为需要行为人采取暴力、胁迫或其他方法，但“其他方法”不要求达到类似强奸、抢劫等犯罪中的足以压迫对方反抗的程度，仅需达到心理上的震慑或压迫即可。</p>
+</blockquote>
+<p>我被很多游戏小说电影震慑了心理 我能告猥亵吗</p>
+<h3 id="诽谤"><a href="#诽谤" class="headerlink" title="诽谤"></a>诽谤</h3><p>在客观方面表现为故意捏造并散布虚构的事实，足以贬损他人人格，破坏他人名誉，情节严重的行为。</p>
+<p>诽谤主观上必须是故意，行为人明知自己散布的是足以损害他人名誉的虚假事实，明知自己的行为会发生损害他人名誉的危害结果，并且希望这种结果的发生。行为人的目的在于败坏他人名誉。如果行为人将虚假事实误认为是真实事实加以扩散，或者把某种虚假事实进行扩散但无损害他人名誉的目的，则不构成诽谤。</p>
+<h3 id="故意杀人的较轻情节"><a href="#故意杀人的较轻情节" class="headerlink" title="故意杀人的较轻情节"></a>故意杀人的较轻情节</h3><p>故意杀人情节较轻的情况，主要如下:<br>(1)防卫过当的故意杀人; .<br>(2)义愤杀人，即被害人恶贯满盈,其行为已达到让人难以忍受的程度而其私自处死，- 般是父母对于不义的儿<br>子实施这种行为;<br>(3)激情杀人，即本无任何杀人故意，但在被害人的刺激、挑逗下而失去理智，失控而将他人杀死，其必须具备<br>以下条件:必须是因被害人严重过错而引|起行为人的情绪强烈波动;行为人在精神上受到强烈刺激，- -时失去理智,<br>丧失或减弱了自己的辨认能力和自我控制能力;必须是在激愤的精神状态下当场实施;<br>(4)受嘱托杀人，即基于被害人的请求、自愿而帮助其自杀; .<br>(5)帮助他人自杀的杀人;<br>(6)生母溺婴，即出于无力抚养、顾及脸面等不太恶劣的主观动机而将亲生婴儿杀死。如果是因为重男轻女的思<br>想作怪，发现所生的是女儿而加以溺杀的，其主观动机极为卑劣，则不能以本罪的情节较轻情况论处。</p>
+<h1 id="经济学"><a href="#经济学" class="headerlink" title="经济学"></a>经济学</h1><p>因为一个知乎一个上交大精神阿根廷傻逼，逼得我去查了“价格歧视”的定义。  <br>搞笑的是，傻逼的帖子几千人赞，但科普贴子却只有16个人。  </p>
+<h3 id="价格歧视"><a href="#价格歧视" class="headerlink" title="价格歧视"></a>价格歧视</h3><p>价格歧视，其实不包含贬义，也不是违法行为，是一种经济学现象。商家利用信息不对称，实行的区别差异定价行为。 </p>
+<blockquote>
+<p>作者：Josefa<br>链接：<span class="exturl" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzMwMzgwNTg5OC9hbnN3ZXIvNTQwMDY1NjA3">https://www.zhihu.com/question/303805898/answer/540065607<i class="fa fa-external-link-alt"></i></span><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。<br>1.一级价格歧视一级价格歧视，又称完全价格歧视（因人定价），是假定生产者知道每一个消费者对于任何数量的任何产品可以接受去支付的最多货币量，并据此进行产品定价的行为。通过一级价格歧视，该生产者可以获得消费者的全部消费剩余。在传统的经济活动中，这种现象几乎不会发生。但最近，由于互联网大数据的广泛应用，滴滴、飞猪、携程纷纷被曝光对消费者「杀熟」现象，即根据消费者的搜索次数、出行欲望、对APP的依赖程度等消费画像进行消费者行为分析，从而匹配最优定价，这其实就是一级价格歧视的现实事例。<br>2.二级价格歧视二级价格歧视，即数量歧视（因量定价）。厂商了解消费者的需求曲线，把需求曲线分成几段，根据购买数量的不同来确定价格，厂商可以获得一部分而消费者的消费剩余。二级价格歧视是生活中最为常见的价格歧视，所谓的第二杯半价就是很典型的一个例子。<br>3.三级价格歧视三级价格歧视，即分类歧视（因地定价）。指厂商对不同市场的不同消费者实行不同的价格，在实行高价格的市场上获得超额利润。三级价格歧视在生活中也会经常出现，比如在沙漠中的矿泉水，肯定比你们小区楼下711的贵。价格的不同归根结底都是供需关系的不匹配。在不同地方或对于不同类别的消费者，对产品的需求的迫切程度不同，对价格的敏感程度也不同。</p>
+</blockquote>
+<h3 id="“薅资本主义羊毛”"><a href="#“薅资本主义羊毛”" class="headerlink" title="“薅资本主义羊毛”"></a>“薅资本主义羊毛”</h3><p>和我爸讨论的，不存在“薅资本主义羊毛”一说，只有“薅社会主义羊毛”。因为只有社会主义是集体的，拿不属于自己，属于集体的东西，叫薅羊毛；但是资本主义的东西是私人的，薅羊毛等于盗窃。还不是抢劫，因为你不敢光明正大的抢，下贱。  </p>
+<h1 id="科幻"><a href="#科幻" class="headerlink" title="科幻"></a>科幻</h1><h2 id="菲利普·迪克"><a href="#菲利普·迪克" class="headerlink" title="菲利普·迪克"></a>菲利普·迪克</h2><p>码，先码个《少数派报告》。</p>
+<h1 id="神-宗教学"><a href="#神-宗教学" class="headerlink" title="神/宗教学"></a>神/宗教学</h1><p><img data-src="https://i.loli.net/2021/07/09/UyS9P8beF3HpZDW.jpg"></p>
+<p>我感觉我是想建教。<br>想到YT上那个谁的广告语“Worship yourself, the world will follow.”  <br>这句话献给 @Re 里的陛下。  </p>
+<p><span class="exturl" data-url="aHR0cDovL2Nkbi5tZWJpbHljaGVuLnRvcC9kb2MvJTVCJUU0JUI4JTk2JUU3JTk1JThDJUU3JUE1JTlFJUU4JUFGJTlEJUU4JUJFJTlFJUU1JTg1JUI4JTVELnBkZg==">【PDF】世界神话辞典<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="天主教圣事"><a href="#天主教圣事" class="headerlink" title="天主教圣事"></a>天主教圣事</h3><p><span class="exturl" data-url="aHR0cDovL2Jsb2cuc2luYS5jb20uY24vcy9hcnRpY2xlbGlzdF8yOTMxMDMzODQ3XzVfMS5odG1s">http://blog.sina.com.cn/s/articlelist_2931033847_5_1.html<i class="fa fa-external-link-alt"></i></span></p>
+<p>天主教教堂主体建筑往往是一个宽阔的大厅，里面整齐地排放着座椅，可以容纳几百人甚至上千人。进入其中，首先会看到圣台。圣台上面多供奉着钉有耶稣基督受难的苦像或者耶稣的圣像，后者多供奉在神龛中，以鲜花拱卫，还有的供奉圣母玛利亚的圣像以及其他圣徒的雕像，台上常设有烛台、灯饰等祀器，圣像前往往有对联以昭示其意义，如北京南堂——宣武门天主堂的圣母像前有对联云“吁玛利亚无原罪之始胎，我等奔尔台前为我等祈”，北京北堂——西什库天主堂有康熙帝题的对联：“无始无终，先作形声真主宰；宣仁宣义，聿昭拯济大权衡。”这是天主教教堂受到中国文化影响的鲜明标志。教堂四周墙壁上绘有油画，以耶稣受难或《圣经》故事为主题，有的还在石级上刻有浮雕，多是天使或死神形象，还有耶稣受难时的刑具，如梯子、鞭子、钉子、长矛等。较大一些的教堂还有副堂，以供更多信徒参加宗教活动。</p>
+<p>教堂内靠近东墙的地方有一座祭台，是教堂内最高的地方，祭台为长桌形，中央嵌有一小块石板，称为圣石，内藏圣徒遗骨或遗物。祭台前有3级台阶，神甫在此主持弥撒或设圣餐。祭台前方常挂有圣体灯，数量不定，但必须是奇数，且不能超过7盏，其中1盏昼夜长明，现在也有用电灯代替的。唱诗班也是教堂举行各种仪式时很重要的礼仪组成部分，负责教会礼拜日的崇拜唱诗及带领敬拜，位置大都正对着圣台。</p>
+<p>天主教教堂主要用来举行各种圣事仪式，如施洗、坚振、告解、圣体、终傅、神品和婚配，这也是天主教教会的七大圣事。</p>
+<p>洗礼是天主教入教仪式，所以被列为第一项圣事，一经完成，便可赦免领受者的原罪与本罪。早期是在井中或河里洗礼，公元4世纪之后开始出现专门的洗礼池，后来搬入教堂内部。</p>
+<p>坚振礼在施洗过一段时间后举行，主教把手按在领受者头上，念诵经文以成礼，此为按受礼，然后用圣膏涂抹在受礼者的前额，轻拍其面颊。施洗与坚振能赋予人以神印，一个人一生只能领受一次，不能重领。</p>
+<p>告解亦称忏悔，由信徒向神甫告明对上帝所犯的罪过，内心认识到罪过的严重性，决心改正，所以来找神甫请求赦免。神甫面对信徒的忏悔，会根据情况确认，然后以基督所赋予的神权进行赦免。后来天主教用修和来代替告解一词。在教堂内的角落处一般都设有一个告解室。</p>
+<p>圣体源于古代的献祭风俗，人们在献祭之后往往是将祭品吃掉。天主教认为，圣餐中所使用的面包和酒，经过神甫的祝祷，会变成基督的圣体，人们饮食之，便可和基督融合为一。信徒接受圣体前一般要斋戒几天，然后进入教堂，划十字，向圣像鞠躬、唱诗，神甫再将圣体送进信徒嘴中。</p>
+<p>终傅是信徒临终时敷擦圣油的仪式，当信徒年老或病入膏肓时，由神甫用主教祝圣过的橄榄油敷擦信徒的耳目口鼻手足等处，念诵祈祷经文，借此来减轻他的神形困苦，鼓励其精神，赦免其罪过。终傅多在信徒家中或医院进行。</p>
+<p>神品又称祝圣，是神职人员的晋职仪式，只有特殊的信徒才能领受，他们在接受祝圣后，便可成为各级神职人员。</p>
+<p>婚姻是耶稣亲自确定的圣事，教徒在教堂内由神甫主礼，经过教会的礼仪认可，正式结为夫妻。天主教认为婚姻具有神圣价值，所以仪式中的誓言便是对双方道德的约束，这在一定程度上提高了婚姻的恒久性。</p>
+<p>以上7种圣事为天主教和东正教所公认，但新教只认可其中的两项：施洗和圣餐，还有一些新教派别如公谊会、救世军等，甚至不承认有圣事。</p>
+<p>天主教便通过举行这7种圣事及其他仪式，将教徒定期召唤到教堂内，从而实现教会与信徒、神圣与世俗之间的完美结合。</p>
+<p>法事礼仪</p>
+<p>礼拜:天主教最普遍的崇拜仪式，是在每周日举行的主日礼拜。在礼拜时，教堂内常置有奉献箱，或传递收捐袋，信徒可以将钱放入其内，作为对上帝的奉献。除每周一次得主日礼拜外，还有圣餐礼拜、追思礼拜、结婚礼拜、安葬礼拜、感恩礼拜等。</p>
+<p>守斋:天主教规定在复活节前40天为封斋期，教徒在此期间内的特定日期守大斋和小斋。大斋日为耶稣受难日和圣诞前一天，只能吃一顿饱饭，其余两顿要吃半饱或更少。小斋为每星期五，不食肉类。</p>
+<p>圣事: 天主教的某些重要礼仪被称为圣事，因教派不同而有所不同。天主教和东正教认为有七桩圣事:洗礼、坚振、告解、圣餐、终傅、圣职和婚配。</p>
+<p>戒律:据《圣经》记载，由耶和华所授，并命摩西颁布实施了十条戒律:不许拜别神;不许制造和崇拜偶像;不许妄称耶和华的名;须守安息日为圣日;须孝敬父母;不许杀人;不许奸淫;不许偷窃;不许作伪证;不许贪恋他人财物。</p>
+<p>天主教称谓礼仪</p>
+<p>天主教信徒之间可称平信徒，指平常、普通的信徒，我国平信徒之间，习惯称“教友”。新教的教徒，可称兄弟姐妹，或称同道。教会神职人员因其教派不同，称谓也不尽相同。最高首领称为教皇或教</p>
+<p>宗，最高级主教称红衣主教，管理一个教省的负责人被称大主教，管理一个教区得负责人称主教，管理一个堂区得负责人称神父。</p>
+<p>天主教交往礼仪</p>
+<p>与天主教交往要了解他们的一些基本习俗礼仪与禁忌礼仪:</p>
+<p>根据教会的传统，天主教的主教、神父、修女是不结婚的。所以，同天主教徒交往时，见到主教不可问“有几个子女?”遇到年轻的神父、修女则不可问“爱人在哪里工作”等问题。此外还有神职人员从商禁忌及天主教徒的离婚禁忌等。</p>
+<p>天主教的教堂允许非教徒参观，但首先应当尊重对方的意愿。并征得同意。进入教堂后，应当脱帽，并且不能大声喧哗，不得妨碍正当的宗教活动。同时也禁止在堂内来回乱窜、大声喧哗、交头接耳、东张西望、打情骂俏、争抢座位等。更不允许在堂内吃东西、抽烟。因此，非教徒进入教堂时一定要遵守教堂规则，不要违背。</p>
+<p>要尊重其宗教信仰自由，不可对其尊重的上帝、基督以及圣事和教义妄加评论。</p>
+<p>在交往时要分清其所属派别，根据不同教派的称谓及教义准确使用语言，不能将不同教派的称谓及教义混淆。</p>
+<p>在守斋时，他们是不吃肉食、不饮酒的，因此设宴招待，应避开斋期，同时在安排菜肴时注意尊重天主教的饮食禁忌。</p>
+<p>向天主教徒赠送礼品时，不应有其他宗教信仰崇拜的偶像。不是天主教徒，最好不要乱戴、乱用天主教的标志——十字架。</p>
+<p>与天主教徒交往时，注意对数字“13”和星期五的禁忌。</p>
+<p>天主教饮食禁忌</p>
+<p>各个宗教都有自己不同文化，就连饮食方面也是不相同的。天主教认为血代表上帝的生命，因此不吃一切动物的血。同事禁止酗酒，守斋期间不食肉类，平时通常不食蛇、鳝。</p>
+<p>教堂是天主教举行宗教礼仪、进行公共祈祷的场所。为表示神圣，称教堂为“圣堂”。我国教会中常用的“天主堂”一词，其狭义固然是指教堂，但广义是指某处天主教会的全部机构和建筑物。教堂有“公堂”、“经堂”之分。公堂是为大众而设立的，如主教座堂、铎区教堂、朝圣地的圣堂等。经堂专为某团体而设立，如男、女修院内的经堂。任何教堂的设立，须有当地主教的许可。圣堂落成，该举行奉献礼；规模宏大、建筑牢固的教堂，可举行极隆重的祝圣礼。奉献或祝圣一圣堂时，应为之取一名号，此名号能为天主圣三(圣三堂、圣神堂……)、主耶稣基督(救主堂、圣体堂、圣心堂……)、圣母(无原罪圣母堂、玫瑰圣母堂……)、天使或一位圣人圣女(圣弥厄尔堂、圣若瑟堂、圣女德肋撒堂……)，所取之名即为该堂的主保。著名的教堂，亦称“圣殿”。圣殿分甲级和乙级。甲级圣殿事实上只有罗马的救世主大殿、圣母大殿、圣伯多禄大殿、圣保禄大殿。别的都是乙级圣殿，如我国的上海佘山圣母大殿。</p>
+<pre><code>教堂是一座整体建筑物，其主要部分为“圣所”及“参礼间”。圣所是举行弥撒礼仪的地方，亦称“弥撒间”。在圣所设有敬供耶稣圣体的圣体柜、耶稣钉在十字架上的苦像、祭台、读经台及主礼和辅礼人员的座椅；在圣所靠后的墙壁上，挂有巨幅圣像。参礼间主要摆放着跪凳，供教友们参礼时使用。在教堂的后方有“神工架”，为教友办告解之用；在进门处设有“圣洗池”，专为付洗之用；在堂门内侧两边有“圣水盘”，为教友们进、出堂时蘸圣水之用。另外，在圣所前方上空挂有“圣体灯”，指示教友们圣所内供有耶稣圣体；在参礼间前方设置风琴，为伴唱经歌而用；并设有“献仪箱”，为教友们向天主做奉献之用；两边的墙壁上挂着纪念耶稣苦难的十四处“苦路像”。
+
+每座教堂都附设“更衣室”，为司祭和辅祭穿着并脱卸祭服礼服；圣祭用的各种器具、祭台上的装饰品也都存放于更衣室内。教堂进门处上方设有唱经楼，和前方圣所中央的祭台遥遥相对。
+</code></pre>
+<p>:祝圣教堂圣水,用于祝圣教堂</p>
+<p>..圣水置于教堂入囗.教友入时用右中指蘸圣水.在头额双肩画十字.<br>圣水是被神父或主教祝圣过的水，用以洗礼或祝圣某人、某地或某物。 圣水被放置于洗礼台中，洗礼台则通常位于教堂的入口处(或是有单独的一间洗礼堂)，以提醒人们洗礼是皈依基督教的最重要的仪式。 还有一种类似的容器叫做圣水钵，也常被置于入口处。天主教徒在进入教堂时要先以手指蘸圣水，于胸前划十字。星期天的圣餐仪式中有撒圣水的仪式 (拉丁语aspersion), 其历史可以上溯到九世纪。具体做法是将圣水掸酒器蘸入圣水盂中，然后洒向教众。另外，根据各个教派的不同习惯，圣水中有时会加盐。</p>
+<p>圣仪的种类很多，有些是与弥撒及圣事相连的，有些则是与其无关的；有对人及其职务方面的，也有对物品及其用途方面的。</p>
+<pre><code>①、与弥撒和圣事相连的。弥撒和每件圣事的核心仪式都很简短，在核心仪式前后，教会规定了不少圣仪，借以准备心灵，或感谢所领受的恩惠。像弥撒中的整个进堂式、礼成式，和七件圣事中的圣经诵读及某些仪式，比如：圣洗礼仪中的驱魔、傅油、领洗者头上披白布、手执蜡烛等都是圣仪。按不同时代的需要，教会当局可以改变或增减某些圣仪。
+
+②、与弥撒和圣事无关的。如降福食物，降福房子等等。
+
+③、对人及其职务方面的。如祝圣主教、司铎、执事；任命并降福男女隐修院院长、接受修士修女发愿、降福奉献于主的贞女、委任读经员、辅祭员、传道员等；此外尚有降福病人、降福产妇(生产后四十天)等。
+
+④、对物品及其用途方面的。用圣油祝圣圣物，如祝圣圣堂、祭台、圣爵、圣盘等；降福为敬主所用之圣物，如降福祈祷所、祭台布、祭衣、蜡烛、香炉、堂钟等；降福为保护人所用之圣物，如降福圣水、圣灰、苦像、圣衣、圣牌、圣像、念珠等；降福教友们所用之物，如降福房屋、食品、粮食、工程等。
+</code></pre>
+<p>降福仪式<br>①、降福信友：主教、神父随时随地都可以降福信友。降福时先默祷，后举起右手，向信友作十字圣号，先竖后横，同时念：“愿全能的天主圣父、圣子、圣神降福你们。阿们。”主教降福时划三个十字，神父只划一个。</p>
+<pre><code>②、降福清水：神父穿短白衣，佩带紫色领带，由辅礼者协助，诵念规定的经文，并向水划十字；然后将盐投入水中，投时作十字形，同时念：“愿盐与水混合在一起，因父及子及圣神之名。阿们。”之后，神父再作祈祷。
+
+③、降福房屋或场地：神父到达后，穿短白衣，佩白色领带，念降福经文：“主，全能的天主，求你降福(划十字)这座房屋(这地方)。愿在此居住的人享有健康、保持贞洁、克服罪恶、身心健壮……愿此降福常存留在这座房屋内(这地方)、及所有在此居住的人身上，现在、直到永远。”答：“阿们。”神父向房屋或场所洒圣水。
+
+④、降福玫瑰念珠：神父将念珠放在左手掌中，祈祷说：“为赞美并为光荣天主圣母童贞玛利亚，为纪念我们的主耶稣的生平、圣死及复活的奥迹，愿天主降福并圣化这串念珠：因父及子及圣神之名。阿们。”同时，举起右手向念珠三次划十字。
+
+⑤、降福圣像、圣牌：神父用右手向圣像或圣牌划十字，口念：“为纪念圣人的善行和圣德，求天主降福这圣像(圣牌)。”如降福塑像，则加上洒圣水。
+
+⑥、降福病人：神父来到病人跟前，如条件许可，则穿短白衣，佩戴领带，向病人房内洒圣水，并为病人祈求恢复健康。最后，向病人划十字，同时念：“愿全能的天主圣父、圣子、圣神常降福你，保佑你。”答：“阿们。”
+</code></pre>
+<p> 祈祷分广义和狭义：狭义的祈祷是祈求天主赏赐某些神形恩宠，或宥恕罪过，免除灾祸。广义的祈祷是收敛心神，归向天主，发出钦崇、爱慕、赞美、感谢、依靠等善情善念，所以，广义的祈祷便是指恭敬天主的一切工作。</p>
+<pre><code>祈祷有口祷、心祷：口祷是用语言祈祷，通常是诵念一些由教会制定的经文；它的要点是口诵心维，即心里想着口中所念的，做到心口合一；口祷容易激发热心、感动旁人，有利于公众共同举行。心祷是用心灵祈祷，从心里向天主发出种种善情善念，与天主进行深层次的交流，其方法主要有默想、省察等神工。
+
+祈祷又有公祷与私祷：私祷是一个人自己作口祷或心祷，便利于个人与天主亲密交谈，发展内心生活。公祷是某处教会召集许多教友所作的共同祈祷，是公开的恭敬天主的形式，亦即教会的公共祈祷。
+</code></pre>
+<p>天主教最重要、最普遍的公共祈祷首先是弥撒圣祭中的祈祷；其次是神职人员以及男女修院中咏唱或诵念的“每日颂祷”(俗称“大日课”)，这是教会正式礼仪中的公共祈祷。此外，还有教友们在教堂中的公诵经文。</p>
+<pre><code>一、弥撒圣祭中的祈祷
+
+弥撒圣祭是圣教会恭敬天主的最高最大的礼仪，也是最有价值的公共祈祷。教友们参加教会的公共祈祷，最普遍的方式便是参与弥撒。弥撒圣祭的经文，除了读经和福音外，都是向天主祈求。在弥撒中，主祭、信友和普世教会，同耶稣自已及圣母玛利亚、天上一总的圣人圣女，一同祈祷。弥撒中的祈祷，远远超过别的祈祷。
+
+二、每日颂祷
+
+“每日颂祷”亦称“日课”。《礼仪宪章》第84号说：“按照基督徒的古老传统而编成的神圣日课，其目的在使日夜的全部过程，借着赞美天主而圣化。司铎们及其他由教会指定的人员，或者信友们同司铎一起，依照法定方式祈祷，举行这项美妙的赞美之歌，实乃新娘对新郎倾诉的心声，而且也是基督偕同自己的身体，对天父的祷告。”
+
+“每日颂祷”包括：
+
+①晨祷和晚祷：这是每
+
+日颂祷的两个主要时辰，晨祷在早晨诵念，晚祷在一天工作完毕之后诵念；②“每日颂祷”中的诵读部分可在一天内任何时间诵念，亦可在前夕提前诵念；③日间祷和夜祷：这是两个次要时辰，日间祷分午前、午时和午后，夜祷在就寝前诵念。
+
+“每日颂祷”的主要内容是圣经中的一百五十篇圣咏，每四周全咏念一遍。这些圣咏是天主圣神所默感而写成的经文，洋溢着向天主祈祷的多种感情。“每日颂祷”的次要内容，既有取自圣经的，也有教会自己制定的种种经文、历代诗人赞颂天主的诗歌、圣师们的讲道以及圣人圣女的传记。
+
+三、教堂中的公诵经文
+
+我国广大教友很喜欢共同朗诵经文，各地堂口按本处的习惯共同诵念早课、晚课、玫瑰经、主日瞻礼经，或公拜苦路、或公做圣母月等敬工。这些公共祈祷的举行，也是教友
+</code></pre>
+<p>们热心虔诚的标记之一。</p>
+<p>弥撒礼仪<br> 天主教举行弥撒有统一的“弥撒规程”。它规定了弥撒的结构及各部分的礼节。</p>
+<pre><code>弥撒的结构主要有两部分：“圣道礼仪”和“圣祭礼仪”，这两部分密切结合，形成一个完整的礼仪行为；此外，它们的前后还有开始和结束仪式。现根据《弥撒经书总论》第24—57号简介弥撒程序如下：
+
+(一)、进堂式
+
+进堂式是弥撒开始的仪式，具有开端、引导和准备的作用，包括诵念“进堂咏”、“致候词”、“忏悔礼”、“垂怜经”、“光荣颂”和“集祷经”等。
+
+①、进堂咏：主祭与辅祭进堂，教友们开始唱“进堂咏”。
+
+②、致候词：主祭与辅祭到达圣所，向祭台鞠躬。主祭面向教友，口亲祭台后领划十字圣号，向教友致候：“愿主与你们同在!”教友们答：“也与你的心灵同在!”致候词表示主亲临于教会团体之中。
+
+③、忏悔礼：致候词后，主祭向教友简介当日弥撒意向；接着，邀请大家认罪。全体诵念“忏悔词”，以主祭求主赦罪结束。
+
+④、垂怜经：忏悔礼后，全体诵念“垂怜经”，这是教会向主求怜的呼声。
+
+⑤、光荣颂：垂怜经后，按礼仪说明，全体念“光荣颂”。这是一篇悠久的赞美诗，是在圣神内共融一体的教会对天主圣父和圣子的赞颂、祈求……
+
+⑥、集祷经：主祭请大家祈祷。静默片刻后，主祭念当日的“集祷经”，说明庆典的特性、意义及祈求。信友们表示同意、赞成，齐声回答：“阿们!”
+</code></pre>
+<p>主要包括以下五个部分：<br>一、进堂式或进台式<br>二、圣道礼仪，主要是诵读《圣经》和由神父讲道。<br>三、圣祭礼仪，为祝圣面包和葡萄酒和领圣体、圣血，以一小块饼和一小口红葡萄酒作为耶稣基督的身体和血，吃了以后就和耶稣同在，获得救赎。<br>四、领圣体礼<br>五、礼成式<br>一般每个星期日都会在教堂做弥撒，逢到重大节日如圣诞节、复活节会做大型的弥撒,并接受教徒的奉献。基督教（新教）除了圣公宗和部分路德会以外，仪式没有那么隆重，只是一般崇拜，牧师根据当时当地的新闻依据《圣经》讲道，也会领圣餐。</p>
+<p>进堂礼<br>弥撒开始时，全体站立，咏唱进台咏（进堂圣歌），主祭者与辅祭者在歌声中走进祭台。<br>致候礼<br>主祭者带领信众划十字圣号，并可简略地介绍本日弥撒。<br>忏悔礼<br>主祭者引领全体信众向天主认罪，并恳求天主赦罪。<br>求主垂怜经<br>信众重复主祭者或领经员的“上主求祢垂怜”、“基督求祢垂怜”、“上主求祢垂怜”。<br>光荣颂<br>全体颂念或咏唱：“天主在天受光荣，主爱的人在世享平安。主、天主、天上的君王，全能的天主圣父，我们为了祢无上的光荣，赞美祢、称颂 祢、朝拜祢、显扬祢、感谢祢。主、耶稣基督、独生子；主、天主、天主的牧羊犬，圣父之子；除免世罪者，求祢垂怜我们。除免世罪者，求祢俯听我们的祈祷。坐在圣父之右者，求祢垂怜我们；因为只有祢是圣的，只有祢是主，只有祢是至高无上的。耶稣基督，祢和圣书，同享天主圣父的光荣。亚孟。”<br>集祷经<br>因应当天的弥撒，主祭者读出祷文，信众回应：“亚孟”。<br>圣道礼仪<br>宣读圣经<br>分为读经一和读经二（常见于主日及重要庆节），读经一后有“答唱咏”，读经员和信众以领答方式进行，经文选自圣经的圣咏集。遇有两篇读经时，读经一多选自旧约（复活期选自《宗徒大事录》），读经二多选自新约中的保禄书信、公函或若望默示录。<br>福音前欢呼<br>全体起立欢呼唱歌咏，常用“亚肋路亚”；四旬期内则以其他歌咏代替。<br>宣读福音（六品在宣读福音前需请求主祭祝福）<br>主祭者或六品（执事）说：“愿主与你们同在”，信众回答：“也与你的心灵同在”，主祭者读说：“恭读…福音”，信众回答（同时于额、唇和胸前划小十字）：“主，愿光荣归于你”。主祭者或六品即宣读当天的福音。<br>讲道<br>主祭者或六品向信众宣讲道理<br>信经<br>全体会众共同咏唱或诵念尼西亚信经，在复活节到圣神降临节则会选用宗徒信经。<br>信友祷词（Oratio universalis）<br>主祭者说完引言后，就会由执事或读经员说出一些祈祷意向，然后每个意向后说：“为此，我们同声祈祷。”主祭者最后会邀请会众祈祷，并作祷词的总结。<br>圣祭礼仪<br>奉献礼<br>信众坐下，喝血颂唱奉献咏，同时收集“弥撒献仪”（奉献）。主祭者准备稍后的圣体圣血。主祭者偕同信众祈祷希望天主收纳各人共同奉献的圣祭。<br>感恩经<br>主祭者和信众共同颂谢天主、欢呼赞美天主圣名、为教会、生死者及诸圣祈祷，并进入以下程序。<br>成圣体圣血：主祭者覆述圣经经文，呼求圣神，祝圣祭台上的饼酒，使其成为耶稣基督的身体和宝血。信众于祝圣后欢呼期待基督光荣地再临。圣三颂：主祭者颂念光荣天主圣三的祷词，信众回应“阿们”。<br>天主经<br>全体共同咏唱或诵念天主经，外加平常祈祷省略的“天下万国，普世权威，一切荣耀，永归于祢”。<br>平安经<br>全体互祝在主内的平安<br>领圣体<br>参与弥撒的天主教徒前往祭台前领取圣体（或圣血）<br>个人领圣体后可作默想和祈祷，之后全体祈祷感谢天主。<br>堂区报告<br>宣布教区、堂区的通告，或教友应知的事项。<br>礼成式<br>主祭者在弥撒最后，全体站立，主祭者对会众进行降福礼，并派遣参与弥撒者向世人传播福音。所有仪式结束后，主祭者宣布：“弥撒礼成”，全体答：“感谢天主”后咏唱礼成咏（礼成圣歌），主祭者与辅祭者在歌声中走出祭台，会众解散。[1]</p>
+<p>坚振<br>  坚振即坚固信德，振奋信仰。如果说圣洗使人开始度信仰生活，是超性生命的孩童阶段；那么，坚振就是因人的信德，振作信仰生活，使人的超性生命长大成熟、强壮有力。坚振带来的效果是增加恩宠，赋予人天主圣神及坚振神印，使人与基督更亲密结合，与教会间的联合更完善，能维护并传播信仰，以言以行为基督作证。</p>
+<pre><code>一般而论，领过圣洗的人就可领坚振；但按坚振圣事的意义，领受坚振最好是在脱离少儿阶段，进入青年阶段的时候。坚振的施行人是主教，若经主教准许，司铎亦可行坚振。施行的时期，最好在圣神降临周内，也可在任何适当的日期。坚振的礼仪如下：
+
+一、进堂：领坚振者、代父母及教友在堂里集合后，主教和襄礼的神父、执事、辅祭进堂，向祭台致敬，向教友致候，主教念“集祷经”。
+
+二、读经：“集祷经”后，恭读《玛窦福音》第十六章24—27节．或其它合适的《圣经》。读福音后，领坚振者到主教座前，主教简短讲道，说明坚振的意义。
+
+三、重发领洗誓愿：讲道完，领坚振者全体肃立，答应主教的询问，表示坚守圣洗誓愿。
+
+四、覆手礼：主教请大家为领坚振者祈祷；静默片刻后，向领坚振者覆手，同时念：“全能的天主，我们的主耶稣基督之父!你以水及圣神使这几位子女重生，赦免了他们的罪过；求你派遣施惠者圣神，降临他们心中，赐给他们智慧和聪明之神、超见和刚毅之神、明达和孝爱及敬畏之神。以上所求，是靠我们的主基督。”领坚振者答：“阿们。”覆手是宗徒们付坚振时传下来的礼节。
+
+五、傅油礼：领坚振者到主教前，代父母报告他们的圣名，并把右手放在代子女的肩上。主教以右手拇指蘸坚振圣油，在领坚振者额上划十字，同时念：“某某(呼坚振圣名)，请藉此印记，领受天恩圣神。”答：“阿们。”傅油表示圣神的恩宠进入领坚振者的心灵之中。
+
+六、降福：傅油礼后，念“信友祷词”、“天主经”。最后，主教降福大家。
+</code></pre>
+<p>1.圣堂及教会场所的卫生<br>    1.1     圣堂及教会场所应按时开启门窗，让空气流通。<br>    1.2     祭台、圣堂地板、跪櫈、告解室 (尤其告解屏风) 及洗手间等应定期清洁，例如以漂白水及清水消毒。</p>
+<p>2.弥撒圣祭<br>    2.1     教友若身体不适，例如咳嗽、气喘、发烧等，为个人及他人的安全起见，可免参与主日弥撒，但为个人神益，仍有本份履行一些善工，如阅读圣经、念玫瑰经或其他祈祷，或奉献病苦作为神哀矜等。<br>    2.2     圣堂门口设置的圣水，应每周更换。<br>    2.3     于弥撒前，若由教友自行取面饼放入圣盘，应采用「食物夹」或筷子，避免用手触及面饼。<br>    2.4     圣堂采用的礼仪经书和歌书，应尽力保持清洁；咪宜于每主日后用火酒消毒。<br>    2.5     为使教友保持双手卫生，堂区主任司铎可斟酌实际情况，在「领圣体后经」之后才收集主日捐献。<br>    2.6     教友可采用点头或握手方式行「平安礼」。<br>    2.7     领圣体方式<br>        教友领圣体，一如以往，可采用舌领或手领方式，亦可选择单领圣体或兼领圣体圣血。<br>    2.7.1   单领圣体<br>     a. 传统方式：教友双手合十，接近送圣体者，舌领圣体。<br>     b. 手领方式：教友双手适度地伸展，手掌平伸、向上，左掌在右掌之上；送圣体者说：「基督圣体」，并把圣体放在教友掌中；教友答「阿孟」，随即靠一边，恭领圣体，然后才返回座位。<br>    2.7.2   兼领圣体圣血<br>     应采用容量适中的圣爵，并盛载适量的圣血。司铎、执事或送圣体员一对一对地一持圣体盒，一持圣爵。<br>      方式(一)<br>教友到持圣体盒者前，按照以上2.7.1b.的方式领受圣体，随即到持圣爵者前，把圣体蘸一点圣血，持圣爵者同时说：「基督圣血」，教友答「阿孟」，并随即领受已蘸圣血的圣体，然后才返回座位。<br>     方式(二)<br>[注：堂区主任司铎可斟酌实际情况 (例如，在堂区团体中某些成年人或儿童有所不便的情况下)，采用以下方式，以确保「安全」。]<br>     教友到持圣爵者前。后者从持圣体盒者取圣体，并蘸圣血，然后持着蘸了圣血的圣体向教友说：「基督圣体圣血」。教友答「阿孟」，然后以舌头领受。<br>     2.7.3     无论采用何种方式，都必须避免以手指触及圣血，或让圣体碎屑掉下，或让圣血滴在地上。堂区主任司铎应不时提醒送圣体员及教友，有关单领圣体或兼领圣体圣血的正确方式和虔敬态度，并应矫正任何偏差。<br>    2.8  司铎、执事及送圣体员，在送圣体前必须个别冲洗或消毒双手。<br>    2.9     如不慎有圣体掉在地上，应由有关送圣体人员捡起来事后处理，不可再送给其他教友。<br>    2.10  注意清理圣爵的卫生──<br>    a.  清洗圣爵者于喝下剩余的圣血后，应以清水洗净圣爵，并亲自喝下，不要让别人代劳。<br>    b.  圣爵内外须用自来水冲洗，才再次使用。<br>    c.  每台弥撒后都要更换圣血布。已用过的圣血布于清洗后才可再使用。<br>    2.11  应在送圣体后才祝福儿童，可采用覆手方式。<br>    2.12  全体礼仪人员，礼仪前后均宜洗手；他们的礼仪服饰应定期洗濯，保持清洁。</p>
+<p>3.探访及为病人及长者傅油或送圣体<br>    3.1  司铎、执事、送圣体员及探访员到医院及安老院探访病人及长者，或为他们傅油或送圣体时，应遵守该等地点的规则。<br>    3.2  司铎、执事及送圣体员到病人及长者家里傅油或送圣体后，应立即洗手。</p>
+<p>4.修和圣事<br>    4.1  告解亭或修和室应经常保持清洁卫生，让空气流通。<br>    4.2  听告解司铎或告罪者如有感冒或咳嗽等病征，须佩戴口罩</p>
+<p> 平信徒对神父一般称“神父”、“某神父”；视神父为自己“灵魂上的父母”。平常遇见神父，应点头问候。有事拜访神父，要注意衣着整洁，以表示对神父的尊敬；进神父居室时应先轻轻敲门，待听到答应“请进”后，才可推门进见；会见时，一切举止言谈宜端庄大方、自然朴实。</p>
+<pre><code>对来访的教友，神父都应热情招呼、接待。由于教友来访的目的不同，在具体接待上自然有所区别：
+
+①、有的教友拜访神父，是由于对神父十分怀念，想通过访问表示自己的敬仰之意。对这样的来访者，神父无疑应表示欢迎，和教友亲切交谈，让教友感到温暖。
+
+②、有的教友来拜访神父，是带着某些信仰方面的问题向神父请教的。神父应采取积极诚恳的态度，认真听取教友的问题，正确给予解答，还应耐心、谦虚，善于与教友一起切磋问题。
+
+③、有的教友来拜访神父，是求领圣事的，如办告解、在弥撒外领圣体、为病人请终傅等。在这种情况下，不管神父自己正在忙什么，都应当把所做的事暂时搁下，全心全意地为教友施行圣事。
+
+平信徒与神父通信时，信的开头应写作“尊敬的神父”，也可写“某神父”；正文写完后，可写上祝颂语及表示敬意的话，如“主佑平安”、“神形康泰”、“德化日隆”等。落款时在自称加姓名后再加启禀语，如“教友某某谨上”、“主内某某敬书”。神父写信给平信徒时称作“亲爱的教友”、“亲爱的主内兄弟姊妹”，或直称教友的圣名，如“若望教友”、“主内玛利亚”等。
+</code></pre>
+<p>教友们进教堂后，应免冠，到圣水盘蘸圣水划十字，面向圣所(弥撒间)，向圣体内的耶稣行屈膝礼(亦称’请安”：身体立直，弯曲右膝至地，再站直，表示敬礼圣体)，然后择一位置跪下(也可坐下)默祷。教堂是聚会的场所，教友们在堂里应守静默，不可东张西望，不可大声说话，不可随意走动，也不可互相招手致意(若需致意，互相以点头表示)。当公共祈祷或弥撒礼仪开始后，应心专神注，按礼节要求或跪或坐或立，做到仪表端庄，虔诚恭敬。不可“坐无坐相，站无站相”，疲沓懒散。咳嗽或打喷嚏，要用手帕捂住嘴，尽量压低声音。教堂对教友的衣着没有规定，以大方整洁为宜。参加礼仪完毕出堂时，不可喧哗，离开位置，向圣体行屈膝礼，按先后次序到堂门口蘸圣水划十字出堂。</p>
+<p> 对所有平信徒都可以用同志、先生、小姐、师傅、老师等一般社会称呼。对在教会组织内担任职务的平信徒，也可使用会长、主任、秘书长等职衔。对神职人员和修会人员，可用神职称呼，如某主教、某神父、某修士、某修女等，以表示尊敬。</p>
+<p>通常，平信徒、神父在遇到主教时，应主动招手致意或点头致敬，或者上前握手甚至“亲”手，向主教问好。如果有事拜访主教，应事先联系，并按约定时间略为提前到达；拜见时，时间不可过长，以免影响主教的工作或休息；告辞时，应求主教降福。中国天主教中的一些老年教友见到主教时，按传统一般都单膝下跪，亲吻主教右手上的象征神权的戒指，称为“亲权”；不过，现在大都和主教握手时向主教“亲权”。据说，西方国家的教友在觐见教宗时，要双膝跪下亲吻教宗鞋上的十字架鞋饰，但近年来已取消，连亲吻教宗手上的权戒也已不作为必要的礼规，改而采用握手、拥抱或鞠躬致敬等。教宗为了表明自己是“众仆之仆”，历来称主教们为“可敬的兄弟”，称教友们为“可爱的子女们”</p>
+<p>天主教中的平信徒一般都从事社会各方面的职业，教会对他们的穿着没有任何规定，上教堂做礼拜或参与节日礼仪，也只以服饰整洁大方为原则，可各穿适合自己身份的服装。</p>
+<pre><code>神职人员的穿着，神父和执事基本上穿黑色长袍(长及脚跟，胸前饰有竖式成排细小钮扣；腰围较宽，腰带附有黑色二叶飘绺)，颈项带白色硬领(罗马领)；但外出时，一般都改穿黑色西服，带白领。主教的服饰为黑长袍，白硬领、小红帽；腰带、飘带及绺头、长袍缝边均为紫红色；并带金色项链十字架，右手无名指上带戒指(象征神权，习称“权戒”)。总主教多一黑色小披肩。枢机主教多一红色小披肩。教宗则穿白色红边饰长袍，带白色披肩。所谓“主教神父(服色)一般黑色，唯有教宗一人白色”；但如今连神父中也有改穿白色长袍的。在举行礼仪时，神职人员的服装应按礼规要求办事。
+
+修会人员的“会衣”都大同小异。修士只穿黑色长袍。修女穿的长袍多为黑色，也有蓝色和青色的，胸前领下围有一白布披褡，戴头盖，额前露出内衬的白边。
+
+现在，不论主教、神父，还是修士、修女，如果不在宗教场合，或不需要表明神职身份时，为行动方便，平日穿着与常人一样，只是朴素一些罢了。
+</code></pre>
+<p>天主教，东正教的一种宗教仪式，信徒在神职人员面前忏悔自己的罪过，以求得天主宽恕，并得到神职人员<br>告解<br>告解<br>的信仰辅导和生活道理。</p>
+<p>我国天主教俗称:办神工</p>
+<p>而基督教认为无罪论，不需要告解，只需忏悔。</p>
+<p>怎样办告解</p>
+<p>一. 告解的程序是省察、痛悔、告明、赦罪、补赎。</p>
+<p>二. 忏悔者跪或面对面坐在神父面前，即是告明</p>
+<p>告解程序</p>
+<p>跪在告解亭，划十字圣号(因父及子及圣神之名，阿门)</p>
+<p>随之，神父会先读一段经文(……并看到天主的仁慈。)</p>
+<p>开始说:</p>
+<p>1.求神父降福，准我罪人告解….</p>
+<p>2.我初次办告解(第一次办告解时说)或我从上次告解到现在有多少___月___日….</p>
+<p>3.告说明白省察出来的罪:我犯了….</p>
+<p>{必须告明所有用心省察出来的大罪，即使是十诫中最后二诫的最隐秘的罪，也要”告说明白”。因为有时这些罪过会更严重地伤害灵魂，且比那些公开的罪更危险;教会也积极劝勉告明小罪}。</p>
+<p>4.告完罪之后对神父说: 若怕有忘记的罪时说:神父(/主教)罪人有罪，无知罪、忘记罪，求神父替天主赦免罪人一切大小罪。</p>
+<p>若记得所有的罪，说:神父(/主教)我的罪告完了，求神父(/主教)一一宽恕。</p>
+<p>之后，神父会给你讲道理，从中得到神职人员的信仰辅导和生活道理。</p>
+<p>说完道理会给你定补赎经(若有不明白或做不到要跟神父讲)</p>
+<p>然后神父会给你念赦罪经，神父在念时，要痛悔。神父念完赦罪经(……现在天主已宽恕了你的罪过，平安地回去吧)后，要感谢天主的赦罪之恩和神父帮你告解，说:”感谢天主，谢谢神父”。画十字圣号，回去念补赎经。</p>
+<p>三.在告明前，忏悔者应从良心、天主十诫、圣经….联系生活进行省察，之后发痛悔。</p>
+<p>四.在告明后，忏悔者应在听告司铎赦罪前再发痛悔，及在离开告解亭后做补赎。</p>
+<p>告解、忏悔的程序</p>
+<p>忏悔的程序是省察、痛悔、定改、告明、赦罪、补赎。</p>
+<p>在圣神的引导下，忏悔者必须心甘情愿前去忏悔。</p>
+<p>1.要省察自己所有的过失;</p>
+<p>2.以心痛悔;</p>
+<p>3.以口告明;</p>
+<p>4.在司祭赦罪的同时，再次发痛悔;</p>
+<p>5.诚心诚意接受司祭的赦罪。天主透过教会介入而行动，借司祭(主教或神父)以基督之名赦罪{*注:赦罪经文:天上的慈父，因他圣子的死亡和复活，使世界 与他和好，又恩赐圣神赦免罪过，愿他借着教会的服务，宽恕你，赐给你平安。现在，我因父及子及圣神之名，赦免你的罪过(《袖珍圣事礼典》 P80-81)}，并定下补赎的模式，还为罪人祈祷并与他一起赎罪</p>
+<p>6.罪人以行为表现完全谦逊和具有效果的补赎(DS 1673#)。</p>
+<p>审查指引</p>
+<ol>
+<li><p>我有否认或怀疑天主的存在吗?</p>
+</li>
+<li><p>我有没有拒绝相信天主的启示?</p>
+</li>
+<li><p>我有没有相信过星座、流年运情、解梦、轮回转世、求神拜佛、看相、看掌、算命、看通胜、紫微斗数、铁板神算、风水、盘仙、银仙、通灵﹝问米﹞等等 、搭罗牌、纸牌占卜，各类占卜符咒、水晶等等各类增运物品?</p>
+</li>
+<li><p>我有没有曾经否认自己是天主教徒?</p>
+</li>
+<li><p>我曾否想过离开天主教信仰?</p>
+</li>
+<li><p>我有没有对天主的仁慈失望?或妄用了天主的仁慈?</p>
+</li>
+<li><p>我有没有长时期忽略祈祷?</p>
+</li>
+<li><p>我有没有亵渎天主、或妄呼天主的名、或诅咒、或破坏承诺和暂愿?</p>
+</li>
+<li><p>主日或应守的瞻礼日，我曾否因为自己的缘故而不参与弥撒?</p>
+</li>
+<li><p>在至圣圣体面前，我是否常常保持虔敬?</p>
+</li>
+<li><p>在弥撒中，我是否分心走意?参与弥撒，我有没有迟到或早走?</p>
+</li>
+<li><p>我有没有守主日，在主日做光荣天主的事?</p>
+</li>
+<li><p>我有没有反抗或不敬我的父母或合法上司?</p>
+</li>
+<li><p>我有没有疏忽自己对于配偶、子女或父母的责任?</p>
+</li>
+<li><p>我有没有忽略自己子女的宗教学识和信仰培育?</p>
+</li>
+<li><p>我有没有学习教会正确的教导?</p>
+</li>
+<li><p>我有没有给予员工合理的薪酬?</p>
+</li>
+<li><p>我有没有因自己的说话和行为而使别人、尤其是年青人跌倒?</p>
+</li>
+<li><p>我曾否导致别人离开信仰?</p>
+</li>
+<li><p>我对待别人是否无忍耐、易发怒、嫉妒、不善、骄傲、懒惰、复仇心重、常怀恨、不宽恕?</p>
+</li>
+<li><p>我有没有做坏榜样、滥药、过量饮酒、与人打斗和争吵?</p>
+</li>
+<li><p>我有没有杀过人或伤害过任何人?</p>
+</li>
+<li><p>我有没有堕胎或建议任何人去堕胎?</p>
+</li>
+<li><p>我有没有参与或赞成安乐死的行为?</p>
+</li>
+<li><p>我有没有尝试自杀?</p>
+</li>
+<li><p>我有没有故意地怀有不洁的思想和渴望?我是否穿着端庄?</p>
+</li>
+<li><p>我有没有用不洁和有淫秽暗示的语言?讲或听不洁的故事笑话?</p>
+</li>
+<li><p>我有没有故意观看或注视淫秽的电视节目、戏剧、图片或电影?我有没有故意阅读色情资料?</p>
+</li>
+<li><p>我有没有做过对自己或与别人做不洁的行为?那行为是什么?</p>
+</li>
+<li><p>我有没有在教会以外结婚，或鼓励别人这样做?</p>
+</li>
+<li><p>我有没有滥用我的婚姻权?我曾否不忠于我的婚姻誓约?</p>
+</li>
+<li><p>我有没有与别人的配偶有不正当的联系?</p>
+</li>
+<li><p>我有没有做人工避孕、自己或配偶有没有接受了绝育手术?</p>
+</li>
+<li><p>我有没有偷盗、欺骗、帮助或鼓励别人偷盗、或保管偷来的东西?我有没有为所偷来的东西作出赔偿?</p>
+</li>
+<li><p>我有没有完成我的契约、贿赂别人或收受贿赂、支付我的帐单、沉迷赌博和投机、我有没有剥夺自己家人生活的需要?</p>
+</li>
+<li><p>我有没有讲大话，和故意用自己的谎言欺骗或伤害他人?</p>
+</li>
+<li><p>我有没有做过假见证?我有没有暴露别人的缺失和罪过，并讲人是非?</p>
+</li>
+<li><p>我有没有保守别人告诉我的秘密?</p>
+</li>
+<li><p>我有没有遵守教会在四旬期的禁食和守斋?我有没有实行我在复活节的责任?我有没有?一年最少办一次告解?</p>
+</li>
+<li><p>我有没有在犯了大罪的情况下领圣体?我有没有在参加感恩祭之前一小时不饮食，守一小时的「圣体斋」?</p>
+</li>
+<li><p>我有没有办过一次坏的告解?</p>
+</li>
+<li><p>我有没有故意拒绝捐助教会?</p>
+</li>
+</ol>
+<p>省察的第一式:按天主十诫、圣教四规、七罪宗</p>
+<p>天主十诫</p>
+<p>第一诫:</p>
+<p>不信天主。思疑天主的道理。参与弥撒时分心。无心听道理。懒惰学道理。无心念经，早晚全无念经。在圣堂谈笑失敬。不妥当划十字圣号。虽然有方便但是懒惰去 领圣体。不妥当预备领圣体。不妥当预备告解。不敢承认自己是教友。信兆头为吉凶。信异端邪神。做异端的事。阅读相反信德的刊物。怨恨天主。亵渎圣事、圣 物。冒领圣体。进食前不念经感谢天主。、</p>
+<p>第二诫:</p>
+<p>发假誓愿。无故指天主为证。说轻慢或侮辱天主、圣母、圣人的话。不践行所许过的意愿。拿天主、圣母、圣人的名字来开玩笑。</p>
+<p>第三诫:</p>
+<p>无大缘故或无教会宽免不参与主日或耶诞节、复活节等瞻礼的感恩祭，无缘故主日不罢工。</p>
+<p>第四诫:</p>
+<p>不听父母、师长的正命。咒骂、抱怨、记恨、轻慢父母、师长。望父母早死。父母有病或困难时不照顾。不听师长的善言善劝。说父母、亲戚、师长或神长的是非。 不照顾子女、下属灵魂肉身的需要。不改正子女、下属的毛病。给子女、下属立坏表样。虐待子女、下属。对工人、下属不公道，克扣他们应有的薪金，无理欠工 人、下属的薪金。</p>
+<p>第五诫:</p>
+<p>打架。打死或打伤人。同人吵闹。耻笑人。激人忿怒。不同人和好。图谋报仇。记恨别人。自己想死。毒言骂人。叫人不和睦。立坏表样引人犯罪。伤害自己的身体。故意饮醉酒。吸麻醉品，服毒。堕胎。</p>
+<p>第六、九诫:</p>
+<p>故意想起邪念。没有立刻退绝不洁的思想。故意想得着邪淫的机会。愿意做非礼的事，但是没有实行。故意说非礼的话。喜欢谈论猥亵非礼的事。看猥亵不道德的刊 物、书籍、电影或话剧。留心听人说非礼的话。去邪淫不道德的地方。手淫、穿着不端正的服装。结交坏朋友。离婚。与别人同居。纳妾。</p>
+<p>第七诫:</p>
+<p>别人的东西。帮助别人偷东西。欺骗别人的钱。买或收藏别人偷来的东西。做不公道的生意，不送还借来的钱或对象。损坏别人的东西而不赔偿。拾物不还，贪污，高利贷，剥削劳工….</p>
+<p>第八诫:说谎。做假证人。说别人的是非。无故泄露别人的罪。妄证别人。诬告别人。败坏别人的名声。</p>
+<p>第十诫:想得着不公道的财物。赌钱。贪图分外的财物。想偷别人的东西。见财起心。</p>
+<p>圣教四规</p>
+<p>第一规:主日或当守庆节，如圣诞及圣母无原罪节日没有参与弥撒。</p>
+<p>第二规:没有守圣教会规定的大斋或小斋。</p>
+<p>第三规:整年一次也没有去妥当告解和领圣体。</p>
+<p>第四规:没有按力量帮助圣教会的经费。</p>
+<p>七罪宗</p>
+<p>骄傲:慕求虚荣。贪图人赞美。轻视别人。不肯认错。欺负别人。夸赞自己。固执己见。同人争气。</p>
+<p>悭吝:过分爱好和追求现世的财物。没有恻隐之心。虐待劳工。用不公道的手段追求财物。不置备自己或家人所必需的对象。</p>
+<p>迷色:追求无廉耻相反洁德的事。</p>
+<p>愤怒:怀恨。记仇。咒骂。凌辱别人。没有压制自己的怒气。</p>
+<p>贪饕:只求贪图口腹的快乐，对于饮食没有节制。对于烟酒的嗜好没有节制。</p>
+<p>嫉妒:小气。嫉妒别人的成功。喜欢别人做事失败。别人受灾害，自己的心喜欢。露出别人的毛病为损害别人的名声。</p>
+<p>懒惰:懒惰尽自己的本分。荒废时间。无心学道理。无心改自己的毛病。</p>
+<p>省察的第二式:按福音的训导</p>
+<p>1.下列省察方式予以补充或适应，以便利各种人的省察。</p>
+<p>2.在告解前做省察，最好首先问问自己:</p>
+<p>a.我去告解是否真心希望获得罪赦、改过迁善、重度新生、与天主和好，抑或勉强行之以顾面子?</p>
+<p>b.我在上次告解时，有否遗忘或故意隐瞒的大罪?</p>
+<p>c.我有否做完应做的补赎?有否赔偿致人的损害?有否勉力实行所定的志向?</p>
+<p>3.每人应在天主的光照下，省察自己的良心。</p>
+<p>(一)主说:”你该全心爱你的主，天主。”</p>
+<p>1.我是否举心向上，爱天主在万有之上，抑或在贪图物质的享受?我做事有否正直的意向?</p>
+<p>2.我是否全信天主?有否怀疑教会的道理?我是否注意基督的教训，听天主的圣言，学习教义，避免有害信德的行为?我是否无所畏惧地承认我是教友?</p>
+<p>3.我有否念早晚课?我的祈祷是否真心诚意地与天主会话?我有否将工作和劳苦献给天主?我在诱惑中是否投奔天主?</p>
+<p>4.我是否敬爱天主的圣名，有没有以亵渎、虚誓、滥用天主的圣名而获罪于天主?我是否对圣母玛利亚有所不敬?</p>
+<p>5.我是否遵守主日和教会的节日，虔诚地参与礼仪，尤其是弥撒?我有否完成四规告解和四规圣体?</p>
+<p>6.我有否敬拜邪神，相信异端，如算命，看相，筮卜等?</p>
+<p>(二)”你们该彼此相爱，如同我爱了你们。”</p>
+<p>1.我是否真心爱人。有没有利用朋友以达到我的目的，对他们做我不愿别人对我做的事?我是否以言以行给别人立坏榜样?</p>
+<p>2.在家庭中，我是否以忍耐及互爱，使大家和气欢乐?我为子女的，是否孝爱父母，在精神和物质的需要上，是否帮助他们?我为父母的，对子女是否善尽教育，尤其是宗教教育的责任?我是否能立己立人地督导他们?我为夫妻的，在内心及言行上，是否忠贞不贰?</p>
+<p>3.我是否愿救济穷人?我是否尽我所能，救助穷苦人，弱小者，年老人，外邦人或其他种族的人?</p>
+<p>4.我是否负起教友传教的责任，以帮助本堂和整个教会?为教会统一，为传扬福音，为世界和平，为维护正义，我是否常行祈祷?</p>
+<p>5.我是否自私自利，罔顾社团的公益?我是否尽我所能，推动社会的正义，风俗的善良，人与人的和爱及亲睦?我是否善尽公民的义务，缴纳应缴的税捐?</p>
+<p>6.在我的工作岗位或职务上，是否公正，精勤，忠信，出于仁爱为社会服务?我是否对工人及为我服务的人，给予公正的报酬?我是否遵守诺言和契约?</p>
+<p>7.对于合法的上司，我是否给予尊敬和服从?</p>
+<p>8.我是否利用地位或职权，营私舞弊?</p>
+<p>9.我是否信守真理和忠实，有没有以虚伪、诽谤、谗言，妄断、揭人隐私，致人蒙受损害?</p>
+<p>10.我有否损害别人的生命、财产和荣誉?有否建议或赞成堕胎的行为?有否憎恨别人?有否与人吵架，记仇，辱骂，发怒?我是否专横地不肯承认别人的无辜?</p>
+<p>11.我有否窃取别人的财物，或想不择手段地占有?我有否设法归还不义的财物或赔偿其损害?</p>
+<p>12.我受了委屈，是否为了基督的爱，乐于言和，宽恕别人，有没有存有记恨报复的心愿?</p>
+<p>(三)主基督说:”你们该止于至善，如天父一样。”</p>
+<p>1.我的人生目标是什么?我切望永生吗?我是否藉祈祷，阅读和默想天主的圣言，勤领圣事，并藉苦行，从事灵修的进步?我是否致力于抑制败行，不良的偏好和情欲?我是否骄傲自大，在天主前妄自矜夸，藐视别人?我是否为所欲为，不顾别人的自由和权利?</p>
+<p>2.我怎样运用时间，力量和天主给我要我行善立功的恩赐–才能?我是否运用它们使我成为一个止于至善的完人，有没有游手好闲，或反用天主的恩赐去倒行逆施?</p>
+<p>3.我是否甘心忍受世上的痛苦和逆境?我怎样克苦我的肉身，以”补充基督苦难之所缺”?</p>
+<p>4.我是否谨守五官和我全身的贞洁?我是否以奸淫、纵欲、淫思、邪望、亵行玷污了我的身体?我是否读淫秽的书籍，作猥亵的会话，寻求不合教友和人性尊严的娱乐或影片?我是否因我丑恶的行为引了人犯罪?我享用婚姻权利时，是否遵守伦理规律?</p>
+<p>5.我是否违背良心，或出于畏惧抑或出于假善而行善?</p>
+<p>6.我是否常遵循圣神的启迪争取天主子女的自由，有没有甘心顺从情欲的驱使?</p>
+<p>省察的第三式:生活修养</p>
+<p>甲、关于我的信仰</p>
+<p>1.在我的生活中，我是否把宗教信仰当作最重要的事?</p>
+<p>2.整天功夫，我是否记得耶稣是我命运的掌握者?</p>
+<p>3.我是否只是一个表面的教友，将我的幸福完全寄托世俗事务的成就上?</p>
+<p>4.我是否为了人情面子，将我的宗教信仰置诸一旁?</p>
+<p>5.我的祈祷是否诚心正意?</p>
+<p>6.我是否藉阅读或默想福音，加强我对耶稣的认识和交往?</p>
+<p>7.我是否曾检讨过我宗教生活的进度?</p>
+<p>8.我是否善为利用增进我信仰的种种方法:如参加教会的宗教礼仪和活动?</p>
+<p>乙、我怎样待人?</p>
+<p>1.我是否对一切人都友善呢?对某些人怀有憎恶、仇恨与嫉妒?</p>
+<p>2.我是否生活只想自己，不想别人?</p>
+<p>3.在我的爱好上，是否同情最可怜的人和受苦最多的人?</p>
+<p>4.我是否对朋友忠实?和人来往时，傲气凌人，或冷嘲热讽?</p>
+<p>5.我是否曾故意欺骗人，阴谋暗算，心地不正直?</p>
+<p>6.我是否对某些人抱有门户偏见，而加以轻视?</p>
+<p>7.我是否对自己出身寒微，或对父母感到羞耻?</p>
+<p>8.我是否常以具体行动对父母表示孝爱和尊重?</p>
+<p>9.在我对人的批判或言论上，是否具有温和气质?</p>
+<p>10.我在使用他人或公用的对象时，是否毫不经心?</p>
+<p>11.得罪了人，是否求人宽恕?….</p>
+<p>12.我是否常固执己见，从不听从他人的意见?….</p>
+<p>13.我是否常注意自己行为所发生的影响?有没有给邻居，尤其给儿童们留下不良的榜样?….</p>
+<p>丙、对我个人的修养</p>
+<p>1.我每天的生活是否具有一个固定的目标?</p>
+<p>2.我是否和某些教外人一样，以赚钱当作自己的真正生命?</p>
+<p>3.我是否努力发挥自己的天赋才能?</p>
+<p>4.我是否生活懒散，常作白日梦或幻想，而忽略自己的责任?</p>
+<p>5.我对我暴躁和好斗的本性，是否努力去克服?</p>
+<p>6.我是否常贪图舒适安乐，而从不努力节制?</p>
+<p>7.我是否常把我的身体当作属于天主的圣殿?</p>
+<p>8.我是否努力保存我的贞洁?维护我身心的健康?</p>
+<p>9.我是否为了肉欲而寻求色情勾当?</p>
+<p>10.我是否曾在想像、表演、阅读或友谊中，寻求性的满足?</p>
+<p>11.我在情绪低落时，是否常自艾自怨?</p>
+<p>丁、对教友生活的态度</p>
+<p>1.我是否对于教会的礼仪生活，缺少热诚，而不知努力探求原因?</p>
+<p>2.我是否由于懒惰，或由于缺少信心，而没有勤领圣体?</p>
+<p>3.我是否只尽到了主日参与弥撒的本分就已感到满意，而不再求灵修方面的进步?</p>
+<p>4.我是否尽了我教友传教的本分?是否只关心自身的得救，而从不关心教外的亲友?</p>
+<p>5.我对于教会或某些神长的批评，是出于恶意或是出于爱心?</p>
+<p>6.我对于教会的种种规定，是否由于轻薄，或由于瞭解不足，而故意违反?</p>
+<p>7.我对于圣事，尤其告解圣事是否常顺从人的观点，因而不愿意领圣事?</p>
+<p>第二节 痛悔</p>
+<p>痛悔是忏悔的首要行动，是内心的伤痛和厌恶所犯的罪过，并立志将来不再犯罪(DS 1676#)。</p>
+<p>那出于爱天主在万有之上的爱的痛悔，就是完美的痛悔，旧称”上等痛悔”。上等痛悔能赦免小罪，也能赦免重罪。在这种情况下获得重罪的赦免，要下定决心，尽快接受告解圣事(DS 1677#)。</p>
+<p>那出于考虑到罪恶的丑陋以及害怕受到永罚和其他惩罚的威胁，即是因害怕而发的忏悔，就是不完美的忏悔，旧称”下等痛悔”。下等痛悔不能赦免重罪。这种痛悔使人作好准备经由忏悔圣事而得到赦免(DS 1678# 1705#)。</p>
+<p>第三节 告明</p>
+<p>忏悔者跪或面对面坐在司祭面前(*注:1.求神父降福，准我罪人告解…. 2.我初办告解或我从上次告解到现在有多少年月日…. 3.告明省察出来的罪。我犯了…. 4.告完罪之后说:神父，还有我省察不到或省察不清或别人因我所犯的罪，都求神父一一宽赦)，必须告明所有用心省察出来的大罪，即使是十诫中最后二诫的最 隐秘的罪，也要”告说明白”。因为有时这些罪过会更严重地伤害灵魂，且比那些公开的罪更危险(DS 1680#)。</p>
+<p>告解人透过告罪，真诚地面对自己所犯的罪过，承担其责任，借此重新向天主打开心门，开放自己，寻找教会的共融，发展新未来。</p>
+<p>告明虽然是赦免大罪的救生板，但教会仍积极劝勉在没有大罪的情况下的信友应定期告明小罪，这有助于培养良心对抗恶习，让基督治疗我们，像父一样的慈 悲。教会规定凡到达懂事年龄的信友，都有责任至少一年一次诚实地告明经省察出来的、属自己的重罪(DS 1683# 1708#)。</p>
+<p>谁省察到自己犯了死罪，却没有先透过忏悔圣事而获得赦免，即使怀有很深的痛悔，也不可以领圣体(DS 1647# 1661#)。除非他有充分的理由领此圣体，但又无法查找听告解司铎(CIC 916#)。</p>
+<p>第四节 赦罪</p>
+<p>天主透过教会介入而行动，借司祭(主教或神父)以基督之名赦罪，并定下补赎的模式，还为罪人祈祷，并与他一起赎罪。罪人以行为表现完全谦逊和具有效果的补赎(DS 1673#)。</p>
+<p>司祭听完告解人的”告说明白”后，以基督的名赦他的罪。赦罪经文:天上的慈父，因他圣子的死亡和复活，使世界与他和好，又恩赐圣神赦免罪过，愿他借着教会的服务，宽恕你，赐给你平安。现在，我因父及子及圣神之名，赦免你的罪过(*注:《袖珍圣事礼典》P80-81)。</p>
+<p>耶稣说:”你们赦免谁的罪，就给谁赦免(若二十21-23)。”我们应不容置疑地相信，自己所尽力告明所有记得的罪过时，已放在仁慈的主面前，获得宽恕。谁不这样做，并故意隐瞒自己的某些罪，即使告明，也不能透过司铎获得赦免。</p>
+<p>第五节 补赎</p>
+<p>当忏悔者已告明自己所有罪过且获得天主的赦免，应谢主隆恩与赔补因自己的罪所造成的伤害损失。</p>
+<p>按正义的要求，应赔偿给自己的罪恶所伤害的天主、自己、近人。虽然罪过已蒙赦免，但未补救所有因罪过而造成的混乱(DS 1712#)。被删除罪恶后，罪人仍应使伤害的灵魂获得新生命，恢复元气，恢复天主已因自己的罪所造成的损失:光荣不再。近人的损失都应一一偿还或补偿、 恢复名誉等。这就是补赎。</p>
+<p>听告解者在指定补赎时，应考虑到忏悔者的个别情况，并使他能借此获益。补赎应尽可能符合所犯的罪过的严重性和性质。它包括祈祷、为近人服务、奉献、仁爱行动、甘愿克己牺牲，特别以忍耐接受自己应背负的十字架。这样的补赎有助人更肖似基督，与他同为天国的继承人。</p>
+<p>为自己的罪做补赎，并非自己一个人做，而是透过主基督。离开他，我们一无所能(若十五5)。保禄说:”赖着加给我勇力的主，能成就一切(斐四 13)。”因此，保禄进一步强调:”人没有什么可夸耀的，所有的夸耀因主而夸耀(格前一31，迦六14，格后十17)。”我们借”结出与悔改相称的果实 (路三8)”，在他内做补赎，经由他奉献给天父，并蒙受天父的悦纳(DS 1691#)。</p>
+<p>一、忏悔者的要求:<br>  教友来到告解亭里，划十字圣号，然后说：“请神父祝福，我罪人愿在教会内悔改。<br>神父说：愿圣神光照你的心，使你诚心诚意告罪，并接受仁慈天父的恩宠。</p>
+<p>二、告罪者可用交谈方式向神父告明。首先说出上次告明至今相隔多久，然后讲述自己的罪或缺失，最好能点明犯罪的原因。</p>
+<p>三、神父劝告并给予补赎。</p>
+<p>四、念悔罪经表示忏悔。<br>教友：天主，为了所犯的一切的罪过，和我的失职怠惰，我全心痛悔，因为我如此得罪了你，极仁慈，极崇高的天主，现在依靠你的圣宠的助佑，我全心定志，以后再不敢犯罪，并逃避一切犯罪的机会。<br>     （要发自内心的痛悔，如果是走行式，罪不得赦）<br>五、神父说：天主的慈父，因衪圣子的死亡死复活，使世界与他和好，又恩赐圣神赦免罪过，愿 他藉着教会的服务，宽恕你，赐给你平安。因现因父，及子，及圣神之名，赦免你的罪过。</p>
+<p>教友：啊们</p>
+<p>神父：天父已经宽恕了你的罪过平安的回去吧！ （要发自内心的痛悔，如果是走形式，罪不得赦）</p>
+<p>教友：感谢天主。</p>
+<p>早上8点弥撒。弥撒中本堂高神父不忘记要求大家唱圣歌、学圣经、做好事。</p>
+<p>9点多弥撒结束，几位教友找神父谈心，一直到11时左右。作为神父，不单行圣事，还要瞭解堂区教友的生活，如教友子女婚姻问题、孩子们的上学问题、青年人就业问题等等。</p>
+<p>送走教友，神父抓紧把福传慕道班的讲义、课件看一遍，看是否有不合适或需要修改的地方。堂区慕道班每週讲课两次（週六晚7点、周日下午3点），共有6位讲道员，每人要准备讲课的内容。</p>
+<p>下午3点神父参加拜苦路，为的是掌握教友参加的人数和老中青所占的比例。</p>
+<p>因为灵性生命极需圣言喂养，晚上7点，神父和大家一起学圣经，学之前先唱圣歌，神父亲自弹琴伴奏（有时也吹笛子伴奏）。学圣经是教堂雷打不动的活动，几年来学完了整本圣经，又开始了第二遍学习。学习中神父让教友一边读一边提出问题，然后再结合实际，让大家理解圣经。大家很喜欢这样的学习方式，每次学习教室都座无虚席。</p>
+<p>圣经学习到晚上9点结束。神父紧张的一天还远远没有结束，他还要安排一年一度的亚纳会避静，邀请外地神父讲课，筹画到北京利玛窦墓祈祷、西什库教堂朝圣等。本堂瞻礼——圣伯多禄圣保禄瞻礼也快到了，这天也是总堂的文化节，神父要安排排练节目，要记得叮嘱大家百家宴还要照往年摆，家家把拿手的好菜拿到教堂来，教友们一起过个快快乐乐的节日。</p>
+<p>天主教的殡葬仪式除为亡者举行追思弥撒外，主要有入殓礼、为亡者诵祷礼、告别礼和安葬礼。</p>
+<pre><code>一般教友家庭亲人去世后，首先请神父为新亡者做追思弥撒。按我国民间传统，亡者的亲属要戴孝(城里人一般只戴黑袖纱)；家里要派人向至亲好友报丧。亡者的遗体换上“寿衣”，在家中“停灵”；在遗体前置一小桌，铺上白布，其上安放十字苦像、亡者的遗像、蜡台、白花和圣水瓶。家属在遗体旁“守灵”。目前城市里住房较紧，多将遗体运至殡仪馆或火葬场；在医院病亡的则放在太平间。
+
+入殓礼：在殡葬日期择定后，要举行人殓礼。人殓时，神父到场主礼，为亡者祈祷；抵达后，先向家属致唁；行礼时，穿短白衣，佩黑色(或紫色)领带。主礼念完“导言”、“圣咏”和“祷词”后，向遗体和棺柩洒圣水，同时念：“现在我们向亡者的遗体洒圣水，追忆他(她)曾经接受洗礼，皈依基督，成为基督的门徒；愿他(她)也能追随基督到达永福的天乡。”其他在场的人皆可随后洒圣水。接着献香，可用线香，由主礼奉香，然后插入香炉；如用手提式香炉，由主礼环绕遗体、棺柩奉香。献香时说：“我们向亡者遗体奉香，表示我们的敬意，因为亡者的躯体自领洗后，就成为圣神的宫殿，我们希望他(她)的身体在日后同耶稣一样获得复活的光荣。”然后，全体唱“天主经”结束。
+
+为亡者诵祷礼：出殡前夕，可在亡者家中或殡仪馆举行
+
+“为亡者祈祷礼”。神父到场主礼，穿短白衣，带黑色(或紫色)领带。此礼如弥撒的圣道礼仪一般，有“集祷经”、“读经”、“答唱咏”、“福音”及“为亡者祈祷文”。礼仪在“天主经”及为亡者祈祷的圣歌声中结束。
+
+告别礼：在遗体火化或安葬当日，首先为亡者举行大礼追思弥撒，弥撒后举行告别礼。告别礼可在教堂或亡者家庭或殡仪馆举行。主礼穿长白衣，披黑色(或紫色)圆氅衣，站在棺柩或遗体旁，面向教友；辅礼者持圣水瓶和香炉站立两边。主礼首先邀请大家为亡者祈祷，并领唱“告别曲”，向棺柩(或遗体)洒圣水、奉香；接着领唱“炼灵祷文”，求圣母玛利亚和诸圣为亡者转祷。告别礼后，起棺至墓地，或将遗体运至火葬场火化。
+
+安葬礼：到达墓地后，主礼穿礼服如上，先祝福墓穴，向墓穴及棺柩(或骨灰盒)洒圣水、奉香，并为亡者祈祷。祈祷后，棺柩或骨灰盒入土，主礼念：“上主!求你赐给他(她)永远的安息。”众答：“并以永恒的光辉照耀他(她)。”埋葬完毕，全体送殡者在墓前三鞠躬。礼毕。
+</code></pre>
+<p>默想是心祷的主要式样，其过程如下：</p>
+<pre><code>一、预备
+
+①、预备默想题目：在每晚临睡前，要预备次日默想的题目；有书本的，照题目诵读一遍；没有书的，自己选一题目。②、回忆题目：入睡时，要把题目的要点重新回想一下；第二天早晨一醒，立刻思念昨日晚上预备的默想题目。③、默想初工：就是在默想前，在做默想的地方，举心向上，想到天主的临在，发活泼的信德，立志做好这次的默想。
+
+二、默想正体
+
+①、前导：首先端正恭
+
+敬地诵念：“伏求圣神降临，从天射光……”祈求圣神赏赐神光爱火，开启明悟，引发善情。然后把默想的题目简略地回想一遍；把默想的中心内容，具体地按着段落回忆、定像，活生生地摆在想像中。②、进行：做完了前导，接着开始默想，把默想的内容按着段落细念或细听一遍，仔细体味，先用明悟推论，如耶稣对这个道理怎样？圣人圣女们怎样?我又怎样?等等。推论完后，紧接着发善情善念，如钦崇、赞美、感谢、奉献、爱慕、渴望、惭愧、痛悔等等。发善情后，立定志向，即按着默想的材料，结合自己的实际，定一个具体的、切实的主意，或修某种德行，或改某样毛病。
+
+三、结束
+
+立定志向后，默想正体就算完成了，然后结束这次默想。就是用几分钟来作一番小结，看这次默想是否做得好，收效如何；如果做得好，就该感谢天主；如果没做好，该痛悔自己的懈怠疏忽等过失，求主宽恕，保证下次好好默想。最后，还该求圣人圣女，帮助自己守好所定的善志。
+</code></pre>
+<h3 id="父亲与父神"><a href="#父亲与父神" class="headerlink" title="父亲与父神"></a>父亲与父神</h3><p><span class="exturl" data-url="aHR0cHM6Ly9iZWhvbGQub2Mub3JnLz9wPTQ5MTY2JnZhcmlhbnQ9emgtY24=">Behold基督教网站<i class="fa fa-external-link-alt"></i></span></p>
+<blockquote>
+<p>“我不懂为什么圣经要将上帝描述成父亲？我父亲是一个差劲的人，所以如果你跟我说‘上帝是天父’，我觉得我很难去爱祂。”曾经有不只一个人这样说。<br>的确，在人类历史中，从来没有一个时代，家庭的功能是完善的。以当今台湾社会来说，离婚、家暴、外遇、漠视孩子的需求……各种家庭问题，都有可能使我们体会不到父亲的爱。<br>从佛洛伊德（Sigmund Freud, 1856-1939）提出心理分析法之后，愈来愈多人开始认为，自己对“权威”的反感，是源自原生家庭中的负面童年经验。但为什么，圣经要使用父亲的形象来描述上帝呢？<br><strong>不完全的类比</strong><br>神学家多马斯·阿奎纳（Thomas Aquinas，1225-1274）表示：“上帝是父”这一比喻，应该被理解为“上帝像人的父亲”。既然说是像，就表示在某些方面，上帝与人类父亲相似，在某些方面则不然。<br>上帝关心我们，正如人间父亲；上帝是我们存在的来源，正如我们的父亲生养我们；上帝对我们行使权威，人间父亲也这样管教我们。然而，两者也具有不同之处，例如，上帝不是人类，而且上帝的管教，不像人间父亲那样会犯错。<br>总之，阿奎纳的意思是说，上帝像父亲，这并非要把上帝降格为我们血缘上的家人，而是说，思考我们的父亲，有助于我们认识上帝。圣经是用人类的语言写成，上帝体恤我们认知能力有限，所以选择使用我们能理解的词汇，来向我们介绍自己。<br>神学家麦葛福（Alister McGrath，1953-）也指出，这是非常生动有益的思考上帝的方式，使我们可以用所熟悉的、世俗世界的词汇和形象，来描绘最终超越俗世的事物。<br><strong>圣经不仅仅使用男性形象来描绘上帝</strong><br>在这个“平权”的时代，有些人认为，用父来描绘上帝太父权暴力了。对此，我们的回应是，我们需回到圣经的书写环境。圣经的被启示，有着坚实的现实生活基础——3千年前的古近东社会是由男性统治的，所以圣经中常用“父亲”、“法官”、“国王”的权威形象，来说明上帝的属性。<br>然而，这绝不表示上帝是男生，因为圣经说祂“照着自己的形像造人，乃是照着祂的形像造男造女。”（《创》1：27），因此，男或女是人类的属性，但男女两性同源自这位上帝。<br>既有共同源头，故两性在本质上是对等的，皆属上帝。在圣经中，我们也注意到，上帝也会使用较女性化的用词（母亲、妇人）来比喻自己对百姓的爱及温柔（参《赛》49：15、《路》15：8）。<br><strong>天上父亲成为人间父亲的模范</strong><br>上帝是万有的源头，也是伦理价值的源头，我们不能拿着人所订出的标准，去质疑上帝的标准，我们只能承认，“如果不认识上帝，我们不知道什么是公义。”套用在父职的话题上，我们不能拿着人间父亲的失职，去质疑天上父亲的慈爱，我们只能承认“如果不认识天父，我们不知道怎样作一位慈爱又正直的父亲。”<br>一位很有影响力的神学家说道：“不是先有人类的父亲，然后我们拿他比拟那位神圣的父亲，正好相反：那个最真实，也最正当的父职在上帝那儿，我们是从祂那里，来认识到人世间的父亲。”<br>是的，我们的父亲可能有他们的限制，但我们不因此否认天上的那位完美父亲。借着这位天上的父亲，我们才明白到什么是作父亲。<br>当儿女犯错时，因为祂爱儿女，祂会管教（参《来》12：7），但上帝同时提醒父亲们管教不要过当，以免儿女失去志气（参《西》3：21）；因为儿女是无知的，父神赐下诫命引导祂的儿女，并要求人间父亲们常常跟子女温习这些教导（参《申》6：7）；有时儿女自我意识高涨，会违逆父亲的心意，离家自行己路，上帝又像一位深爱孩子的父亲，在家苦苦等候，当孩子终于回心转意时，祂欣喜快乐（参《路》15：23）。<br>因此，如果我们的父亲令我们敬畏爱戴，那让我们感谢天父，因为祂是父职的源头；如果我们的父亲令我们灰心失望，让我们依然感谢天父，因为祂才是真正的父亲。祂是众父之父，是一切美善的源头，是生命的真正创造者。以至于无论我们的童年经验是什么，我们都能在天父面前欣然承认，祂使用人间的父亲，作祂赏赐我们生命的管道。</p>
+</blockquote>
+<h2 id="各陆神话"><a href="#各陆神话" class="headerlink" title="各陆神话"></a>各陆神话</h2><h3 id="希腊（雅典）"><a href="#希腊（雅典）" class="headerlink" title="希腊（雅典）"></a>希腊（雅典）</h3><p>太他妈吓人了，出生在奥林匹斯那旮沓就跟生在妓院一样要处处提防</p>
+<p>划重点：不允许跨过人-神界线，不能不尊敬神，否则会受到严重惩罚。</p>
+<h3 id="澳洲"><a href="#澳洲" class="headerlink" title="澳洲"></a>澳洲</h3><p><span class="exturl" data-url="aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTYlQkUlQjMlRTYlQjQlQjIlRTclQTUlOUUlRTglQUYlOUQvNzg2MTkzOD9mcj1hbGFkZGlu">澳洲神话<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="古埃及"><a href="#古埃及" class="headerlink" title="古埃及"></a>古埃及</h3><h4 id="风崇拜与古埃及的宗教信仰"><a href="#风崇拜与古埃及的宗教信仰" class="headerlink" title="风崇拜与古埃及的宗教信仰"></a>风崇拜与古埃及的宗教信仰</h4><p>三、风：众神的呼吸</p>
+<p> 风崇拜是世界性的宗教信仰。文化传播中的种种迹象告诉我们，风崇拜曾是邻海地区较为普遍的文化现象。从大洋洲的土著人、美洲的印第安人对四方风的崇拜，可以推测，其盛行期至少可追溯到一、两万年前印第安人离开东亚大陆之时。</p>
+<p> 麦克斯.缪勒在整理印度宗教典籍《吠陀》之后说：“尽管风并不经常被赞颂，可当他被赞颂之际，就占有非常高的位置。人们说他是整个世界的王，是最先诞生的，是众神的呼吸，世界的萌芽，他的声音我们可以听到，但绝不能见到他。”[1]在宗教崇拜中，风与气被看做风神或空气神，它们是同一对象的不同描述。气的概念产生较晚，由于气比风更隐形、更神秘、无所不在，气逐渐取代了风。</p>
+<h4 id="Set谋杀Osiris"><a href="#Set谋杀Osiris" class="headerlink" title="Set谋杀Osiris"></a>Set谋杀Osiris</h4><p> 呃，大概就是set造了个盒子和大家说谁最能fit谁就能得到珍宝，然后大家都fit不进去除了他哥osiris，但原来这是瓮中捉鳖，这个盒子本来就是给他做的棺材。然后后来一棵树从被丢到尼罗河的棺材上长了出来，被一个国王砍了回去（因为他感觉这树很divine）做装饰。然后他爱人就千里迢迢来找osiris，发现棺材里他已经死了，然后她去找复活方法时set又把他砍成了好几部分散在各地，然后他爱人就虽然不辞辛苦找到了好多，只剩下他pp找不到（被鱼吃了），所以他复活后没办法统治生界，只能统治死界。  </p>
+<h3 id="一神教"><a href="#一神教" class="headerlink" title="一神教"></a>一神教</h3><p> <span class="exturl" data-url="aHR0cHM6Ly93d3cuY2dnLm9yZy9pbmRleC5jZm0vbGlicmFyeS9zZXJtb24vaWQvMzM2Ni93aW5kLWdvZHMtc3Bpcml0Lmh0bQ==">Church Of The Great God-Sermon: Wind And God’s Spirit<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="《神的历史》"><a href="#《神的历史》" class="headerlink" title="《神的历史》"></a>《神的历史》</h2><p>“不能听凡人祷告，不能赐福凡人的神，只沉湎于观想自身的世界，永远保持超然独立的姿态，这样的神是不会有信徒的。”我和卢瑞恩提出反论。</p>
+<p>道可道非常道与辩证：<br>在227的时候，我突然理解了道可道非常道的意思（感觉），就是“没有能够完全形容出真理、符合真理的语句，因为语言文字的局限性”。再加上辩证，其实是一种否定式的前进，通过排除法来无限接近真理，其实也不赖。</p>
+<p>虫子们说，神是不存在的。<br>先知们也说，神是不存在的。<br>神是不存在（指不以具体形体存在于世间）的，因为存在着的神都是伪神（真神是出世的）。</p>
+<p>“我从未瞥见过神。”<br>我想了一下，或许我在因抑郁处于退学边缘时的那场疫情里瞥见过；或许我在给陛下画画写文的时候瞥见过；或许我在梦里也瞥见过……<br>这句很可以做一个开头。</p>
+<p>“虽然我已尽最大努力使他影响我，但是他从未对我的生命真正造成冲击。”</p>
+<p>“圣徒的心象与狂喜的忘我境界，会不会也只是精神错乱的奇想呢？”</p>
+<p>“神不是可由一般理性思考过程经验到的客观事实，他像富含启发能力的诗词和音乐，是创造性想象的产物。”</p>
+<p>“经验（v.）神”：“通过创痛式的行为和极端情况来体验神的真实。”</p>
+<p>神话并不是指按字面意思理解，而是因为现象太过深奥玄妙，只能通过隐喻的方式表达</p>
+<p>有的神话相信每个人都在精神世界有对应自己的那个存在。<br>有的神话相信人类世界是神界复刻，神是完美形态的人类。<br>重复神做过的事是为了（脱离尘世，进入神的世界）。</p>
+<p>太初一神（可以设定成混沌，即虚空）由于太过孑立遥远，被子民摒弃并遗忘，被（更能照顾人类的）众神取代。</p>
+<p>古巴比伦人在太初混沌重现的出世仪式上会要求国王摘下皇冠，脱下皇袍，羞辱国王。并在之后的狂欢会上重新为国王加冕。</p>
+<p>在巴比伦神话中：<br>神从混沌中诞生，一生二，二生三，新神由旧神中分裂出来，后者总是比前者更加具体，而新神的诞生则象征着对应概念和事物的出现。<br>太阳神是创世母神（虽然是公的），他规定了神各司其职。<br>巴比伦人知道神庙是祖先建的，但他们相信祖先是在神的指导下（艺术）建起的神庙。因此在表述中使用了“神明建立的神庙“。<br>神可以是地域性的，只在这一区域内管辖</p>
+<p>“以重复神名的方式来操纵他”：想起白后和卢瑞恩叫一声“沃姆/陛下”然后陛下答应着转过头，一定程度上也是“操纵”吧。</p>
+<p>对神的经历是什么呢？难道就是“入迷”？我看这本书/画陛下的时候感到很兴奋，很幸福，很满足，不想睡觉，因为我感觉我能更了解陛下，更让他充实了，这也算是对神的经历吗？难道是，他使我满足，使我幸福，这种感觉？以及做梦梦见他啥的…基操啦。我还梦见过娘双子呢。<br>以及毒品啥的，估计也是这效果。  </p>
+<p>捂脸/蒙脸因为怕看到神也太可爱了叭，我一般提到陛下也会捂脸，不过都是因为脸红害羞。</p>
+<p>都说在古代，神越有能力帮助子民就越会被当选为主神，啊但是神其实是没有的呀，什么叫越有能力帮助，概率事件？又或者神是通过先知沟通，神其实是知识分子？是人？</p>
+<p>部落神：像辐光以及出埃及记里的耶和华那样的，只爱自己的子民的那种神。</p>
+<p>我感觉是不是古代大家干了什么伟大事业，就想把这事按在神身上啊。是不是大家看见一个奇怪现象/自然现象/新的经验总结，就按在神身上啊。</p>
+<p>“除了我以外，你不可有其他的神”<br>感觉很想把陛下设定为一神，啊但是，对吧。<br>“整夜与他纠缠的陌生人”？对吧（搓手）<br>神和人之间的关系之一：盟约<br>之二：造物主<br>之三：信徒</p>
+<p>“每个以色列先知在遇到要求他们完全注意与忠诚的神时的一贯反应。”</p>
+<p>“神的名字和信物”</p>
+<p>“我就是我”（I am who I am），意思是“我是谁不重要”/“我也不知道我是谁”。（同理，陛下不想回答问题时，也可以说“我将到我要去的地方去。”</p>
+<p>他本有神的本质<br>却不强自以为与神同等。<br>反而空虚自己，<br>取了奴仆的形态，成为人的样子。既然成了人，就自甘谦卑，<br>甚至接受死亡，死在十字架上。因此神高举他，达于至高，<br>赐给他那超越一切的名号。天上、人间和地下的众生，都应因耶稣之名屈膝。<br>而且无不口称耶稣基督为主，使荣耀归于父神。<br>——腓立比书2:6-10</p>
+<p>在佛教中，业力把人束缚在痛苦的生死轮回中，就像烛火代代相传：如果一个人死时没能悟出生命的真理，他的烛火便会点燃下一根蜡烛，若是悟出了，烛火便会熄灭，达到极乐之境，即为涅槃。在这个体系中，神也是同样被束缚着的，因此向他们求教并无用处。</p>
+<p>柏拉图/毕达哥拉斯认为，灵魂是堕落、污染的神灵，失去了它的本质被囚困在如坟墓般的身体中，注定要经过不断再生的循环过程，由心灵的理性力量净化而重新恢复其神性。<br>希腊人认为运动与变化是次级真实的标志，而神性是绝对静止的意象，神性的世界是静止不变的，圆周运动是最趋近完美的运动，因其最终会回归原点。因为有真实本性的东西都是保持一样的，永恒不变。它绝对、单独自身存在、唯一而永恒（不会从无到有，也不会消逝，既不盈满也不衰退）。</p>
+<p>亚里士多德认为，形式只有存在于我们世界中具体的、物质的事物时，才有其真实性。“悲剧净化的真理”是指，“以象征、神话或仪式的方式，表达日常生活中不能忍受之事，可以将它们救赎和转化为纯净甚至可喜之事。”</p>
+<p>代传神谕是困难的。先知们不热衷于宣布神谕，对担负吃力不讨好的任务意兴阑珊，由以色列的神转化成代表超越力量的象征，并非是平静祥和的过程，而是夹带着痛苦与挣扎。</p>
+<p>在印度教中，神是不可拟人化的（像我设定里的虚空）。</p>
+<p>“要不断地聆听神谕，但不要去理解它；要不断观看神谕，但不要去体会它。”</p>
+<p>陛下会把敌人看作敌人还是工具？</p>
+<p>“作为一个（临时任命的）先知，必定是孤单寂寞的。他们必须独立行动，而自己过去的生活节奏和责任都被打破了。这不是他选择做的事，而是事情找上了他。他不再像平常那样控制自己，而是被迫说出预言，无论他愿意与否。”<br>“……把他抓到另一个世界。”哈哈哈——快跑啊神来抓先知啦！</p>
+<p>“在全球所有的民族中，我只选上了你们；正因为你们许多的罪，我一定要惩罚你们。”</p>
+<p>耶和华与以色列人结婚了可还行。<br>以色列人出轨了可真不错。<br>耶和华失恋般意志坚决地要把以色列人（她）从引诱她的巴力手中引诱回来可真就是年度大戏。<br>哈哈哈哈耶和华怒了：“你们这些抛弃了我的婊子！”“你们不是我的子民，我也不是你们的神。再您们的见”<br>卧槽。神真的会觉得自己被自己子民绿了吗。真的吗真的吗？（看向陛下，又看向辐光），“背弃他，与巴力一类的神祇发生不正常的关系。”不是，什么叫正常关系？是指贴脸喊“再您妈的见”吗？</p>
+<p>肖像只是神性的象征，用来引导祭拜者把注意力放在更高一层的境界。</p>
+<p>一神教先知揶揄异教徒的神时：“这些自制的神不过是金块银块罢了……被工匠几个小时敲打完成，眼不能看，而不能听，不能走动，只能由祭拜者的车来推送。”</p>
+<p>大多数一神的设定都是庇护弱者和被欺压者的。</p>
+<p>异教多神信仰基本上是十分宽容的，只要原有崇拜不被新神所威胁，万神殿里永远可以容下另一位神。印度与佛教徒致力于超越众神，而不是厌恶众神，只有以色列一神教的先知们如此拒绝其他的神明。（或许是因为他们过于不安和自卑）耶和华一神并不代表神是唯一的，而是只认可耶和华。其他的神祇仍是威胁：他们的祭拜礼仪十分具有吸引力，会引诱以色列人离开耶和华。（你搞个有吸引力的祭拜礼仪不就结了）</p>
+<p>辐光是个嫉妒心很强的神（确信）<br>和陛下互相嫉妒（不）</p>
+<p>“这种神学并不把神看作挑战我们偏见和迫使我们反省自己缺点的象征，反而可被用来为我们由自我中心产生的恨意辩护，并使它绝对化。这样的神当然比要求严厉自我批判的神更具吸引力和受欢迎。”</p>
+<p>“选民神学（相信自己是神的选民）易在人们恐惧灭亡、政治极端不安的时代盛行。像耶和华这样带有位格特质（有人的特质）的神，可以用来如此操纵自我，而不具位格特质的神梵天便不可能发生这种情况。”</p>
+<p>先知们是像孔子那样自己搞神谕吧…还是说真梦见了啥？</p>
+<p>天生敦厚的耶利米痛恨做一名先知，因为他对必须谴责他所爱的人民的工作感到相当痛心。他被神召唤时抗议地大叫：“我不知该怎么说话，我只是个孩子啊！”耶和华就伸出一只手，触摸他的嘴唇，把话放进他的口中。他所传达的信息是模糊不清且互相矛盾的，必然带来无可调和的极端痛苦和紧张。他所经验到的神是让他四肢痉挛、心碎、让他像醉汉般蹒跚而行的痛苦。<br>这是一种既神秘恐怖又令人迷恋的先知经验，也是一种（强迫式）强暴和（甜美的）诱惑。</p>
+<blockquote>
+<p>耶和华，你曾劝诱我，而我也听了你的诱导，你以强力压制我，而我也被你征服….<br>我曾说:“我不会再想到耶和华，<br>也不会再提到他的名字。”<br>于是似乎便有一把火在我心中燃烧，而且闭锁在我的四肢骸骨中。<br>我试图要减轻痛苦，但却让我精疲力竭。<br>我不能再忍受下去了。<br>——耶利米书20:7,9</p>
+</blockquote>
+<p>(突然发现把祂换成其他东西档次一下就降低了…看来是神的问题（点头），概念性的东西听起来高大上啊)  </p>
+<p>【改写】”我曾说自己不会再想到祂，也不会再提到祂的名字。于是似乎便有冰寒在我心中漫延，闭锁在我的四肢骸骨中。我试图减轻痛苦，但却精疲力竭。我不能再忍受下去了。”</p>
+<p>和耶和华的接触视为一种耗费心神的照面……告诉恐惧与耶和华直接接触的以色列人，他会在每个世代派遣一位先知，来代替众人承担神力的冲击。他使神哀叹自己的流离失所、痛苦与错乱，耶和华和他的子民同样感到震撼、受辱和遗弃；神似乎也像他们一样困惑、疏离和瘫痪。从耶利米心中升起的愤怒，并非他自己的，而是耶和华的盛怒。（辐光在被抛弃的时候，先是愤怒，随后困惑、哀叹、哭泣，甚至哀求，一直到消逝为止。（不算后期复仇时的盛怒，这时先知已经听不到之前那只慈祥母神的声音了。）所以作为滚滚最后能够向其诉说的先知，她很悔恨自己种族没能保护好滚滚）<br>只要仍处在敌人的威胁下，耶利米便会以神之名对他的同胞大发雷霆；但在神面前，他却代他们求情。</p>
+<p>那些做出不可能实现神迹的人，可不可以就认为，他们根本就不信神呢？因为明明知道这件事不是神作出的？<br>嗯，可以说是神用赐予自己的力量让自己作出的</p>
+<p>“每一个车轮都和其他车轮滚动的方向不同”，这只是用来强调他所试图说明的心象对他造成的怪异冲击。</p>
+<p>神谕中非属人类特质的部分是通过残暴的意象来传达的：卷轴中卷着哭泣和呻吟，先知被命令吃下这份卷轴，使它成为自己的一部分。这种经验又恐怖又令人迷恋：卷轴尝起来如蜜糖一般。</p>
+<p>新的神学能够成功，并不是因为它可用理性证明，而是因为它能有效地防止绝望并激发希望。</p>
+<p>耶和华最终还是被他的信徒们按上了“创世神”的能力和名号。</p>
+<p>“你不能见到我的面，因为没人能见到我还活着。”</p>
+<p>人类只能在神灵显现后捕捉到被称之为耶和华荣光的余光，那是他原形的显现，并不能被混淆成神本身。摩西从山上下来时脸上也反映了这个荣光，使人感到耀眼而无法直视。（辐光是耶和华，陛下是摩西的设定也不是不可以）</p>
+<p>地域性的神其实也有其道理在：知识和经验也是有地域性的。</p>
+<p>智慧是神的能力的气息，<br>是至高者荣光纯粹的散发，<br>因此不洁之物不能接近她。<br>她是永恒之光的反映，是神积极能力的无垢之境。</p>
+<p>灵魂在流放，被困在物质的世界中，它必须向上升华到神，也就是自己的家园，而舍弃情绪、感官甚至语言，因为这些都是束缚我们在这个不完美世界的包袱。</p>
+<p>神的敬畏者（Godfearers）</p>
+<p>（不允许提及神的名字）提醒我们任何妄图描述他的企图都是失败的，不要经常赞颂神，因为我们的言语是不完美的。<br>神是世界之所在，而世界却没有神的容身处。<br>当（四分五裂的）神救赎他们（自己的其中一部分）后，以色列习惯告诉神：“您已救赎了自己。”<br>当子民们一心一意，和谐地发出一致的声调时，神便在他们中间出现了；但一旦社群缺乏和谐，他便厌恶地返回天上，因为那里的天使赞颂神的声调与旋律更一致和谐。</p>
+<p>攻击自己和同僚是对神的否定，因为神是以自己的肖像造了人。</p>
+<p>“我永远忘不了那些谋杀我的神、我的灵魂的时刻。”</p>
+<p>大屠杀（灭族）结束了传统神学。</p>
+<p>人类不能信仰一个软弱的神，而要相信一个能使人坚强到足以在奥斯维辛集中营祈祷的活生生的神。<br>一个不断和宇宙无事瞎忙的神是荒谬的，干扰人类自由和创造力的神是暴君。一位无所不在、无所不知的暴君，和世俗的独裁者没有什么两样。</p>
+<p>“当神在社会生活时，他的确会受苦。”</p>
+<h1 id="小说"><a href="#小说" class="headerlink" title="小说"></a>小说</h1><h2 id="自新世界（日）"><a href="#自新世界（日）" class="headerlink" title="自新世界（日）"></a>自新世界（日）</h2><p>关于人类想象力能够改造世界的（超能力）。  <br>+科幻  <br>+心理学  </p>
+<p><span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8xNDk4NTk0NTk=">《来自新世界》世界观整理 - 鹿青童的文章<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="冰与火之歌"><a href="#冰与火之歌" class="headerlink" title="冰与火之歌"></a>冰与火之歌</h2><blockquote>
+<p>千万别相信在女人怀里听到的东西。</p>
+</blockquote>
+<p><img data-src="https://i.loli.net/2021/08/26/fJ1EkWBpqCxzaPe.jpg"></p>
+<p>看看这个表达，第一是女人，是指感性以及魅惑（？）代表，就不理智那种；第二是怀里，就是指宠爱/魅惑这种。  <br>害，不知道怎么表达分析，就，挺好。  </p>
+<p>包括母亲和妻子和蛇蝎。  </p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>其他的一些零碎</p>
+<h2 id="语言学"><a href="#语言学" class="headerlink" title="语言学"></a>语言学</h2><p>R.T.  <br>感觉社会是可以造新词，创新，写科幻；篇章是怎么写好小说（对于我这个想写小说的利害关系来说）  <br>以及社会可以研究国内，而篇章似乎就要研究国外了…  </p>
+<p>《语篇分析教程》</p>
+<p>社会语言学(日)<br>郊际语学(日)<br>中日对比语言学<br>篇章语言学<br>社会语言学<br>心理语言学<br>理论语言学<br>语料库语言学<br>语言学研究前沿专题</p>
+<h2 id="自杀相关"><a href="#自杀相关" class="headerlink" title="自杀相关"></a>自杀相关</h2><h3 id="加缪《局外人》"><a href="#加缪《局外人》" class="headerlink" title="加缪《局外人》"></a>加缪《局外人》</h3><p><img data-src="http://cdn.mebilychen.top/image/OC/IMG_3867.PNG"></p>
+<hr>
+<p>（来源：都雪菲. 论太宰治《人间失格》中的自杀意识[J]. 名作欣赏, 2018, 000(012):P.110-111.）</p>
+<hr>
+<p>想收集所有的自杀的哲学家、文学家、艺术家，做一个网站，每个人引用一句他的死亡/生命/最出名的名言，标明他的死亡年份、死法，做时间轴。</p>
+<blockquote>
+<p>吉尔.德勒兹(Gilles Deleuze)<br>1925年1月18日生于法国巴黎，1995年11月4日，德勒兹因难忍肺疾折磨，从巴黎住处的窗户跳楼自杀。法国哲学家。</p>
+</blockquote>
+<p>你看，人自杀只是害怕痛苦。好好的人，自然的会害怕痛苦，而不只是死亡。如果一个人克服了痛苦的恐惧而选择自杀，不能说明他傻，而是他那一刻承受的痛苦已经大于或等于自杀时对他造成的痛苦。  <br>他的痛苦已经大于等于了粉身碎骨的痛苦，嘲讽他的人想象一下粉身碎骨的痛苦吧。  </p>
+<hr>
+<blockquote>
+<p>从社会学家杜尔凯姆的《自杀论》的角度来分析,自杀的主要原因很大程度上并不是因为种族、遗传、自然等非社会因素导致的，而是由社会因素导致。我们通常认为自杀是指个体在复杂心理活动作用下，蓄意或自愿采取各种手段结束自己生命的行为，会产生这种结果的某种积极或消极的行动直接或间接地引起的死亡叫作自杀。自杀未遂其实也称之为这种意义上的行动,但是这种行为并没有引|起死亡,并且在死亡之前就停止了。<br>分为利己型自杀、利他型自杀失范或反常型自杀。无论社会整合还是社会规范，他们遏制自杀倾向的作用只有在相对的范围内才能实现，一旦超出该范围无论是社会整合过度还是不足都会引发自杀率上升。涂尔干对自杀现象进行研究得出了完整的自杀理论。说明了社会因素才是导致自杀的重要因素。从表面看来,自杀者选择自杀只是表明了主体本身的性格,但究其深层次原因会发现自杀行为是由于背后的某种社会状态造成的。涂尔干的研究说明了一个事实，就是社会这一整体对自杀这一社会现象有着不可推脱的责任。 涂尔干首先反驳了各种以非社会因素解释自杀现象的理论，从而通过间接证明的途径确立了以社会事实解释自杀现象的基本原则。然后进一步分析了社会现象中那些基本要素影响着群体的自杀率，即寻找决定自杀率的直接原因。他认为，利己型自杀是由于群体的整合程度不足、人们缺少归属感造成的；而利他型自杀则是由于社会的整合程度相对较时候就会造成利他型自杀行为的上升。社会道德规范一旦松弛则会使人们处于一-种不满足的状态 ,这种不满足的状态长期伴随着人们，就会让人们觉得生活丧失了目的和意义,目的和意义一旦丧失生命也就无可留恋这样就容易引起失范或反常状态失范或反常状态引起的自杀我们称之为失范或反常型自杀。</p>
+</blockquote>
+<blockquote>
+<p><strong>(一)利己主义自杀行为</strong><br>利己主义不仅是自杀的一个辅助因素而是引起自杀的原因。当社会人在遇到困难和挫折的时候往往会意志消沉，如果没有得到及时的帮助和心理指导,大部分人会陷入困境。目前我国很多大学生缺乏与别人沟通的能力遇到困难时就会将困难看成是与他人无关的私事,因此他不指望得到群体的帮助，也正因为这样很多人容易陷入抑郁甚至绝望，当进一步思想混沌时,自杀便成了寻求解脱的方式。大学生在遭遇困难的时候不能很好地向学校和社会寻求帮助，忽略了学校和社会能提供的支持与帮助，从而迫使自己与学校和社会脱离，与社会相联系的纽带松弛，个人屈服于微小的环境及社会的弱小冲突，认为只有自杀才是解脱自己的唯一的、最好的选择，这是典型的利己型自杀行为。由于他脱离社会、脱离了身边的一切，思考和内心的想法成了他日常生活的全部活动，他意识不到周边的一切，只能意识到他自身，把自身当作他的主要任务。这种状态迫使他与外界慢慢断了联系，久而久之他与外界之间的鸿沟会越来越大，从而使他本身更脱离社会。一个人一旦变成这样，他的所有活动从某种意义上来说都是利己主义的，他只关心他自己的孤独与忧郁。当自身思考无法进行,自身又与外界进一步脱离，感到孤独无法从外界中获得帮助，从而会选择自杀行为。这种行为是典型的利己型自杀行为。</p>
+</blockquote>
+<blockquote>
+<p><strong>(二)利他主义自杀行为</strong><br>“利他主义的自杀”是由于社会的整合程度过高个人会为了某一群体或社会的利益而采取结束自己生命的行为。利他主义自杀表现为某个群体或者社会的整合程度过高某一种思想充斥着人们的思维并且人们充分相信甚至崇拜该思想群体或社会中的个人在这种价值面前觉得自己无足轻重所以会选择自杀来维护它。当今大学生的自杀行为一部分可以归结为利他主义的自杀行为。</p>
+</blockquote>
+<blockquote>
+<p><strong>(三)失范或反常的自杀行为</strong><br>涂尔干认为“社会不仅仅是以不同的强度引起个人对他的感情和活动的客体 ,它还是调节个人感情和活动的一种力量”。 每当社会发生重大调整集体秩序发生改变时不管是由于良好的发展还是意外的灾难,社会人的感情和社会整体活动的和谐稳定性都会受到冲击无论是欲望得到了满足还是欲望实际没有被满足人都容易选择自杀。危机打乱了原有的集体秩序，对原有的相对平衡的集体秩序的破坏。<br>涂尔干在充分论证了自己的假设的情况下，他认为，自杀这一行为本身就是一种逃避社会现实的行为同时也是逃避个人作为社会成员应承担的责任。这种行为是不可取的。我们应该采取一切可行措施制止自杀者的自杀行为。<br>科学是消除邪恶的手段是我们所掌握的唯一手段。 社会本能一旦衰退，智慧就是我们剩下的唯一指导。我们应该借助智慧来恢复某种意识。当社会提供某种信仰时人应主动进行反省。同时要大力提倡建立各种社团组织，因为人们理性的回归使人更加重视自身的个性，实现自身价值，从而使社会价值取向多元化。但是，这样的状况却令人们失去了集体意识和归属感。极端的自由主义最终导向人们对于自身价值实现的迷茫状态。而在群体之中人们可以感受到群体的温暖能在群体的活动中发挥自己的特长，以此提高自己的自信心使人们找到其自身的个人价值，也能更好地为社会创造价值,在实现个人价值和社会价值的同时找到生活的意义。</p>
+</blockquote>
+<p>（来源：任爽. 大学生自杀现象研究–从《自杀论》的自杀类型角度[J]. 学理论, 2014(21):54-55.）</p>
+<blockquote>
+<p>精神分析理论及其派生的原理主要基于对个人案例历史的考察和分析，这首先要归功于弗洛伊德。该理论假定人的心灵有双重冲动，即生命本能和死亡本能，二者共同存在于个体内。死亡本能基本上是破坏性的并表现为侵犯和敌对:当它指向其他人时，就采取了杀人的形式，当它内化指向自我时，就常常体现为自杀的形式。<br>社会学对自杀的主要研究来自上世纪末法国社会学家E. Durkheim提出的一个理论。’它假定自杀现象是个人整合入社会团体因而整合入整个社会的一个标志。Durkheim把自杀主要分为三类:利己自杀、利他自杀和反常自杀。利已自杀者以过分的个人主义为特征，他们很少在社会义务和关系方面整合入社会团体。利他自杀者对社会团体有着高度的责任感，他们的社会性和个体性的存在与其团体的存在紧密相联，简言之，它是个人过渡整合入社会的一种案例。反常自杀发生在社会及社会规范对某些社会成员失去控制的时候。这类人突然间失去了平衡，他们习惯的生活方式和价值观念遭到迅速而巨大的社会变化的毁坏，这种社会变化也许还伴随着突然的繁荣或萧条。<br>另一种自杀理论是精神分析倾向和社会学倾向的结合物，它是由美国社会学家A.H.Henry和J,F.Short提出的，该.理论假定了杀人与自杀之间的一种反相关。在这种社会里，人们将预期低杀人率和高自杀率。反过来，在一组织松散且高度分化的社会里，人们可预期高杀人率和低自杀率。然而，对日本来说，自杀与杀人的关系却是平行的而非相反。<br>日本的行为科学家和社会科学家还开展了其它方面的自杀理论研究。其中,个理论强调，日本人在个性形成方面依赖心理的重要性是自杀的一个线索。另一项研究则把日本人个性中虚弱的自我形成看作自杀倾向的主要作用因素。根据这两个理论，日本人的基本心理倾向就是一种由温柔、宽厚和慈祥的母爱培养起来的依赖心理，它不断受到蛮横残暴的外部世界状况的强化。这种对依赖的需要又进一步受到独裁主义和有着群体意向的社会结构的增强，这种社会结构要求严格的统一性和无私性。无私作为一种重要的美德和思想在日本人中间受到赞同，并深入于日本的宗教和道德的价值观念中。但是，依赖性有助于个性中虚弱的自我结构，该结构又把社会对统一和无私的要求预先赋予了每个人，致使许多人最终通过自杀来剔除自我。<br>另一理论认为，日本人的自杀产生于过度的”角色自恋”(role narcissism)根据这一思想，自杀就是对社会认知的长久需要的突然受挫所产生的反应以及来源于在地位和社会角色方面自恋地专注于自我的反应。许多日本人过分专注于他们的社会角色，视其为生命的根本意义。这类人常常无法应付社会扰乱或角色变化的限定失误。在日本，自杀还可根据日本人已经提出的关于死的哲学和美学得到理解。一种英雄主义的、漫浪的、美学的和道德的色彩谊染着一般的死，尤其是自愿的死。日本人常借助自杀来打开受堵的交流通道，目的在于一个人的思想、信念或苦难通过死,可变得为人所知。这也许可以解释隐藏在失恋自杀、家庭自杀以及与人际障碍有关的其它自杀背后的某些根本动机。</p>
+</blockquote>
+<blockquote>
+<p>(6 )复性自杀<br>集体意向和群体内聚是日本社会的两个特点，它反映在复性自杀的流行里。复性自杀主要分为群体自杀(包括一群彼此毫不相干的人)、失恋自杀和家庭自杀(包括几个密切相关的人)。<br>要看到，自杀的人毕竟是极少数，绝大多数人并未选择自杀，这至少是因为还存在着支撑人活下去的几方面因素:乐观向上的奋斗精神，面对冷酷的现实毫不气馁(这是某些人所固有的天性，强化了的本能)，获得成功,感到幸福;生活虽平静，但无灾难，本能的贪生怕死，受到家庭、亲戚、朋友等方面的关系的牵制;绝望中还有一线希望。</p>
+</blockquote>
+<p>（来源：吕国辉. 论人的自杀[J]. 医学与哲学(人文社会医学版), 1988(10):16-19.）</p>
+<hr>
+<blockquote>
+<p>李献云认为，女性在遇到挫折时更倾向于尝试自杀，“但她不一定真的想结束自己的生命，这样做只是为了寻求帮助、摆脱痛苦，甚至只是为了吓唬其他人”。而那些成功的自杀，更像“失败的自杀未遂”。吴飞从社会文化的角度，为这种“中国式”的自杀心理找到了解释：与西方人往往在绝望中一心求死不同，中国人将自杀视为一种工具——追求“正义”的工具。</p>
+</blockquote>
+<p>（来源：秦筱. 中国人的自杀规律[J]. 学习之友, 2016(8期):21-24.）</p>
+<p>我觉得说的好对。我大三时抑郁想自杀就是想用自杀行为引起注意，想“惩罚那些对我不公的人”。</p>
+<hr>
+<p>看到安全教育，说不要走捷径，容易被骗，我就想着那你为啥程序设计的那么复杂呢？  <br>然后我就想到“社会责任”，就是有个哲学家？社会学家？认为，每一个自杀的人，社会都要承担一定责任。  <br>即:  </p>
+<blockquote>
+<p>“社会是否需要为其成员的自杀行为承担一定责任？”</p>
+</blockquote>
+<blockquote>
+<p>据相关法律人士解释，按照中国目前的刑法规定，自杀者未死而造成他人伤害的则要承担刑事责任；如果自杀者已死，则免去刑事责任。法律专家们有没有思考过，这样的条款既没有责成自杀者家属和社会的监管，甚至会催生和助长自杀并杀人的恶行，成为罪大恶极者的逃避捷径。难道死亡就真的是对一个恶人最严厉的惩罚了吗？如果这个人本来就想死，以死为乐，那他死前就可以在社会上为所欲为了吗？作为社会行为的最高准绳，法律应该保护大多数人的权益，起码是生存和财产的权益不受侵害，应该警示错误行为尽可能少的发生。<br>也许自杀已死者已经不具有承担刑事责任的能力，但是是否应该承担相应的社会责任呢？毕竟，每个人生而在世，从孩童到成年再到老去，只要还在社会之中，就必然承担着或多或少的社会责任。未成年人有学习成长、尊敬师长的责任；成年人有生育子女赡养父母和服务社会的责任；老年人有传承经验和教化社会的责任。任何一个人的存在都是要耗费国家和人类的资源，也是要耗费父母和家人的大量心血的，所以可以说每个人的生存本来就是一种社会责任。当一个人在有能力履行其社会责任时，却选择用自杀甚至加他杀的行为来逃避这种责任，给他人、家庭、社会和国家造成的损失是显而易见的。<br>当一位英雄为了保护国家和人民的生命财产安全时，自愿结束自己的生命的行为当然不能算自杀。当一位备受病痛折磨的患者，自愿放弃治疗和抢救，选择在专业机构安乐死的时候，当然也不能叫自杀。因此将这些特殊情况排除，可以重新定义”自杀“为：在没有外在因素强迫和医疗病危诊断的情况下，具有自主能力的个体自愿采取各种手段结束自己生命的行为。<br>目前较难界定的是大量患有心理疾病（如抑郁症）的自杀者（不包括无自主能力的严重精神病患者）的行为和责任问题。大多数抑郁症患者在自杀之前都是被确诊的，而最终走向自杀跟其家人和社会的忽视脱不了干系。当患者已经不具备正常的自我管理能力或存在自杀倾向时，其家人和社会相关机构就有责任监控甚至适当约束其行为，并帮助患者接受相应的治疗。当患者自杀成功甚至造成其他社会危害时，自杀者、对其有监护责任的家属应当承担主要法律责任，相关医疗机构和精神卫生机构等存在警示或随访缺失的也应承担一定的法律责任。<br>在量刑方面，若自杀者已经死亡，对其有监护责任家人和相关责任机构需代其作为被告接受法律的审判和制裁，在遗产继承范围内承担相应的民事责任；如果自杀者造成了严重的社会危害，除上述民事责任外，法院应当就自杀者的各项犯罪事实进行定罪、宣判和公示（只是不需再对自杀者执行刑事处罚），让这样恶劣的犯罪份子遗臭万年，也给社会敲响警钟。若自杀者自杀未遂的，应当对其进行强制治疗，延后审判，并追究其刑事责任，量刑可参照故意杀人未遂罪（一个敢于杀自己的人，也有杀任何人的可能）。<br>(来源：新浪博主)</p>
+</blockquote>
+<p>基督徒写的：</p>
+<blockquote>
+<p>总而言之，自杀是一个很大的社会问题，也是一个严重的精神健康问题。<br><strong>自杀的原因</strong><br>目前研究自杀原因，是用心理解剖（psychological autopsy）的方法。根据费立鹏的研究（注7），中国人自杀有八个主要原因或诱因。<br>从大到小，这八个诱因是：情绪抑郁，过去曾经自杀未遂，死前遭受很大的压力，生活条件恶劣，长期有心理压力，死前二天以内与别人有很大的矛盾，亲人有自杀的行为，朋友或同事有自杀的行为。<br>据统计，自杀身亡的人，至少都有二个或二个以上诱因。<br>根据香港大学的研究，香港人自杀有六个主要原因（同注3），依大到小排列是：精神障碍，过去曾经自杀未遂，失业找不到工作，负债累累，单身没有结婚，缺乏人际关系支持。<br>该研究指出，86%自杀的人，有可诊断出的精神障碍。不过，即使没有精神障碍，失业、负债累累、单身没有结婚、缺乏人际关系支持等，还是可以引起自杀。至于 香港的自杀率，从1997年的12.1/100,000，飙升到2003年的18.6/100,000，专家认为，与那段时期爆发的亚洲金融风暴有关。<br>根据台湾中央研究院的研究，台湾汉族人和原住民自杀的原因相同（注8）。从大到小，这五个原因是：忧郁症，遭遇损失（包括失去亲人，健康，财富，自尊，期盼），亲人有自杀行为，个性乖僻，酗酒。<br>青年人与老年人自杀，还有一个特殊原因，就是对人生绝望（注4，9，10）。这跟人在青年期和老年期，对生命的意义和价值特别敏感有关。一般精神科学者对价 值观和人生观的研究不是很有兴趣，但是，有些研究资料提出，感觉生命失去意义，也是构成20-59岁人自杀的一个诱因。相反，肯定生命意义的人，则比较不 容易发生自杀（注11）。<br>不容否认，有些自杀是具有模仿性的。例如在香港，2003年4月，一个著名的男歌星跳楼自杀。接下来的几个月，25-39岁男人的自杀率突然飙升，而且多半是跳楼的（注12）。<br>在台湾，2005年4月，一个男电视明星上吊自杀。新闻传媒对这事件的大量报导，增加了忧郁症病人自杀的念头和自杀未遂的案例（注14）。<br>大众传媒对自杀事件的大肆渲染，以及那些便捷的自杀方法，譬如中国农民吃农药或老鼠药，香港和台湾人跳楼，美国人轻而易举弄到手枪（注15），这些因素都可以提高自杀率。<br>总而言之，自杀的原因，在中国大陆、香港、台湾是相似的。自杀是精神障碍（特别是抑郁）加上生活环境因素所引起的。诱因越多，自杀的可能性越大。目前很多专家认为，自杀有大脑介质功能紊乱的因素（注16）。<br><strong>如何去预防</strong><br>自杀的预防，在中国尚无详细的研究资料。<br>在西方，例如在西德纽伦堡（Nuremberg），从四个层面进行的一项自杀预防运动，已推行了两年，証明是有效的（注17）。其结果，自杀和自杀未遂案例各降低了20%。<br>这四个层面是：(1) 训练家庭医师察觉病人的抑郁情绪和自杀倾向，并提供帮助。(2)全面提高社会群体对忧郁症的了解。(3) 与服务社会群体的工作者（如教师，牧师，大众传播）合作，使他们能及时鼓励那些抑郁、有自杀倾向的人寻找帮助。(4) 在社区中举办自助小组（self-help groups），帮助抑郁或自杀未遂的人。<br>简而言之，这运动从提高了社会对忧郁症和自杀诱因的了解，然后提供治疗和帮助。<br>然而，推行整个计划，需要良好的社会基础架构（social infrastructure）来配合。这是中国社会目前不足的。<br><strong>传统的利弊</strong><br>自杀的原因之一，是缺乏人际关系支持。中国传统文化注重家庭关系，注重亲情，这些特征可以预防自杀。可是在社会转型的时候，这种文化特征可能消失。<br>中国人非常注重儿女教育，可是，如果只注重学习，而忽略帮助他们建立健全的人际关系、人生价值观、自我身分与成就感，一旦遭遇失意或挫折，就可能一蹶不振。<br>自杀预防措施强调透明，自我开放，自我了解，把自己的感受及时和别人分享，接受帮助。但一般中国人并不注重这些。人们常把话埋在心里，不谈自己的感觉，特别 不谈自己有抑郁，不喜欢别人知道自己心里想什么，不相信精神心理治疗，等等。在这样的社会生活中，预防自杀是很难奏效的。<br>此外，中国传统文化重男轻女，重父母子女关系而轻夫妻关系（妻子可以换，父母不能换），也是造成农村妇女自杀率很高的原因。由于文化观念习惯很难改变，加上农药和鼠药很容易弄到，使得预防农村妇女自杀尤其不容易。<br>我们基督徒应该作光作盐，逐渐改变社会文化。笔者建议从以下三方面入手：</p>
+<ol>
+<li>积极参与社会关怀，服务社区，建设良好的社会基础架构。<br>很多基督徒当工程师，但是，如果我们要建立社会基础架构，就需要更多基督徒成为社会工作者、心理辅导者、精神科医师、教师、教授、社会科学家、大众传播者 等。自杀不单是个人或家庭问题，更是社会文化和社会架构的问题。正如前面所述，大众传媒对自杀事件的大肆渲染，以及那些便捷的自杀方法，都可增加自杀率。 那么，基督徒如果能够有效地改变这些状况，或许可以帮助降低自杀率。</li>
+<li>更多学习抑郁症和精神障碍方面的知识，并了解现代社会科学与精神科学的发展。<br>神是真理的神，我们基督徒对知识和学问，应该是开放而不是拒绝。近年来脑神经科学的迅速发展，对基督徒有很大的挑战。只可惜这方面的基督徒人才太少。</li>
+<li>信仰生活化。<br>用自己行为作榜样，在教会中鼓励弟兄姐妹之间敞开心扉，开放透明，彼此关怀，互相扶持。<br>要注意特别关爱那些处境困难的肢体，尤其是老年人和青年人。基督徒强调生命的意义，肯定生命的价值，这对绝望的人有相当正面的作用。而且，建立合乎圣经的人生观与价值观，可以帮助人度过种种逆境和危难，从而战胜自己，走出人生旅途中死荫的幽谷。<br>(来源：<span class="exturl" data-url="aHR0cHM6Ly9iZWhvbGQub2Mub3JnLw==">https://behold.oc.org/<i class="fa fa-external-link-alt"></i></span>)</li>
+</ol>
+</blockquote>
+<hr>
+<h3 id="太宰治《人间失格》中的自杀意识"><a href="#太宰治《人间失格》中的自杀意识" class="headerlink" title="太宰治《人间失格》中的自杀意识"></a>太宰治《人间失格》中的自杀意识</h3><blockquote>
+<p><strong>生而为人的不幸</strong><br>太宰治生长在日本本州津轻地区的大地主家庭，然而，优渥的家境却是太宰治一生的耻辱和负罪感的来源之一。此外，在日本家长制的大环境之下，身为幺子的太宰治在家中是“隐形人”般的存在。父母的忽视、亲情的缺失使太宰治认定自己是多余人，并由此产生了叛逆意识。进入大学后，太宰治依靠家里寄来的生活费过着颓废享乐的生活，同时对民主主义、马克思主义思想的接受使太宰治找到了表达自己叛逆的方式，他开始投身于马克思主义政治运动，后因被逮捕而脱离。世界上应该再没有哪个作家如太宰治一般因频繁的自杀而备受瞩目。在短短的一生中，太宰治共进行了五次自杀，第一次他选择了与偶像芥川龙之介自杀的同样方式，但因为服用的安眠药剂量太少而被救了回来。1930 年11 月，失去了经济来源的太宰治与咖啡馆一侍女跳海自杀，太宰治被救活，但侍女永远离开了人世。1935 年，因为上一次自杀，太宰治欠下了大笔医药费，他本打算用芥川文学奖的奖金来偿还债务，但不幸的是他并没有得奖，绝望的太宰治选择了第三次自杀，结果同样被救活。1937 年，生活陷入困境的太宰治又得知女友小山初代与其他男人有染，悲愤交加的他要挟小山初代一同去谷山温泉殉情，二人都被救活。1948年6月，太宰治和女友山崎富荣在雨中跳入东京西郊的玉川上水中，这一次，太宰治没有被救回来。这个自杀了五次的青年，终于彻底和世界说了再见。<br>太宰治这种自杀意识在作品中也经常有所表现，尤其在被称为其遗书的《人间失格》中.</p>
+</blockquote>
+<blockquote>
+<p><strong>丧失为人资格的恐惧</strong><br>鸟居邦朗曾评价《人间失格》：“读者可以清晰地看到太宰治正是以自身为原型创造了叶藏其人”，“人间失格”也被译为“丧失为人资格”，短短几个字既是太宰治对主人公大庭叶藏一生的评价，也是太宰治对自己短短的一生的总结。《人间失格》主人公大庭叶藏的一生和作者太宰治的一生何其相似：二人都体弱且患有肺病；自卑孤独，有独特的为人处世的方式；曾与有夫之妇投河自杀，并以自杀辅助罪被捕；曾被强行送入精神病院；多次自杀失败；妻子出轨；等等。《人间失格》既是太宰治的自传，也是其“遗书”，而大庭叶藏则是其投入作品中的影像。<br>正是由于“人间失格”才导致了太宰治一次又一次的自杀，那么为什么太宰治觉得自己“丧失为人资格”，回归<br>《人间失格》的文本有利于我们追本溯源。<br><strong>对“人”的恐惧</strong><br>《人间失格》中主人公对人、对生活的恐惧表现尤为突出，这种恐惧伴随着大庭叶藏的一生，也一直折磨着太宰治。《人间失格》开头部分便描写了叶藏对生活的恐惧：<br><em>每当我想起吃饭的场景就不自觉地不寒而栗。再加上我们家是个传统古板的家庭，就连菜式基本上都是一成不变的。什么山珍海味，什么豪华大餐，这些对于我来说是想都不敢想的。我在那个昏暗的屋子里，坐在最后面的位置上，冷得直颤抖。</em><br>太宰治如叶藏一样，身受传统道德的浸染，心灵却感到恐惧和压抑。自幼体弱多病的他渴望着周围人的关怀，但父母的缺席、日本传统的家长制使作为幺子的他得不到足够的关注，而且身边也没有可以让他全身心依赖的人，对“人”的恐惧便由此开始。于是，他故作愚蠢姿态来取悦他人，将自卑、恐惧深藏于心底，从他人的笑声证明自己的存在，找到一定的安全感，而且将自己变成了一个彻头彻尾的“小丑”。真正击垮叶藏的是妻子良子的出轨，妻子的单纯和对他人的信任反而成了武器，将他仅存的对人的信任全部灼烧殆尽，叶藏从此病入膏肓。巨大的痛苦时刻折磨着他，他不禁发问：“信赖算是罪过吗？”“难道纯洁的信任就是罪恶的源泉？”他开始怀疑一切，价值观与生活的冲突达到了巅峰，无限的绝望充斥着他的生活，敏感懦弱的他也开始彻底走向毁灭，以躲避这令他恐惧的“社会常态”。<br><strong>（二）自我破坏，向死而生</strong><br>对人的不信任和恐惧困扰着太宰治，反映在作品中就是其主人公的自我破坏以及强烈的自杀意识。正如奥野健男对他的评价：不断地毁灭自己，绝不掩饰自己的不足之处，反而使之不断深化。这样一来，使得他叛逆于既成的社会、文学乃至一切现实。叶藏通过堀木接触到了酒和陪酒女后便沉迷其中，每每遇到自身承受不了的事情便借助酒精来麻痹自己。太宰治年轻时也同样如此，“经常喝得烂醉如泥才回来……”他用酒精麻痹自己以消除痛苦与恐惧，而带给他痛苦和恐惧的是这世间的人。这充满了欺骗、背叛的肮脏的“生活常态”总是轻而易举地将他脆弱的心割出一道道伤疤，正如叶藏的独白：不合法的事物，反倒带给我小小的乐趣。不，应该说让我心旷神怡。世上称之为“合法的事物”反倒更为可怕（有着无法感知的强大力量），那复杂的构造更是不可理喻。我无法坐在无窗而又冰冷的屋子里，我要逃到屋外去，哪怕是堕入非法的汪洋大海里淹死，倒也畅快淋漓。敏感而又脆弱的心经不住现实的伤痛，价值观与“生活常态”的相悖带来的纠结苦闷经过酒精发酵后只会更加醇厚；死亡成了太宰治的唯一选择，自杀是他考问这世界的方式。<br><strong>（三）母爱缺失下的复杂矛盾的女性观</strong><br>大庭叶藏是太宰治现实人生的映射，作品中只提到寥寥数语的母亲同样也缺席了太宰治的生活。这种母爱的自幼缺席在某种程度上导致了太宰治无法正常与人交流的自闭心理以及他对人的恐惧。母爱的缺失使太宰治在与女性交往时一直期望从她们身上得到温暖，即便是与卖淫的小姐交往，他仍然能够在她们的怀里入睡，并能“真切地见到圣母玛利亚的圣洁光环”。虽然“小姐”是被世人瞧不起的存在，但是她们同太宰治一样是社会“边缘人”，同样为生活所苦，同样寂寞，“小姐”因此成了最能让他忘记人类的恐怖的几样“东西”之一。但是女人给他带来的不全是温暖，《人间失格》中叶藏娶了单纯的良子为妻，随之而来的悲哀却要远远大于想象中的快乐，良子的单纯、对他人的信任成了毁灭叶藏的最致命的武器。太宰治对女人的态度也是复杂的。他喜欢小山初代，但他却在小山初代返乡探亲期间与初识的咖啡馆侍女同居，而当他发现小山初代在与他同居期间与别的男人发生关系时而遭受致命的打击，并威胁她一同殉情。在太宰治看来女人的怀抱能够带来温暖、消除恐惧，拯救其失落的灵魂；但同时女人又会给他带来难以言说，甚至是无法愈合的创伤。对于他来说，生活于世本就不易，男女之情给他带来的伤痛更是难以忍受。种种复杂情感交织，太宰治选择以紧紧相拥并用红绳绑在一起的亲密却又防备的姿势与爱人共赴死亡。</p>
+</blockquote>
+<blockquote>
+<p>日本社会中普遍存在的是一种耻文化，人的是非对错通常不是由道德来评判，而在太宰治的身上表现出的是一种罪感文化。太宰的日语谐音为“堕罪”，但他到底有什么罪呢？他声称自己是无赖，但却给自己套上了罪的枷锁；富庶的家庭是罪、不能融入“社会常态”是罪，最后就连渴求生存也成了他的罪。而日本之所以成功很大程度上不正是因为他们把罪意识彻底抛弃了吗？广大的日本国民能够原谅自己，甚至选择遗忘，而太宰治不能。种种“罪”压得他喘不过气来。太宰治深知只有旧的社会秩序被破坏，新的美好的未来才会出现；但是人性的复杂与卑劣使他陷入困境，自我破坏成了唯一能够表达他对现实社会失望的方式，亦是他能发出的最高亢的呐喊声。在生命的最后他写下了：“不要绝望，就此告辞。”</p>
+</blockquote>
+<p>（来源：都雪菲. 论太宰治《人间失格》中的自杀意识[J]. 名作欣赏, 2018, 000(012):P.110-111.）</p>
+<h2 id="厚黑学"><a href="#厚黑学" class="headerlink" title="厚黑学"></a>厚黑学</h2><p>单纯只是感兴趣，“脸皮要厚而无形、心要黑而无色，这样才能成为英雄豪杰。”这不就是君主论吗？</p>
+<h2 id="传播学"><a href="#传播学" class="headerlink" title="传播学"></a>传播学</h2><p>码</p>
+<h2 id="管理学（管人）"><a href="#管理学（管人）" class="headerlink" title="管理学（管人）"></a>管理学（管人）</h2><p>喜怒哀惊恐爱恶忧（思）</p>
+<p>安全&amp;生理需要 — 经济人 — 钱&amp;物质（待遇）</p>
+<ol>
+<li>贪婪克服懒惰（贪婪优先级更高）<br>社会需要&amp;尊重 — 社会人 — 社会关系（情感）</li>
+</ol>
+<ul>
+<li>归属感</li>
+<li>情感（爱/被爱）</li>
+<li>社会地位感<br>尊重&amp;自我实现的需要 — 自我实现的人 — 机会（事业）</li>
+</ul>
+<h2 id="公共危机管理"><a href="#公共危机管理" class="headerlink" title="公共危机管理"></a>公共危机管理</h2><p>这课我报不了了，要去老校区上课。  </p>
+<p><span class="exturl" data-url="aHR0cDovL2Nkbi5tZWJpbHljaGVuLnRvcC9kb2MvJUU1JThEJUIxJUU2JTlDJUJBJUU0JUJDJUEwJUU2JTkyJUFEJUU3JUFFJUExJUU3JTkwJTg2JUU1JUFFJThDJUU2JTk1JUI0JUU1JUE0JThEJUU0JUI5JUEwJUU1JUE0JUE3JUU3JUJBJUIyKCVFOCU4MyVBMSVFNyU5OSVCRSVFNyVCMiVCRSVFNyU4OSU4OCkucGRm">知识点提纲<i class="fa fa-external-link-alt"></i></span></p>
+<p>看了一下，有个启发是：危机不要总想着，干掉它，也要想着，怎么利用。不只是危机，还有谣言，很多负面的东西，啥的。  <br>谣言的定义；谣言类型（按造谣者动机划分）反抗、攻击、误解、宣传、牟利性谣言  <br>噪音  <br>危机公关与危机修辞的区别（修辞是来骗）、说服研究    <br>6阶段：危机的：避免、准备、确认、控制、解决、利用  <br>4R：危机的：缩减（发生可能性）、预备、反应、恢复（评估）<br>5阶段：危机的：信号侦测、准备预防、损失控制、恢复、学习   </p>
+<p>在公共关系和危机传播管理领域，用利益相关者的概念代替公众的概念：因为公众是一个中性词，不同于政治概念的人民，也不同于社会心理学领域带有一定负面情感的大众、群体和群集等概念（乌合之众）。…公众是抽象的，是无面孔的“你们”“他们”，对组织而言，公众往往意味着客体、对象、或飞沫一般的抽象存在。</p>
+<p>危机的根本任务：恢复共识、重建契约、再造共同体。 </p>
+<h4 id="瑞士奶酪理论"><a href="#瑞士奶酪理论" class="headerlink" title="瑞士奶酪理论"></a>瑞士奶酪理论</h4><p>不安全因素像是不间断的光源，在很多层面同时出现漏洞时就会产生事故。  <br>（很多层面叠放在一起像是奶酪切片，因此得名）</p>
+<h4 id="博弈论"><a href="#博弈论" class="headerlink" title="博弈论"></a>博弈论</h4><p>博弈论的基本假设：人是理性和自私的，无时无刻不在谋求自我利益的最大化。因而博弈论所解释的乃是理性、自私的人如何进行有效的策略选择。  <br>那既然课都是这么上的，定义就是这么下的，我为何又要努力维持自己的三观和道德呢？    </p>
+<p>【看到第四章】</p>
+<h2 id="资本论"><a href="#资本论" class="headerlink" title="资本论"></a>资本论</h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMTl0NDExaDdrTi8/c3BtX2lkX2Zyb209MzMzLjc4OC5yZWNvbW1lbmRfbW9yZV92aWRlby4w">b站科普<i class="fa fa-external-link-alt"></i></span></p>
+<p>码。  <br>讨论经济学不能离开社会学和心理学。否则就是“黑板上的经济学”。  </p>
+<h3 id="商品的两个因素：使用价值和价值"><a href="#商品的两个因素：使用价值和价值" class="headerlink" title="商品的两个因素：使用价值和价值"></a>商品的两个因素：使用价值和价值</h3><ol>
+<li>质和量（这里是指价值）。  <br>那电车难题中人的质和量能判断吗？能以质断量吗？  </li>
+<li>商品本身的质与商品生产结束后后期附加劳动无关。</li>
+<li>使用价值只能在使用的时候才能体现。  </li>
+<li>无论财富社会形式如何，使用价值总是构成财富的物质内容。  </li>
+<li>社会必要劳动时间（抽象概念）决定商品价值量。  <br>好家伙，那我要在古代谈异地恋岂不是我浪费了很多时间，好有道理。效率变高，时间压缩，相对于其他人你可供花费的时间就多。   </li>
+<li>有使用价值，但无价值，不是商品；有使用价值，有价值但不交换，不是商品；有使用价值，但没有社会使用价值，不是商品；耗费了社会劳动，但没有使用价值，不是商品。  </li>
+<li>只有知识和人（知识的承载物）才能让商品改变价值/使用价值。</li>
+</ol>
+<h2 id="真·王学"><a href="#真·王学" class="headerlink" title="真·王学"></a>真·王学</h2><h3 id="王室地图相关"><a href="#王室地图相关" class="headerlink" title="王室地图相关"></a>王室地图相关</h3><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuY2FzdGxlc2FuZG1hbm9yaG91c2VzLmNvbS9saWZlXzAxX3Jvb21zLmh0bQ==">中世纪一些room的称呼和介绍<i class="fa fa-external-link-alt"></i></span></p>
+<h4 id="白金汉宫："><a href="#白金汉宫：" class="headerlink" title="白金汉宫："></a>白金汉宫：</h4><p><img data-src="http://cdn.mebilychen.top/image/%E5%9C%B0%E5%9B%BE%E5%8F%82%E8%80%83/%E5%AE%AB%E6%AE%BF%E5%9C%B0%E5%9B%BE2022.3.6.png"></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuZmFyYW5kd2lkZS5jb20vcy9pbnNpZGUtYnVja2luZ2hhbS1wYWxhY2UtN2FmNGM0YWZiYmFiNDYxZQ==">图片和介绍<i class="fa fa-external-link-alt"></i></span></p>
+<p>The group divided the Palace into three sections: The Central Block, the Queens Apartments and the East Front — then collected pre-existing floor plans in video and print, information about each section of the palace and images of the interiors of the different rooms, before sharing the research with architect Jelena Popovic.</p>
+<p>Overall there were over 19 staterooms, 52 royal and guest bedrooms, 188 staff bedrooms, 92 offices and 78 bathrooms that were charted, however, HomeAdvisor says, “there are some areas of the palace that remain a mystery and are off-limits to anyone except palace staff.”</p>
+<p>A hierarchy of rooms. The chambers of the King were all back to back, leading from the Great Hall. This allowed Henry VIII to strictly control who could meet with him and in what setting. Only the closest and most important courtiers ever made it past the privy chamber. </p>
+<p>(emm 是谈话谈到床上去了吗（挠头）不过我喜欢)  <br>意识到根据陛下们不同，宫殿也会不同，有各种需求和创新什么的。  </p>
+<p>Out of the Palace’s 775 rooms, the Queen really only uses six rooms in her private apartments: The bedroom, private sitting room, dressing room, the bathroom, the Audience Room and a mysterious area called “Bobo MacDonald’s suites.”There are very few pictures of any of the rooms except the Audience Room, where the Queen gives a weekly audience to the Prime Minister — as well as meetings with the Chancellor of the Exchequer and visiting heads of state. </p>
+<p>the Music Room, which hosted Prince William’s christening, the Green Drawing Room and the State Dining Room, where Prince William and Kate Middleton’s wedding reception was held in 2011 and “the mahogany table is polished so often that it doesn’t need a tablecloth,” according to HomeAdvisor.</p>
+<p>There is also the White Drawing Room, used for audiences and small gatherings, and the 1844 Room, where the royal family greet celebrities and Presidents — as well as the Regency Room, familiar as its used as the backdrop for official photographs and the Queen’s Christmas broadcasts.</p>
+<ul>
+<li>Throne Room</li>
+<li>Council Room</li>
+<li>Royal Chambers</li>
+<li>Entrance Hall</li>
+<li>Dining / Feasting Hall</li>
+<li>Ballroom / Great Hall</li>
+<li>Drawing Rooms</li>
+<li>Galleries</li>
+<li>Various Courts</li>
+<li>Courtyards</li>
+<li>Gardens</li>
+<li>Servants Quarters</li>
+<li>Library/Archives</li>
+<li>Guard Station</li>
+<li>Coach house / Stables</li>
+<li>Armory</li>
+<li>Tower / Observatory</li>
+<li>Kitchens</li>
+<li>Guest Quarters/Chambers</li>
+<li>Chapel</li>
+<li>Storerooms</li>
+</ul>
+<blockquote>
+<p>the 1559 survey of a manor house ,on its plans a Great hall , a lesser hall, the great chamber , many lesser chambers. (chambers are bedrooms) Servants quarters (bear in mind that the higher up the house they are the less important the servant - fire) , a buttery (note that a buttery is a storage for butts of ale , wine etc, it is not for making butter -butter is made in the dairy), great kitchen and petit kitchen (the great kitchen has the fire where meat is cooked, the petit kitchen is use for warming food and coking smaller dishes)<br>Outside you have ‘courts’ - that is courtyards so the great court is outside the great hall , the kitchen court is between the brew house and the kitchen, and the base court is where the stables are.</p>
+</blockquote>
+<h3 id="王室人物相关"><a href="#王室人物相关" class="headerlink" title="王室人物相关"></a>王室人物相关</h3><p><span class="exturl" data-url="aHR0cHM6Ly9teXRoaWNzY3JpYmVzLmNvbS9jb21tdW5pdHkvdGhyZWFkcy9yb3lhbC10aXRsZXMuNDEyNC8=">奇幻写作论坛-关于王室称呼的讨论帖<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cDovL215dGhpY3NjcmliZXMuY29tL2ZvcnVtcy9yZXNlYXJjaC8yNjE1LXJveWFsLW5vYmxlLWNvdXJ0cy5odG1s">奇幻写作论坛-关于王室的讨论帖<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRm9ybXNfb2ZfYWRkcmVzc19pbl90aGVfVW5pdGVkX0tpbmdkb20jUm95YWx0eQ==">Forms of address in the United Kingdom - Wikipedia, the free encyclopedia<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cud2lraWhvdy5jb20vRm9ybWFsbHktQWRkcmVzcy1Ccml0aXNoLVJveWFsdHktYW5kLUFyaXN0b2NyYWN5LWluLVBlcnNvbg==">How to Formally Address British Royalty and Aristocracy in Person<i class="fa fa-external-link-alt"></i></span></p>
+<hr>
+<p>设定：一个没有皇室血统的人娶了皇室公主。公主随后死了，这个人随后也死了。这个人有两个姐妹。</p>
+<p>Basically, Your Majesty is used when first addressing the king or queen, then Sir, Sire, or Ma’am after that. Princes and Princesses are first addressed as Your Royal Highness and thereafter as Sir or Ma’am. Grammatically, “Your” and “My” are capitalized because they function as part of a name. </p>
+<p>Laws of inheritance in that situation will entirely depend on the rules you set up for your world. I think in many cultures of our world, inheritance would pass to the queen’s closest blood relative, but you can change that for your world. If the rules you set up are internally consistent and the characters accept them, chances are readers will find it believable as well.</p>
+<p>Your Prince wouldn’t automatically become ruler, unless local law said so. First the Ministers will look for any living relatives, however far removed (good example is the War of the Roses). Only when there are no cousins or bastards to cousins left, the throne would be declared vacant. Then the Ministers, Royal Council or whatever would convene and choose a successor from among the highest nobility. It is however possible that until then the Prince could claim the Regency. He would then be called Prince Regent and rule in name of his late wife.</p>
+<p>When the Prince dies, the Court takes over, probably the Lord Chancellor or whoever is senior.</p>
+<p>The Prince’s two sisters would be styled through their father’s rank. So if the father of the Prince &amp; his sisters was a duke, they would be Lady Mary/Lady Ann. Only if their father was a prince by rights of his own would they be called princesses. Their brother’s title doesn’t influence them. Girls as a rule didn’t inherit titles (there were exceptions) and only got them through marriage. If this Lady Mary marries an earl, she would become countess Mary. They too would be out of the royal line of succession.</p>
+<p>Majesty is a title for Emperors and Kings since Emperor Charles V first claimed it. The Kings of France &amp; England followed him, not wanting to be thought less important. Before this, English Kings were Highness or Your Grace. Noblemen were only My Lord (Kings are not nobility, they create it). </p>
+<p>NB: But as ArelEndan already said, you can adjust these rules to your own liking, as long as they sound convincing. </p>
+<p>Liege is the word used for your Liege Lord, the owner of the lands a nobleman holds. For example, After 1066 the English Kings were also Duke of Normandy and the King of France what their liege lord. Or a baron can be liege man to an earl as liege lord. These are feudal matters and you could search there.</p>
+<p>Capitals — In my books I only use capitals for their Highnesses the King and Queen (and foreign rulers), not for the nobility. It’s only a matter of preference and I think a load of capitals make for uneasy reading. I do use capitals for concepts like Court and Lord Chancellor, because these words have also lesser meanings.</p>
+<h3 id="名词积累"><a href="#名词积累" class="headerlink" title="名词积累"></a>名词积累</h3><p>Counsellor 顾问  </p>
+<blockquote>
+<p>playwright<br>剧作家，playboy花花公子。这也是为什么我依旧保留我对团长剧作家的设定。</p>
+</blockquote>
+<blockquote>
+<p>retainer<br>家臣、家仆。真的，如果陛下是真的，我愿意，为他献出自己的一切，哪怕…<br>（艹，这个演出效果好像lore什么的东西）</p>
+</blockquote>
+<h1 id="语言学-1"><a href="#语言学-1" class="headerlink" title="语言学"></a>语言学</h1><p>语系language family 语族language branch 语支language sub-branch .语种linguistic typology。</p>
+<h2 id="印欧语系-Indo-European-Language-Family"><a href="#印欧语系-Indo-European-Language-Family" class="headerlink" title="印欧语系(Indo-European Language Family)."></a>印欧语系(Indo-European Language Family).</h2><p>为世界上分布最广的第一大语系，它包括罗马(又称拉丁)语族(法,意，葡，西等)，日尔曼语族(英,德，荷等)，斯拉夫语族(分为南、东、西斯拉夫三个语族，主要为东欧各国使用的语言如俄，捷，波,乌克兰，塞尔维亚，克罗地亚等)和印度语族(古印度，印地，乌尔都，尼泊尔，孟加拉，旁遮普等语言)</p>
+<h2 id="汉藏语系-Sino-Tibetan-Language-Family-仅次于印欧语系的"><a href="#汉藏语系-Sino-Tibetan-Language-Family-仅次于印欧语系的" class="headerlink" title="汉藏语系(Sino-Tibetan Language Family)仅次于印欧语系的"></a>汉藏语系(Sino-Tibetan Language Family)仅次于印欧语系的</h2><p>世界第二大语系，共有360种语言。其特点是每个音节有固定声调，它又分为汉语族和藏缅语族(藏语,云南各少数民族语言和缅甸语等)。</p>
+<h2 id="闪含语系-Semito-Hamitic-Language-Family"><a href="#闪含语系-Semito-Hamitic-Language-Family" class="headerlink" title="闪含语系( Semito-Hamitic Language Family)"></a>闪含语系( Semito-Hamitic Language Family)</h2><p>主要用于西亚(阿拉伯半岛)与北非，分别使用闪语族(阿拉伯，希伯来，马耳他等语言)和含语族(古埃及语和豪萨语).</p>
+<h2 id="阿尔泰语系-Altaic-Language-Family"><a href="#阿尔泰语系-Altaic-Language-Family" class="headerlink" title="阿尔泰语系(Altaic Language Family)"></a>阿尔泰语系(Altaic Language Family)</h2><p>包括突厥，蒙古，通古斯等语言.</p>
+<hr>
+<p>日语没有归类。  </p>
+<h1 id="符号学"><a href="#符号学" class="headerlink" title="符号学"></a>符号学</h1><blockquote>
+<p>人类对客观世界的认知是一个动态的建构过程，相应地，人类用来概括认知成果的语言符号的意义的确立也是一个动态的、语言社团内部协商的过程。人类认知的总体目标是追求精确性与确定性，但每一个阶段、每一次认知活动的结果却是“盲人摸象的过程”，是模糊性与精确性，或者说确定性与不确定性的辩证统一。因此，表述人类认知的语言符号的意义会随之表现出动态性和模糊性，词汇符号的中心义素是稳定的，而其边界却是模糊的。因为人的这种认知特点，符号的解释是可以不断变化的，按照社会符号学的观点，符号的意义在特定的社会实践中会被附加上实践者所处社会政治、经济、文化语境的信息，处于特定实践中的交际主体会随着对客观世界认识的拓宽与深化，利用语言符号外延边界模糊的特点，创造性地使用词汇，从而使词汇的概念意义得以延展，词义范畴随同增加，而当新的所指意义在社会传播中被整个社团所接受，整个词汇系统得到了相应的发展。曾有学者探讨旧词新义现象中符号意义变化的认知理据和具体变化方式，实际上，正因为语言具有内在的稳定性，词汇有其核心的意义，以此为基础的语言符号作为交际工具才成为可能。语言是灵活的，是随着时代的发展而变化的。该学者认为，词汇符号意义变化的方式主要包括两种，一是凸显词汇语义框架内的某一要素而产生新义；二是通过概念隐喻、转喻或概念整合产生新义。<br>通过凸显词汇语义框架内的某一要素可产生词汇新义，建立旧的能指形式与新的所指意义的链接。根据认知语义学的研究，语义框架和语义域知识构成百科知识语义网络，词概念是进入百科知识网络的一个入口。词概念及与其相关联的语言单位背后隐藏着概念的知识体系。人在面对新的客观事物或现象时，“已被固化并储藏在大脑中的原概念所依附的形式单位随时都可激活相关的概念框架，然后依靠该框架、在特定的语境中，运用某些思维方式，突显框架内的某一元素、并使用原来的形式单位来表征”，这就会在原有意义基础上产生新义。比如:在网络交际中，根据各相关语义知识网络，“冬瓜”圆滚、粗壮的形状特征被凸显和强调，从而增添了喻指“体型肥胖网友”的意义，“雷”令人震惊、恐慌的特征被强调，其他如“预示下雨”等功能被隐藏，增加了“令人惊异”的新义，“拆楼”的“拆卸”动作和“消失”后果意义被凸显，增加了“删除帖子”的含义。<br>认知语言学已有的共识是隐喻和转喻是人类的基本思维方式，概念整合是在隐喻、转喻基础上复杂概念形成的主要操作方式，而隐喻、转喻及概念整合构成词汇意义变化的主要途径，是多义现象和词汇意义历时变化的主要方式。<br>比如，在网络语言交际中，“楼上”、“楼下”常被用来喻指相邻发帖的两个人，“楼主”喻指论坛中第一个发贴的人，这些新词义的获取都是建立在网络与建筑物的类比思维基础之上，其概念隐喻是“网络是建筑物”。同样，“沙发”、“椅子”、“板凳”喻指第一个、第二个、第三个跟帖的人是基于“网络是建筑物”概念隐喻基础上的子隐喻“网络聊天室是客厅”。而用“打酱油”来表示“对热点问题的不关注”现象，用“腐败”表示“到饭店聚餐、请客”，或者用“唐僧”、“哈姆莱特”称呼具有相似特性的人，都是基于概念的临近性，是语言使用过程长期的临近组合在人们大脑概念体系中形成的自然联想，即转喻思维的结果。而“桌面”从传统意义“办公桌桌面”到“计算机的人机交互的界面”的新意义，“下课”从传统意义“教师结束一节课的授课”到“从现任职位离职”的新意义是概念整合的结果。“桌面”的新意义是人们在办公桌上的工作方式的心理空间与操作计算机的心理空间的整合。“下课”的新意义是人们对学校教学方式的认知心理空间与对官员任职、离任方式的认知心理空间的整合。通过以上的分析和讨论，主要发现:当符号的社会性、动态性和可变性以及语言符号和社会的互动驱动语言系统中最敏感的部分———词汇随着社会环境的变化而变化，常常需要重新定义已有词汇的所指意义。这时，虽然旧词的能指形式未变，但所指义项增加，旧的所指意义与新的所指意义呈多义关系或同音异义关系。旧词新义现象也体现了词汇自身发展变化的认知理据和内在机制:人类对客观世界的认知是一个动态的建构过程，相应地，表述人类认知的语言符号的意义具有动态性和模糊性。因此，词汇符号的中心义素是稳定的，而其边界却是模糊的，词汇的能指与所指之间的关系中稳定性与自由度并存，二者的矛盾运动驱动语义的变化。</p>
+</blockquote>
+<h2 id="2-3-符号理论分类"><a href="#2-3-符号理论分类" class="headerlink" title="2.3 符号理论分类"></a>2.3 符号理论分类</h2><p>在理论方面，现代符号理论的分类更加详细，分为十大理论：广义叙述理论、传播符号理论、电影符号理论、广告符号理论、艺术符号理论、游戏符号理论、体育符号理论、音乐符号理论、认知符号理论、主体符号理论和性别符号理论。下面将选取广义叙述理论、电影符号理论、艺术符号理论、游戏符号理论、音乐符号理论五个理论进行重点描述。<br>2.3.1 广义叙述符号理论<br>广义叙述符号理论，就是研究所有可以用来讲故事的符号文本共同规律的理论。叙述中的人物，必须是“有灵之物”，也就是说，他们对所经历的变化，具有一定的经验能力，并且能生发出具有一定的伦理意义的行为或感受。按叙述者的形态变化，以及媒介性能，分成六个类别：“事实性”叙述(历史、新闻、庭辩、汇报、揭发、忏悔等)、拟“实在性”未来叙述(诺言、预测算命、宣传、广告等)、记录性虚构叙述(小说、叙事诗、连环画、壁画)、演示性叙述(电影、电视、戏剧等)、参与式互动叙述(游戏、比赛、电子游戏等)、梦叙述(梦、白日梦、幻觉等)。<br>2.3.2 电影符号理论<br>电影符号理论即指把电影作为一种特殊符号系统和表意现象进行研究的一个学科，它运用结构语言学的研究方法分析电影作品的结构形式，基本上是一种方法论。它强调电影影像与普通语言的区别，对电影影像进行三重分节：图像、符号、意素，和动态影素、动态图像、动素，并制定了影像的十大符号系统：感知符码、认识符码、传铺符(如新闻图片的班点和电影图像的线条)、情调符码、形似符码(包括图像、符号与意素)、图式符码、体验与情感符码、修辞符码(包括视觉修辞格、视觉修辞提示、视觉修辞证明、风格符码和无意识符码。使电影符号理论超越了结构主义语言学的界限。<br>2.3.3 艺术符号理论<br>艺术符号是对生命的理解形式。人的情感生活需要一种不同于语言符号的特殊符号系统，这便是艺术符号，它是一种生命的表现性形式，它所表现出来的富有活力的感觉和情绪是直接融合在形式之中的。因为这种符号是诉诸人的心理表象，而不是诉诸概念。一件艺术作品虽然具有高度的表现力，但却是一种单一、不可分割的符号，它不像一篇论文那样，是合成的，可以分解的；论文可以分解为更零散的有意义的构词成分：词根、前缀、后缀等等，这些因素是根据众所周知的语言规则进行选择安排和变化的。而一件艺术作品，往往是一个基本符号。即艺术品作为符号是一个有机整体，其符号功能只能在一个同时性的完整表象中发挥作用。如绘画的线条或色彩脱离了整体结构就没有独立的意义，同样一首乐曲中的一个音符、一段舞蹈中的身姿只能在整体情境中才能发挥应有的作用。其次，艺术符号各元素间的组合没有固定的法则，它是对人的内心生活体验的呈现往往具有某种偶然性和独特性，它的组成因素不是词带有约定俗成的规则的独立的组合符合。表象性符号没有稳定的、普遍性的内涵，它不可能进行翻译，也没有用于解释起构成要素的”辞典”。艺术描绘不是推理的形式，它具有意义，却没有约定的关系，从而不是把自己表现为一般意义上的符号，而是表现为一种有意义的形式，其中的意味成分不是从逻辑上加以辨别，不是当作功能得以认识，而是当作性质得以感受。<br>2.3.4 音乐文化符号理论<br>音乐文化符号理论研究是音乐学的一支。音乐符号理论是研讨整个音乐文化中的符号现象及其规律的人文科学。音乐符号理论始于传播理论的发现。瑞士音乐学家本特森希望把传播模式运用到音乐上，然而接收者要理解音乐信息并欣赏音乐，仅仅传播是不够的，发送者和接收者必须分享编码与解码规则。如果一个作曲家写一首音乐，里面必须有一个作曲家和演奏者都熟悉的符号系统，另一方面，如果作曲家想用他的音乐唤起某种情感，听众也必须了解这种音乐风格和它的习俗。音乐符号理论更多地运用在网络传播、电视音乐、电影音乐等音乐文化领域。<br>2.3.5 游戏符号理论<br>游戏符号理论是以符号为工具，以“游戏”为研究对象，以探索游戏中诸形式构建问题及规律的理论。赫伊津哈认为，游戏之事实远比游戏之概念重要，他为游戏作出了一个定义：“游戏是在某一固定时空中进行的自愿活动或事业，依照自觉接受并完全遵从的规则，有其自身的目标，并伴以紧张、愉悦的感受和‘有别于’“平常生活’的意识。”在此意义上，他又相继讨论了游戏之自由性、虚拟性、目的性、封闭性等问题，提出了“人是游戏者”，游戏乃是人类文化基础的观点。游戏符号研究中的几个重要问题，包括游戏叙述问题；超文本与交互性问题；新媒体技术与赛博空间问题等。这几个问题皆与广义上的符号理论相关，尤其是游戏叙述问题，则与符号叙述理论有密切的关联。因而，符号理论散见于游戏理论的各种应用与论争之中。</p>
+<h1 id="小说-1"><a href="#小说-1" class="headerlink" title="小说"></a>小说</h1><h2 id="American-Gods"><a href="#American-Gods" class="headerlink" title="American Gods"></a>American Gods</h2><p>这书我买了一直没看，为啥呢。因为我的 @Re 和我的神学观是和他想法差不多（听上去），我怕又给我整抑郁了，就，发现自己在捡别人剩下的东西写。很讨厌这种感觉。<br>不过今个看到他封面上写着“你崇拜什么你就是什么”（这个和我神学观很像，还有那些会被遗忘的神啊啥的），给我整开心了，可以。我就看一看写的啥。  <br>加上有人给我推荐说尼尔盖曼很会写，我就拜读一下。</p>
+<h2 id="献给阿尔吉侬的花束"><a href="#献给阿尔吉侬的花束" class="headerlink" title="献给阿尔吉侬的花束"></a>献给阿尔吉侬的花束</h2><p>我本可以容忍黑暗 ，如果我不曾见过太阳，然而阳光已使我的荒凉，成为更新的荒凉。——艾米莉•狄金斯</p>
+<p>有些常识的人都会记得，眼睛的困惑有两种，也来自两种起因，不是因为走出光明，就是因为走进光明所致，不论是人体的眼睛或心灵的眼睛，都是如此。记得这件事的人，当他们看到别人迷茫、虚弱的眼神，他们不会任意嘲笑，而会先询问这个人的灵魂是否刚从更明亮的生命走出来，因为不适应黑暗而无法看清周遭；或是他刚从黑暗走入光明，因为过多的光芒而目眩。他会认为其中一个人的情況与心境是快乐的，并对另一个人产生怜悯。或是，他可能想嘲笑从幽冥走进光明的灵魂，但这总比嘲笑从光明世界回到黑暗洞穴的人更有道理。——柏拉图 《理想国》</p>
+
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/4315.html">【鉴|阅】书架+名句积累+鉴赏</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2021年03月26日 - 17:12</p>
+ <p><span>最后更新:</span>2023年02月09日 - 16:02</p>
+ <p><span>原始链接:</span><a href="/p/4315.html" title="【鉴|阅】书架+名句积累+鉴赏">https://mebilychen.github.io/p/4315.html</a>
+    
+ </p>
+ <p><span>许可协议:</span>除非文章内另行声明，遵守 cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script data-pjax> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E6%96%87/" rel="tag"><i class="fa fa-tag"></i> 文</a>
+              <a href="/tags/%E7%A7%AF%E7%B4%AF%E6%9C%AC/" rel="tag"><i class="fa fa-tag"></i> 积累本</a>
+              <a href="/tags/%E5%93%B2%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> 哲学</a>
+              <a href="/tags/%E9%89%B4/" rel="tag"><i class="fa fa-tag"></i> 鉴</a>
+              <a href="/tags/%E4%B9%A6/" rel="tag"><i class="fa fa-tag"></i> 书</a>
+              <a href="/tags/%E6%96%87%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> 文学</a>
+              <a href="/tags/%E5%BF%83%E7%90%86%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> 心理学</a>
+              <a href="/tags/%E6%B3%95%E5%BE%8B/" rel="tag"><i class="fa fa-tag"></i> 法律</a>
+              <a href="/tags/%E7%A5%9E%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> 神学</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/2ff0.html" rel="prev" title="【参考】普通昆虫/行为学笔记+Art">
+      <i class="fa fa-chevron-left"></i> 【参考】普通昆虫/行为学笔记+Art
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/7641.html" rel="next" title="讨论下帅气的单词和句子们+皇室">
+      讨论下帅气的单词和句子们+皇室 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#What-Should-I-Read-Next"><span class="nav-text">What Should I Read Next? </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#OnRead"><span class="nav-text">OnRead</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#z-lib"><span class="nav-text">z-lib</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%BE%E4%B9%A6%E7%BD%91%E7%AB%99%EF%BC%88%E8%8B%B1-%E4%BF%84%EF%BC%89"><span class="nav-text">找书网站（英&#x2F;俄）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%BE%E4%B9%A6%E7%BD%91%E7%AB%99%EF%BC%88%E4%B8%AD%EF%BC%89"><span class="nav-text">找书网站（中）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%98%85%E8%AF%BB%E7%BD%91%E7%AB%99%EF%BC%88%E4%B8%AD%EF%BC%89"><span class="nav-text">阅读网站（中）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2"><span class="nav-text">一个博客</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%95%87%E6%A5%BC%EF%BC%9A%E3%80%8A%E5%90%9B%E4%B8%BB%E8%AE%BA%E3%80%8B"><span class="nav-text">镇楼：《君主论》</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Dictionary-of-Obscure-Sorrows"><span class="nav-text">Dictionary of Obscure Sorrows</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%B6%E9%87%8C%E7%9A%84%E4%B9%A6%E6%9E%B6"><span class="nav-text">家里的书架</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%A6%E6%A0%A1%E6%8E%A8%E8%8D%90%E7%9A%84%E4%B9%A6%E6%9E%B6"><span class="nav-text">学校推荐的书架</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#b%E7%AB%99%E5%8D%8A%E4%BD%9B%E6%8E%A8%E8%8D%90%E7%9A%84%E4%BA%94%E5%8D%81%E6%9C%AC%E4%B9%A6"><span class="nav-text">b站半佛推荐的五十本书</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%B0%E4%BB%A3%E7%BE%8E%E5%AD%A6%E6%95%99%E5%AD%A6%E5%A4%A7%E7%BA%B2%EF%BC%8840%E8%AF%BE%E6%97%B6%EF%BC%89"><span class="nav-text">现代美学教学大纲（40课时）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B8%85%E5%8D%8E%E5%8C%97%E5%A4%A7%E4%B9%A6%E6%9E%B6"><span class="nav-text">清华北大书架</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B8%85%E5%8D%8E"><span class="nav-text">清华</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%97%E5%A4%A7"><span class="nav-text">北大</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9D%80%E6%AD%BB%E4%B8%80%E5%8F%AA%E7%9F%A5%E6%9B%B4%E9%B8%9F"><span class="nav-text">杀死一只知更鸟</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AF%9B%E4%B8%BB%E5%B8%AD"><span class="nav-text">毛主席</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%80%8A%E5%9C%A8%E5%BB%B6%E5%AE%89%E6%96%87%E8%89%BA%E5%BA%A7%E8%B0%88%E4%BC%9A%E4%B8%8A%E7%9A%84%E8%AE%B2%E8%AF%9D%E3%80%8B1942-5"><span class="nav-text">《在延安文艺座谈会上的讲话》1942.5</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%93%B2%E5%AD%A6%EF%BC%88%E4%B8%8E%E6%94%BF%E6%B2%BB%EF%BC%89"><span class="nav-text">哲学（与政治）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%8F%E6%8B%89%E5%9B%BE"><span class="nav-text">柏拉图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%9F%E5%88%A9%E4%B8%BB%E4%B9%89"><span class="nav-text">功利主义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E7%94%B1%E4%B8%BB%E4%B9%89-amp-%E6%9E%81%E7%AB%AF%E8%87%AA%E7%94%B1%E4%B8%BB%E4%B9%89-amp-%E8%87%AA%E7%94%B1%E8%87%B3%E4%B8%8A%E4%B8%BB%E4%B9%89"><span class="nav-text">自由主义 &amp; 极端自由主义 &amp; 自由至上主义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A8%80%E8%AE%BA%E8%87%AA%E7%94%B1"><span class="nav-text">言论自由</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E6%B0%91%E7%B2%B9%E4%B8%BB%E4%B9%89%E7%9A%84%E7%9B%B8%E5%85%B3%E7%A7%AF%E7%B4%AF"><span class="nav-text">关于民粹主义的相关积累</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%80%8A%E4%BB%80%E4%B9%88%E6%98%AF%E6%B0%91%E7%B2%B9%E4%B8%BB%E4%B9%89%E3%80%8B"><span class="nav-text">《什么是民粹主义》</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%96%E7%95%8C%E4%B8%BB%E4%B9%89%E3%80%81%E5%9B%BD%E9%99%85%E4%B8%BB%E4%B9%89%E3%80%81%E5%85%B1%E4%BA%A7%E4%B8%BB%E4%B9%89%E3%80%81%E7%88%B1%E5%9B%BD%E4%B8%BB%E4%B9%89%E3%80%81%E6%B0%91%E6%97%8F%E4%B8%BB%E4%B9%89"><span class="nav-text">世界主义、国际主义、共产主义、爱国主义、民族主义</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%96%E7%95%8C%E4%B8%BB%E4%B9%89"><span class="nav-text">世界主义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BD%E9%99%85%E4%B8%BB%E4%B9%89"><span class="nav-text">国际主义</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8A%AC%E5%84%92%E4%B8%BB%E4%B9%89"><span class="nav-text">犬儒主义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%84%91-%E7%A5%9E%E7%BB%8F%E7%A7%91%E5%AD%A6-x-%E5%BF%83%E7%90%86%E5%AD%A6"><span class="nav-text">脑&#x2F;神经科学 x 心理学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%98%E7%91%9E%E6%B0%8F%E7%97%87"><span class="nav-text">托瑞氏症</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Stendhal-syndrome%EF%BC%88%E4%B8%80%E8%A7%81%E5%80%BE%E5%BF%83%E7%97%87%E5%80%99%E7%BE%A4%EF%BC%89"><span class="nav-text">Stendhal syndrome（一见倾心症候群）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E6%81%90%E6%80%96-feat-Stephen-King"><span class="nav-text">关于恐怖 feat.Stephen King</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BF%83%E7%90%86%E5%AD%A6"><span class="nav-text">心理学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#self-reference"><span class="nav-text">self - reference</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AA%E4%BA%BA%E7%A9%BA%E9%97%B4%E4%BE%B5%E7%8A%AF-amp-%E7%A4%BE%E4%BC%9A%E6%8B%A5%E6%8C%A4"><span class="nav-text">个人空间侵犯 &amp; 社会拥挤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%83%85%E6%84%9F%E6%BC%A0%E8%A7%86"><span class="nav-text">情感漠视</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%80%8A%E9%92%9D%E6%84%9F%E5%8A%9B%E3%80%8B"><span class="nav-text">《钝感力》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%A9%E7%94%9F%E6%95%8F%E6%84%9F"><span class="nav-text">天生敏感</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%83%E7%90%86%E5%92%A8%E8%AF%A2"><span class="nav-text">心理咨询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%84%91%E5%AD%90bug"><span class="nav-text">脑子bug</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%BA%E6%A0%BC%E9%9A%9C%E7%A2%8D"><span class="nav-text">人格障碍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%B9%E7%BC%98%E6%80%A7%E4%BA%BA%E6%A0%BC%E9%9A%9C%E7%A2%8D"><span class="nav-text">边缘性人格障碍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%87%E6%B8%A1%E6%80%A7%E5%AE%A2%E4%BD%93"><span class="nav-text">过渡性客体</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%83%85%E7%BB%AA%E8%AE%A4%E7%9F%A5%E9%9A%9C%E7%A2%8D"><span class="nav-text">情绪认知障碍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A4%E7%9F%A5%E6%9B%B2%E8%A7%A3%E7%B1%BB%E5%9E%8B"><span class="nav-text">认知曲解类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E5%A4%B1%E8%B0%83"><span class="nav-text">功能失调</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B4%9F%E6%80%A7%E6%83%B3%E6%B3%95%E7%89%B9%E7%82%B9"><span class="nav-text">负性想法特点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AF%E4%BC%9A"><span class="nav-text">误会</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Five-Stages-of-Dying-Grief"><span class="nav-text">Five Stages of Dying&#x2F;Grief</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%84%9F%E6%83%85%E6%8A%95%E5%B0%84%E6%95%88%E5%BA%94"><span class="nav-text">感情投射效应</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%BE%E5%85%8B%E6%95%88%E5%BA%94"><span class="nav-text">达克效应</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E6%80%81%E5%BF%83%E7%90%86%E5%AD%A6"><span class="nav-text">变态心理学</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Psychopath"><span class="nav-text">Psychopath</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MBTI"><span class="nav-text">MBTI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A4%BE%E4%BC%9A%E5%BF%83%E7%90%86%E5%AD%A6"><span class="nav-text">社会心理学</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%BE%E8%AE%A1%E5%AD%A6%E8%AF%BE%E7%A8%8B"><span class="nav-text">设计学课程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%A6%E7%B1%8D%E8%A3%85%E5%B8%A7%E8%AE%BE%E8%AE%A1%E7%A0%94%E7%A9%B6"><span class="nav-text">书籍装帧设计研究</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%89%BA%E6%9C%AF%E5%8F%B2%E8%AE%BA"><span class="nav-text">艺术史论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%99%AF%E8%A7%82%E8%89%BA%E6%9C%AF%E7%A0%94%E7%A9%B6"><span class="nav-text">景观艺术研究</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E5%AD%97%E7%8E%AF%E5%A2%83%E8%AE%BE%E8%AE%A1%E7%A0%94%E7%A9%B6"><span class="nav-text">数字环境设计研究</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%89%BA%E6%9C%AF%E5%8F%B2%E8%AE%BA-1"><span class="nav-text">艺术史论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A3%8E%E6%99%AF%E5%9B%AD%E6%9E%97%E6%A6%82%E8%AE%BA%E4%B8%8E%E8%A7%84%E5%88%92%E8%AE%BE%E8%AE%A1"><span class="nav-text">风景园林概论与规划设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%89%BA%E6%9C%AF%E8%A1%A8%E8%BF%B0%E5%8E%9F%E7%90%86"><span class="nav-text">艺术表述原理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%8D%E4%BA%BA%E9%9A%8F%E7%AC%94"><span class="nav-text">名人随笔</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%B2%81%E8%BF%85"><span class="nav-text">鲁迅</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E3%80%8A%E4%B8%94%E4%BB%8B%E4%BA%AD%E3%80%8B"><span class="nav-text">《且介亭》</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E3%80%8A%E8%AE%BA%E2%80%9C%E9%9D%A2%E5%AD%90%E2%80%9D%E3%80%8B"><span class="nav-text">《论“面子”》</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%8C%E4%BA%BA%E9%89%B4%E8%B5%8F%E7%BB%84"><span class="nav-text">同人鉴赏组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Refuse-amp-Regret-by-ClockworkRainbow"><span class="nav-text">Refuse &amp; Regret by ClockworkRainbow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#A-Pale-Stranger-by-ClockworkRainbow"><span class="nav-text">A Pale Stranger by ClockworkRainbow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Of-Ash-and-Flame-by-Cagnition"><span class="nav-text">Of Ash and Flame by Cagnition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Only-Option-by-ChloeCasey"><span class="nav-text">The Only Option by ChloeCasey</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#To-yield-thyself-to-the-eye-of-god-by-ruthlesslistener"><span class="nav-text">To yield thyself to the eye of god by ruthlesslistener</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Will-you-dance-with-me-by-Iwakitsune"><span class="nav-text">Will you dance with me by Iwakitsune</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Ch4"><span class="nav-text">Ch4:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ch6"><span class="nav-text">Ch6:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#This-little-light-of-ours-by-Valiax"><span class="nav-text">This little light of ours by Valiax</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#A-lost-light-by-elil-To-love-a-Lamprey-by-Insecuriosity"><span class="nav-text">A lost light by elil&#x2F;To love a Lamprey by Insecuriosity</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Queenegg"><span class="nav-text">@Queenegg</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E8%A8%80%E6%96%87-amp-%E5%8F%A4%E9%A3%8E"><span class="nav-text">文言文 &amp; 古风</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8A%AF%E7%BD%AA"><span class="nav-text">犯罪</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B3%95%E5%AD%A6"><span class="nav-text">法学</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8C%A5%E4%BA%B5"><span class="nav-text">猥亵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%BD%E8%B0%A4"><span class="nav-text">诽谤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%85%E6%84%8F%E6%9D%80%E4%BA%BA%E7%9A%84%E8%BE%83%E8%BD%BB%E6%83%85%E8%8A%82"><span class="nav-text">故意杀人的较轻情节</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%8F%E6%B5%8E%E5%AD%A6"><span class="nav-text">经济学</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%B7%E6%A0%BC%E6%AD%A7%E8%A7%86"><span class="nav-text">价格歧视</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%80%9C%E8%96%85%E8%B5%84%E6%9C%AC%E4%B8%BB%E4%B9%89%E7%BE%8A%E6%AF%9B%E2%80%9D"><span class="nav-text">“薅资本主义羊毛”</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A7%91%E5%B9%BB"><span class="nav-text">科幻</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8F%B2%E5%88%A9%E6%99%AE%C2%B7%E8%BF%AA%E5%85%8B"><span class="nav-text">菲利普·迪克</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A5%9E-%E5%AE%97%E6%95%99%E5%AD%A6"><span class="nav-text">神&#x2F;宗教学</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%A9%E4%B8%BB%E6%95%99%E5%9C%A3%E4%BA%8B"><span class="nav-text">天主教圣事</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%88%B6%E4%BA%B2%E4%B8%8E%E7%88%B6%E7%A5%9E"><span class="nav-text">父亲与父神</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%84%E9%99%86%E7%A5%9E%E8%AF%9D"><span class="nav-text">各陆神话</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%8C%E8%85%8A%EF%BC%88%E9%9B%85%E5%85%B8%EF%BC%89"><span class="nav-text">希腊（雅典）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%BE%B3%E6%B4%B2"><span class="nav-text">澳洲</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%A4%E5%9F%83%E5%8F%8A"><span class="nav-text">古埃及</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A3%8E%E5%B4%87%E6%8B%9C%E4%B8%8E%E5%8F%A4%E5%9F%83%E5%8F%8A%E7%9A%84%E5%AE%97%E6%95%99%E4%BF%A1%E4%BB%B0"><span class="nav-text">风崇拜与古埃及的宗教信仰</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Set%E8%B0%8B%E6%9D%80Osiris"><span class="nav-text">Set谋杀Osiris</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E7%A5%9E%E6%95%99"><span class="nav-text">一神教</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%80%8A%E7%A5%9E%E7%9A%84%E5%8E%86%E5%8F%B2%E3%80%8B"><span class="nav-text">《神的历史》</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%8F%E8%AF%B4"><span class="nav-text">小说</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E6%96%B0%E4%B8%96%E7%95%8C%EF%BC%88%E6%97%A5%EF%BC%89"><span class="nav-text">自新世界（日）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%B0%E4%B8%8E%E7%81%AB%E4%B9%8B%E6%AD%8C"><span class="nav-text">冰与火之歌</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AD%E8%A8%80%E5%AD%A6"><span class="nav-text">语言学</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E6%9D%80%E7%9B%B8%E5%85%B3"><span class="nav-text">自杀相关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A0%E7%BC%AA%E3%80%8A%E5%B1%80%E5%A4%96%E4%BA%BA%E3%80%8B"><span class="nav-text">加缪《局外人》</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%AA%E5%AE%B0%E6%B2%BB%E3%80%8A%E4%BA%BA%E9%97%B4%E5%A4%B1%E6%A0%BC%E3%80%8B%E4%B8%AD%E7%9A%84%E8%87%AA%E6%9D%80%E6%84%8F%E8%AF%86"><span class="nav-text">太宰治《人间失格》中的自杀意识</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9A%E9%BB%91%E5%AD%A6"><span class="nav-text">厚黑学</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%A0%E6%92%AD%E5%AD%A6"><span class="nav-text">传播学</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%A1%E7%90%86%E5%AD%A6%EF%BC%88%E7%AE%A1%E4%BA%BA%EF%BC%89"><span class="nav-text">管理学（管人）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AC%E5%85%B1%E5%8D%B1%E6%9C%BA%E7%AE%A1%E7%90%86"><span class="nav-text">公共危机管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%91%9E%E5%A3%AB%E5%A5%B6%E9%85%AA%E7%90%86%E8%AE%BA"><span class="nav-text">瑞士奶酪理论</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%9A%E5%BC%88%E8%AE%BA"><span class="nav-text">博弈论</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B5%84%E6%9C%AC%E8%AE%BA"><span class="nav-text">资本论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%95%86%E5%93%81%E7%9A%84%E4%B8%A4%E4%B8%AA%E5%9B%A0%E7%B4%A0%EF%BC%9A%E4%BD%BF%E7%94%A8%E4%BB%B7%E5%80%BC%E5%92%8C%E4%BB%B7%E5%80%BC"><span class="nav-text">商品的两个因素：使用价值和价值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9C%9F%C2%B7%E7%8E%8B%E5%AD%A6"><span class="nav-text">真·王学</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%8B%E5%AE%A4%E5%9C%B0%E5%9B%BE%E7%9B%B8%E5%85%B3"><span class="nav-text">王室地图相关</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%99%BD%E9%87%91%E6%B1%89%E5%AE%AB%EF%BC%9A"><span class="nav-text">白金汉宫：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%8B%E5%AE%A4%E4%BA%BA%E7%89%A9%E7%9B%B8%E5%85%B3"><span class="nav-text">王室人物相关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8D%E8%AF%8D%E7%A7%AF%E7%B4%AF"><span class="nav-text">名词积累</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%AD%E8%A8%80%E5%AD%A6-1"><span class="nav-text">语言学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%B0%E6%AC%A7%E8%AF%AD%E7%B3%BB-Indo-European-Language-Family"><span class="nav-text">印欧语系(Indo-European Language Family).</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B1%89%E8%97%8F%E8%AF%AD%E7%B3%BB-Sino-Tibetan-Language-Family-%E4%BB%85%E6%AC%A1%E4%BA%8E%E5%8D%B0%E6%AC%A7%E8%AF%AD%E7%B3%BB%E7%9A%84"><span class="nav-text">汉藏语系(Sino-Tibetan Language Family)仅次于印欧语系的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AA%E5%90%AB%E8%AF%AD%E7%B3%BB-Semito-Hamitic-Language-Family"><span class="nav-text">闪含语系( Semito-Hamitic Language Family)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%98%BF%E5%B0%94%E6%B3%B0%E8%AF%AD%E7%B3%BB-Altaic-Language-Family"><span class="nav-text">阿尔泰语系(Altaic Language Family)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%A6%E5%8F%B7%E5%AD%A6"><span class="nav-text">符号学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E7%AC%A6%E5%8F%B7%E7%90%86%E8%AE%BA%E5%88%86%E7%B1%BB"><span class="nav-text">2.3 符号理论分类</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%8F%E8%AF%B4-1"><span class="nav-text">小说</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#American-Gods"><span class="nav-text">American Gods</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8C%AE%E7%BB%99%E9%98%BF%E5%B0%94%E5%90%89%E4%BE%AC%E7%9A%84%E8%8A%B1%E6%9D%9F"><span class="nav-text">献给阿尔吉侬的花束</span></a></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar3.jpg">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">168</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">175</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjEwMTM3MTIxMjdAcXEuY29t" title="E-Mail → mailto:1013712127@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9tZWJpbHkxMzE0" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      猜猜这是什么鬼地方？
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9tZWJpbHljaGVuLmxvZnRlci5jb20v" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;">LOFTER</span>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ab228.html" title="p&#x2F;ab228.html">【硬读文章】我与地坛</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/1547.html" title="p&#x2F;1547.html">【AI拼贴画】一些灵感和其他见证历史</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/9527b.html" title="p&#x2F;9527b.html">【脑洞合集】无Tag的小脑洞们，Encore</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/a6ba.html" title="p&#x2F;a6ba.html">白宫+高塔地图</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ysyg0.html" title="p&#x2F;ysyg0.html">（起稿）守望者@Memo</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ee39.html" title="p&#x2F;ee39.html">王国边境@Memo</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/2eed1.html" title="p&#x2F;2eed1.html">王学与OC（及一些OC设定）</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/p/ce0f2.html" title="p&#x2F;ce0f2.html">AI（角色）写作专场</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/4eb5.html" title="p&#x2F;4eb5.html">遗书</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/9527b.html" title="p&#x2F;9527b.html">【脑洞合集】无Tag的小脑洞们，Encore</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">3m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">45:35</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "站子已虔诚祈祷 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+     //'.site-meta',
+    //'.site-nav',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+<script language="JavaScript">
+var password="";
+password=prompt('Password (Birthday)','');
+if (password != '20180909')   
+{alert("。");    
+window.opener=null;
+window.location.href = "about:blank"; 
+window.close();}  // 密码不正确就关闭//-->
+</script>
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>
