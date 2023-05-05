@@ -1,0 +1,2061 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="【更新】里面有一个变体AU（变动很大）+黄文，慎入|看科幻世界的时候，有篇魔术师之死的短篇让我注意到了“魔术师”和“马戏团”两个关键词，于是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="白色魔术-设定+Demo">
+<meta property="og:url" content="https://mebilychen.github.io/p/cf86.html">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:description" content="【更新】里面有一个变体AU（变动很大）+黄文，慎入|看科幻世界的时候，有篇魔术师之死的短篇让我注意到了“魔术师”和“马戏团”两个关键词，于是">
+<meta property="og:locale">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/meme/%E4%BD%A0%E7%BB%88%E4%BA%8E%E5%90%8C%E4%BA%BA%E6%AF%95%E4%B8%9A%E4%BA%86.png">
+<meta property="article:published_time" content="2021-01-14T04:48:00.000Z">
+<meta property="article:modified_time" content="2023-04-07T02:51:32.228Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="设定">
+<meta property="article:tag" content="白王">
+<meta property="article:tag" content="君臣组">
+<meta property="article:tag" content="辐光">
+<meta property="article:tag" content="格林">
+<meta property="article:tag" content="卢瑞恩">
+<meta property="article:tag" content="AU点子">
+<meta property="article:tag" content="日月组&#x2F;光组">
+<meta property="article:tag" content="@白色魔术">
+<meta property="article:tag" content="黄">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://cdn.mebilychen.top/image/meme/%E4%BD%A0%E7%BB%88%E4%BA%8E%E5%90%8C%E4%BA%BA%E6%AF%95%E4%B8%9A%E4%BA%86.png">
+
+<link rel="canonical" href="https://mebilychen.github.io/p/cf86.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : '中文'
+  };
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    
+      if (NexT.utils.hasMobileUA()) return;
+    
+    let time, hidden, visible, title = document.title;
+    let favicon = document.querySelector('link[rel="icon"]');
+    
+      hidden = ["盯————","*探*","?","......","*观察*"];
+      visible = ["*偏转视线*","*缩*","*强装镇定*","！","*低头*"];
+    
+    let random = t => t[Math.floor(Math.random() * t.length)];
+    const change = () => {
+      if (document.hidden) {
+        favicon.setAttribute('href', '/images/favicon-32x32-king-black.png');
+        
+          document.title = random(hidden);
+        
+        clearTimeout(time);
+      } else {
+        favicon.setAttribute('href', '/images/favicon-32x32-brand-black.png');
+        
+          document.title = random(visible);
+        
+        time = setTimeout(() => {
+          document.title = '碳素的小作坊';
+        }, 1000);
+      }
+    }
+    document.addEventListener('visibilitychange', change, false);
+  });
+</script>
+
+  <title>白色魔术-设定+Demo | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<style type="text/css">
+.spoiler {
+  display: inline-flex;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;调谐中...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">177</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">169</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-image fa-fw"></i>画廊</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/random.html" rel="section"><i class="fa fa-question fa-fw"></i>抽</a>
+
+  </li>
+        <li class="menu-item menu-item-lang">
+
+    <a href="/en/" rel="section"><i class="fa fa-globe fa-fw"></i>->English</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-17081-597255-1305127431.cos-website.ap-hongkong.myqcloud.com' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/cf86.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          白色魔术-设定+Demo
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-01-14 12:48:00" itemprop="dateCreated datePublished" datetime="2021-01-14T12:48:00+08:00">2021-01-14</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2023-04-07 10:51:32" itemprop="dateModified" datetime="2023-04-07T10:51:32+08:00">2023-04-07 10:51:32</time>
+                </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">王文</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/%E7%8E%8B%E6%96%87-%E7%99%BD%E8%89%B2%E9%AD%94%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">王文@白色魔术</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>53k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>48 分钟</span>
+            </span>
+            <div class="post-description"><center>【更新】里面有一个变体AU（变动很大）+黄文，慎入|看科幻世界的时候，有篇魔术师之死的短篇让我注意到了“魔术师”和“马戏团”两个关键词，于是</div>
+          
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%BE%E5%AE%9A/" rel="tag"><i class="fa fa-tag"></i> 设定</a>
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E5%90%9B%E8%87%A3%E7%BB%84/" rel="tag"><i class="fa fa-tag"></i> 君臣组</a>
+              <a href="/tags/%E8%BE%90%E5%85%89/" rel="tag"><i class="fa fa-tag"></i> 辐光</a>
+              <a href="/tags/%E6%A0%BC%E6%9E%97/" rel="tag"><i class="fa fa-tag"></i> 格林</a>
+              <a href="/tags/%E5%8D%A2%E7%91%9E%E6%81%A9/" rel="tag"><i class="fa fa-tag"></i> 卢瑞恩</a>
+              <a href="/tags/AU%E7%82%B9%E5%AD%90/" rel="tag"><i class="fa fa-tag"></i> AU点子</a>
+              <a href="/tags/%E6%97%A5%E6%9C%88%E7%BB%84-%E5%85%89%E7%BB%84/" rel="tag"><i class="fa fa-tag"></i> 日月组/光组</a>
+              <a href="/tags/%E7%99%BD%E8%89%B2%E9%AD%94%E6%9C%AF/" rel="tag"><i class="fa fa-tag"></i> @白色魔术</a>
+              <a href="/tags/%E9%BB%84/" rel="tag"><i class="fa fa-tag"></i> 黄</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><div class="note danger"><p style="text-align:center ; color:#D9534F"> ♕主AU无预警。但变体AU有童车、R18（R18G预定）、血腥...（好吧我可以篇篇带血腥）♕ </p></div>
+
+<div class="note info"> <p style="color:#438BCA">这里的团长是搞“慈善事业”的好团长</p> </div>
+
+<div class="note info no-icon"> <p style="color:#438BCA">原名白色魔术师</p> </div>
+
+
+<div class="note primary"><p style="color:#7042C1"> 可能对于陛下来说，自己是白色的这件事本身就是足够让一些人嫉唾的吧。 </p> </div>
+
+<h2 id="白化与白变"><a href="#白化与白变" class="headerlink" title="白化与白变"></a>白化与白变</h2><p>2021.9.18 先天性色素欠乏症（leucistic） &amp; 白化（albinism）    <br>突然对白色自然物感兴趣了，想起原来之前还有这一篇聚焦颜色的王文。  <br>想弄明白几个问题：</p>
+<ol>
+<li>自然界都有哪些白色的自然物？（包括动物、植物、昆虫等，不包括白化）</li>
+<li>自然界的白化现象？  <br>千百万只中的500只\400只\1只。白化的动物眼睛通常会是粉红色/蓝色/黑色。  </li>
+<li>白色自然物数量少吗？如果少的的话，为什么？因为容易被目击？<br>人类也会去抓去打。  </li>
+</ol>
+<p><span class="exturl" data-url="aHR0cDovL3d3dy4zNjBkb2MuY29tL2NvbnRlbnQvMTQvMDcyOC8xMS85NTYzMzczXzM5NzYwOTU4Mi5zaHRtbA==">十大北极白色动物<i class="fa fa-external-link-alt"></i></span></p>
+<blockquote>
+<p>白色植物  </p>
+</blockquote>
+<ol>
+<li>玉叶金花的部分叶子是白色的。玉叶金花中所谓的“玉叶”其实指的是它的萼片变形而来，一朵玉叶金花的花萼有五枚萼片，其中一枚变形为叶片状，有些栽培品种的五片萼片都会变形成为叶片状，白色，且有长柄，通常称花叶。它的花小形而且是金黄色，故名“金花”。</li>
+<li>水晶兰。全株无叶绿素，白色，肉质，叶片互生。  </li>
+<li>雪叶菊（银叶菊）。全株具白色绒毛。</li>
+</ol>
+<blockquote>
+<p>白化的幼体比正常颜色的幼体成活难</p>
+</blockquote>
+<blockquote>
+<p>雪貂的皮毛在冬季变成白色，夏季变成棕红色。  </p>
+</blockquote>
+<blockquote>
+<p>专家表示，白色型的野生动物之所以少见，主要是基因突变的概率本身就很低，如果产生的是不利于生物生存的突变，就容易被自然选择淘汰。</p>
+</blockquote>
+<blockquote>
+<p>白象：大象在泰国有着特殊的地位，白象尤其是神圣和幸运的象征，因为它们与佛祖的诞生有关。泰国政府的法律规定，所有的白象都属于泰国国王。在泰国和缅甸，自古这白色的大象是不能骑乘，只能供养。</p>
+</blockquote>
+<blockquote>
+<p>白化动物是世上最美丽和外表神秘的动物，这里有五条关于野生白化动物的事实你可能不知道<br>Albino animals are some of the most beautiful and mystical looking creatures in the world.And here are five facts you probably didn’t know about albinos in the wild.<br>第一 有些人搞不清白化基因和白化病的区别，它们都是由隐形基因导致色素疾病，但是白化病降低了皮肤色素或黑色素，导致生物体拥有红眼睛。白化基因降低所有形式的色素，不仅是黑色素，但生物体依然拥有正常的眼睛<br>Number one, many people confuse leucism with albinism. They’re both pigment disorders caused by recessive allele. But albinism reduces skin pigment or melanin and causes the organism that to red eyes. Leucism reduces all forms of pigment not just melanin. But the organism will still have normal eyes.<br>第二 albino这个词来自拉丁语，词源Albus意思是白色，像你们那些哈迷的阿不思·邓布利多一样，<br>Number two, the word albino comes from Latin. The root Albus means white as in Albus Dumbledore for you<br>Harry Potter fans out there.<br>第三 白化病老鼠和实验室研究是老相识了，实际上 他们是第一种特别为科研驯化的动物，使用白化病成为历史，因为它们易于区分，而现在现代实验室老鼠是他们的后代<br>Number three, albino rats in lab research go way back. In fact, they were the first animals to be domesticated specifically for science. Albinos were historically used because they were easy to identify. And now, modern lab rats are their descents.<br>第四 白化动物在野外的生活不会总是很困难，白化动物经常有视力问题，而且他们确实很难在捕食者眼中伪装起来，但除了看起来很漂亮，有时这也是他们的优势，有时捕食者甚至不能发现白化动物作为猎物<br>Number four, albino animals don’t always have a tough time in the wild. Albino animals often have eyesight problems, and it’s true that they may not be able to camouflage themselves from predators. But aside from looking snazzy, sometimes that works to their advantage. Sometimes predators don’t even recognize the albino animals<br>as food.<br>第五 有至少四个美国城镇有白化病松鼠群，如果你住在田纳西、伊利诺斯、密苏里或北卡罗来纳州 你可能能见到一些居民保护它们，而仅在伊利诺斯这些松鼠有权走在每条街上，如果你碾过一只的话会面临巨额罚款。有些是真正的白化病 有些只是拥有白化基因，但他们都很可爱，现在你知道了关于你喜欢的动物的五条不可思议的事实<br>Number five, there are at least four towns in the US with white squirrel populations. If you live in Tennessee, Illinois, Missouri, or North Carolina, maybe you’ve seen a few residents protect them. And in only Illinois, these squirrels have the right of way on every street. There’s a big fine if you run one over. Some are truly albino, and some are leucistic. But all of them are cute. Now you know five more amazing facts about animals you love.</p>
+</blockquote>
+<blockquote>
+<p>白化症，或白化病（Albinism）是一类以皮肤、毛发以及眼睛虹膜黑色素缺乏为特征的遗传病。一般来说，白化病是常染色体隐性遗传的，由于种种原因，患者体内的酪氨酸酶出现了异常，而酪氨酸是黑色素的前体物。所以患有这类疾病的个体虽然有正常的黑色素细胞，但是苦于没有原料，所以无法合成黑色素。这种遗传病在各种脊椎动物中都存在，在哺乳类和鸟类中，大约每一万至两万个幼兽幼鸟中便会有一例白化病。白鼠、白兔其实就是白化种的动物。白化动物最显著的特征是它们的眼睛。由于缺乏黑色素，它们的虹膜（也就是俗称的黑眼珠）颜色很浅，为淡蓝色或者淡紫色，而整个眼睛往往呈现红色，那是眼底血管中血液的颜色。<br>另外有一些突然变白的动物，虽然身体颜色很浅，但是眼睛（也就是虹膜）的颜色是正常的。这类变白的现象一般称为“白变症”（Leucism）。白变症是由于源自胚胎神经嵴的黑色素细胞本身缺陷造成的。机体中绝大部分黑色素细胞都源自胚胎的神经嵴，但眼睛中的黑色素细胞则是例外，因而白变动物的眼色是正常的。  </p>
+</blockquote>
+<p>白化蝙蝠好可爱！  </p>
+<hr>
+<div class="note warning"><p style="text-align:center; color:#F0AD4E">♕DEMO/未完成作品，包含设定♕ </p></div>
+
+<h1 id="toc_0">目前目标：以卢瑞恩视角的“醉酒”场景写一个小短篇</h1>
+
+<p>看了马戏之王之后突然想尝试一下<br>
+“反派”类型的卢瑞恩<br>
+不过很有可能进不到正设</p>
+
+<p>大概就是 卢瑞恩作为一名上流社会的画家 很瞧不起这种低端的魔术把戏，认为这个不是真正的艺术。并且因为小时候目击过某次事件，对法师们有点偏见 这次他借口作画灵感到剧团观摩，其实是想方设法找出/搞出丑闻，把剧团搞垮</p>
+
+<p>描写片段包括剧团聚会时卢瑞恩给陛下灌酒然后陛下喝醉了送陛下回房间，主要是想套他的话，恩，没有别的意思。卢瑞恩选择陛下是因为他看起来很好骗，害。</p>
+
+<p>(（）)</p>
+
+<p>“这杯，敬有勇气活下去的虫子。”<br>
+卢瑞恩在格林的眼中寻找着什么，却只看到了一如既往的戏谑。他有时完全分不清对方是在演出还是在生活。或者这两者于他而言，完全纠缠不清。<br>
+他回了一个木然地笑容，举起杯子。<br>
+“我注意到您对我们的‘白雪公主’很感兴趣。”<br>
+“…这是你们给他的称呼？”<br>
+“哦，”他看向摩挲自己袖口纹路的沃姆，“当然不。”<br>
+“你不觉得他很像一位公主吗？美丽又弱小，公主们的特质之一。”<br>
+“你们就没有想过让他变得正常一点？”<br>
+“正常？”他露出一个迷人的微笑，“您又觉得什么是‘正常’呢？”<br>
+“…即便他性格内向，”他走到沃姆面前，伸出爪子，“…基本的社交行为，他甚至一点反应都没有。”<br>
+沃姆的动作停滞了一下，他的黑眼睛盯着卢瑞恩伸出的爪子。<br>
+“对一只已经羽化的雄性虫子而言，‘公主’实在不是一个褒义词吧？”<br>
+“…那您可能不知道他‘不正常’的样子，‘正常’对他而言又意味着什么。”剧团的团长歪着头，“我不会强迫他去做他不喜欢的事，我希望您也能如此。”<br>
+卢瑞恩把爪子收了回去。<br>
+“…我甚至从来没有听过他开口说话。”<br>
+“他的声音很好听，就是有些五音不全。”格林颇为遗憾地摇着头。<br>
+卢瑞恩突然有种被冒犯的感觉，“…你们一直都是这样？他只和你说话？”<br>
+格林笑了，“你想和他聊聊？他从来没有和外人说过话。”<br>
+“还是说我必须需要一位翻译？”他看向沃姆，被谈论的对象一直把玩着爪子里白色的小能量球，似乎丝毫没有意识到自己正在被讨论。<br>
+“先生，如果你想从他身上寻找灵感，我可以告诉你关于他的一些事。”<br>
+“谢谢，我想直接和他交流。”<br>
+格林打量卢瑞恩一番，“…我可以问问他。”<br>
+于是他轻轻搭上沃姆的肩，俯下身说了些什么。<br>
+沃姆用那双黑眼睛看向自己的时候，卢瑞恩突然感到一阵畏缩。从刚刚开始，那种莫名的“被冒犯的感觉”一直占了上风，似乎是让他有些口不择言了。说起来，他为什么一定要和这种虫子正面对峙呢。他琢磨着对方的表情，想找出其中哪怕一丝不情愿的暗示。<br>
+沃姆将目光收回到他们之间的地面上。<br>
+“他同意了。”格林宣布，然后露出一个微笑，“不过我还是希望您不要太为难他。”<br>
+“…他说话了吗？”<br>
+“当然，您只是没有听见罢了。”<br>
+他轻轻拍了拍沃姆的背，这让对方的身体有些许紧张，“去吧沃姆，没事的。”<br>
+沃姆转过头望了望团长，动作有些僵硬地走到卢瑞恩面前。<br>
+“……”他低头不语，直直地盯着自己的爪子。<br>
+他带着纯白色的皮质手套，不过这并不新奇，他全身的衣物都是纯白色的。这让他在表演的过程中十分引人注目。<br>
+注意到卢瑞恩的视线，沃姆把爪子缩进了袖子里。<br>
+“你要学着和他交流，亲爱的。”格林喝完杯中的酒，转身离开。<br>
+一时间，卢瑞恩不知道这句话是对谁说的。<br>
+沃姆的视线又追随起格林离去的身影，卢瑞恩皱起眉。<br>
+“…哦对了，”格林回过头，“沃姆只喜欢喝果啤。”<br>
+卢瑞恩皱眉，他确实有灌醉某只虫子来套取情报的计划，格林看似无意的“配合”反而让他有些犹豫。他是不是已经注意到了自己真实的目的？但如果是，他又为什么会默许他？<br>
+…或者，他别有用意？<br>
+“…你喜欢甜食？”卢瑞恩发问的时候，沃姆仍在盯着在远处谈笑风生的马戏团团长。他晃了一下神，转回头，似乎刚注意到卢瑞恩的存在。<br>
+他有些不耐烦了，“你和他什么关系？”<br>
+他似乎想要说话，但终究只是盯着卢瑞恩的爪子看。<br>
+卢瑞恩抬起自己的爪子，“…有什么好看的？”<br>
+“你讨厌我。”<br>
+“…什么？”<br>
+一阵沉默。<br>
+“你刚刚说话了吗？”<br>
+“你的语气很冷。”他继续着，神色冷淡，“而且你的眼神里满是厌恶。”<br>
+“……”格林说的没错，他的声音的确很好听。<br>
+“前天，你刚踏入这里的时候，我就已经看到了，厌恶的表情。”<br>
+“你一边表达着赞叹，一边拽紧自己的衣袖，和我们一点点的接触你都会皱起眉毛。你看向我们的眼神就像看着路边流浪的宠物。团长一定也注意到了，他是只聪明的虫子。”<br>
+“还有昨天……”<br>
+“…你想说什么？”<br>
+“我知道你讨厌我们，所以我很好奇，你为什么想要了解我。”<br>
+“…我只是来这里寻找灵感。”<br>
+“所以，我只是一个工具。”<br>
+“我可没有那么说。”<br>
+“……”<br>
+“…咱们先坐下吧。酒保，一瓶果啤，一瓶白酒。”<br>
+果啤的酒精浓度太低了，他估计要花费更长的时间。<br>
+“……我承认，我不太喜欢你们，因为…之前的一些事情。但是我…”<br>
+沃姆的黑眼睛紧紧盯着卢瑞恩的一举一动。<br>
+“…我对你很感兴趣。”卢瑞恩尝试着将话题引向自己擅长的方向。“你很特别。我从来没有见过通体白色的虫子。‘纯色’并不完全和外表的颜色挂钩，但是你…完全就是‘纯白色’的象征。”<br>
+“你也喜欢白色？”<br>
+“谁不喜欢白色？画作中的点睛之笔。”<br>
+“我恨白色。”<br>
+“……”卢瑞恩把两个酒杯分别倒满。<br>
+“…你是个画家，对吗？”<br>
+“我很羡慕你，可以触碰那么多颜色。”<br>
+“而我…”他皱紧眉头，声音低下去。<br>
+“比起完成的那一刻，我更喜欢看着空白的画布。”<br>
+“对新生作品的幻想，以及可以创作的无数种可能性。”<br>
+“看着空白的画布上想象是我最放松的时刻，一旦落笔，就要受限于想象和画笔的同步了…”<br>
+沃姆的眼中映着吧台的暖色光芒。<br>
+“…你喜欢画画吗？”<br>
+“我…试着画过。</p>
+
+<p>“当你向我伸出爪子的时候，我想起了格林团长。”他又看向卢瑞恩蓝灰色的爪子，“…那是我和其他虫子的第一次接触。”<br>
+“他向我伸出了爪子，纯黑色的。”<br>
+<em>接触的一刹那，白色就如同滴入水中的溶液一般在他的爪尖晕染开。</em><br>
+<em>格林明显地退缩了，他猛地放开了紧握着的爪子。</em><br>
+<em>面前的爪子孤零零地停留在半空中，白色的虫子茫然地看看它，又看看格林。酸痛感让他缓缓收回了自己的手臂。</em><br>
+<em>格林突然又伸出爪子，这次，他的用力更加明显。</em><br>
+“但是他并没有放开我。他把我拉进了他的怀里。我很害怕，看着他黑色的衣服逐渐被染成白色…还有他的右爪。”<br>
+“我很害怕，想推开他，但是他并没有放开我。”</p>
+
+<hr>
+<div class="note danger"><p style="text-align:center; color:#D9534F"> ♕下文涉及剧透♕ </p></div>
+
+<h1 id="toc_1">以下是设定</h1>
+
+<p>改名：纯白色的魔术师/或其他</p>
+
+<p>需要起名的名词：<br>
+团长的剧团：色彩剧团？纯彩剧团？<br>
+色彩的孤儿们：纯色？色彩孤儿？纯粹？Pure？<br>
+掌握了一定色彩法术但不至于危害社会的色彩法师：色彩法师？颜色法师？；（色）法师（中性）？绘师（褒义）？<br>
+色法师们的反对者：将他们称之为“异常”，应当被送往研究所“调制”。<br>
+色彩的调和：一般色彩的传递只是叠加，调和是禁术，因为这种科技会生成“纯色”，以及新的颜色。这种科技只允许某些高层机构掌握。被称作调和师（心理医生）。<br>
+“色彩”只是一个概念，并不完全对应外表的颜色。<br>
+或者说和颜色毫无关系，只是影响到法术的内容。</p>
+
+<p>概念点：</p>
+
+<p>1.陛下是纯白色的象征，他的“法术”主要包括直接接触任何东西都会将它们变成白色（动效类似于水的渗透），这个是被动的技能，因此陛下总是用长袍和兜帽将全身包裹的严严实实，并且他讨厌炎热的感觉。（这是他对卢瑞恩说的第一句话）<br>
+这个被动技能的消除是说出陛下的名字，如果某个东西说出了他的名字，并且陛下给予了回应，这个被动技能的效果就不会再作用于那个物体，类似于被陛下“acknowledged”。<br>
+第二个法术是运用灵魂形成各种实体，以及将其注入到无生命物体中进行操控。<br>
+陛下成为“纯色”的原因是他的父母都是白色系，导致陛下在没能获取其他颜色的情况下，用灵魂法术吸走了父母的灵魂，杀死了自己的父母。这也是白色系家族禁止通婚的原因，被称作“白色诅咒”。<br>
+刚出生的孩子很有可能滥用色彩法术，所以需要尽快让他们接触不同的颜色，否则很有可能节外生枝。<br>
+白色系的人可以通过燃烧吸取的灵魂获得生命的能量，因此陛下独自在无人的公寓里长大羽化，变成了“纯色”。</p>
+
+<p>2.团长是纯彩剧团的团长，相当于孤儿院院长。他是纯红色的象征，主要法术是各种火魔法。他和其他“孤儿”们不一样，是比较会来事的类型，因此算是“孤儿”们与外界沟通的唯一桥梁。他一直在照顾着大家，使他们在这个世界上有立足之地。</p>
+
+<p>3.卢瑞恩是一个初出茅庐的画家，他很喜欢色彩剧团的演出，每场都会去看，也会根据各位色彩“孤儿”创作各种画作，他尤其喜欢陛下，画了很多和他有关的画。</p>
+
+<p>4.世界观设定。色彩的法术，将每个人比喻成一张纸的话，普通人，也就是没有法术的人，他们的纸是多彩的，有着不同的颜色；而色彩“孤儿”们的纸则只有一种颜色。颜色的产生和传递在刚出生的幼虫期进行，羽化后成型。传递是指和其他人的社交行为，每进行一次社交，纸上就会出现一部分对方的颜色。每个人刚出生的时候，在思维诞生的那一刻，色彩就会出现，遗传自父母双方各自颜色最大的两种颜色，在和父母的相处过程中就又有了不同的颜色，除非社交的两人色彩相同。<br>
+颜色越纯，意味着对应的颜色法力（也被反对者们称之为异常）越高，同时有多种颜色存在时，只取面积最大的颜色。<br>
+有法力的人在剧团成立之前是被排斥的，因为他们远离社会，能力还会引起很多麻烦。甚至有一段时间开始了抓捕收容甚至处刑行动。团长作为混的最好的颜色法师，开办了色彩剧团，其实是个收容所，将他们的能力转化为魔术的形式来为社会提供娱乐。<br>
+每个人的色彩对应着色彩理论。</p>
+
+<p>5.其他角色。辐光和虚空可以重点关注，其他的是跑龙套。<br>
+辐光是团长的妹妹，纯金黄色的象征。是一只灰乎乎的小蛾子。刚刚羽化，只是一只小蛾子，总是昏昏欲睡，能力是发光发热，类似于冬季暖手宝。<br>
+虚空是纯黑色的象征，没有固定的外形，交流困难，对辐光莫名的不喜欢，能力是变形、寄居和吞噬光。<br>
+乌恩是纯绿色的象征，能力是生草。<br>
+乔尼（？）是纯蓝色的象征，能力是水魔法（？）</p>
+
+<p>文章开头：<br>
+你会用什么来形容白色？纯真？洁净？还是冷漠？疫病？<br>
+类似这样。<br>
+是卢瑞恩在想自己作品的创作介绍。</p>
+
+<p>到后期可以有卢瑞恩教陛下画画的场景，就抓着陛下的爪子点星星什么的，或者和陛下一起研究陛下染白的能力可以搞出什么创作。</p>
+
+<p>“…这幅夜景真美。”<br>
+“不，还差个点睛之笔。”卢瑞恩抓起沃姆的爪子，顺势要把爪子上的爪套摘下来。<br>
+沃姆下意识地抽出爪子，但被对方紧紧握住。<br>
+“相信我，放轻松。”<br>
+“……”<br>
+卢瑞恩想象着运笔的感觉，小心抬起沃姆的爪尖，让它轻轻划过画布。<br>
+“你说过想要触碰这些色彩，感觉怎么样？”<br>
+极光的光幕中划过一道白色的流星，坠向地平线。</p>
+
+<hr>
+<p>22.11.28更新</p>
+<p>@随便拉了一个AU来写</p>
+<p>@不算此AU正设</p>
+<p>@无考据，纯原创，OOC</p>
+<p>@🎵Who lives， Who dies， Who tells your story</p>
+<h1 id="AU变体"><a href="#AU变体" class="headerlink" title="AU变体"></a>AU变体</h1><p>好吧，我想把这个au做成一个“同人圈问题报告”类型的文。关联一下encore文帖子那边的tumblr sexy man.</p>
+<blockquote>
+<p>他轻附在对方耳边“…她们让你跌至谷底，让你衣不蔽体，（让你由i变e，暂时不晓得怎么表述这个）这样似乎所有虫子都可以将你尝上一口…”停顿片刻，“但是只有你知道自己究竟是谁，你只需要…装作享受其中的样子，邀请她，再告诉她，那不过是她们一厢情愿，”他露出一个微笑，“让她们无地自容。”他猩红色的眼睛眯成一道缝，“…如果是你的话，也会很期待她们愤怒的样子吧？”</p>
+</blockquote>
+<p>类似于可以把那些常用paro设置在里面，然后让陛下“拔x无情”：</p>
+<blockquote>
+<p>“..她们让我装作感兴趣的样子，把随便一个囚犯当做性伴侣对待，”他从怀中取出一个细小的装置，卢瑞恩下意识看过去，“…然后录下这段15分钟的音频。”（顺便还可以解释为什么在这么多监视器的情况下陛下大摇大摆走进一个密道而不怕被发现）（顺便顺便还可以让阿卢有理由请求陛下不要把这份音频递交上去（不然他身份就会暴露））</p>
+</blockquote>
+<blockquote>
+<p>“重要的不是我是否想和你在一起…重要的是她是否想让你和我在一起。”</p>
+</blockquote>
+<blockquote>
+<p>“你不是一只囿于图纸的玩具，卢瑞恩。你不该被刻上标签和卖点再陈列橱窗，也不会在阁楼蒙上布凝滞在时间里。<del>你有权利，也有能力继续向前走。</del>请允许我将你<del>现在的</del>过去的一切都染成蜡白吧，那些将你肤浅定义、玩弄于股掌的虫子…他们并不渴望——他们无法想象，也不值得拥有这样绚丽多彩的你。”</p>
+</blockquote>
+<p>好吧 意思就是，阿卢，你不是同人啦！你OC啦！你同人毕业啦！<br><img data-src="http://cdn.mebilychen.top/image/meme/%E4%BD%A0%E7%BB%88%E4%BA%8E%E5%90%8C%E4%BA%BA%E6%AF%95%E4%B8%9A%E4%BA%86.png"><br>这里陛下其实是在邀请和阿卢拥抱，然后阿卢身上象征着辐光统治的金色长袍、以及金色房间就会褪色变成白色，只留下阿卢还保持原来的颜色（设定里陛下认可的人不会被褪色影响）。</p>
+<p>以及陛下会和（他以为对方只是在cosplay的）阿卢说带着“圣巢首相”的面具太憋了，不如摘下来；但是阿卢心说这不是面具我摘不下来</p>
+<p>1.27<br>可以是科幻圣巢<br>团长会点破陛下的本质只是一个承载他人欲望的容器（甚至只是发泄兽欲的容器），他没有本来的自己（没有作为一般同人角色所有的“核心”，毕竟空洞原设是soft类型）。团长会认为连夫人对陛下的影响都只是在容器内装入她自己的思想。<br>但是陛下（本AU里的陛下）其实是有的，如果你肯听他诉说（如果你肯细细思考他的背景故事）</p>
+<p><del>感觉陛下会是那种 乐 是那种会写一份问卷让阿卢填来决定是不是要和阿卢交朋友的人 乐</del></p>
+<p>又想了一下，就陛下可能会认为，剥开性快感和性羞辱的一切，其实就是因为陛下具有这样那样的“弱点”和引起性欲的特征，而且在精神上还不承认自己的弱点（弱点无法被消除），加上性本身所带来的快感，所以或许陛下会开始想“如果我假装已经被她们征服，假装我的弱点已经被修复，她们会不会就能放过我？”或者“如果我想办法让我和她们无法感受到快感，她们会不会就能放过我？”所以陛下可能会尝试破坏自己的身体特征（包括伤害自己的尾巴、翅膀、自残，将自己染成别的颜色（但失败，因为他会将所有东西染成白色）），在所有的一切都被尝试过（但失败）之后，在“假装自己被征服”（比如听从要求假装自己被客户催眠（阿卢会表示辐光是真的能够催眠自己））上，他会被自己的某种“存在意义”所阻挡：“但是我看到那么多的虫子们，都在看着我，有的呆滞，有的嘲弄，有的期待，有的悲伤——等着我做出反应。我忽然无法像那样欺骗自己了…我忽然觉得，我的存在意义就是被践踏，被征服。就像落入虫群的种子注定会被吃净那般…如果它没有被吃净，它就不能再被称作种子了。毕竟种子之所以被吃掉，不只是因为种子的美味，还是因为虫群在饥渴，因为她们无法控制自己不去践踏…这美味的食物。而我并不只是那颗种子，我还是她们无法企及的那棵树。我一直都会在被征服…所以我无法被征服，我不能被征服。”（有点耶稣殉道者的味道了）<br>这里就是说，陛下作为“自由意志”的具现，不能够因为个人的原因而放弃自己的本质（虽然他确实想过），他会觉得“只要我低下我的头，我就死了。死了之后…就什么都没有了。”这就算是精神上的死亡，就意味着他全部的死亡（像是脑死亡但是只是心理作用）但【我私设】如果他真的这么做，其实也无差（啊），毕竟他转世的那一刻就已经放弃了神格，已经算是死了（类似于，之前的他（很强大的他）不可能低头，虽然之前的他低头就算是真的死了，但是之前的他不可能低头，不可能（因此而）死。）他现在还会这么觉得是因为他保留着之前的精神（神的精神）。他像凡人那般欺骗自己其实也是可以的，只是他跨不过这个坎。</p>
+<p>阿卢会注意到夫人留给陛下的信并且私藏 是因为他注意到自己的名字在里面（字形相似，但是发音适配了虫虫的普通话，所以陛下在听到的时候没有太多感觉，但他一看书写就能知道这是古神语（比如签名）），他觉得会是探索自己身份的一个重要线索（阿卢因为总是和其他虫虫（贵族都是蛾子而他是甲虫（鼠妇））格格不入而一度怀疑自己的出身，但通常会被辐光加以“我的出身很不详，女王陛下是可怜我而收留我的”这样的印象而不敢继续深究）（这也是阿卢和其他甲虫男宠不同的地方，虽然他无知，但是他的教育和出身（起义军领袖）让他潜意识有着求知欲，虽然他的行为可以被压抑和惩罚，但是欲望是无法根除的）这是他父母教他的一点点古神语，主要是为了给他起名字（在古神语里“卢瑞恩”的意思是“见证者”）</p>
+<p>辐光应该是不知道夫人和陛下的“古神语”的，所以她看不懂。其实夫人和陛下本说的是两种古神语，但后来他们互相取长补短，一同融合了他们两只的语言，这套语言是起义军虫虫语言的根基，也是后来转世的夫人与陛下小时候玩的“暗号语言”。夫人的语言像是格律诗篇（或者词，我也没想好）【说到这里其实夫人的名字想让她东方一点来着】，而陛下的语言像是乐曲，两者结合出了一种，韵律很强（沃姆语）、节奏明显（根语）的艺术结构，也就是白榕树很轻易就能唱出来的童谣和吟游诗【类似于，只有加上“人声伴奏”、保留其书写结构才能完整表达其含义】，有点迪士尼或者歌剧的感觉，但这其实是她们日常的交流。陛下也能唱，但是他跑调。</p>
+<p>这么一想其实阿卢和陛下的纵欲就是求知欲的纵欲吧（啊）对于陛下而言团长的色欲就是原罪，而对于辐光而言阿卢的求知欲就是原罪</p>
+<p>陛下之所以能够脱离“神”的高Fi思维方式（或者说只是意识到了这一点）而选择转生为人（变得Fe），就是因为遇到了白后（另一个高Fi神，但是她喜欢陛下）。他意识到Fi并不是虫虫们的思维方式。</p>
+<p>（以及白色魔术（黄版）里）团长在强暴陛下的时候可能会因为面前不折不挠的陛下太像当年的自己（但是陛下因为是“无法屈服” 但自己没有这项禁令所以打不过就加入（？），欺骗自己变成了享受其中的“加害者” ）而不小心哭出来（啊）团长一开始会过度凶残地折磨陛下 私心是想让他像自己那样屈服 但后面就会缓和下来，感性和理性上是想帮陛下做好准备（试探底线） 陛下在（意识到团长本心是好的（确实是好的）问团长能不能帮自己逃离这里 团长会说“你不会想让我帮你的。你也不会想要逃离这里。”（意思是“现状的陛下”的本质就是陛下被“现状”折磨，不被折磨的陛下就是脱离了本质的陛下，是“错误”的陛下，是逃避责任的陛下，是无法思考现状、无法改变现状、无法锻炼自己的陛下）<br>以及团长会觉得以自己的mindset 如果帮了陛下就是在害他 所以 大概有点“我不配帮你”的感觉<br>团长也会可怜陛下（？）还会用自己心控的能力来“帮”陛下伪装陛下已经屈服的模样 陛下一开始很反感 而且团长一开始也只是在玩弄陛下 但后来就逐渐变了味（往好里变） 不过这里团长只是一个过客 所以很早就退场了 重点还是陛下和阿卢<br>团长也会认为“如果从未有过错误，从何知道错误”，就是陛下如果从未体验过“真正的欢愉”，他无法理解“真正的欢愉”和自己究竟在对抗什么</p>
+<p>所以后面陛下拿到钥匙之后又会和阿卢叨叨“我究竟该不该就这样逃走”</p>
+<p>在这个“欲望是无法被战胜和控制的”的世界里，陛下会用自己来证明这句话的错误，“欲望是能够被控制和战胜的”，像这样成为前面那条规则中的否定词和if，毕竟陛下是修订规则的神…之一<br>就想说是在常人无法承受将要屈服的时刻，他的神力才会突然发动 这样子</p>
+<p>就是说陛下是“无法被改变的，”毕竟他是规则。<br>被改变意味着他的死亡。</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>The Coolidge Effect and seeking novelty（猎奇）: The Coolidge effect is a biological phenomenon seen in animals, whereby males exhibit renewed sexual interest whenever a new female is introduced, even after sex with prior but still available sexual partners. To a lesser extent, the effect is also seen among females with regard to their mates.<br>{注：这是10+年前（2012的TED）的文献（2008）}</p>
+</blockquote>
+<p>Digital Sex（Pornhub类）：</p>
+<p>●Alone<br>●Voyeurism<br>●Clicking<br>●Searching<br>●Multiple tabs<br>●Constant novelty<br>●Shock &amp; surprise</p>
+<p>Real Sex：</p>
+<p>●Courtship<br>●Touching<br>●Being touched<br>●Smells<br>●Pheromones<br>●Emotional connection<br>●Interaction with a person</p>
+<p>但是文字作品（黄文）而言…或许可以模仿这些Real Sex, Triggered by imagination，所以并不算完全意义上的Digital（思索）</p>
+<p>Contimuted consumption -》Structural brain changes【成瘾（不仅是性成瘾）行为真的会改变大脑构造】:</p>
+<ol>
+<li>Numbed pleasure response（除了这件事之外的所有事都枯燥无味）</li>
+<li>Hyper-reactivity to porn</li>
+<li>Willpower erosion</li>
+</ol>
+<blockquote>
+<p>ED（Erectile Dysfunction）（阳痿）“It starts with lower reactions to porn sites. Then there is a general drop in libido, and in the end it becomes impossible to get an erection.”</p>
+</blockquote>
+<p>咩咩在微笑。</p>
+<hr>
+<p>喔以及阿卢还是会画画，很会画画。</p>
+<p>一开始是想写那个P5的crossover，写陛下对线把他看成鸡的入侵者，但是这个就是攻击性太强了，反而显得作者（我）主观意愿太强，没有隐身，很low。</p>
+<p>所以后来就总结了一下这个故事的核心点：</p>
+<ol>
+<li>陛下要对线把他看成鸡的入侵者，最好不能是陛下直接骂，否则会很low（如上所述），最好是入侵者自己意识到自己的错误（HE）。然后根据AU不同，陛下的反应和性格也会不同。</li>
+<li>入侵者是真的把他看成鸡，因为他们谜之自信且懒得去了解他，就只想把他当成鸡去操，并且对这点无自知</li>
+<li>入侵者不能是原创角色否则会很明显（如上所述），如果是反派角色就会BE。</li>
+<li>泪点向，但是是HE（谁来诉说你的故事）（由3决定，如果是正派人物就是HE，如果是反派就是BE）。但我私心是想HE的，而且BE的话搞不好会变成纯黄文（？）就是说要写短篇的话，背景不好交代，毕竟操他的人并不关心也不想过问（长篇倒是可以）。</li>
+<li>为了更好的切合主题，陛下一开始要写成欲拒还迎，表面稳重但内心欲求不满的大胸萝莉（乐）</li>
+</ol>
+<p>汉密尔顿这个谁来诉说你的故事，一开始我想的是其实是指夫人对陛下“现在请你安眠，由我传颂你的故事”（毕竟主唱也是位夫人），然后结合上面的核心点，就想是不是可以让阿卢来写他的传记，但这就意味着陛下可能已经无了（ @国王已逝 @Re），但我还是想看陛下还在世时对此的反应，而且 @Re 的话更像是针对研究过空洞但反对陛下的那些人（对陛下理解“错误”的），而不是现在根本就无心去思考空洞的人（根本就对陛下没有了解/了解的尝试）。</p>
+<p>所以现在就想的是陛下在写夫人的传记（没错，反了过来）夫人早已过世（这里又开始像 @白咖啡 ），然后卢瑞恩作为一开始的反派（就是陛下（我）要diss的人）和陛下进行互动。</p>
+<p>就和 @白色魔术 的AU很接近。</p>
+<p>但用的是圣巢的背景。</p>
+<p>就可以把原AU中可以停止陛下将对方被动染白的条件定成“陛下是否认为对方足够了解他（陛下是否接受对方作为自己可能的伴侣（而不是一夜情））”“陛下是否认为其（可以是人事物甚至是概念）需要改变”<br>将概念染色就是将其变得…呃，更接近纯白的概念？</p>
+<p>所以大致的故事梗概就是：一开始陛下在阿卢眼中就是“欲拒还迎，表面稳重但内心欲求不满的大胸萝莉（乐）”，他就十分嫌弃他（或者说其实内心是欲火熊熊的），只是把他当鸡，但也是说习惯了目前乌烟瘴气的政界所以也能接受（？），就是想着“真是肮脏啊，但是爷喜欢（？）”，但后来在准备和他做的时候（比如陛下去洗澡）突然就发现了陛下收集的简报、信件、文件，是在给夫人写传记。然后陛下之前也在很反常于自己性格的（开始社交，放下身段，克服恐惧，把自己置身于权威之下（包括心甘情愿被操））来帮夫人做完她未尽的事业（“I ask what would you do if you had more time”“Have I done enough？”）</p>
+<p>然后阿卢设定是效忠于辐光的，所以虽然保留了他的核心（忠诚+彬彬有礼），但对陛下并没有特别的感情（一开始），而且也是因为陛下一开始给他留的印象很不好所以他也很看不起他（可以参考阿卢对团长）。可以走一波起义的设定。</p>
+<p>相当于陛下献出了自己的故事（并没有人会去写他的故事），来成全夫人的故事（？）</p>
+<p><del>（夫人是孤儿院院长，陛下就也想当院长，还在向团长写申请书）。然后接着就发现陛下其实不只是一只鸡，他也是很完整的一个人（虫虫）。以及夫人喜欢花和榕树，所以陛下想在自己的孤儿院里种榕树，种满花、</del>（这个点可以再想想）</p>
+<p>夫人是被暗杀的，她原本是有感于陛下所受的不公待遇，正在做很多政治活动，包括了争取像陛下这类“色彩孤儿”和雄性虫虫的利益，夫人的死是很突然的。然后夫人也是孤儿，她是和陛下在一个孤儿院幼驯染的。夫人本人是全色盲+昼盲，然后陛下就也在用第二身份（研究员）潜心研究如何治愈/预防色盲基因的工作，但这一点在写的时候是作为压轴，就是不会作为他的第一身份（政客（？）），大概就是以“推广新的眼科疫苗/药/政策”的眼科专家这样的缘由去见阿卢（参加饭局）的，但这只是一个敲门砖，他的真实目的是要宣传“色彩孤儿”（或其他人）的利益，而且一开始也不会说他自己就是“色彩孤儿”。</p>
+<blockquote>
+<p>昼盲：<em>昼盲症通常伴有畏光、视物不清以及视力下降等症状。</em>昼盲症是含糊不清以及视力下降的症状。白天失明的主要表现是患者的<em>视力</em>与明亮环境中黑暗环境中的视力形成对比，在黑暗环境中视力正常，但在明亮环境中视力较差，锥形细胞用于感知明亮的视觉。患者黄斑区及其周围的锥体细胞发育异常或传导障碍，疾病可能会复发。白天患者的视力增加或模糊，白天瞳孔甚至模糊。</p>
+</blockquote>
+<p>这样的话就很脱离 @白色魔法师 的原设了。陛下就是某大学眼科医学小研究员。</p>
+<p>陛下有一只小前辈，但是是寄养在赫拉家了（x）。</p>
+<p>（操 突然又想到忠犬八公。就那种，其他人都懂得move on，但它不会懂，的feel）</p>
+<p>阿卢是陛下前进路上的一个高官（或者也没那么高）。高官的话这里设定是很腐败（毕竟连陛下他们的权力都争取不到，夫人就是触动了他们的利益而被暗杀（可以是因为宣传其他法条而被暗杀，不一定只是“色彩孤儿”）），基本模式就是饭局、喝酒、然后开房。虽然不会让阿卢像那些宅男这么不堪，但可以通过饭局上的各种暗示（陛下也会默许）来旁敲侧击这些行为：</p>
+<ol>
+<li>被肆意玩弄</li>
+<li>毫不关心他的个人背景/意愿</li>
+<li>会对着他的某个部位流口水/赞不绝口</li>
+<li>表面上捧着，但其实毫无尊重</li>
+<li>把他当作自己可轻易获取的资源（自己的后宫）</li>
+<li>把自己当作主角，自恋，先入为主地认为陛下会接受他并享受他</li>
+<li>喜欢和陛下玩（国王/父子）play，说他屑然后惩罚他（啊这个可能有点露骨了）</li>
+</ol>
+<p>然后夫人虽然是纯白的榕树，但是这并不是陛下引起的，那时的白夫妇已经互相接受了。只是因为夫人本来就是白色，所以她不害怕陛下。陛下也不害怕她。而且即便变白了，也看不出来。</p>
+<p>所以夫人的眼睛还是蓝色，并没有被白化。</p>
+<p>（操，突然想到Beastar就那个兽人漫画，里面那只兔子就是因为知道自己就是弱者（食草动物），然后被主角狼帮助之后，一被暗示就自觉地脱了衣服，但其实主角狼只是想喝杯奶茶）</p>
+<p>然后陛下其实对生活就是，也是“it’s only a matter of time ”了</p>
+<p><strong>感觉剧情有点土（指肯定有人写过），但也就是一个感情宣泄，就不深究了。</strong></p>
+<blockquote>
+<p>“…你想听听她的故事吗？大部分人都毫不关心。”</p>
+</blockquote>
+<blockquote>
+<p>“那你的故事呢？我想听你的故事。”</p>
+</blockquote>
+<p>陛下在做的时候会（装作）很享受这一切（毕竟是大胸萝莉（乐）），很懂事，很明事理，也会去注意对方的要求（比如进行角色扮演），来隐藏自己的真实情感（其实是很厌恶这样的自己，而且夫人也会觉得很悲伤的），以争取高官（阿卢）的信任，让他们觉得自己人畜无害。他还会和阿卢很开心的聊起来之前的经历（？）。而且这种行为模式是他自己也没有意识到的（只会有生理反应（比如在厕所呕吐））。总之就是会让阿卢（读者）认为他就是一个肤浅的黄文角色（可以当作黄文pwp的一种仿写（当然只是写前戏））</p>
+<p>但在平时他还是很矜持的。</p>
+<p>所以这篇文是伪装成pwp的吐槽pwp的宣泄文。</p>
+<p>pwp的点在于：</p>
+<ol>
+<li>强烈的权力压迫：阿卢（连带上辐光[见4]）是上位高层，陛下作为一介草民（而且因为夫人去世自己带娃生存压力很大，还抛弃了自己孩子（其实是交给了赫拉，他并没有抛弃前辈，只是为了调戏他那些高官简化了过程）<del>而很低自尊（我的拿手好戏）（也可以并不是低自尊，只是被高官们骂的低了自尊，到时候再看）</del>并不是低自尊，他其实很有心气，在完成夫人遗留成就的时候也是会自我认可的，只不过是知道政界全靠床上功夫，所以强忍不适而且还装作享受其中（这里可以继续圆，也可以是一开始很有心气的陛下被调戏，重点就是前面要写成pwp就行））因为有求于阿卢而要取悦于他，阿卢也是因此而看不起陛下</li>
+<li>性暗示：饭局阶段的时候高官们会各种调戏陛下，然后陛下也会以pwp的那种性格来反应（怎么涩怎么来（可以说欺骗读者认为作者也在享受其中<strong>（并没有，我一想到有人只是止步于pwp我就恨得牙痒痒（？））</strong>））</li>
+<li>陛下真的很美（但我真的不会写）</li>
+<li>连带上辐光的话，阿卢可以用辐光来压陛下，就比如“你难道要政变吗？”这样的。或者说辐光也已经注意到了陛下所以安排阿卢教育一下他</li>
+<li>陛下必须穿着衣服，戴着手套做，而且会拒绝任何身体接触（除非有保护措施（比如戴套））（不然对方会变白）。他会遮掩这一点，说这样会增加“情趣”，而且为了双方的安全考虑，这样也不会留下任何痕迹。而且他也不想因为他也不想暴露自己是“色彩孤儿”（会被杀）虽然其实一般被发现也没什么，只是会加剧对方对他的施虐（而且也看不起他）就会用非接触方式玩弄他。（可以直接把陛下的手套扯下来自己戴上（x））基本上就是为了防止被染色她们会脱下陛下衣服（和手套）穿自己身上 然后让陛下裸着（口意）</li>
+<li>醉酒</li>
+</ol>
+<p>结果最后爱没做成，他们唠嗑了一晚上。</p>
+<p><strong>操，大纲写了3000字，我不会写正文了</strong></p>
+<p>三千字。</p>
+<p>↑上面是觉得2997字太强迫症而已。</p>
+<p>后面吃饭的时候yy了一下，就感觉怎么写都很变扭，就有种“你们不要说我这个是pwp但其实我还是有p的你们看”这种感觉，而不是“你以为这是pwp？并不是！好好看看这只丰满的陛下，觉得陛下pwp的傻逼男，你们难道不愧疚吗？速速反思”的凶凶</p>
+<p>写一些前置设定。</p>
+<p>大概就是，夫人、辐光和陛下是远古神明，（所谓的色彩魔法就是古神力量？）夫人就是生命榕树，创造了最初的生命（就是说她即便无了生命也会延续，虽然她不会无，她更像是化成了一个概念和法则（像圆神）），辐光赋予了生物的本能/野性，是求生的意志，而陛下是理智、进步的象征，他的诞生就已经在这片国度上埋下了理性、自由、独立的种子。夫人和沃姆是互相扶持的恋爱关系（但不明显）。在沃姆形态的时候，辐光和陛下因为三观不同爆发大战，以沃姆的失败而告终，可以看做是陛下带领的起义军虫子们战败。辐光最终找到了陛下的庇护所，将一切都毁之殆尽。</p>
+<p>护送老弱病残离开的夫人折返战场，寻到了沃姆的尸体，一番悲痛后，她发现了陛下转世的卵，于是怀着守护他的心愿，她怀抱着卵在龙巨大的尸体上生根化作了一颗同样参天的榕树。</p>
+<blockquote>
+<p>你和我说你是不会死的，你说你会化作虫型重新回到这里…我会一直等下去。</p>
+</blockquote>
+<p>散着温柔白光的卵深深嵌于榕树的白冠之中，靠着榕树的力量滋养着，而榕树也被称作自由之树/铁树，因为她已经成为了一座地标，在她周围就可以重获理性（注意不是说赐予理性，理性是陛下诞生就随之诞生的，只是辐光用自己的力量将其压抑了而已，所以看起来像是她也能赐予理性一样）。这棵树就成了自由的象征，在其下也有聚落。期间辐光多次对树进行焚烧、攻击（用虫群），但最多只能将村落付之一炬，树在被烧尽之后，来年依然发了芽。但辐光对此就是表示“你活我就烧。”</p>
+<blockquote>
+<p>It’s a tree with an iron heart.</p>
+</blockquote>
+<p>准备设定全篇用钢铁代表陛下，树木代表夫人，阿辐…不晓得阿辐是什么材质（乐）</p>
+<p>不久，树的根垂下天际，落在地面上，便诞生了新的白榕树村落，她们其实都是夫人的一小块碎片（注意是传承而不是脑控），她们的潜意识就是要保护树，因为树守护着这个世界重要的宝物。她们会使用守护魔法来抵御虫群的袭击。奥莉薇娅便是村落的一员，是很自由不羁的小树。</p>
+<p>又经过了十七年，预感到陛下即将孵化（胚胎将树吃尽然后从最上方羽化，那其实可以说不是卵而是茧，更像是羽化其实，但后面随着陛下长大他会继续羽化。可以说首先是沃姆样的蠕虫羽化成了虫型，然后成年陛下会羽化出翅膀）的树召唤了自己的子民——刚成年不久的小榕树奥莉薇娅，引她爬上了树冠。在触及卵的一刹那，卵散出强烈的光，开裂了，</p>
+<blockquote>
+<p>她放空一般望着这枚宝石，忍不住伸出枝条去碰触。半透明的卵壳内，一只小小的爪子回应了她的触摸，在接触的一刹那，它散出了刺眼的白光，将她也包裹其中。一道裂缝突然横贯其上，伴随着清脆的咔嚓声。</p>
+<p>一只从未见过的造物从中探出头来，是一只白色的小虫子，却有着长长的尾巴。她一时间觉得自己应该感到恐惧，但她并没有。她反而听从内心的指引，轻轻拂去他面上的碎片，将他从中抱出。</p>
+<p>一滴眼泪突然滴到了他苍白的面颊上，她注意到时，原来是自己在哭。</p>
+</blockquote>
+<p>整棵树其实从陛下即将羽化时就已经濒临死亡了，从根部开始腐败溃烂，干枯萎缩，最后轰然坍塌（虫蛀的空心树，因为是陛下吃的），她已经完成了自己的使命。村民们找到奥莉薇娅的时候，她怀里紧紧抱着白色的幼王，安然无恙。</p>
+<p>陛下孵化之后，奥莉薇娅和村民们一起照顾这只小虫子（她们一直以来抵御的对象（乐）），这期间奥莉薇娅作为夫人选中的转世，相当于逐渐收回自己的力量和记忆，陛下也在逐步找回自己的记忆。在陛下成年羽化后不久（三年左右）奥莉薇娅回到村庄，发现整座村庄变成了一座死村。村民们纷纷枯死，但死状安详。奥莉薇娅的父母还在死前给孩子留了信件。让她带着陛下向西走（圣巢）。</p>
+<p>这时的她恨夫人、恨树、尤其是恨陛下。她认为陛下是一切的罪魁祸首，是杀死村人的元凶。但每次看到陛下的时候，她都会泛起足以蒙蔽一切的爱意，因此她痛苦纠结了很久（她以为这是强加于她的，但其实不是，只是她也不知道该如何处理新获得的感情，所以有排斥感）。</p>
+<blockquote>
+<p>她猛地把一个花瓶砸向他，”你走！我不想再看到你！”见他没有动作，她又去推他，把他推出门外，“你走啊！！”她哭喊着。</p>
+<p>静静立在门外的沃姆将长尾逐渐垂下，环成一个圈。奥莉薇娅知道，这是他低落的表达，哪怕他并不愿意承认。</p>
+<p>她早在百年前就知道了。</p>
+<p>她咬着牙，“…！”转过头又看见自己和父母的合照。</p>
+<p>“你们真自私…”她狠狠地说着，“为了成全自己，就不惜牺牲别人吗！？”她又抓起一个物件，啜泣着，“…我恨你…我恨死你了！！”但最终和它一同摔落在地面上。她大哭起来，泪水不断从她脸上淌下。</p>
+<p>但他看向她的眼神依旧如此坚毅，从未改变过。</p>
+<p>“啊啊啊啊——！住口！”她大叫起来，“我恨你！我恨你！我恨那棵树！我恨这只虫子！你闭嘴！你闭嘴——！”她声嘶力竭地哭喊着，全身都颤抖起来。</p>
+<p>她猛地站起身冲到门口，摔上了门。让自己无力地顺着门边滑下。</p>
+<p>但是在黑夜逐渐侵袭的时候，门还是拉开了一道缝。沃姆蜷缩在墙角，在风雪中把头埋在了尾巴圈里。</p>
+<p>“…”她望着对方的睡颜，脑中浮现的全是那只巨龙温情的眼神，“….”她默默走出去，没等对方反应就狠狠地抱紧了他。</p>
+<p>“…我不会再失去你了…不会连你也失去了…”</p>
+</blockquote>
+<p>就是莉薇会认知失调。</p>
+<p>然后原本陛下是会失忆的，但他告诉夫人要替他传承自己的记忆，（夫人需要把陛下养大）</p>
+<blockquote>
+<p>我迫不及待地想要告诉你，每一天都在期盼，和你说你其实是一只伟岸的白龙</p>
+</blockquote>
+<p>但是后来夫人带着陛下来到圣巢的途中，发现辐光的势力也壮大了很多，任何忤逆者都会被绞杀追击，所以她瞒了陛下很久，只是把这些记忆写成了篇章（信件），后来就想代替陛下成为起义的领导者，“替他去死”，但最终还是死了也没能告诉他。他们在圣巢隐姓埋名生活了十年左右（夫人是有意的，陛下是不清楚内幕）。然后陛下由于，嗯，夫人的各种保护，变得就比较内向。</p>
+<blockquote>
+<p>可是我不想再失去你了…至少不会再看着你的尸体倒在我面前。</p>
+</blockquote>
+<p>十岁出头的夫人带着陛下在冰雪中被冻僵（陛下没有被冻僵），然后被孤儿院发现，收养了。至于纯色孤儿，可以说是神明的象征，也可以说是异能者。但异能者的起源也应该是神明。大概就是，类似于被神明赐福吧。</p>
+<p>阿卢的父母就是第一批追随陛下的义士领袖，不满于辐光重男轻女的母系社会而脱离了辐光的控制，在陛下的带领下新建了一个聚居地。阿卢见证了沃姆被辐光击败的一战，<del>但当时的阿卢还只是一颗未发育完全的卵。（这样就可以写阿卢的兄弟见证）</del>这件事给他留下了很深刻的印象，但他并不理解究竟发生了什么，他一直认为这是一场噩梦，沃姆是邪恶的龙。(这里会<del>比较</del>很像 @笼 )</p>
+<blockquote>
+<p>“你怎么还在这里？还不快走？带上孩子们快走啊！”</p>
+<p>“走？与其被她们统治，还不如我们一起死在这里！”</p>
+<p>“你疯了吗？？！”</p>
+<p>“我宁可亲手杀了他们，也不会让他们落入那种虫子的魔掌！”</p>
+<p>他抱着自己最爱的那根小木棍，茫然地看着父母激烈争吵，门外的世界扬起飞沙逐渐化为灰烬。巨大的龙抬起头颅，又在金光中倒下，巨吼回响不断。</p>
+<p>“…妈…妈妈…”他不由得害怕起来。</p>
+<p>“卢！”哥哥的声音从墙角的一边传过来，“傻愣着干什么！快过来！！”</p>
+<p>他转头看向那个角落，连忙循着声音跑过去，但仍在学步的他没跑几步又跌倒在地。</p>
+<p>“快过——啊！！”尖叫声，他吓得颤抖了一下，“不…不要…啊——”</p>
+<p>“…哥哥…?”再也没有了动静，他爬起来，身后传来一声尖叫，父亲嘶吼着母亲的名字。转过身，母亲残破的尸身被数根长矛穿刺，被猛地扯出窗外。</p>
+<p>透过那个洞，他能看到父亲身后的废墟，就像和哥哥在玩沙堆。那不断向下流的，是血吗？“妈妈…?爸爸…?”他凑到父亲近前，伸出爪子索要怀抱，“爸爸…”父亲艰难地伸出手，指骨已经变形，他用手掌根部抚上孩子的头，粘腻的血让他感到一阵不适。他看到父亲下颚颤动着形成了一组口型，但取代父亲磁性声音溢出的，只有血，“…——”</p>
+<p>一声巨响，大地在颤抖，他站立不稳，跌坐在地上，他下意识护住头，“啊！——呜呜…”他扑入父亲怀里，钻进他的臂弯，开始啜泣。</p>
+<p>“爸爸…——爸爸…——爸爸…——！”</p>
+<p>他不停地哭喊着，声音愈发嘶哑，“爸爸…我好害怕…妈妈呢？爸爸——妈妈呢？”</p>
+<p>他的眼前突然明亮起来，温热的光在他眼中跃动。他依旧缩在父亲的怀里，颤抖着转过身。</p>
+<p>“…真可怜啊…”</p>
+<p>“…妈妈…妈妈…”他嗫嚅着，胆怯地望向俯视着他的高大神明。将父亲的衣衫抓的更紧。</p>
+<p>“已经没事了哦…坏人和恶龙都已经被杀死了…”她蹲下身，轻轻将他抱起。</p>
+<p>他瑟缩了一下，但没有反抗，眼神流连着父亲的怀抱，只是将爪中的小木棍握得更紧了些。</p>
+<p>“是领袖的孩子吗？”她看了一眼猛地抽动了一下的雄性虫子，看着他暴怒的眼睛逐渐变得无神，又转过目光慈爱地微笑着。“你叫什么名字呀？”</p>
+<p>“…卢…卢瑞恩..”</p>
+</blockquote>
+<p>小时候的阿卢就是一只球（乐）。摔倒了会缩起四肢然后在地上滚（？）。<br>（这里本来是为了强调阿卢的苦（无助）所以写的阿卢转过头大家就都死了的。但是后来考虑到辐光收留阿卢的动机所以给阿卢父亲留了一口气（也被辐光苟延残喘就是为了让他亲眼看见自己孩子变成性奴这样子（对不起）。））</p>
+<p>（这就意味着从夫人成树到建立自由村再到陛下孵化再到陛下长大再到他们来到圣巢定居就是阿卢长大的时间，以及卵孵化的时间要注意对应上陛下的年龄，最后效果是两人年纪差不多，阿卢比陛下大4-5岁左右：阿卢30岁左右，陛下25岁左右）</p>
+<p>咩龙 17:13:18<br>然后呃 这次在适配阿卢设定的时候 就想到 呃 作为陛下起义军领袖的娃被辐光带回来养大这样的普通设定</p>
+<p>Watcher@CityOfTears 17:13:21<br>…？</p>
+<p>咩龙 17:13:56<br>就想到还是一个球的阿卢在晚上被打雷吓然后去找辐光要抱抱的</p>
+<p>Watcher@CityOfTears 17:14:00<br>…？</p>
+<p>咩龙 17:14:13<br>/移开视线</p>
+<p>咩龙 17:14:38<br>@Watcher@CityOfTears 你不要这样 你最后遇见陛下 还是正常了的</p>
+<p>咩龙 17:16:44<br>然后他就理所当然地对辐光特别服从/</p>
+<p>咩龙 17:18:32<br>而且还会因为辐光变得专注陛下而敌视陛下</p>
+<p>咩龙 17:27:11<br>而且还会很看不起陛下（因为辐光给了阿卢首相的一些权利（但其实就是她男宠））但阿卢觉得自己并不只是男宠））就从外表上看还是很正常的一只卢（）</p>
+<p>【这里陛下（在pleasure house）初见阿卢也会以为阿卢只是辐光的另一个奴隶，穿着高雅的服饰不过是在完成RP扮演的任务（而且确实是如此）】</p>
+<p>【童车！童车！童车！】</p>
+
+  <span class="spoiler" onclick="this.classList.toggle('spoiler')">
+    <span class="spoiler-blur ">这里就是说辐光本来那天在和她男宠做，然后和沃姆&amp;起义军战争打完后都快把阿卢忘了，结果阿卢因为被打雷吓到所以过来推辐光门（她没理由锁门，门是男宠掩上的），说自己被打雷吓到，然后辐光就笑眯眯问阿卢是不是想和我睡，然后阿卢就点头，然后辐光就把他抱上床，开始手把手教他怎么做。让她男宠舔阿卢然后，还教阿卢自己把下体撩起来让别人舔这样子、、、 她男宠还很迟疑因为“…但是陛下，他还只是个孩子——” 最后辐光才想起来问阿卢名字。 还送了他震动器做礼物，说想变的舒服就用这个按摩下体（捂脸）</span>
+  </span>
+
+<p>后来就是一直在pua阿卢，就告诉阿卢他不能去和其他小虫子玩因为他们都不会喜欢阿卢，只有辐光会接受卢这样子。然后还一直宠着阿卢，哪怕是蛾子也不放过，就是想让卢变得，怎么说，变成一只霸道冷酷但只对自己俯首称臣的卢。</p>
+<p>其他设定不变。夫人依旧是先天性全色盲，然后陛下是眼科研究员（？）也是学者，在写夫人的传记。阿卢是学者+首相（的工作，但没有头衔，他只是辐光的男宠）。</p>
+<blockquote>
+<p>卢瑞恩推了推眼镜，“我看到这些用古神语写成的文章…——”</p>
+<p>“…这是我和她小时候玩游戏用的暗号。”</p>
+<p>“…?”</p>
+<p>“莉薇走后，我已经看过了，是传承于白榕树一族的，巨龙与神树的神话故事。”</p>
+<p>“神话故事？”</p>
+<p>“龙死后，树将他的魂灵保护了起来，”沃姆抬起头，手镣哗哗作响，“莉薇总是和我讲起女祭司历经千难攀爬到巨树上拿取救世之种的故事，但实际上这棵树并不存在。”</p>
+<p>“…你确定吗？”</p>
+<p>“…只是神话故事罢了。”</p>
+<p>“…但圣巢的档案馆里有相关的文件..——”卢瑞恩说着，翻开自己的笔记，“圣巢曾不止一次的下过“焚烧巨树”和“派遣虫军”的命令。”</p>
+<p>“…”沃姆皱起眉，“…所以，辐光成功了？”</p>
+<p>“…不知道，但从记载上来看，确实在十几年前，命令就中断了。”他又指着那些古老的文字，“你确定这只是孩童的游戏？这些文字可以追溯到神明创世的年代。”</p>
+<p>“…我没有多想，是莉薇教给我的。”他不知缘由地紧张起来，“…即便树真实存在，那龙——”</p>
+<p>“我记得那只龙。”卢瑞恩的神色黯淡下来。</p>
+<p>“…什么？”</p>
+<p>“我记得它的咆哮声。它砸向地面时，整个世界都在颤抖。”</p>
+<p>“…”</p>
+<p>卢瑞恩将手放在桌面上，“…我还太小，我的父母在争论着什么，哥哥让我躲起来，然后…一切都变了。”</p>
+<p>“被女王陛下抱起来的时候，我看见了那只白龙，它的巨口，锋利的牙齿，巨大又无神的八只眼睛。”他不由得战栗起来，“…那是我最恐怖的噩梦。”</p>
+<p>“…那么，龙确实死了。”</p>
+<p>“…陛下说，龙带来了混乱和灾难…”</p>
+<p>“…也有可能是新的秩序。”</p>
+</blockquote>
+<p>以及脑到了陛下虽然在重女轻男社会依旧潇洒的龙威：</p>
+<blockquote>
+<p>“啊啊啊——！”不远处传来一声尖叫，让奥莉薇娅立刻拉住了身边的沃姆。</p>
+<p>“救命！救命！！！”一只雄性的甲虫衣衫褴褛，突然从转角冲出来，躲闪着紧随其后晃动着巨颚的军蚁。</p>
+<p>一只雌性的年轻蛾子追在宠物军蚁后面：“咬啊！咬死他！”</p>
+<p>路过的蛾子纷纷给他们闪开一条道路。眼见这野兽向沃姆冲了过去，奥莉薇娅迅速俯下身将沃姆抱起，退后了几步。</p>
+<p>所幸那军蚁并没有多作逗留，循着主人的命令继续紧咬不放。</p>
+<p>正在奥莉薇娅愣神之际，那蛾子“咚”地撞到了她身上，趔趄几步，口中大喊道，“不长眼的荡妇，快给老娘让路！——”说着，她继续向前冲过去。</p>
+<p>但一只白色的长尾猛地缠上了她的脖子，她被扯回原地，冲击力让她差点窒息。她呛了几口气，想要破口大骂但毫无还手之力。奥莉薇娅也感到了那阵冲击，还没意识到发生了什么的她下意识地将沃姆抱的更紧了些。</p>
+<p>“…你竟敢对她如此无礼？”沃姆的语调依旧凌冽，眼中只剩下深邃的黑。他将束缚逐渐收紧，看着对方的脸失去血色。</p>
+<p>“…沃姆——”奥莉薇娅立刻出言制止，她看看那只长尾，推了推怀里的沃姆，带着一丝慌张，“沃姆，把她放开…！你这样会出人命的！”</p>
+<p>沃姆没有回答，只是紧盯着虚弱挣扎着的蛾子，“…咎由自取，”随后轻哼了一声，甩开了尾巴，收回自己身边。</p>
+<p>“咳咳——！”蛾子激烈地咳嗽着，呼吸着失而复得的空气。</p>
+</blockquote>
+<h2 id="补充："><a href="#补充：" class="headerlink" title="补充："></a>补充：</h2><p>陛下的长尾看起来像是有自己的思想（可以理解成精神分裂，在这里是按照猫那样的陪伴宠物来写的），这是因为陛下在失去夫人之后将自己的尾巴当做了夫人的藤条【也可以用在其他au】</p>
+<p>“沃姆”在辐光治下的圣巢是骂人的话，类似于“土狗”“狗蛋”（？）加上重女轻男，男子贱养，所以陛下名为“沃姆”并不会引起怀疑。（孤儿院院长还给他改名怀亚特但作废）</p>
+<p>夫人和陛下都强调的是个体性，夫人是生命之间的传承，陛下是自由的坚毅（？），所以夫人在播种自己子嗣的时候并不是像奥莉薇娅所想的那样，强迫村民们守护巨树（莉薇其实也不是真的如此认为，她当时只是太过悲愤）。树（夫人）播种之后，向后代传达了信息，并且引导他们进行思考，在完全知晓既定未来之后，最终决定自己的去留。在村落中的小树会在成年礼（一般树龄3-5岁）的时候独自前往巨树，接受树的引领。认为自己不想接受使命的树就会离开村落。莉薇其实是知道总有一天村庄会毁灭的，但她自以为，为了远大的理想，自己会欣然接受命运（也是以为她会和大家一起死，自己不会被选中），但其实并没有做好准备。夫人（树）其实也是知道这一点的。或者说正是这个缺点让莉薇最终被夫人选中，因为她是最接近凡人的小树：凡人无法预见到遥远的未来，但灾难过后他们依旧有能力负重前行。引导莉薇爬树也是在暗示她之后，她自己作出决定的。因为树真的很高。真的有可能摔死（虽然树确实会去接她）。也会化成莉薇母亲来“阻止”莉薇。<del>甚至在奥莉薇娅将沃姆带下树之后，她依旧可以选择将他遗弃（当然没有，陛下这么可爱），由希望抚养他的树来抚养。</del>如果莉薇并没有表现出对沃姆的喜爱，树不会让她将他带下。</p>
+<p>以及榕树一般是长不高只是很宽大的。但是夫人这棵树因为汲取了沃姆巨龙的力量所以长得很高，连鸟都飞不到那里。虽然在普通榕树的高度范围是独木成林，但继续向上就是龙（沃姆）的形状（其实有点冬虫夏草）。而且其实夫人也是满足了陛下想要飞飞的愿望，陛下真的会被高处撩（想起自己还是巨龙的时候）。</p>
+<p>以及奥莉薇娅其实并不完全是夫人（虽然也算是异体同根）。后期成熟的她也不会纠结于自己是不是夫人。</p>
+<p>夫人之所以选中奥莉薇娅是因为她（莉薇）十分看重家人、朋友和血脉传承，而且有极强的同理心（懂得感情）。夫人认为这是即将化为凡人之躯，以凡人之躯思考并为他们争取利益的陛下十分需要的。</p>
+<p>父母写给莉薇的信，其实他们“死后”和莉薇真的是合为一体，但只保留了莉薇的凡性：</p>
+<blockquote>
+<p>…</p>
+<p>树已经给予了她所拥有的一切，余下的路就要靠你们走出了。</p>
+<p>不用害怕错误，因为我们（凡人）本就不完美。</p>
+<p>带着龙向西走吧，我们将和你同行，永远守护你们。</p>
+<p>…</p>
+</blockquote>
+<p>然后莉薇向沃姆发火之后，也意识到自己的“错误”（是说从“人无完人”的角度而言这其实并不是一个错误）和责任：</p>
+<blockquote>
+<p>他闷哼了一声，伸出爪子捂上自己被砸中的位置。</p>
+</blockquote>
+<blockquote>
+<p>一道泪痕从他脸上划下。</p>
+<p>“…”奥莉薇娅依旧抓着桌上的摆件，欲向他砸去。“…啊…”但她突然没了力气，说不上来的复杂感情突然压得她喘不过气。</p>
+<p>“沃姆…你…你没事吧..?”她颤抖着，“我..我不是故意的…我不是故意要…——”</p>
+<p>沃姆的尾巴缩成一团，他缓缓蹲下身子。</p>
+<p>她猛地跑过去扶住对方，不让他倒下，“你怎么了？你怎么哭了？你从来没有哭过…”她的声音也逐渐带上哭腔，“你不要吓我，很痛吗？很痛吗，沃姆…”她伸出手去抚上沃姆的伤口，“对不起，对不起对不起对不起——！”</p>
+<p>你为什么没有阻止我？但是树没有任何回应。</p>
+<p>“…呜…”他的哭声很细小，就像新生儿在试探一般。</p>
+<p>龙从来没有哭过，他是不会哭泣的，他是不该哭泣的…是不是自己铸成了大错？</p>
+<p>“你不要哭了，求求你，你不要哭了好不好?…对不起..我…我不应该这么冲动的…我…”她慌乱地道歉，紧紧将他拥在怀里，他的哭声让她心如刀割，充满悲伤、愧疚…和恐惧。</p>
+<p>“你不要再哭了…呜…”她也呜咽起来，“你让我好难受..沃姆，你让我好难受…求求你…”</p>
+</blockquote>
+<p>然后两只就抱在一起哭。</p>
+<h2 id="正文（随意写阶段）"><a href="#正文（随意写阶段）" class="headerlink" title="正文（随意写阶段）"></a>正文（随意写阶段）</h2><p>艹 我看到有那种 一个dom同时捆绑整两个sub然后两个sub欲醉欲仙的时候不由得互相亲吻（两人被故意面对面捆绑 放得（？）很近）<br>就是那种 啊 啊 不知道怎么形容 反正就很香<br>就 很 适合这篇里的君臣（啊）</p>
+<p>其实不太想去涉及什么政治的啊历史的啊 那些 就我也不擅长所以就不出丑了、</p>
+<p>可以有一个设定，就是雄性的虫子是没有姓（所以沃姆只能是“沃姆”）的，只有和雌性配偶成婚后才会附上她们的姓名</p>
+<p>我感觉另一个讨厌那些傻逼男的点 就是在他们玩过陛下之后对陛下的成长没有任何帮助（毕竟 呃 Se并不带Ne/Ni），可以从这个角度切入。</p>
+<p>然后虽然是想用起义那个AU（母系社会歧视雄性），但总觉的太乱了。也会涉及到什么政治的啊历史的啊 那些。或许阿卢变得邪气的原因可以是被辐光操纵这样子，毕竟象征着野性（？）然后屈服于自己的原始欲望这样子。那么大臣应该大部分是蛾子。在想对上陛下的这只要不要是辐光（毕竟懒得写很多）</p>
+<p>然后这里先定一下前面的porn的基调。就是说陛下是那种，可以想成站街女的那种，但也不能太过了，就是毕竟还是国王（国王）。</p>
+<p>对了这个AU的话，可能陛下就不是国王，然后就没有那种侵犯国王的feel了，但可以用roleplay代替。</p>
+<p>然后就变成了这个看起来像是原作canon向但其实乱的一塌糊涂的缝合怪。</p>
+<p>好吧，考虑到陛下都是研究员（学者）了，还是高科技圣巢吧。</p>
+<blockquote>
+<p>“你的力量并不是你的，而是被施舍的。可怜的是，你甚至都没有意识到这一点。”</p>
+</blockquote>
+<p>在想卢瑞恩究竟是，被操纵的恍惚状态，还是被洗脑的精英状态（？）。</p>
+<h3 id="不知他们在干什么"><a href="#不知他们在干什么" class="headerlink" title="不知他们在干什么"></a>不知他们在干什么</h3><p>（这里甚至都没有定下来蛾子就是辐光）</p>
+<p>“…你所提的这些议案，并不是没有道理…”她用爪子轻轻将纸张整齐，抬起眼盯着对面的虫子，“但，你要知道…”</p>
+<p>沃姆端坐在座椅上，看着对方将那些文件推至一边，爪子渐握成拳。</p>
+<p>“现在推行这些条令，对这个国家未免太早了些——”</p>
+<p>“太早了？”他立刻开口，但又随即注意到对方表情的微妙变化，“…有很多虫子在因此受苦，我不认为——”</p>
+<p>“你所要求的只不过是你的一己之见而已，而且…”她缓缓起身，俯视着面前的体型娇小的雄性，“…你也知道自己的身份吧？”</p>
+<p>“…我是一名研究员，我已经受过足够的教育——”</p>
+<p>“——国家很感谢你对科研事业做出的贡献，研究员，至于其他的…”她上下打量了沃姆一番，最终将视线停留在了沃姆覆在膝盖的爪子上，“…我也很钦佩你的勇气，像你这么弱不禁风的小虫子，独自闯荡，想必也吃了不少苦头吧？”她推开办公椅，不紧不慢地踱到沃姆身旁。</p>
+<p>“…什么？”</p>
+<p>“你有配偶了吗？”</p>
+<p>沃姆沉默半晌，只是抬头仰视着对方，“…这有什么关系吗？”</p>
+<p>“哦，我只是担心你被欺负而已。”</p>
+<p>沃姆蹙起眉，不自然地调整了坐姿，“…谢谢。”</p>
+<p>“像你这样的小虫子，最好尽快找一个依靠，才能立足于社会呢——”说着，她将自己的爪子轻轻搭在了对方的肩上。</p>
+<p>沃姆触电般起身，躲开对方的爪子，“…多谢你关心了，我能照顾好自己。”</p>
+<p>蛾子微微一笑，背过爪子，“那是最好的了，不是吗？”</p>
+<p>“…所以，您不同意这份提案？”</p>
+<p>“告诉我…沃姆，是什么驱使你来到这里？这不像是一个研究员该有的爱好。”</p>
+<p>“…这很重要吗？”</p>
+<p>“…不，不重要。如果你如此认为。”她继续笑着。</p>
+<p>“那么…看起来我没有继续停留的必要了。”说着，他转过身，向门口快步走去。</p>
+<p>“你能走到今天这一步并不容易，”正要触及门把手，沃姆背后又传来轻轻的笑声，“但总会有更快捷的方法。”</p>
+<h3 id="辐光（蛾子）-x-陛下（黄，可能会被萎到）"><a href="#辐光（蛾子）-x-陛下（黄，可能会被萎到）" class="headerlink" title="辐光（蛾子） x 陛下（黄，可能会被萎到）"></a>辐光（蛾子） x 陛下（黄，可能会被萎到）</h3><p>似乎有虫子叩了叩单向玻璃窗，探长的触须动了动，站起身，“有虫子要见你。”说完，他拉开椅子快步走出了审讯室。</p>
+<p>没过几秒，门又再一次打开，“好久不见，学者先生。”</p>
+<p>“…”沃姆盯着慢步进来的蛾子，没有说话。</p>
+<p>“真是抱歉，希望没有太过影响你的生活呢。”对方并没有坐下的意思，身后的门又被关上。“上次你来过之后，对你稍微做了一些小小的调查…”她轻轻说着，“没想到你还和她有这么密切的关系。”</p>
+<p>“…”杀人凶手。</p>
+<p>“你的那些思想，都是她给你灌输的吧？”</p>
+<p>“灌输？”他终于开口，但没有继续说下去。</p>
+<p>“…有趣。”她晃了晃身体，绕到沃姆背后，“我那时曾给过你建议，你没有听。”</p>
+<p>她仰头瞟向墙角的摄像头，机器的红光闪烁了三下，熄灭了。</p>
+<p>“我想听听你现在的想法。”她说着，轻轻环住他的腰肢。</p>
+<p>“！”沃姆猛地一挣，但锁在手腕的手铐立刻限制了他的下一步动作，“你在干什么？”</p>
+<p>“哦，不要再装了，你也是知道自己最擅长什么的吧？”</p>
+<p>那只爪子逐渐顺下他的腹部。</p>
+<p>“…!”</p>
+<p>“能被我相中的雄性，屈指可数呢。你应该感到荣幸才是。”</p>
+<p>“这只是你一厢情愿，不要做梦——呃！”</p>
+<p>她忽然扭过他的肩膀，让他面向自己。椅子被打翻在地，固定在桌面的手铐迫使他只得以一个尴尬的悬空坐姿，地板的瓷砖光滑无比，每一次踩空都让他的身体下沉几分，他努力用双脚和尾巴撑起自己的身体。他的手腕发出恐怖的嘎吱声。</p>
+<p>火烧火燎的痛觉传遍全身，他口中不由得漏出一两声痛苦的哀嚎。</p>
+<p>“从来没有虫子敢拒绝女王。”她冷冷地笑着，“况且，你真的以为你有的选择吗？”她抬起脚踩向他的腹部。</p>
+<p>“唔——!”桌子猛烈地震了一下，他想努力撑起身体，却动弹不得。</p>
+<p>“小小的反抗确实会让我心生怜爱…”她将重心前移，满意地听着对方的哀嚎逐渐加剧，“但不要玩过火了哦。”</p>
+<p>他想驳斥，但只有痛苦的呜咽从喉间流出。</p>
+<p>“你不是想推行那些政策吗？要是你取悦了我的话…我也可以考虑…”她撤开脚，又附身抚上沃姆的脸，皮质手套散着某种浓厚的焦味。“…不过，要是比她更早一点遇到你，或许我就不用如此伤害你了。”</p>
+<p>他立刻把脸别开，“你…你疯了吗？你知不知道自己在——！”</p>
+<p>她忽然又把爪子放到了他的腿间，隔着布料揉擦起来。</p>
+<p>“呜！”感受到敏感部位的刺激，他的身体猛地颤了一下，下意识收紧双腿，“住手！”</p>
+<p>“你不喜欢吗？你不想要像你的其它同类一样，变得幸福吗？”她附到对方耳边，轻轻低语着。</p>
+<p>他挣扎着，但回应他的只有愈发剧烈的痛楚和快感，“住手…”</p>
+<p>“作为一只雄性，你担忧的太多了…她从来没有告诉你被占有的美妙感觉吧？”</p>
+<p>“这里..可不是妓院…”</p>
+<p>她愣了一下，随即笑出声，“怎么，你想换一个地方吗？还真是考虑周到呢。“</p>
+<p>“…只有你…只有你才如此肮脏吧…”</p>
+<p>“…你说什么？”她停下了动作。</p>
+<p>“我说了…我对这种龌龊之事毫无兴趣，一切…只是你一厢情愿而已…”</p>
+<p>“是吗？”</p>
+<p>“现在放开我，不是所有虫子都会配合你承欢——”</p>
+<p>“你很不识抬举，你知道吗？你究竟知不知道你的处境？知不知道我是谁？”</p>
+<p>“这重要吗？我需要在乎吗？”</p>
+<p>她猛地拉过对方的衣领，让他又吃痛地叫了一声。“看来她对你荼毒不轻啊，小虫子。要不是你这脸蛋，你以为我会闲着没事恩赐于你？不要太自以为是了！”</p>
+<p>“荼毒…你又对你所谓的配偶们做了什么？你只不过是在玩弄他们，像玩具一样随意丢弃…你关心过他们吗？”</p>
+<p>“关心？”她的表情就像是听见了最不可理喻的笑话，“不是谁都像你那小树一样闲情逸致，区区一只微不足道的小虫子，根本不值得我在乎。我有一整个国家值得我操心，你们？只不过是单纯的玩物罢了。”</p>
+<p>“如果你所做的只有让他们停滞不前…那么你无权占有他们，也无权占有我…！”他握紧双拳，“你更没有权利来揣测我的思想，把我拉低到和你相同的档次。去找一个更合你胃口的男娼吧。”</p>
+<p>她大笑起来，“你以为我想要的是“你”？你这只虫对我而言毫无意义，只不过是千百只可怜雄性中的一员罢了…替代品数不胜数，只不过你正好出现在我眼前而已。你以为我会去管你究竟是谁？我要的只是你的身体，只是你取悦于我的反应，而且我完全有能力做到。”</p>
+<p>“如果你想要的只是一个打上几个标签毫无个性的性玩偶，请便。”</p>
+<p>“玩偶？”她的嘴角泛起一丝邪意，“你太高估你自己未来的样子了。你不会真的相信，如此微不足道的你能找到真正在乎你的虫子吧？”</p>
+<p>“我已经找到了。”</p>
+<p>“…很好。那么将其夺走就是更有趣的游戏了。”</p>
+<p>“…请便。你无法抹消一只虫子所经历的一切…除非他毫无经历可言。”</p>
+<p>她微微一笑，“你说的话真是令我费解呢，”又轻轻把对方的衣扣解开。</p>
+<p>沃姆咬着牙，注视着对方缓慢的动作，“…不要碰我…你会后悔的。”他发出警告。</p>
+<p>她笑了笑，用爪子触到沃姆的下腹，缓缓向下移动。沃姆只是盯着她的动作，忍受着皮手套的诡异触感。</p>
+<p>很缓慢地，几乎注意不到，手套从指尖开始褪色，从黑变灰，直至纯白。她看到时，已经蔓延到了根部。</p>
+<p>她皱皱眉，移开了手。</p>
+<p>“…你是他们的一员。”她神情突然严肃了几分，打量着面前的沃姆，又诡异地笑了起来，“那么一切都说得通了…很好。”</p>
+<p>“…”</p>
+<p>“你知道这意味着什么吧？”她摘下自己的手套，看看自己的手，并无大碍，又翻看着只有手套变白的部分，“…你可真的是，愚蠢又勇敢呢。”</p>
+<p>她又将它重新戴上，“没办法，原本还想之后能自由一点的…那只能将就一下了。”</p>
+<p>她再次挑逗起那微微的凸起，疼痛和快感瞬间点燃了他的神经。</p>
+<p>“舒服吗？”她笑着，又揉捏起来。</p>
+<p>“你住手…！”他蜷在身后的长尾猛地甩了过来，被她一把按住，踩在脚下。</p>
+<p>“唔——！呜…”</p>
+<p>她满意地看着身下的虫子缩起身体，吃痛地闭紧双眼，咬紧牙关，“还在抗拒吗？”探过身，“差不多该放弃了吧？”她伸过另一只爪子，将他的西裤褪下。</p>
+<p>“住…住手…”</p>
+<p>“但是很喜欢吧？这种被玩弄的感觉？”</p>
+<p>“怎么可能…啊…”他被禁锢的爪子徒劳地想去抓住什么东西——任何东西。尾巴也想从压力之下抽出，但却被狠狠地碾在原位，只能在尖端微微颤动。身体变得热了起来，逐渐下沉。他感到自己的尾巴和手腕都逐渐麻木，已经无法辨别这快感是痛楚还是愉悦了。</p>
+<p>“求我的话，会让你更舒服哦。”</p>
+<p>“呜…”自己在被侵犯着，这种认知让他突然泛起奇异的感觉，就像是，想要放弃一切的绝望感。“…呜..住手…”自己似乎想哭，但并没有哭泣的缘由，也没有眼泪流下。</p>
+<p>“…真是肮脏呢…还以为自己和男娼有所分别吗？”喘息间仍能听见对方嘲讽的笑声，“只是稍微刺激一下就这么兴奋，你很适合做性奴哦…”</p>
+<p>说着，她将一根手指插了进去。</p>
+<p>“呜…!”突然的刺激让他不由得弓起身体，双腿颤抖起来。粗糙的皮质材料刮擦着他的内壁，灼烧感让他无法思考——</p>
+<p>手指抽了出去，但又一次被填满，冰凉坚硬的金属压迫着他，这次再也没有取出。</p>
+<p>“啊…啊..”他本能地努力，身体想要将异物排斥，但所传回的反馈只有动弹不得的坚硬和冰凉。“不要…”</p>
+<p>她又将物件按的深了些，看着他的身体阵阵抽动，“你的身体很识趣呢，看，好好地做了润滑，这么容易就进去了…很深呢，会不会就留在那里了呢。”</p>
+<p>“不要…不要…”</p>
+<p>“不要什么呢？不要停下？”</p>
+<p>“呜…”</p>
+<p>“想要我帮忙吗？”她依旧微笑着，看着对方的身体开始不自主地扭动。“…啊，这副手套以后不能用了呢，全白了，都被你那些污秽玷污的…”她说着，又就着满手的体液去把握。</p>
+<p>“哈啊！啊——！住手！”从来没有体验过的快感顿时席卷全身，让他瞬间不知该如何应对，身体几乎弹了起来，“咚”地撞到了桌子。手铐被弄得当啷作响，找不到凭依物的他只能用尾巴紧紧缠住对方的脚踝。随着她的速度逐渐加快，他的身体也开始随之摇动。咕啾的反胃声响、激素的味道，让他的大脑一片空白。</p>
+<p>“啊——..啊——！呜！”但就在即将释放的时候，她突然停下了动作，只有他的身体仍在扭动，挣扎着想要碰触上她的手指。她含笑看着沃姆的神色逐渐变得痛苦。</p>
+<p>“舒服得像是要化了一样呢，你。”</p>
+<p>“——啊！”她轻轻触上尖端，他便触电一般弹动起来。</p>
+<p>“真可爱。”她轻笑道，站起身走向放在桌上的小包，“我最喜欢你们的这幅模样。”</p>
+<p>“——哈…啊…”</p>
+<p>“都说不出话了吗？那我还是太高估你了…”她拿着什么东西走了过来，“你之前的决心呢？那些华丽的辞藻呢？”</p>
+<p>他的视野突然充满了她，随后是一片黑暗。下颚被塞入了异物，下面最灼热的部位也被套上了冰凉的环状物。“现在是不是改变主意了？是不是就想一直被这样对待了？”</p>
+<p>她满意地看着自己的杰作，看着那些新装上的物件逐渐褪去了原有的颜色。她按下手里的控制器。</p>
+<p>“唔！！！”被塞入体内的铁物突然震动起来，伴随着细微的嗡嗡声。被剥夺了视觉的躯体只能被迫将这些感受无限放大。</p>
+<p>“唔…唔…唔…！”一片黑暗中，只有他徒劳地扭动身体，像在夜晚森林中被捕兽夹钳住的困兽。他的尾巴可怜地蜷了起来，缩在身体旁边。</p>
+<p>她毫不犹豫地滑动着操作钮，嗡嗡的声音越来越大，越来越高。他的整具身体都在颤抖。随后，铁环也开始震动，一开始只是轻轻地间断着，和后面交错着呼应，但随后便毫不留情地延长。</p>
+<p>“呜呜——！…呜呜——！…呜——！…呜呜——！…呜——！”他的呜咽和震颤配合着机械的震动，被快感一阵阵地冲击，让他几乎昏厥过去。</p>
+<p>“怎么样，很舒服吧？这还只是我收藏的一小部分呢。”</p>
+<p>“呜——！”他的眼角泛出泪水，只能一边忍受着快感，一边挣扎着想要摆脱束缚。他的尾巴颤抖着舒展开，艰难地探到了金属环的附近。</p>
+<p>“啊，玩游戏作弊可不行哦，真是坏孩子！”她立刻走过去，踩住他的尾巴，“…要好好惩罚你才行呢。”</p>
+<p>他的本能早已想释放自己体内的欲望，但被环紧紧箍着，让他难受得快要死了。“呜呜——！呜！”他噙满泪水，勉强抬起头望向声音传来的方向。</p>
+<p>她无视了对方，捉起他时不时颤动扭动着的尾巴，“…作为一只虫子，竟然有这样长的尾巴…真是古怪…”说着，她解开尾套，拿出绑带，捏住末端用小夹夹住。那边的沃姆旋即惊叫出声，裹上爱液的尾巴轻易地从她的手中溜走。</p>
+<p>“哎呀，”辐光啧了一声，又踩住没来得及收回的尾巴，按在地面上，耐心地在尾巴里侧贴上震动着的凸起，又将其层层紧缠成圈，让每个凸起都能亲密地按摩到敏感的内侧，思索片刻，她又将尾巴固定在了桌脚。“呜…”无法移动尾巴的他开始下意识摇晃起臀部。</p>
+<p>抬起头时，她无意间瞄到了沃姆的背，他的薄翼紧紧贴合在一起，汗珠凝在其上。她饶有趣味地把手里颤抖着尝试挣开但动弹不得的尾巴丢下。</p>
+<p>“…原来你还有翅膀？”她走了过去，挑弄着翅膀的根部，“啊，果然是雄性才有的魅力呢。”</p>
+<p>“呜！！！”沃姆接受着全身各处传来的快感，剧烈地颤抖着，声音已然带上了哭腔。</p>
+<p>“…怎么，原来这里也会觉得舒服吗？”她用指尖温柔地按压，扣弄。</p>
+<p>“呜呜——呜呜呜呜——！”</p>
+<p>“怎么了？亲爱的？想对我说些什么吗？”她继续摩挲着欣赏他的翅膀，“真美啊，要是能做成标本…”</p>
+<p>“呜呜呜呜呜呜呜！”</p>
+<p>“嗯？我听不懂诶？”她肆意地笑着，“作为不听话的惩罚，要再坚持三分钟哦？”</p>
+<p>“呜呜呜呜呜呜！呜呜呜呜呜呜！！”</p>
+<p>她终于绕到沃姆面前，把他的口塞取下。</p>
+<p>“哈啊！咳、咳咳、啊——不要！不要！停下！啊——！好难受、好难受好难受——”</p>
+<p>“想要吗？”她凑到沃姆近前，爱抚着他的脸，“求我。”</p>
+<p>“求求你，求求你，停手，不要，我不想，我不想——”</p>
+<p>“果然还是不想呢，那再坚持一下吧？”</p>
+<p>“不、不——唔！呜呜呜！”口塞又被捅进他的嘴里，他绝望地呜咽着。</p>
+<p>她悠哉地扶起翻倒在地上的椅子，落座，欣赏着面前虫子的阵阵尖叫和哭声。</p>
+<p>三分钟，她看看腕上的手表，“现在呢？想不想要？”</p>
+<p>他猛烈地摇头，又点头。</p>
+<p>“想让妈妈来帮你解脱吗？”</p>
+<p>剧烈地点头。</p>
+<p>“乖孩子。”她笑着，探过身抚了抚对方的额头，取下他的口塞，“来，叫主人。”</p>
+<p>“啊——啊——求求你，求啊——求你，杀，杀了我，杀了我，杀了我！”</p>
+<p>“不行哦。”</p>
+<p>感受到口塞又要被塞进自己嘴里，沃姆立刻惊恐地别过头，“不要！不要！求求你停手，啊——！求——求求你——”</p>
+<p>“你不是在享受这一切吗？你应该说“我喜欢，请继续”才对。”</p>
+<p>“啊——啊——啊——啊——”他的声音逐渐沙哑起来。</p>
+<p>“你喜欢吗？你是喜欢这些感受的吧？”</p>
+<p>“停啊——啊——停下啊——哈啊——”</p>
+<p>“可怜的小家伙，不要再欺骗自己了，这样只会让你更痛苦而已…”她摸向虽然还被禁锢但不断漏出爱液的头部。</p>
+<p>“啊！！！！！！！！”</p>
+<p>“很难受吗？”</p>
+<p>“难受、好难受、好难受好难受好难受——”</p>
+<p>“想变得舒服吗？”</p>
+<p>“想、想——啊呜——！啊——想、啊——！”</p>
+<p>“这就对了，要去感受你的真心…”她握住根部，一路摩挲着，缓缓将金属环取下。</p>
+<p>“啊——！！！啊——啊！！”快感顿时达到了极点，一瞬间他的眼前一阵发白，身体猛烈地痉挛起来，他缩成一团，即便还未完全取下爱液便猛烈地喷出，发泄过后还在不断地泄露，在身下聚成一滩。他微弱颤息着，挂着冷汗，无力地向前倾倒，全凭手铐悬吊自己的身体。</p>
+<p>“舒服了吗？”她的衣上、脸上全都是他的爱液，她舔了舔自己嘴边淌下的液体。</p>
+<p>“……”</p>
+<p>“你真肮脏啊。”她抬起对方的脸，揭下布条，“看看你把这里弄成什么样了？这不是全都湿透了吗。”她笑起来，“…要认真清理干净呢。”她松开手，头又脱力地垂下去。</p>
+<p>“还记不记得自己叫什么名字？”她嗤笑着，“用不用我给你取一个？”她俯下身，“反正也不重要了，不是么？你们都是千篇一律的性奴罢了…只要舒服就好了…”</p>
+<p>沃姆，沃姆，沃姆…那个声音在一直呼唤着他，在不同的场景，有着不同的语调。但他的大脑依旧一片空白，已经空白很久了。什么都思考不了，只有那快感在不断鼓动。“……”</p>
+<p>“你喜欢吗？”</p>
+<p>他…喜欢吗？</p>
+<p>后面的异物依然在震动，丝毫没有要停下的意思。他感到一阵突如其来的反胃。</p>
+<p>“…让…让我走…”</p>
+<p>“…你不会以为这就结束了吧？”她窃笑着，用手指抹下脸上的爱液，递到沃姆嘴边。“来，尝一尝吧？做个纪念？”</p>
+<p>闻到那股异味，沃姆止不住地干呕，她又递的近了些，“…唔…唔——！”他几乎呕吐出来。</p>
+<p>“哎呀，觉得恶心吗？恶心的也是你自己哦？”她说着，掰开沃姆的嘴，将手指深深探进他的喉咙。</p>
+<p>“要好好吃下去哦。”她冷笑着。</p>
+<p>粘腻的液体顺着喉咙滑下，手指扣擦着他的内腔，让他阵阵作呕。她收回手的时候，他终于忍不住呕吐出来。</p>
+<p>酸涩和苦锈的味道充斥了他的感官，低头，便是他的呕吐物。他又干呕了一次，吐了两次，直到吐出的东西只有透明的液体。他闭起眼，泪水混着津液滴落在自己的身上、地板上。视野所及之处的地板都染成了自己的颜色。</p>
+<p>她在一旁微笑着，像是照顾着孩子的母亲。“好一点了吗？”她突然出声。</p>
+<p>他没有回答，只是身子下意识地颤抖起来。</p>
+<p>“好一点了的话…我们继续吧？”</p>
+<p>“不要！！”未加任何思考，他猛地抬起脸，眼神充满恐惧，“不要！！！”</p>
+<p>“才这种程度就害怕了吗？我还以为你很坚强呢…”她凑近来，蹲下。</p>
+<p>“！…不要…！呃！呜咕！”辐光猛地仰起他的脸，又一次把胶状物塞进了他的口腔，尝起来只有微苦的涩味。她仔细地调整试探着套子的位置，满意后，她凑到近前，强行把自己的口器插入对方口中。</p>
+<p>“呜！”他猛烈地反抗着，但异物的存在很轻易地在他口中开了一道微小的缝隙，已完全足够辐光深入。她就这样轻易探入其中，撑开他的口腔。他只能隐约感觉到另一个生物的器官如线虫一般逐渐在他口中舒展，有着侵入的陌生味道，充盈了所有空间，挑弄着他的舌头，充满反胃的异样感。</p>
+<p>“你的体质真的很麻烦呢，要和你经常做的话…或许可以改造一下你的身体？”她就着安全套温柔地在他口中搅弄，又继续向里摸索。</p>
+<p>“呜！唔！！唔！咳！咳呜——！”</p>
+<p>她细长的口器包裹上硅胶，对他的内部而言却十分粗大。她直起背部，用力向上掰直了对方的头颈，以一个看起来很难呼吸的角度，只有这样才能继续向下探入一毫米。他几乎窒息，痛苦地呜咽着，哪怕轻微的一点点举动都如同在深洞回响，让声音愈来愈大。探到不能再深时，她卷起口器，隔着胶体刮擦起他的食道内壁。</p>
+<p>“嗯哼…?”她眯起眼享受着对方从未展现过的奇异神情，厌恶又欢愉的眼神在雾中默默地望着她，“喜欢这样吗？”她又将口器收回，缠绕上他的舌。她换了个更加舒服的姿势，跪在地上，用一只爪子拥上他瘦弱颤抖的肩，又轻轻拂过他的锁骨，捉弄起他的脖颈。另一只爪子则探了上去，和他的爪子指间相扣——她注意到对方的手套依旧戴着，皱了皱眉，探过手将它们统统摘下，丢到远处。沃姆任由摆布地仰脖，嘴边不断溢出细弱的哀鸣。</p>
+<p>“咕啊…”他被口中的异物感充斥着，放弃了任何反抗，只能随着辐光的搅弄激烈地拥吻。</p>
+<p>满足之后，她将自己的口器抽出，连带着沾满津液的安全套，吐到一边的地上。她松开箍住他的爪子，沃姆立刻弓下背继续干呕起来。“还不错，是可以继续开拓的地方…”她抹抹嘴角，“我还担心你的内壁都是小牙呢…”她说着，又去拨开他无力闭合的唇颚，探进手指搅弄。在他的下体，更多的爱液流了出来，“…看，这不是又有反应了吗？”她开心地笑着。</p>
+<p>“咳…放…放开我…”他无力地呻吟着。</p>
+<p>“你想就此结束，可以啊。只要把你这些呕吐物，还有精液都好好吃下去，我就放过你。”</p>
+<p>单单只是听到这句话，或许又加上喉间的刺激，让他又呕吐了一次。</p>
+<p>她缩回手，把那些透明的体液抹在他的脸上，“做不到吗？”虽然丝毫不被他的污秽所影响，但她还是做出遮掩的手势，笑得十分愉悦，“你可真肮脏。还会觉得凭你这样无能下贱的自己，能挑衅我吗？”</p>
+<p>“不…不对…”不是这样的。他仅剩的思维低速运转着。不是这样的。但他无法继续运算其中的逻辑。</p>
+<p>“还想要吗？这次会让你好好释放出来的…”她又凑到近前，全然不顾地面的污秽，将指尖放在已经瘫软的末端，打着旋。沃姆猛地颤了一下。</p>
+<p>“不、不要…”但前后传来的快感很快就又涌了上来，让他的呼吸逐渐粗重。“呜——！”</p>
+<p>“这么快就感受到了吗？你果然很卑贱呢。”她继续摩挲着，又探过手去拨弄他的翅根，“你看，你都已经这么不堪了…已经没有给你的救赎了呢…何不就这样…”</p>
+<p>“哈啊——呜…啊——不要…啊——”</p>
+<p>“你的声音变得妩媚了许多呢…是在好好享受吧？”她凑到沃姆耳边，轻轻吐气。</p>
+<p>“啊…啊….”思维又一次停滞，他的全部注意被她手指的每一次动作占据。</p>
+<p>“舒服吗？”她轻轻问。</p>
+<p>舒服…吗？他的大脑接受了这次的提问。</p>
+<p>“啊…啊——啊…呜…”</p>
+<p>“很舒服吧？很喜欢吧？”她从怀里掏出一把小钥匙，解开了他的手铐。</p>
+<p>失去了束缚，他的身体像娃娃一般瘫软下来，被她接在怀里。她将他尾部的束带解开，将他抱起——很轻易地，坐在一边的座椅上，将他搂在身上。他身体里的震动器仍在很大声，很羞耻地响着。</p>
+<p>就这样抱着他，她手里的动作并没有停。他深陷在对方的绒毛里，很…温暖。他不由得蜷缩起来。</p>
+<p>“嗯啊…呜…”</p>
+<p>“很舒服吧？舒服就说出来？”她轻声说着，如同在哄小孩入睡一般。他闭起眼睛，只能听见自己的喘息，和她的声音。“啊…啊…！嗯——啊…”她的指尖轻柔地拂过，一阵酥麻的感觉从小腹传上来，让他突然幸福地有种想要一直如此的冲动——</p>
+<p>“喜欢吗？”</p>
+<p>“…喜…欢..嗯..嗯…”</p>
+<p>“很舒服吧？”</p>
+<p>“嗯….嗯..哈啊…”他下意识在她身上磨蹭着自己的脖颈，爪子和尾巴紧紧扣住了对方的身体。她也回应着他的示爱，用另一只爪子轻轻抚摸他的面颊和嘴角。纯白色逐渐在她全身的衣物上漫延。</p>
+<p>“想不想去？”</p>
+<p>“想…想…啊…”</p>
+<p>“想…？”</p>
+<p>“想…想去…”</p>
+<p>她的嘴角浮现笑意，“想不想成为我的？”</p>
+<p>他只是一味地应允着，无暇去想其中的意味。他只想让这种感觉持续地更久些…再久些…“想…想…——呜！”她突然触到了某个位置，瞬间的快感让他整只虫都快乐地颤抖起来。</p>
+<p>“喜欢这里吗？”她轻轻拨弄着。</p>
+<p>“啊！啊——！啊——…”她每拨弄一下，他就立刻颤起，爪子几乎扣进了对方的外壳。</p>
+<p>“舒服吗？”</p>
+<p>“舒服…嗯啊——舒服…！”</p>
+<p>她逐渐加快了速度，他的呼吸乖巧地响应着对方，逐渐急促起来。“呜——！呜——！不要….不要…啊——哈啊——！啊——！啊！——…呜…”就在他逐渐追寻着记忆中的快感，越来越近的时候，她突然停了下来，故意用最慢的速度按揉着那个端点，引得他不满地呜咽起来。</p>
+<p>“叫我主人。”她对他喃喃着。</p>
+<p>“呜…哈啊——哈啊——主…主…主人…哈啊——…”</p>
+<p>“继续。”她又开始提速。</p>
+<p>“啊！…主…人…主人！啊！哈啊！呜！主人！主人！主人！呜！！！！——”</p>
+<p>他又一次释放了出来，在她的手里，她接了很多。</p>
+<p>“啊….啊….主人…主人…——”</p>
+<p>“张嘴。”</p>
+<p>“哈啊——…哈啊——…”他原本就在大口喘息，眼神朦朦胧胧地看着她逐渐将乳白色的液体凑近自己，灌下。</p>
+<p>“呜…——”他下意识的开合着嘴，精液从他的嘴边漏出。</p>
+<p>很咸。很黏。他有些张不开嘴了。他做了个吞咽的动作，把堵在喉咙的异物咽下。</p>
+<p>她赞许地看着他，“好孩子…真是个好孩子。”</p>
+<p>他依旧沉浸于远去的欢愉中，一阵倦意袭来，他让自己闭上眼睛，意识随着视线也逐渐朦胧起来。</p>
+<p>“喔…我真的等不及让你去见见你的同伴了，小虫子。”她把玩起沃姆的长尾，他只能微微喘息着，无意识地把尾巴缠上对方的手腕，“你会知道什么才是真正的愉悦。”</p>
+<hr>
+<h3 id="辐光-x-阿卢（黄，可能又会被萎到）"><a href="#辐光-x-阿卢（黄，可能又会被萎到）" class="headerlink" title="辐光 x 阿卢（黄，可能又会被萎到）"></a>辐光 x 阿卢（黄，可能又会被萎到）</h3><p>推开大门，只有她一只虫坐在桌前。卢瑞恩知道此次他凶多吉少。“…女王陛下。”</p>
+<p>她没有回过头，依旧在仔细数着首饰盒里的物件，随后又打量起一串纯白的珍珠项链。“——…你来啦？”许久，她似乎才意识到什么，转过脸，妩媚一笑，“跪下。”</p>
+<p>“…”他想说些什么，但终究低下头，双膝跪在地上。</p>
+<p>她站起身，依然拿着那条项链，踱步过来，俯下身给他戴上。</p>
+<p>“…陛..陛下…”他言语发颤。她的绒毛拂过他的面颊，只能让他感到恐惧。</p>
+<p>“蛮适合你呢——虽然大了点。”她说着站起身，“…开始吧。”她淡淡地宣布。</p>
+<p>卢瑞恩咬起下唇，迟疑许久，最终艰难地伸出爪子，将她的长袍恭敬地褪下。他不敢抬起头看辐光，只得垂着眼睛，仰起脸向上去够她的下体。他先是用舌尖稍稍触碰了她，一股甜腻的味道在他口间盈开，很甜，就像蜜糖一般。有那么一瞬间，他感到自己的脑袋正在融化，便迫不及待地附上去，但下一秒，只消一口，这蜜液便腻得让他只想全数吐出。他依然吸吮起来，忍受着，并不是为了品尝这种甜蜜。女王眯着眼睛，将爪子抚上他的头，“…还是一如既往地听话呢…哈啊…怎么样，好吃吗？”</p>
+<p>“唔….”他轻哼着，尽量不让她发现自己的异变。她的喘息逐渐粗重起来，爪子用力划过他的脖颈，留下数道血印。“哈啊…哈啊….——唔…!”很快，她排出了大量的蜜液，尽数灌入卢瑞恩口中。</p>
+<p>“…!”好甜…太甜了…粘腻感让他不由得猛地低下头，用爪子捂住自己的嘴，一阵反胃的恶心顺着食道蹿上来，他又把另一只爪子捂上。只是稍稍分神，蜜液便从他的嘴角流出。</p>
+<p>不行，要…要喝下去才行…</p>
+<p>他想咽下，但蜜液却好似堵住了他的咽喉。</p>
+<p>水…水…</p>
+<p>“怎么了？才开始就喝不下了吗？”辐光娇喘着，但语气依旧威严，“卢瑞恩？…”她语调中带着警告，附身按下他压在嘴边的爪子。</p>
+<p>“唔唔！”他立刻猛烈摇头，又做了一次吞咽的尝试。</p>
+<p>还…还有一点…</p>
+<p>“是不是我最近太宠着你了…?”辐光喃喃着，玩弄起他的下体，“你上次可不是这样的…”</p>
+<p>“唔…！！”</p>
+<p>“你在害怕吗？”她逼视着卢瑞恩的眼睛。</p>
+<p>“唔…哈啊！”他终于咽下了最后一口蜜液，忍住呕吐的冲动，“陛下，在下没有…啊唔!”甜味逐渐在全身漫开，自己逐渐变得酥麻起来…</p>
+<p>很少有的，他抗拒起这个感觉。</p>
+<p>“没有？我记得你不是最喜欢喝这个了吗？”她用手指伸进自己的蜜穴，搅弄一番又送入卢瑞恩口中。</p>
+<p>“唔——！唔唔…”</p>
+<p>“我懂了…你是不是被那些审阅奏折的小爱好冲昏了头脑…?”</p>
+<p>“啊…陛下…陛下，请…请您…哈啊…”</p>
+<p>“你要知道…游戏时间已经结束了，现在…该工作了。”她全然不顾卢瑞恩欲求的快感，站起身，“继续舔。”</p>
+<p>“哈啊…遵..遵命…陛下…”他将自己的身体撑起，又探过头舔舐起来。不多时，第二波蜜液又灌注下来。</p>
+<p>辐光冷冷地看着卢瑞恩又一次艰难地捂上自己的嘴。“…”</p>
+<p>感受到冰冷的注视，卢瑞恩拼命吞咽着，但这反而起了反效果。就在他咽下最后一口时，他终于忍不住发呕起来。</p>
+<p>所幸，漏出的并不多….——</p>
+<p>“你理应感到愉悦，而不是排斥。”辐光残酷的声音，在他上方响起。</p>
+<p>“对…对不起…陛下——啊！”辐光突然掐住卢瑞恩的脖颈，将他提起。</p>
+<p>“呜——呜呜——陛下…陛下…!”卢瑞恩徒劳地抓住辐光的手腕，“咳——哈啊…陛下…陛下..我..在下..快..呼吸…”</p>
+<p>“果然，还是把你变回原来的样子比较好呢。”</p>
+<p>“！”卢瑞恩下意识挣扎着，想从对方手中逃离，“不要…！请…咳咳…请不要…！”</p>
+<p>“不愿意？有趣。这对你而言已经是不可或缺的了吗？”她猛地将他掷在地上。</p>
+<p>卢瑞恩艰难地爬起，“啊！呜…——陛下…陛下…在下…在下知错…”</p>
+<p>“比起取悦于我，你更喜欢翻那些破奏章吗？”</p>
+<p>“不是的…不是的，在下，在下并无此意——！”</p>
+<p>“…你是不是觉得自己比那些男宠更优越了？嗯？卢瑞恩？”辐光的金瞳逐渐亮起，“是不是觉得自己有了一点我施舍的权利，就忘乎所以了？”</p>
+<p>“啊…哈啊…”卢瑞恩感到对方的思想逐渐探进自己的脑中，就如同在穿针缝线。“哈啊！陛下！陛下请您不要…!啊啊——！”他抱住自己的头，拼命想要甩开那些细线，但越是挣扎，它们就缠得越深，嵌入他的思想。</p>
+<p>“我太久没有管你，看看你心思都跑到哪里去了，”辐光冷笑着，“我还是更喜欢之前的你，麻烦你暂时变回原状呢。”</p>
+<p>“啊…啊…啊…”卢瑞恩蜷缩在地上，身体不住地颤抖着。</p>
+<p>她满意地看着这一切，又蹲下身，取了一点蜜液，伸到他面前，“…现在如何，想吃吗？”</p>
+<p>嗅到那甜甜的香气，卢瑞恩禁不住呻吟起来，一丝残存的理智被丝线束缚，他眼睁睁看着自己爬向那只手指，张开嘴含了进去。他贪婪地吸吮着，哪怕一毫也不漏下。</p>
+<p>“…这才是我认识的你，好孩子…过来…”</p>
+<p>他顺从地凑了过去，循着香气开始舔舐。</p>
+<p>“哈啊…哈啊…——”辐光紧紧搂住卢瑞恩，感受着他的取悦，“哈啊——！”</p>
+<p>又是一股蜜液溢出，卢瑞恩发出一阵野兽的低鸣，大口地享用着，不消时就喝得一点不剩，不顾漏在地上的蜜液，他又去舔辐光的下体。</p>
+<p>“啊<del>啊</del>乖孩子，真是乖孩子…哈啊~”她说着伸出爪子去摩挲他的欲望，“你也很想去了吧？”</p>
+<p>回应她的只有野兽的低吼和喘息，夹杂着不成形的语句。</p>
+<p>辐光用力将卢瑞恩压在地上，开始玩弄他的下体。她扯过那串珍珠项链，将其粗暴地塞入。</p>
+<p>“呜——！”紧缠的丝线有了一丝松动，周围一切突然有意义起来，“….哈啊！啊…陛下！..啊…陛..陛下！”</p>
+<p>辐光妩媚地笑着，“就把这当成我给你的奖赏吧。”</p>
+<p>“谢…呜——！谢..谢陛下恩典..哈啊——！”他不住地发出颤音，爪子紧紧扣住身下的地毯。在辐光粗暴的玩弄下，他很快就释放了欲望，瘫软在地上。</p>
+<p>“…表现的不错，起来。”辐光起身，理理自己的绒毛。</p>
+<p>“…呜….——”他下意识服从命令，想站起身，却又无力地倒下。</p>
+<p>“怎么，还想做吗？”</p>
+<p>“…陛..陛下…”</p>
+<p>“你真是…欲求不满呢…”她说着，伸出脚，直接点住他的下体摩挲起来。</p>
+<p>“呜！…啊…哈啊——…”爱液的效力仍未衰退，他的欲火被再一次点燃。</p>
+<p>“舒服吗？”</p>
+<p>“舒…舒服…!”</p>
+<p>“可不要再骗我了哦。”</p>
+<p>“臣…臣不敢..——哈啊…啊——”</p>
+<p>她俯下身，轻抚过对方的凸起，张开嘴，熟练地探入自己的口器。</p>
+<p>“啊啊——！！”他愉悦地叫出声，很痛，但又很快乐，“陛下…陛下！求、求您、求您饶、饶恕在下——啊！痛！好痛！哈啊——！陛下！！”</p>
+<p>“痛？…那这样呢…——”她轻轻摩擦着他的内壁，同时缓缓将塞入穴内的珍珠项链拉出。</p>
+<p>“啊——！啊——！呜——！…”他已经完全丧失了说话的能力，只是一味的尖叫着。这快感带来的愉悦简直无与伦比。</p>
+<p>辐光嗤笑着，用缓慢到痛苦的速度将口器取出，又用手指捏住末端，只允许很少的爱液流出。她向前伏在卢瑞恩身上，观赏着首相的极乐神情，将口器刺入对方无法闭合的口中，肆意搅弄。</p>
+<p>“啊……”他已经完全没有了反应，只是下意识以羞耻的姿态摇晃着身体，任其摆布，“陛下…”</p>
+<p>“想不想要？”</p>
+<p>“想….”</p>
+<p>“有多想呢？”</p>
+<p>“想…”</p>
+<p>“这么容易就坏掉了吗？”辐光仔细探索着卢瑞恩的内里，不漏一寸。</p>
+<p>但卢瑞恩的思绪只够停留在最初的问题了，“想…”</p>
+<p>“想不想知道自己还能淫荡成什么样子？”</p>
+<p>“…想…”</p>
+<p>辐光微微一笑，似乎早就预料到了这个答案，抽出自己细长的口器，“那么，我们来一起探索一下吧？”</p>
+<p>身下的地毯已经湿透，她捡过那串珍珠项链，松开手指，将小巧的部分插入他下体的尖端。</p>
+<p>“唔…啊…”他眯起眼睛，呻吟着，伸出爪子想要去摸自己的下体，顺势被辐光抓在手里，拖到床边，反绑在床角。</p>
+<p>“睁眼。”</p>
+<p>睁开眼睛时，在落地镜中看到的是欲求不满的自己，满面潮红，双腿分得很开——太开了，下体已经满是淫液。</p>
+<p>“呜——…”那里传来的的肿胀感让他不由得又闭上眼睛。</p>
+<p>“喜欢吗？”辐光笑着，“觉得自己很可爱吧？”她伸出脚，上面黏着的都是爱液，“看着镜子，把这里舔干净。”</p>
+<p>“哈啊…陛下…求您…”他用哀求的眼神看着辐光，又看向镜中的的自己，凑到近前开始舔舐。辐光眯着眼看他将最后一丝爱液舔尽，只剩下他的津液。</p>
+<p>“真乖……噢，我可爱的卢瑞恩，”她夸赞道，“我真的找不到能比你还恭顺的首相了呢…”将自己的小首饰盒取来放在一旁，俯下身，“可能会有点痛哦。”说着，她将铁环套在那里，束紧，又捏住凸起，将项链取出，不顾试探着流出的欲液，重新插入了一根细长的银簪。</p>
+<p>“啊啊——啊啊——啊——…”随着它逐渐深入，他的双眼开始放空，看着宫殿穹顶扭曲的图案。</p>
+<p>按下开关，环开始平稳地震动。</p>
+<p>“啊啊——陛下——陛下…”</p>
+<p>“那么…首相大人？”</p>
+<p>“…”听到这个词的他颤抖了一下，某条神经有了反应，但立刻被更加强烈的欲望蒙盖。</p>
+<p>“你知道最近新引进宫的那批男宠吧？”</p>
+<p>“…哈啊..啊..”无法思考，根本无法思考——</p>
+<p>“有一件事我一直拿捏不准…想听听你的意见呢。”</p>
+<p>“呜——！”似乎有什么地方突然断了线，他感到一阵猛烈的快感，但想要释放的欲望被全数挡在门内，“啊啊——！陛下！陛下求您——！啊啊——呜！”</p>
+<p>辐光依旧不紧不慢地说着，“有一个男宠偷偷溜进了档案室呢…说是有阅读的兴趣…”</p>
+<p>“啊啊啊啊！陛下！！”他全身的神经都在燃烧，自己的身体都已经不复存在，只有那里，只剩下了那里，“陛下！！不、不行了，陛下！求求您！！啊啊！！！好难受！好难受啊啊——！”</p>
+<p>“你说，我该怎么惩罚他呢——”</p>
+<p>“陛下！！！救、救救我！陛下！！”</p>
+<p>“你怎么了？”她掩起嘴笑了起来，”要好好处理政务呢，我的首相大人。”</p>
+<p>“啊！——…啊…啊…”快感转变成了无尽的痛苦，猛烈燃烧后又逐渐消退，他的视野逐渐模糊起来。</p>
+<p>“你说，是把他做成可口的美味小点，还是做成供人取乐的性爱机器呢？”</p>
+<p>“陛..陛下…求…求您…”</p>
+<p>辐光探过手，轻轻晃了一下银簪。</p>
+<p>“——啊啊啊啊啊啊！啊啊啊啊！”他立刻尖叫起来。</p>
+<p>“不要不理我啊，首相大人？”她又轻轻弹弄了一下。</p>
+<p>“啊啊啊…——臣…臣不知…啊啊…”</p>
+<p>“选一个就好了，一点都不难呢。”</p>
+<p>“臣…臣…”他感到自己睡意渐浓，疲惫和困倦逐渐压倒了他，嗡嗡的震动声逐渐变成了催眠曲。</p>
+<p>“累了吗？”辐光笑着站起身，拍了拍手。</p>
+<p>一只蛾子女仆掀开卷帘，快步走进房间领命。路过卢瑞恩的时候嗔笑了一声，掩起面。</p>
+<p>“…去把那只虫子拉过来。”</p>
+<p>“遵命，女王陛下。”她窃笑着跑开，还向卢瑞恩抛去一个媚眼。</p>
+<p>辐光从一边的案柜上取出一把防身小刀。“我们来玩一个游戏吧？首相大人？”</p>
+<p>她邪邪一笑，“是赌上性命的游戏哦。”</p>
+<p>“啊啊啊！”一声惊叫，一只被五花大绑的甲虫被丢进房间，跌倒在地，“咳哈！大、大人！小的知错了！求求您——！”</p>
+<p>辐光一脚踩在对方的头上，“是陛下，你这乡下来的莽夫。”</p>
+<p>“陛…陛下！小的只是想、只是想看看有没有能更好服侍您的资料，小的没有——啊啊！！！”辐光猛地用小刀划破了对方的脸，他尖叫起来。</p>
+<p>“你以为我不知道吗？其实是起义军派来刺探情报的间谍吧？”</p>
+<p>“呜呜呜呜——小的，小的真的没有——”</p>
+<p>“罢了，也没有关系了。”她将他一脚踹开，又转向卢瑞恩。“怎么样，首相大人，你看他面相如何？是不是该杀？”</p>
+<p>还没等卢瑞恩答话，甲虫又立刻尖叫起来，“不、不、陛下！请您再考虑一下！小的——小的还不想死啊！”</p>
+<p>“….”卢瑞恩只能朦胧地半闭着眼，顺着辐光的指示向对方望去，身体因震动器而不断颤抖，“….呜…”</p>
+<p>甲虫看到现在的情势，望望辐光又望望卢瑞恩，“…首、首相大人！请救救小的！求求您了！小的还有家室！还有孩子！”他不顾被绑住的手脚，猛地扑倒在卢瑞恩面前。</p>
+<p>“…陛…陛下…”卢瑞恩闭起眼，头脑中没有任何想法，只能无意识地呢喃着，“….”</p>
+<p>“你看，你并没有给首相大人留下多么深刻的印象呢….”</p>
+<p>“!……大人！”甲虫立刻不顾羞耻地扭动身体，向前去含住了他的下体。他急切地用舌头舔舐着簪子的尖端，又向下探去。</p>
+<p>“…啊…啊——..啊…！”快感被再次点燃，卢瑞恩被强行从朦胧中拉回现实，“啊啊——！住…不要…!”</p>
+<p>“如果能让他舒服到服从于你，我就放过你。”辐光拉过椅子坐下，用手指把玩着刀尖，翘起腿，“这样多少还能证明你的用处。”</p>
+<p>“啊…”听到古怪要求的甲虫愣了片刻，咽了咽口水，“当…当然…!多谢女王大人恩典！”</p>
+<p>他立刻开始吮吸起来，“大人…唔…嗯…”他故意将声音变得情色，不断勾引着对方。</p>
+<p>“哈啊…——哈啊——…”卢瑞恩眼中聚起生理性的泪水，看到对方并不是辐光，而只是一只低贱的甲虫，让他立刻全身心地抗拒起来，“哈啊——！住….！手…..!”</p>
+<p>甲虫颤抖着凑到卢瑞恩耳边，“…大人，小的知道这有冒犯到您，但小的实在没有办法…您要是装作服从小的的话，可以让这一切快点结束…”</p>
+<p>“….住…住手…——”</p>
+<p>“…大人…”看到对方坚决的态度，他只得又撤回身体，开始摆弄起他的下体，“…那就请您忍受下…”</p>
+<p>“啊啊啊——！”被刺激的部位火烧火燎的疼，那簪子显然已经插得太久了。但甲虫又开始吮吸起来，酥麻的快感从下面扩散，连痛感都能被转化。“啊…啊…”</p>
+<p>“连最下贱的虫子都能把你弄得都是水呢…卢瑞恩。”辐光嗤笑着，“这样看来，还不如收回你那些多余的理智，把你丢去妓院…啊，或许打发你去监狱援交好了。”</p>
+<p>“…不…不要…啊…”</p>
+<p>甲虫默默刺激着他的快感，这其实并不困难了，只要稍微碰触到他，就会有蜜液从穴口溢出，连簪子都有要脱出的迹象。</p>
+<p>“啊啊！哈啊！——哈啊！——”卢瑞恩大口喘息着，陌生的触感和平日辐光的口器完全不一样，一丝一毫的力度之差，不同的粗糙感，他全部都感受到了。</p>
+<p>“啊啊——啊啊——不、不行了——啊啊——！拿开、拿开！把它拿开！”他想用手去够，但只能咣当一声撞上床板。“哈啊——！”</p>
+<p>“…小的会帮您的，”甲虫局促地抬头，伸出爪子摩挲起银钗尖端，“..只要，”他迟疑着，“只要您能叫小的一声“主人”…”</p>
+<p>“哈啊！——”卢瑞恩的大脑在一瞬间似乎恢复了思考，因为他明显地变了神情，但这悲愤也转瞬即逝，“哈啊——！”</p>
+<p>“要坚持住呢，卢瑞恩，”辐光大笑着，“可不能让罪人跑了哦？”她神色一凛，“…不然，有罪的就是你了。”</p>
+<p>“呜——！”</p>
+<p>“不过，你也想被惩罚吧？谁不想被神明惩罚呢？毕竟可是来自神明的关注啊…”</p>
+<p>“…陛…陛下…啊…”</p>
+<p>甲虫又开始舔舐起他的下体，就着银钗的边缘缓缓摸索。</p>
+<p>“啊！”电流般的快感顿时袭遍全身，“啊啊——！让…让我去…啊啊——！拔出来…!呜！拔出来！！”</p>
+<p>“您要说“请您把它拔出来，主人”…”甲虫建议着。</p>
+<p>“…究竟谁才是你的主人呢，卢瑞恩？”</p>
+<p>“啊啊啊！！！陛下…陛下求求您…求您结束这一切吧！在下求求您…把他带走！把他带走——!”</p>
+<p>“果断的回答，不愧是我的首相。”辐光妖娆一笑。</p>
+<p>啊啊…陛下…认可他了…</p>
+<p>“看来分出胜负了呢，卑贱的甲虫。”</p>
+<p>“…什…？！”甲虫猛地转向辐光，“可是大人、大人！这不公平！”</p>
+<p>辐光站起身，持刀一步步逼向甲虫，“不公平？不服的话，再问问他？”</p>
+<p>“大人…——呜！”没等甲虫发问，辐光便用力将他踢到一边。走到近前，她俯下身，用着充满爱意的眼神，温柔地抬起卢瑞恩的脸，“…谁是你的主人？”</p>
+<p>“陛下，陛下，请…请饶恕在下…”现在，他的眼中只有她一只虫子，美丽，端庄。</p>
+<p>“你是谁的玩具？”她摸上银钗。</p>
+<p>“哈啊…陛下…在下是陛下的…”他的全身都在雀跃，“哈啊…在下是陛下的玩具…！”</p>
+<p>“…噢，我的小卢瑞恩…”她抚上对方的头，用刀轻轻划过他的外骨骼，他享受一般迎合上去，“我的至爱…你这样可让我怎么舍得惩罚你呢…”说完，她起身，舔舔刀刃，转向另一边正努力想要爬出门外的甲虫。</p>
+<p>“…!”一道寒光闪过，甚至都没机会发出尖叫，甲虫的头颅被切成了两半。</p>
+<p>辐光嫌恶地皱眉，“恶心，搞得满地都是恶臭的味道。”又转过身，慈爱地笑着，“当然不是说你了，卢瑞恩。”她轻轻解开他的拘束，握住他的双爪。“妈妈这就帮宝贝解脱哦…”她缓缓拉出银钗，还未来得及全部拉出，涌动的爱液便放肆地喷薄而出，将银钗轻易推出。</p>
+<p>“啊啊啊啊啊啊啊啊啊！！！！！！！！——”他缩成一团，快乐的大叫着，全身不停抽动。辐光立即将他拥入怀里，轻轻安抚着他颤抖的身体，每碰触一下就又是一阵爱液喷拥而出，“啊啊啊——！！陛下——！陛下——！啊啊啊——！！”</p>
+<p>“舒服吗？”</p>
+<p>“啊啊啊啊！舒服、舒服——请、请您——啊啊！！请您——哈啊啊——！”酥麻感从她触碰的位置开始，经下腹逐渐扩散到全身，他不由得紧靠在辐光的怀里，享受着她的每一次爱抚。“哈啊——..陛下…陛下…那里…那里…”他娇喘起来，眼神变得迷离，语调开始粘腻，“呜…陛下…好舒服…哈啊——…！”这一刻如此美妙，真想永远都如此下去呢。他的身体配合着她的抚摸摇晃着，在她的触摸下又一次达到顶峰。“呜——！…”</p>
+<p>她揉搓着他的下体，含笑看着对方如糖水般逐渐化在自己怀里，“….嘘…”她用气声在他耳边低语着，“累了吧？可以睡了哦…”</p>
+<p>“…呜…陛…陛下，在下..在下好爱您…请…请不要离开在下…”坠入美梦前，他无意识喃喃着。</p>
+<p>辐光只是一顿，又更加愉悦地笑了起来。</p>
+<hr>
+<h3 id="辐光-x-陛下-x-阿卢（码）"><a href="#辐光-x-陛下-x-阿卢（码）" class="headerlink" title="辐光 x 陛下 x 阿卢（码）"></a>辐光 x 陛下 x 阿卢（码）</h3><p>还有一个 阿卢x陛下 突转 陛下x阿卢 但最终是3p的场景（就是阿卢很看不起陛下，但领命和陛下做爱，便准备用情色玩具隔空折磨陛下，但辐光就说她的意思是让陛下上阿卢，然后阿卢虽然死不愿意但还是顺从地把玩具丢给陛下解开扣子让陛下操，陛下看出阿卢不愿意所以想引导他的反抗意识于是表示我才不操，然后阿卢就（在辐光的稍稍逼迫下）很主动地去勾引陛下，就前戏（我现在也不知道什么是前戏了，，，sm?主人的任务？）+舔，然后陛下满脸悲愤就甩过铁链勒住阿卢脖子，威胁辐光说要把他勒死，然后辐光说你随意，他死了首相就换你，然后陛下见没用只好放开阿卢，说她这么不在乎你的死活，你竟然还如此效忠她之类之类，然后阿卢就有了一点小小的觉醒但还不够，陛下就猛地把他压在身下开始手他（陛下戴着手套），期间一直和阿卢说悄悄话，表示你不喜欢这样，为什么要欺骗自己的内心呢，然后阿卢去了之后他们以为结束了，但辐光就过来，表示说这么快就完了吗然后就拉着陛下脖子上的铁链把他拽到一边，又把他双手反绑在床头，开始操他，还在耳边说我知道你想救他，但他已经无药可救了。陛下去了之后辐光就沾了自己爱液喂给阿卢，展示了让阿卢舔自己下体的美景，随后又把自己爱液抹到陛下下体，阿卢就继续去舔，之后她又把爱液喂给陛下，然后阿卢就迫不及待和陛下舌吻了。同时辐光就开始舔陛下下体，然后阿卢起身后陛下就看着满眼迷离的阿卢，阿卢也看着满眼厌恶却又迷离的陛下，又吻了下去（觉得陛下很美），然后陛下就趁着空隙勉强打起精神和阿卢说这不是真正的你，不要被她所定义（大概就是卢啊虽然你现在很欲求不满但这至多只是你的一部分而已，你不要被阿辐骗了，你现在这么骚气这不代表你就活该被操），然后一语点醒梦中人，过后辐光就让阿卢操纵陛下体内的震动器，自己开始舌吻陛下和陛下做，然后背后的阿卢就瞟到了不远处的刀，纠结许久就捅了辐光——但没成功。辐光在他捅的时候反应迅速制止了，然后开始脑控阿卢（说他反了天了，要收回他的理智）期间陛下用脚够到了刀开始去割自己的束缚，辐光尝试之后发现她无法脑控卢了（陛下在场）于是她大惊，看向陛下的时候正好他把束缚解开，但还是被辐光一个法术光矛打下了床（这难道就是所谓的边打边做吗，可以码一下），然后背后的阿卢又想试着去打辐光，也被辐光一个光矛定在了墙上（致命伤）然后质问陛下是不是罪魁祸首，说如果陛下不收回这个能力的话就让阿卢现在就死。陛下虽然一脸懵逼（指不知道怎么收回自己的能力）但还是说好吧，然后阿卢就被送急诊室了（？）然后陛下就和辐光说杀死我是没有用的，杀死我理智依然存在。你即便杀死预言人，预言终究也会实现，然后这段结束。）已经脑过了，码一下文字版。</p>
+<p>不一定是正文。<br>（虽然都不一定是正文）</p>
+<h3 id="后续展开"><a href="#后续展开" class="headerlink" title="后续展开"></a>后续展开</h3><p>准备用这个AU另写个小demo，集中注意在一段“打破循环”的景上，推翻一下之前的一些剧情。</p>
+<p>就又想到这个AU，就想的是陛下被关在泪城的“妓院”（Pleasure House，这只是贵族对其的内部称呼）但对外宣传这是“教化所（可以带宗教意味）”其实实际功能是监狱（关的都是雄性），那个妓院建筑差不多可以参考高塔。然后不知为何感觉应该是高科技圣巢，然后有什么机器人管理调教之类的（啊），然后有个什么货币系统就是“（高层或低层）来“自愿”参与审核的jury陪审考察团（其实大部分就是嫖客）”给囚犯的“表现”打分，这个分数关系到囚犯的基本需求（吃穿住）以及是否可以释放。这个“表现”的定义就可以，对吧，随意发挥。就总体感觉就是外人乍一看这个男子监狱/教化所没什么古怪，但是一旦进去、哪怕稍稍深入了解就会发现“卧槽甚至都有专门的情色房间和一条龙服务”。所以其实大多数人（蛾子）都知道这里其实就是妓院，而这里的囚犯就是玩物，所以也经常玩得很大。有些善良一点的会自我欺骗“这些虫子都是神经病、是流浪汉、是没有雌性保护的结果”，偶尔也会有真的关心他们的蛾子来照顾他们。</p>
+<p>阳光高塔（？）就是高耸入云，然后蓝天，然后阳光明媚，就不再是泪城那种憋屈（不是）洞窟高塔了。（也可以cue一下夫人的自由之树，毕竟都是高耸入云“如果树还在，或许从这里就能看到她了。”）。陛下会喜欢风的感觉。因为他本就喜欢高处，但是监狱里没风，所以有风吹过会让他感觉很自由，想掉下去，想飞（毕竟是龙（虽然只是土龙宝宝））。<br>阳光圣巢（？）同理。</p>
+<p>几条规则：</p>
+<ol>
+<li>囚犯之间不允许肢体接触（正中陛下下怀，毕竟会把别人染白）</li>
+<li>囚犯之间不允许沟通和交流</li>
+<li><del>本来想设定囚犯必须裸体但是</del>后面改成了没有这项规定但是一些想要快点出狱的虫子会故意妖艳裸体的设定</li>
+<li>囚犯不允许主动和陪审jury搭话</li>
+<li>待补充？</li>
+</ol>
+<p>然后监狱是顶层空中监狱（只有一台电梯，而且只会在运输犯人时开启低层到顶层的防护门，上来），没有任何紧急出口或者楼梯。后来导致陛下陷入循环魔法的钥匙就是这台电梯的紧急钥匙。<br>循环魔法其实只是记忆消除法术，会在睡醒之后消除前一天的记忆，导致被施法对象一觉醒来依旧维持着昨天的状态，一直以为明天是“明天”，相当于滞留在了今天，是辐光施加的（啊）。具体是陛下会一直以为“明天（电梯六个月运输一次犯人（有时甚至没有，一次也就5-10个人））我就能离开这里了”这个法术能起效且陛下没能察觉也是因为囚犯之间没有沟通，他和外界也没有有效沟通（也没人在意他），所以他没能发现时间不对劲。辐光就借用这个机会会不停地试探陛下的底线（陛下会觉得“我明天就能逃出去了，现在的我什么都能承受住”）要求一次比一次咋舌，以及这把钥匙就是陛下很委屈自己从辐光那里“偷”来的，而且辐光故意把电梯和高塔结构图放在桌面上让陛下“偷看”到，从而让陛下发现自己可以躲在电梯空隙+监控死角里（毕竟身材娇小）。</p>
+<p>然后陛下也是想把夫人的传记写完，所以他也不是那么容易想死。以及他难过的时候会找个没人的地方抱着自己尾巴（幻想这是夫人的藤条）</p>
+<p>理一下思路，<br>陛下拿到钥匙后（12月31日）即被诅咒，当时确实是“明天（1月1日）等电梯上来，我就能逃出去了”但是“明天（1月1日）”的陛下会忘记前一天“证明了今天（1月1日）就是明天（1月1日）”的经历，或者会现场修改记忆，让他依旧以为“明天（以为是1月1日，但其实是1月2日）等防护墙收回，电梯上来，我就能逃出去了”。</p>
+<blockquote>
+<p>举个例子，今天（12月31日）阿卢和以为阿卢只是另一个囚犯的陛下聊天，陛下聊到明天（1月1日）他就会逃出去了，然后第二天当他再次见到/想起阿卢的时候，“我在昨天（12月31日）已经见过他了，说过我“明天”（1月1日）会逃出去，那么今天（1月1日）应该就是“明天”（1月1日）”和“今天（1月1日）不是“明天”（1月1日）”的这个思想烙印就会产生冲突，所以就会自动将这段记忆连同“我见过这只虫子”一并删除。但如果他没有谈及“我<strong>明天</strong>就要逃出去了”，只要不在场景中明确标明“今天是今天”，记忆修改只会是“我在某一天见过这只虫子，还和他说了话。”否则就会直接删除记忆或扭曲记忆。</p>
+</blockquote>
+<blockquote>
+<p>再比如，今天（12月31日）陛下入睡前床头摆着一盆好看的白花和一本12月31日的日历，睡一觉起来后一看这盆好看的白花无了，自己已经睡了一觉，时间已经从黑夜变成了白天，所以很容易推断“昨天（12月31日）这盆花还没有无，今天是另一天（1月1日）”然后扯下日历，但一旦和思想钢印冲突，陛下的对于“这盆花曾经存在过”的这个事实就会被抹消，并且认为日历已经被撕掉过（歪曲事实）。</p>
+</blockquote>
+<blockquote>
+<p>再再比如，今天（12月31日）陛下熬了夜，熬夜之后时间从黑夜变成白天，所以也很容易推断“今天（1月1日）是另一天（1月1日）”但是这会直接导致陛下在零点之后丢失前一天的所有记忆（像是做梦一般），导致他直接失去时间判断，看着手里的钥匙不知所措（因为失去的记忆中也包括获取钥匙的记忆）。</p>
+</blockquote>
+<blockquote>
+<p>最后再举一个不会被抹消记忆的例子，就像是今天（12月31日）陛下走过长廊看着泪城街景，他睡醒后不会觉得“我昨天（12月31日）看过街景”而只是会觉得“我看了街景（但究竟是什么时候，或许不是“昨天”（12月31日）而是更早的什么时候（12月20日），或许我总是习惯这么做）”，这样的记忆就不会引起冲突，所以会被保留。</p>
+</blockquote>
+<p>而当时阿卢见到他的时候，他已经不知道循环多少次了。<br>这里cue的是我题记那句“你不该被刻上标签和卖点再陈列橱窗，也不会在阁楼蒙上布凝滞在时间里。你有权利，也有能力继续向前走。”</p>
+<p>顺便也会暗示一句“来这里的人（参与审核的jury考察团）大都是为了找乐子（妓院），而不是为了帮这里的囚犯找到方向、获得新生（教化所（教会？））”<br><strong>没错，隐喻的就是同人圈。</strong><br>但是这里的陛下不会像我（阿卢）那样发火且gatekeeping，他会表示理解（毕竟自由意志），虽然他也鄙视纵欲的行为，但他不会去干涉别人的想法，只是会（不带攻击性的）提出自己的想法，强调自己也是同等的自由（所以他要离开了（！））<br>不过在这个AU里这种纵欲是建立在犯罪基础上的，所以其实可以随便骂（啊）</p>
+<p>顺带cue一下【0verf1ow】，和这里陛下的处境很像</p>
+
+    <div id="aplayer-HetcgEAV" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="1378017634" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#cdcdcd"></div> 
+
+<blockquote>
+<p>Look for a loophole<br>找寻着能续写<br>To unfold the story unknown<br>未知故事的方法<br>Go out of control</p>
+</blockquote>
+<p>顺带再cue一下【Au palais royal/les prostituées（皇宫里/青楼女子）】，这首曲是团长对此地（高塔/圣巢）的评价并不是阿卢（阿卢更加无知一点（啊））。这里的团长我想设定成还是蛮好的团长（毕竟用的是白色魔术AU，致敬一下（不））<br>就是说即便是这里（妓院），也是可能会出现可以玩弄权贵于股掌之间的政客的，就像皇宫里的国王（像这样暗示了陛下但是陛下表示no，老子死也不会去（试着）擅长做爱）然后相对应的辐光的宫殿也更像是个妓院（啊）就这样cue到了法国大革命（不是的啊）</p>
+
+    <div id="aplayer-DSUzKVyl" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="405242452" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#cdcdcd"></div> 
+
+<blockquote>
+<p>Gloire à ces dames<br>荣耀归于这些女士们<br>Qui sur ma laideur se payent<br>在我身下承欢<br>Au grand bonheur de mon âme<br>取悦了我的灵魂<br>Gloire aux canailles<br>荣耀归于这些无赖<br>Qui aux coins des rues effrayent (ye-ye-ye-ye-yeye)<br>躲在街头的角落裡<br>Ces peignes-culs de Versailles<br>恐吓凡尔赛那些懦夫<br>Au palais royal les bouffons sont des rois<br>王宫里弄臣们才是统治者<br>Au palais royal les plaisirs font la loi<br>随心所欲才是王法<br>Il faut de l’audace et encore de l’audace<br>带著胆量和魄力勇往直前<br>Aux citoyens d’en bas<br>底层的公民<br>Ça ira<br>一切都会好的<br>On perd sa vie pour<br>男人丢了性命<br>Le sourire d’une femme (ye-ye-ye-ye-yeye)<br>只为博红颜一笑<br>Au paradis des escrocs<br>在骗子的天堂裡<br>Dans les tripots<br>在赌场裡<br>Le bourgeois côtoie l’infâme (ye-ye-ye-ye-yeye)<br>资产阶级的有钱人臭名昭著<br>Et l’on s’étripe pour un mot<br>一言不合便互相残杀<br>Ha ! ha ! ha !<br>哈! 哈! 哈!<br>Danton est dans la place<br>Danton就在这裡<br>Ça ira<br>一切都会好的<br>Gloire à nos rêves<br>荣耀归于梦想<br>Qui sous la misère sommeillent<br>沉睡在苦难之下<br>Que nos colères se soulèvent<br>那激起了我们的怒火<br>Gloire à ce jour<br>荣耀归于这一日<br>Où la patrie se réveille<br>国家觉醒的这一日<br>Voici enfin notre tour<br>这时我们终能登场</p>
+</blockquote>
+<h2 id="一个进度如蜗牛的正文"><a href="#一个进度如蜗牛的正文" class="headerlink" title="一个进度如蜗牛的正文"></a>一个进度如蜗牛的正文</h2><p>叮咚一声，电梯门缓缓拉开，他身旁的卫兵们向前铺开金毯，迈出轿厢，侧跨一步，后退，守在门前。他闭上眼，做了几个不易被觉察的呼和吸，等到电梯门的指示灯开始闪烁，他才皱起眉，迈出脚步，踩在毯上。</p>
+<p>卢瑞恩踏入此地的时候，正是囚犯们的祈祷时间。“高塔”，是即便身处王国边境都能望到的空中巨环，随太阳一同升起的日出之城的标志性建筑。但它真正的姿态只有在登上它之后才能展露无疑。面前的廊道上空无一人，日光从天窗洒下，落地窗能一眼望到城市的天际线。对于一个监狱而言，确实是过佳的美景了。</p>
+<p>但圣巢所有的蛾子都知道，这里不仅是一个监狱。</p>
+<p>他抿起嘴，叹了口气，侧过身拿出自己的备忘簿，检查自己的代办事项。</p>
+<p>“…30分钟，最多31分钟。”他喃喃着，把纸笔又塞回制服内袋。胸前金制的首相徽章被照耀得闪闪发光，他的目光在其上停留了片刻，最后还是将其摘下，一同放进口袋里。</p>
+<p>“首相大人——”</p>
+<p>“你来晚了。”他整理着自己的衣袖，头也未抬。</p>
+<p>来者一愣，“…恕…呃…恕小女子冒犯，大人…总管阁下邀请您去他的办公室——”</p>
+<p>“不必了，我只需要确认几个问题，让她过来。”他皱起眉，对方顶撞的口吻让他的语气颇为不耐。</p>
+<p>“…遵命。”未知面孔的蛾子快步离开了。</p>
+<p>他握上自己的手腕，摩挲着女王今早刚赠予他的金手链。卢瑞恩抬起头，百无聊赖地走至窗前，只手搭在栏杆上，垂眼看着脚下的城市，换了个站姿。</p>
+<p>远方某处传来嘈杂的声音，响亮且有节奏的“啪”声回响在寂静的走廊里，似乎还有虫子在尖叫。卢瑞恩的注意力不禁集中在这力量感极强的响音上。当然，这程度远不及她。<br>“啪！”<br>声音好似近在咫尺，让卢瑞恩不由得颤抖一下，闭上眼睛，紧绷起身体。<br>“…女王陛下。”他轻声说道，紧紧扯住那只手链，在他黝黑的外骨骼上勒出一道磨痕。他将额头贴上冰凉的落地窗，愈发用力地忍耐着。<br>鞭声停下了，很久没有再响起。回过神时，他仍在喘息，几乎跪下。<br>猛然意识到自己的所在之地，他立刻惊慌着站起身，确认周围没有第二只虫子在场后，最后叹出一口气，搓了搓自己新添伤痕的手腕。<br>那只蛾子还是没有来。紧接着是一声颇为冗长的铃响，大门被推开的声音，但除了守卫的呼喊和悉悉簌簌的脚步之外，没有任何生气。<br>一群穿着冷色囚服的虫子们涌进他视野的最远端，他不由得退远了些，快步走回电梯前。囚犯陆陆续续从廊道走过，卢瑞恩不禁低头检查起时间。<br>“啊，不好意思，我本想着在里面招待您——”<br>“你终于来了，”他冷冷地打断对方的客套话，抬起头，“可以的话，现在能开始汇报了吗？”<br>“…尤莉安娜·兰宿，”蓝黄色绒毛相间的蛾子收回笑容，略施一礼，“为您服务。”<br>卢瑞恩正要开口，视线却忽然不自主转向一个角落，他瞟了一眼，转回头，却又瞟了一眼，最后干脆皱起眉看个清楚。<br>一只白色的虫子，双手扶着栏杆，正艰难地向这边走过来。他的整个身体前倾着，压在支撑在右臂的栏杆之上，拖着自己的右腿和一只长尾，一步一停。他的囚服并不像其他囚犯一样浸着冷色，而是依旧的纯白色…事实上，他整只虫子都是纯白色。<br>“…啊，看上他了吗，首相大人？”<br>卢瑞恩立刻转回注意，正要下意识否定，但既然她提起…“这是怎么回事？”<br>“哦，一定是在礼拜的时候又被拖上台了，”虽然带着怜惜的语气，但她的表情却异常地兴奋，“他总是这样，拒绝向王冠行礼。”<br>“…我不是问这个，”他又转过头去看他，对方已经放弃继续移动了，只是跪在原地，将头抵在自己的前臂上，“…为什么圣巢会有生着长尾的白色虫子？”<br>“这…圣巢有各种各样的虫子——…不过我也理解您的困惑，我当初也是第一次见到这样纯白色的品种呢。”<br>“…”<br>“感兴趣的话，我可以给您安排一下…”她说着凑近来压低声音，“您前面登记的十五只蛾子，都可以给您让位…”她试探着用触须点一点卢瑞恩的肩，“首相大人的话，我也可以破例不向上汇报——即便汇报了，想必女王陛下也一定会准许的吧？”<br>“登记？”如此近的对话让他感到不快，“…不必了。”他拉开距离。<br>“真的？难得来高塔一趟…”注意到卢瑞恩的视线又开始追随那只虫子移动，她忽地笑了笑，“…他叫沃姆，牢房在E-031。”<br>“沃姆？”卢瑞恩不禁皱眉，“…谁会给自己的孩子起这种名字？”<br>“您可能不知道，现在很多穷人家都相信贱名好养活，像他这样的名字其实数量不算少的呢！”她似乎对此很有意见，立刻打开话匣，不停叹气，“唉，那些低等虫子从来都只看着眼前之好，沃姆·兰宿，多难听啊！——”<br>“…”</p>
+<p><em>沃姆向这边缓缓地摸索过来，长袖遮蔽下他握紧栏杆的双手戴着皮手套，努力支撑起身体的双足踩着高靴——统统都是纯白色。他的长尾也带着暴露式尾套，只露出了中间和些许尖端。它虽然无力地被拖行在地面上，但移动时仍会微微地游动片刻。泻下的阳光洒在他纯白的外壳上，泛起金色的描边，有时也会觉得那是阳光穿透了薄薄的几丁质边缘所晕染出的淡金琉璃。<br>卢瑞恩呆滞在原地，看得入了神。<br>似乎是感受到了卢瑞恩的视线，沃姆微微抬起头，黝黑深邃的双眼看向这边。</em></p>
+<p>“…”卢瑞恩回过神来，立刻偏过头去，眨眨眼睛。<br>“——最后女王陛下决定，在他将死未死的时候，依旧保证他的身体活着，但会将他的记忆、思想，那些乱七八糟的想法全部删除，连理智也要收回，”兰宿说着说着不禁掩嘴失笑，“噢，你也应该好好来欣赏他那一刻的表情，女王陛下真的将他玩弄于股掌里！”<br>沃姆早已低着头走过他们，继续痛苦地向前推进。<br>“…什么？”卢瑞恩怅然若失地喃喃。<br>看到卢瑞恩没有任何笑意，兰宿颇为尴尬地收住了笑声，“……总之在那之后他就乖了许多，也逐渐开始顺从这里的规矩了。”<br>“…这身搭配是你们让他刻意打扮的吗？”<br>“嗯？”她不由得也转过身去看，“哦，他有一种怪病，凡是他接触到的东西都会逐渐被染成白色。大家不想被染成白色，所以就让他戴手套了。”<br>“…确实奇怪。”他淡然地回应。<br>“但是即便如此，也有很多蛾子争着来…您知道的，”注意到卢瑞恩再一次回望向沃姆的眼神，她耸耸肩，“当然，他依旧不肯膜拜女王的神像。不过这倒不是大问题，现在对他进行惩罚已经成了一个娱乐项目…”她换上了先前的笑容，“…您感兴趣的话，也可以来参与投票。”<br>“…不必了。”<br>…<br>一番程序后，卢瑞恩终于打发走了皮笑肉不笑的狱官。<br>沿着长廊前行的时候，一小队囚犯快步从他身后走过来，一同抬着什么大型器械，和他擦肩而过。<br>沃姆就在其中，换上了新的长袍——虽然对卢瑞恩而言看不出什么区别。他戴着镣铐，因此行动速度比其他囚犯慢了不少，走在队伍的最末尾。看上去他已经不再像——卢瑞恩看看怀表——20分钟前那样痛得走不动路了。如果不是他颇具个性的七角冠，卢瑞恩定会惊讶于这座监狱竟然有第二只这样的虫子。<br>…就像一个被俘虏的亡国君主。<br>这会是蛾子们看到沃姆时的第一反应吗？卢瑞恩皱起眉。看着他们渐行渐远，卢瑞恩想像狱卒那样直接喊住这个囚犯，但那一瞬间脑海中沃姆的那双黑眸又一次锁定了他的眼睛，让他怎么也张不开口。<br>他又尝试了几次，最后还是放弃了。虽然有些气恼，但他还是加快脚步，同时计划着如何才能不失身份地接近对方。<br>沃姆和其他囚犯在一扇双开门前站定，他的长尾巴灵巧地一转，一拍开关，大门缓缓打开，一行人消失在门的另一侧。<br>“等等！”眼见门即将关上，卢瑞恩不由得三步并作两步，冲上前伸手拉住沃姆的手腕。反应过来时，沃姆只回头望了他一眼，神色充满疑惑和惊讶。下一秒，他转回视线，反手握住对方的爪子，将猝不及防的卢瑞恩拽到了自己身旁。其他的囚犯用呆滞又略带困惑的眼神向这边望了望，又低下头回到了自己的世界中去。<br>“你疯了吗，”沃姆压低声音，视线依然看着前方。他的长尾探进卢瑞恩的裤腿，轻扫了一下，缠上对方的脚腕，示意其把手随他一同搭在器械上，“你会没命的。”<br>一阵窸窣瘙痒的感觉，卢瑞恩正要挣开，忽然意识到沃姆似乎，不知为何，将自己当作了同类。<br>…或许这是个接近他的好机会。<br>似乎是感受到卢瑞恩将要动作，沃姆的尾巴缠得紧了些，做出“噤声”的警告眼神。卢瑞恩一个趔趄咽回了刚想说出口的话。虽然会意，但他仍在纠结是否要陪演下去。这里遍地都是监控摄像，哪怕能骗得了他，也骗不了那些狱卒……说起来，自己为何要拉住他？这太荒唐了，他竟然觉得会有虫子和他的女王一样美？这怎么可能？他始终看着沃姆的侧脸发呆。<br>沃姆则一直聚精会神地看着前方，时不时瞟向嵌着黄铜镜面的墙壁。【从这里之后要改逻辑。】他们一直向前走着，绕着重复的环状回廊。比起在找什么东西，沃姆更像是在等待着什么发生。但每次卢瑞恩生出疑惑的时候，沃姆便重新做出噤声的要求。<br>不知转了多少次，到了某个位置他突然停下，松开缠在卢瑞恩腿上的尾巴，拉起对方的爪子闪进了一个昏暗的角落。<br>前方是一道细长的走廊，只能容半只虫子通过。中间有一块已经脱落的墙板，看样子是联通到了另一个房间，从那空洞里能听见风的呼啸声。沃姆把卢瑞恩推到前面。<br>“到那里我们再聊。我走过很多回了，你和我体型差不多，侧过身应该也能挤过去。“<br>卢瑞恩看着前方看似踏上就要松动的铜板，“…应该？”<br>“我会在你后面看着。”<br>卢瑞恩咽下恐惧，侧过身让前胸紧贴着墙壁，艰难地向前迈了一步。“…唔…！”他不禁失声。<br>“…你恐高吗？”<br>“那你会飞吗？”卢瑞恩立刻没好气地反问。<br>沃姆一时语塞，半晌才开口，“…我会飞。”<br>卢瑞恩嗤笑了一声，“圣巢的雄性虫子不允许有翅膀。”<br>“这是特赦。”<br>一瞬间卢瑞恩回过头去确认沃姆的眼神是否在说谎，但转过头的一刹那又忽然脚软起来，他立刻打消了这个念头。<br>“…她什么时候觉得腻了，什么时候就会剪掉它们吧。”沃姆不紧不慢地补充，“即便她不动手，一些过于大胆的蛾子也会试着剪掉它们的。”<br>“…”<br>“所以你不用觉得我很优越。”<br>“我从来都没有过翅膀，也没有在羡慕你。”<br>沃姆沉默了，卢瑞恩又把全部的注意力集中在保命上。</p>
+<p>“把箱子推开，里面是空的。”<br>卢瑞恩迟疑着试着推了推，很轻易就将其推了进去。</p>
+<p>“这里不会有人过来。”沃姆随着如释重负的卢瑞恩走进房间，又踢过一边的箱子，把入口盖上。<br>这里看起来像是什么储藏间的最后面，前方还有很多堆叠着的其他箱子。</p>
+<p>刚刚经历生死劫，卢瑞恩不由得心慌气短，他背靠着墙壁站着，看着另一边专心致志打量着自己的沃姆。<br>“…”<br>沃姆端详着卢瑞恩的衣着，“…是角色扮演吗？”<br>卢瑞恩愣了一下，“…嗯？”<br>“你站在那就像个木偶。”沃姆低头拍拍衣服，尾巴没来由地在空中扫了扫，又抬起眼望向卢瑞恩，片刻后视线向下游移，“这是首相的制服吧？还换了面具。”他细细观察着，“…声音也有点像，或许这就是选你的原因…”沉吟片刻后，沃姆又像是忽然失去兴趣一般突兀地转换了话题，“你拉住我，想说些什么。”<br>“…”<br>沃姆在等待着解释，卢瑞恩只是怔怔地看着面前的白色虫子。<br>“…你很好看。”<br>“…”<br>“…”<br>“…然后呢。”沃姆的语调逐渐冷了下来，依旧不带任何色彩地看着他。<br>“…我…”不知为何，他竟被对方毫无顾忌的视线看得红了脸，之前的威严和原本打算的事情立刻打了水漂，“…你…我只是好奇…你。”<br>“嗯。”沃姆意义不明地哼了一声，“…为什么我是白色的，而且有一只长尾巴吗？”<br>他的眼神完全不同于女王陛下…但又有几分相似。但正是那些不同之处让卢瑞恩格外地无所适从。<br>“…一部分是，还有…”卢瑞恩整理着语言，“还有…”<br>“不用勉强自己了，你只是想和我做，是不是。”<br>卢瑞恩被对方的开放性惊得目瞪口呆。从这么…他以为这么…骄傲，的虫子嘴里听到这番言语，这可不是他一下就能想象得到的。于是他只能像一条观赏鱼一样，开口，又闭上，又开口，“…我也想知道你为什么会被打成那样。”<br>“…你觉得那样的我很好看？”<br>“不是…”既然对方都如此直接，自己何必还要和娼妓解释，只用直接亮出身份——<br>“可以。”他说着开始解下自己的扣子。<br>“呃？”<br>“我可以和你做。”他褪下长袍外套递给卢瑞恩，露出内搭的白色上衫，“套上这个。”说着，他又抬起另一只手，准备咬下它戴着的手套。<br>“…但我不是要真的跟你…跟你…——”对方如此的主动，他反倒起了抗拒的心理。他向后推了一步，但视线已经死死锁定在沃姆裸露出的脖颈。在这个囚犯面前，无论何等低贱，他不知为何就是无法说出那个词，更无法承认自己的意图。<br>就像女王陛下那般。卢瑞恩咽了咽口水。<br>沃姆瞥了一眼卢瑞恩，松开嘴，收回手，把长袍抱在胸前，“你很有意思，作为奴隶却拒绝说奴隶的语言。”<br>“…什么？”自己似乎被贬低了，但卢瑞恩还没来得及带上愠怒，“你再说一遍？”<br>他歪歪头，“这一点上你倒是会很合她的口味。”<br>“什么？她？”<br>“辐光。”<br>卢瑞恩再次目瞪口呆，“…你…接触过女王陛下？”<br>沃姆看着卢瑞恩，就像发现了一个世界的悖论，“…你不知道她有多少个男宠吗？”<br>他听说过传闻。但他不知道，也不想知道。“我怎么知道…你…说的是不是真话…？”但他的声音却在半途就颤抖起来。<br>“…？”沃姆饶有兴趣地打量着卢瑞恩的表情，“你喜欢辐光？”卢瑞恩只感觉脸上火烧火燎，立刻改变了话题，“你…你看起来不像是圣巢的虫子。”<br>沃姆换上了复杂的表情，“…我并不是，”他的黑眼睛映着墙壁的金光，“希望这样能回答你之前提的那些问题。”<br>卢瑞恩皱起眉。<br>“…看来你仍不满足。”沃姆抬眼。<br>“不仅如此，你还对女王陛下抱有恶意。”<br>“我不会对杀害我妻子的凶手怀有好感。”<br>“妻子”？“…不可能，女王陛下不可能毫无理由地伤害——”<br>“她不是一只蛾子。”<br>“…？”…啊，那他就是“那只”沃姆了。“…奥莉薇娅夫人涉嫌颠覆——”<br>沃姆做了个手势，“不用再把她们给我说过几十遍的话再说一遍了。”<br>“…”<br>“…”<br>“…虽然我支持女王陛下的决定，但还是…对不起。”<br>“嗯。不要再提这件事了。”</p>
+<p>沃姆的后背仍在流血，白色宽袍的缝线里渗出了同样白色的血渍，如果不是离得如此之近，根本看不出来。</p>
+<p>“…你受了很严重的伤。”</p>
+<p>“嗯。”片刻，他又补充道，“她们总是打同一个位置，因为不敢去碰其他地方。”</p>
+<p>沉默几秒，卢瑞恩从怀里掏出一只小瓶递向沃姆，“…拿着这个。”</p>
+<p>沃姆看着瓶身上精美奢华的花纹，“…这是皇室御用的花纹…”他再一次看向卢瑞恩的眼睛，“你是从哪里拿到的？”</p>
+<p>“啊，这个是…”竟被眼前的男娼看得无所适从，卢瑞恩立刻解释道，“…这个…是我的一个…顾客？玩得太过火了，她可怜我，送给我的…”他半真半假地编出了一个理由，思索片刻，又补充道，“…虽然不能疗愈伤口，但用来止痛很有功效，我每次都会用它…毕竟…有顾客喜欢看它们。”他试着用额外的细节说服对方。</p>
+<p>沃姆沉默了许久，好似接受这份礼物会是一个致命的错误一般，“…谢谢。”他接过来，扭开小瓶，轻轻嗅嗅，倒出一点粉末捻在指尖，又背过手探进袍子，颇为艰难地去够自己的伤口。</p>
+<p>“…我帮你吧。”卢瑞恩说着去拿沃姆手里的药瓶。</p>
+<p>“啊…！”看到对方的手向自己伸过来，沃姆立刻伸出手按住卢瑞恩的手臂，向后迈出了一步远的距离，“呃…谢谢你的好意，但还是不用了。”</p>
+<p>卢瑞恩看向按住自己的白手套时，才想起这只虫子的怪病。同时想到的，还有这块皮料所接触过的东西，他不由得皱起眉，嫌恶地把自己的手从沃姆的抓握中挣了出去。</p>
+<p>沃姆也局促地收回了手。</p>
+<p>卢瑞恩忽然久违地感觉自己是只垃圾…又或者这其实是生平第一次？“呃，对…对不起，我有些慌了，就…”他不由自主地开始道歉。等等，他为什么要向一个娼妓道歉？</p>
+<p>“…没事，我也差不多…”出乎意料地，揉搓着小臂的沃姆并没有为难他，“我…我们不能肢体接触，这是狱规。”</p>
+<p>狱规？卢瑞恩片刻间露出茫然的神情，又回忆起之前摞在自己桌上的文件…似乎还真有这么一回事来着…</p>
+<p>“莉薇总是和我提起白榕一族的童谣，”他皱起眉，“它其实有很多个版本…基本上她们族群的创作都是围绕这个主题展开的…——”注意到自己似乎又要偏题，他强行打断了自己，“是说一个被选中的女孩历经万难攀上巨树，取下的救世之种的故事。”</p>
+<p>“当我刚刚来到这里的时候…感受到电梯逐渐攀升的时候，我其实…”他抬起头看向窗外无际的云层，“…我以为至少，我终于能看到她最喜欢的那棵树，高耸入云。”</p>
+<p>卢瑞恩没有追随他的视线，他带着复杂的神情咬上嘴唇，等着沃姆将话说完。</p>
+<p>“…我一直想找到创世的神明，找到这一切的源头，去问他究竟发生了什么，为何我会流落此地。每一个夜晚我躺在铁床上，想从我的记忆中找出一些来龙去脉…”他闭上眼，深呼吸，“某一天，莉薇失踪了，然后，她被处死了，然后，她们逮捕了我。”又睁开眼睛，“事情就是这样发生了，没有任何解释，没有任何意义。”</p>
+<p>“曾经有虫子和我说，在这里我只是一个容器，一个装满他人欲望的容器，被塑造成她们希望的样子。”他顿了顿，“…他说的不仅是这些。”</p>
+<p>“我止不住地回想起我和莉薇相处的每一个时刻，那种一直困惑着我的、她似乎在隐瞒着什么的感觉…是不是她也将我当作了一个容器？我究竟是谁，我的未来是什么模样？我会有未来吗？”</p>
+<p>他叹了口气。“莉薇失踪的那段时间，我看到了她一直在做的事情。她想让雄性的虫子和雌性、和蛾子们平权，她想让我——像我这样的患疾的虫子，获得这个国家的尊重。”</p>
+<p>“…但莉薇是不会有这样激进的观点的，至少在我认识的她不是这样。她一直不谙世事，对政治不管不顾。那么随和，甚至有些胆小…但那些文字确实是她一笔一划、彻夜伏案写下来的。那么多订正，那么多废案，我甚至不知道她是从哪里知道的这么多想法——如果这些思想真的不是她所原创的话。”</p>
+<p>“..我想问太多问题，多到我开始怀疑自己是否已经不再存在。”他低下头去。</p>
+<p>“你…你说完了？”卢瑞恩试探着问，又突然觉得似乎过于鲁莽，“你的故事？”</p>
+<p>看不清他的表情，沃姆点了点头。</p>
+<p>“好吧…我觉得，你的问题就是…你想的实在是太多了。”卢瑞恩皱着眉，“不是说这是坏事…但这会让你不可避免地陷入失落…”</p>
+<p>“…是吗，你也这么想？”他苦涩一笑，“莉薇也如此回应我。”</p>
+<p>“…”</p>
+<p>他的神情忽地严肃，“…但是我能感觉到…那种，异常。比起一个感受，这更像是一种冲动，迫使着我做出改变。”但瞬间又回到了先前的迷茫，“…又或许这也只是莉薇在我脑中埋下的另一颗种子。”</p>
+<p>“…那么你想去做什么？”</p>
+<p>“…这没有意义，不是吗——”</p>
+<p>“不，你现在想做什么？”</p>
+<p>“…你想让我去希望吗？这并不是像我们这样的虫子能拥有——”</p>
+<p>“——我的问题无关其他，我只是想知道，你现在想做什么？”</p>
+<p>沃姆住了嘴，抬头看着卢瑞恩。“…我想…”又低下头去，“我想…我想要改变。”</p>
+<p>“我想要改变我自己，我想要改变我脚下的这个地方，我想要…”他的声音逐渐低沉下去，“…我想要推翻所有的一切，我想要扔下我的手套，然后将一切都染成纯白色。”</p>
+<p>再度抬起头的时候，他的眼神无比坚毅，但和对方视线交汇的一瞬间，它们便消散了。</p>
+<p>“…只是一些幻想罢了。我甚至都不能确定它们来自何方。”</p>
+<p>“…”</p>
+<p>“你呢？”</p>
+<p>“什么？”</p>
+<p>“你想做什么？”</p>
+<p>卢瑞恩被自己的问题问住了，“…我…”他打算去做什么呢？离开这里之后回去向女王汇报，重新回归原来的生活吧。</p>
+<p>沃姆一直用那种捉摸不透的眼神望着他，或许他是在乎的，又或许只是无心的随意话题。</p>
+<p>“…我不知道。”</p>
+<p>他轻轻偏过头，“…”，又转过眼看着脚下的城市，“这不怪你，像我们这般的虫子很难有自己的打算。”</p>
+<p>“像我们这般”的“我们”。</p>
+<p>“我…我其实不是…”他本想说出真相，又突然惊异于自己为何想要向对方解释，“…”或许只是可怜对方的生活一直被蒙在雾里吧。</p>
+<p>“…?”沃姆又重新集中了注意力，“你不是…?”</p>
+<p>卢瑞恩坚定语气，“我其实不是这里的囚犯。”</p>
+<p>沃姆的眼神忽地危险了起来，再一次上下打量了卢瑞恩一番，又逐渐恢复平静，“…哦，那就说得通了。”他站起身，身上的锁链哗哗作响。</p>
+<p>“你…你不准备杀我？”</p>
+<p>“我为何要杀你？”</p>
+<p>“因为…我为女王服务。”他说得有些艰难，为何会如此艰难？“我亲手…”害怕于对方可能的攻击行为，他没再说下去。</p>
+<p>“你是这个国家的首相。”沃姆的语气明显地冷了下去，“但你连未来的打算都没有。这个国家的问题并不在你，即便我在杀了你，也不会有多少变化。”</p>
+<p>“…说到底，我做什么都不会有任何变化。”他苦笑，“你只是她的傀儡，而我只是一个被填满的容器。”他转身欲走。</p>
+<p>“…树，是真的存在的。”</p>
+<p>沃姆的脚步一滞。</p>
+<p>“…在翻阅以前奏章的时候，我看到过对“树”下达的数道命令：火烧、酸溶、虫蛀…这些命令持续了十几年的时间，因为那棵树来春总是会再度发芽…女王陛下刚刚任我为首相的时候，我偶尔也会帮陛下批示这些命令，不过它们都在某一年戛然而止。”</p>
+<p>“…哪一年。”</p>
+<p>“我没有在意，但是…树是确实存在的。”</p>
+<p>“她竟然让你碰那些史记和奏章？”</p>
+<p>“…不，是我还很年轻的时候私自做的决定，女王陛下…她不喜欢我看这些东西。”回忆起了什么，他的身体不由得颤抖了一下。</p>
+<p>沃姆转过身，“…那么，圣巢的历史里有没有提到一只“龙”？”</p>
+<p>“龙？”</p>
+<p>“在莉薇转述给我的神话传说里，树和龙总是会一同出现。”</p>
+<p>“…不，至少我所了解的白榕族很少…——啊，你是说那只虫。”</p>
+<p>“？”</p>
+<p>“龙…只有它和被它欺骗的虫子们才会这么称呼它…它是一只毒虫。它死后渗出的毒液污染了生命之树，所以树要被摧毁…”</p>
+<p>“这是你们的版本？”</p>
+<p>“…我们的版本？”</p>
+<p>“莉薇的日记里提到了一只龙，一只白龙。”他沉思道，“树想要守护龙。当幼龙长成巨龙之时，树便实现了她的愿望…至少这是她们白榕一族所相信的。”</p>
+<p>“白色的…确实，我亲眼看见那只..可怖的疫病生物，被女王陛下斩下首级。”</p>
+<p>“…你看见过它？”</p>
+<p>“..在我很小很小的时候，”他瑟缩起来，“周围都是灰烬，哥哥在尖叫，母亲被什么虫子拖出了窗户，父亲…他全身都是血。毒虫啸叫着，它倒下的时候，大地都在颤抖…”</p>
+<p>“…我的父亲虽然被救了回来，但他已经疯了，陛下说他也被它的毒素影响，没来得及…”</p>
+<p>“所以树和龙确实是都死了。”</p>
+<p>“…但是时间对不上。”沉默片刻，卢瑞恩轻声说，“毒虫死去的时候，树仍在那里。圣巢的命令是从那之后才开始的…是的，是从那场噩梦之后，树被侵蚀，白榕族开始背井离乡…”</p>
+<p>“无论如何，它们都不在了。”</p>
+<p>“说起来你之前的女主人…听起来她像是巨树脚下的白榕族？”</p>
+<p>“…巨树脚下？”</p>
+<p>“流浪的白榕一族…留在树下的只是很少的一部分，后来也有少部分来圣巢定居的，但这里毕竟是虫子的国度，她们不久后就离开了，”卢瑞恩回忆着，“巨树消失前夕…我曾蒙女王授意…拜访过她们，可惜的是她们对树并无恶意，有的甚至都不知道它的存在…”</p>
+<p>“莉薇…我有记忆以来一直和她在一起…我只记得我们本不是这里的原住民，但来到圣巢之前的记忆都很模糊了…”</p>
+<p>“我也只记得一点…巨树白榕族的关系一直以来都和圣巢都处于敌对状态，她们执着地保护巨树，抵抗圣巢铲除巨树的举动，直到某一天她们的村庄再也没了活动。我当时也很好奇，为什么她们会如此坚信这个…说法。”</p>
+<p>“…我并不是很了解…我只是有零星的记忆。”</p>
+<p>“…”</p>
+<p>“…”</p>
+<p>“哈…真古怪…”沃姆忽然轻笑了一声，“…我还以为我是圣巢唯一能思考的雄性。”</p>
+<p>“沃姆…”</p>
+<p>“…什么？”</p>
+<p>“你有没有想过…”卢瑞恩忽然开口，“…不，让我先问个问题，你的名字为什么是“沃姆”？”</p>
+<p>“…我有记忆以来…它一直都是我的名字。莉薇总是这么称呼我。”</p>
+<p>“你知不知道“沃姆”这个读音在圣巢的意思？”</p>
+<p>“…骂虫子的脏话？”</p>
+<p>“是毒虫的意思。和你口中的“龙”是同一存在。”</p>
+<p>“…”他沉默了，身后的尾巴环成圈。</p>
+<p>“你是白色的，你有一个…龙尾巴，你的名字是沃姆。”</p>
+<p>“…但龙已经死了。树也已经死了。一切都结束了。”</p>
+<p>“时间对不上。毒虫死的时候树还活着，那么树在守护什么？”</p>
+<p>“…”</p>
+<p>“为何那棵树历经十几年的时间都无法被摧毁，十几年后却忽然消失无踪？”</p>
+<p>“寄宿着钢铁之心的神树。”</p>
+<p>“嗯？”</p>
+<p>“一句歌词。”</p>
+
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/cf86.html">白色魔术-设定+Demo</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2021年01月14日 - 12:48</p>
+ <p><span>最后更新:</span>2023年04月07日 - 10:51</p>
+ <p><span>原始链接:</span><a href="/p/cf86.html" title="白色魔术-设定+Demo">https://mebilychen.github.io/p/cf86.html</a>
+    
+ </p>
+ <p><span>许可协议:</span>除非文章内另行声明，遵守 cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script data-pjax> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%BE%E5%AE%9A/" rel="tag"><i class="fa fa-tag"></i> 设定</a>
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E5%90%9B%E8%87%A3%E7%BB%84/" rel="tag"><i class="fa fa-tag"></i> 君臣组</a>
+              <a href="/tags/%E8%BE%90%E5%85%89/" rel="tag"><i class="fa fa-tag"></i> 辐光</a>
+              <a href="/tags/%E6%A0%BC%E6%9E%97/" rel="tag"><i class="fa fa-tag"></i> 格林</a>
+              <a href="/tags/%E5%8D%A2%E7%91%9E%E6%81%A9/" rel="tag"><i class="fa fa-tag"></i> 卢瑞恩</a>
+              <a href="/tags/AU%E7%82%B9%E5%AD%90/" rel="tag"><i class="fa fa-tag"></i> AU点子</a>
+              <a href="/tags/%E6%97%A5%E6%9C%88%E7%BB%84-%E5%85%89%E7%BB%84/" rel="tag"><i class="fa fa-tag"></i> 日月组/光组</a>
+              <a href="/tags/%E7%99%BD%E8%89%B2%E9%AD%94%E6%9C%AF/" rel="tag"><i class="fa fa-tag"></i> @白色魔术</a>
+              <a href="/tags/%E9%BB%84/" rel="tag"><i class="fa fa-tag"></i> 黄</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/dc54.html" rel="prev" title="脱粉现场">
+      <i class="fa fa-chevron-left"></i> 脱粉现场
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/61db.html" rel="next" title="寄生虫">
+      寄生虫 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%99%BD%E5%8C%96%E4%B8%8E%E7%99%BD%E5%8F%98"><span class="nav-text">白化与白变</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#toc_0"><span class="nav-text">目前目标：以卢瑞恩视角的“醉酒”场景写一个小短篇</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#toc_1"><span class="nav-text">以下是设定</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#AU%E5%8F%98%E4%BD%93"><span class="nav-text">AU变体</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A5%E5%85%85%EF%BC%9A"><span class="nav-text">补充：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E6%96%87%EF%BC%88%E9%9A%8F%E6%84%8F%E5%86%99%E9%98%B6%E6%AE%B5%EF%BC%89"><span class="nav-text">正文（随意写阶段）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E7%9F%A5%E4%BB%96%E4%BB%AC%E5%9C%A8%E5%B9%B2%E4%BB%80%E4%B9%88"><span class="nav-text">不知他们在干什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%90%E5%85%89%EF%BC%88%E8%9B%BE%E5%AD%90%EF%BC%89-x-%E9%99%9B%E4%B8%8B%EF%BC%88%E9%BB%84%EF%BC%8C%E5%8F%AF%E8%83%BD%E4%BC%9A%E8%A2%AB%E8%90%8E%E5%88%B0%EF%BC%89"><span class="nav-text">辐光（蛾子） x 陛下（黄，可能会被萎到）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%90%E5%85%89-x-%E9%98%BF%E5%8D%A2%EF%BC%88%E9%BB%84%EF%BC%8C%E5%8F%AF%E8%83%BD%E5%8F%88%E4%BC%9A%E8%A2%AB%E8%90%8E%E5%88%B0%EF%BC%89"><span class="nav-text">辐光 x 阿卢（黄，可能又会被萎到）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%90%E5%85%89-x-%E9%99%9B%E4%B8%8B-x-%E9%98%BF%E5%8D%A2%EF%BC%88%E7%A0%81%EF%BC%89"><span class="nav-text">辐光 x 陛下 x 阿卢（码）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8E%E7%BB%AD%E5%B1%95%E5%BC%80"><span class="nav-text">后续展开</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%B8%AA%E8%BF%9B%E5%BA%A6%E5%A6%82%E8%9C%97%E7%89%9B%E7%9A%84%E6%AD%A3%E6%96%87"><span class="nav-text">一个进度如蜗牛的正文</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar3.jpg">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">169</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">177</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjEwMTM3MTIxMjdAcXEuY29t" title="E-Mail → mailto:1013712127@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9tZWJpbHkxMzE0" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      猜猜这是什么鬼地方？
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9tZWJpbHljaGVuLmxvZnRlci5jb20v" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;">LOFTER</span>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/p/NISP.html" title="p&#x2F;NISP.html">【音频可视化】Wallpaper Engine</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ab228.html" title="p&#x2F;ab228.html">【硬读文章】我与地坛</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/1547.html" title="p&#x2F;1547.html">【AI拼贴画】一些灵感和其他见证历史</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/9527b.html" title="p&#x2F;9527b.html">【脑洞合集】无Tag的小脑洞们，Encore</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/a6ba.html" title="p&#x2F;a6ba.html">白宫+高塔地图</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ysyg0.html" title="p&#x2F;ysyg0.html">（起稿）守望者@Memo</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ee39.html" title="p&#x2F;ee39.html">王国边境@Memo</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/p/248a.html" title="p&#x2F;248a.html">X个新点子，关于跑团和跑团的</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/679f.html" title="p&#x2F;679f.html">还希望站子拥有的一些优化</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/0.html" title="p&#x2F;0.html">【备忘】</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">3m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">45:39</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "站子已虔诚祈祷 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+     //'.site-meta',
+    //'.site-nav',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+<script language="JavaScript">
+var password="";
+password=prompt('Password (Birthday)','');
+if (password != '20180909')   
+{alert("。");    
+window.opener=null;
+window.location.href = "about:blank"; 
+window.close();}  // 密码不正确就关闭//-->
+</script>
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>

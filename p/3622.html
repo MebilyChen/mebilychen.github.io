@@ -1,0 +1,1850 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="♕DEMO&#x2F;未完成作品♕    ♕本文已死♕    就是这篇！提到团长邀请陛下加入剧团的!当时因为满脑子都是GrimmPale所以硬生生把两只虫扯在一起.....唉，算了，都过去了，没必要，忘记吧，现在一个人就很快活了呀！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HK:A New Era">
+<meta property="og:url" content="https://mebilychen.github.io/p/3622.html">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:description" content="♕DEMO&#x2F;未完成作品♕    ♕本文已死♕    就是这篇！提到团长邀请陛下加入剧团的!当时因为满脑子都是GrimmPale所以硬生生把两只虫扯在一起.....唉，算了，都过去了，没必要，忘记吧，现在一个人就很快活了呀！">
+<meta property="og:locale">
+<meta property="article:published_time" content="2018-12-02T09:17:00.000Z">
+<meta property="article:modified_time" content="2023-01-29T08:57:16.923Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="白王">
+<meta property="article:tag" content="灭绝：弃坑">
+<meta property="article:tag" content="冰火组&#x2F;GrimmPale">
+<meta property="article:tag" content="格林">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://mebilychen.github.io/p/3622.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : '中文'
+  };
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    
+      if (NexT.utils.hasMobileUA()) return;
+    
+    let time, hidden, visible, title = document.title;
+    let favicon = document.querySelector('link[rel="icon"]');
+    
+      hidden = ["盯————","*探*","?","......","*观察*"];
+      visible = ["*偏转视线*","*缩*","*强装镇定*","！","*低头*"];
+    
+    let random = t => t[Math.floor(Math.random() * t.length)];
+    const change = () => {
+      if (document.hidden) {
+        favicon.setAttribute('href', '/images/favicon-32x32-king-black.png');
+        
+          document.title = random(hidden);
+        
+        clearTimeout(time);
+      } else {
+        favicon.setAttribute('href', '/images/favicon-32x32-brand-black.png');
+        
+          document.title = random(visible);
+        
+        time = setTimeout(() => {
+          document.title = '碳素的小作坊';
+        }, 1000);
+      }
+    }
+    document.addEventListener('visibilitychange', change, false);
+  });
+</script>
+
+  <title>HK:A New Era | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<style type="text/css">
+.spoiler {
+  display: inline-flex;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;调谐中...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">177</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">169</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-image fa-fw"></i>画廊</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/random.html" rel="section"><i class="fa fa-question fa-fw"></i>抽</a>
+
+  </li>
+        <li class="menu-item menu-item-lang">
+
+    <a href="/en/" rel="section"><i class="fa fa-globe fa-fw"></i>->English</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-17081-597255-1305127431.cos-website.ap-hongkong.myqcloud.com' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/3622.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          HK:A New Era
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-12-02 17:17:00" itemprop="dateCreated datePublished" datetime="2018-12-02T17:17:00+08:00">2018-12-02</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2023-01-29 16:57:16" itemprop="dateModified" datetime="2023-01-29T16:57:16+08:00">2023-01-29 16:57:16</time>
+                </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">王文</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/%E7%8E%8B%E6%96%87AU%E7%82%B9%E5%AD%90/" itemprop="url" rel="index"><span itemprop="name">王文AU点子</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>15k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>13 分钟</span>
+            </span>
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E7%81%AD%E7%BB%9D%EF%BC%9A%E5%BC%83%E5%9D%91/" rel="tag"><i class="fa fa-tag"></i> 灭绝：弃坑</a>
+              <a href="/tags/%E5%86%B0%E7%81%AB%E7%BB%84-GrimmPale/" rel="tag"><i class="fa fa-tag"></i> 冰火组/GrimmPale</a>
+              <a href="/tags/%E6%A0%BC%E6%9E%97/" rel="tag"><i class="fa fa-tag"></i> 格林</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><div class="note warning"><p style="text-align:center; color:#F0AD4E">♕DEMO/未完成作品♕ </p></div>
+
+<div class="note danger"><p style="text-align:center; color:#D9534F"> ♕本文已死♕ </p></div>
+
+<div class="note primary"><p style="color:#7042C1"> 就是这篇！提到团长邀请陛下加入剧团的!当时因为满脑子都是GrimmPale所以硬生生把两只虫扯在一起.....唉，算了，都过去了，没必要，忘记吧，现在一个人就很快活了呀！ </p> </div>
+
+<span id="more"></span>
+
+<div class="note primary"><p style="color:#7042C1">哦不，还有陛下 </p> </div>
+
+<div class="note info"> <p style="color:#438BCA">我也不知道这篇到底包含了多少个点子（老血）入王圈的第一个AU，比较乱，很幼稚。</p> </div>
+
+<div class="note info no-icon"> <p style="color:#438BCA">不过我记得有个关键主线，我私心想写HE大团圆结局，就想着应该树立一个圣巢众共同的敌人，就拉出来一只麻雀，把她说成时间神了哈哈哈哈</p> </div>
+
+<h2 id="toc_0">Ch 1</h2>
+
+
+<p>“您也是知道的，我的陛下。这个世界就是一个舞台，我们都只不过是其中一个小小的演员而已——啊，失礼了，是相对比较重要的角色。”<br>
+他轻轻晃着手里的酒杯，饶有兴致地看着对面的人——不，虫。<br>
+而后者只是默默地看着窗外，面前桌上的酒杯里盛着稍满的葡萄酒——他一口都没有喝。大大的落地窗装饰的非常华丽，然而映照在玻璃上的却不是光——是火。鲜红色的火焰充满着整个空间，这座白色的宫殿在火光的辉映下染上了一层红色。<br>
+“我很欣赏您，您用您的智慧为这个世界编排了一部杰出的戏剧——虽然有些不情愿承认，但是似乎胜于我。”<br>
+他把酒杯放下：“您看起来不是很喜欢葡萄酒？下一次我试试新带回来的浆果吧——”<br>
+“不用麻烦了。”<br>
+他把头转回来，冷冷地看着对方。他的声音很大，宫殿里一瞬间都回响着他冰冷干枯的声音。<br>
+另一只虫仍然面露笑意，似乎完全没有被语气里流露出的些许杀意影响到。<br>
+“待客之道，我还是略解一二的。”说着，他打了个响指。霎那间，长长的餐桌上放满了山珍海味。<br>
+“你似乎误会了，这里是我的宫殿，而我不欢迎你，请你离开吧，恕不奉陪。”他起身，刚向大厅门口走了几步，就被一道凭空窜出的火焰挡住了去路。<br>
+他的笑意似乎更浓了：“陛下请留步，容我冒昧地问您一句，您是不是又开始厌烦这个地方了？”<br>
+对方并没有转过身，也没有作出任何回应，只沉默着立在火焰前。火焰炙烤着他的身体，他仍不为所动。<br>
+一时间，大厅里只回荡着火焰的噼啪声。<br>
+“——我想也是，已经过去了多少个百年了？”见对方不答，他突然冷笑一声，“长到你的子民已经忘记你的模样，长到你付出的努力已经化为乌有。”<br>
+他也站起身，暗红色的披风将他的身体包裹了起来，“曾经在你身边的虫们——以及你亲手葬送的那个孩子，最终都一一消失了，不是吗？”<br>
+他缓缓的走向仍然伫立在火焰前的苍白身影，同样，火光也在他身上染上了更深一层的绛红。<br>
+“还有你引以为豪的王国，你不惜任何代价要保护的文明和虫子们——”<br>
+他已经站到了他的身旁，也敏锐的察觉到了对方在不受控制的微微颤抖。<br>
+是愤怒，还是不甘？是悲伤，还是恐惧？<br>
+不过他不在意这个问题的答案，现在他只是对对方的反应十分满意。<br>
+他弯下腰，轻轻地对这位退位已久的，圣巢的国王说：<br>
+“——那么您还想要挽回些什么呢？您已经什么都不剩了——”<br>
+“你到底是什么人？你想从我身上得到什么？你的目的难道仅仅只是为了把我囚禁在这里吗？”<br>
+苍白之王猛然转过身，眼睛无畏地紧盯着对方。<br>
+格林——他一直以来都是这么自称的——站直身体，俯视着面前的国王：“我记得在几千年前，我们第一次见面的时候，我就介绍过我自己吧？您的记忆力难道因为长期的不谙世事而下降了——”<br>
+“不可能，你不可能只是一个小小的剧团团长，你——”<br>
+“陛下，剧团的团长可不是那么轻松胜任的，”格林眯起了眼，似乎对某个形容词有些不满，“我为了巡回演出可是花费了不少心思的。”<br>
+“一个普通的虫子是不可能有这么强大的力量的。”<br>
+“…您是这么想的吗？那真是可惜，我只是一个喜欢舞台剧的普通虫子而已。”<br>
+苍白之王狠狠地盯着格林。<br>
+“每一次我问你这个问题，你都会编造出这些明显不符合事实的话来搪塞我，你明明知道我已经有足够的证据证明你的真实身份，却还是继续坚持你的可笑论调——”<br>
+“哦？那陛下可否将您的推断展示给在下一看？”<br>
+格林毫不掩饰他话语中所透露出来的兴奋，他红色的眼睛似乎又鲜亮了几分。</p>
+
+<p>相反，国王突然踌躇了。<br>
+几千年了，这个奇怪的虫子一直将他幽禁在这个充满火焰的地方。<br>
+他想过脱逃。刚开始的时候，他会趁对方不在，走出宫殿外，但是所望之处，皆为火海。不出十秒，他就会嗅到焦糊的味道，同时感到像是被野兽们噬咬的痛苦。不出二十秒，他眼前便会变得一片血红，再过两三秒，他就会当场失去意识。但是再醒来的时候，他就会发现自己躺在宫殿里自己的床上，而转过头看见的第一只虫——也是唯一一只——便是笑着看着他的格林。<br>
+“陛下，奉劝您还是不要做这等愚蠢之事，这样既伤到了您的圣体，也浪费了我宝贵的时间——观众们还等着我去为他们表演呢。”<br>
+他当然没有理由听从格林的话。<br>
+这样的尝试继续了上百次。每一次国王从昏迷中醒过来，格林一定会在床的旁边，笑着俯视着他。<br>
+格林从来没有因为他一次又一次尝试逃跑而生气。正相反，他好像很享受现状。<br>
+继瘟疫之后，国王又一次感到害怕了。<br>
+他为什么要笑？他没有理由笑的。<br>
+终于有一次，国王在苏醒过来后，又像往常一样看见盈满笑意的格林，他开口了。<br>
+“…你为什么要笑？”<br>
+“因为我很欣赏您呀，我的陛下。”<br>
+“欣赏？”<br>
+“您拥有普通虫子可望不可即的智慧与才能，同时也有着他们所没有的决心。”<br>
+国王看着格林，等着他的下一句话。<br>
+“我越来越觉得，我应该邀请您加入我们的剧团。”<br>
+格林说到这里，眼里的笑意更浓了。<br>
+“您是多么可爱啊。”<br>
+苍白之王猛然发现，自己的身体开始不自主地颤抖。他试图克制住自己，但是似乎反而使自己抖得更加厉害了。<br>
+“不用害怕，陛下，我不会伤害您的，而且，您不应该害怕一只普通的虫子的，不是吗？”<br>
+正是这个时候，国王第一次意识到，自己太低估眼前这个所谓的剧团团长了。<br>
+他不再尝试离开这一片火焰之地。<br>
+对此，格林欣慰的说：“我很高兴您能理解我任务繁重，陛下。”然而国王分明能感受到，格林有些许失望。</p>
+
+<h2 id="toc_1">Ch 2</h2>
+
+<p>苍白之王不准备再逃避了。<br>
+永远被禁锢在在这个地方，对他来说，不如死亡来得更轻松一点。<br>
+“和我决斗。”<br>
+在一次饭后，国王提出了这个要求。<br>
+格林惊讶地看着国王，至少五秒钟没有说话。<br>
+国王又重复了一遍：<br>
+“决斗。”<br>
+“这怎么可以呢，陛下，我可是发过誓不会伤害您的呀。”<br>
+“这是命令。和我决斗。”<br>
+“恕我拒绝，陛下。之后我还有演出需要——”<br>
+“你把我当成什么了？宠物？观赏品？”<br>
+格林眯起了眼睛。<br>
+“这不重要，陛下。您知道您自己的身份，大可不必去和低端生物进行比较。”<br>
+国王看着格林。<br>
+许久，格林叹了口气。<br>
+“陛下是觉得我冷落了您吗？这也是没有办法的事情，剧团需要由我来主持——”<br>
+“我不是这个意思。我只需要和你决斗。”<br>
+“陛下，虽然这么说会冒犯您，但是我必须告知您，您是无法战胜我的。”<br>
+“不尝试怎么知道。”<br>
+“陛下，我承认您有着至上的神力，但是在这里——我的领域——我不认为您的力量大过我。”<br>
+然而似乎下定决心一般，苍白之王的身后，三对散发着纯白光芒，略显透明的翅膀伴随着细微而又清脆的“飒”声赫然展开，竟在一瞬间把周围的红色覆盖成了白色。<br>
+他稍稍停顿了一下，稳住身形，霎那间他的身旁多出了四把洁白无瑕的剑，剑身浮动在空中，锋利的剑尖闪着寒光，每一把都直指格林。<br>
+“……陛下，您——”<br>
+他的话并没有说完。国王的身旁，一把剑呼啸着冲向格林，他周围的火苗随着剑裹挟的风剧烈摇动着。<br>
+白色的剑贯穿了格林的身体。<br>
+它并没有停留，而是直直的继续向前飞去，直至远处传来一声石墙碎裂的声音。<br>
+“——真是美丽啊。”<br>
+格林毫不在意自己身体上的大洞，而是继续说完了之前的话。<br>
+国王没有回应，第二把、第三把剑接连射向仍立在原地不动的格林。<br>
+“既然陛下这么认真，我也不敢怠慢呢。”<br>
+话音未落，他将披风一挥，他所在的位置突然蹿起火焰，将他的整个身体包裹了起来。白剑射进火焰之中，再出现的时候已经变为了黑色的粉末，消散在空间中。<br>
+下一个瞬间，火焰消失了，格林也不见踪影。<br>
+苍白之王警觉地环视四周，整个大厅却出奇的安静，丝毫察觉不到对方的存在。<br>
+国王深吸了一口气，刚想再召唤出三把剑来，他的周围接连蹿起比他高两倍的火焰，组成了一堵火墙。<br>
+“陛下，我所剩的时间不多了，无心恋战，您也应该意识到我们之间的差距了，请您不要再勉强了。”<br>
+格林低沉的嗓音从火墙的外面传来。<br>
+把握住这个机会，国王将最后一把剑射向声音的来源。<br>
+他听到了“叮”的一声脆响。<br>
+火焰消散，站在他面前的是一个熟悉的身影。<br>
+他身披灰色的蛾翼披风，拿着国王再熟悉不过的骨钉。<br>
+那是他在他成功击败他之后，他赐给他的奖赏——不，是礼物。<br>
+骨钉上深深浅浅镌刻着的花纹，象征着他皇家骑士的身份。<br>
+白剑静静地躺在不远处的地上。<br>
+国王看着他，许久说不出话。<br>
+“……”<br>
+“……”<br>
+空洞骑士微微颔首，将手里的骨钉攥的更紧了些。<br>
+“……毫无意义。我知道你在玩什么花样。”<br>
+国王虽然这么说着，他仍感到一阵窒息般的眩晕。<br>
+“……”<br>
+空洞骑士没有回应——他也没有声音去作出回应。</p>
+
+<p><em>你曾亲手把我禁锢在黑卵里，现在你能体会到我的痛苦了吗，父亲？</em></p>
+
+<p>“不……”</p>
+
+<p><em>几千年了，那光芒在我体内冲撞，破坏着我的每一寸身体，每一个组织。父亲，我真的痛不欲生啊。</em></p>
+
+<p>“……停下…”</p>
+
+<p><em>好痛啊……好痛啊……爸爸，为什么你还不来接我？你不要我了吗？我又做错了什么？…求求你，我不想一个人……</em></p>
+
+<p>“不要再说了！”</p>
+
+<p><em>然而我逃不掉，这些锁链，这些封印，我挣脱不开，我也不能挣脱…就像现在的你一样，父亲。</em></p>
+
+<p>“我说了，停下！”</p>
+
+<p><em>父亲，我对你而言到底是什么？武器？还是工具？</em></p>
+
+<p>“你不是真的，你只是个幻象！你没有资格冒充他！”<br>
+伴随着苍白之王愤怒的声音，三把白剑呼啸着冲向“空洞骑士”。</p>
+
+<p><em>爸爸！</em></p>
+
+<p>国王愣住了，缓缓看向身后。</p>
+
+<p><em>爸爸！这是送给你的！我们找了好久才找到的花！</em></p>
+
+<p>小小的身影手里拿着的是一朵洁白如玉的花。<br>
+“…为什么……不应该是这样的……你只是个容器…只是一个容器而已……”<br>
+国王身后的翅膀化作无数的白色光点，向四周飞散、消失。<br>
+他弯下腰，看着空洞骑士大大的眼睛——本来眼睛应该存在的地方。</p>
+
+<p>“…原谅我……”国王失神的喃喃道。</p>
+
+<p>“陛下，真是抱歉，这次演出超出了我的预期时间，于是回来的晚了一些，希望您不要介意。”</p>
+
+<p>听到格林的声音，国王这才回过神来。</p>
+
+<p>眼前还是高高的火墙，但自己不知何时已经出了一层冷汗。<br>
+格林把手一挥，火墙刹那间消散了。</p>
+
+<p>“……嗯？陛下，您的脸色怎么看起来不太好？”<br>
+“……”<br>
+国王并没有要回话的打算。<br>
+“难道……啊，是我的过失，真是抱歉，陛下。”<br>
+格林说着，深深地对国王鞠了一躬。<br>
+“看来您还是不肯放下过去啊，我保证下一次不会再出现这种情况了，请原谅我的错误。”</p>
+
+<p>苍白之王缓缓地起身，强迫自己平静下来。<br>
+他——它只是一个容器而已。</p>
+
+<p>另外……<br>
+这样下去是不行的。<br>
+国王看向似乎是在向他虔诚道歉的格林。</p>
+
+<p>虽然不知道对方在打什么主意，但是国王的直觉——也许是神性吧——告诉他，对方很危险。在他看来，即便有一天格林毁灭了世界，他也丝毫不会惊讶。</p>
+
+<p>格林绝不会是等闲之辈。</p>
+
+<p>寻死是不可能的了。<br>
+在这个奇怪的空间里，虽然他还是继续着来到这里之前的饮食起居，但是这些更像是一个仪式，一个流程，实际上他根本不需要这些。</p>
+
+<p>而格林，每次都会恰到好处的出现，似乎在监视着他的一举一动。</p>
+
+<p>因为一个交易，他成为了格林的玩物。</p>
+
+<p>但是苍白之王完全不后悔。过去是，现在是，将来也是。</p>
+
+<p>勿论代价。</p>
+
+<h2 id="toc_2">Ch 3</h2>
+
+<p>格林耐心的等待着对方的回答。<br>
+他能感受到对方的恐惧。</p>
+
+<p>他究竟对他抱有什么期待？连他自己都不清楚。<br>
+几千年前的那次会面，他身上的某种特质让他深深地被吸引了。<br>
+智慧和决心的结合体。<br>
+虽然已化为凡人之躯，但是那古神所拥有的独特气场是无法抹去的。<br>
+自然所孕育出来的生灵，却固执地不遵守自然的法则。<br>
+一个可遇不可求的奇迹。<br>
+…虽然他的才华让他天真地以为自己可以击败自然。<br>
+但是他最终还是做到了，不是吗？<br>
+虽然这个胜利到来的太晚了。<br>
+对于国王来说。<br>
+不论什么时候，辐光的离开对于格林来说可是再好不过的一件事了。<br>
+除去这个原因，他仍要感谢几千年前的自己，不然经过这么多岁月，他的国王岂不是要消散于时间的洪流中？<br>
+格林望着苍白之王若有所思的神情，轻轻地笑了。<br>
+无价珍宝，当然要百般呵护才行。</p>
+
+<p>“你…应该是这个时空的神吧。”<br>
+最终，国王说出了自己的判断。<br>
+“……”<br>
+格林没有回应，只是微笑着看着对方。<br>
+那笑容竟然参杂着一丝宠溺。</p>
+
+<p>“我记得几千年前在宫殿里会面时，你的模样不是现在这样的。现在想来，在进入这个空间后你的样貌就发生了变化，这绝对不是巧合。”<br>
+“…请继续。”<br>
+国王一直紧盯着格林的双眼。唯一没有变的就是那双猩红的眼睛，就好似有烈火在中燃烧一样。</p>
+
+<p>“你知道辐光和虚空神。你也知道梦境世界。这些都是在我诞生很久之前存在的，而我对这些丝毫不清楚。你的出现比我早太多了。”<br>
+“嗯哼。”格林略带赞许地点点头。</p>
+
+<p>“这足以说明你是一个古神。没有虫子能活到这么久。你说过你和辐光有一战之仇，辐光与你在梦境世界展开领土之战，而你输了这场战斗。这或许就是你帮助我的原因——你想夺回你的领土。”国王说着，看向宫殿落地窗外的火光。</p>
+
+<p>“很精彩，陛下。”格林稍稍欠身，对国王行了一个微礼。</p>
+
+<p>“所以我的结论是正确的？”</p>
+
+<p>“……我确实是因为自己的力量不够，才去接触凡间的。最初的目的，就是夺回本属于我的一切。”格林注视着国王。“但是后来我发现，凡间这个光怪陆离的世界更适合我……尤其是在遇到您之后，陛下。”</p>
+
+<p>“……”</p>
+
+<p>“我喜欢故事，每一个都注入了角色们的灵魂。我喜欢看他们如何进行选择，如何走向最终的归宿。当两个角色相遇，他们的故事会如何改写呢？<br>
+“所以我成为了剧团团长，这个身份真是再合适不过了。”</p>
+
+<p>“……”国王一言不发的看着格林。</p>
+
+<p>“您的故事是我所见过的最精彩的作品了，陛下。我穿梭于各个世界，见证了那么多王国的兴衰更替，没有一个像您的故事这么辉煌。”<br>
+突然，他弯腰跪下，行了一个标准的单膝跪地礼。<br>
+“所以，恕我冒昧，陛下。请无论如何也要加入我的剧团。”<br>
+
+  <div class="note primary"><p style="color:#7042C1">哼唧！哼！唧！唧！—— </p> </div>
+
+</p><p>“……开什么玩笑——”<br><br>“——陛下，请您三思，您真的愿意永远留在这个宫殿中吗？”<br><br>“…………”<br><br>一时间，国王竟哑口无言。<br><br>“我承诺给您必要的自由，陛下。”<br><br>“……必要的？”<br><br>“是的。这也是以防万一，陛下。毕竟脱离了这个空间之后，我可能就无法轻易的控制住您了。”<br><br>“…………”<br><br>苍白之王十分清楚，他没有选择的权利。格林是不会给他任何拒绝的选项的。<br><br>格林对他彬彬有礼，但不如说他是在对国王进行一个表演。他其实根本不在乎所谓的礼节——他可是比他还要久远的古神啊。</p><p></p>
+<p>“我没有办法拒绝。”</p>
+
+<p>格林闻言，缓缓站起身来。<br>
+“十分感谢您的理解与合作，陛下。和有智慧的虫对话就是要轻松很多。”</p>
+
+<p>说罢，他打了个响指。</p>
+
+<p>他们的身后，突然多出来一辆由一只长颈虫子拉着，带有帐篷的“马车”。<br>
+“这是我为您准备的房间，陛下。在进入之前，请穿戴上这个面具和和长袍吧。如果有人认出来您的身份，对您我都不利。”<br>
+像是变魔术一般，格林双手奉上了一个面具和一件长袍。那个白色面具上的花纹就如格林脸上的一般，有着纵向贯穿眼睛中心的黑色竖纹，而长袍则外部面料为红色，内部面料是黑色。<br>
+国王盯着它们，踌躇了一下，但还是非常不情愿地穿上了。那件长袍很长，足够把他全身遮盖起来。</p>
+
+<p>“很合适，陛下。请。”格林鞠了一躬，向着马车里做了个请的手势。</p>
+
+<p>国王一言不发的登上台阶走进车厢。内部装饰的很华丽，挂饰、桌椅，无不体现着奢华高贵。也许是为了迎合苍白之王的喜好，车厢内几乎所有物品都是以白色为主调的，只是用于照明的灯仍是格林剧团经典的黑色铁质灯笼，内中燃烧着熊熊火焰。</p>
+
+<p>“怎么样，您还喜欢吗？”<br>
+“……”<br>
+国王沉默着坐在了桌前的椅子上。<br>
+“那我能不能认为您对此很满意？”<br>
+格林坐在了国王对面的椅子上。<br>
+“这个车厢的门一般都会上锁，所以您不用担心有不速之客。”<br>
+他拿起桌上的茶壶，为国王倒了一杯茶水。<br>
+“请。”<br>
+“我们什么时候出发？”<br>
+国王并没有看向那杯茶水，而是直接看着格林问到。</p>
+
+<p>“稍等，我还没有感受到任何召唤，如果您觉得——”<br>
+格林突然停顿了一下，稍微偏了偏头。<br>
+“——啊。现在我们可以出发了。”</p>
+
+<h2 id="toc_3">Ch ？</h2>
+
+<p>——————<br>
+凭借灵感写剧情start！<br>
+——————</p>
+
+<p>“我希望你能帮助我。”</p>
+
+<p><em>我为何要帮助你，凄惨的凡人</em></p>
+
+<p>“……他…那个异族的神想要抹掉这个世界上所有的神明，而他现在已经找到我了，格林在和他的战斗过后，需要回到梦境空间调养生息。如果他成功从历史中抹去了我的存在，下一个就会是你。”</p>
+
+<p><em>呵，竟然连梦魇之王也负伤而归吗</em></p>
+
+<p>“…格林的力量和他不相上下…暂时。”</p>
+
+<p><em>……</em></p>
+
+<p>“我放弃了古神的身份，现在以一个凡人的姿态，自然敌不过那位掌管时间的古神。”</p>
+
+<p>光芒中传来一声冷笑。<br>
+<em>……可笑。愚蠢至极</em></p>
+
+<p>“…你想笑就笑吧。不过不要忘记，你是为了什么而和我争斗。”</p>
+
+<p><em>我的眷族，我的领地，我的尊严，我的荣耀。你的出现夺走了我的一切</em></p>
+
+<p>“我尊敬你，辐光。但不是现在的你。”</p>
+
+<p><em>你摧毁了我的肉体，又想来夺走我的灵魂吗</em></p>
+
+<p>“我来这里不是为了和你争吵的。我来提供一个建议。”</p>
+
+<p><em>我不接受凡人的任何建议</em></p>
+
+<p>“辐光，你——”</p>
+
+<p><em>——光芒神，请允许我奉劝您一句话</em></p>
+
+<p>“……格林？”</p>
+
+<p><em>陛下，这么突然真是抱歉。希望没有惊吓到您</em></p>
+
+<p><em>…我不认为我们之间有什么好谈的，梦魇之王。别忘了你可是我的手下败将</em></p>
+
+<p><em>曾经，的确如此，光芒神。但是——</em></p>
+
+<p><em>——作为一个古神，竟然对一个凡人毕恭毕敬，真是羞耻——</em></p>
+
+<p><em>——请耐心听我讲完——</em></p>
+
+<p><em>——沃姆，我们之间的战争是不会结束的。在摧毁你之前，我绝不罢休</em></p>
+
+<p><em>哎呀……</em></p>
+
+<p>“不。”</p>
+
+<p><em>…怎么了，沃姆。你怕了吗</em></p>
+
+<p>“……历史不会重演的，辐光。我不会让它重演的。”</p>
+
+<p><em>呵。说的好像你知晓未来一样</em></p>
+
+<p>“我知道。我提到过时空之神，他为了从历史中抹去我，需要回溯历史。”</p>
+
+<p><em>而我，尽了我最后一份力，将陛下也抛入了时间漩涡中</em></p>
+
+<p>“……这件事你怎么没有告诉我，格林。”</p>
+
+<p><em>私以为以陛下的智慧，可以快速理解所发生的事情</em></p>
+
+<p><em>……所以你们是从未来回溯回来的</em></p>
+
+<p>“而且在我的未来中，辐光，你最终消失殆尽了，被虚空所吞噬。”</p>
+
+<p><em>……虚空神…呵…真没想到区区凡人竟然找上了他…</em></p>
+
+<p><em>光芒神，您所剩的时间不多了。烦请尽快作出决定</em></p>
+
+<p><em>如果我拒绝呢</em></p>
+
+<p>“那我们会一起消亡，辐光，如果这是你期愿的”</p>
+
+<p>—————————————</p>
+
+<p>“我可以用我的力量，为你的孩子们创造一个躯壳，他们将得以走出黑暗，去往大千世界——”</p>
+
+<p>苍白之王顿了顿。<br>
+“——作为交换，你要协助我封印辐光。”</p>
+
+<p><em>很有勇气，苍白的凡人</em></p>
+
+<p>四双可怖的眼睛在彻底的黑暗中发出惨白的光芒。</p>
+
+<p><em>不仅找到了我，还想和我达成交易</em></p>
+
+<p>虚空的子嗣们用同样惨白的眼睛望着苍白之王。</p>
+
+<p><em>但我还是要说，你太不自量力了。</em></p>
+
+<p>“……”</p>
+
+<p><em>先不提你想战胜自然的野心，单说你所许诺给我的条件</em></p>
+
+<p>苍白之王的周围，黑暗渐渐浓厚了起来。</p>
+
+<p><em>你可否知道，你需要献祭多少力量</em></p>
+
+<p>“我知道，我也做好了准备。”</p>
+
+<p>从黑暗中传来一阵诡异低沉的笑声。</p>
+
+<p><em>你是有多么绝望，才会作出如此不明智的选择</em></p>
+
+<p>“……无论代价如何，我一定要守护好我的文明。”</p>
+
+<p><em>……既然这样，多说无益，那么就开始吧</em></p>
+
+<p>突然，国王身旁凝重的黑暗聚集成了好几根黑色的带刺藤蔓，猛地缠绕住了国王的身体。</p>
+
+<p>国王闷哼一声，身体因为吃痛下意识的向后退去。</p>
+
+<p>但是逐渐卷紧的藤蔓让他动弹不得。</p>
+
+<p>从黑色藤蔓上不断滴落的黏稠的黑色液体一滴一滴的滴在国王的长袍上，瞬间被白色的光芒所溶解。</p>
+
+<p>但是，以肉眼可见的速度，渐渐的，白色长袍的边缘逐渐变成了黑色。</p>
+
+<p>黑色的刺一根根的刺进苍白之王的身体中，贪婪地享受着这前所未有的盛宴。</p>
+
+<p><em>…美味。你的光芒和光芒神不一样。她的光刺目无比，令人无法与之对视。而你的光……很温柔</em></p>
+
+<p>“…………”<br>
+国王能清晰地感受到藤蔓每一次的搏动——虚空神每一次的呼吸。身体被撕裂的痛苦随着每一次搏动一波一波的袭来。每一秒钟都被无限的延长、延长……然而藤蔓却一根接一根的缠绕住他的身体，一点一点的缩紧。国王感到自己的身体已经不再属于他了。</p>
+
+<p>终于，他的视野被黑暗完全吞噬了。<br>
+他也不清楚，自己是晕过去了，还是藤蔓已经将他完全包裹住了。</p>
+
+<p>朦胧中，他能听到虚空神虚无缥缈的声音。</p>
+
+<p><em>……可叹、可悲的苍白生灵，我接受你的交换条件…如果你还能从黑暗中发出光芒的话</em></p>
+
+<p>“…你…想榨干我的力量……”</p>
+
+<p><em>…我不能拒绝如此美味，不是吗</em></p>
+
+<p>“…卑鄙……”</p>
+
+<p><em>是你太天真了，凡人</em></p>
+
+<p>“………”</p>
+
+<p>藤蔓化为一团黑暗，逐渐消散，而处于中心的，是已经倒在地上的苍白之王。</p>
+
+<p>他的身体已经完全变成了暗淡的黑色，不断有黑色的液体从他的身上滴落到地上。</p>
+
+<p>他已经虚弱的说不了话了，全身不受控制的颤抖着。</p>
+
+<p><em>多谢款待</em></p>
+
+<p>“………”<br>
+“……我…”</p>
+
+<p><em>………</em></p>
+
+<p>“我怎么可能……”<br>
+苍白之王艰难的撑起身体。</p>
+
+<p><em>…………</em></p>
+
+<p>“……怎么可能倒在这种地方！”</p>
+
+<p>“飒”的一声，国王背后展开了三双翅膀。<br>
+虽然翅膀大部分依然是黑色黏稠的状态，但翅根处出现了微小的光点。</p>
+
+<p>“我的人民……我的王国……我的文明……我怎么可能就这样放弃……”</p>
+
+<p>纯净的白色光芒开始在翅膀扩散。<br>
+虚空神默默地看着这一切。<br>
+不久，帝王之翼又散发出它之前洁白透明的光泽。</p>
+
+<p>国王身上的黑色逐渐褪去，柔和的白光再一次覆盖了国王的全身。</p>
+
+<p>苍白之王微微喘着气，额头上布满了细密的汗珠。</p>
+
+<p><em>真令人印象深刻，就如凤凰涅槃一般</em><br>
+低沉的嗓音中少有地透露着一丝赞许。</p>
+
+<p>“……你的要求…我做到了…现在——”</p>
+
+<p><em>——一旦我的子嗣踏出深渊，他们便会臣服于你，只有你。你的命令将会是至高无上的。你意下如何？</em></p>
+
+<p>“………成交。”</p>
+
+<p>——————————</p>
+
+<p>奥格瑞姆能明显的感觉到，他们的国王陛下生病了。<br>
+陛下总是为这个国家，为他们操劳忙碌，又十分固执地不肯休息，生病并不算什么值得惊讶的事。</p>
+
+<p>但这一次，他感到事情不对劲。</p>
+
+<p>陛下最近很容易失神地注视着某一个地方，甚至会神志恍惚。<br>
+上次在听卢瑞恩汇报的时候，他就发现陛下的眼神不比以往的犀利，反而十分空洞，视线根本就不在卢瑞恩身上。<br>
+他怀疑和陛下上一次深渊之行时带回来的那个小家伙有关。</p>
+
+<p>不过在那之后，小家伙就交由伊斯玛照顾了。陛下还指派德莱娅来指导小家伙运用骨钉作战，而他自己又重新投身于国家的治理中，几乎再没有去看过那个小家伙。</p>
+
+<p>……看来是时候去问问伊斯玛了。<br>
+……不，这才不是约会！</p>
+
+<p>奥格瑞姆狠狠地甩了甩头，像是要把某个想法甩掉一样。<br>
+是的，他，奥格瑞姆，喜欢伊斯玛。<br>
+那个温柔体贴、善良文静、美丽可爱的伊斯玛。</p>
+
+<p>奥格瑞姆突然感到脸上一阵发烫，连忙不再去想伊斯玛的事情。</p>
+
+<p>“奥格瑞姆。”</p>
+
+<p>“啊？———”<br>
+奥格瑞姆还沉浸于自己的思绪中，听见有人唤他的名字，木然地抬起头。</p>
+
+<p>“——陛…陛下！请宽恕我的无礼！……我…我刚刚……”<br>
+看见面前站着的正是苍白之王，奥格瑞姆语无伦次起来。</p>
+
+<p>他的国王一句话也没有说，默默地看了奥格瑞姆几秒钟，然后缓缓点了一下头。</p>
+
+<p>“…不必行礼了，跟我过来。“<br>
+说完，国王径直向前走去。</p>
+
+<p>“…是…是！”</p>
+
+<p>奥格瑞姆立即跟在了国王的后面，身上冷汗直冒。</p>
+
+<p>…陛下他…不会有读心术吧……？<br>
+刚刚陛下看着他的眼神就好像能看穿他整只虫一样。</p>
+
+<p>奥格瑞姆一路忐忑地跟在国王身后。</p>
+
+<p>————————</p>
+
+<p><em>陛下</em></p>
+
+<p>朦胧中，苍白之王听到一个熟悉的声音喃喃道。</p>
+
+<p>但是他想不起来这个声音的主人是谁。</p>
+
+<p><em>时间之神——他已经预见到我们的行动了</em></p>
+
+<p><em>也许您已经不记得我是谁，但请一定要相信我所说的每一句话，趁现在我还来得及说</em></p>
+
+<p>渐渐的，连这个声音都变得陌生起来。</p>
+
+<p><em>陛下，您来自于未来，来自于另一个时间。虽然您什么都回想不起来了，但您并不属于这个世界线，请牢记这一点</em></p>
+
+<p>你是谁？<br>
+苍白之王很想问出这句话，但发现他的身体毫无反应。</p>
+
+<p>昏昏沉沉的，就像做梦一样。</p>
+
+<p><em>您将会重新抉择那些您曾经作出选择的决定，不过这次，您的周围将危机四伏</em></p>
+
+<p><em>我影响时空的力量正在减弱，时间不多了，请记住，时空之神，他会想尽一切办法将您抹杀在历史中</em></p>
+
+<p>那个声音渐渐模糊起来。</p>
+
+<p><em>……请……联合……我们的……帮助……一定——</em></p>
+
+<p>突然，声音中断了。</p>
+
+<p>苍白之王陷入了无限的黑暗中，不断的下沉、下沉……</p>
+
+<p>他感到胸口发闷，有种要窒息的感觉。</p>
+
+<p>他听到了呼啸的风声，凉意渐渐传到全身。</p>
+
+<p>“什…”<br>
+他猛地睁开双眼，映入眼帘的是灰暗的……洞窟墙壁？…不，他认得这里。<br>
+他的记忆逐渐复苏。</p>
+
+<p>旧日之光…她胆敢向他的子民施加瘟疫…他向他<br>
+她宣战…他吞噬了光，而最终也无法承受那刺目之光在他体内喧嚣，永远的倒在了边境之地……</p>
+
+<p>是的。这里是他的前身——沃姆的骨架内部。</p>
+
+<p>来自未来？<br>
+那个古怪的梦仍然在他脑海中挥之不去。<br>
+但是他对于未来充满着迷茫。<br>
+他定了定神，试图站起来。<br>
+就是在这时，他发现自己身上有异物。<br>
+“格林……？”<br>
+这个名字他脱口而出。但是下一个一瞬间，他开始惊异于自己亲口说出了这个名字。</p>
+
+<p>格林？是谁？</p>
+
+<p>原本趴着他胸口呼呼大睡的，小小的奇怪虫子听到这个名字后，颇为不满的发出了沙哑的叫声。它睁开了眼睛，那是烈火的颜色。</p>
+
+<p>熟悉……吗？</p>
+
+<p>苍白之王盯着它。</p>
+
+<p>它也睁着眼睛盯着苍白之王。</p>
+
+<p>一时间，沃姆的躯壳里只回荡着风声，以及小虫子口中时不时发出的奇异叫声。那叫声听起来像是小孩在对父母撒娇一样。</p>
+
+<p>“…你是谁？来自哪里？”<br>
+终于，苍白之王打破了寂静。</p>
+
+<p>然而回答他的只有一声古怪的短促叫声。</p>
+
+<p>“…不能交流吗…”<br>
+他站起身，小虫子没有预料到苍白之王的这个动作，从他身上滚了下来，硬生生栽到了地上，发出一声刺耳的尖叫。</p>
+
+<p>苍白之王看着那只小虫子。它缓慢的撑起身体，抬头望向苍白之王，张口露出了尖锐的牙齿，同时发出不满的嘶嘶声，像是在恐吓他一样。</p>
+
+<p>“……我想我应该道个歉。”</p>
+
+<p>听到这句话之后，小虫子狰狞的表情满满缓和下来，在最后嘴角漏出几个轻微的嘶嘶声之后，它展开翅膀，飞到了苍白之王王冠一样的头顶上，抱住了其中一根尖角，警惕的望着四周。</p>
+
+<p>“下来，这样很不礼貌。”苍白之王责备道。</p>
+
+<p>“嘶！”</p>
+
+<p>“……随你吧……格林。”<br>
+最后他还是想到了这个名字，好似这只小虫子天生就应该叫这个名字一样……虽然好像还是有哪里不对劲。</p>
+
+<p>他看向了洞口，他还有任务需要完成。他要重建被辐光破坏的王国，他要振兴圣巢的文明，他要保护他的子民不再受其他文明的侵害……即便这意味着战争。</p>
+
+<p>格林又叫了一声。</p>
+
+<p>对了，还有这个古怪的虫子，还有那个奇怪的梦…自己的记忆好像缺失了什么，但那是本就应该缺失的……</p>
+
+<p>他向着光，向着洞口走了过去。</p>
+
+<p>—————</p>
+
+<p>他看着他。<br>
+他比刚刚诞生时成长了不少。</p>
+
+<p><em>这就是你的最终武器？笑话，他甚至连自己都保护不了</em></p>
+
+<p>原本深邃黑暗的暗影，此刻已然被病态的橙光所取代。</p>
+
+<p>他失败了。他没能成为空洞骑士。</p>
+
+<p>“陛下！请站到我身后！”德莱娅摆出来进攻的架势，眼睛一刻不离面前的敌人。</p>
+
+<p>苍白之王没有反应，还是看着那个被瘟疫控制的容器。</p>
+
+<p><em>怎么？很难过吗？看到自己的“孩子”变成这样？</em></p>
+
+<p>那个声音，又开始在他脑中回响了。他已经把太多力量献祭给了虚无神，他已经无法抵挡辐光入侵他的意识。</p>
+
+<p>国王怔怔地望着他，脑海中闪过他短暂的一生。</p>
+
+<p>————————</p>
+
+<p>“我们是坚决不会称臣的！”<br>
+螳螂领主拍案而起，语气强硬，态度没有动摇分毫。<br>
+“那就没有什么可谈的了，请回吧。”<br>
+苍白之王端坐在王座上，冷冷地看着领主，“战争还会继续，祝您武运昌隆。”<br>
+说完，他示意奥格瑞姆送客。<br>
+大厅两侧负责守卫的士兵们聚集了过来。<br>
+“可是陛下——！”小螳螂终于忍耐不住了，她不想再看着自己的朋友们身陷战火。<br>
+“莉莉！这里没有你说话的份！”螳螂领主呵斥道，更多是不满于自己的女儿竟对异族野兽毕恭毕敬。<br>
+“父亲！”莉莉急得都快要哭出来了。<br>
+“我们螳螂部落即便全族战死沙场也决不会向任何一个野兽低头！“<br>
+“你把谁叫成野兽？！”奥格瑞姆已经走到父女俩的身边，听到这句话一下子就被激怒了。<br>
+“异族的野兽们没有一个不窥伺我们的领土的，包括你们所谓的王！”<br>
+“你——！”<br>
+“够了！”苍白之王迅速站起身，“奥格瑞姆，送客！”<br>
+奥格瑞姆恨恨地盯着螳螂领主，“……请吧！”<br>
+领主也不甘示弱：“那就战场上见！”<br>
+莉莉张口想说些什么来挽回局势，突然发觉苍白之王看向他们的眼神更加冰冷了，他转过身，不等莉莉发出第一个音便离开了大厅。<br>
+无果，她只能得向泽默投去求助的眼神。<br>
+泽默会意，微微点了点头，示意她少安毋躁。</p>
+
+<p>每天下午六点，是卢瑞恩例行的汇报时间。泽默和莉莉在宫殿的长廊上等候着。长廊静悄悄的，除了偶尔有几个巡逻的士兵和快步走过的家臣，大部分的时间都只有她们两人。毕竟没有人会故意来打扰国王的作息。在这种氛围下，莉莉显得十分局促不安。<br>
+“…我很抱歉今天早上的事…父亲他确实是太生气了，所以才说出那样的话…”<br>
+“…吾相信吾王不会斤斤计较这件事的，放宽心。”<br>
+“但是我还是不能理解，为什么非要用武力来解决问题呢？…我的一个好朋友，他去了战场，再也没有回来……”<br>
+莉莉的声音越来越小，最后低下了头。<br>
+“…吾王这么做，一定事出有因…“<br>
+泽默踌躇着说出了这句话。<br>
+莉莉没有回应，只是一直盯着地板。<br>
+她这是第一次仔细观察白宫的地板，这是一种很奇怪的材质，像是木材，又像是玻璃，她就这样一直看着自己模糊地印在白色地板上面的倒影。<br>
+她们旁边的门吱呀一声打开了。<br>
+莉莉被突然的声响吓了一跳，习惯性的往泽默身后躲。<br>
+卢瑞恩看到她们明显的愣了一下，但随即向泽默点头示意，走的时候有意无意的看了莉莉一眼。<br>
+泽默也只是礼貌地向卢瑞恩鞠了一躬。<br>
+莉莉本想问泽默这个虫是什么身份，但看到他们似乎并不是很熟，硬生生把到嘴边的问题又咽了回去。<br>
+过了十秒——莉莉在心里默数着——苍白之王走出了房门。<br>
+国王看到泽默也愣住了，不过很快就又恢复了往常的王者风度。<br>
+“泽默？你找我有什么——”话音未落，他视线不经意向下一转，看见了莉莉。<br>
+国王皱了皱眉。<br>
+“……迷路了？”虽然冷静的语调没有变，但仔细听还是能听出他语气中些许的不耐烦。<br>
+“陛下！关于您早上的决定……我…我希望…不，我请求您再考虑考虑！”莉莉迫切的望着苍白之王。<br>
+国王的神情更加复杂了。<br>
+“……我理解你不希望看到家乡战火纷飞，也很同情你。但是既然你们不肯称臣，就会埋下祸根，对圣巢造成威胁……”<br>
+“我们不会的，陛下！”</p>
+
+<h2 id="toc_4">Ch 4</h2>
+
+<p>“现在暖和多了。”<br>
+“这个火堆看着好诡异啊……”<br>
+“而且刚刚你们有没有听到演奏音乐的声音？”<br>
+“安啦，如果没有这个还能点燃的火堆，咱们都会冻死在这里了。”<br>
+安迪蹲在火堆旁边，望着她旁边两个不安的伙伴。<br>
+塔罗斯和茱莉兄妹，是她从很小的时候就一起玩大的朋友。她也已经记不清她们成为朋友是什么时候的事了。</p>
+
+<p>她们在寻求力量。<br>
+在蚂蚁部落中，有着这样一个传闻，如果能有蚂蚁爬上部落中心最高的山峰，那只虫便能被赋予无上的力量。</p>
+
+<p>于是年轻力壮的青年们一只又一只的爬上陡峭的山崖，有的得以回来，有的便永远留在了那座山峰之上。但是回来的蚂蚁们什么力量都没有得到。久而久之，也就没有人愿意去冒险了。</p>
+
+<p>安迪是一个孤儿。她的母亲——前任蚁后，在与异端部落的战争中战死沙场。</p>
+
+<p>而比她大几岁的两个死党，原本就是很尊敬安迪为国捐躯的母亲的，现在安迪变成了孤儿，他们不但收留了安迪，还处处照顾着她。</p>
+
+<p>“安迪…咱们还是回去吧。“<br>
+“我觉得咱们爬得够高的了，还是什么也没有呀……”<br>
+“除了这个奇怪的火堆。”塔罗斯说着，踢了一脚火堆。<br>
+“……”安迪其实是不甘心的。她想像她的母亲那样英勇善战。<br>
+山风呼啸着吹过，发出悲鸣一般的呜呜声。<br>
+“安迪……”<br>
+茱莉有点害怕了。<br>
+“好吧。那咱们回头再来碰碰运气，今天就先这样吧。”<br>
+安迪站起身，回头望了望耸入云端的山峰。<br>
+“啊？还要过来？不不不，我是不会再来了。如果真的像传闻中说的那样，宝物不早就被人发现了吗？”<br>
+塔罗斯连连摆手，“不干了不干了，为了一个不确定的东西，太危险了。”<br>
+“不是宝物，是力量。“安迪叹了口气。<br>
+“我觉得没有多少区别呀……”茱莉怯怯地说。<br>
+“……走吧，回去先好好休息几天再说，还要把今天份的工作补上呢。”塔罗斯站起身，活动了一下筋骨。<br>
+她们开始沿着蜿蜒的山路返回。<br>
+突然，茱莉惊叫了一声。<br>
+“你们看，咱们来的时候是没有这些火炬的！”<br>
+塔罗斯和安迪向着茱莉手指的方向看去。<br>
+果然，顺着山道，零星散布着一些火炬。<br>
+“会……会不会闹鬼了……？”<br>
+“怎么可能？”安迪翻了个白眼。<br>
+“…不管怎样，还是小心点为好。”塔罗斯紧张地说。<br>
+不过出乎他们意料，这些火炬并没有对他们造成任何伤害，反而由于这些照明，使他们下山变得更容易了。</p>
+
+<p>“看吧，咱们还是安全返回了，没问题的。”<br>
+安迪把手放在脑后，看着兄妹俩个，一边说一边倒退着走着。<br>
+突然，她的脚好像踢到了什么东西。<br>
+“嗯？”她转回头凑近地面去看时，发现是一个固定帐篷用的锥子。<br>
+帐篷？<br>
+她又向前跑了几步。<br>
+眼前的景象开始让她心跳加速起来。<br>
+不一会儿，她听到了茱莉和塔罗斯在她身后倒吸了一口气。<br>
+红色、鲜艳如火的帐篷，至少有两个，门口立着的火炬和她们刚刚在山路上看到的一模一样。<br>
+两只从未见过的巨大虫子匍匐在中央的帐篷旁边，注意到了她们的到来，两只虫子一齐转头看向她们。<br>
+安迪咽了口口水：“你们…是什么虫子？从哪里来的？”<br>
+那两只虫子只是死死的盯着她看，好似聋了一般。<br>
+它们脸上的面具让她没来由的感觉全身发毛。<br>
+“安迪……咱们…”<br>
+“我要进去看看。”<br>
+“什——”<br>
+“不会有事的。如果你们担心就先走吧。”<br>
+“我们怎么会抛下你呢？”<br>
+“那就——”<br>
+“——我会把门锁上，以防有人打扰到您。”<br>
+安迪的话被从前方传来的声音打断了。<br>
+她们向前望去。<br>
+那是一个瘦高的身影，身披黑色的披风，正在毕恭毕敬的向着一辆马车车厢中的什么虫鞠躬。<br>
+礼毕，他站直身体，一股无形的力量将车厢的门轻轻关上，紧接着响起一声清脆的“咔哒”声。<br>
+安迪和塔罗斯兄妹目瞪口呆地看着眼前发生的事情。<br>
+那个身影转过身来，看见她们站在那里丝毫没有惊讶，好似早就知道她们的到来：“欢迎各位光临格林剧团。我是剧团团长格林。”他象征性地鞠了一躬。“没想到您们这么快就找到了这里，招待不周，还请见谅。”</p>
+
+<p>“呃……”相较于格林的泰然自若，安迪三人面面相觑，不知所措。</p>
+
+<p>格林快速地扫视了她们一眼。</p>
+
+<p>“……那么，是您召唤了我们，是吧？”<br>
+格林看着安迪，缓缓地说道。</p>
+
+<p>“……啊…是…是什么？”<br>
+“您点燃了梦魇之灯，不是吗？”<br>
+“……灯？”<br>
+安迪突然想起来那个火堆。<br>
+“啊。那应该是我吧……”在格林的注视下，安迪觉得十分不安。<br>
+“……很好。”格林眯起眼，“那之后的仪式还请您多多关照。”<br>
+“仪式？”<br>
+“之后我会和您详细说明。”他看向俩兄妹，“这两位是您的朋友？”<br>
+“是的。”安迪警惕地说。<br>
+格林若有所思的点点头。<br>
+“如果您的朋友也想参加仪式的话，就让他们一并过来吧。”格林说着，朝着中央的大帐篷走去。<br>
+“……等一下！”一直没有说话的塔罗斯突然开口道。<br>
+格林停顿了一下，却没有转过身：“请问有什么事吗？”<br>
+“你——您是不是就是传说中那个给予我们力量的虫？”<br>
+格林微微歪了一下头，然后转过身来：“这是你们的要求吗？可以。我可以给你们想要的力量。前提是你们必须完成仪式。”<br>
+“那个……那刚刚在马车里的——”<br>
+“——小姐，好奇心太强，可是会有生命危险的哦。”格林略带笑意地看着刚刚没来得及问完问题的茱莉。<br>
+茱莉立刻躲到了塔罗斯身后。<br>
+安迪低着头沉思了一会儿，随后坚定地抬起来了头：“我加入。”<br>
+格林又笑了：“这位小姐，您和您的朋友不同，您是没有选择的余地的。我们响应您的召唤而来，而您必须完成我们的仪式。”</p>
+
+<p>“我会的。”<br>
+安迪定定地看着格林。</p>
+
+<p>“希望如此，小姐。”<br>
+格林微笑着看着安迪。</p>
+
+<h2 id="toc_1">Ch 5</h2>
+
+<p>“——大概就是这样，您需要找到我的亲族们来收集他们所持有的火焰，找到三股火焰之后，回到我这里来，我会给您进一步的指示。”</p>
+
+<p>格林耐心地向他的召唤者解释道。</p>
+
+<p>“还有，这是我们的孩子，请好好照顾他，他会在仪式中助你一臂之力。”</p>
+
+<p>“……你们的孩子？”</p>
+
+<p>“不，小姐，是<em>我们</em>的孩子。”</p>
+
+<p>话。”</p>
+
+<p>—————</p>
+
+<p>“老师，这就是所有关于灵魂的资料了。”<br>
+奎若抱着比他还高的厚厚一摞书，艰难地走到莫诺蒙的书桌前，尽量轻柔的放下——虽然不可避免的扬起了灰尘。<br>
+“很好。辛苦了。”</p>
+
+<p>“能帮到老师是我的荣幸。”奎若下意识的站直了身体。</p>
+
+<p>“你去休息吧，有事我会再叫你。”</p>
+
+<p>“……老师，这么多书籍，您——”</p>
+
+<p>“不用操心了，奎若，你需要休息。”</p>
+
+<p>“……那…有事请吩咐我，我会在房间外待命。”</p>
+
+<p>“去吧。”</p>
+
+<p>鞠躬后，奎若有些不情愿的走向房间门口。</p>
+
+<p>“奎若。”</p>
+
+<p>“在！”<br>
+奎若反射性地转身，看向莫诺蒙。</p>
+
+<p>“如果陛下来到这里，你就和他说我在忙于研究灵魂的操纵能力，没有时间与他会面了。”</p>
+
+<p>“…诶？陛下…由我去面见陛下…真的可以吗？”</p>
+
+<p>“我相信你，奎若。你是我最骄傲的学生。”</p>
+
+<p>奎若有些羞怯地低下头：“…谢谢老师！…我以后会更加努力的！”</p>
+
+<p>莫诺蒙点头道：“去吧，孩子。”</p>
+
+<p>奎若向着教师行了一个礼，便走出了研究室。</p>
+
+<p>——————</p>
+
+<p>下午，莉莉绞尽脑汁想出一个借口：去拜访一个朋友——当然免不了被父亲要求断绝朋友关系——偷偷溜到了白宫的后门。<br>
+按之前的约定，泽默正在那里等着她。<br>
+“默默（Merly）！”莉莉一看见泽默便飞扑了过去，“求求你帮帮我们吧！我…”她哽住了。<br>
+泽默稳稳地接住了莉莉的身子。<br>
+“不必担心，王乃亲善之人，有求必应，定会助你。”<br>
+“可是…可是…”莉莉回想起早上苍白之王那拒人千里的神情，不由得打了个冷战。<br>
+“吾也会劝诫吾王，以保螳螂部族今后的和平。”<br>
+“谢谢你…”<br>
+泽默又一次抱紧了莉莉。虽然她已经成年，但她远比不上泽默高大的身躯，在泽默怀里，显得那么小巧玲珑。<br>
+“吾爱，吾定一生伴你左右，不弃不离。”<br>
+“默默…”<br>
+然而她们的未来会怎样，她们谁都不敢断言。<br>
+但泽默知道，她必须把握住这次机会。否则这一次道别极有可能会成为永别。</p>
+
+<blockquote>
+<p>褐色的斑点羽毛铺满了宫殿的地面，一个瘦小的身影立在宫殿中央的一根横梁上。<br>
+“……世界在异动……旧日的光芒已被古老的黑暗吞噬……时机已经成熟了，我们无上的王。”</p>
+</blockquote>
+
+<p>————————</p>
+
+<p>在草丛的另一边，整齐地坐着六只虫子，他们围成一个圈，似乎在讨论着什么。</p>
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/3622.html">HK:A New Era</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2018年12月02日 - 17:17</p>
+ <p><span>最后更新:</span>2023年01月29日 - 16:57</p>
+ <p><span>原始链接:</span><a href="/p/3622.html" title="HK:A New Era">https://mebilychen.github.io/p/3622.html</a>
+    
+ </p>
+ <p><span>许可协议:</span>除非文章内另行声明，遵守 cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script data-pjax> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E7%81%AD%E7%BB%9D%EF%BC%9A%E5%BC%83%E5%9D%91/" rel="tag"><i class="fa fa-tag"></i> 灭绝：弃坑</a>
+              <a href="/tags/%E5%86%B0%E7%81%AB%E7%BB%84-GrimmPale/" rel="tag"><i class="fa fa-tag"></i> 冰火组/GrimmPale</a>
+              <a href="/tags/%E6%A0%BC%E6%9E%97/" rel="tag"><i class="fa fa-tag"></i> 格林</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/d450.html" rel="prev" title="设定和删减以及番外@Memo">
+      <i class="fa fa-chevron-left"></i> 设定和删减以及番外@Memo
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/53a9.html" rel="next" title="子嗣">
+      子嗣 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_0"><span class="nav-text">Ch 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_1"><span class="nav-text">Ch 2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_2"><span class="nav-text">Ch 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_3"><span class="nav-text">Ch ？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_4"><span class="nav-text">Ch 4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toc_1"><span class="nav-text">Ch 5</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar3.jpg">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">169</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">177</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjEwMTM3MTIxMjdAcXEuY29t" title="E-Mail → mailto:1013712127@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9tZWJpbHkxMzE0" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      猜猜这是什么鬼地方？
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9tZWJpbHljaGVuLmxvZnRlci5jb20v" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;">LOFTER</span>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/p/NISP.html" title="p&#x2F;NISP.html">【音频可视化】Wallpaper Engine</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ab228.html" title="p&#x2F;ab228.html">【硬读文章】我与地坛</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/1547.html" title="p&#x2F;1547.html">【AI拼贴画】一些灵感和其他见证历史</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/9527b.html" title="p&#x2F;9527b.html">【脑洞合集】无Tag的小脑洞们，Encore</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/a6ba.html" title="p&#x2F;a6ba.html">白宫+高塔地图</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ysyg0.html" title="p&#x2F;ysyg0.html">（起稿）守望者@Memo</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ee39.html" title="p&#x2F;ee39.html">王国边境@Memo</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/p/248a.html" title="p&#x2F;248a.html">X个新点子，关于跑团和跑团的</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/679f.html" title="p&#x2F;679f.html">还希望站子拥有的一些优化</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/0.html" title="p&#x2F;0.html">【备忘】</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">3m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">45:39</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "站子已虔诚祈祷 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+     //'.site-meta',
+    //'.site-nav',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+<script language="JavaScript">
+var password="";
+password=prompt('Password (Birthday)','');
+if (password != '20180909')   
+{alert("。");    
+window.opener=null;
+window.location.href = "about:blank"; 
+window.close();}  // 密码不正确就关闭//-->
+</script>
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>

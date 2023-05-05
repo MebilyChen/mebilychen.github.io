@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="article">
+<meta property="og:title" content="【角色研究】如何证明陛下就是小骑士">
+<meta property="og:url" content="https://mebilychen.github.io/p/f584.html">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:locale">
+<meta property="og:image" content="http://cdn.mebilychen.top/image/98390E82D2A583347A13CC2CAF8C15B5.png">
+<meta property="og:image" content="http://cdn.mebilychen.top/InstantPicGo/QQ%E6%88%AA%E5%9B%BE20221206191307.png">
+<meta property="article:published_time" content="2021-07-24T17:01:00.000Z">
+<meta property="article:modified_time" content="2023-01-29T07:26:10.522Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="设定">
+<meta property="article:tag" content="白王">
+<meta property="article:tag" content="角色研究">
+<meta property="article:tag" content="考据">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://cdn.mebilychen.top/image/98390E82D2A583347A13CC2CAF8C15B5.png">
+
+<link rel="canonical" href="https://mebilychen.github.io/p/f584.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : '中文'
+  };
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    
+      if (NexT.utils.hasMobileUA()) return;
+    
+    let time, hidden, visible, title = document.title;
+    let favicon = document.querySelector('link[rel="icon"]');
+    
+      hidden = ["盯————","*探*","?","......","*观察*"];
+      visible = ["*偏转视线*","*缩*","*强装镇定*","！","*低头*"];
+    
+    let random = t => t[Math.floor(Math.random() * t.length)];
+    const change = () => {
+      if (document.hidden) {
+        favicon.setAttribute('href', '/images/favicon-32x32-king-black.png');
+        
+          document.title = random(hidden);
+        
+        clearTimeout(time);
+      } else {
+        favicon.setAttribute('href', '/images/favicon-32x32-brand-black.png');
+        
+          document.title = random(visible);
+        
+        time = setTimeout(() => {
+          document.title = '碳素的小作坊';
+        }, 1000);
+      }
+    }
+    document.addEventListener('visibilitychange', change, false);
+  });
+</script>
+
+  <title>【角色研究】如何证明陛下就是小骑士 | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<style type="text/css">
+.spoiler {
+  display: inline-flex;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;调谐中...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">177</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">169</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-image fa-fw"></i>画廊</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/random.html" rel="section"><i class="fa fa-question fa-fw"></i>抽</a>
+
+  </li>
+        <li class="menu-item menu-item-lang">
+
+    <a href="/en/" rel="section"><i class="fa fa-globe fa-fw"></i>->English</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-17081-597255-1305127431.cos-website.ap-hongkong.myqcloud.com' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/f584.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【角色研究】如何证明陛下就是小骑士
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-07-25 01:01:00" itemprop="dateCreated datePublished" datetime="2021-07-25T01:01:00+08:00">2021-07-25</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2023-01-29 15:26:10" itemprop="dateModified" datetime="2023-01-29T15:26:10+08:00">2023-01-29 15:26:10</time>
+                </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%90%8C%E4%BA%BA%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">同人研究笔记</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>29k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>27 分钟</span>
+            </span>
+            <div class="post-description"><center></div>
+          
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%BE%E5%AE%9A/" rel="tag"><i class="fa fa-tag"></i> 设定</a>
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E8%A7%92%E8%89%B2%E7%A0%94%E7%A9%B6/" rel="tag"><i class="fa fa-tag"></i> 角色研究</a>
+              <a href="/tags/%E8%80%83%E6%8D%AE/" rel="tag"><i class="fa fa-tag"></i> 考据</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><blockquote class="blockquote-center">
+            <i class="fa fa-quote-left"></i>
+            <p><span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL1doaXRlX1BhbGFjZQ==">Hollow Knight Wiki<i class="fa fa-external-link-alt"></i></span><br>中文WIKI参考的是灰机。</p>
+
+            <i class="fa fa-quote-right"></i>
+          </blockquote>
+
+<p>分截自<a href="/p/f9ee.html">【角色研究】羽化</a>。</p>
+<hr>
+<h1 id="然后我列一下战士之梦的可能相关的角色"><a href="#然后我列一下战士之梦的可能相关的角色" class="headerlink" title="然后我列一下战士之梦的可能相关的角色"></a>然后我列一下战士之梦的可能相关的角色</h1><p>（好吧这七个多少都有点关系，凭记忆自翻，懒得去灰机看了）：</p>
+<p>   <strong>胡长老</strong>：Lingering dream of a fallen warrior. Travelled the world tending to those affected by the plague.<br>    Never forget what  once was lost, yet do not let it tie you down.-Elder Hu</p>
+<p>   Wait, child! Why have you come here? Have you come to tame this savage, ruined land?</p>
+<p>   Many have come to purify this place, but all who dwell here are eventually consumed.<br>   Yes, even the wild bugs lurking below us. They were once proud like you, but now they are only monsters.<br>    Beware dreams of glory, child. Turn back, and do not return.</p>
+<p>   My mind… it clears. Have we been… sleeping, child?</p>
+<p>   Aah… I remember. Those proud lords… were they truly monsters? I remember their eyes now… bright and clear. Why then did I fear them so?<br>    If there was madness in that village, it was I who brought it. They were right to cast me out.<br>    When I attacked, they were right to…<br>    They were right to kill…<br>    To kill… me…?<br>    …aah.</p>
+<p>   Elder Hu was a travelling sage[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0VsZGVyX0h1I2NpdGVfbm90ZS0y">2]<i class="fa fa-external-link-alt"></i></span> who sought to purify the borderlands of <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0hhbGxvd25lc3Q=">Hallownest<i class="fa fa-external-link-alt"></i></span> from <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL1RoZV9JbmZlY3Rpb24=">the Infection<i class="fa fa-external-link-alt"></i></span>.[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0VsZGVyX0h1I2NpdGVfbm90ZS0z">3]<i class="fa fa-external-link-alt"></i></span>[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0VsZGVyX0h1I2NpdGVfbm90ZS00">4]<i class="fa fa-external-link-alt"></i></span> He reached the <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL01hbnRpc19WaWxsYWdl">Mantis Village<i class="fa fa-external-link-alt"></i></span>, but his own Infected mind made him see the <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL01hbnRpc19Mb3Jkcw==">Mantis Lords<i class="fa fa-external-link-alt"></i></span> and <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL01hbnRpc19UcmliZQ==">the Tribe<i class="fa fa-external-link-alt"></i></span> as afflicted by the plague.[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0VsZGVyX0h1I2NpdGVfbm90ZS01">5]<i class="fa fa-external-link-alt"></i></span> The Mantises killed him after he attacked them.[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0VsZGVyX0h1I2NpdGVfbm90ZS1odS02">6]<i class="fa fa-external-link-alt"></i></span> A memorial was erected in his name above the gates to the <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0NpdHlfb2ZfVGVhcnM=">City of Tears<i class="fa fa-external-link-alt"></i></span>, his tunic and bead necklace resting on top of it.</p>
+<p>   <strong>Galien（加利安）</strong>：Lingering dream of a fallen warrior. Trained in the wilds bordering the kingdom, hoping to become a Knight.<br>    A Knight strives not only to protect the land and its people,  but the hopes and dreams of the kingdom.-Galien</p>
+<p>   Hoh, a fellow warrior, out here? I thought I was the only one brave enough and strong enough to survive in this foul, forgotten pit.</p>
+<p>   I am Galien, the strongest warrior in Hallownest! I came to this monstrous place to test my strength. No doubt you wish to test your might as well, hmm?<br>    Yes, you and I are a rare breed, quite unlike this poor fellow who has fallen before us. The world is not kind to the weak, I fear.<br>    So then… shall we do battle? Let us test our strength in joyful combat!</p>
+<p>   Unbelievable… I am defeated at last! So this is what it feels like to be bested…</p>
+<p>   Still though, I am strong, am I not? When you see our King, surely you’ll tell him of my valour…?<br>    Yes… he sent you here to test me, didn’t he? I knew he had not forgotten brave Galien.<br>    I am ready… to join you now. Brothers, you and I. Let us leave this place…<br>    …together…</p>
+<p>   Galien was a brave and undefeated warrior who claimed to be the strongest in <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0hhbGxvd25lc3Q=">Hallownest<i class="fa fa-external-link-alt"></i></span> and desired to prove his valour to <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL1RoZV9QYWxlX0tpbmc=">the Pale King<i class="fa fa-external-link-alt"></i></span> as a Knight.[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0dhbGllbiNjaXRlX25vdGUtZ2FsaWVuLTI=">2]<i class="fa fa-external-link-alt"></i></span>[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0dhbGllbiNjaXRlX25vdGUtMw==">3]<i class="fa fa-external-link-alt"></i></span> He travelled to <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0RlZXBuZXN0">Deepnest<i class="fa fa-external-link-alt"></i></span> in order to test his strength, but eventually found death instead.[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0dhbGllbiNjaXRlX25vdGUtZ2FsaWVuLTI=">2]<i class="fa fa-external-link-alt"></i></span> His husk lies in a cave filled with unusually large glowing mushrooms and a <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0xpZmVibG9vZF9Db2Nvb24=">Lifeblood Cocoon<i class="fa fa-external-link-alt"></i></span>, below the <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0ZhaWxlZF9UcmFtd2F5">Failed Tramway<i class="fa fa-external-link-alt"></i></span>.</p>
+<p>   The <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL1NwaXJpdHM=">spirit<i class="fa fa-external-link-alt"></i></span> of Galien appears above his husk after <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL1RoZV9LbmlnaHQ=">the Knight<i class="fa fa-external-link-alt"></i></span> acquires the <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0RyZWFtX05haWw=">Dream Nail<i class="fa fa-external-link-alt"></i></span>. He greets them as a fellow warrior and proposes a battle to test their respective strengths. After his defeat, Galien is humbled and believes the Knight to have been sent by the Pale King to test him. He still hopes the Knight will get him in the King’s good graces.[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0dhbGllbiNjaXRlX25vdGUtZ2FsaWVuLTI=">2]<i class="fa fa-external-link-alt"></i></span> As he prepares to leave the place, the spirit shatters into 200 <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0Vzc2VuY2U=">Essence<i class="fa fa-external-link-alt"></i></span> to be collected by the Dream Nail.</p>
+<p>   Throughout the encounter, Galien’s spirit fails to realise the corpse is his own, nor even that he is dead.[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0dhbGllbiNjaXRlX25vdGUtNA==">4]<i class="fa fa-external-link-alt"></i></span></p>
+<p>   <strong>Gorb（戈布）</strong>：Lingering dream of a fallen warrior. A mysterious life form that claimed to contain all of the world’s knowledge inside of its  distended brain.<br>    I am Gorb!-Gorb</p>
+<p>   I am Gorb!</p>
+<p>   Bow! Bow bow bow bow to Gorb!<br>    The great mind! I am Gorb!<br>    Ascend! Ascend! Ascend ascend ascend with Gorb!</p>
+<p>   I… am Gorb!</p>
+<p>   The great mind… the pain! Ascend! Ascend!<br>    I… I am…</p>
+<p>   Gorb the Great Mind was a mystic creature with a distended brain who claimed to be all-knowing.[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0dvcmIjY2l0ZV9ub3RlLTE=">1]<i class="fa fa-external-link-alt"></i></span> They goaded others to revere their mind and ascend with them to a different plane of existence.[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0dvcmIjY2l0ZV9ub3RlLTI=">2]<i class="fa fa-external-link-alt"></i></span> Their remains were buried on a hill atop the <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0hvd2xpbmdfQ2xpZmZz">Howling Cliffs<i class="fa fa-external-link-alt"></i></span>, with a tombstone carved in their image.</p>
+<p>   <strong>马科斯（Markoth）</strong>：Lingering dream of a fallen warrior. Only member of his forgotten tribe to take up a weapon.<br>    May your efforts lead you somewhere worthy.-Markoth</p>
+<p>   You have come a long way, just to die here at the edge of the world.</p>
+<p>   No, do not speak. I have heard thousands and thousands of empty words from those like you. Your pride, your desires, your desperation… you will take these things with you once I strike you down.<br>    Raise your weapon then, and die like those who came before you.</p>
+<p>   Never… have I been defeated in combat.</p>
+<p>   I can… see myself there, still sleeping. How long have I been hidden here?<br>    Here at the edge of the world, no-one could find me… except you.<br>    Warriors, knights, kings, even time itself… they have no power over me. Only you.<br>    You are the darkness… come to consume me.</p>
+<p>   Markoth was the only <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL01vdGhfVHJpYmU=">moth<i class="fa fa-external-link-alt"></i></span> to carry a weapon besides <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL1RoaXN0bGV3aW5k">Thistlewind<i class="fa fa-external-link-alt"></i></span>.[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL01hcmtvdGgjY2l0ZV9ub3RlLTM=">3]<i class="fa fa-external-link-alt"></i></span> He went to <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0tpbmdkb20nc19FZGdl">Kingdom’s Edge<i class="fa fa-external-link-alt"></i></span> to seclude himself and meditate,[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL01hcmtvdGgjY2l0ZV9ub3RlLTQ=">4]<i class="fa fa-external-link-alt"></i></span> hoping to uncover a truth long forgotten.[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL01hcmtvdGgjY2l0ZV9ub3RlLTU=">5]<i class="fa fa-external-link-alt"></i></span> Markoth fought any who would threaten him, regardless of their reasons.[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL01hcmtvdGgjY2l0ZV9ub3RlLTY=">6]<i class="fa fa-external-link-alt"></i></span> He eventually died, his remains never to be found, in a lone cave of Kingdom’s Edge.</p>
+<p>   <strong>玛尔慕（Marmu）</strong>：Lingering dream of a fallen warrior.  Protector of the Queen’s Gardens.<br>    If you believe in something as hard as you can, with your eyes shut tight… eventually it will come true!-Marmu</p>
+<p>   Oh! The Queen! The Queen is coming! I’ve been waiting so long, and now she’s almost here! I feel like I’m about to burst!</p>
+<p>   I’ve kept it safe, this sacred garden! I’ve kept it safe for all this time, and soon the Queen will return and teach me to fly!<br>    Shall we wait together, stranger? Shall we play together?</p>
+<p>   Oh, stranger… you’re strong. Much stronger than me…</p>
+<p>   I’ve been waiting a long time, stranger. I’ve been fighting a long time, stranger.<br>    I’m very, very tired! The Queen will be here soon, and I just need to sleep a little.<br>    Wake me when the Queen arrives, stranger. Perhaps the Queen will teach us both to fly, stranger!<br>    That… would be fun… wouldn’t it…?</p>
+<p>   Marmu was the innocent-minded yet strong protector of the <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL1F1ZWVuJ3NfR2FyZGVucw==">Queen’s Gardens<i class="fa fa-external-link-alt"></i></span>.[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL01hcm11I2NpdGVfbm90ZS0z">3]<i class="fa fa-external-link-alt"></i></span> <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL1doaXRlX0xhZHk=">The Queen<i class="fa fa-external-link-alt"></i></span> promised to teach her how to fly upon her return to the verdant retreat.[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL01hcm11I2NpdGVfbm90ZS00">4]<i class="fa fa-external-link-alt"></i></span> Marmu passed away before that day and a totem in her memory was placed upon her grave in the gardens’ wilds.</p>
+<p>   <strong>No-eyes（无眼）</strong>：Lingering dream of a fallen warrior. Disappeared during the plague.<br>    They ‘re coming. What’s inside of you. Strip it out!-No Eyes</p>
+<p>   My child… can you still see? Please, don’t hurt me.</p>
+<p>   Can’t sleep… with your eyes open, little one. Can’t dream… if you’re still breathing, little one.<br>    Precious children… you speak such loathsome things as you sleep… your claws scratch and scrape…<br>    Precious children, a monster has come for us in the dark…Will you sing for me?</p>
+<p>   One by one… their eyes closed at last. I felt it… a warm stillness falling over us.</p>
+<p>   I’m sorry I was frightened of you. You were always protecting us, even when we couldn’t see you.<br>    Take us there, please. A place where light can not haunt us, a place without dreams…Please…</p>
+<p>   No Eyes was a warrior of <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0hhbGxvd25lc3Q=">Hallownest<i class="fa fa-external-link-alt"></i></span> who fell to <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL1RoZV9JbmZlY3Rpb24=">the Infection<i class="fa fa-external-link-alt"></i></span>. She could not sleep knowing the dreams would infect her mind with <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL1RoZV9SYWRpYW5jZQ==">the light<i class="fa fa-external-link-alt"></i></span>.[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL05vX0V5ZXMjY2l0ZV9ub3RlLW5vZXllcy0z">3]<i class="fa fa-external-link-alt"></i></span> To protect herself and other bugs, she stripped out both their eyes and her own before succumbing.[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL05vX0V5ZXMjY2l0ZV9ub3RlLTQ=">4]<i class="fa fa-external-link-alt"></i></span>[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL05vX0V5ZXMjY2l0ZV9ub3RlLTU=">5]<i class="fa fa-external-link-alt"></i></span> She was laid to rest in the <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL1N0b25lX1NhbmN0dWFyeQ==">Stone Sanctuary<i class="fa fa-external-link-alt"></i></span>, a place in complete darkness, and a carved statue was placed upon her grave.</p>
+<p>   No Eyes’ <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL1NwaXJpdHM=">spirit<i class="fa fa-external-link-alt"></i></span> only appears at her statue after <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL1RoZV9LbmlnaHQ=">the Knight<i class="fa fa-external-link-alt"></i></span> acquires the <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0RyZWFtX05haWw=">Dream Nail<i class="fa fa-external-link-alt"></i></span> and has bought the <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0x1bWFmbHlfTGFudGVybg==">Lumafly Lantern<i class="fa fa-external-link-alt"></i></span>. While still blind, the spirit is disturbed by the light.[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL05vX0V5ZXMjY2l0ZV9ub3RlLW5vZXllc2ZpZ2h0LTY=">6]<i class="fa fa-external-link-alt"></i></span> She senses the Knight, but fears they are Infected and out to hurt her.[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL05vX0V5ZXMjY2l0ZV9ub3RlLW5vZXllc2ZpZ2h0LTY=">6]<i class="fa fa-external-link-alt"></i></span> When challenged, No Eyes agitates the sanctuary’s spirits to attack her threat.[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL05vX0V5ZXMjY2l0ZV9ub3RlLTc=">7]<i class="fa fa-external-link-alt"></i></span></p>
+<p>   After the fight, the spirits calm down while No Eyes realises the Knight never meant her harm. Relieved, the spirit asks them to lead the sanctuary’s spirits to rest, a place where the Infection cannot reach them.[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL05vX0V5ZXMjY2l0ZV9ub3RlLW5vZXllcy0z">3]<i class="fa fa-external-link-alt"></i></span> She then shatters into 200 <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0Vzc2VuY2U=">Essence<i class="fa fa-external-link-alt"></i></span> to be collected by the Dream Nail.</p>
+<p>   <strong>泽若（Xero）</strong>（乐，我家常客）：Lingering dream of a fallen warrior. Executed for Crimes against the King.<br>    A life defined by tragedy and triumph. A death marred by sorrow and regret. A spirit burdened by sins and memories. Better to wander the world than be cursed with glory. -Xero</p>
+<p>   Stop there! Those who try to leave this kingdom are cursed. Better to rest here, until time itself sleeps.</p>
+<p>   Hope and freedom. I thought that strength alone could grant me these things. In my dreams I would cut that plague with my nails, and then I turned my weapons upon the King.<br>    When I awoke in this sacred place, I began to understand. Those who hope are already doomed.<br>   Do you still hope, wanderer? Will you flee? Or will you raise your weapon and doom us both?</p>
+<p>   Ah… I can see now. Those who turn against the King are doomed as soon as they raise their weapon.</p>
+<p>   Do not call me a traitor. Simply call me a fool.<br>    I know you will not flee. Wherever you go… I will be watching.</p>
+<p>   Xero was a warrior of <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0hhbGxvd25lc3Q=">Hallownest<i class="fa fa-external-link-alt"></i></span> who believed that strength would always allow him a bright future.[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL1hlcm8jY2l0ZV9ub3RlLTI=">2]<i class="fa fa-external-link-alt"></i></span> When his mind was <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0luZmVjdGlvbg==">infected<i class="fa fa-external-link-alt"></i></span>, he hoped to fight against the plague with violence.[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL1hlcm8jY2l0ZV9ub3RlLXhlcm9kcmVhbXMtMw==">3]<i class="fa fa-external-link-alt"></i></span> Fueled by the same hope, he turned against <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL1RoZV9QYWxlX0tpbmc=">the Pale King<i class="fa fa-external-link-alt"></i></span>, for which he was executed.[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL1hlcm8jY2l0ZV9ub3RlLXhlcm9kcmVhbXMtMw==">3]<i class="fa fa-external-link-alt"></i></span>[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL1hlcm8jY2l0ZV9ub3RlLTQ=">4]<i class="fa fa-external-link-alt"></i></span> Xero was buried in the <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL1Jlc3RpbmdfR3JvdW5kcw==">Resting Grounds<i class="fa fa-external-link-alt"></i></span>, his tomb a reminder to any who would betray the King.[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL1hlcm8jY2l0ZV9ub3RlLTU=">5]<i class="fa fa-external-link-alt"></i></span> When his <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL1NwaXJpdHM=">spirit<i class="fa fa-external-link-alt"></i></span> awoke, he still could not see the wrongness of his actions and instead believed his demise was the result of a doomed fate.[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL1hlcm8jY2l0ZV9ub3RlLXhlcm9kcmVhbXMtMw==">3]<i class="fa fa-external-link-alt"></i></span></p>
+<p>   Xero’s spirit appears to <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL1RoZV9LbmlnaHQ=">the Knight<i class="fa fa-external-link-alt"></i></span> once they acquire the <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0RyZWFtX05haWw=">Dream Nail<i class="fa fa-external-link-alt"></i></span>. He accepts their challenge to mock his own fate. Once defeated, Xero finally acknowledges that his actions against the King were irrational.[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL1hlcm8jY2l0ZV9ub3RlLXhlcm9kZWZlYXQtNg==">6]<i class="fa fa-external-link-alt"></i></span> The spirit confides to the Knight its faith in their bravery, before shattering into 100 <span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL0RyZWFtX05haWwjRXNzZW5jZQ==">Essence<i class="fa fa-external-link-alt"></i></span> to be collected by the Dream Nail.[<span class="exturl" data-url="aHR0cHM6Ly9ob2xsb3drbmlnaHQuZmFuZG9tLmNvbS93aWtpL1hlcm8jY2l0ZV9ub3RlLXhlcm9kZWZlYXQtNg==">6]<i class="fa fa-external-link-alt"></i></span></p>
+<p>陛下被偷拍：</p>
+<video src="http://cdn.mebilychen.top/media/12.2/E2FD7BD4AB3EE2DDF6A64F7571315715.mp4" preload="metadata" controls playsinline poster>Sorry, your browser does not support the video tag.</video>
+
+<p>12.5</p>
+<h1 id="其实不完全相关的洗脸辐光方案的讨论"><a href="#其实不完全相关的洗脸辐光方案的讨论" class="headerlink" title="其实不完全相关的洗脸辐光方案的讨论"></a>其实不完全相关的洗脸辐光方案的讨论</h1><p>12.6更</p>
+<p>看到（FNaF）说他们相信出题人绝对不会做巧合，就是说如果同一个元素出现了两次，不会是无心之举（或者彩蛋）<br>那如果是呢？<br>这不就意味着新的信息了吗，把材料丢下去，fanbase就会自动上菜<br>感觉是一种制造迷宫的好方法（看向辐光/陛下）</p>
+<p>以下正文</p>
+<hr>
+<p>不知道该放哪了<br>（？）指的是私设。原作（大概）没有提及</p>
+<h2 id="就，陛下和团爹打开zoom："><a href="#就，陛下和团爹打开zoom：" class="headerlink" title="就，陛下和团爹打开zoom："></a>就，陛下和团爹打开zoom：</h2><p>陛下：嗯，就是想和你讨论下怎么把辐光搞掉。就是我了解到辐光怕虚空，所以就想从深渊开一条通道把虚空引到她面前然后让虚空干掉她，这样。<br>团爹：…这不行啊，你直接把虚空引到梦境界，整个梦境界，甚至于整个神居都gg啊。<br>陛下：…<br>团爹：你家也会gg的啊。<br>陛下：我可以放弃我在神界的力量，断开联系（？），而且又不是所有神都怕虚空（？）<br>团爹：…那你至少也考虑一下我家吧<br>陛下：你不是光啊。<br>团爹：火不会发光吗？<br>陛下：…那好吧。那你说怎么办。<br>团爹：你看，我现在就在搞这个容器，用来传火，用的蛮顺手的，套在你那边需求上，就可以做成一个定向导弹。<br>陛下：…<br>团爹：你看，你这个题无非就两种解法，一种就是把辐光以及她的领域、和其他领域单独分割开，诶，你再放你那个虚空进去，这样也不会影响到其他领域；另一种呢就是你把你那通道开的窄一点定向一点，或者把你虚空训练得听话一点，让它进去之后直接去打辐光，不耽误其他神的，对吧。<br>陛下：那和容器有什么关系。<br>团爹：你想嘛，你可以先按我的方法制作一个空容器，然后不放任何东西，（比如我的火种那些的，）只是装进虚空，最好是那种定向虚空，以防万一漏出来伤害到花花草草，然后你可以再把辐光塞进容器啊，用封印切断她和神居的联系，就让容器里的虚空去打她，给她打熄了，不就结了吗？<br>陛下：…<br>团爹：我知道听起来很难，但是你要想直接把虚空送上天，只影响特定领域是更难的（？），神居都是连着的啊（？）你这一下子搞得世界毁灭了咋办。<br>陛下：但是把辐光引进容器，辐光的能力可能会让她控制容器…我总不能再砍掉容器的手脚吧？<br>团爹：砍掉手脚…砍了也没什么用吧…咳咳，所以要装进虚空啊。你装进虚空，虚空又没有思想，对吧，没思想可操作，就相当于操纵虚空，你想想，谁能操纵虚空？她无从下手的。<br>陛下：…<br>团爹：而且最棒的是，虚空会湮灭一切生命，这就意味着，你把容器材料丢进去，虚空会帮你把容器清理干净变成空容器，不留一点思想！（我就是这么做的（？））<br>陛下：…<br>团爹：还有啊，你要是硬搞虚空送上天，不让它无差别攻击，搞得它过于定向了，不就是有目的、有思想有生命了吗？哪怕它不会自己和自己湮灭，也会被辐光利用的啊。<br>陛下：你会认为一个不可能产生思想的物质会产生思想吗？</p>
+<p>团爹：即便不是通常所认为的“思想”，那也会是近似于“思想”的东西。被她利用的可能性也不是没有的。</p>
+<p>陛下：…我不这么认为。她所能控制的不过就是生命的位面罢了。如果我投入足够的时间和法力去打磨虚空，她也会需要同样时间去对付它。</p>
+<p>团爹：？虽然不明白你的逻辑，但你觉得行就行吧？</p>
+<p>陛下：你再如何训练，你手里的剑也不会主动帮你击杀目标，逐渐熟练的只有你自己罢了。只有打磨剑的材料、质地和锋利程度对其是至关重要的。</p>
+<p>团爹：…除非那并不只是一把剑。</p>
+<p>陛下：虚空没有思想，也不可能会有思想。</p>
+<p>团爹：好的，但如果结合你的灵魂法术，那就不一定了。</p>
+<p>陛下：…</p>
+<p>团爹：但你如果不用你的法术…你永远也不会驯服它。所以…祝你好运？</p>
+<p>陛下：…辐光当初（？）是如何击败它的呢？</p>
+<p>团爹：？你思维真跳跃。辐光的力量和虚空的力量是完全相斥的，它们两者只能存一…某种程度上，你的力量也和虚空相斥，只不过…因为更加柔弱，反而能被其接受？辐光的光芒足以击退虚空，让它退居到最阴暗的角落。无论如何，你提出用虚空击败辐光时，我很惊讶。</p>
+<p>陛下：…我愿称其为更加镇定。平静。隐忍。耐心。理智。包容。退让。信服。我和虚空…我能感到我们之间存在某种共鸣…我的光并不会遣散虚空，而是…抚慰它？如果把握住力度，我相信我能让灵魂和虚空共存。</p>
+<p>团爹：…哼，有趣。…或许我只看见了虚空狂野原始的一面。</p>
+<p>陛下：或许是因为辐光的光芒才让它发狂。</p>
+<p>团爹：噢，你不要太过喜欢它了，小心它反咬你一口。</p>
+<p>陛下：…</p>
+<p>团爹：说不定你和任何力量都会有所谓的“共鸣”（？）</p>
+<p>陛下：…或许虚空也是如此。或许只是虚空如此。或许虚空也会和任何力量产生共鸣，只不过会将映照其上的光芒返还而已。在镜面上再次映照镜面…或许会让它变得平静。</p>
+<p>团爹：现在我有点好奇我的火焰映照在上面，会变得如何了。</p>
+<p>陛下：…你最好不要尝试。</p>
+<p>团爹：你相信你连虚空，也能将其塑造为生命吗？</p>
+<p>陛下：…如果能的话，辐光也会影响到它。</p>
+<p>团爹：你觉得虚空的生命会是什么样子？不加任何影响的话？</p>
+<p>陛下：…我想象不出来。虚空不可能有生命。</p>
+<p>团爹：所以它说不定会珍惜生命。</p>
+<p>陛下：…</p>
+<p>团爹：你觉得它会有感情吗？它会去…爱吗？</p>
+<p>陛下：你怎么突然变得世俗起来了？</p>
+<p>团爹：生命的存在就意味着感情的存在，如此原始的虚空，说不定也会有如此原始的爱。【高等生命才会有感情其实】</p>
+<p>陛下：…</p>
+<p>团爹：如果用虚空制作一个容器呢？</p>
+<p>陛下：…那只会是人工制品吧。你不要总想着容器…</p>
+<p>团爹：怎么，你对容器有意见？</p>
+<p>陛下：总觉得…用了容器就变复杂了…先不说怎么把辐光引诱出来关进容器，那万一失败了不就是给她白送一个身体吗？<br>团爹：…怎么会失败呢？好吧，就算虚空量不够会失败，你也可以原地封印那个容器啊，把容器周围灌满虚空，她哪也去不了，也伤害不大，对吧。<br>陛下：但她会漏的啊，只要她还活着，她就能通过她的梦境界影响圣巢的虫子们啊。<br>团爹：…这，那你就要保证好不要失败嘛…——好吧，你要不用容器，你想怎么办呢？<br>陛下：…我就是想要一个一定能永绝后患的快捷方法——<br>团爹：这谁不想要呢，咱们不就是在讨论吗？<br>陛下：…我觉得，虚空确实是可以直接利用——<br>团爹：你不要想着直接送进来啊，我虽然也讨厌辐光想让她死，但我也不想死啊<br>陛下：如果我用小剂量的虚空，一点点送上去，耗死她呢？…嗯，那就不快了…<br>团爹：…<br>陛下：那如果你给神都吱个声让他们防着点——<br>团爹：那你觉得辐光听不到风声吗，而且他们也不一定会支持你啊。<br>陛下：…不支持就被吞噬啊。<br>团爹：啊这，神惧怕虚空就是因为挡不住它啊…你不怕死我们怕死啊……而且你要真这么想，那我觉得你要对抗的阻力就更多了。<br>陛下：如果驯服虚空既困难又危险…我只要切断辐光和神居的关系，再把虚空引过去让他们窝里斗就好了，对吧？<br>团爹：…是…的…吧，但是很难啊（？），如果不用容器封印的话，或者说不切断她和神居的共鸣的话，神和天界都有自然的联系的，哪怕是变为凡人之躯的你，也能感受到的吧？<br>陛下：…我其实之前就在想，如果我完全抛弃我的神职会如何…就是把我现在的身体做成隔绝天界的容器——<br>团爹：跑题了跑题了沃姆。<br>陛下：…<br>团爹：你可以试着把她降格成凡虫…如果你可以的话。<br>陛下：…她被遗忘之后无非就是力量弱了而已…这甚至都不算是死亡。<br>团爹：你看，很难吧。<br>陛下：（叹气）</p>
+<p>陛下：那如果我制造一个梦境界的假象，请君入瓮呢？让她以为这是她的领域，但她一旦进来就会被完全封闭？</p>
+<p>团爹：那你也得有一个缸子才行啊，比如容器？你不好在她的主场直接动手脚的。（你也怕死的对吧）</p>
+<p>陛下：…</p>
+<p>团爹：应该说有什么容器的替代品的话，那就是封印——武器、建筑类的封印了吧。毕竟建筑这类人造品也没有思考的意志。<br>陛下：…人造品…<br>团爹：你需要的就是合适的强力封印……也很难。<br>陛下：…只要它没有可思考的意志…<br>团爹：…我是认为，如果是神裔容器的话，我是说自带神力的容器——比如你的子嗣之类的，会更容易封印她。如果只是一般的神器或者神迹…毕竟没有流着你的血脉，不是吗？<br>陛下：…和我越相似的神器，力量会越强？<br>团爹：…是的。理论上是的。但我并没有深入研究这些，我的需求就只是，传宗接代罢了，也没有想着要去征服别人…<br>陛下：…但这不就意味着，辐光可以将其控制了吗？<br>团爹：…你认为辐光可以控制你吗？<br>陛下：…我感觉…比较危险。<br>团爹：…噢，你把自己降格了。那你就想想你原来的样子——<br>陛下：…沃姆那样的？你是说用沃姆作为容器？<br>团爹：…呃，如果你还能找到一只的话。但我害怕那么庞大的躯体灌入野性的虚空…你得做好准备。<br>陛下：…后裔的话，如果加上根的力量，或许由此诞生的容器——<br>团爹：对对，你们可以试试。<br>陛下：…那关于虚空的安全性，我必须要驯服它吗？<br>团爹：你总不能不加一点修饰吧，就算它不会攻击你（？），它也是会有去占有生命的本能的啊。不要变得，最后辐光没打败，虚空替她把你巢吞了…<br>陛下：但界限在哪？你也说如果我太过线，可能会给它安插进一个想法…<br>团爹：按理说、按理说你是不能给虚空安插想法的，你只能在它其中参杂一个不属于它的想法——就是说还要保证它不会被虚空湮灭（？），这样整体而言，它会表现出略微的目的性。<br>陛下：那，不就被辐光所利用了吗？<br>团爹：…你或许可以尝试，将那些想法深藏在虚空里面，不让辐光发现——但这就意味着剂量和影响要很小；或者，你可以让它每执行一次想法，就将那个想法消除，最后只剩下纯粹的虚空…不过辐光就可能会先下手为强…<br>陛下：…要自动删除它的记忆吗？<br>团爹：…嗯，记忆，或许吧，但我会认为那更像是指令。如果使用容器的话，你就可以将容器的躯壳作为要安插进虚空的想法，毕竟躯壳是建立在生命之上的…啊，如果你没有选择用人造物作为容器的话——这就是我倡导的一物多用。<br>陛下：…<br>团爹：总之就是说，你要注意虚空和生命的相互湮灭，无意志和有意志的相互平衡…太多的意志会给辐光留下把柄，过少的意志会让虚空开始伤及无辜…<br>陛下：但从结果来看，还是越少越好。<br>团爹：…那确实。另外，在动用神裔之前，你可以先用人造物试一试。</p>
+<h2 id="然后陛下和夫人打开zoom："><a href="#然后陛下和夫人打开zoom：" class="headerlink" title="然后陛下和夫人打开zoom："></a>然后陛下和夫人打开zoom：</h2><p>陛下：根，我有一事问你…</p>
+<p>夫人：怎么了亲爱的？</p>
+<p>陛下：…我和梦魇之王商议过了，我…准备制作容器。</p>
+<p>夫人：…噢。</p>
+<p>陛下：…用神裔作成容器的话，会有更强的神力…</p>
+<p>夫人：…</p>
+<p>陛下：…</p>
+<p>夫人：…</p>
+<p>陛下：…根，你——</p>
+<p>夫人：喔，我懂的，沃姆。你不用太在意我，去做你认为正确的事吧。</p>
+<p>陛下：不，我是想…和你探讨一下，听听你的意见。</p>
+<p>夫人：…怎么说呢，嗯…听起来是个很好的方案，但…嗯，感觉有点糟糕…很糟糕…</p>
+<p>陛下：…我明白你的意思，根…</p>
+<p>夫人：…沃姆，没有更好的方案了吗？例如，不牵扯到孩子们的方案？</p>
+<p>陛下：…从安全性上来讲，使用容器，使用神力越高的容器，越可行。如果不使用子嗣的话——</p>
+<p>夫人：…</p>
+<p>陛下：…</p>
+<p>夫人：你需要我去作为容器吗，沃姆？</p>
+<p>陛下：!…根，不是的——</p>
+<p>夫人：——你休想自我牺牲，沃姆，你想都不要想…！</p>
+<p>陛下：…</p>
+<p>夫人：…噢，抱歉…</p>
+<p>陛下：…即便由我或者你作为容器…我害怕虚空的容量会直接毁灭一切…</p>
+<p>夫人：…</p>
+<p>陛下：…而且，我更害怕…辐光会——</p>
+<p>夫人：沃姆，如果你无法将他作成你想要的容器呢？</p>
+<p>陛下：…</p>
+<p>夫人：…我很愿意为你产下子嗣，我很愿意…但我从没想过——</p>
+<p>陛下：…</p>
+<p>夫人：…要用虚空湮灭一只虫子所有的思想，却保留下基本的生命，是很难的，你没有办法知道他是否纯粹…</p>
+<p>陛下：…我会尽力去做。</p>
+<p>夫人：…即便你成功了，你也无法保证他之后会不会重回原状…你也是知道，生命是有多顽强的吧？</p>
+<p>陛下：…我知道。</p>
+<p>夫人：…如果…它只存在于梦境呢？从未出生的它、无法获得任何真实感受的它，一定也无法拥有什么，“真实的想法”吧。</p>
+<p>陛下：…你的意思是…</p>
+<p>夫人：就像瘟疫那样，像旧光一般…在睡梦中长大…这样的它成熟之后，也不会重获失去的记忆吧？毕竟都没有记忆可言…</p>
+<p>陛下：…根…</p>
+<p>夫人：…沃姆，去放手做吧，我相信你的决定…</p>
+<p>陛下：…</p>
+<p>夫人：…我相信我们的决定。</p>
+<h2 id="然后陛下和阿卢打开zoom："><a href="#然后陛下和阿卢打开zoom：" class="headerlink" title="然后陛下和阿卢打开zoom："></a>然后陛下和阿卢打开zoom：</h2><p>陛下：…和你讨论一个事情，关于如何处理旧日之光，我想到一个解决方案，但不完美。</p>
+<p>阿卢：…好的陛下，您说。</p>
+<p>陛下：我想动用我的子嗣，将其作为容器，填入虚空后再引入辐光，虚空会将辐光消灭，同时也不会溢出导致圣巢被虚空或辐光摧毁。</p>
+<p>阿卢：…啊…</p>
+<p>陛下：哪怕容器失败了，我还可以准备第二防线，用圣殿和圣印将容器封印在里面，尽量减少伤害，还可以有待后续的尝试。</p>
+<p>陛下：但我其实不太喜欢容器这个解决方案，我觉得太多此一举。</p>
+<p>阿卢：…</p>
+<p>陛下：…而且如何让辐光无法操作容器——不让容器留有过多的意志，同时又不会少到失去了作为容器的束缚功能，放任虚空肆虐（？），也是很大的问题。</p>
+<p>阿卢：…</p>
+<p>陛下：但最好还是没有任何意志为佳——不能给辐光任何机会。</p>
+<p>阿卢：…那陛下，您准备如何将您子嗣原有的意志消除呢？</p>
+<p>陛下：丢进深渊。</p>
+<p>阿卢：…那，我有一个想法…</p>
+<p>陛下：…你说。</p>
+<p>阿卢：…就是，您在意的是辐光可能会将容器的意志，或者说目的转变成执念，或者将其扭曲和野性化，从而被其操纵，对吗？</p>
+<p>陛下：…对。</p>
+<p>阿卢：这就是说，辐光能够将理智变化成野性。那如果容器本身就是野性的呢？</p>
+<p>陛下：…什么意思？</p>
+<p>阿卢：就是，如果容器虽然有意志——如您所说，意志的多少是很难把握的平衡，但没有意志，就很难控制其中的虚空，很难引导虚空去攻击辐光而避免造成更大的隐患。我们假设意志是必要的，在此情况下如果还有一种前提，能让我们不用去考虑意志多少的平衡…就是说，在这里“意志”的定义是“无法被辐光所操控的意志”…</p>
+<p>陛下：…继续。</p>
+<p>阿卢：…嗯，呃，就是，如果容器的意志早已被“打破”，被转化，有无数种混乱破碎的想法同时存在，让容器自身也无法确定一个目的…那么对于辐光来说，这应该是很难操纵的吧。但这些破碎的想法并不是无迹可寻，就像是，被打碎的镜子？一个迷宫？终点是其最终的目的——也是要完成这项使命的容器需要拥有的，但是对于辐光来说会很难走出——有可能永远无法走出。或者说，还有一种定义，这种“意志”太过于原始，是其本能，哪怕被操控着，退化为野兽也——</p>
+<p>陛下：我能理解你的意思，就像火种的容器和虚空。</p>
+<p>阿卢：…嗯，嗯…</p>
+<p>陛下：你的意思是，我需要将容器逼疯？</p>
+<p>阿卢：啊…这，陛下，我——在下很抱歉，如此去说您的王子——</p>
+<p>陛下：圣巢不会有王子。</p>
+<p>阿卢：…这是自然，陛下…</p>
+<p>陛下：…很有趣，但是我需要的是万无一失的方案。打碎的镜子会被拼合，迷宫会被走出，它们都有一个确定的解。</p>
+<p>阿卢：…那如果，镜子丢失了一块碎片，而迷宫的终点连接着起点呢？</p>
+<p>陛下：…听起来很概念化。</p>
+<p>阿卢：呃，就是，在容器外的您携带着镜子的一块碎片，这样被关入容器的辐光永远无法拼合那面镜子，因为她永远无法理解容器究竟缺失了什么线索，混乱行为的目的究竟为何。至于无限循环的迷宫，那就是当她将所有的混乱想法都引向一个终点后，就会发现所谓的“根本目的”至多就是之前想法的简单拼合而已——因为思绪过于混乱，毫无逻辑和意义可言。</p>
+<p>阿卢：您十分理性，或许无法理解这种经常出现在凡虫身上的情况。举例来说的话，比如您今天想吩咐花匠将乱糟糟的花圃整理一下——您对整洁的要求是您的最终目的，也是辐光能够把控的“意志”，但您表现出的思绪和行为却是：“我要将毒药灌入花坛土壤”、“我要将所有的花都掐下”、“我要把现任的花匠杀死”、“我要将花瓣撒得满地都是”，这些思绪体现出来的“破坏欲，和对花的憎恶”，就是混淆谜底的障碍，并不是您的根本目的，而只是一种宣泄方式，它们不是您的核心诉求，辐光无法将其变为您的执念。甚至您可以再加入“我要给所有的白花浇水，但把所有的红花掐下”这样令虫匪夷所思的毫无逻辑的想法，将迷宫变得更加复杂一些。这些障碍对于深陷容器意识中的辐光来说，就是永远无法解开的谜题，毕生无法逃出的密室。</p>
+<p>陛下：…嗯，我懂了。但我还是想讨论不需要容器的情况。我突然想到…为什么不能直接将辐光引入深渊呢？</p>
+<p>阿卢：…陛下…您…</p>
+<p>陛下：为何要大费周章地去引入一个新的不确定性呢？…虽然这可能是更加安全的方案…</p>
+<p>阿卢：陛下，您准备如何将辐光引入深渊？</p>
+<p>陛下：我准备，将被感染的虫子们带下深渊，在那里引她决斗。</p>
+<p>阿卢：…陛下——</p>
+<p>陛下：即便使用容器，也需要将她引入容器吧？何不直接将其引下深渊？以我为饵，赌上全圣巢的理智。</p>
+<p>阿卢：…</p>
+<p>阿卢：但是，万一，万一辐光不肯呢？哪怕赌注如此高昂，她肯定也会看出端倪的！</p>
+<p>陛下：那就给她一个无法拒绝的赌注。</p>
+<p>阿卢：…陛下…陛下，现在还不到最绝望的时候，请不要…</p>
+<p>陛下：…我可以先把圣巢的居民疏散，然后在最靠近深渊的地方，将其变为深渊…</p>
+<p>阿卢：…陛下…</p>
+<p>陛下：…我知道了，这次就先这样，你去忙吧。</p>
+<p>阿卢：陛下，请不要太冲动，圣巢还需要您啊。</p>
+<p>陛下：…而我更需要圣巢。</p>
+<p>阿卢：…</p>
+<p>阿卢：…那在下先告退了…</p>
+<hr>
+<p>我：陛下您看，这梦之钉——</p>
+<p>陛下：梦之钉？梦之钉是什么？</p>
+<p>我：（递给陛下梦之钉）</p>
+<p>就，或许，或许陛下拿着梦钉砍了被感染的虫虫，然后前辈也顺利进去了，但是在将要舍去躯壳（记忆）变回纯粹的野性（虚空）的时候他犹豫了。所以就、、、</p>
+<p>或者说，即便舍弃了躯壳，出来的虚空也是爱着陛下的虚空，而不是纯粹的虚空了（啊）</p>
+<p>以及辐光说陛下违背了自然规律（指动画里反派的那种违背自然规律的evil scheme），啊会受到惩罚。</p>
+<h1 id="正文（大概吧）"><a href="#正文（大概吧）" class="headerlink" title="正文（大概吧）"></a>正文（大概吧）</h1><p>11.23</p>
+<p>想一想爸爸（Hades里的那位）真的可爱 啊 要是空洞里也有陛下守在深渊门口然后玩家打死了也复活等玩家爬上来继续干翻玩家也涩涩<br>包括玩家要达成什么忘了达成的成就还要再打一遍陛下///<br>然后被击败多了陛下也会自我怀疑（不是）。但还是会越来越大力的鞭打玩家///<br>想一想就好磕<br>.rd 玩家平均要死多少次才能击败陛下<br>94</p>
+<p>Demi-Gods！</p>
+<p>2021.11.5 如果说，野性也可以达到“模仿”这种程度的学习的话….</p>
+<p>乌恩是因为酸水失去神力这个设定我喜。（就有种自然被破坏的那种内涵，而且和陛下建圣巢有关系（排酸水））</p>
+<p>陛下卷王！（指卷尾）    </p>
+<p>什么是真实的世界：<br>米利都：“水是万物的始基”（不喝水会死）【质的规定性】    <br>毕达哥拉斯：“数（量）是始基”（不能只看事物表面，要认识事物的本质）【量的规定性】  <br>爱利亚：世界是本源为一（不变的一）【度的规定性】</p>
+<p>关于“以变化的一代替不变的多”这个，我就突然想到和我那个“虚空（无生命）和生命对立，而精华、火焰、瘟疫、灵魂、蜂巢、生命血其实都是生命的一种展现方式”的总结观点不谋而合。但其实还需要一些打磨，比如神在以自己的方式展现生命的时候也同时附加了不同的特性（比如蜂巢会缓慢回血、生命血用即消失、瘟疫会恢复野性、灵魂能带来理性、精华是梦境界的生命（这个其实就涉及到不同位面了）、火焰需要不同的容器进行传承）。  </p>
+<p><strong>更新一个致命bug，就是其实在陛下到来之前灵魂就已经存在了（虚空文明造的Soul Totem）</strong></p>
+<p>就相当于 生命-非生命 下分 现实的生命-梦境的生命 非生命一直是虚空。     </p>
+<hr>
+<p>关于陛下的 <del>魔法</del> 法术可以单独开贴，现在想用类似彩虹的设定，就是光法术（偏激光的光），可以用光像钢琴线一样切开一个整齐光滑的切口。我想的是主要强调一下“精准”“整齐”“光滑”“完美”这样类似的特性关键词。  </p>
+<p>Void Creature : 一开始是蓝眼睛（史前文明），后来陛下注入白光（灵魂），变成白眼睛。  </p>
+ <span class="hint--info hint--rounded hint--top" data-hint="冤冤相报何时了" ontouchstart>陛下也要搞瘟疫！干死他丫的辐光</span>
+<p> 突然想写角色互换 被忘掉的是陛下 陛下要搞瘟疫的话会是怎么表现呢 虫虫突然太聪明绝顶开始威胁辐光统治？ 啊 估计是导致蛾子一个个都叛变了 陛下可能是expand mind，就是在肉体和梦境之外加了一层“灵魂”</p>
+<p>hivemind是统治 共同意志是民主</p>
+<ol>
+<li>统治者直接控制民众思想，还可以细分为能不能共享民众感官认知行为（hivemind）</li>
+<li>没有统治者，民众集体思考集体认同（共同意志）</li>
+</ol>
+<p>统治者和（钦定）民众都可以思考，但决定权还在统治者手里，这个其实都不算hivemind了，hivemind重点在女王蜂啊</p>
+<p>用意念交流不算是讨论“hivemind”，只能算是一种交流的方式</p>
+<p>另外hivemind也可以考虑一下个体的独立性问题 按独立性划分  </p>
+<p>Higher beings, these words are for you alone.<br>These blasted plains stretch never-ending. There is no world beyond.<br>Those foolish enough to traverse this void must pay the toll and relinquish the precious mind this kingdom grants.</p>
+<p>估计是蘑菇先生：We speak the path of the Master Herald, he who would signal an Age’s end.<br>Spawn of self, their minds unite,<br>Aside the source of acid blight,<br>Aglow in darkest, winding depths,<br>Winds all howl above fossilstone steps,<br>Monarchflys in airs set still,<br>To Root’s domain and snail once shrill,<br>Path of Wyrm, at new lands entered<br>There journeys end. The kingdom ventured.</p>
+<p>To change ones form is a blasphemy against the 1ight!<br>To steal the soul of weaker creatures is a blasphemy against the light!<br>And most of a11…most of a11 ! To DIE is a blasphemy against the light! Live forever，brother and sisters or be cursed for a11 eternity!<br>For a God, there is only one crime：To die.<br>Emptinessis a hatefu1 thing! A vi1e thing! Ki11 the empty ones! Tear them to pieces! Suffer them not to bask in the light of this world!  </p>
+<p>不同的（母）神创造子民的时候，可以通过不同的方式：“做梦”、“分裂”等。 </p>
+<p>阿鲁巴 - 据说这种温顺的生物喜欢聚集在那些大能者的安身之处。
+  <span class="spoiler" onclick="this.classList.toggle('spoiler')">
+    <span class="spoiler-blur ">就是我吧</span>
+  </span>  </p>
+<p>楼管辐光: 辐光是梦境楼管，神可以在楼里开房，虫子们可以在房里做梦。楼管拥有房间（梦境）控制的最高权限。  </p>
+<p>陛下被删的一个梦语：“false one，you can’t reach me here.”</p>
+<p>梦境和记忆有关:  </p>
+<blockquote>
+<p>Another one of the Dream Nail’s abilities is to teleport the user from one place to another through dreams. The user warps by imagining a great gate to a location connected to them, provided the location has a strong connection to dreams.</p>
+</blockquote>
+<blockquote>
+<p>The Dream Realm is a plane beyond the physical world. It is the space between body and soul, containing the eternal dreams and memories of beings.</p>
+</blockquote>
+<blockquote>
+<p>Essence are the fragments of light that dreams are made of. Nightmare Essence, or “flame”, is unique to the Nightmare Realm and their Troupe. This type of Essence manifests itself into flames which are gathered for the ritual.</p>
+</blockquote>
+<p>和虚空待久了就会被虚空感染（同化）。</p>
+<p>Monarchfly？  </p>
+<hr>
+<p>Void given form？？？Void given focus？？？两个其实是不同的神称？？？</p>
+<hr>
+<p>每次我看到“…Hallownest will be whole again.”我就好难受，超难受。  <br>好心疼陛下。  <br>我就骂死扑棱蛾子。  <br>大扑棱和小扑棱，都不是啥好东西。  </p>
+<p>既然没有证据证明陛下强迫蛾子遗忘辐光，也没有证据证明陛下去找了蛾子，那么是不是可以说，蛾子可能是自己送上门的？  <br>那么是不是可以说，陛下甚至都阻止过蛾子不要背弃辐光？  <br>那么是不是可以说，陛下其实有可能不知道辐光存在？<br>推锅AU，启动！</p>
+<p>而且先知说了一句“圣巢（this kingdom）就是从那次背叛（betrayal）之中诞生（born）的”我也很在意。这意思是蛾子是圣巢第一批子民？</p>
+<hr>
+<p>如果梦里死去而现实没死会回到现实并且表现为从梦中醒来…<br>那么从现实死去而梦境没死就相当于从现实中醒来，像辐光。<br>但依旧无法解释为什么小骑士能在现实中死去并从现实中醒来（表现为坐在长椅上醒来）<br>其实能圆，就是每一次的失败都是陛下在使用预知能力“进行试验”，相当于造了一个类似于梦境的世界（但不是梦境）。<br>我其实不太想用这个设定，因为这样的话就体现不出小姐姐的懵逼了（“我怎么感觉见过这套剑法”“这家伙怎么打不死”）（但其实原作就没有吐槽，或许我才是需要标注自设）。</p>
+<h3 id="钢魂模式"><a href="#钢魂模式" class="headerlink" title="钢魂模式"></a>钢魂模式</h3><p>我去看看钢魂模式（Steel Soul）：<br>No Shade. No Reviving. Death is Permanent.</p>
+<p>dying to a Dream Boss, or in Godhome, does NOT count as an actual death. However, dying in the White Palace or to the Radiance DOES result in a Game Over.</p>
+<p>白宫也算是真死了！ 发现华点。<br> woc 陛下不会也算是个梦境神吧。<br>其实这个细节真的很值得琢磨，辐光可以理解，毕竟是最终boss，又卡在中间，死了之后总不能继续打假结局。<br>但是白宫完全可以像其他梦境boss那样在旁边复活，从游戏设计上没有阻碍的话，那就涉及到lore了。</p>
+<p>不过Jinn说steel soul的小骑士没有Soul。或许会反驳陛下的存在？啊但是法术还是可以用的啊。那没事。</p>
+<h3 id="钢（Steel-Iron）"><a href="#钢（Steel-Iron）" class="headerlink" title="钢（Steel/Iron）"></a>钢（Steel/Iron）</h3><p>我感觉钢和陛下也很有关系：</p>
+<ol>
+<li>默认恢复点长椅是（黑）钢铁制的（老虫子说的Iron）</li>
+<li>白宫失踪的部分建筑是钢铁制的（看上去）</li>
+<li>陛下相关经常用金属表示</li>
+<li>纯白矿石也有（看上去是）金属的部分，并且怀疑非金属部分用于建造了白宫未失踪的部分（大门）“Rare, pale metal that emanates an icy chill. Prized by those who craft weapons.”根据骨钉的材质变化，感觉纯白矿石纯度越高越接近金属材质，越低越接近石材（角质？）。</li>
+<li>钢魂模式代表一命通关，而且更接近于一个真实故事的路线（因为常理来讲人被杀就会死。这个模式会更接近于小骑士是陛下理论依据的路线，因为…陛下应该是不会失败的？）。啊但是其实也不能这么说，因为，钢魂模式还是会死的，，，因为我们菜，，，</li>
+</ol>
+<p>  <br>Jinn表示陛下代表的是Order，emmmm。</p>
+<p>可以探究一下不同材料和lore的联系。  </p>
+<h3 id="长椅（Bench）"><a href="#长椅（Bench）" class="headerlink" title="长椅（Bench）"></a>长椅（Bench）</h3><p>好吧其实长椅本身就有点，有不同材质的长椅，石头啊，木头啊都有。或许长椅是很多master（Jinn说的神）的一种恢复方式…<br>啊，或许那意思是所有的神都来自于梦中…<br>包括陛下…<br>呜呜呜这样的话就完全打乱了我的理论——<br>啊不，可以说神都起源于梦中/虚空，但是那个梦境，不是指凡虫的梦境（不然辐光梦境神得反了天，团长的噩梦领域也是由凡虫的美梦/噩梦划分的），这个梦境是更广义的一个空间，天庭，然后陛下相当于下凡了，对。<br>这样的话就更能圆了。（因为陛下可以使用梦境技能了）</p>
+<h3 id="梦境神与现世-实神"><a href="#梦境神与现世-实神" class="headerlink" title="梦境神与现世/实神"></a>梦境神与现世/实神</h3><p>咳咳，更正一下，关于梦境神和现实神。目前似乎越来越多证据表明几乎所有的神（higher being）都与梦境界有关，有一些甚至在梦境界有自己的地盘，成为梦境神 <strong>和？</strong> 现实神。团长和辐光是最初的梦境神，他们相当于在梦境界能够割出自己的一部分领地。这个梦境界是和凡虫（甚至神）的梦境界相连的。<br>究竟有没有梦境神和现实神的区别，看上去是有的，不然不会有“神抢了梦境的一部分领域”也不会有大沃姆费死劲转生成“虫子”了（和凡虫区分）。<br>梦境神是指，使用Essence的，本体在梦境界里的（不打梦境界本体就不会死，像辐光）。现实神只说陛下，感觉表面上看他是死了之后可以重生（自杀），但是也没有明确证据表明他被杀也会重生…(就是有无准备，是不是被动技能)；另一个表面现象看出，陛下拥有了建造梦境（白宫）和使用Essence的技能（家臣都是Essence），但并无证据表明这是不是辐光搞出来的（毕竟辐光才是梦境神），也无法得知陛下究竟懂得多少梦境知识。</p>
+<h3 id="证明小骑士是陛下的思路"><a href="#证明小骑士是陛下的思路" class="headerlink" title="证明小骑士是陛下的思路"></a>证明小骑士是陛下的思路</h3><p>先不说正常模式，在钢魂模式里，小骑士死了——就是死了…<br>emm，no shade，就是没有过往的悔恨回音？只能说这个模式并不能证明小骑士就是陛下，当然也不能驳斥。<br>但是那个细节，在白宫里死也算是真死了，确实超级重要。我就感觉难道陛下神力和辐光等价（都是梦境（源）神？）这样可以变相等价，辐光梦境==白宫梦境==（陛下模拟的、结局是死亡的）现实世界。（本来可以直接==现实世界）<br>可能会死的钢魂模式就是没有被陛下选中的小骑士！哈哈哈你死了就是没被选中，没死就是陛下附身！ <span class="hint--info hint--rounded hint--top" data-hint="陛下赢麻了" ontouchstart>陛下狂喜</span>（哎呦！——）。</p>
+<p>在正常模式里小骑士表现为坐在长椅上惊醒，然后小格林啥的都趴在身边不动（完全就是睡了一觉的感觉）那完全可以表示为，陛下在每次小骑士失败的时候都相当于是制造了一个“梦境”（再强调一遍这个不是dream，而是类似于dream的一个空间，但是是陛下专属的dream），然后小骑士死了就是在这个梦中醒过来而已。<br>（想起低语之根现场将现实盖上梦境滤镜（会不会还和夫人有关系？？但是明显是蛾子的视角（应该）））<br>值得考虑的就是那个shade，它是存在的，可以瞬移的/被召唤的（Jiji）并且能被其他人知晓的（Jiji），这表示它是唯物的（？）如果它存在于死亡地点的话，就说明小骑士确实去过那里，但此时并不一定是现实世界的死亡结局（也可能玩家战斗力爆表一路通关），这样可以用两种方式来圆：</p>
+<ol>
+<li>小骑士确实去过那里（那就圆不回来了，头壳明明也碎在那，难道是一片片飞回来组合拼接？）</li>
+<li>小骑士没去过那里，但是shade可以穿越梦境到达现实（可信，因为虚空确实有这个能力。但为何shade能够被分离？或许是设定吧）</li>
+<li>小骑士没去过那里，是shade自己飞过去的（凭啥。）</li>
+</ol>
+<p>以及如果小骑士二次死亡，shade会在最近一次的死亡地点现身（并撒币，记录最近一次的币值）这个一定程度上可以证明其实除了携带geo，shade没有啥用处…<br>那为何是/能携带geo？这个看起来是一种矿石的实在物体？<br>要圆也不是不可以…就是shade可以代表（关于Geo的）记忆。小骑士不记得自己有3260 Geo，那他就没有了…限定条件是因为他还能够画地图啥的。对对，是“丢失Geo的位置”。<br>所以可以说shade功能上是一个藏宝图，钱落在那了没事，他记得落在哪里；但是你要是连位置都忘了，那么就没办法了。（坐一次长椅会刷新）<br>因为死一次就会触发一次“陛下梦境”的设定，想模拟一下：</p>
+<p>探索（不死亡就不触发梦境，不死亡就不apply现实）<br>第一次死亡：触发梦境：100 Geo丢失；shade逃逸在原地等待<br>第一次在长椅上重生：之前的探索是梦境，小骑士没有真正去过那里，但shade可以穿透梦境<br>第二次探索：分歧</p>
+<ol>
+<li>不死亡：不拿shade通关（还是有可能的），如果可以就是证明shade真的对封印也没啥卵用；拿了shade通关，就是…正常通关。不触发梦境。</li>
+<li>死亡：10Geo 丢失；100Geo永久丢失；Shade出现在最近死亡地点（记录10Geo丢失地点）；<br>第二次在长椅上重生：触发梦境（刷新）：遗忘第一次死亡的地点，只记得最近一次的，表现为shade仅停留于最近一次死亡的地点。相当于陛下连续尝试了两轮破敌大法都失败了，且不知为啥（？）只能记最近一次死亡地点。在死亡瞬间召唤了shade到目前位置，然后惊醒。<br>第三次探索：循环分歧。</li>
+</ol>
+<p>  <br>这个理论有几个致命的漏洞要补，见图：</p>
+<p><img data-src="http://cdn.mebilychen.top/image/98390E82D2A583347A13CC2CAF8C15B5.png"></p>
+<p>一个是，里程碑事件（基本概念是和世界中另一个有意识的存在的互动），就是指即便在系统判定你完成事件之后没有存档动作（坐钢椅），立即死亡：</p>
+<ol>
+<li>被打死的Boss不会复活</li>
+<li>收集品（菜青虫）不会丢失</li>
+<li>对话过的NPC不会忘记你，并保留记忆</li>
+</ol>
+<p>完全像是在现实生活中发生过的事情。<br>但是，也可以圆：</p>
+<ul>
+<li>因为：某些动作是省略掉的，典型，小骑士掉矛坑之后会自己爬出来。</li>
+<li>而且：玩家无法得知黑屏时究竟过去了多少时间</li>
+<li>所以：入睡动作被省略掉了，可能大里程碑（打Boss和影响很大的事件）陛下自行根据玩家操作忙活了一番，将梦境变成了现实，最后在最近一次的存档点醒过来，并按当前现实模拟在梦境里；无关紧要的小里程碑就完全是陛下模拟的了（懒得记那么多）。</li>
+</ul>
+<p>这样的话其实梦境理论也能解释一下怪物刷新：</p>
+<ul>
+<li>大Boss死了，陛下：好，要记住，以后就不更了。  </li>
+<li>小怪死了，陛下：</li>
+</ul>
+<p>最致命的就是Geo的问题。我本来想亲自验证下Geo能不能跨越梦境和现实（通过看白宫有没有Geo拿），但是太费时间了（），所以我查了一下网上，权当没有吧。  <br>这样的话就很说不通，为什么梦境中的Geo会同步到现实中去（陛下：我梦中生财）。  <br>我想用刚刚那套“陛下快进打了一遍然后把钱丢在那里”但是我和陛下都觉得实在智障。  <br>那咋办，那我只能放弃——不！  <br>我们来分析一下问题：“梦境中的Geo为什么会同步到现实中去”，中的矛盾点，在于“Geo”是唯物的东西，而“梦境”是唯心的东西。唯心中创造出的东西永远是唯心的，而不可能变成唯物的。<br>是这样的吗？  <br>Geo肯定是唯物的没跑了，因为这是通用货币。<br>“陛下创造的梦境”真的是唯心的吗？唯心中创造出的东西一定不可能变成唯物的吗？那为何白宫和辐光场地死亡会算做真实死亡？为何半截国王之魂能带回现实？为何梦钉也能从梦里带回来？（这个我没考证，只是记忆）为何梦境Boss战也能改变现实地形？（这个我也没考证，只是记忆）</p>
+<p>以及考虑一下为什么白宫梦境的入口是一个挂掉的且被封印的虚空守卫（容器机器人）</p>
+<p>所以我的结论是，陛下，真的，可以，梦中生财。  </p>
+<p>最后想说一下为什么这样就能说明小骑士和陛下有关：因为其他容器都死掉了。只有小骑士有“垂死病中惊坐起”的技能，这说明这不是容器的出生技能。那为啥小骑士有这个技能呢？那绝对是陛下——</p>
+<h3 id="杂七杂八的加餐"><a href="#杂七杂八的加餐" class="headerlink" title="杂七杂八的加餐"></a>杂七杂八的加餐</h3><p>不拿shade通关（还是有可能的），就是证明shade真的对封印也没啥卵用——突然想到是不是容器就是送shade（虚空一部分）进辐光梦境打辐光啊，那这样的话，emm也不对，怎么前辈就没打辐光，他也有shade来着…难道是陛下只想着封印封印不知道其实可以直接怼辐光？（前辈没有拿虚空之心/没有成神，所以打不了辐光）这就是说虚空又可以封印又可以送梦境怼天神，可以，和我的理论不冲突。</p>
+<p>我感觉完全可以说前辈只想着活着于是抛弃了小骑士<br>#向小骑士道歉</p>
+<p>22.12.6更：<br>不要道歉了直接杀了吧</p>
+<p>另外如果只有陛下石板有配音的话…emm。或许是因为只有陛下本神亲自刻了有石板。其他的都是小垃圾们刻的。 </p>
+<p>soul totem这画的估计都是虚空的样子我觉得 虚空没样子 但是总得有样子。  </p>
+<h4 id="Eternal的扭曲愿望"><a href="#Eternal的扭曲愿望" class="headerlink" title="Eternal的扭曲愿望"></a>Eternal的扭曲愿望</h4><p>陛下碎碎念：<br>VOID, yours is the power opposed.<br>opposed是指虚空是和陛下、辐光这样的light敌对。<br>But yours is potential, eternity potential, force that could deny Time.<br>这句，mossbag认为“deny time”是指辐光是黎明的隐喻，陛下的原计划——将圣巢变为一个eternal kingdom，不是积极意义的eternal，而是指永夜式的eternal。圣巢现在相当于陷入了一个停滞状态。<br>（有可能陛下并不是想要用虚空杀死辐光，他只是想封印辐光）<br>VOID, harness shall be placed upon you.<br>就是陛下要撸起袖子加油干了。</p>
+<p>Eternity in promise and charge in progeny cursed.<br>就是说小骑士它们是progeny cursed，换来了沉睡在静止时间中的圣巢。</p>
+<p>还有一个细节就是，陛下在被打下王座之后（裂开了），再回来尸体就消失了。这可以说是游戏中怪物死了之后没得了，也可以说是陛下被打醒了走掉了。</p>
+<p>寻神者碎碎念：<br>Even long departed, We feel the afterglow of the God-power that sat this throne… It lays heavy upon this kingdom.<br>That lingering power alone was beacon enough to draw Us to Hallownest. How bright it must have been to mortal bug stood before it.<br>A God so strong… Yet erased so completely. How could it happen？</p>
+<p>寻神者内心os：<br>God-king, you reduced your form to match Our meagre shells… But why shed so majestic a whole?<br>Surely, your true immensity could have inspired devotion all the more！</p>
+<p>陛下要是个boss，估计是史上最凡尔赛的boss。<br>表现为：  <br>难度系数=掘地求升+苦痛之路+无上辐光<br>陛下（叹气）：“果然，我还是手下留情了吗。”</p>
+<p>指不定新作最终boss是陛下/头秃<br>陛下：我溜了 我也变强了<br>陛下：我审美也变了 我请了一个新设计师<br>陛下：圣巢是什么 我不要了<br>陛下：你是谁 你长得好像我<br>陛下：你才胖了 你全家都胖了</p>
+<p>陛下有梦境神的特征但是他用soul就tm离谱</p>
+<p>Soul is an arcane force that is generated from bugs and is the substance that animates their bodies.When put to use it can be twisted into Spells or even be used to heal damage.</p>
+<p>Soul is a life-force which animates most creatures in Hallownest.It can also be found in the air itself. There are various ways to store Soul. The Ancient Civilisation which predates the kingdom of Hallownest created Soul Totems which are able to store Soul inside.It can also be stored in jar-like caches and inside Soul Vessels.</p>
+<p>所以问题就在于陛下和soul什么关系？陛下是soul的创造者还是说陛下只是会利用soul？    <br>更进一步，所有的神（Higher Being）和力量们都是什么关系？  </p>
+<p>远古文明和陛下什么关系？一个事实是在圣巢时期出现了（类似）远古文明制造的totems（白宫里）（而且比它们厉害（有endless soul）），是陛下学会了它们的技法？还是它们是合作关系？</p>
+<p>梦钉比骨钉能获取更多的soul<br>？？？</p>
+<p>目前可以确定的是，格林的火、辐光的essence是可以组成梦境生物的；陛下的soul、虚空的void、蜂巢的蜂蜜、以及lifeblood，是可以组成（animate）现实生物的。细分一下还可以说：</p>
+<ul>
+<li>在现世界，可以构成生命体的有：SOUL（泽默、以及白色外壳）、VOID（Shade）、LIFEBLOOD（生命籽）</li>
+<li>在现世界，可以Animate生命的有：SOUL、VOID（存疑，不知道究竟是有自己思想还是没有）、蜂蜜（HiveBlood）（蜂蜜式血条（但其实是nectar））</li>
+<li>在梦境界，可以构成生命体的有：ESSENCE（家臣、蛾子等）、VOID（闯入）</li>
+<li>在梦境界，不存在Animate的生命，因为需要Animate的生命都是低等生物。梦境界活动的低等生物需要听从该梦境领域中主神的思想。  </li>
+</ul>
+<p>但这些都不代表他们有理智。理智是陛下给的。  </p>
+<p>但无法确定高等生物和这些元素之间的关系是利用还是创造？</p>
+<p>Higher beings, these words are for you alone. Your great strength marks you amongst us. Focus your soul and you shall achieve feats of which others can only dream.<br>以及这个可以说是“你看过之后才会知道”=“它给予了你认知”=“expand your mind”。相当于只有“higher being”才能被“expand”。<br>哇要是陛下还忘了自己是陛下了那就更阴谋论（更无法证伪）了，相当于陛下逐步找回记忆。最后自行选择转虚空选择自杀。</p>
+<p>陛下可能是把自己拆了做成容器们：<br>这句，其实有些支撑：就是小骑士血量是用陛下面具表示的，通过收集面具碎片可以提高血量。<br>相关联的就是soul值，也是收集法术球（？）碎片提高法术。<br>但是证据不足，和陛下的关联度不高。<br>因为Mask Shard 不一定就是陛下的Mask。也有可能是二哥三哥的。<br>A shard of an ancient mask, worn to protect oneself from harm.<br>Collect more to strengthen your shell and protect yourself from damage.</p>
+<p>Health is represented as Masks, shown in the upper-left corner of the screen. The Knight starts the game with 5 Masks, and can obtain more by collecting Mask Shards. 4 Mask Shards make one new Mask of health, up to a max of 9 total Masks of health. Health is lost by taking damage, either from enemies or from environmental hazards. Health can be regained by resting at a Bench or using Focus.<br>Focus是一种法术。但是并不是只能吸收灵魂（瘟疫也可以，或者说瘟疫和灵魂其实是同根概念，不同展现形式。） </p>
+<p>Lifeblood masks, granted by Lifeseeds and certain Charms, are temporary Masks that cannot be healed using Focus. Lifeblood Masks disappear upon resting at a bench, whereas those granted by Charms regenerate.</p>
+<p>根据白后对话，可以证明白后知道小姐姐是在守着国王印记的。而小姐姐确实是在守着国王印记。</p>
+<p>白后对小骑士：<br>Is it more than simply a Vessel? I almost feel like I’m once again in the presence of my beloved Wyrm.</p>
+<p>白后未采用的对话表示：<br>是他们把小骑士们驱逐出境的，但白后请小骑士不要对陛下生气，“他只是做了他认为正确的事情”。</p>
+<p>另外mossbag指出，没有国王印记进入白宫，家臣也是会跪拜的。</p>
+<p>另外两位被樱桃加关注的空洞lore大佬指出“小骑士=白王”完全是“脱离作者和作品意思的个人揣测”——虽然是一个可以自圆其说的假说。<br>那既然这样，我就不打原设tag喽。</p>
+<p>然后就是关于记忆。老虫子说现在的圣巢会rob memories，或许是指辐光使人发狂。出圣巢就失忆，或许是陛下搞的。因为一定程度上记忆=知识。</p>
+<p>对于瘟疫的影响，有执念的虫子确实可以保持执念，但是不会是清醒的。</p>
+<p>还有就是，不知道在站子里有没有提过，我一直觉得很古怪的一件事就是在深巢附近（还是古老盆地附近）就是很接近虚空的地方，突然有一团瘟疫（<del>那里有个怀孕的xxx的那个boss</del>记错了毛利克在很上面）这个我记得在圣巢大地图上也有体现，可能是就在损坏的电车站台那里吧，突然一大团瘟疫，就是按理说附近都没有这么严重的瘟疫，而且又这么接近虚空和深渊（距离黑卵，瘟疫之源很远）不应该突然出现这种情况，我就一直很在意这点。</p>
+<p><img data-src="http://cdn.mebilychen.top/InstantPicGo/QQ%E6%88%AA%E5%9B%BE20221206191307.png" alt="like this"></p>
+<p>喔以及那些坐在电车里死掉的虫子说明他们当时还没来得及疏散？也没疯，直接原地做梦致命？<br>啊<br>不会是陛下在那里召唤的辐光吧阿巴阿巴</p>
+<p>以及德特茅斯不知道为什么不受瘟疫影响，明明啊 是离黑卵最近的<br>难道瘟疫是向下漏的吗</p>
+<p>陛下：每天睁眼就想到自己头顶上都是下水道</p>
+<hr>
+<p>7.26<br>继续</p>
+<h4 id="辐光在哪里"><a href="#辐光在哪里" class="headerlink" title="辐光在哪里"></a>辐光在哪里</h4><p>而且我挺好奇陛下和前辈怎么找到辐光的</p>
+<p>陛下：辐光你出来，咱们喝茶<br>辐光：好<br>辐光：（出来）<br>前辈：（封印）<br>辐光：大骗子！嘤嘤嘤</p>
+<p>陛下：辐光你出来，我给你看个好东西，你能住里边咱们一起统治圣巢<br>辐光：好<br>辐光：（进去）<br>陛下：（封印）<br>辐光：大骗子！嘤嘤嘤</p>
+<p>陛下：辐光你出来，我送你个身体<br>辐光：你是大骗子，我才不信你<br>陛下：你出来嘛<br>辐光：就不<br>陛下：你出来嘛<br>辐光：就不<br>陛下：你不出来怎么让人想起你<br>辐光：<br>辐光：好有道理<br>辐光：（出来）<br>陛下：容器快抓住她<br>前辈：（抓住）<br>辐光：嘤嘤嘤</p>
+<p> “No mind to think.” “No will to break.” “No voice to cry suffering.”<br>辐光，没有mind和will的话就无法控制一个人？</p>
+<p>我感觉日月组完全可以商量一下共治啊<br>白天陛下睡觉 辐光治理；晚上辐光睡觉，陛下治理<br>还不熬夜 不脱发 尤其是辐光</p>
+<h3 id="关于梦境"><a href="#关于梦境" class="headerlink" title="关于梦境"></a>关于梦境</h3><p>The Dream Realm is a plane beyond the physical world. It is the space between body and soul, containing the eternal dreams and memories of beings.</p>
+<p>The Dream Realm consists of numerous dreams which vary depending on the being who brought it into existence. Dreams can take the shape of those who have passed away, such as Spirits, or dreams can form based on memories. Furthermore, dreams can take root in the waking world as Whispering Roots.</p>
+<p>Essence are the fragments of light that dreams are made of. Nightmare Essence, or “flame”, is unique to the Nightmare Realm and their Troupe. This type of Essence manifests itself into flames which are gathered for the ritual.</p>
+<hr>
+<p>22.11.28 今天看到了有理论说噩梦是人的潜意识缩所抗拒/担忧的想法形成的，就是说包括一些不想（或无意识下）被表意识处理的，就会变成噩梦。<br>然后（美）梦境似乎也同理（？）具体忘记了。</p>
+<h3 id="关于GodHome"><a href="#关于GodHome" class="headerlink" title="关于GodHome"></a>关于GodHome</h3><p>wiki认为Embrace The Void结局里辐光真的被打死了，造成瘟疫消散。  <br>但我不这么认为。  <br>我理解的是小姐姐等不到小骑士于是辐光控制前辈挣脱了锁链跑出来了。  <br>至于动画里“橙光”褪去，是指黑卵丧失了对瘟疫的控制，瘟疫核心逐渐离开黑卵。而已。  <br>因为你寻神者谁啊你们，就能左右神的生死？让神搬进来住？还tm观战？明显是个人yy不影响现实的东西。  </p>
+<p>8.1反思  <br>假设确实GodHome能影响到现实吧。  <br>（主要是因为我那个基友总是一副看不起我的语气说这个理论导致我本能对这个理论反感。现在我冷静下来了思考一下可能性）  <br>（所以我不想和一个总是不认可我的人相处）<br>寻神者可以说是一个专注于“寻神”和“调谐”的种族，他们有一个“Godtuner”人造神器，可以在梦境中进入GodHome（仅限此区域的God）。GodHome不是他们创造出来的，而是神们的聚居地（之一），他们相当于只是一个“客人”。至于观战我就不好洗了，而且还有godseeker头头说“拒绝了我们的调谐”，好像他们是主人一样；而且woc，是个庞然大物就往神居里请是吗？你家神这么野性？  <br>我懂了，虫子们认为“神”就是打不过的东西；但真正的神不一定只是“打不过的东西”。  </p>
+<h3 id="关于瘟疫"><a href="#关于瘟疫" class="headerlink" title="关于瘟疫"></a>关于瘟疫</h3><p>After the Pale King arrived in Hallownest and expanded the minds of his new subjects,[6] the Moth Tribe turned their backs on the Radiance and worshipped him instead.[7] In doing so, the Radiance was almost entirely forgotten, yet traces of her memory remained, such as a statue on Hallownest’s Crown. Her memory started spreading throughout the Kingdom, by then in its golden age. Soon, all of Hallownest began to dream of her appearing to them as a blazing light.[8] These dreams could break the minds of bugs[9] and eventually enslave their wills to her.[10] However, the King and his subjects resisted her memory, which then started to manifest as the Infection.[11][12] With the Infection, the Radiance offered unity to bugs at the cost of a mind incapable of thought.[13]</p>
+<p>先知：<br>The folk of my tribe were born from a light. Light similar to Essence, similar to that powerful blade, though much brighter still.<br>They were content to bask in that light and honoured it… for a time.<br>But another light appeared in our world… A wyrm that took the form of a king.<br>How fickle my ancestors must have been. They forsook the light that spawned them. Turned their backs to it… Forgot it even.<br>And so this kingdom was born from that betrayal. But the memories of that ancient light still lingered, hush whispers of faith… Until all of Hallownest began to dream of that forgotten light.<br>Ah, but what’s done is done. And so am I. The Wielder has at last appeared and I’ve held the memories of my tribe for long enough. It is time for us to be forgotten too.<br>Don’t remember us, Wielder. Don’t honour us. We do not deserve it…<br>Aahh… I’m sorry…<br>Light… Radiance…<br>I… remember you.</p>
+<p>所以，陛下是坐家锅来，还是主动引狼入室？</p>
+<h3 id="关于面具"><a href="#关于面具" class="headerlink" title="关于面具"></a>关于面具</h3><p>Mask Maker表示，面具象征着一个人格，对于脸，给它提供了保护，但也带来一种“Sad consequence”。相当于“Change face”或“Cover it”。如果没有“steel”般的决心，可能会“To destroy mind”。    <br>这小垃圾还diss了吾王，说制作容器是“Wyrm’s great shame”，抗疫失败圣巢陷于stasis是“Wyrm’s Lagacy”。  <br>但也夸夸了吾王？说是“ancient caste”。可能是之一？  <br>原文：  <br>Has it witnessed that truth most tragic? The Wyrm’s great shame sealed away.” “No bug has ever laid claim to this whole. （即便是Beasts，赫拉她们），It is the ancient caste that made attempt at such vast rule.”</p>
+
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/f584.html">【角色研究】如何证明陛下就是小骑士</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2021年07月25日 - 01:01</p>
+ <p><span>最后更新:</span>2023年01月29日 - 15:26</p>
+ <p><span>原始链接:</span><a href="/p/f584.html" title="【角色研究】如何证明陛下就是小骑士">https://mebilychen.github.io/p/f584.html</a>
+    
+ </p>
+ <p><span>许可协议:</span>除非文章内另行声明，遵守 cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script data-pjax> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%BE%E5%AE%9A/" rel="tag"><i class="fa fa-tag"></i> 设定</a>
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E8%A7%92%E8%89%B2%E7%A0%94%E7%A9%B6/" rel="tag"><i class="fa fa-tag"></i> 角色研究</a>
+              <a href="/tags/%E8%80%83%E6%8D%AE/" rel="tag"><i class="fa fa-tag"></i> 考据</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/fb0e.html" rel="prev" title="【角色研究】朔月">
+      <i class="fa fa-chevron-left"></i> 【角色研究】朔月
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/3000.html" rel="next" title="【@祭品AU】开题">
+      【@祭品AU】开题 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%84%B6%E5%90%8E%E6%88%91%E5%88%97%E4%B8%80%E4%B8%8B%E6%88%98%E5%A3%AB%E4%B9%8B%E6%A2%A6%E7%9A%84%E5%8F%AF%E8%83%BD%E7%9B%B8%E5%85%B3%E7%9A%84%E8%A7%92%E8%89%B2"><span class="nav-text">然后我列一下战士之梦的可能相关的角色</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B6%E5%AE%9E%E4%B8%8D%E5%AE%8C%E5%85%A8%E7%9B%B8%E5%85%B3%E7%9A%84%E6%B4%97%E8%84%B8%E8%BE%90%E5%85%89%E6%96%B9%E6%A1%88%E7%9A%84%E8%AE%A8%E8%AE%BA"><span class="nav-text">其实不完全相关的洗脸辐光方案的讨论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%B1%EF%BC%8C%E9%99%9B%E4%B8%8B%E5%92%8C%E5%9B%A2%E7%88%B9%E6%89%93%E5%BC%80zoom%EF%BC%9A"><span class="nav-text">就，陛下和团爹打开zoom：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%84%B6%E5%90%8E%E9%99%9B%E4%B8%8B%E5%92%8C%E5%A4%AB%E4%BA%BA%E6%89%93%E5%BC%80zoom%EF%BC%9A"><span class="nav-text">然后陛下和夫人打开zoom：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%84%B6%E5%90%8E%E9%99%9B%E4%B8%8B%E5%92%8C%E9%98%BF%E5%8D%A2%E6%89%93%E5%BC%80zoom%EF%BC%9A"><span class="nav-text">然后陛下和阿卢打开zoom：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AD%A3%E6%96%87%EF%BC%88%E5%A4%A7%E6%A6%82%E5%90%A7%EF%BC%89"><span class="nav-text">正文（大概吧）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%92%A2%E9%AD%82%E6%A8%A1%E5%BC%8F"><span class="nav-text">钢魂模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%92%A2%EF%BC%88Steel-Iron%EF%BC%89"><span class="nav-text">钢（Steel&#x2F;Iron）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%95%BF%E6%A4%85%EF%BC%88Bench%EF%BC%89"><span class="nav-text">长椅（Bench）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A2%A6%E5%A2%83%E7%A5%9E%E4%B8%8E%E7%8E%B0%E4%B8%96-%E5%AE%9E%E7%A5%9E"><span class="nav-text">梦境神与现世&#x2F;实神</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%81%E6%98%8E%E5%B0%8F%E9%AA%91%E5%A3%AB%E6%98%AF%E9%99%9B%E4%B8%8B%E7%9A%84%E6%80%9D%E8%B7%AF"><span class="nav-text">证明小骑士是陛下的思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB%E7%9A%84%E5%8A%A0%E9%A4%90"><span class="nav-text">杂七杂八的加餐</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Eternal%E7%9A%84%E6%89%AD%E6%9B%B2%E6%84%BF%E6%9C%9B"><span class="nav-text">Eternal的扭曲愿望</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%90%E5%85%89%E5%9C%A8%E5%93%AA%E9%87%8C"><span class="nav-text">辐光在哪里</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E6%A2%A6%E5%A2%83"><span class="nav-text">关于梦境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8EGodHome"><span class="nav-text">关于GodHome</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E7%98%9F%E7%96%AB"><span class="nav-text">关于瘟疫</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E9%9D%A2%E5%85%B7"><span class="nav-text">关于面具</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar3.jpg">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">169</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">177</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjEwMTM3MTIxMjdAcXEuY29t" title="E-Mail → mailto:1013712127@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9tZWJpbHkxMzE0" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      猜猜这是什么鬼地方？
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9tZWJpbHljaGVuLmxvZnRlci5jb20v" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;">LOFTER</span>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/p/NISP.html" title="p&#x2F;NISP.html">【音频可视化】Wallpaper Engine</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ab228.html" title="p&#x2F;ab228.html">【硬读文章】我与地坛</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/1547.html" title="p&#x2F;1547.html">【AI拼贴画】一些灵感和其他见证历史</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/9527b.html" title="p&#x2F;9527b.html">【脑洞合集】无Tag的小脑洞们，Encore</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/a6ba.html" title="p&#x2F;a6ba.html">白宫+高塔地图</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ysyg0.html" title="p&#x2F;ysyg0.html">（起稿）守望者@Memo</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ee39.html" title="p&#x2F;ee39.html">王国边境@Memo</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/p/248a.html" title="p&#x2F;248a.html">X个新点子，关于跑团和跑团的</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/679f.html" title="p&#x2F;679f.html">还希望站子拥有的一些优化</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/0.html" title="p&#x2F;0.html">【备忘】</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">3m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">45:39</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "站子已虔诚祈祷 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+     //'.site-meta',
+    //'.site-nav',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+<script language="JavaScript">
+var password="";
+password=prompt('Password (Birthday)','');
+if (password != '20180909')   
+{alert("。");    
+window.opener=null;
+window.location.href = "about:blank"; 
+window.close();}  // 密码不正确就关闭//-->
+</script>
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>

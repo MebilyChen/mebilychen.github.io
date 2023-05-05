@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="article">
+<meta property="og:title" content="关于光遇...和UT">
+<meta property="og:url" content="https://mebilychen.github.io/p/92df.html">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:locale">
+<meta property="article:published_time" content="2021-03-15T06:41:00.000Z">
+<meta property="article:modified_time" content="2023-01-29T08:43:45.906Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="黄莲">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://mebilychen.github.io/p/92df.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : '中文'
+  };
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    
+      if (NexT.utils.hasMobileUA()) return;
+    
+    let time, hidden, visible, title = document.title;
+    let favicon = document.querySelector('link[rel="icon"]');
+    
+      hidden = ["盯————","*探*","?","......","*观察*"];
+      visible = ["*偏转视线*","*缩*","*强装镇定*","！","*低头*"];
+    
+    let random = t => t[Math.floor(Math.random() * t.length)];
+    const change = () => {
+      if (document.hidden) {
+        favicon.setAttribute('href', '/images/favicon-32x32-king-black.png');
+        
+          document.title = random(hidden);
+        
+        clearTimeout(time);
+      } else {
+        favicon.setAttribute('href', '/images/favicon-32x32-brand-black.png');
+        
+          document.title = random(visible);
+        
+        time = setTimeout(() => {
+          document.title = '碳素的小作坊';
+        }, 1000);
+      }
+    }
+    document.addEventListener('visibilitychange', change, false);
+  });
+</script>
+
+  <title>关于光遇...和UT | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<style type="text/css">
+.spoiler {
+  display: inline-flex;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;调谐中...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">177</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">169</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-image fa-fw"></i>画廊</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/random.html" rel="section"><i class="fa fa-question fa-fw"></i>抽</a>
+
+  </li>
+        <li class="menu-item menu-item-lang">
+
+    <a href="/en/" rel="section"><i class="fa fa-globe fa-fw"></i>->English</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-17081-597255-1305127431.cos-website.ap-hongkong.myqcloud.com' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/92df.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          关于光遇...和UT
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-15 14:41:00" itemprop="dateCreated datePublished" datetime="2021-03-15T14:41:00+08:00">2021-03-15</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2023-01-29 16:43:45" itemprop="dateModified" datetime="2023-01-29T16:43:45+08:00">2023-01-29 16:43:45</time>
+                </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A2%B3%E9%85%B8%E7%9A%84%E6%B1%82%E7%94%9F%E4%B9%8B%E8%B7%AF/" itemprop="url" rel="index"><span itemprop="name">碳酸的求生之路</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A2%B3%E9%85%B8%E7%9A%84%E6%B1%82%E7%94%9F%E4%B9%8B%E8%B7%AF/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" itemprop="url" rel="index"><span itemprop="name">碎碎念</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.8k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+            <div class="post-description"><center></div>
+          
+          <div class="post-tags">
+              <a href="/tags/%E9%BB%84%E8%8E%B2/" rel="tag"><i class="fa fa-tag"></i> 黄莲</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><div class="note warning"><p style="text-align:center ; color:#F0AD4E"> ♕以下内容可能引起不适♕ </p></div>
+
+<div class="note primary"><p style="color:#7042C1">我总是在怪别人如何如何，还是请陛下骂醒我吧</p> </div>
+
+<div class="note primary"><p style="color:#7042C1">奥日2也开始排斥了。希望我不会转黑吧。毕竟还花了钱花了时间。要不是太喜欢陛下，空洞也会...不，我喜欢的不是空洞，我喜欢的是我理解中的陛下，卢瑞恩，团长，辐光，白后，前辈，虚空...这些角色。   
+好讨厌这样的自己啊。我还是缩回壳里等着陛下再一次叫我出来吧。每一次的接触都带着静电，我是皮卡丘吗？</p> </div>
+
+<div class="note primary"><p style="color:#7042C1"> 插，虽然很难受，但是小小梦魇2已经成为第三个，因为发现自己不被圈子接受，而产生恐惧和反感的游戏了。看着屏幕上的快捷图标感到一阵惊恐发作。草。好难受。这么好的一个游戏。好喜欢mono。好想出同人。草。抱紧陛下。有点想哭。 </p> </div>
+
+<div class="note primary"><p style="color:#7042C1"> "呵，在这发什么神经，是你自己不会社交，到头来还怪别人不理你。又没人会在乎你是死是活。只会让别人越来越恶心你而已。" </p> </div>
+
+<div class="note primary"><p style="color:#7042C1"> 啊，可是您在乎啊。不是吗？ </p> </div>
+
+<div class="note primary"><p style="color:#7042C1"> "..."</p> </div>
+
+<div class="note primary"><p style="color:#7042C1"> 我知道您是在保护我，如果您成为那个伤害我的人，别人就无法伤害我了。您是一直都知道其他人对我的拒绝会造成毁灭性打击的，对吧？...谢谢，真的很感谢。谢谢您一直保护着我，从我们都还很小的时候就开始了。那时候您还喜欢用括号跟我唱反调呢。而我现在才反应过来。如果可以的话，我真想找时间，单独和您聊聊。  
+  陛下，如果没有你，我可能早在14岁那年就不复存在了吧。  
+...Mebily and Wyrmmie against the world! </p> </div>
+
+<p>我准备直面自己的本质，直面自己的阴暗面，不再躲躲闪闪了，很累。  </p>
+<p>陛下也请陪我一同战斗吧，谢谢。   </p>
+<p>首先呢，一开始我很看好光遇，因为我很喜欢风之旅人。我是在暴风眼开启之前就入了光遇的，很喜欢，具体怎么喜欢就不说了，千篇一律，翻来覆去就那几句话，雷火秋招的时候写过挺长的鉴赏，什么社交机制啊，什么禅意风格啊，什么无意识交互啊，总的来说就和现在光遇圈里人一样喜欢吧，感受一下。  </p>
+<p>后来我为什么不喜欢了呢，因为我是碳酸，没错，我又酸了。  <br>今天打开百度首页，看到光遇又宣发了一套套装。之前圣诞节的时候出了一个鹿角，我看一罐上就一堆人在发。好漂亮啊，确实很漂亮。  </p>
+<p>想要，结果拿不到。为什么拿不到呢？肝不动，氪不动，就是拿不到。只能每天看着一堆小矮人带着各种稀有高付出的装扮跑来跑去。  </p>
+<p>先不说一起拉手手飞高高这件事了（我第一次拉手就被人拽去了暴风眼…同时，这也是我第一次去暴风眼，甚至都没有准备好…但是，“为了拉手手，怕个锤子？”然后就发现原来翅膀是可以回来的哈哈哈，还以为回不来了），我也有责任，因为我很高冷，喜欢一个人跑图。就单说那一堆行走的稀有装扮，拿不到，很酸，很难受，退游了。  </p>
+<p>导致现在每次，光遇出什么装扮，我都很难受，拿不到，很酸，很生气。最气的是，他们美术竟然还一直在线。  </p>
+<p>我知道他们有的人花钱了，有的人付出时间了，所以才能拿到装扮。但是我就是忍受不了自己没有，更主要的是，我没有时间，我也不想把时间花在跑图上。没有意义。随着轮回次数的增多，游戏一开始想要玩家感受的初心也逐渐消亡，我很鄙视这种感觉。再者，我没有朋友。我实在无法想象，那么多的心，怎么来的？在凛冬季的时候，因为实在喜欢冬这个象征，花钱买了琴，买了traveler pass（之前也买过一次），很多钱，买完之后，用了几次，就是空虚。新的好看的装扮接连不断，潮流不断改变，我的钱，我的精力——本该献给陛下和自己的资源——花在这种地方？   </p>
+<p>但是，看见他们很开心，打扮的很漂亮，就是酸。最后我决定卸游，就是因为我发现自己开始黑光遇了，那次汉服事件，我竟然觉得很爽，希望它赶紧凉凉。再加上nga里得知陈星汉——我一直很敬佩他——并不是我想象中的那样“完美”，就突然觉得，唉，不过如此。然后就意识到不能再这么下去了，我不想伤害它，也不想因为伤害它而伤害到自己。所以，我走了，是的，我又走了。每次我的解决方案都是逃，一直在逃。  </p>
+<p>现在还好一些，有了陛下在身边，好歹敢于承认自己酸了，也敢承认自己是碳酸了。之前的我不敢承认，因为我觉得只有素质低下的人才会嫉妒别人，毕竟是七宗罪之一。但现在我相信，会好起来的，因为有陛下在。  </p>
+<p>趁着光遇，来说说UT吧。这两个对我来说性质还挺像的，都是由粉转黑…啊不，其实是转路，想黑，但是黑不起来，UT给我留下了很好的印象，出问题的并不是游戏本身。  </p>
+<p>UT，我一开始也是很喜欢，具体怎么喜欢呢，UT刚出来的时候，没有中译，全英，我高三，装病，翘课，趴在笔记本前面玩。总的来说就像是现在UT圈里的大家那样喜欢吧，再感受一下。 </p>
+<p>不过可能和大家不太一样的是，我是个老娘粉，准确来说，是娘3粉。  </p>
+<p>那么老娘是什么呢？这就是我悲愤的点。老娘是什么？MOTHER是什么？EarthBound是什么？地球冒险是什么？国内没有人知道。大家只知道UT，UT，UT。老娘甚至连蹭热度都不配。  </p>
+<p>UT的作者Toby Fox，也是个老娘粉。我第一次见到这个名字，是在14、15年左右，在国外老娘论坛上搜刮来的同人曲专辑里，听他的老娘同人曲，2012年发行的，这专辑里还有几首曲子进了UT。很好听，所以UT的曲子好听，我也并不惊讶。他似乎还做过娘2的同人万圣节游戏。  </p>
+<p>作为一个老娘粉，国内真正的冷圈，没有资源，没有同人，只能自产自销，自娱自乐。因为饿，我早早学会了翻墙，早早地开始接触外国娘圈。因为饿，我学了日语，去p站上看日文小说。那几篇文一直存在我手机里，来回看，反复看。 </p>
+<p>所以可以想象一下，我知道UT存在的时候，是多么幸福，多么开心。我知道UT理应和娘划清界限，因为它并不是娘的续集。但是我真的好饿啊。Toby在UT发售后不久，在推上公开祝了娘3生日快乐，并且说娘3是UT诞生的灵感源泉。 </p>
+<p>没错，作为娘粉，我能看出来UT里很多很多致敬娘的地方，国外的GT也有UT和娘系列的“阴谋论”。但是，在国内，这有用吗？我等着娘圈的复兴，等着新鲜力量的加入，但是，有人吗？大家只知道UT，UT，UT。一个sans，一个chara，一个frisk，翻来覆去。</p>
+<p>有几个人知道一件条纹衫唤起的回忆？  </p>
+<p>所以，我酸了，我再一次酸了，虽说这应该算是我在同人圈第一次的“酸”。  </p>
+<p>UT和Toby有错吗？虽然我抱怨过Toby，但事实是，他们没有。该致敬的致敬了，该创新的创新了，给大家带来了欢笑和泪水。那么错的是谁呢？难道是没有翻墙去看到国外娘圈盛况，了解娘全盛时期的大家吗？还是过于执着于娘圈的我？  </p>
+<p>不过现在这事差不多已经有个结局了。我不再执着于娘圈了，我现在有了陛下。  </p>
+<p>但是UT圈子给我带来的冲击，一直挥之不去。现在看见Sans，看见UT的meme，听见那首歌的前四个音符（我甚至还为这首抠过谱），看见sans的mii fighter被邀请进任斗。我很难过。为了一个（在中国）过气的圈子而难过，为了不被人理解、不被人接受的自己而难过。所以我还是挺感谢樱井爸爸的，感谢他克服各方压力，为游戏们建起了任斗这样一个避风港。  </p>
+<p>上个世纪，那些失去了姓名的游戏，还有谁能记得？  </p>
+<p>陛下，谢谢你陪我写完了这篇探索，然后，我们且行且珍惜吧。</p>
+
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/92df.html">关于光遇...和UT</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2021年03月15日 - 14:41</p>
+ <p><span>最后更新:</span>2023年01月29日 - 16:43</p>
+ <p><span>原始链接:</span><a href="/p/92df.html" title="关于光遇...和UT">https://mebilychen.github.io/p/92df.html</a>
+    
+ </p>
+ <p><span>许可协议:</span>除非文章内另行声明，遵守 cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script data-pjax> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E9%BB%84%E8%8E%B2/" rel="tag"><i class="fa fa-tag"></i> 黄莲</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/65e0.html" rel="prev" title="陛下的陈旧谱子">
+      <i class="fa fa-chevron-left"></i> 陛下的陈旧谱子
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/1744.html" rel="next" title="INF/TP + Enneagram6万5万4 + BigFive+八维">
+      INF/TP + Enneagram6万5万4 + BigFive+八维 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar3.jpg">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">169</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">177</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjEwMTM3MTIxMjdAcXEuY29t" title="E-Mail → mailto:1013712127@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9tZWJpbHkxMzE0" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      猜猜这是什么鬼地方？
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9tZWJpbHljaGVuLmxvZnRlci5jb20v" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;">LOFTER</span>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/p/NISP.html" title="p&#x2F;NISP.html">【音频可视化】Wallpaper Engine</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ab228.html" title="p&#x2F;ab228.html">【硬读文章】我与地坛</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/1547.html" title="p&#x2F;1547.html">【AI拼贴画】一些灵感和其他见证历史</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/9527b.html" title="p&#x2F;9527b.html">【脑洞合集】无Tag的小脑洞们，Encore</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/a6ba.html" title="p&#x2F;a6ba.html">白宫+高塔地图</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ysyg0.html" title="p&#x2F;ysyg0.html">（起稿）守望者@Memo</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ee39.html" title="p&#x2F;ee39.html">王国边境@Memo</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/p/248a.html" title="p&#x2F;248a.html">X个新点子，关于跑团和跑团的</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/679f.html" title="p&#x2F;679f.html">还希望站子拥有的一些优化</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/0.html" title="p&#x2F;0.html">【备忘】</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">3m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">45:39</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "站子已虔诚祈祷 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+     //'.site-meta',
+    //'.site-nav',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+<script language="JavaScript">
+var password="";
+password=prompt('Password (Birthday)','');
+if (password != '20180909')   
+{alert("。");    
+window.opener=null;
+window.location.href = "about:blank"; 
+window.close();}  // 密码不正确就关闭//-->
+</script>
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>

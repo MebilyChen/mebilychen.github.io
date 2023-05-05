@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="article">
+<meta property="og:title" content="【Unity+Python】学习笔记">
+<meta property="og:url" content="https://mebilychen.github.io/p/616b.html">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:locale">
+<meta property="og:image" content="http://cdn.mebilychen.top/doc/QQ%E6%88%AA%E5%9B%BE20220507122029.png">
+<meta property="og:image" content="https://i.loli.net/2021/08/28/n2gM7NqRWte3vV6.png">
+<meta property="og:image" content="https://img-blog.csdn.net/20180711100143139?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xlZTUxNA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="https://img-blog.csdn.net/20150801172310340">
+<meta property="og:image" content="https://img-blog.csdn.net/20150801175128127">
+<meta property="og:image" content="https://i.loli.net/2021/06/05/pk9g3zCNfw4od1b.png">
+<meta property="og:image" content="https://i.loli.net/2021/06/05/hXt6WGcv73yTL1p.png">
+<meta property="article:published_time" content="2021-03-13T07:00:00.000Z">
+<meta property="article:modified_time" content="2023-03-08T09:07:28.221Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="Unity3D">
+<meta property="article:tag" content="Hololens">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="C#">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://cdn.mebilychen.top/doc/QQ%E6%88%AA%E5%9B%BE20220507122029.png">
+
+<link rel="canonical" href="https://mebilychen.github.io/p/616b.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : '中文'
+  };
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    
+      if (NexT.utils.hasMobileUA()) return;
+    
+    let time, hidden, visible, title = document.title;
+    let favicon = document.querySelector('link[rel="icon"]');
+    
+      hidden = ["盯————","*探*","?","......","*观察*"];
+      visible = ["*偏转视线*","*缩*","*强装镇定*","！","*低头*"];
+    
+    let random = t => t[Math.floor(Math.random() * t.length)];
+    const change = () => {
+      if (document.hidden) {
+        favicon.setAttribute('href', '/images/favicon-32x32-king-black.png');
+        
+          document.title = random(hidden);
+        
+        clearTimeout(time);
+      } else {
+        favicon.setAttribute('href', '/images/favicon-32x32-brand-black.png');
+        
+          document.title = random(visible);
+        
+        time = setTimeout(() => {
+          document.title = '碳素的小作坊';
+        }, 1000);
+      }
+    }
+    document.addEventListener('visibilitychange', change, false);
+  });
+</script>
+
+  <title>【Unity+Python】学习笔记 | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<style type="text/css">
+.spoiler {
+  display: inline-flex;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;调谐中...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">177</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">169</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-image fa-fw"></i>画廊</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/random.html" rel="section"><i class="fa fa-question fa-fw"></i>抽</a>
+
+  </li>
+        <li class="menu-item menu-item-lang">
+
+    <a href="/en/" rel="section"><i class="fa fa-globe fa-fw"></i>->English</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-17081-597255-1305127431.cos-website.ap-hongkong.myqcloud.com' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/616b.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【Unity+Python】学习笔记
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-13 15:00:00" itemprop="dateCreated datePublished" datetime="2021-03-13T15:00:00+08:00">2021-03-13</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2023-03-08 17:07:28" itemprop="dateModified" datetime="2023-03-08T17:07:28+08:00">2023-03-08 17:07:28</time>
+                </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%92%A9%E7%A2%B3%E7%9A%84%E7%8B%AC%E6%B8%B8%E6%A2%A6/" itemprop="url" rel="index"><span itemprop="name">咩碳的独游梦</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%92%A9%E7%A2%B3%E7%9A%84%E7%8B%AC%E6%B8%B8%E6%A2%A6/Unity3D/" itemprop="url" rel="index"><span itemprop="name">Unity3D</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>29k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>26 分钟</span>
+            </span>
+            <div class="post-description"><center></div>
+          
+          <div class="post-tags">
+              <a href="/tags/Unity3D/" rel="tag"><i class="fa fa-tag"></i> Unity3D</a>
+              <a href="/tags/Hololens/" rel="tag"><i class="fa fa-tag"></i> Hololens</a>
+              <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+              <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i> C#</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p>懒得新建文档了，挤一下。  </p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzM4NTQ2NjUzOS9hbnN3ZXIvMTEzMzExMzEwNQ==">科研入门，在导师完全散养不管的状态下，怎么提升自己的科研能力？ - DingDangMiao的回答 - 知乎<i class="fa fa-external-link-alt"></i></span></p>
+<hr>
+ <blockquote class="blockquote-center">
+            <i class="fa fa-quote-left"></i>
+            <h1 id="交互相关"><a href="#交互相关" class="headerlink" title="交互相关"></a><strong>交互相关</strong></h1>
+            <i class="fa fa-quote-right"></i>
+          </blockquote>
+
+<hr>
+<p><img data-src="http://cdn.mebilychen.top/doc/QQ%E6%88%AA%E5%9B%BE20220507122029.png"></p>
+<hr>
+ <blockquote class="blockquote-center">
+            <i class="fa fa-quote-left"></i>
+            <h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a><strong>Python</strong></h1>
+            <i class="fa fa-quote-right"></i>
+          </blockquote>
+
+<hr>
+<h2 id="腾讯会议自动登录"><a href="#腾讯会议自动登录" class="headerlink" title="腾讯会议自动登录"></a>腾讯会议自动登录</h2><blockquote>
+<p>原理:屏幕截图图像识别</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cDovL2Nkbi5tZWJpbHljaGVuLnRvcC9Tb2Z0d2FyZS9UTUF1dG9Mb2dpbi56aXA=">下载<i class="fa fa-external-link-alt"></i></span></p>
+<p>Python生成exe文件：</p>
+<p>安装pyinstaller工具：terminal输入：pip install pyinstaller<br>生成本项目可执行文件：Terminal中输入：pyinstaller -F -w main.py</p>
+<hr>
+<h2 id="GPT-2"><a href="#GPT-2" class="headerlink" title="GPT-2"></a>GPT-2</h2><p>运行环境：<br>python3.6、 transformers==4.2.0、pytorch==1.7.0</p>
+<p>scr：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL01vcml6ZXlhby9HUFQyLUNoaW5lc2U=">GPT2-Chinese<i class="fa fa-external-link-alt"></i></span><br><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL01vcml6ZXlhby9EZWNvZGVycy1DaGluZXNlLVRGMi4w">Decoders-Chinese-TF2.0<i class="fa fa-external-link-alt"></i></span></p>
+<p>主要是想搞这个智能写作的玩意。  </p>
+<ol>
+<li>Python在cmd中运行。  </li>
+<li>在地址栏上输入cmd即可在此处运行cmd。</li>
+<li>pip在cmd中输入。  </li>
+<li>配置系统环境变量，直接在win设置中搜索“环境变量”，按要求更改即可。  </li>
+</ol>
+<p>运行时在cmd输入以下命令：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs vim">d:<br><span class="hljs-keyword">cd</span> GTP-<span class="hljs-number">2</span>\gpy-<span class="hljs-number">2</span>-chs<br><span class="hljs-keyword">python</span> train.<span class="hljs-keyword">py</span> --raw<br><br></code></pre></td></tr></table></figure>
+<p>输入<code>Python</code>可进入Python命令行。  </p>
+<p>cmd中下载时需要输入：<code>pip install transformers==4.3.3</code>或直接<code>pip3 install -r requirements.txt</code><br>pip没了就输入<code>python -m ensurepip</code></p>
+<p>或者直接在train.py右键用Pycharm运行。  </p>
+<hr>
+<p>报错：pytorch_lightning.utilities.exceptions.MisconfigurationException: You requested GPUs: [0]<br>But your machine only has: []</p>
+<p>8.17 气死人了，明明有两个GPU，非说我没有GPU。下了CUDA、Cudnn、Nvidia都解决不了，暂时搁置吧。<br>以备将来捡起来，怀疑是电脑问题，笔记本有两个GPU，第一个是Intel的，第二个是Nvidia的。该Nvidia显卡支持CUDA。根据查阅网络基本能确定是CUDA没有配置好的问题，但问题就是也能确定CUDA在正常运行，所以只能怀疑是因为Intel不支持CUDA，0又代表着第一个显卡，怀疑是这个问题。估计得换电脑。<br>这是Pycharm的结果，cmd运行会报找不到module<transformers>。  </transformers></p>
+<p>比较重要的一点是<strong>CUDA_VISIBLE_DEVICES</strong>这个环境变量。或许我让他=1就可以解决问题了。<br>如果在pycharm中调试时，可以打开Run/Debug Configurations，在Environment variables右边点击…处添加变量。</p>
+<figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs elm"><span class="hljs-keyword">import</span> os<br><span class="hljs-title">os</span>.environ[<span class="hljs-string">&quot;CUDA_VISIBLE_DEVICES&quot;</span>] = <span class="hljs-string">&quot;-1,0,1,2,3&quot;</span><br><span class="hljs-keyword">import</span> torch<br><br></code></pre></td></tr></table></figure>
+<p>或在命令行运行时<code>CUDA_VISIBLE_DEVICES=1 python train.py --raw</code></p>
+<p>Python命令行需要import torch</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs stylus">import torch<br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(torch.cuda.device_count()</span></span>)<br><br></code></pre></td></tr></table></figure>
+
+<p>0</p>
+<p>Pycharm中在Main后面输入：<br><code>print(torch.__version__)</code><br>‘1.8.0+cpu’</p>
+<p><code>print(torch.cuda.device_count())</code><br>0</p>
+<p><code>print(torch.cuda.is_available()) </code><br>false</p>
+<p><code>print(pytorch_lightning.__version__)</code><br>‘1.2.2’</p>
+<hr>
+<p>报错原因：</p>
+<p>原代码中针对多卡情况指定了GPU ’1‘，而实际单卡情况下为’0‘。</p>
+<p>解决办法：找到代码中如下语句，删除。</p>
+<p><code>os.environ[&quot;CUDA_VISIBLE_DEVICES&quot;] = &#39;1&#39; </code></p>
+<p>或者</p>
+<figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs moonscript"><span class="hljs-keyword">import</span> <span class="hljs-built_in">os</span><br><span class="hljs-built_in">os</span>.environ[<span class="hljs-string">&quot;CUDA_VISIBLE_DEVICES&quot;</span>] = <span class="hljs-string">&#x27;0&#x27;</span>`<br></code></pre></td></tr></table></figure>
+
+<p>只需要在代码中添加以上代码即可，需要说明的是，一定要加在文件的最顶部，再引入其他的深度学习库！</p>
+<p>以下是正确的使用方法：</p>
+<figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs elm"><span class="hljs-keyword">import</span> os<br><span class="hljs-title">os</span>.environ[<span class="hljs-string">&quot;CUDA_VISIBLE_DEVICES&quot;</span>] = <span class="hljs-string">&#x27;0&#x27;</span><br><span class="hljs-keyword">import</span> paddle<br></code></pre></td></tr></table></figure>
+
+<p>以下是错误的使用方法：</p>
+<figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs elm"><span class="hljs-keyword">import</span> paddle<br><span class="hljs-keyword">import</span> os<br><span class="hljs-title">os</span>.environ[<span class="hljs-string">&quot;CUDA_VISIBLE_DEVICES&quot;</span>] = <span class="hljs-string">&#x27;0&#x27;</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="MadLibs"><a href="#MadLibs" class="headerlink" title="MadLibs"></a>MadLibs</h2><p><span class="exturl" data-url="aHR0cDovL2Nkbi5tZWJpbHljaGVuLnRvcC9Tb2Z0d2FyZS9NYWRMaWJzLnB5">隔壁MadLibs的源码，涉及字符串+MySQL<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cDovL2Nkbi5tZWJpbHljaGVuLnRvcC9Tb2Z0d2FyZS9NYWRMaWJzJUU4JUExJUE1JUU4JTg3JUFBJUU1JThBJUE4JUU5JTg3JThEJUU4JUJGJTlFLnB5">补了自动重连代码<i class="fa fa-external-link-alt"></i></span></p>
+<hr>
+ <blockquote class="blockquote-center">
+            <i class="fa fa-quote-left"></i>
+            <h1 id="Unity"><a href="#Unity" class="headerlink" title="Unity"></a><strong>Unity</strong></h1>
+            <i class="fa fa-quote-right"></i>
+          </blockquote>
+
+<hr>
+<h1 id="研究方向"><a href="#研究方向" class="headerlink" title="研究方向"></a>研究方向</h1><ol>
+<li>总结理论,完善虚实系统设计理论体系（/界面设计理论体系/可用性测试方案）</li>
+<li>进一步学习MRTK（自定义界面风格（根据文献进行学习）、匹配功能实现、场景系统（Manager Scene等选项卡）、空间映射功能）</li>
+<li>界面细节（元素空间位置、遮挡关系、透明度/亮度、颜色、大小）对虚实界面视觉效果影响 &amp; 场景通用性/自适应性</li>
+<li>利用新虚实系统模式/界面设计规避指针精确度/硬件设备人机学问题</li>
+<li>与用户需求结合进行设计</li>
+</ol>
+<p>8.28更新：</p>
+<ol>
+<li>总结完善虚实系统设计理论体系</li>
+</ol>
+<p>界面设计理论体系<br>可用性测试方案</p>
+<ol start="2">
+<li>继续学习MRTK（阅读文献）</li>
+</ol>
+<p>自定义界面风格（界面视觉设计）<br>匹配功能实现（数据接口、函数等）<br>场景系统（Manager Scene等选项卡）<br>空间映射功能<br>串口和行为树</p>
+<ol start="3">
+<li>界面细节对虚实界面视觉效果影响</li>
+</ol>
+<p>程序对该场景的通用性/自适应性<br>元素空间位置<br>遮挡关系<br>透明度/亮度<br>颜色<br>大小<br>…</p>
+<ol start="4">
+<li>规避指针精确度和硬件设备人机学问题</li>
+</ol>
+<p>可利用新虚实系统模式/界面设计</p>
+<ol start="5">
+<li>与用户需求结合进行设计</li>
+</ol>
+<p>视频远程指导（Microsoft Teams）<br>基于Vuforia的特征点注册</p>
+<hr>
+<p>有空研究下Player,（Player.xxx）HoloLens涉及不到。 </p>
+<p><img data-src="https://i.loli.net/2021/08/28/n2gM7NqRWte3vV6.png" alt="版式字号.png">  <br>视觉效果和字号数字我没有关联上，需要实操。  </p>
+<h1 id="Unity-2D（有的3D也适用）"><a href="#Unity-2D（有的3D也适用）" class="headerlink" title="Unity 2D（有的3D也适用）"></a>Unity 2D（有的3D也适用）</h1><p>艹，老子打包之后的传送门脚本失效了 老子去查了什么静态方法非静态方法，试了好多解决方案，结果发现就是因为那个挂载物体打了“editoronly”的标签  <br>艹！原来这些tag不是说着玩的啊！我还以为就是一个普通的标签！就一个备注！  </p>
+<h2 id="窗口可调且可后台运行"><a href="#窗口可调且可后台运行" class="headerlink" title="窗口可调且可后台运行"></a>窗口可调且可后台运行</h2><p>在Project Setting-Player-Resolution里，直接设置就行。  </p>
+<h2 id="生成随机数"><a href="#生成随机数" class="headerlink" title="生成随机数"></a>生成随机数</h2><p><code>musicCode = Random.Range(0, 3); </code></p>
+<h2 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h2><p>运行后如果没有声音需要检查以下几处：<br>1，Audio Source 的mute（静音）是否选中<br>2，scene窗口上方的mute调试按钮是否按下<br>3，game窗口上方的mute audio按钮是否按下<br>4，场景中是否存在一个以上的Audio Lisenner</p>
+<h2 id="调用系统时间"><a href="#调用系统时间" class="headerlink" title="调用系统时间"></a>调用系统时间</h2><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs reasonml"><span class="hljs-built_in">string</span> str = System.DateTime.Now.<span class="hljs-constructor">ToString()</span>;<br>        <span class="hljs-built_in">string</span> str1 = str.<span class="hljs-constructor">Substring(0,17)</span>;<br>        print(str1);        <br>        <br>        <span class="hljs-built_in">string</span> str1 = str.<span class="hljs-constructor">Substring(10,7)</span>;<span class="hljs-comment">//开始截取的位置，截取长度（这行是截的系统时分秒时间，不含空格）</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="跨脚本调用方法"><a href="#跨脚本调用方法" class="headerlink" title="跨脚本调用方法"></a>跨脚本调用方法</h2><p>【static使用方便；SendMessage方法比较灵活；GetComponent比较稳定】<br>关于SendMessage的更多参数（如何推送以及找不到函数是否报错）去查网上。</p>
+<p>第一种，被调用脚本函数为static类型，调用时直接用  脚本名.函数名()【此方法会导致很多参数无法使用的问题，虽然方便但涉及复杂调用时不推荐】</p>
+<p>第二种，GameObject.Find(“脚本所在的物体的名字”).SendMessage(“函数名”,参数,SendMessageOptions);//能调用public和private类型函数【零参单参成立，多参是不行的。多参需要定义object数组，之后在“函数名”中转换类型，大于3个参数时不如用第四种。】</p>
+<p>  <figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs prolog">object[] temp = new object[<span class="hljs-number">6</span>];<br>                          temp[<span class="hljs-number">0</span>] = boxLeft;<br>                          temp[<span class="hljs-number">1</span>] = boxTop;<br>                          temp[<span class="hljs-number">2</span>] = boxWidth;<br>                          temp[<span class="hljs-number">3</span>] = boxHeight;<br>                          temp[<span class="hljs-number">4</span>] = deep;<br>                          temp[<span class="hljs-number">5</span>] = currentPos;<br>                          <br><span class="hljs-symbol">GameObject</span>.<span class="hljs-symbol">Find</span>(<span class="hljs-string">&quot;Line&quot;</span>).<span class="hljs-symbol">SendMessage</span>(<span class="hljs-string">&quot;drawBox&quot;</span>,temp);<br><br>---<br>  drawBox(object[] temp)&#123;<br><br>int o0 = (int)temp[<span class="hljs-number">0</span>]<br>...<br><br>&#125;<br>  <br>   <br></code></pre></td></tr></table></figure></p>
+<p>第三种，GameObject.Find(“脚本所在的物体的名字”).GetComponent&lt;脚本名&gt;().SendMessage(“函数名”,参数,SendMessageOptions);  //可以添加参数【多参需要定义object数组，之后在“函数名”中转换类型，大于3个参数时不如用第四种。】</p>
+<p>  <figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs reasonml">                          <br>GameObject.<span class="hljs-constructor">Find(<span class="hljs-string">&quot;Functions&quot;</span>)</span>.GetComponent&lt;recognizeDrawUI&gt;<span class="hljs-literal">()</span>.<span class="hljs-constructor">SendMessage(<span class="hljs-string">&quot;drawBox&quot;</span>,<span class="hljs-params">temp</span>)</span>;<br><br></code></pre></td></tr></table></figure></p>
+<p>第四种，GameObject.Find(“脚本所在的物体的名字”).GetComponent&lt;脚本名&gt;().函数名(); //只能调用public类型函数</p>
+<p>  <figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs reasonml">GameObject.<span class="hljs-constructor">Find(<span class="hljs-string">&quot;Functions&quot;</span>)</span>.GetComponent&lt;recognizeDrawUI&gt;<span class="hljs-literal">()</span>.draw<span class="hljs-constructor">BoxUI(<span class="hljs-params">centrePos</span>, <span class="hljs-params">objNumber</span>)</span>;<br><br></code></pre></td></tr></table></figure></p>
+<h2 id="跨脚本传输参数-获取参数"><a href="#跨脚本传输参数-获取参数" class="headerlink" title="跨脚本传输参数+获取参数"></a>跨脚本传输参数+获取参数</h2><p>这句是按照class查找脚本？：<code>FindObjectOfType&lt;UiManager3&gt;().SendMessage(&quot;ShowWhat&quot;, &quot;主机&quot;);</code></p>
+<p><code>FindObjectOfType&lt;UiManager3&gt;().SendMessage(&quot;ShowWhat&quot;, &quot;主机&quot;);//如这里我想传给一个叫UiManager3脚本下的ShowWhat方法，传参类型是string类型</code></p>
+<p>两种方法可以发送参数</p>
+<p>使用Component.SendMessage发送</p>
+<p>GameObject.Find(“需要传递到游戏对象的Name”).SendMessage(“脚本中的方法名称”,Object//传递的参数类型,SendMessageOptions.DontRequireReceiver//这句代码表示不需要请求返回参数）;</p>
+<p>如果使用Component.SendMessage，没有Find游戏对象而直接SendMessage参数就会报错have no receiver</p>
+<p>得到游戏对象，给游戏对象添加组件</p>
+<p>GameObject.Find((“需要传递到游戏对象的Name”).GetComponent&lt;脚本名称&gt;().脚本中的函数();</p>
+<p>还有一个delegate方法，似乎比sendmessage效率要高，而且随时间发展稳定性也强。  </p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9uZXdzLjY4aWRjLmNuL25ldGppc2h1L2Nqai8yMDE1MDcwODQzNTA2MC5odG1s">链接<i class="fa fa-external-link-alt"></i></span></p>
+<hr>
+<p>把你要获取的变量权限定义为public类型变量.<br>以下方法任意-一个都可以:<br>public GameObject另一个物体; //监视面板拖拽赋值<br>另一个物体：GetComponent&lt;脚本&gt;().变量获得并更改.<br>将另一个物体命名为”XXX”：GameObject.Find(“XXX”).GetComponent&lt;脚本&gt;().变量;<br>三:将另-一个物体命名为”XX”;GameObject.FindGameObjectWithTag(“XXX”).GetComponent&lt;脚本&gt;()变量;</p>
+<p>还有一个是定义静态参数变量的，呃，感觉好麻烦就算了  </p>
+<hr>
+<h2 id="延时触发函数"><a href="#延时触发函数" class="headerlink" title="延时触发函数"></a>延时触发函数</h2><p>用 Invoke() 方法需要注意 3点：</p>
+<p>1 ：它应该在脚本的生命周期里的（Start、Update、OnGUI、FixedUpdate、LateUpdate）中被调用；</p>
+<p>2：Invoke(); 不能接受含有参数的方法；</p>
+<p>3：在 Time.ScaleTime = 0; 时， Invoke() 无效，因为它不会被调用到</p>
+<hr>
+<p>一、InvokeRepeating(string way  ,float  time1 ,float  time2 );</p>
+<p>        Way：你想要延时的方法名</p>
+<p>        time1：多少秒后执行</p>
+<p>         time2：重复执行时间间隔</p>
+<p>二、Invoke(string way  ,float  time);</p>
+<p>         way：方法名</p>
+<p>          time：多少秒后执行</p>
+<p>代码：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><br><span class="hljs-keyword">using</span> UnityEngine;<br><br><span class="hljs-keyword">using</span> System.Collections;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">A</span> : <span class="hljs-title">MonoBehaviour</span> &#123;<br><br>            <span class="hljs-function"><span class="hljs-keyword">void</span>  <span class="hljs-title">Start</span> ()</span> &#123;<br><br>                        InvokeRepeating(<span class="hljs-string">&quot;Test&quot;</span>, <span class="hljs-number">0.3f</span>, <span class="hljs-number">1</span>);<br><br>                        Invoke(<span class="hljs-string">&quot;Test&quot;</span>, <span class="hljs-number">1</span>);<br><br>         &#125;<br><br>                <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Test</span>()</span> &#123;<br><br>                 <span class="hljs-comment">//写点什么</span><br><br>          &#125;<br><br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+
+<h2 id="碰撞检测"><a href="#碰撞检测" class="headerlink" title="碰撞检测"></a>碰撞检测</h2><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">OnTriggerEnter2D</span><span class="hljs-params">(Collider2D other)</span></span><br><span class="hljs-function">        </span>&#123;<br>        <span class="hljs-comment">//print(&quot;Grimm collides with&quot;+ other.name);</span><br>       <span class="hljs-keyword">if</span>(other.name != <span class="hljs-string">&quot;bar&quot;</span>)<br>       &#123;<br>           talk.<span class="hljs-built_in">SetActive</span>(<span class="hljs-literal">true</span>);<br>           moveTimer=<span class="hljs-number">0</span>;<br>           countTime += Time.deltaTime;<br>           <span class="hljs-keyword">if</span>(countTime)&#123;countTime=<span class="hljs-number">0</span>;<span class="hljs-keyword">break</span>;&#125;<br>       &#125;<br>       moveTimer=<span class="hljs-number">3</span>;<br><br>        &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-type">void</span> <span class="hljs-title">OnCollisionEnter2D</span><span class="hljs-params">(Collision2D collision)</span> </span><br><span class="hljs-function">        </span>&#123;<br>        <span class="hljs-comment">//print(&quot;Grimm collides with&quot;+ collision.collider.name);</span><br><br><br>        &#125;<br></code></pre></td></tr></table></figure>
+
+<h1 id="项目：智能工厂"><a href="#项目：智能工厂" class="headerlink" title="项目：智能工厂"></a>项目：智能工厂</h1><p>服了 unity package里的东西得在package manager里导入到项目 否则不会显示</p>
+<h2 id="物体列表"><a href="#物体列表" class="headerlink" title="物体列表"></a>物体列表</h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vQWt5eS9wLzEwNjU3NTI0Lmh0bWw=">Unity3D游戏开发——物品存储：List与Dictionary<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly90aWViYS5iYWlkdS5jb20vcC80MjMxNTAxOTI3">Unity3d Instantiate物体放入数组的问题<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="物体数组（GameObject-list）"><a href="#物体数组（GameObject-list）" class="headerlink" title="物体数组（GameObject[] list）"></a>物体数组（GameObject[] list）</h3><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">using</span> <span class="hljs-keyword">System</span>.Runtime.CompilerServices;<br><span class="hljs-keyword">using</span> <span class="hljs-keyword">System</span>.<span class="hljs-keyword">Security</span>.AccessControl;<br><span class="hljs-keyword">using</span> <span class="hljs-keyword">System</span>.Runtime.InteropServices;<br><span class="hljs-keyword">using</span> <span class="hljs-keyword">System</span>.Collections;<br><span class="hljs-keyword">using</span> <span class="hljs-keyword">System</span>.Collections.Generic;<br><span class="hljs-keyword">using</span> UnityEngine;<br><span class="hljs-keyword">using</span> UnityEngine.UI;<br><span class="hljs-keyword">using</span> UnityEngine.SceneManagement;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.<span class="hljs-keyword">Input</span>;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Utilities;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Utilities.Solvers;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.UI;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Experimental.Dialog;<br><span class="hljs-keyword">using</span> <span class="hljs-keyword">System</span>;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.<span class="hljs-keyword">Diagnostics</span>;<br><br><br><span class="hljs-built_in">public</span> <span class="hljs-keyword">class</span> GetAnotherOne: MonoBehaviour &#123;<br><br>    Vector3 player_postion;<br>	<span class="hljs-built_in">public</span> GameObject[] list =<span class="hljs-built_in">new</span> GameObject[<span class="hljs-number">100</span>];<br>	<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;<br><br>// Use this <span class="hljs-keyword">for</span> initialization<br>	<span class="hljs-type">void</span> <span class="hljs-keyword">Start</span> () &#123;<br>       <br>	&#125;<br>	<br>	// <span class="hljs-keyword">Update</span> <span class="hljs-keyword">is</span> <span class="hljs-keyword">called</span> once per frame<br>	<span class="hljs-type">void</span> <span class="hljs-keyword">Update</span> () &#123;<br><br>		Vector3 player_postion = GameObject.FindGameObjectWithTag(&quot;MainCamera&quot;).<span class="hljs-keyword">transform</span>.position;<br><br>    &#125;<br><br>    <span class="hljs-built_in">public</span> <span class="hljs-type">void</span> GetList()&#123;<br>		GameObject.Instantiate(list[i],player_postion + <span class="hljs-built_in">new</span> Vector3(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.1</span>f),Quaternion.<span class="hljs-keyword">identity</span>);//GameObject.Instantiate(<span class="hljs-keyword">Object</span>,Vector3,Quaternion)<br>		i++;<br>	&#125;<br><br>	<span class="hljs-built_in">public</span> <span class="hljs-type">void</span> <span class="hljs-keyword">Get</span>(GameObject obj)&#123;<br>		GameObject.Instantiate(obj,player_postion + <span class="hljs-built_in">new</span> Vector3(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.1</span>f),Quaternion.<span class="hljs-keyword">identity</span>);//GameObject.Instantiate(<span class="hljs-keyword">Object</span>,Vector3,Quaternion)<br>	&#125;<br><br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="int-转-String（显示点击次数）"><a href="#int-转-String（显示点击次数）" class="headerlink" title="int 转 String（显示点击次数）"></a>int 转 String（显示点击次数）</h2><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs C#"><br><span class="hljs-built_in">int</span> i = <span class="hljs-number">100</span>;<br>String s1 = i + <span class="hljs-string">&quot; &quot;</span>;<br><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs C#"><span class="hljs-keyword">using</span> System.Collections.Generic;<br><span class="hljs-keyword">using</span> UnityEngine;<br><span class="hljs-keyword">using</span> TMPro;<br><span class="hljs-keyword">using</span> System.Linq;<br><span class="hljs-keyword">using</span> System.Text;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Count</span> : <span class="hljs-title">MonoBehaviour</span><br>&#123;<br><br>    <span class="hljs-keyword">public</span> GameObject textPad;<span class="hljs-comment">//对应文字面板</span><br>    <span class="hljs-built_in">int</span> a=<span class="hljs-number">0</span>;<br><br>    <span class="hljs-comment">// Start is called before the first frame update</span><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Start</span>()</span><br>    &#123;<br>        <br>    &#125;<br><br>    <span class="hljs-comment">// Update is called once per frame</span><br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Update</span>()</span><br>    &#123;<br>        <br>    &#125;<br><br>   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Add</span>()</span><br>    &#123;<br>        a++;<br>		textPad.GetComponent&lt;TMP_Text&gt;().text= a + <span class="hljs-string">&quot; &quot;</span>;<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<h2 id="Unity-自行生成物体"><a href="#Unity-自行生成物体" class="headerlink" title="Unity 自行生成物体"></a>Unity 自行生成物体</h2><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs C#">GameObject go= <span class="hljs-keyword">new</span> GameObject(<span class="hljs-string">&quot;Cube1&quot;</span>);<br><br>GameObject.Instantiate(prefab);<span class="hljs-comment">//根据prefab或另一游戏物体</span><br><br>GameObject.CreatePrimitive(PrimitiveType.Plane);  <br>GameObject.CreatePrimitive(PrimitiveType.Capsule);<br><span class="hljs-comment">//根据？怀疑是Unity内置模型</span><br><br></code></pre></td></tr></table></figure>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">//在脚本中创建一个obj变量，并使用<span class="hljs-keyword">for</span>循环通过Instantiate方法生成<span class="hljs-number">3</span>个物体，使用Random的Range方法随机生成在x为<span class="hljs-number">0</span>到<span class="hljs-number">10</span>，y为<span class="hljs-number">1</span>，z为<span class="hljs-number">0</span>到<span class="hljs-number">10</span>的区域位置。<br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">System</span>.Collections;<br><span class="hljs-keyword">using</span> UnityEngine;<br><br><span class="hljs-built_in">public</span> <span class="hljs-keyword">class</span> random_g : MonoBehaviour&#123;<br><br><span class="hljs-built_in">public</span> GameObject obj;<br><br><span class="hljs-type">void</span> <span class="hljs-keyword">Start</span> () &#123;<br> <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">3</span>; i++) <br> &#123;<br>Instantiate(obj, <span class="hljs-built_in">new</span> Vector3(Random.Range(<span class="hljs-number">0</span>f,<span class="hljs-number">10</span>f),<span class="hljs-number">1</span>,Random.Range(<span class="hljs-number">0</span>f,<span class="hljs-number">10</span>f)), Quaternion.<span class="hljs-keyword">identity</span>);<br> &#125;<br> &#125;<br> <br></code></pre></td></tr></table></figure>
+
+<h3 id="实例化-amp-销毁"><a href="#实例化-amp-销毁" class="headerlink" title="实例化 &amp; 销毁"></a>实例化 &amp; 销毁</h3><blockquote>
+<p>版权声明：本文为CSDN博主「lee图图」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xlZTUxNC9hcnRpY2xlL2RldGFpbHMvODA5OTUwNDg=">https://blog.csdn.net/lee514/article/details/80995048<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+<h4 id="实例化（Clone）"><a href="#实例化（Clone）" class="headerlink" title="实例化（Clone）"></a>实例化（Clone）</h4><p><img data-src="https://img-blog.csdn.net/20180711100143139?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xlZTUxNA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70"></p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs reasonml">public GameOject  m_prefab;<span class="hljs-comment">//放置prefab</span><br><br>void <span class="hljs-constructor">Start()</span>&#123;<br>GameObject.<span class="hljs-constructor">Instantiate(<span class="hljs-params">m_prefab</span>,Vector3.<span class="hljs-params">up</span>,Quaternion.<span class="hljs-params">identity</span>)</span>;<span class="hljs-comment">//GameObject.Instantiate(Object,Vector3,Quaternion)</span><br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<p>Intantiate方法是静态方法，要用类名GameObject.调用。</p>
+<p>第一个参数 Object是要生成的游戏物体//m_prefab：代表要传递的游戏物体</p>
+<p>第二个参数Vector3是游戏物体的生成位置//Vector3.up：代表场景中原点上一米的位置</p>
+<p>第三个参数Quaternion是表示生成的游戏物体是否旋转，一般是不旋转，用Quaternion.identity表示无旋转//Quaternion.identity：表示生成的物体无旋转</p>
+<p>随机位置用Random.Rang(min,max)函数成成随机的x,y,z值就可以了<br>首先获得min和max的值：在场景中新建一个cube,拖拽cube测量场景长宽的min和max</p>
+<h4 id="销毁"><a href="#销毁" class="headerlink" title="销毁"></a>销毁</h4><p>创建一个脚本DestoryBox—&gt;添加到预制体Box上 </p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">GameObject</span>.Destroy(gameObject,<span class="hljs-number">2</span>.<span class="hljs-number">0</span>f);<br><br></code></pre></td></tr></table></figure>
+
+<p>Destory是静态方法，用类名加点的形式调用<br>gameObject表示要销毁的游戏对象自身<br>2.0f表示2秒后销毁，可以任意指定时间<br>也可以用随机数函数生成随机的销毁时间,例如：Random.Range(1.0f,5.0f),表示1到5秒之间的秒数销毁游戏对象。  </p>
+<hr>
+<h2 id="碰撞检测并销毁"><a href="#碰撞检测并销毁" class="headerlink" title="碰撞检测并销毁"></a>碰撞检测并销毁</h2><p>码，也可以看看下面。</p>
+<p>碰撞检测需要刚体和碰撞盒。  </p>
+<h3 id="销毁-1"><a href="#销毁-1" class="headerlink" title="销毁"></a>销毁</h3><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs reasonml">GameObject obj= GameObject.<span class="hljs-constructor">CreatePrimitive(PrimitiveType.Cube)</span>;<br> <br><span class="hljs-constructor">Destroy(<span class="hljs-params">obj</span>)</span>;  <span class="hljs-comment">//删除物体</span><br> <br><span class="hljs-constructor">Destroy(<span class="hljs-params">this</span>)</span>;  <span class="hljs-comment">//删除此脚本</span><br> <br><span class="hljs-constructor">Destroy(<span class="hljs-params">transform</span>.GetComponent&lt;<span class="hljs-params">createprim</span>&gt;()</span>); <span class="hljs-comment">//删除组件</span><br> <br><span class="hljs-constructor">Destroy(<span class="hljs-params">obj</span>, 2)</span>;       <span class="hljs-comment">//一定时间删除物体</span><br> <br><span class="hljs-constructor">DestroyImmediate(<span class="hljs-params">obj</span>)</span>;  <span class="hljs-comment">//立即删除</span><br> <br><span class="hljs-constructor">DontDestroyOnLoad(<span class="hljs-params">obj</span>)</span>;  <span class="hljs-comment">///跳转场景时不删除某物体</span><br><br><br></code></pre></td></tr></table></figure>
+
+<p>销毁一个集合中的所有物体:</p>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs abnf">List&lt;GameObject&gt; goes <span class="hljs-operator">=</span> new List&lt;GameObject&gt;()<span class="hljs-comment">; </span><br>        for (int i <span class="hljs-operator">=</span> <span class="hljs-number">0</span><span class="hljs-comment">; i &lt; goes.Count; i++)</span><br>        &#123;<br>            Destroy(goes[i])<span class="hljs-comment">;</span><br>        &#125;<br></code></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs abnf">List&lt;GameObject&gt; goes <span class="hljs-operator">=</span> new List&lt;GameObject&gt;()<span class="hljs-comment">; </span><br>        for (int i <span class="hljs-operator">=</span> <span class="hljs-number">0</span><span class="hljs-comment">; i &lt; goes.Count; i++)</span><br>        &#123;<br>            DestroyImmediate(goes[<span class="hljs-number">0</span>])<span class="hljs-comment">;</span><br>        &#125;<br></code></pre></td></tr></table></figure>
+
+
+<h2 id="判断物体是否显示-销毁"><a href="#判断物体是否显示-销毁" class="headerlink" title="判断物体是否显示/销毁"></a>判断物体是否显示/销毁</h2><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs C#"><span class="hljs-keyword">if</span>(GameObject.activeInHierarchy)<br><br><br>GameObject game007=(GameObject)Instantiate (prefab);<br><span class="hljs-keyword">if</span>(game007==<span class="hljs-literal">null</span>)<br>&#123; &#125;<br><br></code></pre></td></tr></table></figure>
+
+<h2 id="查找-获取游戏对象-对象组"><a href="#查找-获取游戏对象-对象组" class="headerlink" title="查找/获取游戏对象+对象组"></a>查找/获取游戏对象+对象组</h2><p>unity3D之获取游戏对象的3种方法<br>获取游戏对象有三种方法：</p>
+<p>1.通过对象名称获取：<code>objCube=GameObject.Find(&quot;Cube&quot;);</code></p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs C#"><br><span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> objCube:GameObject;<br><span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> isCubeRoate=<span class="hljs-literal">false</span>;<br><br><span class="hljs-function">function <span class="hljs-title">Start</span> ()</span> &#123;<br>  objCube=GameObject.Find(<span class="hljs-string">&quot;Cube&quot;</span>);<br>&#125;<br><br><span class="hljs-function">function <span class="hljs-title">Update</span>()</span>&#123;<br>  <span class="hljs-keyword">if</span>(isCubeRoate)&#123;<br>     objCube.transform.Rotate(<span class="hljs-number">0.0f</span>,Time.deltaTime*<span class="hljs-number">200</span>,<span class="hljs-number">0.0f</span>);<br>  &#125;<br>&#125;<br><br><span class="hljs-function">function <span class="hljs-title">OnGUI</span>()</span>&#123;<br>  <span class="hljs-keyword">if</span>(GUILayout.Button(<span class="hljs-string">&quot;旋转&quot;</span>,GUILayout.Height(<span class="hljs-number">50</span>)))&#123;<br>     isCubeRoate=<span class="hljs-literal">true</span>;<br>  &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<p>2.通过tag标签获取单个游戏对象：<code>objCube=GameObject.FindWithTag(&quot;Finish&quot;);</code></p>
+<h3 id="游戏对象（数）组"><a href="#游戏对象（数）组" class="headerlink" title="游戏对象（数）组"></a>游戏对象（数）组</h3><p><span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vemhlbmxvbmcvcC83MTU2MzU3Lmh0bWw=">Object和object的区别<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cDovL3d3dy5zcmNtaW5pLmNvbS8zODYwNC5odG1s">使用方式<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9nYW1laW5zdGl0dXRlLnFxLmNvbS9jb21tdW5pdHkvZGV0YWlsLzExMTcyMg==">公共方法<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="添加和循环"><a href="#添加和循环" class="headerlink" title="添加和循环"></a>添加和循环</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs csharp"> <span class="hljs-keyword">private</span> List&lt;<span class="hljs-built_in">int</span>&gt; list = <span class="hljs-keyword">new</span> List&lt;<span class="hljs-built_in">int</span>&gt;();<br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Start</span> ()</span> <br>   &#123;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> num = <span class="hljs-number">0</span> ; num &lt; <span class="hljs-number">50</span> ; num++)<br>       &#123;<br>           list.Add(num);<br>       &#125;<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Update</span> ()</span> <br>   &#123;<br>       ForeachFun();<br>       <span class="hljs-comment">//ForFun();</span><br>&#125;<br><br>   <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">ForeachFun</span>()</span><br>   &#123;<br>      <span class="hljs-keyword">foreach</span>(<span class="hljs-built_in">int</span> num <span class="hljs-keyword">in</span> list)<br>      &#123;<br><br>      &#125;<br>   &#125;<br>   <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">ForFun</span>()</span><br>   &#123;<br>       <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> num = <span class="hljs-number">0</span>; num &lt; list.Count; num++)<br>       &#123;<br><br>       &#125;<br>   &#125;<br><br></code></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs haxe"><span class="hljs-keyword">using</span> System.Collections.Generic;<br>List&lt;GameObject[&gt; ob = <span class="hljs-keyword">new</span> <span class="hljs-type">List</span>&lt;GameObject[&gt;();<br><span class="hljs-comment">//或</span><br><span class="hljs-keyword">private</span> GameObject[[] ob = <span class="hljs-literal">null</span>;<span class="hljs-comment">// = new GameObject[100];</span><br><br></code></pre></td></tr></table></figure>
+
+<p>3.通过游戏标签获取多组游戏对象：<code>objCube=GameObject.FindGameObjectsWithTag(&quot;Finish&quot;);</code><br>如果一个数组A里存储n个游戏对象Enemy，当n个Enemy全部被销毁时，判定游戏胜利。<br>判断若数组A为空，就说明Enemy被全部销毁，则游戏胜利。C#支持Array.any()这个方法来判断数组A是否为空；但是游戏对象数组GameObject[]不支持这个方法。这个需要遍历一下数组A查看每个地址的值是否为空，因为数组是有长度的，每个元素是一个对象引用，数组本身是不知道引用是否为空的，只能自己遍历。</p>
+<p>通过计算该对象身上有多少个子对象来判断该对象是否有子对象，但需要主意的是，gameObj本身也会被记录到Length之中，所以在判断gameObj对象是否有子对象时，应做如下书写（而不是写成==0）；</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs C#"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Start</span> ()</span> &#123;<br><span class="hljs-keyword">if</span> (GetComponentsInChildren&lt;Transform&gt;(<span class="hljs-literal">true</span>).Length &lt;= <span class="hljs-number">1</span>)<br><br><br>	&#123;<br>		Debug.Log(<span class="hljs-string">&quot;&lt;color=red&gt;啥也没有&lt;/color&gt;&quot;</span>);<br>	&#125;<br><br><br><span class="hljs-keyword">else</span><br> &#123;<br><span class="hljs-keyword">foreach</span> (Transform child <span class="hljs-keyword">in</span> transform)<br>  &#123;<br>      Debug.Log(<span class="hljs-string">&quot;&lt;color=green&gt;存在子物体&lt;/color&gt;&quot;</span> + child.name);<br>    <span class="hljs-keyword">if</span> (child.name == <span class="hljs-string">&quot;Sphere&quot;</span>)<br>      &#123;<br>        child.GetComponent&lt;Renderer&gt;().material.color = Color.yellow;<br>        Debug.Log(<span class="hljs-string">&quot;有子物体萌萌哒&quot;</span>);<br>      &#125;<br>    <span class="hljs-keyword">else</span><br>      &#123;<br>        child.GetComponent&lt;Renderer&gt;().material.color = Color.red;<br>      &#125;<br>   &#125;<br> &#125;<br>  <br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<p>以上代码转载<span class="exturl" data-url="aHR0cHM6Ly90aWViYS5iYWlkdS5jb20vcC82MzI2NzY2OTkzP3JlZF90YWc9MzAxMzYwMTIyOQ==">https://tieba.baidu.com/p/6326766993?red_tag=3013601229<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="检查Tag物体组是否全部隐藏"><a href="#检查Tag物体组是否全部隐藏" class="headerlink" title="检查Tag物体组是否全部隐藏"></a>检查Tag物体组是否全部隐藏</h3><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs abnf"><br>private void Exit()<br>		&#123;<br>			int flag <span class="hljs-operator">=</span> <span class="hljs-number">1</span><span class="hljs-comment">;</span><br>			for(int i<span class="hljs-operator">=</span><span class="hljs-number">0</span><span class="hljs-comment">; i&lt;GameObject.FindGameObjectsWithTag(&quot;Model&quot;).Length; i++)</span><br>			&#123;<br>				if(GameObject.FindGameObjectsWithTag(<span class="hljs-string">&quot;Model&quot;</span>)[i].activeInHierarchy)flag<span class="hljs-operator">=</span><span class="hljs-number">0</span><span class="hljs-comment">;   </span><br>			&#125;<br>			if(flag <span class="hljs-operator">=</span><span class="hljs-operator">=</span> <span class="hljs-number">1</span>)textPad.GetComponent&lt;TMP_Text&gt;().text<span class="hljs-operator">=</span> <span class="hljs-string">&quot;未修改文字&quot;</span><span class="hljs-comment">; </span><br>		&#125;<br><br></code></pre></td></tr></table></figure>
+
+<p>以下转自博主：Teng的世界 <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Rlbmdfb250aGV3YXkvYXJ0aWNsZS9kZXRhaWxzLzQ3MTg4MTQx">https://blog.csdn.net/teng_ontheway/article/details/47188141<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="1-GameObject-Find-、Transform-Find前置条件"><a href="#1-GameObject-Find-、Transform-Find前置条件" class="headerlink" title="1.GameObject.Find()、Transform.Find前置条件"></a>1.GameObject.Find()、Transform.Find前置条件</h3><p>Unity中常用到查找对象,非隐藏的、隐藏的，各种方法性能有高有低，使用又有各种条件限制。</p>
+<p>在此对查找的性能和条件进行分析。开发时遇到的主要问题是查找隐藏对象。</p>
+<p><strong>没有完美的查找方法，只有最合适的查找方法</strong></p>
+<p>最后附带上测试代码</p>
+<h3 id="2-相关API"><a href="#2-相关API" class="headerlink" title="2.相关API"></a>2.相关API</h3><p>GameObject.Find<br>Transform.Find<br>GameObject.FindWithTag<br>GameObject.FindGameObjectsWithTag<br>Resources.FindObjectsOfTypeAll</p>
+<h4 id="2-1-GameObject-Find"><a href="#2-1-GameObject-Find" class="headerlink" title="2.1 GameObject.Find"></a>2.1 GameObject.Find</h4><p>通过名字或路径查找游戏对象。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs C#">GameObject.Find(<span class="hljs-string">&quot;GameObject&quot;</span>);<br>GameObject.Find(<span class="hljs-string">&quot;GameObject/ChildGameObject);</span><br></code></pre></td></tr></table></figure>
+
+<p>使用规范:<br>1.<strong>无法查找隐藏对象</strong><br>隐藏对象包括查找路径的任何一个父节点隐藏(active=false)</p>
+<p>2.如果查找不在最上层，建议合理使用路径查找，路径查找是把双刃剑</p>
+<p>**优点1:**解决查找中可能出现的重名问题。<br>**优点2:**如果有完全的路径，减少查找范围，减少查找时间。</p>
+<p><strong>缺点:</strong> 路径或结构调整后，容易影响到程序中的查找，需要重新定位查找路径。</p>
+<p>3.如果路径查找中的任何一个父节点active=false，这个对象都将查找不到。</p>
+<p>4.使用方便但效率低下<br>此查找相当于递归遍历查找，虽使用方便但效率堪忧，建议在Start()函数中查找对象并保存引用，切忌在Update()中动态查找。</p>
+<h4 id="2-2-Transform-Find"><a href="#2-2-Transform-Find" class="headerlink" title="2.2 Transform.Find"></a>2.2 Transform.Find</h4><p>1.可以查找隐藏对象<br>2.支持路径查找<br>3.查找隐藏对象的前提是transform所在的根节点必须可见，即active=true</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs C#">GameObject root = GameObject.Find(<span class="hljs-string">&quot;root&quot;</span>);<br>root.SetActive(<span class="hljs-literal">false</span>); <span class="hljs-comment">// 根节点为空</span><br><br><span class="hljs-comment">// 总是查找失败</span><br>root.transform.Find(<span class="hljs-string">&quot;root/AnyChildObjectName&quot;</span>);<br></code></pre></td></tr></table></figure>
+
+<p><strong>实际开发:</strong><br>实际开发中会将功能预制体放到一个可见的GameObject目录下，将这个GameObject目录作为查找根节点，下面的所有对象(隐藏、非隐藏）都可以查找到。</p>
+<p>你可以把”map”节点放在一个active = true的MapRoot上，无论是关闭 或者 显示 代码中写起来都很方便。 假如你的map节点就是顶级节点，那么它一旦天生acive = false ，那么你将无法得到它的对象，更无法设置它的属性了。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs C#">GameObject root = GameObject.Find(<span class="hljs-string">&quot;MapRoot&quot;</span>);<br><br>GameObject map =  root.transform.Find(<span class="hljs-string">&quot;map&quot;</span>).gameObject;       <br>map.SetActive(<span class="hljs-literal">true</span>);<br><br></code></pre></td></tr></table></figure>
+
+<p><img data-src="https://img-blog.csdn.net/20150801172310340" alt="根节点可见 "></p>
+<h4 id="2-3-其他查找"><a href="#2-3-其他查找" class="headerlink" title="2.3 其他查找"></a>2.3 其他查找</h4><p>GameObject.FindWithTag<br>GameObject.FindGameObjectsWithTag<br>使用极少，并无卵用</p>
+<p>Resources.FindObjectsOfTypeAll<br>返回指定类型的对象列表。主要用于编辑器中，eg。检测内存泄露、批量查找的功能等</p>
+<h3 id="3-实际测试"><a href="#3-实际测试" class="headerlink" title="3 实际测试"></a>3 实际测试</h3><p>目录结构如下，绿色代表现实，红色代表隐藏</p>
+<p><img data-src="https://img-blog.csdn.net/20150801175128127" alt="这里写图片描述"></p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><code class="hljs C#"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Start</span> ()</span> &#123;<br>    <span class="hljs-comment">// GameObject.Find</span><br>    &#123;<br>        <span class="hljs-comment">// 根节点</span><br>        GameObject.Find(<span class="hljs-string">&quot;A11&quot;</span>);     <span class="hljs-comment">// true</span><br><br>        <span class="hljs-comment">// 父节点(受父节点影响)</span><br>        GameObject.Find(<span class="hljs-string">&quot;A21&quot;</span>);     <span class="hljs-comment">// false</span><br>        GameObject.Find(<span class="hljs-string">&quot;A22&quot;</span>);     <span class="hljs-comment">// true</span><br><br>        <span class="hljs-comment">// 孙子节点(受父节点影响)</span><br>        GameObject.Find(<span class="hljs-string">&quot;A31&quot;</span>);     <span class="hljs-comment">// false     </span><br>        GameObject.Find(<span class="hljs-string">&quot;A32&quot;</span>);     <span class="hljs-comment">// false</span><br>        GameObject.Find(<span class="hljs-string">&quot;A33&quot;</span>);     <span class="hljs-comment">// false</span><br>        GameObject.Find(<span class="hljs-string">&quot;A34&quot;</span>);     <span class="hljs-comment">// true</span><br><br>        GameObject.Find(<span class="hljs-string">&quot;A34&quot;</span>);                 <span class="hljs-comment">// true  相对路径查找</span><br>        GameObject.Find(<span class="hljs-string">&quot;/A34&quot;</span>);                <span class="hljs-comment">// false 绝对路径查找</span><br>        GameObject.Find(<span class="hljs-string">&quot;/A11/A22/A34&quot;</span>);        <span class="hljs-comment">// true</span><br>        GameObject.Find(<span class="hljs-string">&quot;A11/A22/A34&quot;</span>);         <span class="hljs-comment">// true</span><br>        GameObject.Find(<span class="hljs-string">&quot;/A22/A34&quot;</span>);            <span class="hljs-comment">// false</span><br>        GameObject.Find(<span class="hljs-string">&quot;A22/A34&quot;</span>);             <span class="hljs-comment">// true</span><br>    &#125;<br><br>    <span class="hljs-comment">// Transform.find</span><br>    &#123;<br>        <span class="hljs-comment">// 根节点</span><br>        Transform A11 = transform.Find(<span class="hljs-string">&quot;A11&quot;</span>);      <span class="hljs-comment">// false</span><br><br>        <span class="hljs-comment">// 父亲节点</span><br>        Transform A21 = transform.Find(<span class="hljs-string">&quot;A21&quot;</span>);      <span class="hljs-comment">// true</span><br>        Transform A22 = transform.Find(<span class="hljs-string">&quot;A22&quot;</span>);      <span class="hljs-comment">// true</span><br><br>        <span class="hljs-comment">// 孙子节点</span><br>        Transform A31 = transform.Find(<span class="hljs-string">&quot;A31&quot;</span>);      <span class="hljs-comment">// false</span><br>        Transform A32 = transform.Find(<span class="hljs-string">&quot;A32&quot;</span>);      <span class="hljs-comment">// false</span><br>        Transform A33 = transform.Find(<span class="hljs-string">&quot;A33&quot;</span>);      <span class="hljs-comment">// false</span><br>        Transform A34 = transform.Find(<span class="hljs-string">&quot;A34&quot;</span>);      <span class="hljs-comment">// false</span><br><br>        <span class="hljs-comment">// 使用相对于根节点的查找目录</span><br>        Transform AA31 = transform.Find(<span class="hljs-string">&quot;A21/A31&quot;</span>);     <span class="hljs-comment">// true</span><br>        Transform AA32 = transform.Find(<span class="hljs-string">&quot;A21/A32&quot;</span>);     <span class="hljs-comment">// true</span><br>        Transform AA33 = transform.Find(<span class="hljs-string">&quot;A22/A33&quot;</span>);     <span class="hljs-comment">// true</span><br>        Transform AA34 = transform.Find(<span class="hljs-string">&quot;A22/A34&quot;</span>);     <span class="hljs-comment">// true</span><br><br>        <span class="hljs-comment">// 包含根节点的查找目录</span><br>        Transform AA311 = transform.Find(<span class="hljs-string">&quot;A11/A21/A31&quot;</span>);        <span class="hljs-comment">// false    </span><br>        Transform AA321 = transform.Find(<span class="hljs-string">&quot;A11/A21/A32&quot;</span>);        <span class="hljs-comment">// false</span><br>        Transform AA331 = transform.Find(<span class="hljs-string">&quot;A11/A22/A33&quot;</span>);        <span class="hljs-comment">// false</span><br>        Transform AA341 = transform.Find(<span class="hljs-string">&quot;A11/A22/A34&quot;</span>);        <span class="hljs-comment">// false</span><br><br>        <span class="hljs-comment">// 绝对路径</span><br>        Transform AA3111 = transform.Find(<span class="hljs-string">&quot;/A11/A21/A31&quot;</span>);      <span class="hljs-comment">// false</span><br>        Transform AA3211 = transform.Find(<span class="hljs-string">&quot;/A11/A21/A32&quot;</span>);      <span class="hljs-comment">// false</span><br>        Transform AA3311 = transform.Find(<span class="hljs-string">&quot;/A11/A22/A33&quot;</span>);      <span class="hljs-comment">// false</span><br>        Transform AA3411 = transform.Find(<span class="hljs-string">&quot;/A11/A22/A34&quot;</span>);      <span class="hljs-comment">// false</span><br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<h3 id="4-即使隐藏root节点gameObject也能进行查找的方法"><a href="#4-即使隐藏root节点gameObject也能进行查找的方法" class="headerlink" title="4 即使隐藏root节点gameObject也能进行查找的方法"></a>4 即使隐藏root节点gameObject也能进行查找的方法</h3><p>找到了一个即使隐藏root节点gameObject也能进行查找的方法。<br><span class="exturl" data-url="aHR0cDovL2Fuc3dlcnMudW5pdHkzZC5jb20vcXVlc3Rpb25zLzUyNTYwL2dhbWVvYmplY3RmaW5kLXdvcmstb24taW5hY3RpdmUtb2JqZWN0cy5odG1s">http://answers.unity3d.com/questions/52560/gameobjectfind-work-on-inactive-objects.html<i class="fa fa-external-link-alt"></i></span></p>
+<p>代码预览:</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs C#">GameObject[] pAllObjects = (GameObject[])Resources.FindObjectsOfTypeAll(<span class="hljs-keyword">typeof</span>(GameObject));<br><br> <span class="hljs-keyword">foreach</span> (GameObject pObject <span class="hljs-keyword">in</span> pAllObjects)<br> &#123;<br>    <span class="hljs-keyword">if</span> (pObject.transform.parent != <span class="hljs-literal">null</span>)<br>     &#123;<br>             <span class="hljs-keyword">continue</span>;<br>     &#125;<br><br>    <span class="hljs-keyword">if</span> (pObject.hideFlags == HideFlags.NotEditable || pObject.hideFlags == HideFlags.HideAndDontSave)<br>     &#123;<br>         <span class="hljs-keyword">continue</span>;<br>     &#125;<br><br>    <span class="hljs-keyword">if</span> (Application.isEditor)<br>     &#123;<br>         <span class="hljs-built_in">string</span> sAssetPath = AssetDatabase.GetAssetPath(pObject.transform.root.gameObject);<br>         <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">string</span>.IsNullOrEmpty(sAssetPath))<br>         &#123;<br>             <span class="hljs-keyword">continue</span>;<br>         &#125;<br>     &#125;<br><br>    Debug.Log(pObject.name);<br> &#125;<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="文本代码控制"><a href="#文本代码控制" class="headerlink" title="文本代码控制"></a>文本代码控制</h2><figure class="highlight bnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bnf">this.gameObject.GetComponent<span class="hljs-attribute">&lt;Text&gt;</span>().text= &quot;<span class="hljs-attribute">&lt;color=#0000ff&gt;</span><span class="hljs-attribute">&lt;size=60&gt;</span>小明<span class="hljs-attribute">&lt;/size&gt;</span><span class="hljs-attribute">&lt;/color&gt;</span>送了<span class="hljs-attribute">&lt;color=#0000ff&gt;</span><span class="hljs-attribute">&lt;size=60&gt;</span>小红<span class="hljs-attribute">&lt;/size&gt;</span><span class="hljs-attribute">&lt;/color&gt;</span>一辆游艇&quot;;<br>&#125;<br>   <br>textPad.GetComponent<span class="hljs-attribute">&lt;TMP_Text&gt;</span>().text= &quot;未修改文字&quot;;<br>   <br></code></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Follow"><a href="#Follow" class="headerlink" title="Follow"></a>Follow</h2><p>挂在物体上，obj是其要Follow的对象。</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">using</span> <span class="hljs-keyword">System</span>.Runtime.CompilerServices;<br><span class="hljs-keyword">using</span> <span class="hljs-keyword">System</span>.<span class="hljs-keyword">Security</span>.AccessControl;<br><span class="hljs-keyword">using</span> <span class="hljs-keyword">System</span>.Runtime.InteropServices;<br><span class="hljs-keyword">using</span> <span class="hljs-keyword">System</span>.Collections;<br><span class="hljs-keyword">using</span> <span class="hljs-keyword">System</span>.Collections.Generic;<br><span class="hljs-keyword">using</span> UnityEngine;<br><span class="hljs-keyword">using</span> UnityEngine.SceneManagement;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.<span class="hljs-keyword">Input</span>;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Utilities;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Utilities.Solvers;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.UI;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Experimental.Dialog;//已失效<br><span class="hljs-keyword">using</span> <span class="hljs-keyword">System</span>;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.<span class="hljs-keyword">Diagnostics</span>;<br><br><span class="hljs-built_in">public</span> <span class="hljs-keyword">class</span> Follow : MonoBehaviour&#123;<br><br>	<span class="hljs-built_in">public</span> GameObject obj;//防止无法自启动<br>	private Vector3 <span class="hljs-keyword">offset</span>;<br><br>// Use this <span class="hljs-keyword">for</span> initialization<br>	<span class="hljs-type">void</span> <span class="hljs-keyword">Start</span> () &#123;<br><br>		<span class="hljs-keyword">offset</span>=this.GetComponent&lt;<span class="hljs-keyword">Transform</span>&gt;().position-obj.<span class="hljs-keyword">transform</span>.position;// 计算偏移数据<br>		<br>	&#125;<br>	<br>	// <span class="hljs-keyword">Update</span> <span class="hljs-keyword">is</span> <span class="hljs-keyword">called</span> once per frame<br>	<span class="hljs-type">void</span> <span class="hljs-keyword">Update</span> () &#123;<br><br>		this.GetComponent&lt;<span class="hljs-keyword">Transform</span>&gt;().position=<span class="hljs-keyword">offset</span>+obj.<span class="hljs-keyword">transform</span>.position;<br>	&#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="Unity-基于坐标显示物体"><a href="#Unity-基于坐标显示物体" class="headerlink" title="Unity 基于坐标显示物体"></a>Unity 基于坐标显示物体</h2><p>挂在空物体上。  </p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><code class="hljs reasonml">using System.Runtime.CompilerServices;<br>using System.Security.AccessControl;<br>using System.Runtime.InteropServices;<br>using System.Collections;<br>using System.Collections.Generic;<br>using UnityEngine;<br>using UnityEngine.SceneManagement;<br>using Microsoft.MixedReality.Toolkit.Input;<br>using Microsoft.MixedReality.Toolkit.Utilities;<br>using Microsoft.MixedReality.Toolkit.Utilities.Solvers;<br>using Microsoft.MixedReality.Toolkit.UI;<br>using Microsoft.MixedReality.Toolkit.Experimental.Dialog;<span class="hljs-comment">//已失效</span><br>using System;<br>using Microsoft.MixedReality.Toolkit.Diagnostics;<br><br>public <span class="hljs-keyword">class</span> PositionBasedDisplayAlt : MonoBehaviour&#123;<br><br>	public GameObject obj;<span class="hljs-comment">//防止无法自启动</span><br><br><span class="hljs-comment">// Use this for initialization</span><br>	void Start <span class="hljs-literal">()</span> &#123;<br>		<br>	&#125;<br>	<br>	<span class="hljs-comment">// Update is called once per frame</span><br>	void Update <span class="hljs-literal">()</span> &#123;<br><br>		Vector3 player_postion = GameObject.<span class="hljs-constructor">FindGameObjectWithTag(<span class="hljs-string">&quot;MainCamera&quot;</span>)</span>.transform.position;<br><br>		<span class="hljs-comment">// 获取X,Y,Z值</span><br> 		<span class="hljs-built_in">float</span> x = player_postion.x;<span class="hljs-comment">//平面x</span><br> 		<span class="hljs-built_in">float</span> z = player_postion.z;<span class="hljs-comment">//平面y</span><br> 		<span class="hljs-comment">// 判断此GameObject的坐标</span><br>		<span class="hljs-keyword">if</span>(<span class="hljs-keyword">in</span><span class="hljs-constructor">Circle(<span class="hljs-params">obj</span>.<span class="hljs-params">transform</span>.<span class="hljs-params">position</span>.<span class="hljs-params">x</span>,<span class="hljs-params">obj</span>.<span class="hljs-params">transform</span>.<span class="hljs-params">position</span>.<span class="hljs-params">z</span>,<span class="hljs-params">player_postion</span>.<span class="hljs-params">x</span>,<span class="hljs-params">player_postion</span>.<span class="hljs-params">z</span>)</span>)<br>				<br>			&#123;obj.<span class="hljs-constructor">SetActive(<span class="hljs-params">true</span>)</span>;&#125;<br>			<br>		<span class="hljs-keyword">else</span><br>			&#123;obj.<span class="hljs-constructor">SetActive(<span class="hljs-params">false</span>)</span>;&#125;<br>	&#125;<br><br>	<span class="hljs-keyword">private</span> <span class="hljs-built_in">bool</span> <span class="hljs-keyword">in</span><span class="hljs-constructor">Circle(<span class="hljs-params">float</span> <span class="hljs-params">pointx</span>, <span class="hljs-params">float</span> <span class="hljs-params">pointy</span>,<span class="hljs-params">float</span> <span class="hljs-params">centerPointx</span>,<span class="hljs-params">float</span> <span class="hljs-params">centerPointy</span>)</span><br>		&#123;<br>			<span class="hljs-built_in">int</span> r = <span class="hljs-number">1</span>;<br>			double v = Mathf.<span class="hljs-constructor">Pow(<span class="hljs-params">centerPointx</span> - <span class="hljs-params">pointx</span>, 2)</span><span class="hljs-operator"> / </span>Mathf.<span class="hljs-constructor">Pow(<span class="hljs-params">r</span>, 2)</span> + Mathf.<span class="hljs-constructor">Pow(<span class="hljs-params">centerPointy</span> - <span class="hljs-params">pointy</span>, 2)</span><span class="hljs-operator"> / </span>Mathf.<span class="hljs-constructor">Pow(<span class="hljs-params">r</span>, 2)</span>;<br>			return v &lt; <span class="hljs-number">1</span>;<br>		&#125;<br><br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<h2 id="unity-获取和设置gameObject（和玩家）的坐标"><a href="#unity-获取和设置gameObject（和玩家）的坐标" class="headerlink" title="unity 获取和设置gameObject（和玩家）的坐标"></a>unity 获取和设置gameObject（和玩家）的坐标</h2><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs reasonml"><span class="hljs-comment">// 获取Player变量指定的对象的三围坐标</span><br>Vector3 player_postion = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Player</span>.</span></span>transform.position;<br><br><span class="hljs-comment">// 获取X,Y,Z值</span><br> <span class="hljs-built_in">float</span> x = player_postion.x;<br> <span class="hljs-built_in">float</span> y = player_postion.y;<br> <span class="hljs-built_in">float</span> z = player_postion.z;<br> <br><span class="hljs-comment">// 设置应用了当前函数的GameObject的坐标</span><br><span class="hljs-comment">// 1.直接赋值</span><br>this.GetComponent&lt;Transform&gt;<span class="hljs-literal">()</span>.position = player_postion;<br><br><span class="hljs-comment">// 2.在某GameObject的基础上加</span><br>this.GetComponent&lt;Transform&gt;<span class="hljs-literal">()</span>.position = <span class="hljs-keyword">new</span> <span class="hljs-constructor">Vector3(<span class="hljs-params">player_postion</span>.<span class="hljs-params">x</span>, <span class="hljs-params">player_postion</span>.<span class="hljs-params">y</span> + 7.79F, <span class="hljs-params">player_postion</span>.<span class="hljs-params">z</span> - 15)</span>;<br><br><span class="hljs-comment">//或者是</span><br>this.GetComponent&lt;Transform&gt;<span class="hljs-literal">()</span>.position = player_postion + <span class="hljs-keyword">new</span> <span class="hljs-constructor">Vector3(0, 7.79F, -15)</span>;<br><br></code></pre></td></tr></table></figure>
+
+<p>（来源网络）  </p>
+<h2 id="判断物体方位和自身方位关系"><a href="#判断物体方位和自身方位关系" class="headerlink" title="判断物体方位和自身方位关系"></a>判断物体方位和自身方位关系</h2><h3 id="前后左右上下"><a href="#前后左右上下" class="headerlink" title="前后左右上下"></a>前后左右上下</h3><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs reasonml"><span class="hljs-number">1.</span>在自身的前后:<br><br>   Vector3.Dot (transform.forward, target.position-transform.position)<br><br>      返回值为正时,目标在自己的前方,反之在后方<br><br><span class="hljs-number">2.</span>在自身的左右:<br><br>   Vector3.<span class="hljs-constructor">Dot(<span class="hljs-params">transform</span>.<span class="hljs-params">right</span>, <span class="hljs-params">target</span>.<span class="hljs-params">position</span>-<span class="hljs-params">transform</span>.<span class="hljs-params">position</span>)</span><br><br>      返回值为正时,目标在自己的右方,反之在左方<br><br><span class="hljs-number">3.</span>在自身上下:<br><br>   Vector3.<span class="hljs-constructor">Dot(<span class="hljs-params">transform</span>.<span class="hljs-params">up</span>, <span class="hljs-params">target</span>.<span class="hljs-params">position</span>-<span class="hljs-params">transform</span>.<span class="hljs-params">position</span>)</span><br><br>      返回值为正时,目标在自己的上方,反之在下方<br>      <br></code></pre></td></tr></table></figure>
+
+<p>————————————————<br>版权声明：本文为CSDN博主「z_mg_」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pfbWdfL2FydGljbGUvZGV0YWlscy83OTM2MjIxNw==">https://blog.csdn.net/z_mg_/article/details/79362217<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="平面圆-椭圆内"><a href="#平面圆-椭圆内" class="headerlink" title="平面圆/椭圆内"></a>平面圆/椭圆内</h3><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs reasonml"><span class="hljs-comment">/// &lt;summary&gt;</span><br> <span class="hljs-comment">/// 判断点在圆内</span><br> <span class="hljs-comment">/// &lt;/summary&gt;</span><br> <span class="hljs-comment">/// &lt;param name=&quot;point&quot;&gt;检测的点&lt;/param&gt;</span><br> <span class="hljs-comment">/// &lt;param name=&quot;centerPoint&quot;&gt;圆心点&lt;/param&gt;</span><br> <span class="hljs-comment">/// &lt;param name=&quot;x&quot;&gt;x的半径长&lt;/param&gt;</span><br> <span class="hljs-comment">/// &lt;param name=&quot;y&quot;&gt;y的半径&lt;/param&gt;</span><br> <span class="hljs-comment">/// &lt;returns&gt;&lt;/returns&gt;</span><br> <span class="hljs-keyword">private</span> <span class="hljs-built_in">bool</span> <span class="hljs-keyword">in</span><span class="hljs-constructor">Oval(Vector2 <span class="hljs-params">point</span>, Vector2 <span class="hljs-params">centerPoint</span>, <span class="hljs-params">float</span> <span class="hljs-params">x</span>, <span class="hljs-params">float</span> <span class="hljs-params">y</span>)</span><br> &#123;<br>     double v = Mathf.<span class="hljs-constructor">Pow(<span class="hljs-params">centerPoint</span>.<span class="hljs-params">x</span> - <span class="hljs-params">point</span>.<span class="hljs-params">x</span>, 2)</span><span class="hljs-operator"> / </span>Mathf.<span class="hljs-constructor">Pow(<span class="hljs-params">x</span>, 2)</span> + Mathf.<span class="hljs-constructor">Pow(<span class="hljs-params">centerPoint</span>.<span class="hljs-params">y</span> - <span class="hljs-params">point</span>.<span class="hljs-params">y</span>, 2)</span><span class="hljs-operator"> / </span>Mathf.<span class="hljs-constructor">Pow(<span class="hljs-params">y</span>, 2)</span>;<br>     return v &lt; <span class="hljs-number">1</span>;<br> &#125;<br> <br></code></pre></td></tr></table></figure>
+
+<p>————————————————<br>版权声明：本文为CSDN博主「我虽浪迹天涯」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyNTQxNzUxL2FydGljbGUvZGV0YWlscy8xMTc4NDczNjE=">https://blog.csdn.net/qq_42541751/article/details/117847361<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="毕设：Hololens使用Unity开发App"><a href="#毕设：Hololens使用Unity开发App" class="headerlink" title="毕设：Hololens使用Unity开发App"></a>毕设：Hololens使用Unity开发App</h1><h2 id="理论部分的逻辑思路："><a href="#理论部分的逻辑思路：" class="headerlink" title="理论部分的逻辑思路："></a>理论部分的逻辑思路：</h2><p>1、描述虚实系统的相关基本概念，总结前人陈述</p>
+<p>2、对现有可交互的人机物虚实系统进行分析（AR头显、AR眼镜）（较浅显）</p>
+<p>3、在这些系统中针对HoloLens的虚实系统操作模式进行详细分析和体验（深入）</p>
+<p>4、根据以上研究分析得出目前的虚实系统存在的缺陷（较浅显）</p>
+<p>5、使用基于装配场景需求调研的界面设计，来展示和探索、验证HoloLens现有交互模式的缺陷及改进方向（这一步作为实验）（深入）</p>
+<p>6、总结和展望未来的虚实系统交互模式，提炼虚实系统操作模式（HoloLens级别）</p>
+<p>（更强调虚实系统操作模式的分析与展望）</p>
+<p>【现在想到的就是将GUI的按钮、平面元素淘汰，替换成同等概念的、非点触式的立体模型（三维的摇杆）、语音（语音几乎没有可以发挥的余地）、手势、动作等，或者组合以上方法产生新的交互命令，结合人在日常生活中的行为进行操作定义，例如拿起一个东西放在眼前的动作，可以定义为查看详细的功能操作，但具体实现目前就只能先展望一下】</p>
+<h2 id="目前的逻辑："><a href="#目前的逻辑：" class="headerlink" title="目前的逻辑："></a>目前的逻辑：</h2><p>1、描述虚实系统的相关基本概念，总结前人陈述</p>
+<p>2、对现有可交互的人机物虚实系统进行分析（AR头显、AR眼镜）（较浅显）</p>
+<p>3、在这些系统中针对HoloLens的虚实系统操作模式进行详细分析和体验（深入）</p>
+<p>4、根据以上研究得出应如何设计该交互模式下的界面设计，提炼界面设计方法理论（HoloLens App级别）（理论雏形）</p>
+<p>5、使用基于装配场景需求调研的界面设计，来验证这一设计方法（这一步作为设计、验证和理论优化）（理论迭代）</p>
+<p>6、总结和展望未来的虚实系统交互模式下的界面设计（HoloLens App级别）（理论成形）</p>
+<p>（更强调界面设计和界面设计方法）</p>
+<p>【这个写的主题就是在类似于Hololens的虚实系统下应该如何进行界面设计，就涉及到距离、三维信息呈现、主动与被动那些，也在界面设计部分有提到是如何使用这些理论进行设计的】</p>
+<h2 id="修改思路："><a href="#修改思路：" class="headerlink" title="修改思路："></a>修改思路：</h2><p>保留界面设计理论部分，加入虚实操作系统理论分析及展望部分。两者也可以适当进行融合。<br>界面设计demo那里用现在做出来的替换之前本应是迭代的那部分。对比在虚实交互系统中GUI较多（做了可用性测试）的结果和GUI较少的结果</p>
+<p>1、描述虚实系统的相关基本概念，总结前人陈述</p>
+<p>2、对现有可交互的人机物虚实系统进行分析（AR头显、AR眼镜）（较浅显）</p>
+<p>3、在这些系统中针对HoloLens的虚实系统操作模式进行详细分析和体验（深入）</p>
+<p>4、根据以上研究得出目前的虚实系统存在的缺陷，同时拓展应如何设计该交互模式下的界面设计，提炼界面设计方法理论（HoloLens App级别）（理论雏形）（较浅显）</p>
+<p>5、使用基于装配场景需求调研的界面设计，展示和探索、验证HoloLens现有交互模式的缺陷及改进方向（作为实验）（深入）（理论迭代），同时拓展提及界面设计方法思路，但不作为重点</p>
+<p>6、总结和展望未来的虚实系统交互模式，提炼虚实系统操作模式（HoloLens级别），略微拓展未来的虚实系统交互模式下的界面设计（HoloLens App级别）（理论成形）</p>
+<h2 id="建立环境"><a href="#建立环境" class="headerlink" title="建立环境"></a>建立环境</h2><p>要是开新工程估计还得看官方文档再来一遍，太麻烦了，导入啊什么的都好（官方最近也提供了辅助程序）但是后面的一通设置给我彻底心态搞没了。  </p>
+<ol>
+<li><p>用3D模板新建项目</p>
+</li>
+<li><p>切换平台至Universal Windows </p>
+</li>
+<li><p>导入TMP（在菜单的Windows标签下）</p>
+</li>
+<li><p>导入MRTK包- Selected package <strong>Mixed Reality Toolkit Foundation 2.5.3</strong> is presented, along with its dependence package <strong>Mixed Reality Toolkit Standard Assets 2.5.3</strong> in the <strong>Import Features</strong> window.-到项目目录</p>
+</li>
+<li><p><strong>Mixed Reality Toolkit</strong> &gt; <strong>Utilities</strong> &gt; <strong>Configure Unity Project</strong> 接受设定</p>
+</li>
+<li><p><strong>！</strong> Set default Spatial Awareness layer: Creates a Unity Layer named Spatial Awareness and configures MRTK to use this layer for the spatial awareness mesh. （ <strong>Project settings</strong> &gt; <strong>Tags and Layers</strong> ）</p>
+</li>
+<li><p><strong>Player</strong> &gt; <strong>XR Settings</strong> and check the <strong>Virual Reality Supported</strong> checkbox then click the <strong>+</strong> icon, and select Windows Mixed Reality to add the Windows Mixed Reality SDK</p>
+</li>
+<li><p>In the MRTK Project Configurator window, use the <strong>Audio spatializer</strong> dropdown to select the <strong>MS HRTF Spatializer</strong>, then click the <strong>Apply</strong> button to apply the setting:</p>
+</li>
+<li><p>In the Project Settings window, select <strong>Player</strong> &gt; <strong>XR Settings</strong>, then use the <strong>Depth Format</strong> dropdown to select <strong>16-bit depth</strong>:</p>
+</li>
+<li><p>In the Project Settings window, select <strong>Player</strong> &gt; <strong>Publishing Settings</strong>, then in the <strong>Package name</strong> field, enter a suitable name, for example, <em>MRTKTutorials-GettingStarted</em>:</p>
+</li>
+<li><p>添加Scenes到bulid, 生成build, 在vs里打开sln文件, Configure Visual Studio for HoloLens by selecting the <strong>Master</strong> or <strong>Release</strong> configuration, the <strong>ARM64 ( Hololens</strong>模拟器设置成<strong>X86</strong>或<strong>X64，实机设置成Release，ARM64)</strong> architecture, and <strong>Device</strong> as target, select <strong>Debug</strong> &gt; <strong>Start Without Debugging</strong></p>
+</li>
+<li><p>部署时报错“找不到SDK“WindowsMobile””，在解决方案资源管理器中找到  [项目]&gt;引用&gt;Windows Mobile（带黄色感叹号）直接右键删掉</p>
+</li>
+</ol>
+<p>加回的方法：<br>编辑工程文件,添加：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">ItemGroup</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">SDKReference</span> <span class="hljs-attr">Include</span>=<span class="hljs-string">&quot;WindowsMobile, Version=10.0.18362.0&quot;</span>/&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">ItemGroup</span>&gt;</span><br><br></code></pre></td></tr></table></figure>
+
+<h1 id="Unity-学习"><a href="#Unity-学习" class="headerlink" title="Unity 学习"></a>Unity 学习</h1><h2 id="NameSpace（报错）"><a href="#NameSpace（报错）" class="headerlink" title="NameSpace（报错）"></a>NameSpace（报错）</h2><p>还没有系统性学习，似乎是script上面那些using…而且和右侧Inspector里挂载的script的name有关。就this.gameObject.GetComponent<Text>().text中的“&lt;&gt;”这种用法。</Text></p>
+<h2 id="碰撞"><a href="#碰撞" class="headerlink" title="碰撞"></a><strong>碰撞</strong></h2><h3 id="刚体和碰撞器"><a href="#刚体和碰撞器" class="headerlink" title="刚体和碰撞器"></a><strong>刚体和碰撞器</strong></h3><p><strong>只有安装刚体组件的物体才能受重力等作用力,只有安装碰撞器组件才能检测碰撞并运行函数,通常情况下需要相互作用的两个物体都要安装碰撞器.</strong></p>
+<p>A受重力与B发生碰撞:</p>
+<p><strong>无效碰撞有:</strong></p>
+<ul>
+<li>A[刚体] x B[刚体]B于y轴锁定</li>
+<li>A[刚体] x B</li>
+</ul>
+<p><strong>搭配函数使用的有:</strong></p>
+<ul>
+<li>A[刚体] x B[碰撞器]</li>
+<li> A[刚体|碰撞器]x B[刚体]</li>
+<li>A[刚体] x B[刚体|碰撞器]B于y轴锁定</li>
+</ul>
+<p><strong>直观有效也可调用函数的有:</strong></p>
+<ul>
+<li> A[刚体|碰撞器]x B[碰撞器]:B不运动.</li>
+<li>A[刚体|碰撞器]x B[刚体|碰撞器]B于y轴锁定:B受碰撞力运动.</li>
+</ul>
+<h3 id="碰撞检测-1"><a href="#碰撞检测-1" class="headerlink" title="碰撞检测"></a><strong>碰撞检测</strong></h3><p>(Script挂在X物体上,即X的碰撞)</p>
+<ul>
+<li>** OnCollisionEnter(Collision collision)**:检测碰撞开始并运行函数内容(只运行一次).</li>
+<li>** OnCollisionExit(Collision collision):**检测碰撞结束并运行函数内容(只运行一次).</li>
+<li>** OnCollisionStay(Collision collision):**检测碰撞并运行函数内容(接触时持续运行,每帧一次).</li>
+</ul>
+<p><strong>取得碰撞信息</strong></p>
+<ul>
+<li>** collision.collider: **获取碰撞物体</li>
+<li>** collision.collider.name:**获取碰撞物体名称</li>
+<li>** collision.collider.tag:**获取碰撞物体标签</li>
+</ul>
+<h2 id="触发"><a href="#触发" class="headerlink" title="触发"></a><strong>触发</strong></h2><p>** 可以穿过的碰撞器:**将碰撞器中的”Is Trigger”勾选.</p>
+<p>** 将触发器隐藏:**移除mesh filter和mesh render</p>
+<h3 id="触发检测"><a href="#触发检测" class="headerlink" title="触发检测"></a><strong>触发检测</strong></h3><p>** OnTriggerEnter(Collider other)**:检测碰撞开始并运行函数内容(只运行一次).</p>
+<p>** OnTriggerExit(Collider other):**检测碰撞结束并运行函数内容(只运行一次).</p>
+<p>** OnTriggerStay(Collider other):**检测碰撞并运行函数内容(接触时持续运行,每帧一次).</p>
+<p>** 取得触发信息**</p>
+<p>(other相当于一个collider)</p>
+<p>** other:**获取触发(游戏内)物体</p>
+<p>** other.name:**获取触发物体(游戏内)名称</p>
+<p>** other.tag:**获取触发物体(游戏内)标签</p>
+<h2 id="鼠标射线"><a href="#鼠标射线" class="headerlink" title="鼠标射线"></a><strong>鼠标射线</strong></h2><h3 id="射线检测"><a href="#射线检测" class="headerlink" title="射线检测"></a><strong>射线检测</strong></h3><p>Input.GetMouseButtonDown(<span class="hint--info hint--rounded hint--top" data-hint="鼠标左键" ontouchstart>0</span>) <strong>//检测鼠标左键按下</strong></p>
+<p>Ray ray = Camera.main.<span class="hint--info hint--rounded hint--top" data-hint="屏幕坐标转换成射线" ontouchstart>ScreenPointToRay</span>(<span class="hint--info hint--rounded hint--top" data-hint="鼠标位置" ontouchstart>Input.mousePosition</span>)<strong>//定义射线</strong></p>
+<p>RaycastHit hit；**//定义射线击中的点，保存碰撞信息**</p>
+<p>If(Physics.Raycast(<span class="hint--info hint--rounded hint--top" data-hint="传递射线" ontouchstart>ray</span>, <span class="hint--info hint--rounded hint--top" data-hint="传递射线碰撞信息" ontouchstart>out hit</span>))<strong>//检测是否发生碰撞</strong></p>
+<p>{</p>
+<p>Print(hit.point);<strong>//输出击中位置</strong></p>
+<p>}</p>
+<h2 id="摄像机跟随"><a href="#摄像机跟随" class="headerlink" title="摄像机跟随"></a><strong>摄像机跟随</strong></h2><ol>
+<li>原理：使摄像机与人物保持一个固定的方位偏差</li>
+</ol>
+<p><strong>确定初始化相机跟随位置</strong></p>
+<ol start="2">
+<li>创建Script，置于Main Camera上</li>
+</ol>
+<p>Public Transform hero；**//定义Transform组件**</p>
+<p>Private Vector3 offset；**//定义偏移数据变量**</p>
+<p><strong>Start下：</strong></p>
+<p>Offset=transform.position-hero.position;<strong>//计算偏移数据</strong></p>
+<p><strong>Update下：</strong></p>
+<p>Transform.position=offset+hero.position；**//更新相机位置**</p>
+<h2 id="粒子系统"><a href="#粒子系统" class="headerlink" title="粒子系统"></a>粒子系统</h2><p><img data-src="https://i.loli.net/2021/06/05/pk9g3zCNfw4od1b.png" alt="粒子系统主操作板"></p>
+<p><img data-src="https://i.loli.net/2021/06/05/hXt6WGcv73yTL1p.png" alt="粒子系统"></p>
+<h2 id="DontDestory"><a href="#DontDestory" class="headerlink" title="DontDestory"></a>DontDestory</h2><p>虽然有很多bug，但是挺方便的。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">DontDestroy</span>: <span class="hljs-title">MonoBehaviour</span> &#123;<br><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-built_in">bool</span> isCloning = <span class="hljs-literal">false</span>;<br><span class="hljs-comment">// Use this for initialization</span><br>  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Awake</span> ()</span> &#123;<br>    DontDestroyOnLoad(<span class="hljs-keyword">this</span>.gameObject);<br>      &#125;<br><br>  <span class="hljs-comment">// Update is called once per frame</span><br><br>  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Update</span> ()</span> &#123;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>可以配一个Manager来具体控制。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">using</span> System.Runtime.CompilerServices;<br><span class="hljs-keyword">using</span> System.Security.AccessControl;<br><span class="hljs-keyword">using</span> System.Runtime.InteropServices;<br><span class="hljs-keyword">using</span> System.Collections;<br><span class="hljs-keyword">using</span> System.Collections.Generic;<br><span class="hljs-keyword">using</span> UnityEngine;<br><span class="hljs-keyword">using</span> UnityEngine.UI;<br><span class="hljs-keyword">using</span> UnityEngine.SceneManagement;<br><span class="hljs-keyword">using</span> System;<br><br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">DestroyManager</span>: <span class="hljs-title">MonoBehaviour</span> &#123;<br><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> DestroyManager _instance;<br><span class="hljs-keyword">private</span> <span class="hljs-built_in">int</span> sceneIndex;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> DestroyManager Instance<br><br>&#123;<br> <span class="hljs-keyword">get</span><br>  &#123;<br>  <span class="hljs-keyword">return</span> _instance; <br>  &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Awake</span>()</span><br>&#123;<br><br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Update</span> ()</span> &#123;<br>  GetScene();<br>    print(sceneIndex);<br>    <span class="hljs-keyword">if</span> (sceneIndex == <span class="hljs-number">0</span> || sceneIndex == <span class="hljs-number">1</span> || sceneIndex == <span class="hljs-number">6</span>)<br>  &#123;<br>    Destroy(<span class="hljs-keyword">this</span>.gameObject); <br>    <span class="hljs-keyword">return</span>;<br>  &#125;<br>  &#125;<br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">GetScene</span>()</span>&#123;<br><br>sceneIndex = SceneManager.GetActiveScene().buildIndex;<br>&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="添加脚本-脚本系统"><a href="#添加脚本-脚本系统" class="headerlink" title="添加脚本/脚本系统"></a>添加脚本/脚本系统</h2><p>Script以Hololens为例，C#，挂载到希望交互的物体上。</p>
+<ol>
+<li>   “grabbable” Near Interaction Grabbable </li>
+<li>   “manipulation” Manipulation Handler（de）/Object Manipulator</li>
+<li>   “bounding” Bounding Box（de）/Bounds Control</li>
+<li>   Interactable 可交互组件（focus）</li>
+</ol>
+<p>挂在空物体的情况就是该物体一出现就开始运行Script，和unity monobehaviour中的场景的Start()和Awake()类似。</p>
+<h2 id="Script编写"><a href="#Script编写" class="headerlink" title="Script编写"></a>Script编写</h2><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>包括部分Hololens的引用</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs C#"><br><span class="hljs-keyword">using</span> TMPro;<br><span class="hljs-keyword">using</span> UnityEngine;<br><span class="hljs-keyword">using</span> UnityEngine.UI;<br><span class="hljs-keyword">using</span> UnityEngine.SceneManagement;<br><br><span class="hljs-keyword">using</span> System;<br><span class="hljs-keyword">using</span> System.Runtime.CompilerServices;<br><span class="hljs-keyword">using</span> System.Security.AccessControl;<br><span class="hljs-keyword">using</span> System.Runtime.InteropServices;<br><span class="hljs-keyword">using</span> System.Collections;<br><span class="hljs-keyword">using</span> System.Collections.Generic;<br><br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Input;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Utilities;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Utilities.Solvers;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.UI;<br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Experimental.Dialog;<span class="hljs-comment">//已失效</span><br><span class="hljs-keyword">using</span> Microsoft.MixedReality.Toolkit.Diagnostics;<br><br></code></pre></td></tr></table></figure>
+
+<h3 id="类名（文件名）"><a href="#类名（文件名）" class="headerlink" title="类名（文件名）"></a>类名（文件名）</h3><pre><code>public class classname: MonoBehaviour &#123;
+</code></pre>
+<h3 id="变量定义"><a href="#变量定义" class="headerlink" title="变量定义"></a>变量定义</h3><p>public：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs angelscript"><span class="hljs-keyword">public</span> <span class="hljs-built_in">float</span> countTime = <span class="hljs-number">0f</span>;<br><span class="hljs-keyword">public</span> <span class="hljs-built_in">float</span> setTime = <span class="hljs-number">0f</span>;<br><span class="hljs-keyword">public</span> GameObject object1;<span class="hljs-comment">//可以在Unity界面中指定一个物体</span><br></code></pre></td></tr></table></figure>
+<p>会显示在Unity控制面板中，可以查看以及自定义更改；</p>
+<p>private：</p>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs abnf">private Vector3 arrow_postion<span class="hljs-comment">;</span><br></code></pre></td></tr></table></figure>
+
+<p>不会显示在Unity控制面板中；</p>
+<h4 id="Unity提供的变量类型"><a href="#Unity提供的变量类型" class="headerlink" title="Unity提供的变量类型"></a>Unity提供的变量类型</h4><p>遇到的比较特殊的就是<code>Vector3</code>、<code>GameObject</code>其他都比较正常，，，</p>
+<h4 id="Unity提供的变量名"><a href="#Unity提供的变量名" class="headerlink" title="Unity提供的变量名"></a>Unity提供的变量名</h4><p><code>Time.deltaTime</code>是激活后的运行时间。</p>
+<p><code>GameObject.FindGameObjectWithTag(&quot;Arrow1&quot;).transform.position;</code>是找到tag为Arrow1的物体的位置属性数据。</p>
+<p><code>this.GetComponent&lt;Transform&gt;().position</code>是挂载该脚本的物体的位置属性。</p>
+<h3 id="MonoBehaviour"><a href="#MonoBehaviour" class="headerlink" title="MonoBehaviour"></a>MonoBehaviour</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-comment">// Use this for initialization</span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Start</span> ()</span> &#123;<br><br>&#125;<br><br><span class="hljs-comment">// Update is called once per frame</span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Update</span> ()</span> &#123;<br><br>	 CountTime();<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="变量声明"><a href="#变量声明" class="headerlink" title="变量声明"></a>变量声明</h3><p>例如<code>new Vector3(arrow_postion.x, arrow_postion.y + 0.08F, arrow_postion.z);</code>可以在不用提前定义变量的情况下使用…吧？  <br>其实new这个我一直没太搞懂。  </p>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">CountTime</span>()</span> <br>    &#123;<br>        countTime += Time.deltaTime;<br>        <span class="hljs-keyword">if</span>(countTime &gt; setTime)<span class="hljs-comment">//秒</span><br>        &#123;<br>            SceneManager.LoadScene(<span class="hljs-number">6</span>);<br>        &#125;<br>    &#125;<br>	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">ClickTest</span>() <span class="hljs-comment">//测试</span></span><br>	&#123;<br>		print(<span class="hljs-string">&quot;Ready to go!&quot;</span>);<br>	&#125;<br>&#125;<br><span class="hljs-comment">//可用于在Unity界面中呼出，也可直接放在Start或者Update中</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="Unity提供的函数"><a href="#Unity提供的函数" class="headerlink" title="Unity提供的函数"></a>Unity提供的函数</h4><p><code>print(&quot;Ready to go!&quot;);</code>可以在console打印出文字。</p>
+<p><code>SceneManager.LoadScene(6);</code>可以跳转场景。</p>
+<p><code>DontDestroyOnLoad(this.gameObject);</code>跳转场景时不销毁挂载这个script的物体。</p>
+<p><code>object1.SetActive(true);</code>显示隐藏物体。</p>
+<p><code>obj.SetActive(!obj.activeSelf);</code>物体隐藏则显示，显示则隐藏。通常需要挂在另一个已激活/显示的物体上，因为隐藏的物体无法自启。</p>
+<h2 id="某Object挂载脚本时，获取Player信息、指定Object、Tag-Object与获取本Object"><a href="#某Object挂载脚本时，获取Player信息、指定Object、Tag-Object与获取本Object" class="headerlink" title="某Object挂载脚本时，获取Player信息、指定Object、Tag-Object与获取本Object"></a>某Object挂载脚本时，获取Player信息、指定Object、Tag-Object与获取本Object</h2><p>Player：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs awk">Vector3 player_postion = Player.transform.position;<span class="hljs-regexp">//</span>获取Player<br>player_postion.x<span class="hljs-regexp">//</span>获取Player相关信息		<br><br></code></pre></td></tr></table></figure>
+
+<p>指定Object：</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-keyword">public</span> GameObject obj;<span class="hljs-comment">//界面上现场指定一个Object，代码内命名为obj</span><br>obj.transform.position.x<span class="hljs-comment">//获取obj相关信息	</span><br>obj.<span class="hljs-built_in">SetActive</span>(<span class="hljs-literal">true</span>);<span class="hljs-comment">//obj执行函数命令</span><br><br></code></pre></td></tr></table></figure>
+<p>获取本Object：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">this</span>.GetComponent&lt;Transform&gt;().position.x<span class="hljs-comment">//获取本Object相关信息</span><br><span class="hljs-keyword">this</span>.GetComponent.SetActive(<span class="hljs-literal">true</span>);<span class="hljs-comment">//本Object执行函数命令</span><br><br></code></pre></td></tr></table></figure>
+
+<p>获取tag-Object：<br>直接调用。</p>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs reasonml">GameObject.<span class="hljs-constructor">FindGameObjectWithTag(<span class="hljs-string">&quot;Arrow1&quot;</span>)</span>.transform.position<span class="hljs-comment">//获取Tag-Object相关信息</span><br>GameObject.<span class="hljs-constructor">FindGameObjectWithTag(<span class="hljs-string">&quot;Arrow1&quot;</span>)</span>.<span class="hljs-constructor">SetActive(<span class="hljs-params">true</span>)</span>;<span class="hljs-comment">//Tag-Object执行函数命令</span><br><br></code></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/616b.html">【Unity+Python】学习笔记</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2021年03月13日 - 15:00</p>
+ <p><span>最后更新:</span>2023年03月08日 - 17:07</p>
+ <p><span>原始链接:</span><a href="/p/616b.html" title="【Unity+Python】学习笔记">https://mebilychen.github.io/p/616b.html</a>
+    
+ </p>
+ <p><span>许可协议:</span>除非文章内另行声明，遵守 cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script data-pjax> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Unity3D/" rel="tag"><i class="fa fa-tag"></i> Unity3D</a>
+              <a href="/tags/Hololens/" rel="tag"><i class="fa fa-tag"></i> Hololens</a>
+              <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+              <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i> C#</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/9527.html" rel="prev" title="【脑洞合集】无Tag的小脑洞们，即便有Tag">
+      <i class="fa fa-chevron-left"></i> 【脑洞合集】无Tag的小脑洞们，即便有Tag
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/a2e8.html" rel="next" title="记一下预加载动画怎么改...有点复杂">
+      记一下预加载动画怎么改...有点复杂 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%A4%E4%BA%92%E7%9B%B8%E5%85%B3"><span class="nav-text">交互相关</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Python"><span class="nav-text">Python</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%85%BE%E8%AE%AF%E4%BC%9A%E8%AE%AE%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95"><span class="nav-text">腾讯会议自动登录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GPT-2"><span class="nav-text">GPT-2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MadLibs"><span class="nav-text">MadLibs</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Unity"><span class="nav-text">Unity</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A0%94%E7%A9%B6%E6%96%B9%E5%90%91"><span class="nav-text">研究方向</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Unity-2D%EF%BC%88%E6%9C%89%E7%9A%843D%E4%B9%9F%E9%80%82%E7%94%A8%EF%BC%89"><span class="nav-text">Unity 2D（有的3D也适用）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AA%97%E5%8F%A3%E5%8F%AF%E8%B0%83%E4%B8%94%E5%8F%AF%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C"><span class="nav-text">窗口可调且可后台运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BA%E6%95%B0"><span class="nav-text">生成随机数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9F%B3%E9%A2%91"><span class="nav-text">音频</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B0%83%E7%94%A8%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4"><span class="nav-text">调用系统时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%A8%E8%84%9A%E6%9C%AC%E8%B0%83%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-text">跨脚本调用方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%A8%E8%84%9A%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%8F%82%E6%95%B0-%E8%8E%B7%E5%8F%96%E5%8F%82%E6%95%B0"><span class="nav-text">跨脚本传输参数+获取参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BB%B6%E6%97%B6%E8%A7%A6%E5%8F%91%E5%87%BD%E6%95%B0"><span class="nav-text">延时触发函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B"><span class="nav-text">碰撞检测</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%EF%BC%9A%E6%99%BA%E8%83%BD%E5%B7%A5%E5%8E%82"><span class="nav-text">项目：智能工厂</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%A9%E4%BD%93%E5%88%97%E8%A1%A8"><span class="nav-text">物体列表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%A9%E4%BD%93%E6%95%B0%E7%BB%84%EF%BC%88GameObject-list%EF%BC%89"><span class="nav-text">物体数组（GameObject[] list）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#int-%E8%BD%AC-String%EF%BC%88%E6%98%BE%E7%A4%BA%E7%82%B9%E5%87%BB%E6%AC%A1%E6%95%B0%EF%BC%89"><span class="nav-text">int 转 String（显示点击次数）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unity-%E8%87%AA%E8%A1%8C%E7%94%9F%E6%88%90%E7%89%A9%E4%BD%93"><span class="nav-text">Unity 自行生成物体</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B%E5%8C%96-amp-%E9%94%80%E6%AF%81"><span class="nav-text">实例化 &amp; 销毁</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B%E5%8C%96%EF%BC%88Clone%EF%BC%89"><span class="nav-text">实例化（Clone）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%94%80%E6%AF%81"><span class="nav-text">销毁</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B%E5%B9%B6%E9%94%80%E6%AF%81"><span class="nav-text">碰撞检测并销毁</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%80%E6%AF%81-1"><span class="nav-text">销毁</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E7%89%A9%E4%BD%93%E6%98%AF%E5%90%A6%E6%98%BE%E7%A4%BA-%E9%94%80%E6%AF%81"><span class="nav-text">判断物体是否显示&#x2F;销毁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE-%E8%8E%B7%E5%8F%96%E6%B8%B8%E6%88%8F%E5%AF%B9%E8%B1%A1-%E5%AF%B9%E8%B1%A1%E7%BB%84"><span class="nav-text">查找&#x2F;获取游戏对象+对象组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%B8%E6%88%8F%E5%AF%B9%E8%B1%A1%EF%BC%88%E6%95%B0%EF%BC%89%E7%BB%84"><span class="nav-text">游戏对象（数）组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%92%8C%E5%BE%AA%E7%8E%AF"><span class="nav-text">添加和循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E6%9F%A5Tag%E7%89%A9%E4%BD%93%E7%BB%84%E6%98%AF%E5%90%A6%E5%85%A8%E9%83%A8%E9%9A%90%E8%97%8F"><span class="nav-text">检查Tag物体组是否全部隐藏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-GameObject-Find-%E3%80%81Transform-Find%E5%89%8D%E7%BD%AE%E6%9D%A1%E4%BB%B6"><span class="nav-text">1.GameObject.Find()、Transform.Find前置条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%9B%B8%E5%85%B3API"><span class="nav-text">2.相关API</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-GameObject-Find"><span class="nav-text">2.1 GameObject.Find</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-Transform-Find"><span class="nav-text">2.2 Transform.Find</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-%E5%85%B6%E4%BB%96%E6%9F%A5%E6%89%BE"><span class="nav-text">2.3 其他查找</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%AE%9E%E9%99%85%E6%B5%8B%E8%AF%95"><span class="nav-text">3 实际测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%8D%B3%E4%BD%BF%E9%9A%90%E8%97%8Froot%E8%8A%82%E7%82%B9gameObject%E4%B9%9F%E8%83%BD%E8%BF%9B%E8%A1%8C%E6%9F%A5%E6%89%BE%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-text">4 即使隐藏root节点gameObject也能进行查找的方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E4%BB%A3%E7%A0%81%E6%8E%A7%E5%88%B6"><span class="nav-text">文本代码控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Follow"><span class="nav-text">Follow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unity-%E5%9F%BA%E4%BA%8E%E5%9D%90%E6%A0%87%E6%98%BE%E7%A4%BA%E7%89%A9%E4%BD%93"><span class="nav-text">Unity 基于坐标显示物体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#unity-%E8%8E%B7%E5%8F%96%E5%92%8C%E8%AE%BE%E7%BD%AEgameObject%EF%BC%88%E5%92%8C%E7%8E%A9%E5%AE%B6%EF%BC%89%E7%9A%84%E5%9D%90%E6%A0%87"><span class="nav-text">unity 获取和设置gameObject（和玩家）的坐标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E7%89%A9%E4%BD%93%E6%96%B9%E4%BD%8D%E5%92%8C%E8%87%AA%E8%BA%AB%E6%96%B9%E4%BD%8D%E5%85%B3%E7%B3%BB"><span class="nav-text">判断物体方位和自身方位关系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E5%90%8E%E5%B7%A6%E5%8F%B3%E4%B8%8A%E4%B8%8B"><span class="nav-text">前后左右上下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%B3%E9%9D%A2%E5%9C%86-%E6%A4%AD%E5%9C%86%E5%86%85"><span class="nav-text">平面圆&#x2F;椭圆内</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AF%95%E8%AE%BE%EF%BC%9AHololens%E4%BD%BF%E7%94%A8Unity%E5%BC%80%E5%8F%91App"><span class="nav-text">毕设：Hololens使用Unity开发App</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%90%86%E8%AE%BA%E9%83%A8%E5%88%86%E7%9A%84%E9%80%BB%E8%BE%91%E6%80%9D%E8%B7%AF%EF%BC%9A"><span class="nav-text">理论部分的逻辑思路：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%AE%E5%89%8D%E7%9A%84%E9%80%BB%E8%BE%91%EF%BC%9A"><span class="nav-text">目前的逻辑：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E6%80%9D%E8%B7%AF%EF%BC%9A"><span class="nav-text">修改思路：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8B%E7%8E%AF%E5%A2%83"><span class="nav-text">建立环境</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Unity-%E5%AD%A6%E4%B9%A0"><span class="nav-text">Unity 学习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#NameSpace%EF%BC%88%E6%8A%A5%E9%94%99%EF%BC%89"><span class="nav-text">NameSpace（报错）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A2%B0%E6%92%9E"><span class="nav-text">碰撞</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9A%E4%BD%93%E5%92%8C%E7%A2%B0%E6%92%9E%E5%99%A8"><span class="nav-text">刚体和碰撞器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B-1"><span class="nav-text">碰撞检测</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A6%E5%8F%91"><span class="nav-text">触发</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A6%E5%8F%91%E6%A3%80%E6%B5%8B"><span class="nav-text">触发检测</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%BC%A0%E6%A0%87%E5%B0%84%E7%BA%BF"><span class="nav-text">鼠标射线</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%84%E7%BA%BF%E6%A3%80%E6%B5%8B"><span class="nav-text">射线检测</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%91%84%E5%83%8F%E6%9C%BA%E8%B7%9F%E9%9A%8F"><span class="nav-text">摄像机跟随</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B2%92%E5%AD%90%E7%B3%BB%E7%BB%9F"><span class="nav-text">粒子系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DontDestory"><span class="nav-text">DontDestory</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E8%84%9A%E6%9C%AC-%E8%84%9A%E6%9C%AC%E7%B3%BB%E7%BB%9F"><span class="nav-text">添加脚本&#x2F;脚本系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Script%E7%BC%96%E5%86%99"><span class="nav-text">Script编写</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%95%E7%94%A8"><span class="nav-text">引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E5%90%8D%EF%BC%88%E6%96%87%E4%BB%B6%E5%90%8D%EF%BC%89"><span class="nav-text">类名（文件名）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E5%AE%9A%E4%B9%89"><span class="nav-text">变量定义</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Unity%E6%8F%90%E4%BE%9B%E7%9A%84%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B"><span class="nav-text">Unity提供的变量类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Unity%E6%8F%90%E4%BE%9B%E7%9A%84%E5%8F%98%E9%87%8F%E5%90%8D"><span class="nav-text">Unity提供的变量名</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MonoBehaviour"><span class="nav-text">MonoBehaviour</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E"><span class="nav-text">变量声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Unity%E6%8F%90%E4%BE%9B%E7%9A%84%E5%87%BD%E6%95%B0"><span class="nav-text">Unity提供的函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%90Object%E6%8C%82%E8%BD%BD%E8%84%9A%E6%9C%AC%E6%97%B6%EF%BC%8C%E8%8E%B7%E5%8F%96Player%E4%BF%A1%E6%81%AF%E3%80%81%E6%8C%87%E5%AE%9AObject%E3%80%81Tag-Object%E4%B8%8E%E8%8E%B7%E5%8F%96%E6%9C%ACObject"><span class="nav-text">某Object挂载脚本时，获取Player信息、指定Object、Tag-Object与获取本Object</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar3.jpg">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">169</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">177</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjEwMTM3MTIxMjdAcXEuY29t" title="E-Mail → mailto:1013712127@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9tZWJpbHkxMzE0" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      猜猜这是什么鬼地方？
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9tZWJpbHljaGVuLmxvZnRlci5jb20v" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;">LOFTER</span>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/p/NISP.html" title="p&#x2F;NISP.html">【音频可视化】Wallpaper Engine</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ab228.html" title="p&#x2F;ab228.html">【硬读文章】我与地坛</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/1547.html" title="p&#x2F;1547.html">【AI拼贴画】一些灵感和其他见证历史</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/9527b.html" title="p&#x2F;9527b.html">【脑洞合集】无Tag的小脑洞们，Encore</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/a6ba.html" title="p&#x2F;a6ba.html">白宫+高塔地图</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ysyg0.html" title="p&#x2F;ysyg0.html">（起稿）守望者@Memo</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ee39.html" title="p&#x2F;ee39.html">王国边境@Memo</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/p/248a.html" title="p&#x2F;248a.html">X个新点子，关于跑团和跑团的</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/679f.html" title="p&#x2F;679f.html">还希望站子拥有的一些优化</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/0.html" title="p&#x2F;0.html">【备忘】</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">3m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">45:39</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "站子已虔诚祈祷 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+     //'.site-meta',
+    //'.site-nav',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+<script language="JavaScript">
+var password="";
+password=prompt('Password (Birthday)','');
+if (password != '20180909')   
+{alert("。");    
+window.opener=null;
+window.location.href = "about:blank"; 
+window.close();}  // 密码不正确就关闭//-->
+</script>
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>

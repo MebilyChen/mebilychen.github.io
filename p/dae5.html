@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="这里是HNTV，会邀请圣巢的各位大佬来台上玩耍~">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【文集】HNTV综艺娱乐">
+<meta property="og:url" content="https://mebilychen.github.io/p/dae5.html">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:description" content="这里是HNTV，会邀请圣巢的各位大佬来台上玩耍~">
+<meta property="og:locale">
+<meta property="article:published_time" content="2021-05-26T10:03:00.000Z">
+<meta property="article:modified_time" content="2023-01-29T08:57:16.777Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="白王">
+<meta property="article:tag" content="冰火组&#x2F;GrimmPale">
+<meta property="article:tag" content="辐光">
+<meta property="article:tag" content="沙雕">
+<meta property="article:tag" content="前辈">
+<meta property="article:tag" content="卢瑞恩">
+<meta property="article:tag" content="白后">
+<meta property="article:tag" content="蜂">
+<meta property="article:tag" content="赫拉">
+<meta property="article:tag" content="综艺风">
+<meta property="article:tag" content="团长">
+<meta property="article:tag" content="HNTV">
+<meta property="article:tag" content="游戏实况">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://mebilychen.github.io/p/dae5.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : '中文'
+  };
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    
+      if (NexT.utils.hasMobileUA()) return;
+    
+    let time, hidden, visible, title = document.title;
+    let favicon = document.querySelector('link[rel="icon"]');
+    
+      hidden = ["盯————","*探*","?","......","*观察*"];
+      visible = ["*偏转视线*","*缩*","*强装镇定*","！","*低头*"];
+    
+    let random = t => t[Math.floor(Math.random() * t.length)];
+    const change = () => {
+      if (document.hidden) {
+        favicon.setAttribute('href', '/images/favicon-32x32-king-black.png');
+        
+          document.title = random(hidden);
+        
+        clearTimeout(time);
+      } else {
+        favicon.setAttribute('href', '/images/favicon-32x32-brand-black.png');
+        
+          document.title = random(visible);
+        
+        time = setTimeout(() => {
+          document.title = '碳素的小作坊';
+        }, 1000);
+      }
+    }
+    document.addEventListener('visibilitychange', change, false);
+  });
+</script>
+
+  <title>【文集】HNTV综艺娱乐 | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<style type="text/css">
+.spoiler {
+  display: inline-flex;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;调谐中...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">177</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">169</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-image fa-fw"></i>画廊</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/random.html" rel="section"><i class="fa fa-question fa-fw"></i>抽</a>
+
+  </li>
+        <li class="menu-item menu-item-lang">
+
+    <a href="/en/" rel="section"><i class="fa fa-globe fa-fw"></i>->English</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-17081-597255-1305127431.cos-website.ap-hongkong.myqcloud.com' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/dae5.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【文集】HNTV综艺娱乐
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-05-26 18:03:00" itemprop="dateCreated datePublished" datetime="2021-05-26T18:03:00+08:00">2021-05-26</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2023-01-29 16:57:16" itemprop="dateModified" datetime="2023-01-29T16:57:16+08:00">2023-01-29 16:57:16</time>
+                </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/" itemprop="url" rel="index"><span itemprop="name">王文</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E6%96%87/%E7%8E%8B%E6%96%87AU%E7%82%B9%E5%AD%90/" itemprop="url" rel="index"><span itemprop="name">王文AU点子</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>5 分钟</span>
+            </span>
+            <div class="post-description"><center>这里是HNTV，会邀请圣巢的各位大佬来台上玩耍~</div>
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E5%86%B0%E7%81%AB%E7%BB%84-GrimmPale/" rel="tag"><i class="fa fa-tag"></i> 冰火组/GrimmPale</a>
+              <a href="/tags/%E8%BE%90%E5%85%89/" rel="tag"><i class="fa fa-tag"></i> 辐光</a>
+              <a href="/tags/%E6%B2%99%E9%9B%95/" rel="tag"><i class="fa fa-tag"></i> 沙雕</a>
+              <a href="/tags/%E5%89%8D%E8%BE%88/" rel="tag"><i class="fa fa-tag"></i> 前辈</a>
+              <a href="/tags/%E5%8D%A2%E7%91%9E%E6%81%A9/" rel="tag"><i class="fa fa-tag"></i> 卢瑞恩</a>
+              <a href="/tags/%E7%99%BD%E5%90%8E/" rel="tag"><i class="fa fa-tag"></i> 白后</a>
+              <a href="/tags/%E8%9C%82/" rel="tag"><i class="fa fa-tag"></i> 蜂</a>
+              <a href="/tags/%E8%B5%AB%E6%8B%89/" rel="tag"><i class="fa fa-tag"></i> 赫拉</a>
+              <a href="/tags/%E7%BB%BC%E8%89%BA%E9%A3%8E/" rel="tag"><i class="fa fa-tag"></i> 综艺风</a>
+              <a href="/tags/%E5%9B%A2%E9%95%BF/" rel="tag"><i class="fa fa-tag"></i> 团长</a>
+              <a href="/tags/HNTV/" rel="tag"><i class="fa fa-tag"></i> HNTV</a>
+              <a href="/tags/%E6%B8%B8%E6%88%8F%E5%AE%9E%E5%86%B5/" rel="tag"><i class="fa fa-tag"></i> 游戏实况</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="某次访谈（feat-辐光）"><a href="#某次访谈（feat-辐光）" class="headerlink" title="某次访谈（feat 辐光）"></a>某次访谈（feat 辐光）</h1><p>op: but seriously, what would you do if there‘s a pandemic happening in Hallownest？<br>King: oh, I guess I’ll be crying and crying and maybe get some f@@king all over the place and then I sat there hoping she will go away. <em>sip</em><br>Radiance: Just chill dude don’t cry and panic I promise I’ll go away.<br>King: I don’t know man, I messed up everything. It‘s up to you guys now.<br>op: Actually you just need to kindly ask your child whether they wants to become the sacrifice!<br>King: Okay.<br>Radiance: I think he prefers the sit-here-and-cry approach.<br>King: Damn.<br>op: You ever considered sacrificing yourself?<br>King: Only if you ask me kindly and I will consider that.<br>op: I am asking you kindly?<br>King: No.<br>op: Then why do you think they are willing to pay the price?<br>King: Because I built them that way?<br>op: They are your children, not some tools!<br>King: Okay.<br>op: What do you mean “Okay”?<br>Radiance: He means everyone is accusing him regarding that matter and he’s still not sure about that.<br>King: I never intend to buy anything.<br>Radiance: Yeah and he thought he got me good back there.<br>op: Oh you gonna pull that she-did-it-first card huh.<br>King: No it’s just a worth-mentioning fact.<br>op: Since you mentioned it, can you justify the cause for your…rebellion against the Radiance?<br>King: No.<br>op: Alright. It’s meaningless then.<br>King: Okay.<br>op: Stop saying Okay.<br>King: Whatever.<br>Radiance: I see exactly where this is going.<br>op: let’s go back to why you sacrificed your child like every villain did shall we?<br>King: Whatever.<br>op: If I were you, I will abort the plan and, if must, sacrifice myself as soon as I learned they are not just a tool.<br>King: Cool. What about your kingless kingdom?<br>op: I’ll let others do it.<br>King: Others.<br>op: Like Lurien or some.<br>King:<br>Radiance: Oh no.<br>King: You barely even know him and yet you speak like you have known him for all eternity.<br>op: I didn’t. Why did you interpret it like that?<br>King: I am the only being who is qualified to crown him as a king.<br>op: Okay.<br>Radiance: This conversation could have gone more logical if you answered Hornet.<br>King: She’s too young and lacked proper instruction.<br>Radiance: Just saying.<br>op: Or maybe there would be other methods to create a vessel, or some other way to banish Radiance.<br>King: What the f@@k.<br>Radiance: Chill man, we’ve all been through this.<br>King: What made you think I hadn’t tried my best?<br>op: No I think you did tried your best to secure your throne, but not that good when it came to protect the kingdom.<br>King: Great, who doesn’t love ruling over those mindless crawlers.<br>op: What?<br>King: Yes.<br>op: Oh right, I nearly forgot, you fled!<br>King: I retreated.<br>op: No you fled with your retainers.<br>Radiance: Stop.<br>King: I retreated and saved them.<br>op: You fled.<br>King: retreated.<br>op: Erased.<br>King: I erased myself.<br>op: No.<br>King: Yes.<br>op: Everyone says you fled or had been erased.<br>King: They’re wrong.<br>op: Okay.<br>Radiance: Told you.<br>op: Well it’s been a fruitful day everybody.</p>
+<h1 id="Odd-One-Out"><a href="#Odd-One-Out" class="headerlink" title="Odd One Out"></a>Odd One Out</h1><p>新点子，从jubilee（？）的“我们找来了七个xxx，其中一个是卧底”衍生<br>本来yy的是一堆空洞玩家中混迹一个王学家，然后为了获得胜利王学家只能违心地骂陛下这样<br>单纯就是想看看大家会怎么演出，我本人保证不掺和（搓手）</p>
+<p>害，其实就是综艺娱乐节目嘛</p>
+<p>咳咳，各位，想定一个“喜欢陛下”的卧底，但是考虑到大家大部分都喜欢陛下，滚滚你等下，所以想着要不要做成两派并且垂帘的形式</p>
+<p>来来来 我希望这次能找上团长 滚滚 陛下 小卢 白后 赫拉 前辈 小姐姐 一共八个人啊呸虫</p>
+<p>喜欢陛下的当然就是陛下 小卢 白后 前辈 剩下的就是中立或者不喜欢陛下的 正好五五开</p>
+<p>各位，规则是这样的：</p>
+<ol>
+<li>所有虫待在一个单独的房间里，通过对讲机与大家对话，声音都是经过处理的，听不出特征，除此之外，和圆桌讨论没有什么区别</li>
+<li>各位需要找到自己的队伍，并且不让敌方队伍发现自己所属的队伍或自己的真实身份</li>
+<li>用陛下举例，如果不喜欢陛下那一方的虫意识到这个说话人是喜欢陛下的，甚至发现了他就是陛下，那么可以将他票出</li>
+<li>最后只剩哪个阵营的虫子，哪个阵营就获得胜利</li>
+<li>主题是“喜欢陛下”vs“不喜欢陛下”</li>
+</ol>
+<p>害，不如这样，同时进行两组游戏：</p>
+<ol>
+<li>所有虫待在一个单独的房间里，通过对讲机与大家对话。声音都是经过处理的，听不出特征，除此之外，和圆桌讨论没有什么区别</li>
+<li>八个人分为两组，一组包括喜欢陛下的三只虫+不喜欢陛下的一只虫，一组包括不喜欢陛下的三只虫+喜欢陛下的一只虫</li>
+<li>用陛下举例，如果不喜欢陛下那一足的虫意识到这个说话人是喜欢陛下的，甚至发现了他就是陛下，那么可以将他票出</li>
+<li>最后要是挑出了mole，三人就获得胜利，否则就是mole的胜利，而且大家要猜这只虫是谁，不过猜错了不影响胜负</li>
+<li>前辈虽然说不了话但是有黑科技</li>
+<li>各位并不知道是哪八只虫参加了游戏，也不知道分组情况，有可能是路人甲乙丙呢</li>
+</ol>
+<p>来抽个签吧，先是序号：<br>陛下：3<br>白后：1<br>小姐姐：8<br>滚滚：7<br>团长：4<br>赫拉：6<br>小卢：5<br>前辈：2</p>
+<p>然后是分组：前辈换团长</p>
+<p>粉丝组：白后 陛下 团长 小卢+3路人<br>黑粉组：前辈 赫拉 滚滚 小姐姐+3路人</p>
+<p>其实我挺希望陛下/卢瑞恩去“黑粉”那组，滚滚/赫拉去“粉”那组的……赫拉完全可以跳白后<br>回头可以圆个梦</p>
+<p>Demo：<br>（其实规则没有完全制定好…到底要不要允许大家讨论身份，要不要加路人）</p>
+<p>粉丝组开始：<br>1分钟速投：<br>（1）白后：我认为我们都同意沃姆有多么可爱，怎么会有虫子不喜欢他？<br>（3）团长：…嗯…嗯——<br>幕后团长：1号一说话我就一直憋着笑，你们这个变声太搞了<br>（5）：可…可爱…<br>（6）：我觉得陛下很帅气啊！超级帅气——<br>（7）：陛下又可爱又帅气<br>（4）卢瑞恩：附议<br>（3）团长：咳咳，附议<br>（1）白后：这…完全没有进展…时间有限，我们需要快速做决定——<br>（3）团长：2号怎么不说话？<br>幕后团长：我需要先排除我能扮演的角色，就要先说一些无特征的话…不过我其实没有那么讨厌他啦，说的话也不是很违心的～<br>（1）白后：2号？<br>（2）陛下：……<br>（1）白后：2号。<br>（6）：2号不说话我们就投你喽<br>（2）陛下：我没什么好说的。<br>幕后白后：我当时一听就在想是不是他，但是哪个节目组会在这样的问题中请本人来啊？<br>（1）白后：那我们有理由怀疑你就是卧底？<br>（5）：那我们现在就可以投票了吗？<br>（4）卢瑞恩：等下，无论如何，还请各位不要消极竞赛……<br>幕后小卢：陛下的气场在哪里都能感受到的<br>（4）卢瑞恩：2号请问您收集了几套茶具？<br>（2）陛下：…52套。<br>（5）：……<br>（6）：……<br>（7）：我怎么感觉4号认识2号？<br>幕后小卢：是陛下了<br>幕后白后：如果那是沃姆的话，另一位估计是卢瑞恩。这两个小家伙总喜欢聚在一起喝茶<br>（4）卢瑞恩：2号是陛下<br>（5）：<em>尖叫</em><br>（6）： 国王陛下在这里啊啊啊<br>（7）：<em>尖叫</em><br>（1）白后：……那你是守望者？<br>（4）卢瑞恩：是的。<br>幕后白后：你们节目组真是恶趣味<br>（1）白后：我是王后。</p>
+<p>幕后团长：然后他们果然开始打公众人物牌了。这是决定我角色的关键一步，装成平民是最保险的，但是要是能跳成公众人物比如五骑士之一，基本上我就赢了…所以我准备赌一把<br>幕后陛下：<em>叹气</em></p>
+<p>（坑）</p>
+<h1 id="Wyrmmie，Zoom！（冰火组的实况x后期）"><a href="#Wyrmmie，Zoom！（冰火组的实况x后期）" class="headerlink" title="Wyrmmie，Zoom！（冰火组的实况x后期）"></a>Wyrmmie，Zoom！（冰火组的实况x后期）</h1><div class="note danger"><p style="text-align:center; color:#D9534F"> ♕太OOC了，本文已死♕ </p></div>
+
+<p>2020.11.27 Wyrmmie，Zoom！</p>
+
+<p>记录<br>
+实况团长x后期陛下<br>
+（可能存在的）互攻<br>
+OOC<br>
+裸写 速写<br>
+基于真实事件改编（搓手）<br>
+认出来的伙伴请不要泄密（搓手）<br>
+可能会考虑转正<br>
+每章节分两篇：格林@FxxxytaleGrime篇和沃姆@WyrmAnimation篇，陛下的文字是斜体<br>
+呃，仔细一想既然陛下和团长都ooc了…其实感觉更像原创了……害管他的！</p>
+
+<span id="more"></span>
+
+<p>大概类似于：</p>
+
+<h3 id="toc_0">Sec.1 @FxxxytaleGrime</h3>
+
+<blockquote>
+<p>“嘿沃米！给我来段freestyle！”格林捡起树林里第二张纸片，故意用着十分拽的“l”音。<br>
+…<br>
+“对，就是那天我跟你说的那段，我超喜欢的那段！”话还没说完，他就已经开始自顾自摇摆起身子了。<br>
+不过，他的动作并没有持续多久。“……呃…好像不是这首吧？”他皱着眉抱怨道。<br>
+…<br>
+“喂你那天到底有没有认真听我说话啊！明明还在家和我一起唱来着！”手柄被丢在一边，他转头看向房间的某处。<br>
+…<br>
+“不不不也不是这首！我给你最后一次机会，不然——”他沉下身子，爪子撑起头，同时展示出自己最为“友好”的微笑。<br>
+…<br>
+突然，他挑起眉毛，“哈哈，是个大胆的尝试，但你觉得就是这首吗，嗯？”<br>
+…<br>
+“猜错了可不会轻易放过你哦——”这笑容称之为阴险也毫不为过。<br>
+这次，他并没有等待很久，“Bingo！”他一拍巴掌，“好小子，竟然让你逃过去了…不过下次你会不会这么幸运呢？”他满意地重新拿起手柄，开始又一轮的愉悦追逐。</p>
+
+
+<h3 id="toc_1">Sec.2 w/ @WyrmAnimation</h3>
+
+<p>“嘿沃米！给我来段freestyle！”<br>
+<em>沃姆生无可恋地从屏幕边缘探出，“…什么？Freestyle？”他冒出一个小小的气泡对话框。</em><br>
+“对，就是那天我跟你说的那段，我超喜欢的那段！”<br>
+<em>沃姆皱起眉，“可是你从来都没有跟我说过…”，他不抱期望地随便插了一首歌。</em><br>
+“……呃…好像不是这首吧？”<br>
+<em>“所以说我不知道——”</em><br>
+“喂你那天到底有没有认真听我说话啊！明明还在我家跟我一起唱来着！”<br>
+<em>沃姆一愣，随后用尖锐的对话框反击，“哈？你是在梦里和我说话吗？我没有去过你家，也没有和你一起唱！”，他闷闷不乐地用力换了一首。</em><br>
+“不不不也不是这首！我给你最后一次机会，不然——”<br>
+<em>沃姆的身子警惕地向后缩了一厘米，“不然…不然你怎样？”他似是害怕触电一般，快速切了首歌。</em><br>
+“哈哈，是个大胆的尝试，但你觉得就是这首吗，嗯？”<br>
+<em>沃姆头上开始渗出冷汗，不安地冒了一个虚虚的小气泡，“嗯你个大头鬼…”他犹疑着，爪子举棋不定。</em><br>
+“猜错了可不会轻易放过你哦——”<br>
+<em>他立刻摆出了招架的姿势，同时甩给对方一个震动，“你、你有本事就过来——”</em><br>
+“Bingo！好小子，竟然让你逃过去了…不过下次你会不会这么幸运呢？”<br>
+<em>“…我想跳槽。”沃姆缓缓蹲下身子，捂住脸。</em></p>
+
+</blockquote>
+
+<h1 id="在想要是陛下他们一起玩多人在线恐怖游戏会怎么样（-HNTV）"><a href="#在想要是陛下他们一起玩多人在线恐怖游戏会怎么样（-HNTV）" class="headerlink" title="在想要是陛下他们一起玩多人在线恐怖游戏会怎么样（@HNTV）"></a>在想要是陛下他们一起玩多人在线恐怖游戏会怎么样（@HNTV）</h1><p>就是，估计大家会听到他们死亡之前的最后一句语音（就是那种有语音景深，死亡的时候会断语音的恐怖游戏），就会是：</p>
+<p>背景音：团长、滚滚、卢子在一起bb怎么解密，夫人在遥远地探索</p>
+<ul>
+<li>陛下（凑近一个恐怖文物端详，超小声bb）：“What the Fu-——”（被杀）</li>
+<li>（陛下孤独地在幽灵世界游荡了2min，旁听大家讨论如何解密）</li>
+</ul>
+<p>【2min后】</p>
+<p>背景音：滚滚和团长依然在bb怎么解密，夫人在遥远地问陛下他们那边的情况</p>
+<ul>
+<li>卢子（发现并绕着陛下的尸体转圈，震惊）：“陛下，陛下？陛下！陛下怎么不动a——”（被杀）</li>
+<li>卢子那声惊叫的尾音转到幽灵世界响了一阵，陛下默默看着他，他咳嗽一声“抱歉”，委屈闭麦。</li>
+</ul>
+<p>【0s后】</p>
+<p>背景音：夫人在遥远地问卢子发生了什么，滚滚一边啊啊啊一边跑</p>
+<ul>
+<li>团长（双手离开手柄）：“哈哈哈哈哈哈哈哈哈——”（被杀）</li>
+<li>团长变成幽灵之后依然在超大声的哈哈哈，陛下和卢子都让他安静</li>
+</ul>
+<p>【5s后】</p>
+<p>背景音：夫人逐渐靠近地说“我这就来我这就来”  </p>
+<ul>
+<li>辐光（画面疯狂抖动）：“啊啊啊啊啊啊啊啊啊——”（被杀）</li>
+<li>辐光变成幽灵之后依旧在啊啊啊，团长又开始哈哈哈哈哈哈哈哈哈</li>
+</ul>
+<p>【2s后】</p>
+<p>背景音：(空），是夫人一直在尝试建立联系</p>
+<ul>
+<li>夫人：“人呢？…呀！——”（把鬼反杀）“…沃姆你们是都死了吗？”（看见卢子和陛下的尸体叠在一起）“喔！——”（全神贯注地走神1s）（被杀）</li>
+<li>团长全程一直在“哈哈哈哈——”，把刚进来的夫人吓了一跳，陛下把他麦给闭了。夫人：“你俩就站那里被怪双杀？”君臣同时：“不是的，我比他/陛下先/后死的。”团长又重连了一次开始“哈哈哈哈哈哈哈哈”，辐光退了。</li>
+</ul>
+<p>总结一下，陛下死于“这是啥”，卢子死于“陛下a”，团长死于“哈哈哈”，滚滚死于“啊啊啊”，夫人死于“喔！”  </p>
+<hr>
+<p>Trivia：  <br>陛下是因为不想被夫人看扁，卢子是纯粹因为“不是双杀的”。（虽然其实反过来也可行，但考虑到这个是夫人，所以陛下会更F一点）</p>
+
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/dae5.html">【文集】HNTV综艺娱乐</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2021年05月26日 - 18:03</p>
+ <p><span>最后更新:</span>2023年01月29日 - 16:57</p>
+ <p><span>原始链接:</span><a href="/p/dae5.html" title="【文集】HNTV综艺娱乐">https://mebilychen.github.io/p/dae5.html</a>
+    
+ </p>
+ <p><span>许可协议:</span>除非文章内另行声明，遵守 cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script data-pjax> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E5%86%B0%E7%81%AB%E7%BB%84-GrimmPale/" rel="tag"><i class="fa fa-tag"></i> 冰火组/GrimmPale</a>
+              <a href="/tags/%E8%BE%90%E5%85%89/" rel="tag"><i class="fa fa-tag"></i> 辐光</a>
+              <a href="/tags/%E6%B2%99%E9%9B%95/" rel="tag"><i class="fa fa-tag"></i> 沙雕</a>
+              <a href="/tags/%E5%89%8D%E8%BE%88/" rel="tag"><i class="fa fa-tag"></i> 前辈</a>
+              <a href="/tags/%E5%8D%A2%E7%91%9E%E6%81%A9/" rel="tag"><i class="fa fa-tag"></i> 卢瑞恩</a>
+              <a href="/tags/%E7%99%BD%E5%90%8E/" rel="tag"><i class="fa fa-tag"></i> 白后</a>
+              <a href="/tags/%E8%9C%82/" rel="tag"><i class="fa fa-tag"></i> 蜂</a>
+              <a href="/tags/%E8%B5%AB%E6%8B%89/" rel="tag"><i class="fa fa-tag"></i> 赫拉</a>
+              <a href="/tags/%E7%BB%BC%E8%89%BA%E9%A3%8E/" rel="tag"><i class="fa fa-tag"></i> 综艺风</a>
+              <a href="/tags/%E5%9B%A2%E9%95%BF/" rel="tag"><i class="fa fa-tag"></i> 团长</a>
+              <a href="/tags/HNTV/" rel="tag"><i class="fa fa-tag"></i> HNTV</a>
+              <a href="/tags/%E6%B8%B8%E6%88%8F%E5%AE%9E%E5%86%B5/" rel="tag"><i class="fa fa-tag"></i> 游戏实况</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/1620.html" rel="prev" title="黑名单+白名单">
+      <i class="fa fa-chevron-left"></i> 黑名单+白名单
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/3837.html" rel="next" title="圣巢×16型">
+      圣巢×16型 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9F%90%E6%AC%A1%E8%AE%BF%E8%B0%88%EF%BC%88feat-%E8%BE%90%E5%85%89%EF%BC%89"><span class="nav-text">某次访谈（feat 辐光）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Odd-One-Out"><span class="nav-text">Odd One Out</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Wyrmmie%EF%BC%8CZoom%EF%BC%81%EF%BC%88%E5%86%B0%E7%81%AB%E7%BB%84%E7%9A%84%E5%AE%9E%E5%86%B5x%E5%90%8E%E6%9C%9F%EF%BC%89"><span class="nav-text">Wyrmmie，Zoom！（冰火组的实况x后期）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#toc_0"><span class="nav-text">Sec.1 @FxxxytaleGrime</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#toc_1"><span class="nav-text">Sec.2 w&#x2F; @WyrmAnimation</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9C%A8%E6%83%B3%E8%A6%81%E6%98%AF%E9%99%9B%E4%B8%8B%E4%BB%96%E4%BB%AC%E4%B8%80%E8%B5%B7%E7%8E%A9%E5%A4%9A%E4%BA%BA%E5%9C%A8%E7%BA%BF%E6%81%90%E6%80%96%E6%B8%B8%E6%88%8F%E4%BC%9A%E6%80%8E%E4%B9%88%E6%A0%B7%EF%BC%88-HNTV%EF%BC%89"><span class="nav-text">在想要是陛下他们一起玩多人在线恐怖游戏会怎么样（@HNTV）</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar3.jpg">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">169</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">177</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjEwMTM3MTIxMjdAcXEuY29t" title="E-Mail → mailto:1013712127@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9tZWJpbHkxMzE0" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      猜猜这是什么鬼地方？
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9tZWJpbHljaGVuLmxvZnRlci5jb20v" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;">LOFTER</span>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/p/NISP.html" title="p&#x2F;NISP.html">【音频可视化】Wallpaper Engine</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ab228.html" title="p&#x2F;ab228.html">【硬读文章】我与地坛</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/1547.html" title="p&#x2F;1547.html">【AI拼贴画】一些灵感和其他见证历史</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/9527b.html" title="p&#x2F;9527b.html">【脑洞合集】无Tag的小脑洞们，Encore</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/a6ba.html" title="p&#x2F;a6ba.html">白宫+高塔地图</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ysyg0.html" title="p&#x2F;ysyg0.html">（起稿）守望者@Memo</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ee39.html" title="p&#x2F;ee39.html">王国边境@Memo</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/p/248a.html" title="p&#x2F;248a.html">X个新点子，关于跑团和跑团的</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/679f.html" title="p&#x2F;679f.html">还希望站子拥有的一些优化</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/0.html" title="p&#x2F;0.html">【备忘】</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">3m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">45:39</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "站子已虔诚祈祷 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+     //'.site-meta',
+    //'.site-nav',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+<script language="JavaScript">
+var password="";
+password=prompt('Password (Birthday)','');
+if (password != '20180909')   
+{alert("。");    
+window.opener=null;
+window.location.href = "about:blank"; 
+window.close();}  // 密码不正确就关闭//-->
+</script>
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="包含不太愉快的体验，也是我决定建站的主要原因...之一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小小梦魇2团长系理解+倾诉">
+<meta property="og:url" content="https://mebilychen.github.io/p/c099.html">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:description" content="包含不太愉快的体验，也是我决定建站的主要原因...之一">
+<meta property="og:locale">
+<meta property="article:published_time" content="2021-03-09T04:55:00.000Z">
+<meta property="article:modified_time" content="2023-01-29T08:43:45.906Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="角色研究">
+<meta property="article:tag" content="建站纪念">
+<meta property="article:tag" content="小小梦魇2">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://mebilychen.github.io/p/c099.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : '中文'
+  };
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    
+      if (NexT.utils.hasMobileUA()) return;
+    
+    let time, hidden, visible, title = document.title;
+    let favicon = document.querySelector('link[rel="icon"]');
+    
+      hidden = ["盯————","*探*","?","......","*观察*"];
+      visible = ["*偏转视线*","*缩*","*强装镇定*","！","*低头*"];
+    
+    let random = t => t[Math.floor(Math.random() * t.length)];
+    const change = () => {
+      if (document.hidden) {
+        favicon.setAttribute('href', '/images/favicon-32x32-king-black.png');
+        
+          document.title = random(hidden);
+        
+        clearTimeout(time);
+      } else {
+        favicon.setAttribute('href', '/images/favicon-32x32-brand-black.png');
+        
+          document.title = random(visible);
+        
+        time = setTimeout(() => {
+          document.title = '碳素的小作坊';
+        }, 1000);
+      }
+    }
+    document.addEventListener('visibilitychange', change, false);
+  });
+</script>
+
+  <title>小小梦魇2团长系理解+倾诉 | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<style type="text/css">
+.spoiler {
+  display: inline-flex;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;调谐中...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">177</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">169</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-image fa-fw"></i>画廊</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/random.html" rel="section"><i class="fa fa-question fa-fw"></i>抽</a>
+
+  </li>
+        <li class="menu-item menu-item-lang">
+
+    <a href="/en/" rel="section"><i class="fa fa-globe fa-fw"></i>->English</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-17081-597255-1305127431.cos-website.ap-hongkong.myqcloud.com' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/c099.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          小小梦魇2团长系理解+倾诉
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-09 12:55:00" itemprop="dateCreated datePublished" datetime="2021-03-09T12:55:00+08:00">2021-03-09</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2023-01-29 16:43:45" itemprop="dateModified" datetime="2023-01-29T16:43:45+08:00">2023-01-29 16:43:45</time>
+                </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A2%B3%E9%85%B8%E7%9A%84%E6%B1%82%E7%94%9F%E4%B9%8B%E8%B7%AF/" itemprop="url" rel="index"><span itemprop="name">碳酸的求生之路</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A2%B3%E9%85%B8%E7%9A%84%E6%B1%82%E7%94%9F%E4%B9%8B%E8%B7%AF/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" itemprop="url" rel="index"><span itemprop="name">碎碎念</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+            <div class="post-description"><center>包含不太愉快的体验，也是我决定建站的主要原因...之一</div>
+          
+          <div class="post-tags">
+              <a href="/tags/%E8%A7%92%E8%89%B2%E7%A0%94%E7%A9%B6/" rel="tag"><i class="fa fa-tag"></i> 角色研究</a>
+              <a href="/tags/%E5%BB%BA%E7%AB%99%E7%BA%AA%E5%BF%B5/" rel="tag"><i class="fa fa-tag"></i> 建站纪念</a>
+              <a href="/tags/%E5%B0%8F%E5%B0%8F%E6%A2%A6%E9%AD%872/" rel="tag"><i class="fa fa-tag"></i> 小小梦魇2</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p>挤 就是说 果然我还是不适合 呃 得到希望<br>就<br>怎么说呢，看到苹果却吃不到，还不如看不到苹果。<br>明明对苹果过敏，却还一直有苹果端到我面前，真的是一种酷刑。</p>
+<div class="note primary"><p style="color:#7042C1"> 在这里终于可以说个痛快了。大广场上怕被说矫情，其实也真挺矫情的我这个人。我这篇最开始发在了lof上，故意避开了“小小梦魇2”，打了“little nightmares 2”的tag。我以为，这是个冷tag，我以为，little nightmares 2的tag和小小梦魇2的tag是不共通的。直到lofter开始给我开屏暴击，推荐了一堆小小梦魇2的东西，全是高赞。哦，原来这房间里有人啊，原来我才是透明的那个啊。 </p> </div>
+
+<div class="note primary no-icon"><p style="color:#7042C1"> 我就直说了，我这篇花了很多心血，花了很多时间，去重玩章节，去取证、分析、表述。我自我感觉挺好。但是没有人鸟我。我捣鼓了一整天，一桌子菜做出来，放那到凉了都没人看一眼，这样推断的结果是什么？难吃。厨师呢？自作多情，自以为是。
+我自以为很棒的作品拿出来，没人看，什么概念？我就是不想承认自己是辣鸡，我就是不想相信自己是辣鸡。自己是辣鸡，还活着做什么？占用公共资源吗？如果我就是那个处处不如别人的辣鸡，就应该去死。 </p> </div>
+
+<div class="note primary no-icon"><p style="color:#7042C1"> 也不藏着掖着了，我现在lofter推荐主页是空的，什么都没有，为什么，我屏蔽了，所有的tag，包括我自己的。我不想被一遍遍打击，被一遍遍提醒：“你很辣鸡，快去死吧。” </p> </div>
+
+<div class="note primary no-icon"><p style="color:#7042C1">我不想死。 </p> </div>
+
+<div class="note primary no-icon"><p style="color:#7042C1">我习惯了被漠视，习惯了一个人，但不习惯向人群伸出手时，却没人拉住。这种漠视对我是双重打击。我从选购食材到蒸煮烹调，最后还要摆盘，拍拍围裙送到大广场上，累不累？累，真的累，我熬夜写，通宵写，我报了原画学习班的名，我开始学写作和阅读技巧...但是我觉得值，能见到陛下，很值，已经足够了。但是我不是机器人，对于漠视我认得很清，这种漠视对我造成的打击甚至让我开始觉的不值。人来人往的走过去，会停下的那八千人，多少人停下了？ </p> </div>
+
+<div class="note primary no-icon"><p style="color:#7042C1">没看见那桌菜，当然就可以理解，所以我不再在广场摆摊了，这样对谁都好。我玻璃心不用再被踩碎了，广场上的人也不用整天被炒糊的饭熏着了，多好，双赢。 </p> </div>
+
+<div class="note primary no-icon"><p style="color:#7042C1">所以呀，我想自己搭建一个小世界。这个世界里没有点赞，没有评论。雁不留声，人不留名。我不想再被那颗爱心形状的恶魔束缚了。</p> </div>
+
+<div class="note primary no-icon"><p style="color:#7042C1">...感谢陛下一直真诚的对待我，让我直面自己的恐惧。你就是我的小守护神呀。 </p> </div>
+
+<div class="note primary no-icon"><p style="color:#7042C1">最后感谢几位家人，我一直很眼熟的：@屑猫猫加菲 @救死扶伤板蓝根
+  @未确认生命体9-1 也有很多比较生的面孔，陪着我。（抱歉排不出致谢名单...我脸盲...）所有认可我的人，真的很感谢。还有一位@eee 似乎是叫龟龟？感谢敲门，希望我没有让你反感。我加你的那天，兴奋的一晚上没睡好觉，转天直接爬起来考JAVA，哈哈还好没挂科。都怪你们，我每次一说自己很孤独都觉得自己很没良心哈哈哈。 </p> </div>
+
+<div class="note primary no-icon"><p style="color:#7042C1">真的很感谢你们。</p> </div>
+
+
+<p>上网搜有无多结局看见有很多对六失望的，我虽然对她无感但是比较倾向于六也不是小坏蛋的那种理解<br>
+（虽然六挺腹黑的）<br>
+（其实日本恐怖游戏一般都没有太深的逻辑的hhh除了魂）<br>
+一刷没有任何实锤，就凭直觉我感觉出文的话，我会写成：<br>
+主角Mono（不知为啥大家叫他mono）是个小噩梦（神），或者小噩梦（神）的一种，和后面的大deemo（不）是类似父子关系（也是为啥我想把他和团长类比的原因）（其实我初见的时候叫了他一声爸，结果一语成谶hhhh），mono跑出来是不想（或者不知道）（或者就只是离家出走）自己会成为下一任噩梦（神），其实我感觉他是知道的，因为最后他和爹战斗的时候主动摘了帽子，（太帅了woc这一段呜呜呜儿子儿子！）似乎是不想再逃避了似的，他一直遮着自己的脸可能就是为了逃避，（他父抓他其实就相当于：小崽子该回家继位了 然后崽：我不我不老子要玩）（不过x光那里mono也是人类有点无法理解），这样也能解释为什么他有操纵电视（噩梦）的能力。至于电视里那扇门，可能mono和玩家的视角是一致的，不知道里面是什么，只是好奇，以及无路可退地被吸引。<br>
+如果mono没有主动摘掉自己的帽子，以及拒绝玩家的操作，或许就可以说他和玩家的视角完全一致，只是一脸茫然地四处游荡，最后莫名其妙被坑了，但他摘掉了帽子，有他自己的想法，这个说法就不太成立了。（其实连带着就分不清哪些是他的主观，哪些是玩家的主观行为了。但我还是偏向于大部分情况下玩家和mono感情同步，被好奇驱动，只不过mono隐藏着自己是一只小噩梦的身份，而且不想回家）他看见父第一反应是逃跑，最后实在没有办法了（给跪了）才选择了战斗，（顺带救了六）可以说他逃避命运的愿望还是挺强的（至少强过了救六），就给我一种从“不怕宝贝妈妈保护你”到“啊？原来你不是宝贝？”的感觉，就咔嚓一刀给我们分开了。<br>
+六相当于他好奇交的朋友，啊逐渐有了感情也是有可能的。六最后放手我觉得是很多原因叠在一起的，不太认为她是个小没良心（虽然刚结局确实挺痛心的，但后来发现mono确实是个小噩梦（神）之后其实就可以理解了），比如六她虽然本来确实有点问题，但是还没残忍到mono的程度（看mono砍门烧娃娃（以及自杀）的时候把六给吓的）估计是觉得mono太狠心了，尤其是到最后六意识到mono是个小噩梦（神），她觉得mono还是呆在他应该在的地方比较好，还有就是她估计也是有点恨mono毫不留情地把她的宝贝八音盒砸坏，虽然她也知道mono是为了救她，再加上deemo已经没了，那梦境界塌了会不会很危险啊，（系统判定好感度低于好结局路线），那没办法为了这个世界的爱与和平只能让mono顶替上去🙈。<br>
+或者再补个刀，六其实也挺喜欢mono啥的。</p>
+
+<p>伪二周目快速取证（不全）+润色之后，<br>
+总结来说就是：<br>
+以六的视角，<br>
+她一开始遇见了一个似乎很暴力很可怕的奇怪男孩，很害怕，就想跑，但后来发现他似乎只是很暴力“而已”，对她还是很好（奇）的，再加上没办法只能一起合作，于是就（暂时）跟着他一起走了。<br>
+后来她发现身边这个男孩似乎有奇怪的能力，总是对着电视啊发呆，后来又发现电视不是什么好东西，她对他的警惕心就越来越高，一番折腾后她自己生命都有了危险，（并发现男孩在她和他之间选择了他自己，并不算是一个可以完全依靠的朋友）她就开始排斥他，最后男孩（被逼上绝路才）进到梦境里救她，一开始她还是不想伤害他的，但他（作为噩梦）还砸她八音盒，她也把一切线索都串起来了，比如为什么他可以和蒸发那么多人的电视有那么多交互，为什么他为了达到目的不择手段，为什么他会来捣毁自己的美梦，以及之前亲眼见证到deemo是男孩放出来的，意识到了现在的男孩不是deemo就是小deemo。于是觉得这个男孩的存在很危险，一番犹豫后还是选择让男孩留在了他应该待的地方（请不要出来霍霍世界，虽然____（选词填空））。</p>
+
+<p>以男孩的视角，<br>
+就是<br>
+虽然老子身为一只小噩梦神，烧杀抢掠无恶不作，斧子大锤手中常客，砍人脑壳毫不手软，就差个菜刀挥挥，但总觉得生活里还缺点什么。<br>
+老子爹总是教老子要接受命运，老子不听不听，才不想做一个tmd噩梦神被关禁闭，老子要自由，老子要免费！老子决定离家出走！于是老子灵活运用了频道跳跃，傻爹竟然一点都没意识到哈哈哈哈！<br>
+后来老子遇到了一个女孩，看见老子就跑，什么啊明明老子给了她自由啊！她总是抠抠索索的不敢反抗，难怪一直被关在那个破地方，看老子教她一枪崩了那个（有可能是她爹的）怪叔叔！<br>
+小六子挺有意思的，还能帮上老子忙，就是有时候大惊小怪的，还有奇怪的癖好…挺有趣！老子觉得暂时可以和她一起行动，体验人间繁华。<br>
+不过自从老子微服私访来到凡间以后，总会被电视吵到（和老爹在耳边叨叨一样吵！），然后堵它嘴的时候看到一扇门…等等！老子见过它！就是这破门之前一直挡着老子的路不让老子从房间出去！老子不知踩瞎了多少个老爹的宠物眼球才找到个小门…它绝对是扇通往真理和自由的门！…结果因为小六子捣乱每次老子都打不开！小六子你懂什么？追求自由是我的宿命！下次老子一定给他打开，什么事能吓得住老子？来一个老子打一个，来一对老子砍一双！…不，小六子我没疯。<br>
+md，南村群童公然挑衅老子的威严，老子搞死他们！…顺便救下小六子。<br>
+这些怪也太弱了吧老子还能再干十个哈哈哈哈…卧槽这怪怎么和我爹一样大！卧槽你别过来！<br>
+老子终于把那破门打开了但是！卧槽这个大高个怎么这么熟悉而且跟我手掌印很像难道…tmd是我爹？！卧槽爹你怎么又长高了啊啊啊啊啊！溜了溜了…卧槽等等他好像把小六子抓走了啊！！…对不起小六子但这回老子要明哲保身！你走好！<br>
+…诶等等这不是六子吗——啊啊啊啊啊啊爹你不要过来我不要回去！！<br>
+爹你不懂！我不想被关起来！…<br>
+（跪）…你真以为老子怕你吗！？老子今天就要干掉你！老子这回不会再躲躲藏藏了，不成功便成仁…！（虽然闪着腰还是好痛）<br>
+…栽了，还真把我爹干掉了，这神力直接往我手上怼，我是不是只能继位了…<br>
+…不管怎样先把小六子弄出去……<br>
+诶有戏有戏！小六子我们一起出…去……<br>
+卧槽？</p>
+
+<p>以deemo的视角，<br>
+就是<br>
+我的崽太叛逆了，跑出去玩也不告诉我，想当初老爹我可是乖得一批(´；ω；｀)<br>
+…我叫魂儿一样叫他，还以为这下他终于开窍了，结果开了门就跑了，他人呢？((((；ﾟДﾟ)))))))<br>
+…没办法，抓他女朋友勾引一下o(｀ω´ )o<br>
+…卧槽？不认他女朋友？小兔崽子的确没良心…是我可爱的崽了(<em>¯︶¯</em>)<br>
+…算了我还是亲自动手吧…诶崽你等等爹——(´･Д･)」<br>
+…看到崽充满决心的眼神，崽已经准备好继位了吗！(˶‾᷄ ⁻̫ ‾᷅˵)跳个舞检验一下崽的实力(///▽///)<br>
+…啊要死了要死了怎么办，但我的崽崽好帅！(≧▽≦)<br>
+…崽，你终于成了，吓死爹了还以为祖辈遗产要断送在爹手上，爹终于也后继有人了啊猛虎落泪(´；ω；｀)——<br>
+（在天：崽你加油，照顾好大眼，那把椅子就交给你啦给你啦你啦啦☆）<br>
+（在天：不要上吊噢(´；ω；｀)）</p>
+
+<p>嘛，要转化成陛下同人文的话估计就是叛逆幼团x冰山幼王+团他爹作为背景板吧。<br>
+…诶等等…那格林岂不是算是官方死亡了…我去三年了突然反应过来🤯啊这原来我萌的五组cp都tm死光啦啊哈哈哈哈连复活药都没人能喂啦哈哈哈哈哈白后你不要插话让我接着笑啊哈哈哈哈哈</p>
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/c099.html">小小梦魇2团长系理解+倾诉</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2021年03月09日 - 12:55</p>
+ <p><span>最后更新:</span>2023年01月29日 - 16:43</p>
+ <p><span>原始链接:</span><a href="/p/c099.html" title="小小梦魇2团长系理解+倾诉">https://mebilychen.github.io/p/c099.html</a>
+    
+ </p>
+ <p><span>许可协议:</span>除非文章内另行声明，遵守 cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script data-pjax> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E8%A7%92%E8%89%B2%E7%A0%94%E7%A9%B6/" rel="tag"><i class="fa fa-tag"></i> 角色研究</a>
+              <a href="/tags/%E5%BB%BA%E7%AB%99%E7%BA%AA%E5%BF%B5/" rel="tag"><i class="fa fa-tag"></i> 建站纪念</a>
+              <a href="/tags/%E5%B0%8F%E5%B0%8F%E6%A2%A6%E9%AD%872/" rel="tag"><i class="fa fa-tag"></i> 小小梦魇2</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/174a.html" rel="prev" title="陛下的段子小合集，因为太多了">
+      <i class="fa fa-chevron-left"></i> 陛下的段子小合集，因为太多了
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/da82.html" rel="next" title="时间线@Re">
+      时间线@Re <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar3.jpg">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">169</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">177</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjEwMTM3MTIxMjdAcXEuY29t" title="E-Mail → mailto:1013712127@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9tZWJpbHkxMzE0" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      猜猜这是什么鬼地方？
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9tZWJpbHljaGVuLmxvZnRlci5jb20v" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;">LOFTER</span>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/p/NISP.html" title="p&#x2F;NISP.html">【音频可视化】Wallpaper Engine</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ab228.html" title="p&#x2F;ab228.html">【硬读文章】我与地坛</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/1547.html" title="p&#x2F;1547.html">【AI拼贴画】一些灵感和其他见证历史</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/9527b.html" title="p&#x2F;9527b.html">【脑洞合集】无Tag的小脑洞们，Encore</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/a6ba.html" title="p&#x2F;a6ba.html">白宫+高塔地图</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ysyg0.html" title="p&#x2F;ysyg0.html">（起稿）守望者@Memo</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ee39.html" title="p&#x2F;ee39.html">王国边境@Memo</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/p/248a.html" title="p&#x2F;248a.html">X个新点子，关于跑团和跑团的</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/679f.html" title="p&#x2F;679f.html">还希望站子拥有的一些优化</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/0.html" title="p&#x2F;0.html">【备忘】</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">3m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">45:39</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "站子已虔诚祈祷 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+     //'.site-meta',
+    //'.site-nav',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+<script language="JavaScript">
+var password="";
+password=prompt('Password (Birthday)','');
+if (password != '20180909')   
+{alert("。");    
+window.opener=null;
+window.location.href = "about:blank"; 
+window.close();}  // 密码不正确就关闭//-->
+</script>
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>

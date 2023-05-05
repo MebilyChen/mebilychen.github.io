@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="RT，是硬读系列之《我与地坛》的读后感（产出）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【硬读文章】我与地坛">
+<meta property="og:url" content="https://mebilychen.github.io/p/ab228.html">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:description" content="RT，是硬读系列之《我与地坛》的读后感（产出）">
+<meta property="og:locale">
+<meta property="article:published_time" content="2023-02-28T06:22:00.000Z">
+<meta property="article:modified_time" content="2023-03-22T15:32:04.923Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="白王">
+<meta property="article:tag" content="考据">
+<meta property="article:tag" content="积累本">
+<meta property="article:tag" content="写作">
+<meta property="article:tag" content="卢瑞恩">
+<meta property="article:tag" content="白后">
+<meta property="article:tag" content="鉴">
+<meta property="article:tag" content="AU点子">
+<meta property="article:tag" content="书">
+<meta property="article:tag" content="文学">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://mebilychen.github.io/p/ab228.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : '中文'
+  };
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    
+      if (NexT.utils.hasMobileUA()) return;
+    
+    let time, hidden, visible, title = document.title;
+    let favicon = document.querySelector('link[rel="icon"]');
+    
+      hidden = ["盯————","*探*","?","......","*观察*"];
+      visible = ["*偏转视线*","*缩*","*强装镇定*","！","*低头*"];
+    
+    let random = t => t[Math.floor(Math.random() * t.length)];
+    const change = () => {
+      if (document.hidden) {
+        favicon.setAttribute('href', '/images/favicon-32x32-king-black.png');
+        
+          document.title = random(hidden);
+        
+        clearTimeout(time);
+      } else {
+        favicon.setAttribute('href', '/images/favicon-32x32-brand-black.png');
+        
+          document.title = random(visible);
+        
+        time = setTimeout(() => {
+          document.title = '碳素的小作坊';
+        }, 1000);
+      }
+    }
+    document.addEventListener('visibilitychange', change, false);
+  });
+</script>
+
+  <title>【硬读文章】我与地坛 | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<style type="text/css">
+.spoiler {
+  display: inline-flex;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;调谐中...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">177</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">169</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-image fa-fw"></i>画廊</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/random.html" rel="section"><i class="fa fa-question fa-fw"></i>抽</a>
+
+  </li>
+        <li class="menu-item menu-item-lang">
+
+    <a href="/en/" rel="section"><i class="fa fa-globe fa-fw"></i>->English</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-17081-597255-1305127431.cos-website.ap-hongkong.myqcloud.com' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/ab228.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【硬读文章】我与地坛
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-02-28 14:22:00" itemprop="dateCreated datePublished" datetime="2023-02-28T14:22:00+08:00">2023-02-28</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2023-03-22 23:32:04" itemprop="dateModified" datetime="2023-03-22T23:32:04+08:00">2023-03-22 23:32:04</time>
+                </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A1%AC%E8%AF%BB%E7%B3%BB%E5%88%97/" itemprop="url" rel="index"><span itemprop="name">硬读系列</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>9.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>9 分钟</span>
+            </span>
+            <div class="post-description"><center>RT，是硬读系列之《我与地坛》的读后感（产出）</div>
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E8%80%83%E6%8D%AE/" rel="tag"><i class="fa fa-tag"></i> 考据</a>
+              <a href="/tags/%E7%A7%AF%E7%B4%AF%E6%9C%AC/" rel="tag"><i class="fa fa-tag"></i> 积累本</a>
+              <a href="/tags/%E5%86%99%E4%BD%9C/" rel="tag"><i class="fa fa-tag"></i> 写作</a>
+              <a href="/tags/%E5%8D%A2%E7%91%9E%E6%81%A9/" rel="tag"><i class="fa fa-tag"></i> 卢瑞恩</a>
+              <a href="/tags/%E7%99%BD%E5%90%8E/" rel="tag"><i class="fa fa-tag"></i> 白后</a>
+              <a href="/tags/%E9%89%B4/" rel="tag"><i class="fa fa-tag"></i> 鉴</a>
+              <a href="/tags/AU%E7%82%B9%E5%AD%90/" rel="tag"><i class="fa fa-tag"></i> AU点子</a>
+              <a href="/tags/%E4%B9%A6/" rel="tag"><i class="fa fa-tag"></i> 书</a>
+              <a href="/tags/%E6%96%87%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> 文学</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p>这是《硬读》系列的第一篇，所以在这里介绍下这个系列。</p>
+<blockquote>
+<p>在中文小说看用词和汉语写作 在英文小说看点子和描写思路</p>
+</blockquote>
+<p>想搞这个系列的原因是觉得自己不能不看文字介质的艺术作品。<br>但是我真的看不下去小说，大概就是觉得我不想被其他人干扰探索进程（详见写作技巧贴），和不想看圈是同质的。<br>所以我准备慢慢来。</p>
+<p>使用的工具是微信读书。感觉还挺方便的。可以导出句子。</p>
+<p>这一篇其实不算是读后感，或者说这篇的读后感形式是将阅读经历新鲜转化成的“圣巢AU文”。<br>要是真的有文章能让我脱离圣巢专门写关于这篇文章（小说）本身的读后感，也不是不可以。</p>
+<p>我是只想看精髓（？）感觉我特别快餐<br>感觉我的模式就是想以最快速度知道我对此感不感兴趣/这个书对我有没有帮助、有多少帮助<br>时间和收获之比太不行之后我就会开始烦躁<br>确实是在逼着自己看书 我更偏好电影这样高信息密度（？）和游戏这样允许我参与其中的介质<br>就类似一图胜千言的意思 虽然不是所有图都可以</p>
+<p>看了都铎王朝翻译觉得很可，我又给自己安排上了半古文学习（一口老血）<br>我迟早把自己累死在白宫大殿<br><span class="exturl" data-url="aHR0cHM6Ly9jZG4ubWViaWx5Y2hlbi50b3AvZG9jLyVFNSU4RiVBNCVFNiU5NiU4NyVFNyVCNCVBMCVFNiU5RCU5MCVFOSU5OCU4NSVFOCVBRiVCQiVFNyVBNyVBRiVFNyVCNCVBRi56aXA=">古文素材阅读积累…的zip<i class="fa fa-external-link-alt"></i></span><br>书到用时方恨少</p>
+<hr>
+<p>看了一点的《我与地坛》，目前大概算是读完了（后面就不感兴趣了（大概））<br>就想到<br>呈接羽化失败的点子，因此陛下没能成为圣巢君主——没能建立起圣巢的可能性。然后我也想再复兴一下原作考据向（写太多非原作向了）。</p>
+<blockquote>
+<p>或许这样的“圣巢”还是一片蛮荒之地，被蛾子（辐光）所统治吧。</p>
+</blockquote>
+<p>一开始想的是以陛下为第一人称来写，毕竟作者也是第一人称的口吻，<br>但后来忽然又觉得可以从阿卢的角度来写。这是因为当时脑到了陛下和阿卢会是什么关系，以及陛下如果如此剖析自己的话，会不会又变成小受（？）毕竟原作者还是感情充沛的——太过充沛了。</p>
+<blockquote>
+<p>看到他的时候，这只似乎早已被丢弃的、小得像玩偶一样的虫子静静躺在<span class="hint--info hint--rounded hint--top" data-hint="是的当时还是
+类人世界观" ontouchstart>轮椅</span>上，毫无生气。那些白色光滑的几丁质如同热熔的泥塑被随意的揉捏、拼补在一起，高于184摄氏度的重度烧伤。</p>
+</blockquote>
+<p>其实不是烧伤而是羽化失败。</p>
+<p><strong>然后是陛下和夫人的关系：</strong></p>
+<blockquote>
+<blockquote>
+<p>被命运击昏了头，一心以为自己是世上最不幸的一个，不知道儿子的不幸在母亲那儿总是要加倍的。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>莫非她来此世上只是为了替儿子担忧，却不该分享我的一点点快乐？</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>来找我又不想让我发觉，只要见我还好好地在这园子里，她就悄悄转身回去，我看见过几次她的背影。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>她没看见我时我已经看见她了，待我看见她也看见我了我就不去看她，过一会儿我再抬头看她就又看见她缓缓离去的背影。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>我单是无法知道有多少回她没有找到我。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>有一回我坐在矮树丛中，树丛很密，我看见她没有找到我；她一个人在园子里走，走过我的身旁，走过我经常待的一些地方，步履茫然又急迫。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>我不知道她已经找了多久还要找多久，我不知道为什么我决意不喊她——但这绝不是小时候的捉迷藏，这也许是出于长大了的男孩子的倔强或羞涩？但这倔强只留给我痛悔，丝毫也没有骄傲。我真想告诫所有长大了的男孩子，千万不要跟母亲来这套倔强，羞涩就更不必，我已经懂了可我已经来不及了。 </p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>我放下书，想，这么大一座园子，要在其中找到她的儿子，母亲走过了多少焦灼的路。多年来我头一次意识到，这园中不单是处处都有过我的车辙，有过我的车辙的地方也都有过母亲的脚印。 </p>
+</blockquote>
+</blockquote>
+<p>夫人在这个AU里会觉得是自己没能保护好成蛹的陛下（这里幼王设定不会成茧（成也是用他的虫衣裹起来）），造成了他的羽化失败。<br>顺便一提羽化失败的设定，我想说这也是影响了陛下的思想（思考能力（也就是痴呆，当然这个就仅限于阿卢做主角））的，毕竟直接导致他无法称王，但是又觉得隐喻不太好。毁容是肯定要毁的，但是应该也仅限于此，光还是有的，思想也是有的，只不过，呃，不能移动之类的？就需要再考虑一下。<br>然后陛下外形应该是毁容，无翅（本来有但是因为只是一团未成形的累赘，被夫人修剪掉了），有勉强能抓握的手但是足部是基本没了的，角却意外地完好（要不要用从夫人指缝间流下成型的这个设定再说）<br>然后夫人会带着陛下<del>“藏在”</del>隐居在现在的王后花园，照顾陛下，期待着他有一天能好起来。</p>
+<p><strong>陛下和流浪者/阿卢的关系：</strong></p>
+<blockquote>
+<blockquote>
+<p>不过他们比我守时。我什么时间都可能来，他们则一定是在暮色初临的时候。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>我相信他们一定对我有印象，但是我们没有说过话，我们互相都没有想要接近的表示。十五年中，他们或许注意到一个小伙子进入了中年，我则看着一对令人羡慕的中年情侣不觉中成了两个老人。 </p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>日子久了，我感到我们都有结识的愿望，但似乎都不知如何开口，于是互相注视一下终又都移开目光擦身而过；这样的次数一多，便更不知如何开口了</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>没有特点的日子，我们互相点了一下头，他说：“你好。”我说：“你好。”他说：“回去啦？”我说：“是，你呢？”他说：“我也该回去了。”我们都放慢脚步（其实我是放慢车速），想再多说几句，但仍然是不知从何说起，这样我们就都走过了对方，又都扭转身子面向对方。他说：“那就再见吧。”我说：“好，再见。”便互相笑笑各走各的路了</p>
+</blockquote>
+</blockquote>
+<p>但是阿卢我想设定的是（毕竟还是被奴役的（野兽）甲虫）不小心踩空掉到了“井”里：</p>
+<blockquote>
+<p>这一切都开始于一个<span class="hint--info hint--rounded hint--top" data-hint="1是失足的阿卢
+2是羽化失败的陛下" ontouchstart>错误</span>。</p>
+</blockquote>
+<p>所以他会和陛下有更深厚的关系而不只是点头之交。</p>
+<h1 id="摘抄"><a href="#摘抄" class="headerlink" title="摘抄"></a>摘抄</h1><p>◆ 《我与地坛》史铁生</p>
+<p>Se描写：</p>
+<blockquote>
+<blockquote>
+<p>它一面剥蚀了古殿檐头浮夸的琉璃，淡褪了门壁上炫耀的朱红，坍圮了一段段高墙又散落了玉砌雕栏，祭坛四周的老柏树愈见苍幽，到处的野草荒藤也都茂盛得自在坦荡。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>园墙在金晃晃的空气中斜切下一溜阴凉</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>满园中播散着熨帖而微苦的味道……味道不能写只能闻，要你身临其境去闻才能明了。味道甚至是难于记忆的，只有你又闻到它你才能记起它的全部情感和意蕴。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>一长一短两个身影恰似钟表的两支指针</p>
+</blockquote>
+</blockquote>
+<p>Si句子（经历与经验）：</p>
+<blockquote>
+<blockquote>
+<p>第一年他在春节环城赛上跑了第十五名，他看见前十名的照片都挂在了长安街的新闻橱窗里，于是有了信心。第二年他跑了第四名，可是新闻橱窗里只挂了前三名的照片，他没灰心。第三年他跑了第七名，橱窗里挂前六名的照片，他有点儿怨自己。第四年他跑了第三名，橱窗里却只挂了第一名的照片。第五年他跑了第一名——他几乎绝望了，橱窗里只有一幅环城赛群众场面的照片。那些年我们俩常一起在这园子里待到天黑，开怀痛骂，骂完沉默着回家，分手时再互相叮嘱：先别去死，再试着活一活看。现在他已经不跑了，年岁太大了，跑不了那么快了。最后一次参加环城赛，他以三十八岁之龄又得了第一名并破了纪录，有一位专业队的教练对他说：“我要是十年前发现你就好了。”他苦笑一下什么也没说，只在傍晚又来这园中找到我，把这事平静地向我叙说一遍。</p>
+</blockquote>
+</blockquote>
+<p>N系句子：</p>
+<blockquote>
+<blockquote>
+<p>十五年中，这古园的形体被不能理解它的人肆意雕琢，幸好有些东西是任谁也不能改变它的。</p>
+</blockquote>
+</blockquote>
+<p>我想到大沃姆，是的。</p>
+<blockquote>
+<blockquote>
+<p>被命运击昏了头，一心以为自己是世上最不幸的一个，不知道儿子的不幸在母亲那儿总是要加倍的。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>莫非她来此世上只是为了替儿子担忧，却不该分享我的一点点快乐？</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>来找我又不想让我发觉，只要见我还好好地在这园子里，她就悄悄转身回去，我看见过几次她的背影。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>她没看见我时我已经看见她了，待我看见她也看见我了我就不去看她，过一会儿我再抬头看她就又看见她缓缓离去的背影。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>我单是无法知道有多少回她没有找到我。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>有一回我坐在矮树丛中，树丛很密，我看见她没有找到我；她一个人在园子里走，走过我的身旁，走过我经常待的一些地方，步履茫然又急迫。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>我不知道她已经找了多久还要找多久，我不知道为什么我决意不喊她——但这绝不是小时候的捉迷藏，这也许是出于长大了的男孩子的倔强或羞涩？但这倔强只留给我痛悔，丝毫也没有骄傲。我真想告诫所有长大了的男孩子，千万不要跟母亲来这套倔强，羞涩就更不必，我已经懂了可我已经来不及了。 </p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>我放下书，想，这么大一座园子，要在其中找到她的儿子，母亲走过了多少焦灼的路。多年来我头一次意识到，这园中不单是处处都有过我的车辙，有过我的车辙的地方也都有过母亲的脚印。 </p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>不过他们比我守时。我什么时间都可能来，他们则一定是在暮色初临的时候。</p>
+</blockquote>
+</blockquote>
+<p>我没有工作，但他们却能很好的融入社会…</p>
+<blockquote>
+<blockquote>
+<p>我相信他们一定对我有印象，但是我们没有说过话，我们互相都没有想要接近的表示。十五年中，他们或许注意到一个小伙子进入了中年，我则看着一对令人羡慕的中年情侣不觉中成了两个老人。 </p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>日子久了，我感到我们都有结识的愿望，但似乎都不知如何开口，于是互相注视一下终又都移开目光擦身而过；这样的次数一多，便更不知如何开口了</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>没有特点的日子，我们互相点了一下头，他说：“你好。”我说：“你好。”他说：“回去啦？”我说：“是，你呢？”他说：“我也该回去了。”我们都放慢脚步（其实我是放慢车速），想再多说几句，但仍然是不知从何说起，这样我们就都走过了对方，又都扭转身子面向对方。他说：“那就再见吧。”我说：“好，再见。”便互相笑笑各走各的路了。</p>
+</blockquote>
+</blockquote>
+<h1 id="一个相关的TED-TALK"><a href="#一个相关的TED-TALK" class="headerlink" title="一个相关的TED TALK"></a>一个相关的TED TALK</h1><p>The prison of your mind | Sean Stephenson：感觉这个人的vibe很适合攻攻陛下君临王的tag（不是）</p>
+<p>背景：这个人“羽化失败”只能坐轮椅，是“残疾人”，同时他是一个医生（精神科医生？）</p>
+<p>Lesson number one:<br>never believe a prediction that doesn’t empower you.<br>When I was born, the doctors told my parents that I would be dead within the first 24 hours of my life.  Never believe a prediction that doesn’t empower you.【嗯..或者把没有empower的prediction变成empower的，然后believe it？】 How many predictions have been thrown at you your whole life? If you believe predictions that do not empower you, you will wither away and die, either physically die or your spirit will die as you just walk around the world like a carcass that is just following the masses.<br>You’ll be given a lot of titles in your life, you’ll be told so many different things. You must only listen to that which empowers you. I have a belief that has served me in my life, and that is that everyone is rooting from me to win, even those that do not know it. And I’m not here today to tell you that I’ve had adversity in my life and therefore, I know what you are going through.<br>I don’t have a clue what any of you are going through in your lives. I did not grow up in your neighborhoods more than likely. I did not have your set of parents, nor do I live in your body. I’ve not had the events that you’ve had happened to you. I can tell you I am only an expert on one thing, and that’s how to be me, and I do it well.<br>But it’s not come easily, I’ve gone through things that I don’t wish upon anyone in this room. I’ve had metal rods pulled out of bone marrow while I was awake, I’ve had jaw infections where teeth had to be extracted and I can no longer chew my own food. I have to get up everyday, and be showered and cared for physically by another human being; fortunately, she’s a gorgeous woman that I married.<br>I get stared at everywhere I go, and the moment people meet me, if they don’t know a thing about my résumé, they automatically, just by the human nature, think to themselves: “Oh, it must be so difficult to be that man!” If somebody pities me, they’re wasting their time, because I have chosen a life of strength, I am here to help you choose a life of strength, but I’m going to tell you, we’ve talked about drugs here. You know what the worst drug that ever hit the human race is?<br>Pity.</p>
+<p>插一个pity的定义:</p>
+<ol>
+<li>the feeling of sorrow and compassion caused by the suffering and misfortunes of others. </li>
+<li>a cause for regret or disappointment.</li>
+</ol>
+<p>Similar:<br>compassion,commiseration,condolence,sorrow,regret,sadness,distress,sympathy,fellow feeling,understanding,feeling,emotion,ruth,rue<br>Opposite:<br>indifference,cruelty</p>
+<p>The moment you feel sorry for another person or the moment you feel sorry for yourself, you’re hosed. You’re totally, completely frozen in potential. We can not pity ourselves, we can not pity you.【思索，我理解是不是一种不要因为pity这种情感而让感情胜于了理智的一个概念。而不是真的不要去同情别人】<br>Yes, I get to go home today, yes, I get to have what many would call freedom, but I’m going to talk to you about freedom about what I really choose to see freedom as, because like I said, you can not believe predictions that do not empower you!.<br>The second lesson today is you are not your condition. You’re not. I’m not disabled! Sure, I’ll take the handicapped parking privileges (Laughter) but that does not define me as a man.<br>Not able? I’ve been looked at and treated my whole life as if I am not able. I have had to rise above and show people that the only disability is one’s refusal to adapt. You have to adapt to whatever environment you’re in, even if it’s prison. And what does adaption look like? I think it looks like celebration. Because when you meet people that are celebrating their life, you want to be around them, you want to learn from them, you want to do business with them, you want to hire them. Look! If you do not want to be seen as a prisoner or a convict when you get out of this, or even while you’re in this, there is an attitude, it is a belief in yourself that you bring value to the human race, no matter what your current condition, title, or stature is. Because if I believe that I am disabled, I would wither up, I would be shy, I would be insecure, I would be afraid, I would act like I need your help. And the rest of humanity would be OK with that, but I choose something else, I choose to be strong, I choose to be a leader, I choose to have words to move this planet, I’ll tell you why I was born. And I hope it inspires you to find out why you were born. I was born to rid this world of insecurity. Because when a human being is insecure, they do stupid stuff. When we feel like we’re not enough, we chase external validation, and external objects to try to tell us we’re enough. (Applause) Thank you. You are enough. I’ll tell you I’ve made a pledge of the therapist to love all human beings, no matter what they’ve done. Because deep down inside, I found that every human being just wants to be loved, even if they’re tough, even if they’re scary, even if they’re vicious. You get them in the right position, at the right time, they’ll tell you the truth. They just want to be loved. Do you know whom they want the love from the most? Not their moms, not their dads, not their wardens. None of these people. They want to be able to look in the mirror and love themselves. And if you can figure that out, then you’re going somewhere. (Applause) But you can not feel sorry for yourself. When you feel sorry for yourself, you will wither. But there’s a contradiction to feeling sorry for yourself, it’s the opposite extreme, it’s what I call ‘bullying yourself, ‘ beating yourself up, being your own enemy and telling yourself that all those predictions, those negative opinions that they’re true, they’re right, you’re washed up, failure. You’re not going to amount to anything. Bullying yourself is the most dangerous thing that you could do. You can not afford to pity yourself, you can not afford to bully yourself, you have to love yourself, because the last lesson that I’m going to share with you today that is I’m going to teach you what the real prison is, it’s not surrounded by bar, wire, or electrical fences, the real prisons do not have guards, the real prison’s up here. And we all got it, we all have a mind that chatters, so often won’t stop chattering. Do you know where your salvation is? It’s not outside these walls. I’ve met so many people that are so extremely successful and famous, that are in prison, because they’re stuck in their minds, bullying themselves, pitying themselves. True freedom is dropping down out of that mind. And what my wife has taught me is to drop into your hearts. in the mastering this beating thing that is more than just sending blood to the extremities.<br>What is it doing? It’s sending emotional possibilities, infinite possibilities of choice in our behavior, in our life, in our attitude. When you love yourself, whether you’re sleeping on a prison cot, or in a mansion, whether you have food in your belly, or you don’t know when your next meal is coming, when you love yourself, when you learn to master your emotions, then and only then are you free.</p>
+<p>I love you, each and everyone of you, and I wish you freedom within these walls. God bless. (Applause)</p>
+
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/ab228.html">【硬读文章】我与地坛</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2023年02月28日 - 14:22</p>
+ <p><span>最后更新:</span>2023年03月22日 - 23:32</p>
+ <p><span>原始链接:</span><a href="/p/ab228.html" title="【硬读文章】我与地坛">https://mebilychen.github.io/p/ab228.html</a>
+    
+ </p>
+ <p><span>许可协议:</span>除非文章内另行声明，遵守 cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script data-pjax> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E8%80%83%E6%8D%AE/" rel="tag"><i class="fa fa-tag"></i> 考据</a>
+              <a href="/tags/%E7%A7%AF%E7%B4%AF%E6%9C%AC/" rel="tag"><i class="fa fa-tag"></i> 积累本</a>
+              <a href="/tags/%E5%86%99%E4%BD%9C/" rel="tag"><i class="fa fa-tag"></i> 写作</a>
+              <a href="/tags/%E5%8D%A2%E7%91%9E%E6%81%A9/" rel="tag"><i class="fa fa-tag"></i> 卢瑞恩</a>
+              <a href="/tags/%E7%99%BD%E5%90%8E/" rel="tag"><i class="fa fa-tag"></i> 白后</a>
+              <a href="/tags/%E9%89%B4/" rel="tag"><i class="fa fa-tag"></i> 鉴</a>
+              <a href="/tags/AU%E7%82%B9%E5%AD%90/" rel="tag"><i class="fa fa-tag"></i> AU点子</a>
+              <a href="/tags/%E4%B9%A6/" rel="tag"><i class="fa fa-tag"></i> 书</a>
+              <a href="/tags/%E6%96%87%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> 文学</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/NISP.html" rel="prev" title="【音频可视化】Wallpaper Engine">
+      <i class="fa fa-chevron-left"></i> 【音频可视化】Wallpaper Engine
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/1547.html" rel="next" title="【AI拼贴画】一些灵感和其他见证历史">
+      【AI拼贴画】一些灵感和其他见证历史 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%91%98%E6%8A%84"><span class="nav-text">摘抄</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E4%B8%AA%E7%9B%B8%E5%85%B3%E7%9A%84TED-TALK"><span class="nav-text">一个相关的TED TALK</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar3.jpg">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">169</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">177</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjEwMTM3MTIxMjdAcXEuY29t" title="E-Mail → mailto:1013712127@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9tZWJpbHkxMzE0" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      猜猜这是什么鬼地方？
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9tZWJpbHljaGVuLmxvZnRlci5jb20v" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;">LOFTER</span>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/p/NISP.html" title="p&#x2F;NISP.html">【音频可视化】Wallpaper Engine</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ab228.html" title="p&#x2F;ab228.html">【硬读文章】我与地坛</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/1547.html" title="p&#x2F;1547.html">【AI拼贴画】一些灵感和其他见证历史</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/9527b.html" title="p&#x2F;9527b.html">【脑洞合集】无Tag的小脑洞们，Encore</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/a6ba.html" title="p&#x2F;a6ba.html">白宫+高塔地图</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ysyg0.html" title="p&#x2F;ysyg0.html">（起稿）守望者@Memo</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ee39.html" title="p&#x2F;ee39.html">王国边境@Memo</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/p/248a.html" title="p&#x2F;248a.html">X个新点子，关于跑团和跑团的</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/679f.html" title="p&#x2F;679f.html">还希望站子拥有的一些优化</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/0.html" title="p&#x2F;0.html">【备忘】</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">3m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">45:39</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "站子已虔诚祈祷 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+     //'.site-meta',
+    //'.site-nav',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+<script language="JavaScript">
+var password="";
+password=prompt('Password (Birthday)','');
+if (password != '20180909')   
+{alert("。");    
+window.opener=null;
+window.location.href = "about:blank"; 
+window.close();}  // 密码不正确就关闭//-->
+</script>
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>

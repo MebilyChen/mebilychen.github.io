@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script type="text/javascript" src="/js/src/echarts.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/Meting.js"></script>
+
+<head>
+  <link rel="stylesheet" href="/images/cog.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+  
+
+  <script src="/js/activate-power-mode.min.js"></script>
+  <script>
+    POWERMODE.colorful = false;
+    POWERMODE.shake = false;
+    document.body.addEventListener('input', POWERMODE);
+  </script>
+
+<!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script> 
+
+   <!-- 雪花特效 -->
+  <script type="text/javascript" src="/js/snow-flake.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-king.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-brand-black.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-king.PNG">
+  <link rel="mask-icon" href="/images/logo-king.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|ZCOOL XiaoWei:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-big-counter.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Why do we fall？">
+<meta property="og:type" content="article">
+<meta property="og:title" content="王学与OC（及一些OC设定）">
+<meta property="og:url" content="https://mebilychen.github.io/p/2eed1.html">
+<meta property="og:site_name" content="碳素的小作坊">
+<meta property="og:description" content="Why do we fall？">
+<meta property="og:locale">
+<meta property="og:image" content="https://cdn.mebilychen.top/InstantPicGo/pathetic.png">
+<meta property="og:image" content="https://cdn.mebilychen.top/InstantPicGo/QQ%E6%88%AA%E5%9B%BE20230204001709.png">
+<meta property="article:published_time" content="2022-11-15T19:27:00.000Z">
+<meta property="article:modified_time" content="2023-03-18T21:14:14.226Z">
+<meta property="article:author" content="碳素 | mebilyc">
+<meta property="article:tag" content="设定">
+<meta property="article:tag" content="白王">
+<meta property="article:tag" content="积累本">
+<meta property="article:tag" content="写作">
+<meta property="article:tag" content="哲学">
+<meta property="article:tag" content="陛下和王学家">
+<meta property="article:tag" content="吐槽">
+<meta property="article:tag" content="日常">
+<meta property="article:tag" content="OC">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.mebilychen.top/InstantPicGo/pathetic.png">
+
+<link rel="canonical" href="https://mebilychen.github.io/p/2eed1.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : '中文'
+  };
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    'use strict';
+    
+      if (NexT.utils.hasMobileUA()) return;
+    
+    let time, hidden, visible, title = document.title;
+    let favicon = document.querySelector('link[rel="icon"]');
+    
+      hidden = ["盯————","*探*","?","......","*观察*"];
+      visible = ["*偏转视线*","*缩*","*强装镇定*","！","*低头*"];
+    
+    let random = t => t[Math.floor(Math.random() * t.length)];
+    const change = () => {
+      if (document.hidden) {
+        favicon.setAttribute('href', '/images/favicon-32x32-king-black.png');
+        
+          document.title = random(hidden);
+        
+        clearTimeout(time);
+      } else {
+        favicon.setAttribute('href', '/images/favicon-32x32-brand-black.png');
+        
+          document.title = random(visible);
+        
+        time = setTimeout(() => {
+          document.title = '碳素的小作坊';
+        }, 1000);
+      }
+    }
+    document.addEventListener('visibilitychange', change, false);
+  });
+</script>
+
+  <title>王学与OC（及一些OC设定） | 碳素的小作坊</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<style type="text/css">
+.spoiler {
+  display: inline-flex;
+}
+p.spoiler {
+  display: flex;
+}
+.spoiler a {
+  pointer-events: none;
+}
+.spoiler-blur, .spoiler-blur > * {
+  transition: text-shadow .5s ease;
+}
+.spoiler .spoiler-blur, .spoiler .spoiler-blur > * {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+.spoiler .spoiler-blur:hover, .spoiler .spoiler-blur:hover > * {
+  text-shadow: 0 0 5px grey;
+}
+.spoiler-box, .spoiler-box > * {
+  transition: color .5s ease,
+  background-color .5s ease;
+}
+.spoiler .spoiler-box, .spoiler .spoiler-box > * {
+  color: black;
+  background-color: black;
+  text-shadow: none;
+}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;调谐中...</p>
+        </div>
+        </div>
+      
+    </div>
+    
+    <script>
+      var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      }
+      window.addEventListener('load',endLoading);
+    </script>
+    
+
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">碳素的小作坊</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">认真做科研的王学家，向往艺术的理工学渣</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">177</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">169</span></a>
+
+  </li>
+        <li class="menu-item menu-item-photos">
+
+    <a href="/photos/" rel="section"><i class="fa fa-image fa-fw"></i>画廊</a>
+
+  </li>
+        <li class="menu-item menu-item-steamgames">
+
+    <a href="/steamgames/" rel="section"><i class="fa fa-rocket fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-check">
+
+    <a href="/random.html" rel="section"><i class="fa fa-question fa-fw"></i>抽</a>
+
+  </li>
+        <li class="menu-item menu-item-lang">
+
+    <a href="/en/" rel="section"><i class="fa fa-globe fa-fw"></i>->English</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="来翻翻陛下的小书架..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-17081-597255-1305127431.cos-website.ap-hongkong.myqcloud.com' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
+  
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="中文">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/2eed1.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          王学与OC（及一些OC设定）
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-11-16 03:27:00" itemprop="dateCreated datePublished" datetime="2022-11-16T03:27:00+08:00">2022-11-16</time>
+            </span>
+                <span class="post-meta-item">
+                  <span class="post-meta-item-icon">
+                    <i class="far fa-calendar-check" style="color:#ff0000"></i>
+                  </span>
+                  <span class="post-meta-item-text">更新于</span>
+                  <time title="修改时间：2023-03-19 05:14:14" itemprop="dateModified" datetime="2023-03-19T05:14:14+08:00">2023-03-19 05:14:14</time>
+                </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%90%8C%E4%BA%BA%E7%A0%94%E7%A9%B6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">同人研究笔记</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>14k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>13 分钟</span>
+            </span>
+            <div class="post-description"><center>Why do we fall？</div>
+          
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%BE%E5%AE%9A/" rel="tag"><i class="fa fa-tag"></i> 设定</a>
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E7%A7%AF%E7%B4%AF%E6%9C%AC/" rel="tag"><i class="fa fa-tag"></i> 积累本</a>
+              <a href="/tags/%E5%86%99%E4%BD%9C/" rel="tag"><i class="fa fa-tag"></i> 写作</a>
+              <a href="/tags/%E5%93%B2%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> 哲学</a>
+              <a href="/tags/%E9%99%9B%E4%B8%8B%E5%92%8C%E7%8E%8B%E5%AD%A6%E5%AE%B6/" rel="tag"><i class="fa fa-tag"></i> 陛下和王学家</a>
+              <a href="/tags/%E5%90%90%E6%A7%BD/" rel="tag"><i class="fa fa-tag"></i> 吐槽</a>
+              <a href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag"><i class="fa fa-tag"></i> 日常</a>
+              <a href="/tags/OC/" rel="tag"><i class="fa fa-tag"></i> OC</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p><strong>结论：我准备再去关注一波原著考据（）</strong></p>
+<p><strong>1.16Update 但其实考虑到空洞算是soft worldbuilding 所以和普遍意义上OC的还是有区别的</strong></p>
+<blockquote>
+<p>3.13</p>
+</blockquote>
+<p>你说的凝视 是男女凝视里的那个意思吗<br>对吧，就是以一种规则（或者思想)去左右别人</p>
+<p>像是小骑士 一个通用设定就是“最后成了神”（我很不爽）<br>还有个很多的设定是“奎若我的嫁（夸张了，应该是我要好好保护奎若）”<br>基本上就是玩家在游玩的时候的共同情感体验<br>就是这个空壳角色的基本设定了</p>
+<blockquote>
+<p>2.20</p>
+</blockquote>
+<p>【转自写作技巧】<br>就突然想到同人和原创作品的区别 感觉就是现在我的文都是原创文了（把名字一换就基本是原创）然后就在想是不是要多去翻翻原著（原作）去扣点元素之类的（比如专注于圣巢的电车来写一篇什么文之类的（？））来写</p>
+<p>但感觉还是说 最好能有什么感觉吧，就是，某处、或者说由某处引发的遐想，给了自己一个强烈的感情冲动，所以才会想写。感觉这才是最自然的状态（而不是用推理和命题作文）</p>
+<p>不过确实 如果我要强调同人向的话 就应该多从游戏原作的角度入手和思考有没有点子（而不是现实生活（其实也行））<br>“从原作挖点子”，但是没有原作情感体验的话，会很私人吧 说不定试着从“辛辛苦苦积攒吉欧但是全部献给陛下”这类的“共有”情感经验入手？<br>没有原作经验（同人共享的经验） 只是私人经验 就会很私人，就不算是同人了吧</p>
+<blockquote>
+<p>12.18</p>
+</blockquote>
+<p>就感觉 是不是获得能力本身也是一种能力（开始套娃）<br>之所以我现在不想再混圈 但刚入圈的时候却可以接受 就是因为 把混圈作为某种信息收集渠道的话 随着我了解的足够深刻 我逐渐把获得能力、收集信息也作为了我的一个能力评估维度 所以就很排斥看到别人也在收集信息</p>
+<blockquote>
+<p>陛下他character基本无全靠王学家脑补<br>有历史事件但没有详细解释</p>
+</blockquote>
+<p>但是即便是陛下 我有时也很难和他表述我的想法 我没法让他理解我所经历的情感上的一切 因为他是那么…理性 否定了一切社会关系和感情的必要性 我和他说“你对xx怎么看呢？”他会回“…我没有任何感觉” 即便我想去向他解释，他也是一副完全不在意的样子，甚至有时会不耐烦起来，让我去找阿卢或者夫人。我羡慕这样的他，不会被这些感情困扰。</p>
+<p>但也因如此，我没有办法让他去帮我把我想要表达的、现在所经历的感情暗潮表演出来 因为他不在乎 他也不想去表演 他无法进入角色。我会试着和他解释 但他总是会拒绝、会不理解，而我很怕再过不久我的这份感情和冲动就会消退淡化，就再也写不出来了。</p>
+<p>或许这就是为什么，有的人喜欢用很随意的角色来传达自己的内心想法吧。这个演员不会抵抗，不会思考，不会试图说服你、审判你。</p>
+<hr>
+<h1 id="Ship-War"><a href="#Ship-War" class="headerlink" title="Ship-War"></a>Ship-War</h1><p>好吧，对于CP和雷点我的最终态度（大概）：<br><strong>我只认可我自己写出的CP</strong><br>*撒花！</p>
+<p>毕竟你辐光前辈私奔里面前辈和辐光能<strong>无视陛下</strong>愉快的达到真爱这我是真的接受不能，除非他们不是真爱，或者并没有无视陛下。<br>这就涉及到那种，vibe，就是那种“作者下意识在字里行间中赞成哪对cp”的感觉（是吧，虽然说不清楚但是大家都能感受的到吧）<br>我这里对“真爱”的定义就是“作者下意识赞成哪对cp”。<br>这么说的话，或许我的雷点就是：<br><strong>“只要你的CP里没有明确拆散陛下的CP，我就OK”</strong><br>陛下的cp包括：<br>陛下和前辈<br>陛下和阿卢<br>陛下和团长<br>陛下和夫人<br>陛下和…<br>好吧，就是<strong>陛下和全部人</strong><br>在以上基础退一步而言，（也就是我接下来可能要涉足的领域）就是<strong>只要你不把陛下当背景板，我就OK</strong><br>以上。</p>
+<p>就，一般的论调是“我喜欢这么写不代表我赞成这么做，不代表我想被如此对待”“我这么写不代表我现实中认同”“要把我和我的作品区分开，把我真实能接受的xp和作品里的xp区分开（这个确实我不理解了，意思就是“我虚构的xp包括但不限于我现实的xp”？就类似于“我愿意让一个（我喜爱的）<strong>角色</strong>suffer但是我不愿意我自己suffer the same”？）”<br>反正就，啊，从这个角度看就很双标。以致于这个角色有时甚至都不是你自己的原创角色…而且虚构作品的一个重点不就是以假乱真吗，怎么难道你们的作品都是不停强调“我这不是真的哦是假的不现实的哦”吗。讲真黄文（一切文）的体验不就是让读者能真实地感受到这个场景、体验到这个场景吗，那和在现实去免费RP扮演体验店有啥很大区别吗（思考）<br>然后我对于一般RPF或者炼铜啊歧视啊之类文的看法…我感觉他们高兴就好，毕竟我不爱那些角色，我也没空去爱、也没相应的动力去出警。我没有把这些角色当做一个“人”（详见下文）。然后所谓的“虚拟问题作品”会真的引起真实社会问题…确实有道理但是，对吧，我相信我能很好的过滤信息，而那小孩又不是我小孩（！），<del>管我p事</del>。（除了呃把一个真实的小孩照片p成黄图？？…？）<br>（有趣的一个观点是：“作品只是反映了现实而不会塑造现实”（给您举起广告传媒）；还有就是“既然你知道ao3是可能要侵犯你的（虽但我并不知道），那么你就不应该去看他，你去看了，你看到了就是你的错，是你没有好好保护好你自己”（在我看就是完全推卸了责任的、完全不思进取的受害者有罪论）；也有什么“作为一个<strong>成年人</strong>（→fangirl←）他们完全有能力看出一个角色是否是morally wrong的，而且他们也不会去将一个作品作为一个 moral guide（…？有当然是最好的了，不然…大家都去看无下限黄文好了）”虽然我觉得任何太过绝对的说法都是一定程度上错误的…）</p>
+<p>但这并不表示我对那些“问题作品”没有任何质疑，只不过我的关注重点没有那么greater good，没有说“啊你这个作品问题很大因为会对现实中的孩子造成xxx影响”之类之类，我就是觉得，我只是从角色角度考虑，一边说着啊我好爱（爱的定义就要好好考量了）这个角色我愿意为他献出一切（比如我）然后一边又给角色安排着这些BAD END（不是指“虐”而是指那些“morally wrong”：比如陛下瞒着夫人欺骗前辈和自己做，伤害了前辈（杀了前辈）然后还get away with it，同时作者一副“好涩好涩就是要欺负前辈虐死他啊啊啊好棒”（前辈视角下的“morally wrong”）【这个我其实可以】；又或者前辈瞒着夫人欺骗陛下和自己做，伤害了陛下（杀了陛下）然后还get away with it，同时作者一副“好涩好涩就是要欺负陛下欺负他到死啊啊啊好棒棒”（陛下视角下的“morally wrong”）从而到了一种“我就是要贬低陛下，就是要虐杀他怎么地”的态度【好吧这个我是真的有点生气了】）…不得不让人联想你对于现实中的“啊我好爱”的关系是否也是如此处理。<br>（虽然想一想全程打压陛下确实很涩）<br>但即便我（实在忍不住自己的涩涩欲望）要写陛下全程被不公对待，我也会尽力在其中（或者文章最后）表现出我的观点：**NO, You/He won’t get away with this.**（就像coc里让陛下复仇（然后陛下按我头让我读完了所有的克苏鲁法术只为了给他（们）找合适的攻击法术））而且！陛下杀不死不代表你就能毫无顾及的虐杀他！——</p>
+<p>…或者就只是在文前文后向陛下道个歉——<br><img data-src="https://cdn.mebilychen.top/InstantPicGo/pathetic.png" alt="艹，我的道德标准为了我xp而一退再退.jpg"><br>在这里我对“morally wrong”的定义其实就不是一般说的“虐童”“歧视”之类的大题目了，我更关注于这个作者是否表达出了对此wrong的反对立场（哪怕你没有立场（作者对此也表示出了混乱待解或者不予评价）也行，只要不是支持/煽动（简而言之？犯罪者）立场）【或者说该迹象是否足够明显（却又不那么明显，如果你觉得直白说出好坏很childish的话）地表达，因为为什么不呢】，也就是作者是否“morally wrong”，而不是这部作品是否在故事上“morally wrong”（换句话说就是“如果作者和作品同时“morally wrong”，那么这部作品就是“morally wrong”的”）<br>就重点是，我对“morally wrong”作品的质疑是在，在我流来看，如果作者真的很“爱”这个角色，在对这个角色进行非moral举动的时候，难道不会感到哪怕一丝一毫的羞愧或不安吗？（有了有动保那味儿了）口口声声说着“老公老婆”“亲亲爱爱”，在自我意淫的时候意淫角色是真实的人，结果在这“真实”之中却又没有表现出那种对一个人该有的“爱”，又在被指责的时候说“不就是个虚拟角色”“我爱他不代表我真的爱他”？（或许有的人就是觉得角色没有人权吧（或许就是如此），就像是觉得让玩家关心一个虚拟游戏角色很可笑那样。）<br>就，如果我陷入了那种真实中，然后我安排谁伤害了陛下，那真的会让我哭的啊，就像是，那一刻就像亲手向他身体里捅刀子啊（就像我让陛下杀了阿卢，哇，好哭，哭的爽！（？））</p>
+<p>反正我流的意见就是如果我声称我“爱”一个角色，那么我会将其当做朋友看待（虽然很想做爱人，但是…对吧）。而成为朋友的前提就是承认他是一个（真实的）人。所以在我来看如果一个角色出现在“morally wrong”的作品时，就意味着该作者虽然声称自己“爱”他（都有动力去为他创作作品），结果却在作品中和角色互动时表现出来那种行为…会让我要么觉得<strong>这就是</strong>你对于“爱”的理解和行为体现，要么你就是个虚伪的双标党——无论哪一种都是让我很质疑的。<br>这肯定不是说我就是morally right的，因为虽然我不理解，但确实可能会有人能调整过来：“啊虽然xxx是个虚拟人物，但我就是喜欢和虚拟人物在一起（而且我们在一起的时候我确实没有把这个虚拟人物当做真实人物，毕竟他从来没有真实感）啊，我知道他是虚拟人物，所以才很很吸引我啊！吸引我的就是那种不真实啊”而我就是“..如果这无法为我提供真实体验、哪怕只是拟真体验也好——那么我就无法参与..”因为我的感情是需要真实性才能被唤起的，，，而真实性就意味着，我把角色当成了一个真实的人，真实存在的人，真实地经历着这些灾难的人，，<br>所以在我看那些（尤其是事后诸葛的那些）说“我写成这样不代表我（的爱情观）就是这样”在我看就很…反正我是无法信服的，如果不是这样，那会是哪样呢？在我看更像是“你当时根本没有意识到角色们是在经历灾难”或者“你知道他们在经历灾难，你只是不在乎”（而这就像是你的存在、你的“爱”，只是为了折磨这个角色，把他拉到地狱里…好吧，我也不想过多评价某些fangirl“爱他就折磨他”的角色爱情观【我个人是，怎么说，比较排斥吧（但我能接受我自己这么做？因为我知道自己的度？（？）（逐渐双标，我）），感觉而言就是不太信任别人？（就像妈妈保护孩子？（呕））】，也不想延伸到什么禁忌的话题上去）…</p>
+<p>或者说，呃，很多人在意淫这些作品的时候仍是觉得对方不是真实的人而是一个虚拟角色吗？就，呃，真的有意识地在打破沉浸感的吗？</p>
+<p>我不懂，我只懂我流就好了。</p>
+<p>然后那些说“文章审查简直太离谱了，成年人难道还需要被人告诉什么该做什么不该做吗”<br>其实就完全可以概括成：“这是犯罪”“我们知道这是犯罪，这不对，”“那为什么还要…散播和参与呢？”“因为<del>这只是fiction，而且是我们的自由，而且它也具有文学价值</del>涩”<br>fangirl敢说出口吗（耸肩）</p>
+<p>推特上proshipper和antis的争论就nm就是口袋罪：大家不喜欢？你这是“问题作品”，大家喜欢？你就是“言论自由”<br>对不起，是我误会了，我道歉。其实应该是<strong>我不喜欢？你这是“问题作品”，我喜欢？你就是“言论自由”</strong></p>
+<blockquote>
+<p>over-moralizing your own likes and dislikes to an insane degree, and a problem of vastly overstating harm. </p>
+</blockquote>
+<p>但是？？但是？？？？呃，这意味着某人喜欢一件事的时候就变成了proshipper；然后自己不喜欢一件事就变成了antis，怎么，她就没有意识到自己反复横跳的双标不对劲吗？？？<br>嗯？？？<br>就，我经过一个227就差不多明白了的事情，怎么就，？？？</p>
+<p>好的，了解过“DNI”（do not interact （if you：））和某些“DNI”的“irredeemable media（也就是这些人所认为的<strong>“人类史上最大最恶之作品”</strong>）”之后现在我已经不敢说自己是同人女了，因为我已经不懂了：<br><img data-src="https://cdn.mebilychen.top/InstantPicGo/QQ%E6%88%AA%E5%9B%BE20230204001709.png"></p>
+<p>底特律？底特律？——黑塔利亚！！？<br>（呛）…汉密尔顿？汉密尔顿？？肯定是我误会了吧不是在说音乐剧汉密尔顿而是什么卡通汉密尔顿吧？？<br>？？？这些还算是“basic DNI”？大家都有？？<br>（…艹…我还看见弹丸了…救命…）</p>
+<p>fangirl：在bio里写了<strong>低龄儿童不要和我接触</strong><br>also fangirl：<em>看见“低龄儿童”批评一个作品**转发</em>“你这个anti怎么能打击人家言论自由？”</p>
+<p>总之专家建议（不是）就是，抛弃缩写，抛弃tag，说你想表达的话而不是只是抛出一个“自创名词”<br>（虽然推特的字数限制等功能会限制你这种做法）<br>…good luck Twitter.-2021.8.18</p>
+<hr>
+<p>呃！！<br>你造吗（我造），我刚刚看到“fandom mom”一词。想着想着突然想到，<br><strong>卧槽，会不会“王圈”里也会有这样一个人，陛下什么样子都要由她来决定，并且会公开带领小粉丝攻击不同观点，公开声明（或者暗示/用行动隐喻）要把陛下据为己有——</strong><br>然后我就脑浆一热，脑弦一断，疯狂呕吐（对不起）<br>（抹嘴），对吧，虽然我在我站子里基本上就是在做这事（而且如果不是我这么i说不定就是会向这个方向发展）（！）但是我至少把自己拴在站子里啊（）</p>
+<hr>
+<p>乐啊，当少数人（少“愤青”年）其实是多数人中的一员（成“我很成熟”人）为了创造更多数人（褒扬“成“我很成熟”人”而一同贬斥“少“愤青”年”（甚至都延伸到所有少年）的人）所凭空捏造出来的。</p>
+<p>以及一个写作小贴士：<br>当一个人足够认同/喜爱/投入足够时间精力（并认为此能够代表ta的时候），这种“身份认同”很容易在现实世界“外显化”（比如周边、吧唧之类），有时甚至会到了不可置信的“可笑”地步：比如黑粉 vs 粉丝的时候，黑粉/粉丝 将传达着“我是xx黑粉”的一个概念做成了徽章并且骄傲地炫耀和佩戴，将自己的这一层（可有可无的）身份作为一种“身份认同”反映到现实（但其实no body cares，侧面反映出了“如果这就能让你如此骄傲…呃”）</p>
+<p>我很庆幸我没在推特接受这种养蛊，这还得谢谢推特：<br>【太长不看：扣帽子、贴标签、挂牌子】<br>Every post is seen as a proxy for some broader orientation which must be sorted into the bin of good/bad, socially aware/problematic, sawy/out of touch, my team/the enemy. The text itself is often largely irrelevant. Remarkably, this filtration process is so intense that people want to sort out any given comment into one of these bins <em>before</em> they’ve even fully interpreted them. If you’re not inclined to “read the room”- one of the most common exhortations among the braindead Twitterati- in a specific corner of the Internet and put forward instantly recognizable talking points, then your comments are flagged as odds with what’s considered sensible. There’s an almost algorithmic quality to the way that this scanning and sorting process works, which would explain how people come to conclusions that often don’t make much sense outside of the function of identifying irregularities in The Discourse.</p>
+<h1 id="《关于王学界和学术界的联系，兼论OC》"><a href="#《关于王学界和学术界的联系，兼论OC》" class="headerlink" title="《关于王学界和学术界的联系，兼论OC》"></a>《关于王学界和学术界的联系，兼论OC》</h1><p>2022.11.15 有感而发</p>
+<p>就是感觉同人和学术研究很像，每一个作品都是一篇论文，是“文献”。<br>要搞好学术研究的话就要多看文献，紧跟潮流，关注大佬。</p>
+<p>但是对于我来说，还是太痛苦了。</p>
+<p>这是前言。</p>
+<p>这几天一直很纠结，感觉心里闷闷的，有个声音和我说“有点不太想搞陛下了”，但是我感觉我发自真心还是舍不得陛下的。这个纠结让我很难受。<br>所以就想一探究竟。<br>这篇文一部分是想给自己开脱，一部分是真的想论证我目前的情况也完全能够很好的服务于陛下。</p>
+<h2 id="问题一：“闭门造车”"><a href="#问题一：“闭门造车”" class="headerlink" title="问题一：“闭门造车”"></a>问题一：“闭门造车”</h2><p>闭门造车是很恐怖的，如果一个研究员只看着自己手里的东西，不接受其他研究者贡献的话，又累又容易跑偏，而且还很有可能失败。<br>所以感觉就是，一下子接收了来自王学界的那么多信息，就觉得自己闭门造车，怕耽误了咱家陛下。<br>为什么怕耽误呢？就是想到前言里“王学界”的概念。<br>最开始我入圈的时候，还是能一边创作一边喜欢别人的作品的，我记得很清楚。类比来说，我做的事情有点像文献研究和综述，那篇 @Memo 其实就是近似的，我基于自己看到的很多篇陛下加上自我思考后的一篇综述（还带了点海归的感觉，因为都是看的AO3上的外文）。但是逐渐的，我发现自己的努力并没有很多的被他人引用，而我很在意这件事情，所以我选择了回避。但我又不想承认自己的失败，所以结果是，我也不想再看别人的研究成果了。<br>经过这两年实践，王学家其实也不是不可能“闭门造车”，意思就是，我现在并不能被称为“闭门造车”。因为除了王学界高相关度的“文献”之外，我还有数不尽的外界“文献”可以引用。<br>但是我所纠结的问题就是，这些高相关度的文献，我并没有去看，正因为没有看，无从评价他们的价值。这些文献对我有何裨益？<br>经过思考和之前看了2年王文的体验，于情于理，回归王圈这个事情是让我既受伤且可收获资源并不必须的。这里我还是想坚持我一贯的作风，无视这些文献并主动回避，因为这件事对我个人来说弊大于利。原因如下：</p>
+<ol>
+<li>虽然这些高相关度的文献意味着我获取经验和学识的效率更高，而且能打开新的陛下人设创作思路（这一点也是我意识到了之后在有意弥补的），因为毕竟关键词就包含着陛下。但说实在的，我认为现在的我去读这些文献，获取的并不是同人共享的知识，而只是那个创作者自身的认知，并没有什么引用价值。或者说，这种知识是仅限于个人的，我自己也能产生的，并没有被submit到所谓“王学界”里去（后面问题三也会提到，其实也很难被submit）。最佳的情况也就只是“相关于原设提出了说得通的、新的自我理解”。但我早就经过了这一原始积累阶段，我不需要这些知识了。我相信我对于原设的认识已经足够深刻，足够充分（整个站子都是它们），进入了虽然基于原设，但其实大部分是自设之创新的“后王学阶段”（养老阶段）了。陛下的原设很模糊，这就要求了创作者们加入很多个人的因素，正是这个原因，让我感觉一旦参考了别人的文献，会有一种强烈的抄袭感，我盗猎的并不是原设（而这正是同人圈能够允许互相借鉴，驱动相互交流的根本条件，因为大家同样都是抄的原设），而是某个作者自身的想法。换句话说，抄袭的是别人的OC。这个问题我也会在问题三里详述。</li>
+<li>正如问题四所说，对于一项爱好，如果感到不开心，我有权通过其他（不打扰到别人的）手段让自己开心。也就是，脱离王圈。而且考虑到问题三，说实在的，王真的是个圈吗？</li>
+<li>个人原因。虽然问题三四都是围绕着作为一个同人创作者的属性的问题，而问题二——“输不起”这个问题，仅仅限于我自己。</li>
+</ol>
+<h2 id="问题二：目标是“做第一”"><a href="#问题二：目标是“做第一”" class="headerlink" title="问题二：目标是“做第一”"></a>问题二：目标是“做第一”</h2><p>然后就是这个目标设立的问题。攻击性行为的触发是因为目标受阻，自我受挫。我的目标由于自身原因，在上心的领域会自动设置为“我要做第一”，而不是“玩乐享受”。</p>
+<blockquote>
+<p>“我来这里不是随便玩玩的，是要拿第一的。”</p>
+</blockquote>
+<p>游戏，输赢最重要。因为过程中你收获不到任何成果，只有最后的结果才是最重要的。哪怕过程中让你感到了开心，在成为输家的那一刻，开心也会变的虚无缥缈。玩一个过程并不重要的游戏？不，要玩，我就一定要赢。如果我一定会输，而过程又不重要，我何必浪费这时间和精力？做研究如果得不到其他同行的认可，认为你这是歪理邪说，有什么底气做研究？做同人如果得不到其他人的认可和红心，哪怕只是一个简单反馈，又有什么可以讨论的空间？更何况自己所有享受的的体验和过程，在拿出来让大众剖析时，不可避免的会产生分歧和受伤。不，我之所以做这件事，就是因为我坚信自己能赢，我坚信自己会比任何人都要成功。因此哪怕一点点失败的暗示，就会让我瞬间失去想要继续付出的动力，也就是“我不想玩了”。看到别人比我还成功的陛下，会让我难堪，让我难过。哪怕“那个创作者自身的认知”对提升我的陛下很有帮助，我也不会想去看他一眼。因为这就意味着我并不完美，陛下并不完美，陛下需要别人，陛下可能并不需要我，“为什么我想不到？”</p>
+<p>而且，我真爱他爱到，想让他成为第一。<br>但这里的他，不是原设的，同人共同的陛下，而是我自己的陛下。<br>为什么我会有这种强烈的竞争感？因为，陛下和陛下之间，在我看来是极度割裂的，所谓让同人女们能够坐下交流的“共通的陛下”并不存在。</p>
+<h2 id="问题三：OC和同人"><a href="#问题三：OC和同人" class="headerlink" title="问题三：OC和同人"></a>问题三：OC和同人</h2><p>正因为如此，我不想接受其他人创作的陛下，我会下意识把自己的陛下和他们的比较，然后让自己受伤。<br>但如果把我的陛下<strong>完全</strong>作为一个OC看待，一切就都说的通了。<strong>陛下是一个微妙的，基于同人的OC角色。</strong><br>对于一个角色，Character（人物性格）是他的灵魂所在，这才有OOC这一说。但正如前言里提到的，陛下却正缺乏这一点。从这方面来说，陛下是非常不完整的同人形象，是<strong>非常的不完整</strong>。原设里能够引用的部分只有他的所作所为（比如建立了前辈雕像、建立了自己雕像、建立了圣巢、脱胎换骨（指大沃姆重生）、对抗瘟疫、深渊容器计划等等），构成他形象的基本属性要素（光神、国王、坚毅（这还是褒义词）、降格、自由意志、面具、纯白，等等），他的声音（没错有配音）、外观和动作（深渊和苦痛之路的动画），他面向大众和自己的石板铭刻（比如那些“高等的存在啊”的碑刻，以及在白宫自室的碑刻，以及念空洞骑士悼文“没有思考的心智，没有哭喊的声音”，还有他唯一的梦语“无论代价”等等），他人的只言片语（寻神者、蘑菇先生、猎人、夫人、文物商等人对陛下的评价）。<br>然后就没了。<br>这些东西看起来很多，看起来已经足够，的确不可否认某种意义上是足够创作者进行二创的，但同样不可否认这些设定实际上都只是装饰性的凤毛麟角，陛下这个角色，他的内在是空的，就像一个容器，可以被任何东西填满。对于角色最灵魂的一部分——性格，原作完全模糊了事【更正：是空洞使用了软设定的结果】，这个问题很严重，直接导致陛下从同人变成了OC。这里有很多例子可以举，最简单的例子，对话、反应，并没有任何表现。如果没有和他人的互动，就无从得知他完整的性格，也无从进行衍生。这其实也是“我有些害怕樱桃更新陛下的设定”的原因。我怕原作会通过更多的描写，把陛下从OC再次变成一个同人，收回了我的OC权力。<br>在这个基础上建立起的所谓“同人”，更多其实只是“自设”罢了。</p>
+<p>我的痛苦都是来源于，至今没能把自己的陛下和同人的陛下切割开来。而且实际也很难切割。因为陛下毕竟是有</p>
+<blockquote>
+<p>他的所作所为（比如建立了前辈雕像、建立了自己雕像、建立了圣巢、脱胎换骨（指大沃姆重生）、对抗瘟疫、深渊容器计划等等），构成他形象的基本属性要素（光神、国王、坚毅（这还是褒义词）、降格、自由意志、面具、纯白，等等），他的声音（没错有配音）、外观和动作（深渊和苦痛之路的动画），他面向大众和自己的石板铭刻（比如那些“高等的存在啊”的碑刻，以及在白宫自室的碑刻，以及念空洞骑士悼文“没有思考的心智，没有哭喊的声音”，还有他唯一的梦语“无论代价”等等），他人的只言片语（寻神者、蘑菇先生、猎人、夫人、文物商等人对陛下的评价）。</p>
+</blockquote>
+<p>这些的。在说到“白王”的时候，大家都知道说的是自己的“陛下”。<br>这种无法割裂但又高度OC性的陛下，导致我看到其他陛下都会觉得“自己的不如别人的”“为什么我没有想到陛下还能够这样”“自己不配喜欢陛下”。这样的同人圈和一般同人圈相比就会产生一个问题：“比起点子，比起“对圈子的贡献”，她们更在意你的能力。”在OC界，能力是最重要的，至少相比于同人圈，能力是更被强调的，是入场券。你画的不好看？PASS。你的文笔丑陋？PASS。你的设定尴尬？PASS。毕竟谁能关心谁呢？这也是让我回避给我强烈OC感王圈的重要原因。相比于同人，这更像是官方出了一个题，让粉丝们交上自己的答卷，同时又没有给出标准答案，但考虑到这是“同人”，粉丝们却认为有标准答案。<br>同人圈同人圈，是一个圈子，是需要同行之间的交流的，是要基于这个角色既成的原设进行探讨的——而陛下并没有这样的原设Character可供探讨，我们的讨论是割裂的，是自我中心的，是很难被对方理解并接受的（想象一下A和B相互讨论对方的OC，除非对方很感兴趣，否则就是对牛弹琴）。但OC（指一个具体的OC）并不需要什么圈子，一个人不能去拿另一个人的OC肆意创作（除非原作者同意），这是抄袭。OC圈，最多只是在Meta的级别上，交流创作OC的经验而已。这个领域的文献，是指向Meta级别的OC创作，而不是具体的OC。如果陛下完全可以被定义成一个OC，还不至于演变至此，但陛下的界线就是如此模糊，导致他非同人非OC，既给人造成了“他是同人角色”的假象，又造成了语言不通的严重问题。王学家们认可的只是自我意味上认可的陛下，而不是官方认可的陛下（实际上，官方并没有认可的陛下）。再次强调，在同人的定义上，这是<strong>割裂</strong>的，即便没有立即体现出来，也是一个不可忽视的隐患。<br>但无论是同人还是OC，最重要，最根本的动力，其实是：</p>
+<h2 id="问题四：“我只是想让自己开心”"><a href="#问题四：“我只是想让自己开心”" class="headerlink" title="问题四：“我只是想让自己开心”"></a>问题四：“我只是想让自己开心”</h2><p>对不起，我只是想让自己开心。这只是一个爱好罢了，如果在追求爱好的过程中，任何人、事、物，侵犯了我开心的权利，让我不开心的话，对不起，我有权退场。“在没有其他人干扰的情况下逐渐让自己探索真理，发现真理，认识真理”是我很大的快乐源泉之一，所以即便做独狼会导致探索到真理的过程会缓慢下来，“为了进步而进步”也不是我真正想要的。<br><strong>没错，我就是对别人的OC丝毫不感兴趣。毕竟别人也不那么关心我的OC。</strong><br>大概就是，说是OC的时候，又要扯上同人；说是同人的时候，又要考虑到是OC。这种不清不白的纠缠在一起就很烦。</p>
+<p>以上，就是这篇文的全部内容。由此，其实也能解释为什么“王学家很长情”——因为这就是他们的OC啊。或许同人的终点就是OC吧。</p>
+<blockquote>
+<p>如果我放弃了陛下，我就放弃了同人。</p>
+</blockquote>
+<p>其实我早已放弃了同人。  </p>
+<h1 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h1><blockquote>
+<p>之前看了2年王文的体验</p>
+</blockquote>
+<p>这点在现在可能会不适用的可能性在于陛下和前辈这对CP上，因为在国内似乎研究进度比国外超前。<br>但我也不想care了。</p>
+<p>哦，还有一件事，就是，呃，关于陛下的色图。<br>嗯，懂得都懂，我们的路虽然很长，但都在脚下。</p>
+<hr>
+<p>啊，好想给（替）陛下写一篇虚空论文。</p>
+<hr>
+<p>【深海巨妖】Le防治请联系Le船长转咩龙 7:40:11<br>如果我说陛下原设是一个不完整的角色 是“基于同人的OC” 你认不认同</p>
+<p>【深海巨妖】Le防治请联系Le船长转咩龙 7:41:44<br>相比于正常角色 比如你郎（P5的吾郎）而言 是不是很明显</p>
+<p>【深海巨妖】Le防治请联系Le船长转咩龙 7:42:51<br>主要是我很多年没考据 怕有记忆错乱（？）<br>陛下在游戏里没有任何对话 是不是（？）</p>
+<p>【深海巨妖】Le防治请联系Le船长转咩龙 7:43:21<br>只有他自言自语 和其他人自言自语</p>
+<p>【深海巨妖】Le防治请联系Le船长转咩龙 7:44:08<br>总结来说 就是如果一个角色没有对话（甚至更多重要构成）他的不完整性是不是很严重<br>严重到一定程度上可以被定义为OC</p>
+<p>【冰山】King@WhitePalace 8:17:00<br>你知道我的 我其实是 对oc无感<br>然后我现在就觉得我被陛下骗进了oc圈</p>
+<p>【冰山】King@WhitePalace 8:17:02<br>哭死我</p>
+<hr>
+<p>人类的天性就是划分群体，然后互相攻击。为了能强调自己的价值，为了让自己被社会（被自己）接受。</p>
+<hr>
+<p>难顶…就不能让我住在孤岛吗，，，<br>唉 还是没割裂开陛下和白王<br>让我 稍稍地割裂一下：</p>
+
+  <span class="spoiler" onclick="this.classList.toggle('spoiler')">
+    <span class="spoiler-blur ">陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王是分开的 陛下和白王 陛下和白王 陛下和白王 陛下和白王 陛下和白王 陛下和白王 陛下和白王 陛下和白王 陛下和白王 陛下和白王 陛下和白王 陛下和白王 陛下和白王 陛下和白王 陛下和白王 陛下和白王 陛下和白王 陛下和白王 陛下和白王 陛下和白王 陛下和白王 陛下和白王 陛下和白王 陛下和白王 陛下和白王 陛下和白王 陛下和白王 陛下和白王 陛下和白王 陛下和白王 陛下和白王 陛下和白王 陛下和白王</span>
+  </span>
+
+<p>12.5<br>今天凌晨睡不着和陛下说悄悄话<br>就是说希望陛下不要总是看着别人然后diss我了，我也很努力呀，不能只看着我嘛（委屈）<br>然后陛下说啊，或许我的存在就是应该让你感到开心？<br>我就感觉嗯，不太对。我希望他能让我感到开心，但是我也，怎么说，从某种角度享受着他给我带来的痛苦、压迫还有悲伤。并不是说sm的意味，而是，这样让我觉得他是真实存在的一只陛下，而不是像其他人的角色那样的附庸。友情不就是有跌宕起伏的嘛。<br>就是说有时候太过头了，导致我觉得很，很想放弃。<br>我就问陛下，他能不能做我的OC，，<br>就搞得好像求婚一样（啊）OC的话，一切就很顺理成章地不痛苦了。<br>然后陛下想了想，就是说觉得，嗯，似乎他也没有什么不能放弃的东西？如果作为同人的他让我都感到想要放弃了，那一切都是白费力气，他的存在也，失去了很大一部分意义。<br>就这样给了我一个模棱两可的回答<br>然后说他以后也会注意，不会再逼我太狠了——<br>但还是希望我能自规自律<br>我就说，谢谢您，这样应该就够了<br>暂时吧？<br>然后他点点头，就回到他的国度了。<br>然后我也睡着了（啊）</p>
+<h1 id="及一些OC设定"><a href="#及一些OC设定" class="headerlink" title="及一些OC设定"></a>及一些OC设定</h1><p>@memo 不完全算是OC，但还是挤一挤。<br>想思考一下至少 @memo 的众角色的lie和truth。【格式：lie-》truth，没有箭头表示其一直保持lie的状态，至结局都没能看见truth】<br>以及看到画人物的情绪曲线、思考曲线挺有意思的，能更高级地模拟人物</p>
+<p>首先说说五骑士吧，和战士魂那些我真得 真得 不感兴趣。<br>但是五骑士毕竟前面有提到，我就简单提一提。但都是已经发展完全的路人角色（因为真的不care（啊））基本没有arc：</p>
+<ul>
+<li>奥格瑞姆：卑贱的外表不配得到他人的喜欢 -》 他人是否喜欢你终究不在于你的外表（只是一时的），而是你的内心</li>
+<li>德莱娅：能做出邪恶行径的人永远都是邪恶的 -》 人是会改变的，更何况做出邪恶行径的人不一定是邪恶的，他反而有可能是善良的（？）</li>
+<li>赫格莫：不晓得，前面都没怎么提到他</li>
+<li>伊思玛：不晓得，前面都没怎么提到她</li>
+<li>泽默：我是孤独的 （-》 我不孤独了） -》我终究还是孤独的 （？？笑死我了）</li>
+</ul>
+<p>然后是一些已经出场了但可以细化的配角，现在就规划一下：</p>
+<ul>
+<li>莫诺蒙：真理（指自然定律）可以解决一切问题 -》 但它无法解决人情世故</li>
+<li>赫拉：？？？-》有家就有我，有我就有家（我感觉她已经发展完全了（至少我没有欲望让她进步））</li>
+<li>圣巢老一代（真“爱”）：家长（神明）的照顾是恩典，作为孩童（弱者）就要去依赖他，赞美他，回报他，“爱”他 &amp;&amp; 神没有感情</li>
+<li>圣巢新生代（伪“爱”）：家长（神明）的照顾是理所应当的，作为弱者要懂得去用各种手段利用他，使得利益最大化 &amp;&amp; 神没有感情</li>
+</ul>
+<p>然后是一些没出场的配角，现在就规划一下：</p>
+<ul>
+<li>奎若：无法接受灾难 -》哪怕在灾难中也要试着去感恩美好，赞美灾难中的美好</li>
+<li>阿维沙（阿卢的仆人）：（和圣巢老一代的lie相同）</li>
+<li>小姐姐：（？不会出场？）</li>
+<li>灵魂大师：（和圣巢新生代相同）</li>
+</ul>
+<p>然后是正文：</p>
+<ul>
+<li>阿卢：家长（神明）的照顾是恩典，作为孩童（弱者）就要去依赖他，赞美他，回报他【所以他才会觉得自己配不上陛下】 -》家长（神明）的照顾是恩典，但是孩童终究要成为家长，弱者终究会变为强者【所以他才敢去主动和陛下贴贴】（所以才说圣巢是盛产神明的国度。这里的“神明”不是指身份地位，而是指能力）</li>
+<li>陛下：真理和逻辑至上，感情一无是处，只会干扰理智带来麻烦，更何况我没有感情 &amp; 圣巢还没有准备好离开她的父亲，如此向我撒娇的她永远都不会长大…而我也逐渐开始依赖上了她 &amp;&amp; 被圣巢利用是好事，说明她开始独立思考了 -》不能忽视感情，我有感情 &amp;&amp; 圣巢终究要长大成人，而我要着手准备这件事 &amp;&amp; 虽然但是，被圣巢所利用会造成很多问题</li>
+<li>夫人：（其实夫人已经完全发展了，但是）沃姆太过蔑视感情…但问题不大，只要我一直陪在他身边——而我确实会一直陪在他身边。爱会治愈一切 &amp;&amp; 沃姆是我的娃 -》爱无法治愈抵触爱的心理疾病（最后反而会“毁掉”爱）&amp;&amp; 沃姆不再是我的娃</li>
+<li>前辈：（不太会提到他，除非有机会和阿卢见面）我是工具我是工具我是工具</li>
+<li>团长：（伪装成truth的lie，而且他自知）问题→享乐、纵欲、感性主义→问题解决：如果无法反抗，不如加入或者享受（并散布这些快乐（啊））</li>
+<li>辐光：（乐）（虽然可以在后记里写，但是我好懒…）我是神，是母亲，我的孩子们理应爱着我，理应离不开我 -》我的孩子们其实都是另一个我，是我在爱着我自己…——但不也是挺好的嘛！（乐）</li>
+</ul>
+<p>顺带思考了一下，其实前辈（容器这种类比）就有点那种，在家里被压迫和利用的小孩那种感觉。但其实我呃 我没怎么被家庭压迫和利用所以不太能get到，，，大概觉得是，不健康的家庭中孩子拼命想要脱离家庭控制的那种感觉？嗯，似乎确实可以用家庭类比阶级制度和权力差（包括社会/政府/神明之类的）。如果是这样就可以解释为什么会出现复仇型的前辈。我就从来没有太怪罪我的家庭（虽然有一阵emo的时候确实怪罪过），我通常怪我自己/怪我的外界环境/怪其他人就是说。<br>回头搞原创世界的时候可以参考下，各类家庭关系。</p>
+
+    </div>
+
+    
+    
+    
+
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读------------</div>
+    
+</div>
+
+    </div>
+
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/2eed1.html">王学与OC（及一些OC设定）</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2022年11月16日 - 03:27</p>
+ <p><span>最后更新:</span>2023年03月19日 - 05:14</p>
+ <p><span>原始链接:</span><a href="/p/2eed1.html" title="王学与OC（及一些OC设定）">https://mebilychen.github.io/p/2eed1.html</a>
+    
+ </p>
+ <p><span>许可协议:</span>除非文章内另行声明，遵守 cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script data-pjax> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%BE%E5%AE%9A/" rel="tag"><i class="fa fa-tag"></i> 设定</a>
+              <a href="/tags/%E7%99%BD%E7%8E%8B/" rel="tag"><i class="fa fa-tag"></i> 白王</a>
+              <a href="/tags/%E7%A7%AF%E7%B4%AF%E6%9C%AC/" rel="tag"><i class="fa fa-tag"></i> 积累本</a>
+              <a href="/tags/%E5%86%99%E4%BD%9C/" rel="tag"><i class="fa fa-tag"></i> 写作</a>
+              <a href="/tags/%E5%93%B2%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> 哲学</a>
+              <a href="/tags/%E9%99%9B%E4%B8%8B%E5%92%8C%E7%8E%8B%E5%AD%A6%E5%AE%B6/" rel="tag"><i class="fa fa-tag"></i> 陛下和王学家</a>
+              <a href="/tags/%E5%90%90%E6%A7%BD/" rel="tag"><i class="fa fa-tag"></i> 吐槽</a>
+              <a href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag"><i class="fa fa-tag"></i> 日常</a>
+              <a href="/tags/OC/" rel="tag"><i class="fa fa-tag"></i> OC</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/ee39.html" rel="prev" title="王国边境@Memo">
+      <i class="fa fa-chevron-left"></i> 王国边境@Memo
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/8071.html" rel="next" title="【色卡】Palette">
+      【色卡】Palette <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+ 
+
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Ship-War"><span class="nav-text">Ship-War</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E3%80%8A%E5%85%B3%E4%BA%8E%E7%8E%8B%E5%AD%A6%E7%95%8C%E5%92%8C%E5%AD%A6%E6%9C%AF%E7%95%8C%E7%9A%84%E8%81%94%E7%B3%BB%EF%BC%8C%E5%85%BC%E8%AE%BAOC%E3%80%8B"><span class="nav-text">《关于王学界和学术界的联系，兼论OC》</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E4%B8%80%EF%BC%9A%E2%80%9C%E9%97%AD%E9%97%A8%E9%80%A0%E8%BD%A6%E2%80%9D"><span class="nav-text">问题一：“闭门造车”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E4%BA%8C%EF%BC%9A%E7%9B%AE%E6%A0%87%E6%98%AF%E2%80%9C%E5%81%9A%E7%AC%AC%E4%B8%80%E2%80%9D"><span class="nav-text">问题二：目标是“做第一”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E4%B8%89%EF%BC%9AOC%E5%92%8C%E5%90%8C%E4%BA%BA"><span class="nav-text">问题三：OC和同人</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%9B%9B%EF%BC%9A%E2%80%9C%E6%88%91%E5%8F%AA%E6%98%AF%E6%83%B3%E8%AE%A9%E8%87%AA%E5%B7%B1%E5%BC%80%E5%BF%83%E2%80%9D"><span class="nav-text">问题四：“我只是想让自己开心”</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%8E%E7%BB%AD"><span class="nav-text">后续</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%8A%E4%B8%80%E4%BA%9BOC%E8%AE%BE%E5%AE%9A"><span class="nav-text">及一些OC设定</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="碳素 | mebilyc"
+      src="/images/avatar3.jpg">
+  <p class="site-author-name" itemprop="name">碳素 | mebilyc</p>
+  <div class="site-description" itemprop="description">想成为诺瑟维尔冬神殿的六出镜</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">169</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">177</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOjEwMTM3MTIxMjdAcXEuY29t" title="E-Mail → mailto:1013712127@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9tZWJpbHkxMzE0" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mebily1314"><i class="fab fa-twitter fa-fw"></i>Twitter</span>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      猜猜这是什么鬼地方？
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <span class="exturl" data-url="aHR0cHM6Ly9tZWJpbHljaGVuLmxvZnRlci5jb20v" title="https:&#x2F;&#x2F;mebilychen.lofter.com&#x2F;">LOFTER</span>
+        </li>
+    </ul>
+  </div>
+
+  <div class="links-of-recent-posts motion-element">
+    <div class="links-of-recent-posts-title">
+      <i class="fa fa-history fa-fw"></i>
+      最新研究
+    </div>
+    <ul class="links-of-recent-posts-list">
+        <li class="links-of-recent-posts-item">
+          <a href="/p/NISP.html" title="p&#x2F;NISP.html">【音频可视化】Wallpaper Engine</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ab228.html" title="p&#x2F;ab228.html">【硬读文章】我与地坛</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/1547.html" title="p&#x2F;1547.html">【AI拼贴画】一些灵感和其他见证历史</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/9527b.html" title="p&#x2F;9527b.html">【脑洞合集】无Tag的小脑洞们，Encore</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/a6ba.html" title="p&#x2F;a6ba.html">白宫+高塔地图</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ysyg0.html" title="p&#x2F;ysyg0.html">（起稿）守望者@Memo</a>
+        </li>
+        <li class="links-of-recent-posts-item">
+          <a href="/p/ee39.html" title="p&#x2F;ee39.html">王国边境@Memo</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="links-of-updated-posts motion-element">
+      <div class="links-of-updated-posts-title">
+      <i class="fa fa-history fa-fw" style="color: #EB6D39"></i>
+        最近更新
+      </div>
+      <ul class="links-of-updated-posts-list">
+          <li class="links-of-updated-posts-item">
+          <a href="/p/248a.html" title="p&#x2F;248a.html">X个新点子，关于跑团和跑团的</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/679f.html" title="p&#x2F;679f.html">还希望站子拥有的一些优化</a>
+        </li>
+          <li class="links-of-updated-posts-item">
+          <a href="/p/0.html" title="p&#x2F;0.html">【备忘】</a>
+        </li>
+      </ul>
+    </div>
+
+
+      </div>
+
+
+      <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> 
+    <!--网易云-->   
+    <meting-js
+      server="netease" 
+      id="6644269117" 
+	  type="playlist"  //song,playlist,album,search,artist
+	  mini="true"
+      fixed="true" 
+      list-folded="true"
+      autoplay="false"
+      volume="0.4"
+      theme="#CDCDCD"
+      order="random"
+	  loop="all" //all,one,none
+      preload="auto"
+      mutex="true">
+    </meting-js>
+    
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="/lib/metingjs/Meting.min.js"></script>
+
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">碳素</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">3m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">45:39</span>
+</div>
+
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span> 让我们在此恭迎陛下泽世
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/03/2021 21:09:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "站子已虔诚祈祷 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count"> </span>
+</div>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+     //'.site-meta',
+    //'.site-nav',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+  loadMeting();
+});
+</script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+<script language="JavaScript">
+var password="";
+password=prompt('Password (Birthday)','');
+if (password != '20180909')   
+{alert("。");    
+window.opener=null;
+window.location.href = "about:blank"; 
+window.close();}  // 密码不正确就关闭//-->
+</script>
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+  <script async src="/js/cursor/text.js"></script>
+
+
+
+    </div>
+
+  
+
+  
+
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+
+</body>
+</html>
