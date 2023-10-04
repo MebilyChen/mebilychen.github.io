@@ -122,7 +122,7 @@
 <meta property="og:image" content="http://cdn.mebilychen.top/image/Works/%E8%8D%89%E7%A8%BF%E4%BB%AC/%E9%99%9B%E4%B8%8B%E6%8B%9F%E4%BA%BA%E8%BF%9C%E5%8F%A4%E8%8D%891.JPG">
 <meta property="og:image" content="http://cdn.mebilychen.top/image/Works/%E8%8D%89%E7%A8%BF%E4%BB%AC/%E9%99%9B%E4%B8%8B%E6%8B%9F%E4%BA%BA%E8%BF%9C%E5%8F%A4%E8%8D%892%E4%BE%A7%E8%84%B8%EF%BC%88%E5%A4%B1%E8%B4%A5%EF%BC%89.JPG.JPG">
 <meta property="article:published_time" content="2021-03-09T12:07:00.000Z">
-<meta property="article:modified_time" content="2023-08-28T17:12:33.760Z">
+<meta property="article:modified_time" content="2023-10-04T23:13:15.565Z">
 <meta property="article:author" content="碳素 | mebilyc">
 <meta property="article:tag" content="白王">
 <meta property="article:tag" content="白后">
@@ -490,8 +490,9 @@ p.spoiler {
                     <i class="far fa-calendar-check" style="color:#ff0000"></i>
                   </span>
                   <span class="post-meta-item-text">更新于</span>
-                  <time title="修改时间：2023-08-29 01:12:33" itemprop="dateModified" datetime="2023-08-29T01:12:33+08:00">2023-08-29 01:12:33</time>
+                  <time title="修改时间：2023-10-05 07:13:15" itemprop="dateModified" datetime="2023-10-05T07:13:15+08:00">Today at 7:13 AM</time>
                 </span>
+              
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -512,7 +513,7 @@ p.spoiler {
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>209k</span>
+              <span>210k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -564,7 +565,15 @@ p.spoiler {
 <li>浏览器获取qq登录ticket：右键检查 - 网络 - Fetch/XHR - 预览 - Ticket:”（复制下来粘贴到对话框）”</li>
 </ul>
 <h1 id="卢骰"><a href="#卢骰" class="headerlink" title="卢骰"></a>卢骰</h1><p>我头像被卢骰抢走 我现在没有头像用了</p>
-<h2 id="卢骰运维"><a href="#卢骰运维" class="headerlink" title="卢骰运维"></a>卢骰运维</h2><p>下次再出现问题的话，要注意的几个重要的东西：</p>
+<h2 id="卢骰运维"><a href="#卢骰运维" class="headerlink" title="卢骰运维"></a>卢骰运维</h2><p>2023.10.5</p>
+<ol>
+<li>这次维护分别更新了fix-protocol-version和unidbg-fetch-qsign，但后者更新后用不了，JAVA找不到主函数，就很搞笑，所以还是用的Qsign老版本（文件夹名“qsign备份”）。</li>
+<li>卡很久是因为fix-protocol-version的库（protocol-version）里安卓_PHONE官方只到8.9.63，但是野生佬加了70/71/73，需要自己手动复制（到android_phone及其他protocol.json），sync不来，一次只能复制一个。</li>
+<li>之后改KFCfactory.json，和unidbg-fetch-qsign中的txlib对应的版本（我升到70了）匹配就行。注意改端口。顺便也更新了自动检测脚本。</li>
+<li>王骰那边卡了很久是因为不知道原来还是需要滑一遍验证滑块才能发短信。记一笔怎么升级，虽然可能没啥用了：因为云服务器java是8，小于11，没办法用mcl一键安装，所以在自己本地安装完复制过去的（用百度云盘互传），然后就没有然后了。</li>
+</ol>
+<hr>
+<p>下次再出现问题的话，要注意的几个重要的东西：</p>
 <ol>
 <li>更新<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2Nzc3hzaC9maXgtcHJvdG9jb2wtdmVyc2lvbi9yZWxlYXNlcz9wYWdlPTE=">fix-protocol-version<i class="fa fa-external-link-alt"></i></span></li>
 <li>在卢骰界面里（mirai-console）查协议更新协议：fix-protocol-version几个命令：<code>protocol sync ANDROID_PAD/ANDROID_PHONE</code>，<code>protocol info</code> </li>
@@ -2009,7 +2018,7 @@ cutest couple ever </p> </div>
  <p><span>本文标题:</span><a href="/p/248a.html">X个新点子，关于跑团和跑团的</a></p>
  <p><span>文章作者:</span>碳素 @mebilyc</p>
  <p><span>发布时间:</span>2021年03月09日 - 20:07</p>
- <p><span>最后更新:</span>2023年08月29日 - 01:12</p>
+ <p><span>最后更新:</span>2023年10月05日 - 07:13</p>
  <p><span>原始链接:</span><a href="/p/248a.html" title="X个新点子，关于跑团和跑团的">https://mebilychen.github.io/p/248a.html</a>
     
  </p>
@@ -2227,13 +2236,13 @@ cutest couple ever </p> </div>
       </div>
       <ul class="links-of-updated-posts-list">
           <li class="links-of-updated-posts-item">
+          <a href="/p/248a.html" title="p&#x2F;248a.html">X个新点子，关于跑团和跑团的</a>
+        </li>
+          <li class="links-of-updated-posts-item">
           <a href="/p/5401.html" title="p&#x2F;5401.html">【绘集】无Tag的绘点子</a>
         </li>
           <li class="links-of-updated-posts-item">
           <a href="/p/e3a4.html" title="p&#x2F;e3a4.html">【参考】绘画参考+Art Tips</a>
-        </li>
-          <li class="links-of-updated-posts-item">
-          <a href="/p/d894.html" title="p&#x2F;d894.html">【参考】绘画参考-生物</a>
         </li>
       </ul>
     </div>
