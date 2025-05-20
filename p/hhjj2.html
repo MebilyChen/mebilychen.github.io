@@ -46,18 +46,25 @@
     var CONFIG = {"hostname":"mebilychen.github.io","root":"/","scheme":"Muse","version":"8.3.0","exturl":true,"sidebar":{"position":"right","width":300,"display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#626262","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="想成为诺瑟维尔冬神殿的六出镜">
-<meta property="og:type" content="website">
-<meta property="og:title" content="碳素的小作坊">
-<meta property="og:url" content="https://mebilychen.github.io/categories/%E5%92%A9%E7%A2%B3%E7%9A%84%E7%8B%AC%E6%B8%B8%E6%A2%A6/Unity3D/">
+  <meta name="description" content="一些感觉还可以的成品Sorry, your browser does not support the video tag.   源文件FNAF的 William Afton + 原作的陛下碎碎念                                                    var ap &#x3D; new APlayer({             element: documen">
+<meta property="og:type" content="article">
+<meta property="og:title" content="陛下的配音尝试">
+<meta property="og:url" content="https://mebilychen.github.io/p/hhjj2.html">
 <meta property="og:site_name" content="碳素的小作坊">
-<meta property="og:description" content="想成为诺瑟维尔冬神殿的六出镜">
+<meta property="og:description" content="一些感觉还可以的成品Sorry, your browser does not support the video tag.   源文件FNAF的 William Afton + 原作的陛下碎碎念                                                    var ap &#x3D; new APlayer({             element: documen">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-05-20T15:07:00.000Z">
+<meta property="article:modified_time" content="2025-05-20T15:25:23.861Z">
 <meta property="article:author" content="碳素 | mebilyc">
-<meta property="article:tag" content="王学是世界上最高深的学问">
+<meta property="article:tag" content="积累本">
+<meta property="article:tag" content="角色研究">
+<meta property="article:tag" content="沃姆">
+<meta property="article:tag" content="陛下和王学家">
+<meta property="article:tag" content="AIGC">
+<meta property="article:tag" content="AI智能">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://mebilychen.github.io/categories/%E5%92%A9%E7%A2%B3%E7%9A%84%E7%8B%AC%E6%B8%B8%E6%A2%A6/Unity3D/">
+<link rel="canonical" href="https://mebilychen.github.io/p/hhjj2.html">
 
 
 <script id="page-configurations">
@@ -65,7 +72,7 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
@@ -103,9 +110,7 @@
   });
 </script>
 
-  <title>分类: Unity3D | 碳素的小作坊
-
-</title>
+  <title>陛下的配音尝试 | 碳素的小作坊</title>
   
 
 
@@ -335,54 +340,274 @@ p.spoiler {
         <div class="content-wrap">
           
 
-          <div class="content category">
+          <div class="content post posts-expand">
             
 
+      <script>
+          function setClipboardText(event){
+              // clipboardData 对象是为通过编辑菜单、快捷菜单和快捷键执行的编辑操作所保留的，也就是你复制或者剪切内容
+              let clipboardData = event.clipboardData || window.clipboardData;
+              // 如果未复制或者未剪切，则return出去
+              if (!clipboardData) { return; }
+              if(window.getSelection().toString().length < 100)  { return; }
+              event.preventDefault();
+              // Selection 对象，表示用户选择的文本范围或光标的当前位置。
+              //     声明一个变量接收 -- 用户输入的剪切或者复制的文本转化为字符串
+              let text = window.getSelection().toString();
+              if (text) {
+                // 如果文本存在则先取消文本默认事件
+                event.preventDefault();
+                // 通过调用常clipboardData对象的 setData(format, data) 方法；来设置相关文本
+                // format: 一个DOMString 表示要添加到 drag object的拖动数据的类型。
+                // data: 一个 DOMString表示要添加到 drag object的数据。
+                var copyright = '\n\n'
+                                + '\n（（））'
+                                + '\n本文遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明，王学家万岁。'
+                                + '\n作者: 碳素@mebilyc'
+                                + '\n博客地址:https://mebilychen.github.io/' 
+                                + '\n备用博客地址:https://coding-pages-bucket-3530815-8419662-17081-597255-1305127431.cos-website.ap-hongkong.myqcloud.com' 
+    
+                clipboardData.setData('text/plain', text + copyright);
+    
+              }
+          };
+          var contents = document.getElementsByClassName("content");
+          // 监听文章内容的copy事件
+          contents[0].addEventListener('copy',function(e){
+              setClipboardText(e);
+          });     
+      </script>
+
+
   
   
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">Unity3D
-          <small>分类</small>
-        </h2>
-      </div>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mebilychen.github.io/p/hhjj2.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar3.jpg">
+      <meta itemprop="name" content="碳素 | mebilyc">
+      <meta itemprop="description" content="想成为诺瑟维尔冬神殿的六出镜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="碳素的小作坊">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          陛下的配音尝试
+        </h1>
+
+        <div class="post-meta">
+
+  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2025-05-20 23:07:00 / 修改时间：23:25:23" itemprop="dateCreated datePublished" datetime="2025-05-20T23:07:00+08:00">2025-05-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%8E%8B%E9%85%8D%E9%9F%B3/" itemprop="url" rel="index"><span itemprop="name">王配音</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%A7%AF%E7%B4%AF%E6%9C%AC/" rel="tag"><i class="fa fa-tag"></i> 积累本</a>
+              <a href="/tags/%E8%A7%92%E8%89%B2%E7%A0%94%E7%A9%B6/" rel="tag"><i class="fa fa-tag"></i> 角色研究</a>
+              <a href="/tags/%E6%B2%83%E5%A7%86/" rel="tag"><i class="fa fa-tag"></i> 沃姆</a>
+              <a href="/tags/%E9%99%9B%E4%B8%8B%E5%92%8C%E7%8E%8B%E5%AD%A6%E5%AE%B6/" rel="tag"><i class="fa fa-tag"></i> 陛下和王学家</a>
+              <a href="/tags/AIGC/" rel="tag"><i class="fa fa-tag"></i> AIGC</a>
+              <a href="/tags/AI%E6%99%BA%E8%83%BD/" rel="tag"><i class="fa fa-tag"></i> AI智能</a>
+          </div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
+        <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="一些感觉还可以的成品"><a href="#一些感觉还可以的成品" class="headerlink" title="一些感觉还可以的成品"></a>一些感觉还可以的成品</h1><video src="https://cdn.mebilychen.top/media/%E9%99%9B%E4%B8%8B%E7%9A%84%E9%85%8D%E9%9F%B3/ScreenRecording_05-14-2025%2023-35-56_1.MP4" preload="metadata" controls playsinline poster>Sorry, your browser does not support the video tag.</video>
+
+
+<h1 id="源文件"><a href="#源文件" class="headerlink" title="源文件"></a>源文件</h1><p>FNAF的 William Afton + 原作的陛下碎碎念</p>
+
+        <div id="aplayer-GBUSRUgs" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-GBUSRUgs"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "Wyrm Afton 1-Denoise",
+              author: "NA",
+              url: "https://cdn.mebilychen.top/media/%E9%99%9B%E4%B8%8B%E7%9A%84%E9%85%8D%E9%9F%B3/Wyrm%20Afton%201-Denoise.m4a",
+              pic: "",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+
+        <div id="aplayer-SOEsrDcp" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-SOEsrDcp"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "Wyrm Afton Voice",
+              author: "NA",
+              url: "https://cdn.mebilychen.top/media/%E9%99%9B%E4%B8%8B%E7%9A%84%E9%85%8D%E9%9F%B3/Wyrm%20Afton%20Voice.m4a",
+              pic: "",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+
+        <div id="aplayer-kmxuRKXv" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-kmxuRKXv"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "Wyrm Afton v3",
+              author: "NA",
+              url: "https://cdn.mebilychen.top/media/%E9%99%9B%E4%B8%8B%E7%9A%84%E9%85%8D%E9%9F%B3/Wyrm%20Afton%20v3.mp3",
+              pic: "",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-03-13T15:00:00+08:00"
-              content="2021-03-13">
-          03-13
-        </time>
-      </div>
+    <div><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------------本文结束 <i class="fa fa-heart"></i> 感谢您的阅读------------</div>
+    
+</div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/p/616b.html" itemprop="url">
-            <span itemprop="name">【Unity+Python】学习笔记</span>
-          </a>
-      </div>
+    </div>
 
-    </header>
+    <div><link rel="stylesheet" href="/font-awesome.min.css">
+<div class="my_post_copyright">
+<div style="text-align:center;color:#ccc;font-size:14px;">
+------ 版权信息 ------</div>
+ <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+ 
+ <p><span>本文标题:</span><a href="/p/hhjj2.html">陛下的配音尝试</a></p>
+ <p><span>文章作者:</span>碳素 @mebilyc</p>
+ <p><span>发布时间:</span>2025年05月20日 - 23:07</p>
+ <p><span>最后更新:</span>2025年05月20日 - 23:25</p>
+ <p><span>原始链接:</span><a href="/p/hhjj2.html" title="陛下的配音尝试">https://mebilychen.github.io/p/hhjj2.html</a>
+    
+ </p>
+ <p><span>许可协议:</span>除非文章内另行声明，遵守 cc <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-SA 4.0)">署名-非商业性使用-相同方式共享 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script data-pjax> 
+   var clipboard = new Clipboard('.fa-clipboard');
+   $('.fa-clipboard').click(function(){
+     clipboard.on('success', function(){
+       swal({   
+         title: " ",   
+         text: '复制成功',
+         icon: "success", 
+         showConfirmButton: true
+         });
+ 	 });
+
+     clipboard.on('error', function(e){
+       swal({   
+         title: " ",   
+         text: '复制失败',
+         icon: "error", 
+         showConfirmButton: true
+         });
+ 	 });
+   });  
+</script>
+    </div>
+
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E7%A7%AF%E7%B4%AF%E6%9C%AC/" rel="tag"><i class="fa fa-tag"></i> 积累本</a>
+              <a href="/tags/%E8%A7%92%E8%89%B2%E7%A0%94%E7%A9%B6/" rel="tag"><i class="fa fa-tag"></i> 角色研究</a>
+              <a href="/tags/%E6%B2%83%E5%A7%86/" rel="tag"><i class="fa fa-tag"></i> 沃姆</a>
+              <a href="/tags/%E9%99%9B%E4%B8%8B%E5%92%8C%E7%8E%8B%E5%AD%A6%E5%AE%B6/" rel="tag"><i class="fa fa-tag"></i> 陛下和王学家</a>
+              <a href="/tags/AIGC/" rel="tag"><i class="fa fa-tag"></i> AIGC</a>
+              <a href="/tags/AI%E6%99%BA%E8%83%BD/" rel="tag"><i class="fa fa-tag"></i> AI智能</a>
+          </div>
+
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/p/48b51.html" rel="next" title="龙与医者（GPT）">
+      龙与医者（GPT） <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
   </article>
-
-    </div>
-
-  </div>
-
-
   
   
-  
-
   
 
 
@@ -440,6 +665,7 @@ p.spoiler {
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E6%84%9F%E8%A7%89%E8%BF%98%E5%8F%AF%E4%BB%A5%E7%9A%84%E6%88%90%E5%93%81"><span class="nav-text">一些感觉还可以的成品</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%BA%90%E6%96%87%E4%BB%B6"><span class="nav-text">源文件</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
